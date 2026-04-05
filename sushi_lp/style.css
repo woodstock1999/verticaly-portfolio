@@ -1,0 +1,29 @@
+/* Custom Japanese Typography Utils */
+.vertical-text {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    font-feature-settings: "palt";
+}
+
+/* Lenis Smooth Scroll Setup */
+html.lenis {
+    height: auto;
+}
+
+.lenis.lenis-smooth {
+    scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+    overflow: hidden;
+}
+
+/* Image Reveal Effect */
+.revealed {
+    filter: grayscale(0%) !important;
+    transform: scale(1.05);
+}

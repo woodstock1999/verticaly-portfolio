@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TAKUMI | ART DIRECTION</title>
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@700;900&family=Inter:wght@200;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- Lenis Smooth Scroll via CDN -->
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
+</head>
+
+<body>
+    <div class="cursor-follow"></div>
+
+    <!-- Fixed Navigation (Vertical) -->
+    <nav class="fixed-nav">
+        <div class="logo">TAKUMI<br>DESIGN<br>BUREAU</div>
+        <div class="menu">
+            <a href="#work" class="menu-link">SELECTED<br>WORK</a>
+            <a href="#about" class="menu-link">STUDIO<br>PHILOSOPHY</a>
+        </div>
+        <div class="meta">EST. 2026<br>TOKYO JP</div>
+    </nav>
+
+    <main id="smooth-wrapper">
+        <!-- Hero: Broken Grid -->
+        <section class="hero">
+            <div class="hero-title-container" data-speed="0.8">
+                <h1 class="hero-title">
+                    <span class="line-1">STRUCTURAL</span>
+                    <span class="line-2">LOGIC &</span>
+                    <span class="line-3">POETRY</span>
+                </h1>
+            </div>
+
+            <div class="hero-image-container" data-speed="1.2">
+                <img src="hero_arch.png" alt="Architectural Wireframe" class="hero-img">
+            </div>
+
+            <div class="hero-jp-copy" data-speed="1.0">
+                <p>構造的論理と、<br>詩的な情報の構築。</p>
+            </div>
+        </section>
+
+        <!-- About: Deconstructed Text -->
+        <section class="sculpture-section" id="about">
+            <div class="sculpture-block">
+                <h2 class="section-label">01 / ARCHITECT</h2>
+                <p class="sculpture-text">
+                    We do not "decorate".<br>
+                    We build <strong>digital architecture</strong>.<br>
+                    Every pixel has a structural reason.
+                </p>
+            </div>
+            <div class="jp-vertical-text">
+                デジタルにおける<br>建築家であれ。
+            </div>
+        </section>
+
+        <!-- Works: Interactive List -->
+        <section class="work-section" id="work">
+            <div class="work-list">
+                <a href="#" class="work-item">
+                    <span class="work-num">01</span>
+                    <span class="work-name">NEON TOKYO</span>
+                    <span class="work-cat">Urban Branding</span>
+                    <div class="work-hover-img" style="background-image: url('hero_arch.png')"></div>
+                </a>
+                <a href="#" class="work-item">
+                    <span class="work-num">02</span>
+                    <span class="work-name">ZEN SAKE</span>
+                    <span class="work-cat">Packaging</span>
+                    <div class="work-hover-img" style="background-image: url('hero_arch.png')"></div>
+                </a>
+                <a href="#" class="work-item">
+                    <span class="work-num">03</span>
+                    <span class="work-name">AI ARCHITECT</span>
+                    <span class="work-cat">Web Platform</span>
+                    <div class="work-hover-img" style="background-image: url('hero_arch.png')"></div>
+                </a>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="footer-big">TAKUMI</div>
+        </footer>
+    </main>
+
+    <script>
+        // Init Smooth Scroll
+        const lenis = new Lenis({
+            duration: 1.2,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t))
+        });
+        function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+        requestAnimationFrame(raf);
+
+        // Simple Parallax Script
+        document.addEventListener('scroll', () => {
+            const scrolled = window.scrollY;
+            document.querySelectorAll('[data-speed]').forEach(el => {
+                const speed = el.getAttribute('data-speed');
+                el.style.transform = `translateY(${scrolled * (1 - speed)}px)`;
+            });
+        });
+    </script>
+</body>
+
+</html>

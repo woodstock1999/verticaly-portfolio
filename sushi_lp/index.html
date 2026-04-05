@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>極 KIWAMI | SUSHIDOKORO</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600&family=Zen+Old+Mincho:wght@400;700;900&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        serif: ['"Zen Old Mincho"', '"Shippori Mincho"', 'serif'],
+                    },
+                    colors: {
+                        'sumi': '#1a1a1a',
+                        'washi': '#f4f1e8',
+                        'gold': '#c5a059',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-sumi text-washi font-serif overflow-x-hidden antialiased">
+
+    <!-- Loading Overlay (Noren) -->
+    <div id="loader" class="fixed inset-0 z-50 flex items-center justify-center bg-sumi">
+        <div class="vertical-text text-xl tracking-[0.5em] opacity-0" id="loader-text">板場に入ります</div>
+    </div>
+
+    <!-- Navigation (Vertical) -->
+    <nav
+        class="fixed top-0 left-0 h-screen w-20 md:w-32 z-40 flex flex-col items-center py-12 border-r border-white/10 mix-blend-difference">
+        <div class="logo vertical-text text-2xl font-bold tracking-widest">極</div>
+        <div class="flex-grow"></div>
+        <ul class="flex flex-col gap-12 text-sm md:text-base opacity-80">
+            <li><a href="#omakase" class="vertical-text hover:text-gold transition-colors duration-300">お任せ</a></li>
+            <li><a href="#biography" class="vertical-text hover:text-gold transition-colors duration-300">大将</a></li>
+            <li><a href="#access" class="vertical-text hover:text-gold transition-colors duration-300">案内</a></li>
+        </ul>
+        <div class="flex-grow"></div>
+    </nav>
+
+    <main class="pl-20 md:pl-32">
+        <!-- Hero Section -->
+        <section class="h-screen w-full relative flex items-center justify-center border-b border-white/5">
+            <div class="absolute inset-0 z-0">
+                <!-- Placeholder for the Hero Image/Video -->
+                <div class="w-full h-full bg-cover bg-center opacity-60"
+                    style="background-image: url('../../sushi_hero_tuna_artifact.png')"></div>
+                <div class="absolute inset-0 bg-gradient-to-r from-sumi via-transparent to-transparent"></div>
+            </div>
+
+            <div class="relative z-10 flex gap-8 items-start">
+                <h1 class="vertical-text text-6xl md:text-8xl font-black tracking-wider leading-relaxed">
+                    一貫、<br>入魂。
+                </h1>
+                <p class="vertical-text text-sm md:text-base mt-4 text-gray-400 leading-loose h-64">
+                    築地から世界へ。<br>
+                    この瞬間、この場所でしか<br>
+                    味わえない芸術を。
+                </p>
+            </div>
+        </section>
+
+        <!-- Concept / Texture Section -->
+        <section id="omakase" class="min-h-screen py-24 px-8 md:px-24 flex flex-col md:flex-row gap-16 relative">
+            <div class="absolute inset-0 z-0 opacity-10"
+                style="background-image: url('../../sushi_texture_hinoki_artifact.png')"></div>
+
+            <div class="w-full md:w-1/2 flex flex-col justify-center space-y-12 z-10">
+                <h2 class="text-4xl md:text-5xl mb-8 font-bold border-l-4 border-gold pl-6">
+                    旬を、<br>握る。
+                </h2>
+                <p class="leading-loose text-gray-300 text-lg">
+                    魚の声を聞き、米の呼吸を合わせる。<br>
+                    その日の気温、湿度、そして客人の顔色。<br>
+                    すべてが計算された、至高の即興劇。
+                </p>
+                <div class="pt-8">
+                    <a href="#"
+                        class="inline-block border border-gold text-gold px-8 py-4 hover:bg-gold hover:text-sumi transition-all duration-300">
+                        予約へ進む
+                    </a>
+                </div>
+            </div>
+            <div class="w-full md:w-1/2 relative h-[60vh]">
+                <div class="absolute inset-0 bg-gray-800 bg-cover bg-center shadow-2xl" id="feature-img"
+                    style="background-image: url('../../sushi_hero_tuna_artifact.png'); filter: grayscale(100%); transition: 1s;">
+                </div>
+            </div>
+        </section>
+
+        <!-- Menu Section (Oshinagaki) -->
+        <section id="menu" class="min-h-screen py-24 px-8 md:px-24 relative bg-washi text-sumi">
+            <div class="max-w-6xl mx-auto flex flex-col md:flex-row-reverse gap-16 items-start">
+                <div class="md:w-1/3 pt-12">
+                    <h2 class="vertical-text text-4xl font-bold tracking-widest h-auto border-r-2 border-sumi pr-6">
+                        本日の<br>御品書き
+                    </h2>
+                    <p class="vertical-text text-sm mt-8 text-gray-600 leading-loose h-64">
+                        毎朝豊洲より仕入れる<br>
+                        最高の一番を。<br>
+                        ※仕入れにより内容は変わります
+                    </p>
+                </div>
+
+                <div class="md:w-2/3 grid grid-cols-2 md:grid-cols-4 gap-8 h-[600px] overflow-x-auto">
+                    <!-- Menu Item 1 -->
+                    <div
+                        class="h-full flex flex-col items-center border-l border-gray-300 pl-4 py-4 hover:bg-gray-100 transition duration-500 group cursor-pointer">
+                        <div class="vertical-text font-bold text-2xl mb-4 group-hover:scale-110 transition">大トロ</div>
+                        <div class="vertical-text text-xs text-gray-500 mb-8">大間産 本鮪</div>
+                        <div class="mt-auto vertical-text text-sm">二、五〇〇円</div>
+                    </div>
+                    <!-- Menu Item 2 -->
+                    <div
+                        class="h-full flex flex-col items-center border-l border-gray-300 pl-4 py-4 hover:bg-gray-100 transition duration-500 group cursor-pointer">
+                        <div class="vertical-text font-bold text-2xl mb-4 group-hover:scale-110 transition">雲丹</div>
+                        <div class="vertical-text text-xs text-gray-500 mb-8">北海道 利尻産</div>
+                        <div class="mt-auto vertical-text text-sm">一、八〇〇円</div>
+                    </div>
+                    <!-- Menu Item 3 -->
+                    <div
+                        class="h-full flex flex-col items-center border-l border-gray-300 pl-4 py-4 hover:bg-gray-100 transition duration-500 group cursor-pointer">
+                        <div class="vertical-text font-bold text-2xl mb-4 group-hover:scale-110 transition">小肌</div>
+                        <div class="vertical-text text-xs text-gray-500 mb-8">天草産 締め</div>
+                        <div class="mt-auto vertical-text text-sm">八〇〇円</div>
+                    </div>
+                    <!-- Menu Item 4 -->
+                    <div
+                        class="h-full flex flex-col items-center border-l border-gray-300 pl-4 py-4 hover:bg-gray-100 transition duration-500 group cursor-pointer">
+                        <div class="vertical-text font-bold text-2xl mb-4 group-hover:scale-110 transition">煮蛤</div>
+                        <div class="vertical-text text-xs text-gray-500 mb-8">九十九里産</div>
+                        <div class="mt-auto vertical-text text-sm">一、二〇〇円</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Access & Reservation -->
+        <section id="access" class="py-24 px-8 md:px-24 bg-sumi relative border-t border-white/10">
+            <div class="max-w-4xl mx-auto text-center space-y-12">
+                <div class="logo vertical-text text-4xl font-bold tracking-widest mx-auto text-gold mb-8">極</div>
+
+                <p class="text-sm tracking-widest leading-loose text-gray-400">
+                    完全予約制<br>
+                    東京都中央区銀座 8-8-8<br>
+                    電話: 03-1234-5678
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+                    <div class="border border-white/20 p-8 hover:border-gold transition duration-300">
+                        <h3 class="text-xl font-bold mb-4">昼の部</h3>
+                        <p class="text-sm text-gray-400">12:00 - 14:00</p>
+                        <p class="text-gold mt-4">一五、〇〇〇円〜</p>
+                    </div>
+                    <div class="border border-white/20 p-8 hover:border-gold transition duration-300">
+                        <h3 class="text-xl font-bold mb-4">夜の部</h3>
+                        <p class="text-sm text-gray-400">18:00 - 22:00</p>
+                        <p class="text-gold mt-4">三〇、〇〇〇円〜</p>
+                    </div>
+                </div>
+
+                <button
+                    class="bg-gold text-sumi px-12 py-4 text-lg font-bold tracking-widest hover:bg-white transition-all transform hover:-translate-y-1 mt-12">
+                    席を予約する
+                </button>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

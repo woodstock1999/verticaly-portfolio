@@ -1,0 +1,45 @@
+{
+    "recipe_meta": {
+        "project_name": "Takumi Design Agent V5: The Trusted Artisan",
+        "target_audience": "Japanese B2B Decision Makers (seeking Reliability + Innovation)",
+        "core_vibe": "Sensational Trust (Shingeki & Shinrai)"
+    },
+    "knowledge_sources": {
+        "cultural_context": [
+            "01_Cultural_Context/seasonality.md (January: New Beginnings, Red/White)"
+        ],
+        "commercial_theory": [
+            "02_Commercial_Theory/trust_signals.md (Information Density, Client Logos)"
+        ],
+        "aesthetics": [
+            "03_Aesthetics/color_palettes.md (Black/Gold for premium)"
+        ]
+    },
+    "design_spec": {
+        "layout_strategy": {
+            "grid_type": "Swiss Grid (Stability)",
+            "whitespace_ratio": 0.5,
+            "density_level": "Medium-High (Increased from Low)"
+        },
+        "typography": {
+            "headline_font": "Zen Old Mincho (Black) - Kept",
+            "body_font": "Zen Kaku Gothic New (Regular) - Kept",
+            "jump_rate": "300% (Maintained for impact)"
+        },
+        "color_palette": {
+            "base": "#FFFFFF (Pure White)",
+            "main": "#111111 (Jet Black)",
+            "accent": "#bf1e33 (Japanese Red / 'Inkan' Red) - Added for Seasonality/Authority",
+            "logic": "White/Black is the base. Red added as 'Seal of Quality' (Inkan) and January symbol."
+        },
+        "mandatory_components": [
+            "Specific Trust: Client Logo Farm (Global Brands)",
+            "Information Density: Technical Specs Table (Service Details)",
+            "Cultural Symbol: 'Hanko' (Stamp) motif for the footer or header"
+        ]
+    },
+    "verification_checklist": [
+        "Is the 'Red' used sparingly (only as an accent)?",
+        "Does the 'Client List' look integrated, not pasted?"
+    ]
+}

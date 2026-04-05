@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MA | ARCHITECTS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.1.9/dist/lenis.min.js"></script>
+
+    <!-- WebGL Dependencies -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/hover-effect@1.1.0/dist/hover-effect.umd.js"></script>
+
+    <style>
+        body {
+            font-family: 'Zen Kaku Gothic New', sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        .concrete-bg {
+            background-image: url('../../arch_texture_concrete_artifact.png');
+            background-blend-mode: multiply;
+            opacity: 0.1;
+            pointer-events: none;
+        }
+
+        .vertical-line {
+            width: 1px;
+            height: 100vh;
+            background: #e5e5e5;
+            position: absolute;
+            top: 0;
+        }
+
+        .grid-lines {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 0;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 5vw;
+        }
+
+        .reveal-text {
+            clip-path: inset(0 0 100% 0);
+        }
+    </style>
+</head>
+
+<body class="overflow-x-hidden">
+    <!-- Grid Lines Overlay -->
+    <div class="grid-lines">
+        <div class="vertical-line"></div>
+        <div class="vertical-line"></div>
+        <div class="vertical-line"></div>
+        <div class="vertical-line"></div>
+    </div>
+    <div class="fixed inset-0 concrete-bg z-50"></div>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-40 p-8 flex justify-between items-start mix-blend-exclusion text-white">
+        <div class="text-xs font-bold tracking-[0.3em]">MA / ARCHITECTS</div>
+        <div class="text-xs font-light tracking-widest flex flex-col items-end gap-1">
+            <span>TOKYO</span>
+            <span>OSAKA</span>
+            <span>BERLIN</span>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero -->
+        <section class="h-screen w-full relative flex items-center px-[5vw]">
+            <div class="w-full md:w-2/3 h-[70vh] relative overflow-hidden bg-gray-200">
+                <img src="arch_house_k_exterior_1767790705693.png" class="w-full h-full object-cover scale-110"
+                    id="hero-img">
+                <!-- Hero Spec Overlay -->
+                <div
+                    class="absolute bottom-4 left-4 text-[10px] text-white/80 font-mono tracking-widest z-10 mix-blend-difference">
+                    FIG.01 // LIGHT STUDY<br>
+                    LOC: 35.65°N, 139.70°E
+                </div>
+            </div>
+            <div class="absolute right-[10vw] bottom-[20vh] z-10">
+                <h1 class="text-8xl md:text-[10rem] font-bold leading-none tracking-tighter opacity-90 mix-blend-difference text-white"
+                    id="main-title">
+                    MA<span class="text-xl tracking-widest block mt-4 font-light text-black mix-blend-normal">NEGATIVE
+                        SPACE</span>
+                </h1>
+            </div>
+        </section>
+
+        <!-- Statement -->
+        <section class="min-h-screen py-32 px-[15vw] relative z-10 flex flex-col justify-center">
+            <div
+                class="absolute top-20 left-10 text-[10px] text-gray-400 font-mono writing-vertical-lr h-24 border-l border-gray-300 pl-2">
+                PHILOSOPHY<br>001
+            </div>
+            <h2 class="text-4xl md:text-5xl font-light leading-relaxed mb-16 reveal-text" id="statement">
+                We design <br>
+                not the walls,<br>
+                but the <span class="font-bold">silence</span> between them.
+            </h2>
+            <div class="flex gap-16 text-sm text-gray-500 leading-loose w-2/3 ml-auto border-t border-gray-300 pt-8">
+                <p>壁ではなく、余白をデザインする。<br>光と影の彫刻としての建築。</p>
+                <p>Architecture as a sculpture of light and shadow.<br>Refining the void.</p>
+            </div>
+        </section>
+
+        <!-- Works (Integrated Grid) -->
+        <section class="py-32 px-[5vw] min-h-screen relative">
+            <div
+                class="absolute top-0 right-10 text-[10px] text-gray-400 font-mono writing-vertical-lr h-24 border-r border-gray-300 pr-2 block md:hidden">
+                SELECTED WORKS<br>2023-2025
+            </div>
+
+            <div class="grid grid-cols-12 gap-8 w-full">
+                <!-- Item 1: HOUSE K -->
+                <div class="col-span-12 md:col-span-7 h-[70vh] relative group work-item cursor-pointer">
+                    <!-- Distortion Container -->
+                    <div class="absolute inset-0 z-0 distortion-container bg-gray-200"
+                        data-img1="arch_house_k_exterior_1767790705693.png"
+                        data-img2="../../arch_texture_concrete_artifact.png"
+                        data-disp="../../displacement_fluid_artifact.png">
+                    </div>
+
+                    <!-- Integrated Specs (The "Fusion") -->
+                    <div
+                        class="absolute top-0 left-0 p-6 z-20 w-full h-full flex flex-col justify-between pointer-events-none transition-opacity duration-500 opacity-0 group-hover:opacity-100">
+                        <div class="flex justify-between items-start border-b border-white/20 pb-4">
+                            <span class="text-3xl font-bold text-white mix-blend-difference">HOUSE K</span>
+                            <span class="font-mono text-xs text-white mix-blend-difference">#001</span>
+                        </div>
+                        <div class="flex justify-between items-end">
+                            <ul class="font-mono text-[10px] text-white/80 space-y-1 mix-blend-difference">
+                                <li>LOC: KAMAKURA</li>
+                                <li>AREA: 145.2m²</li>
+                                <li>YEAR: 2024</li>
+                            </ul>
+                            <div
+                                class="bg-white text-black px-4 py-2 text-xs font-bold tracking-widest hover:bg-black hover:text-white transition-colors pointer-events-auto">
+                                VIEW PROJECT
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 2 (Offset): CAFE O -->
+                <div
+                    class="col-span-12 md:col-span-4 md:col-start-9 mt-0 md:mt-48 h-[50vh] relative group work-item cursor-pointer">
+                    <div class="absolute inset-0 z-0 distortion-container bg-gray-200"
+                        data-img1="arch_cafe_omotesando_1767790724159.png"
+                        data-img2="../../arch_texture_concrete_artifact.png"
+                        data-disp="../../displacement_fluid_artifact.png">
+                    </div>
+                    <div
+                        class="absolute top-0 left-0 p-6 z-20 w-full h-full flex flex-col justify-between pointer-events-none transition-opacity duration-500 opacity-0 group-hover:opacity-100">
+                        <div class="flex justify-between items-start border-b border-white/20 pb-4">
+                            <span class="text-2xl font-bold text-white mix-blend-difference">CAFE O</span>
+                            <span class="font-mono text-xs text-white mix-blend-difference">#002</span>
+                        </div>
+                        <div class="flex justify-between items-end">
+                            <ul class="font-mono text-[10px] text-white/80 space-y-1 mix-blend-difference">
+                                <li>LOC: OMOTESANDO</li>
+                                <li>TYPE: COMMERCIAL</li>
+                            </ul>
+                            <div
+                                class="bg-white text-black px-3 py-1 text-[10px] font-bold tracking-widest pointer-events-auto">
+                                ---></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 3: MUSEUM T -->
+                <div
+                    class="col-span-12 md:col-span-5 md:col-start-2 -mt-16 h-[60vh] relative group work-item cursor-pointer">
+                    <div class="absolute inset-0 z-0 distortion-container bg-gray-200"
+                        data-img1="arch_museum_toyama_1767790743526.png"
+                        data-img2="../../arch_texture_concrete_artifact.png"
+                        data-disp="../../displacement_fluid_artifact.png">
+                    </div>
+                    <div
+                        class="absolute top-0 left-0 p-6 z-20 w-full h-full flex flex-col justify-between pointer-events-none transition-opacity duration-500 opacity-0 group-hover:opacity-100">
+                        <div class="flex justify-between items-start border-b border-white/20 pb-4">
+                            <span class="text-3xl font-bold text-white mix-blend-difference">MUSEUM T</span>
+                            <span class="font-mono text-xs text-white mix-blend-difference">#003</span>
+                        </div>
+                        <div class="flex justify-between items-end">
+                            <ul class="font-mono text-[10px] text-white/80 space-y-1 mix-blend-difference">
+                                <li>LOC: TOYAMA</li>
+                                <li>AREA: 2,400m²</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Init Lenis
+        const lenis = new Lenis();
+        function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
+        requestAnimationFrame(raf);
+
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Hero Parallax
+        gsap.to("#hero-img", {
+            yPercent: 20,
+            scrollTrigger: { trigger: "body", start: "top top", end: "bottom top", scrub: true }
+        });
+
+        // Title Reveal
+        gsap.from("#main-title", { opacity: 0, x: -50, duration: 1.5, ease: "power4.out" });
+
+        // Statement Reveal
+        gsap.to("#statement", {
+            clipPath: "inset(0 0 0% 0)",
+            duration: 1.5,
+            ease: "power2.out",
+            scrollTrigger: { trigger: "#statement", start: "top 80%" }
+        });
+
+        // Work Items Parallax
+        gsap.utils.toArray(".work-item").forEach((item, i) => {
+            gsap.from(item, {
+                y: 100,
+                opacity: 0,
+                duration: 1,
+                scrollTrigger: { trigger: item, start: "top 90%" }
+            });
+        });
+    </script>
+    <script src="distortion.js"></script>
+</body>
+
+</html>

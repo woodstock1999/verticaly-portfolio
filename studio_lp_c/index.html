@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TAKUMI | NEO JAPONISM</title>
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;800&family=Noto+Serif+JP:wght@200;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- Lenis Smooth Scroll -->
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
+    <!-- GSAP for Horizontal Scroll -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+
+<body>
+    <!-- Vertical Nav (Fixed) -->
+    <nav class="vertical-nav">
+        <div class="nav-links">
+            <a href="#intro">序</a>
+            <a href="#work">作品</a>
+            <a href="#concept">理念</a>
+        </div>
+        <div class="logo-seal">匠</div>
+    </nav>
+
+    <!-- Horizontal Scroll Wrapper -->
+    <div class="scroll-container">
+
+        <!-- Section 1: Intro (Washi Texture) -->
+        <section class="panel intro-panel" id="intro">
+            <canvas id="gold-dust-canvas"
+                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 1;"></canvas>
+            <div class="bg-texture" style="background-image: url('hero_neo_japonism_gold.png')"></div>
+            <div class="tategaki-content">
+                <h1 class="main-title">
+                    <span>伝統と</span><br>
+                    <span>革新の</span><br>
+                    <span>境界線</span>
+                </h1>
+                <p class="sub-text">
+                    デジタル・アルチザンの<br>
+                    新たな挑戦。
+                </p>
+            </div>
+        </section>
+
+        <!-- Section 2: Philosophy (Black Gap) -->
+        <section class="panel text-panel">
+            <div class="tategaki-content centered">
+                <p class="philosophy-text">
+                    余白を<br>恐れるな。<br><br>
+                    沈黙もまた、<br>雄弁な<br>デザインである。
+                </p>
+            </div>
+        </section>
+
+        <!-- Section 3: Works (The Scroll) -->
+        <section class="panel work-panel" id="work">
+            <div class="work-item">
+                <div class="work-img" style="background-image: url('hero_neo_japonism_gold.png')"></div>
+                <div class="work-label">
+                    <h3>都心開発</h3>
+                    <span>2026</span>
+                </div>
+            </div>
+            <div class="work-item">
+                <div class="work-img" style="background-image: url('hero_neo_japonism_gold.png')"></div>
+                <div class="work-label">
+                    <h3>日本酒</h3>
+                    <span>2026</span>
+                </div>
+            </div>
+            <div class="work-item">
+                <div class="work-img" style="background-image: url('hero_neo_japonism_gold.png')"></div>
+                <div class="work-label">
+                    <h3>人工知能</h3>
+                    <span>2026</span>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <script src="gold_dust.js"></script>
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Horizontal Scroll Setup
+        const container = document.querySelector(".scroll-container");
+        const panels = gsap.utils.toArray(".panel");
+
+        if (window.innerWidth > 768) {
+            gsap.to(panels, {
+                xPercent: -100 * (panels.length - 1),
+                ease: "none",
+                scrollTrigger: {
+                    trigger: ".scroll-container",
+                    pin: true,
+                    scrub: 1.5, // "Heavy" Luxury Feel
+                    snap: 1 / (panels.length - 1),
+                    end: () => "+=" + container.offsetWidth
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>

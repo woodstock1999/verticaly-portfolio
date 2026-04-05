@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AD-GENESIS | AI Article Generation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&family=Space+Grotesk:wght@300;500;700&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            background-color: #0b1120;
+            /* Darker, richer slate */
+            color: #e2e8f0;
+            overflow-x: hidden;
+        }
+
+        h1,
+        h2,
+        h3,
+        .font-display {
+            font-family: 'Space Grotesk', 'Noto Sans JP', sans-serif;
+        }
+
+        /* Premium Glassmorphism */
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Sophisticated Aurora Background */
+        .aurora-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: -1;
+            background:
+                radial-gradient(circle at 10% 20%, rgba(56, 189, 248, 0.08) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(139, 92, 246, 0.08) 0%, transparent 40%),
+                radial-gradient(circle at 50% 50%, rgba(15, 23, 42, 1) 100%, transparent 0%);
+            background-size: 200% 200%;
+            animation: aurora 20s ease infinite alternate;
+        }
+
+        @keyframes aurora {
+            0% {
+                background-position: 0% 0%;
+            }
+
+            100% {
+                background-position: 100% 100%;
+            }
+        }
+
+        /* UI Elements */
+        .input-glow:focus {
+            box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.5);
+            border-color: #38bdf8;
+        }
+
+        .tab-active {
+            background: rgba(56, 189, 248, 0.2);
+            border-color: #38bdf8;
+            color: #38bdf8;
+        }
+
+        .tab-inactive {
+            background: transparent;
+            border-color: transparent;
+            color: #94a3b8;
+        }
+
+        .tab-inactive:hover {
+            color: #e2e8f0;
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Demo Interface Styles - Removed old terminal styles */
+        .hidden-step {
+            display: none;
+        }
+
+        .fade-in {
+            animation: fadeIn 0.5s forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body class="antialiased selection:bg-cyan-500/30">
+
+    <div class="aurora-bg"></div>
+
+    <!-- Navbar -->
+    <nav class="fixed top-0 w-full z-50 glass-panel border-b-0 border-t-0 border-x-0">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="font-display font-bold text-xl tracking-widest text-white">AD-GENESIS</div>
+            <div class="hidden md:flex gap-8 text-sm font-medium text-slate-400">
+                <a href="#demo" class="hover:text-white transition">Live Demo</a>
+                <a href="#features" class="hover:text-white transition">Features</a>
+                <a href="#pricing" class="hover:text-white transition">Pricing</a>
+            </div>
+            <a href="#demo"
+                class="bg-white text-slate-900 px-5 py-2 rounded-full text-sm font-bold hover:bg-cyan-50 transition shadow-lg shadow-cyan-500/10">
+                Try Now
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-12 lg:pt-48 lg:pb-20 min-h-screen flex flex-col justify-center">
+        <div class="max-w-7xl mx-auto px-6 relative z-10 w-full">
+            <div class="text-center mb-16">
+                <div
+                    class="inline-flex items-center gap-2 px-4 py-2 mb-8 rounded-full bg-slate-800/50 border border-slate-700/50 text-cyan-400 text-xs font-medium backdrop-blur-md">
+                    <span class="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse"></span>
+                    <span>AD PERFORMANCE OPTIMIZED v2.0</span>
+                </div>
+                <h1 class="text-5xl lg:text-7xl font-bold leading-tight mb-8 text-white tracking-tight">
+                    広告記事LPの<br>
+                    <span class="gradient-text">正解を、3つ出す。</span>
+                </h1>
+                <p class="text-lg text-slate-400 mb-10 leading-relaxed max-w-2xl mx-auto">
+                    URLだけで、最大10,000文字のセールスライティングを生成。<br>
+                    「CVR特化」「逆転の発想」「熟読率重視」。<br>
+                    勝てる切り口を、AIが一度に3パターン提案します。
+                </p>
+
+                <a href="#demo"
+                    class="inline-flex items-center gap-2 bg-white text-slate-900 px-10 py-5 rounded-lg font-bold text-lg hover:scale-105 transition-transform shadow-2xl shadow-cyan-500/10">
+                    <span>今すぐ3パターン生成</span>
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                    </svg>
+                </a>
+            </div>
+
+            <!-- Interactive Demo Interface -->
+            <div id="demo"
+                class="max-w-5xl mx-auto glass-panel rounded-2xl overflow-hidden shadow-2xl border border-slate-700/50 relative">
+                <!-- Mac-style Header for cleaner look -->
+                <div class="bg-slate-900/50 px-4 py-3 border-b border-slate-700/50 flex items-center gap-2">
+                    <div class="w-3 h-3 rounded-full bg-slate-700"></div>
+                    <div class="w-3 h-3 rounded-full bg-slate-700"></div>
+                    <div class="w-3 h-3 rounded-full bg-slate-700"></div>
+                    <div class="flex-1 text-center text-xs text-slate-500 font-mono">AD-GENESIS WORKSPACE</div>
+                </div>
+
+                <div class="p-8 md:p-12 min-h-[500px] flex flex-col justify-center relative bg-[#0b1120]/80">
+                    <!-- Step 1: URL Input -->
+                    <div id="step-1" class="w-full transition-all duration-500 max-w-2xl mx-auto">
+                        <label class="block text-white font-medium text-sm mb-4">対象の商品ページURLを入力</label>
+                        <div class="flex gap-4">
+                            <input type="text" placeholder="https://your-product-lp.com"
+                                class="flex-1 bg-slate-900/50 border border-slate-700 text-white px-6 py-4 rounded-lg focus:outline-none focus:border-cyan-500 transition-all font-mono text-sm">
+                            <button onclick="gotoStep2()"
+                                class="bg-gradient-to-r from-cyan-600 to-blue-600 hover:brightness-110 text-white px-8 rounded-lg font-bold transition-all shadow-lg shadow-cyan-500/20">解析開始</button>
+                        </div>
+                    </div>
+
+                    <!-- Step 2: Questionnaire -->
+                    <div id="step-2" class="hidden-step w-full max-w-2xl mx-auto">
+                        <div class="mb-8 flex items-center gap-3">
+                            <div
+                                class="w-8 h-8 rounded-full bg-green-500/20 flex items-center justify-center text-green-400">
+                                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-white">Product Analyzed</h3>
+                                <p class="text-slate-500 text-xs text-left">USP抽出完了</p>
+                            </div>
+                        </div>
+                        <div class="space-y-6">
+                            <div class="grid grid-cols-2 gap-6">
+                                <div>
+                                    <label
+                                        class="block text-slate-400 text-xs mb-2 uppercase tracking-wider">Target</label>
+                                    <select
+                                        class="w-full bg-slate-900 border border-slate-700 text-white px-4 py-3 rounded-lg focus:border-cyan-500 outline-none text-sm">
+                                        <option>F1層 (20-34歳 女性)</option>
+                                        <option>M1層 (20-34歳 男性)</option>
+                                        <option>シニア層</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label
+                                        class="block text-slate-400 text-xs mb-2 uppercase tracking-wider">Goal</label>
+                                    <div
+                                        class="w-full bg-slate-900 border border-slate-700 text-slate-300 px-4 py-3 rounded-lg text-sm flex items-center gap-2">
+                                        <span class="w-2 h-2 rounded-full bg-cyan-400"></span>
+                                        <span>Maximize CVR</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <button onclick="gotoStep3()"
+                                class="w-full bg-white text-slate-900 py-4 rounded-lg font-bold hover:scale-[1.02] transition-transform shadow-xl shadow-cyan-500/10">
+                                3パターン同時生成 (Start)
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Step 3: Loading -->
+                    <div id="step-3" class="hidden-step w-full text-center">
+                        <div class="flex justify-center gap-4 mb-8">
+                            <div
+                                class="w-32 h-40 glass-panel rounded-lg border-cyan-500/30 relative overflow-hidden animate-pulse">
+                                <div class="absolute inset-x-0 top-0 h-1 bg-cyan-500"></div>
+                                <div class="p-4 space-y-2">
+                                    <div class="h-2 bg-slate-700 rounded w-3/4"></div>
+                                    <div class="h-2 bg-slate-700 rounded w-full"></div>
+                                    <div class="h-2 bg-slate-700 rounded w-5/6"></div>
+                                </div>
+                                <div
+                                    class="absolute inset-0 flex items-center justify-center text-xs font-mono text-cyan-400 font-bold bg-slate-900/80">
+                                    PATTERN A
+                                </div>
+                            </div>
+                            <div
+                                class="w-32 h-40 glass-panel rounded-lg border-purple-500/30 relative overflow-hidden animate-pulse delay-100">
+                                <div class="absolute inset-x-0 top-0 h-1 bg-purple-500"></div>
+                                <div class="p-4 space-y-2">
+                                    <div class="h-2 bg-slate-700 rounded w-3/4"></div>
+                                    <div class="h-2 bg-slate-700 rounded w-full"></div>
+                                    <div class="h-2 bg-slate-700 rounded w-5/6"></div>
+                                </div>
+                                <div
+                                    class="absolute inset-0 flex items-center justify-center text-xs font-mono text-purple-400 font-bold bg-slate-900/80">
+                                    PATTERN B
+                                </div>
+                            </div>
+                            <div
+                                class="w-32 h-40 glass-panel rounded-lg border-green-500/30 relative overflow-hidden animate-pulse delay-200">
+                                <div class="absolute inset-x-0 top-0 h-1 bg-green-500"></div>
+                                <div class="p-4 space-y-2">
+                                    <div class="h-2 bg-slate-700 rounded w-3/4"></div>
+                                    <div class="h-2 bg-slate-700 rounded w-full"></div>
+                                    <div class="h-2 bg-slate-700 rounded w-5/6"></div>
+                                </div>
+                                <div
+                                    class="absolute inset-0 flex items-center justify-center text-xs font-mono text-green-400 font-bold bg-slate-900/80">
+                                    PATTERN C
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Generating 3 Variations...</h3>
+                        <p class="text-slate-500 text-sm">Writing 10,000+ characters of high-converting copy.</p>
+                    </div>
+
+                    <!-- Step 4: Result (Tabbed) -->
+                    <div id="step-4" class="hidden-step w-full h-full">
+                        <div class="flex flex-col h-full">
+                            <!-- Tabs -->
+                            <div class="flex border-b border-slate-700 mb-6">
+                                <button onclick="switchTab('A')" id="tab-A"
+                                    class="flex-1 py-3 text-sm font-bold border-b-2 tab-active transition-colors flex items-center justify-center gap-2">
+                                    <span class="w-2 h-2 rounded-full bg-cyan-400"></span> PATTERN A: CVR特化
+                                </button>
+                                <button onclick="switchTab('B')" id="tab-B"
+                                    class="flex-1 py-3 text-sm font-bold border-b-2 tab-inactive transition-colors flex items-center justify-center gap-2">
+                                    <span class="w-2 h-2 rounded-full bg-purple-400"></span> PATTERN B: 逆転の発想
+                                </button>
+                                <button onclick="switchTab('C')" id="tab-C"
+                                    class="flex-1 py-3 text-sm font-bold border-b-2 tab-inactive transition-colors flex items-center justify-center gap-2">
+                                    <span class="w-2 h-2 rounded-full bg-green-400"></span> PATTERN C: 熟読率重視
+                                </button>
+                            </div>
+
+                            <div class="flex flex-col md:flex-row gap-8 min-h-[400px]">
+                                <!-- Article Preview Area -->
+                                <div
+                                    class="flex-1 bg-white rounded-lg overflow-y-auto p-8 text-slate-800 relative shadow-inner">
+                                    <!-- Dynamic Content based on Tab -->
+                                    <div id="content-A" class="animate-fade-in">
+                                        <div
+                                            class="absolute top-0 right-0 bg-cyan-500 text-white text-[10px] font-bold px-3 py-1 rounded-bl">
+                                            CVR MAX MODE</div>
+                                        <h2 class="text-2xl font-bold mb-6 leading-snug">
+                                            【緊急】まだ手動で記事書いてるの？<br>CPAを半減させる「AI全自動化」の衝撃</h2>
+                                        <img src="feat_image_generation_ui_1767906532854.png"
+                                            class="w-full h-48 object-cover rounded-lg mb-6 shadow-md"
+                                            alt="AI Dashboard">
+                                        <p class="text-sm leading-relaxed mb-6 font-medium">
+                                            結論から言います。あなたの広告費は、無駄になっています。<br>
+                                            なぜなら、勝ちクリエイティブを見つけるための「試行回数」が圧倒的に足りないからです。
+                                        </p>
+                                        <div class="bg-red-50 border-l-4 border-red-500 p-4 mb-6">
+                                            <p class="text-red-700 font-bold text-sm">⚠️ 残酷な真実：9割の記事LPは読まれていません。</p>
+                                        </div>
+                                    </div>
+
+                                    <div id="content-B" class="hidden animate-fade-in">
+                                        <div
+                                            class="absolute top-0 right-0 bg-purple-500 text-white text-[10px] font-bold px-3 py-1 rounded-bl">
+                                            REVERSE ANGLE</div>
+                                        <h2 class="text-2xl font-bold mb-6 leading-snug">
+                                            「AIなんて信用するな」<br>そう思っていたプロのライターが廃業を決めた日</h2>
+                                        <img src="feat_cost_comparison_graph_1767906558378.png"
+                                            class="w-full h-48 object-cover rounded-lg mb-6 shadow-md" alt="Cost Graph">
+                                        <p class="text-sm leading-relaxed mb-6 font-medium">
+                                            「心のないAIに、人の心を動かす文章など書けるはずがない」<br>
+                                            私もそう信じていました。しかし、このツールが吐き出した"3つ目の案"を見た瞬間、背筋が凍りました。
+                                        </p>
+                                    </div>
+
+                                    <div id="content-C" class="hidden animate-fade-in">
+                                        <div
+                                            class="absolute top-0 right-0 bg-green-500 text-white text-[10px] font-bold px-3 py-1 rounded-bl">
+                                            STORYTELLING</div>
+                                        <h2 class="text-2xl font-bold mb-6 leading-snug">
+                                            夜中3時、終わらない修正作業。<br>あるマーケターを救った「魔法のURL」の話。</h2>
+                                        <img src="ui_article_gen_dashboard_1767906497423.png"
+                                            class="w-full h-48 object-cover rounded-lg mb-6 shadow-md" alt="Dashboard">
+                                        <p class="text-sm leading-relaxed mb-6 font-medium">
+                                            画面の光だけが照らす暗いオフィス。コーヒーはとっくに冷めている。<br>
+                                            「もっとCVRの高い訴求はないのか？」上司からの無茶なチャット。...そんな日常を変えたのは、たった1つの入力欄でした。
+                                        </p>
+                                    </div>
+
+                                    <div class="mt-8 text-center pt-8 border-t border-slate-100">
+                                        <button
+                                            class="bg-gradient-to-r from-slate-900 to-slate-800 text-white font-bold py-3 px-10 rounded-full shadow-lg hover:scale-105 transition-transform">
+                                            この構成案を採用する ＞
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <!-- Metrics Sidebar -->
+                                <div class="w-full md:w-64 flex flex-col gap-6">
+                                    <div class="glass-panel p-5 rounded-lg border border-slate-700/50">
+                                        <h4 class="text-xs text-slate-400 uppercase tracking-widest mb-4">Ad Quality
+                                            Metrics</h4>
+                                        <div class="space-y-4">
+                                            <div>
+                                                <div class="flex justify-between text-sm mb-1">
+                                                    <span class="text-slate-400">Est. CVR</span>
+                                                    <span class="text-cyan-400 font-bold">4.8%</span>
+                                                </div>
+                                                <div class="w-full h-1 bg-slate-700 rounded-full overflow-hidden">
+                                                    <div class="h-full bg-cyan-500 w-[85%]"></div>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div class="flex justify-between text-sm mb-1">
+                                                    <span class="text-slate-400">Read Through</span>
+                                                    <span class="text-white font-bold">High</span>
+                                                </div>
+                                                <div class="w-full h-1 bg-slate-700 rounded-full overflow-hidden">
+                                                    <div class="h-full bg-green-500 w-[92%]"></div>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div class="flex justify-between text-sm mb-1">
+                                                    <span class="text-slate-400">Char Count</span>
+                                                    <span class="text-slate-300">8,400</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div
+                                        class="glass-panel p-5 rounded-lg border border-slate-700/50 flex-1 flex flex-col justify-end">
+                                        <p class="text-xs text-slate-500 mb-4 text-center">Not satisfied with the image?
+                                        </p>
+                                        <button
+                                            class="w-full bg-slate-800 text-white py-2 rounded text-sm hover:bg-slate-700 transition border border-slate-600">
+                                            ↻ Regenerate Visuals
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mt-6 text-center">
+                                <button onclick="location.reload()"
+                                    class="text-xs text-slate-500 hover:text-white underline">Start New
+                                    Analysis</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-24 bg-slate-900 relative">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-3xl md:text-5xl font-bold text-center mb-4 text-white">Why AD-GENESIS?</h2>
+            <p class="text-center text-slate-500 mb-16">圧倒的な技術格差で、競合を置き去りに。</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-24">
+                <div class="order-2 md:order-1">
+                    <h3 class="text-2xl font-bold text-cyan-400 mb-4">画像も、一瞬で。</h3>
+                    <p class="text-slate-300 leading-relaxed mb-6">
+                        文章入力の合間に、「画像を生成」ボタンを押すだけ。<br>
+                        文脈に即したハイクオリティなイメージ画像をAIが即座に生成し、挿入します。<br>
+                        素材サイトを探し回る時間は、もう必要ありません。
+                    </p>
+                </div>
+                <div class="order-1 md:order-2">
+                    <img src="feat_image_generation_ui_1767906532854.png"
+                        class="rounded-xl shadow-2xl border border-cyan-500/20 w-full hover:scale-105 transition-transform duration-500">
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <img src="feat_cost_comparison_graph_1767906558378.png"
+                        class="rounded-xl shadow-2xl border border-cyan-500/20 w-full hover:scale-105 transition-transform duration-500">
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold text-red-400 mb-4">価格破壊。1/100のコスト。</h3>
+                    <p class="text-slate-300 leading-relaxed mb-6">
+                        従来の制作会社：1記事 50,000円〜<br>
+                        <strong class="text-2xl text-cyan-400">AD-GENESIS：1記事 1,000円〜</strong>
+                    </p>
+                    <p class="text-slate-400 text-sm">
+                        浮いた予算で広告出稿を強化し、CPAを劇的に改善。<br>
+                        質を落とさず、量を100倍に。これが新しい時代の戦い方です。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-24 relative z-10">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-bold text-white mb-4">圧倒的なコストパフォーマンス</h2>
+                <p class="text-slate-400">もう、記事単価で悩む必要はありません。</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- Light Plan -->
+                <div
+                    class="glass-panel p-8 rounded-2xl border-t-4 border-slate-500 relative group hover:-translate-y-2 transition-transform duration-300">
+                    <h3 class="text-xl font-bold text-white mb-2">Starter</h3>
+                    <div class="flex items-end gap-1 mb-6">
+                        <span class="text-3xl font-bold text-white">¥9,800</span>
+                        <span class="text-slate-500 text-sm">/月</span>
+                    </div>
+                    <ul class="space-y-4 text-sm text-slate-300 mb-8">
+                        <li class="flex items-center gap-2"><span class="text-green-400">✓</span> 記事生成 10本/月</li>
+                        <li class="flex items-center gap-2"><span class="text-green-400">✓</span> 画像生成 無制限</li>
+                        <li class="flex items-center gap-2"><span class="text-green-400">✓</span> 3パターン同時出力</li>
+                    </ul>
+                    <button
+                        class="w-full py-3 rounded-lg border border-slate-600 text-white font-bold hover:bg-white hover:text-slate-900 transition-colors">お試しプラン</button>
+                </div>
+
+                <!-- Standard Plan -->
+                <div
+                    class="glass-panel p-8 rounded-2xl border-t-4 border-cyan-500 relative transform md:-translate-y-4 shadow-2xl shadow-cyan-500/20">
+                    <div
+                        class="absolute top-0 right-0 bg-cyan-500 text-white text-[10px] font-bold px-3 py-1 rounded-bl-lg uppercase tracking-wider">
+                        Most Popular</div>
+                    <h3 class="text-xl font-bold text-white mb-2">Growth</h3>
+                    <div class="flex items-end gap-1 mb-6">
+                        <span class="text-4xl font-bold text-cyan-400">¥29,800</span>
+                        <span class="text-slate-500 text-sm">/月</span>
+                    </div>
+                    <ul class="space-y-4 text-sm text-slate-300 mb-8">
+                        <li class="flex items-center gap-2"><span class="text-cyan-400">✓</span> 記事生成 30本/月</li>
+                        <li class="flex items-center gap-2"><span class="text-cyan-400">✓</span> 画像生成 無制限</li>
+                        <li class="flex items-center gap-2"><span class="text-cyan-400">✓</span> 優先サーバー処理</li>
+                        <li class="flex items-center gap-2"><span class="text-cyan-400">✓</span> 広告アカウント連携</li>
+                    </ul>
+                    <button
+                        class="w-full py-3 rounded-lg bg-cyan-600 text-white font-bold hover:bg-cyan-500 transition-colors shadow-lg">今すぐ始める</button>
+                </div>
+
+                <!-- Pro Plan -->
+                <div
+                    class="glass-panel p-8 rounded-2xl border-t-4 border-purple-500 relative group hover:-translate-y-2 transition-transform duration-300">
+                    <h3 class="text-xl font-bold text-white mb-2">Scale</h3>
+                    <div class="flex items-end gap-1 mb-6">
+                        <span class="text-3xl font-bold text-white">¥49,800</span>
+                        <span class="text-slate-500 text-sm">/月</span>
+                    </div>
+                    <ul class="space-y-4 text-sm text-slate-300 mb-8">
+                        <li class="flex items-center gap-2"><span class="text-purple-400">✓</span> 記事生成 50本/月</li>
+                        <li class="flex items-center gap-2"><span class="text-purple-400">✓</span> 画像生成 完全無制限</li>
+                        <li class="flex items-center gap-2"><span class="text-purple-400">✓</span> 専任サポート付</li>
+                    </ul>
+                    <button
+                        class="w-full py-3 rounded-lg border border-slate-600 text-white font-bold hover:bg-white hover:text-slate-900 transition-colors">お問い合わせ</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer ... -->
+    <footer class="bg-[#050b14] py-12 border-t border-slate-800 text-center text-slate-500 text-sm relative z-10">
+        <p>&copy; 2026 AD-GENESIS AI. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Tab Switching Logic
+        function switchTab(tabId) {
+            // Reset Tabs
+            ['A', 'B', 'C'].forEach(id => {
+                const btn = document.getElementById(`tab-${id}`);
+                const content = document.getElementById(`content-${id}`);
+
+                if (id === tabId) {
+                    btn.className = "flex-1 py-3 text-sm font-bold border-b-2 tab-active transition-colors flex items-center justify-center gap-2";
+                    content.classList.remove('hidden');
+                } else {
+                    btn.className = "flex-1 py-3 text-sm font-bold border-b-2 tab-inactive transition-colors flex items-center justify-center gap-2";
+                    content.classList.add('hidden');
+                }
+            });
+        }
+
+        // Demo Interaction Logic
+        function gotoStep2() {
+            const input = document.querySelector('#step-1 input');
+            if (!input.value) {
+                input.focus();
+                return;
+            }
+            gsap.to('#step-1', {
+                opacity: 0, y: -20, duration: 0.3, onComplete: () => {
+                    document.getElementById('step-1').classList.add('hidden-step');
+                    const step2 = document.getElementById('step-2');
+                    step2.classList.remove('hidden-step');
+                    step2.classList.add('fade-in');
+                }
+            });
+        }
+
+        function gotoStep3() {
+            gsap.to('#step-2', {
+                opacity: 0, y: -20, duration: 0.3, onComplete: () => {
+                    document.getElementById('step-2').classList.add('hidden-step');
+                    const step3 = document.getElementById('step-3');
+                    step3.classList.remove('hidden-step');
+
+                    // Simulate processing
+                    setTimeout(() => {
+                        gotoStep4();
+                    }, 3000);
+                }
+            });
+        }
+
+        function gotoStep4() {
+            gsap.to('#step-3', {
+                opacity: 0, scale: 0.9, duration: 0.3, onComplete: () => {
+                    document.getElementById('step-3').classList.add('hidden-step');
+                    const step4 = document.getElementById('step-4');
+                    step4.classList.remove('hidden-step');
+                    step4.classList.add('fade-in');
+                    switchTab('A'); // Activate default tab
+                }
+            });
+        }
+    </script>
+    <script src="particles.js"></script>
+</body>
+
+</html>

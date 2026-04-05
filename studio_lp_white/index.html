@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Takumi | The Digital Artisan</title>
+    <!-- Importing Zen Old Mincho (Black) and Zen Kaku Gothic New -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500&family=Zen+Old+Mincho:wght@900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="cursor-dot"></div>
+
+    <header class="header">
+        <div class="logo">Takumi.</div>
+        <nav class="nav">
+            <a href="#work">Work</a>
+            <a href="#about">About</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- HERO: The "Sensational" Impact -->
+        <section class="hero">
+            <div class="hero-visual">
+                <img src="hero_crystal_brain_white.png" alt="Digital Brain" class="product-shot">
+            </div>
+            <div class="hero-copy">
+                <!-- Mechanism #9: Typography Engine (Manual Kerning) -->
+                <h1 class="headline">
+                    <span class="char k-1">圧</span><span class="char k-2">倒</span><span class="char k-3">的</span>、<br>
+                    <span class="char k-4">透</span><span class="char k-5">明</span><span class="char k-6">感</span>。
+                </h1>
+                <!-- Geometric Gothic Body ("The Whisper") -->
+                <p class="sub-copy">
+                    論理と美学の結晶。<br>
+                    これが、私のデザイン。
+                </p>
+            </div>
+        </section>
+
+        <!-- STATEMENT: Radical Simplicity -->
+        <section class="statement" id="about">
+            <div class="container">
+                <h2 class="section-title">PHILOSOPHY</h2>
+                <div class="statement-text">
+                    <p class="mincho-lead">「余白」は、<br>嘘をつかない。</p>
+                    <div class="gothic-body">
+                        <p>
+                            飾ることは容易い。<br>
+                            しかし、削ぎ落とすことには勇気がいる。<br>
+                            私たちは情報のノイズを極限まで排除し、<br>
+                            本質だけを、白日の下に晒す。
+                        </p>
+                        <p>
+                            Appleがそうであるように。<br>
+                            優れたデザインは、言葉よりも雄弁だ。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SELECTED WORKS: The "Product" Grid -->
+        <section class="works" id="work">
+            <div class="container">
+                <h2 class="section-title">SELECTED WORKS</h2>
+                <div class="work-list">
+                    <!-- Project 1 -->
+                    <article class="work-item">
+                        <div class="work-meta">
+                            <span class="work-num">01</span>
+                            <h3 class="work-name">Neon Tokyo <br><span class="jp">都市開発</span></h3>
+                        </div>
+                        <div class="work-image-wrapper">
+                            <!-- Placeholder: In real production, high-key product shots go here -->
+                            <div class="work-placeholder"></div>
+                        </div>
+                    </article>
+                    <!-- Project 2 -->
+                    <article class="work-item">
+                        <div class="work-meta">
+                            <span class="work-num">02</span>
+                            <h3 class="work-name">Sake Zen <br><span class="jp">パッケージ</span></h3>
+                        </div>
+                        <div class="work-image-wrapper">
+                            <div class="work-placeholder"></div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- TRUST SIGNAL: Client Logos -->
+        <section class="client-section">
+            <div class="container">
+                <h2 class="section-title">TRUSTED BY</h2>
+                <div class="client-grid">
+                    <div class="client-logo">TOYOTA</div>
+                    <div class="client-logo">SONY</div>
+                    <div class="client-logo">SHISEIDO</div>
+                    <div class="client-logo">UNIQLO</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- DENSITY SIGNAL: Service Specs -->
+        <section class="specs-section">
+            <div class="container" style="position: relative;">
+                <!-- Seasonal Accent -->
+                <div class="hanko-seal">匠印</div>
+
+                <h2 class="section-title">SERVICE SPECS</h2>
+                <table class="specs-table">
+                    <tr>
+                        <th>Brand Identity</th>
+                        <td>ロゴ設計、VIガイドライン策定、ネーミング開発</td>
+                    </tr>
+                    <tr>
+                        <th>Digital Product</th>
+                        <td>UI/UX設計、フロントエンド実装、プロトタイピング</td>
+                    </tr>
+                    <tr>
+                        <th>Art Direction</th>
+                        <td>スチール撮影、3Dモーショングラフィックス、映像演出</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 TAKUMI. The Digital Artisan.</p>
+    </footer>
+
+    <script>
+        // Simple cursor follower for "Digital" feel
+        const cursor = document.querySelector('.cursor-dot');
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+        });
+    </script>
+</body>
+
+</html>

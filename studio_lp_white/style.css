@@ -1,0 +1,308 @@
+:root {
+    --bg-color: #ffffff;
+    /* Pure White */
+    --text-color: #111111;
+    /* Jet Black */
+    --accent-color: #bf1e33;
+    /* Japanese Red (Inkan) - Seasonality/Trust */
+    --font-mincho: 'Zen Old Mincho', serif;
+    --font-gothic: 'Zen Kaku Gothic New', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-gothic);
+    overflow-x: hidden;
+    cursor: none;
+    /* Custom cursor */
+}
+
+/* Custom Cursor */
+.cursor-dot {
+    width: 12px;
+    height: 12px;
+    background: var(--accent-color);
+    /* Updated to Red */
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    mix-blend-mode: difference;
+    /* Inverts color over image */
+    transition: width 0.3s, height 0.3s;
+}
+
+/* Typography Rules */
+.headline {
+    font-family: var(--font-mincho);
+    font-weight: 900;
+    /* Black */
+    font-size: clamp(4rem, 15vw, 12rem);
+    /* Massive */
+    line-height: 1.1;
+    letter-spacing: -0.04em;
+    margin-bottom: 2rem;
+}
+
+.sub-copy {
+    font-family: var(--font-gothic);
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    letter-spacing: 0.1em;
+}
+
+.section-title {
+    font-family: var(--font-gothic);
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    margin-bottom: 4rem;
+    border-bottom: 1px solid black;
+    padding-bottom: 1rem;
+    display: inline-block;
+}
+
+/* Layout */
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 5vw;
+}
+
+/* Header */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 5vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    z-index: 100;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.nav a {
+    text-decoration: none;
+    color: black;
+    margin-left: 2rem;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 0 5vw;
+}
+
+.hero-visual {
+    position: absolute;
+    top: 50%;
+    right: 5vw;
+    transform: translateY(-50%);
+    width: 45vw;
+    height: auto;
+    z-index: 0;
+}
+
+.product-shot {
+    width: 100%;
+    height: auto;
+    display: block;
+    /* Simulate "Float" */
+    filter: drop-shadow(0 40px 80px rgba(0, 0, 0, 0.1));
+}
+
+.hero-copy {
+    position: relative;
+    z-index: 1;
+    /* Increased max-width and added flex-shrink */
+    max-width: 60vw;
+    flex-shrink: 1;
+}
+
+/* Statement Section */
+.statement {
+    padding: 20vh 0;
+}
+
+.statement-text {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5vw;
+    align-items: start;
+}
+
+.mincho-lead {
+    font-family: var(--font-mincho);
+    font-weight: 900;
+    font-size: 4rem;
+    line-height: 1.2;
+}
+
+.gothic-body {
+    font-size: 1.1rem;
+    line-height: 2.2;
+    color: #333;
+}
+
+/* Works Section */
+.works {
+    padding-bottom: 20vh;
+}
+
+.work-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.work-item {
+    border-top: 1px solid black;
+    padding: 3rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.work-item:last-child {
+    border-bottom: 1px solid black;
+}
+
+.work-item:hover {
+    padding-left: 20px;
+    /* Slight shift */
+}
+
+.work-meta {
+    flex: 1;
+}
+
+.work-num {
+    display: block;
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+}
+
+.work-name {
+    font-family: var(--font-mincho);
+    font-weight: 900;
+    font-size: 3rem;
+    line-height: 1.2;
+}
+
+.work-name .jp {
+    font-family: var(--font-gothic);
+    font-weight: 400;
+    font-size: 1rem;
+    display: block;
+    margin-top: 0.5rem;
+}
+
+/* Trust Signal: Logo Farm */
+.client-section {
+    padding: 10vh 5vw;
+    border-bottom: 1px solid #eee;
+}
+
+.client-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4rem;
+    opacity: 0.5;
+    /* Humble presentation */
+    filter: grayscale(100%);
+}
+
+.client-logo {
+    font-family: var(--font-gothic);
+    font-weight: 700;
+    font-size: 1.5rem;
+    text-align: center;
+    border: 1px solid #ddd;
+    padding: 2rem;
+}
+
+/* Trust Signal: Specs Table (Density) */
+.specs-section {
+    padding: 10vh 5vw;
+}
+
+.specs-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 4rem;
+}
+
+.specs-table th,
+.specs-table td {
+    border-top: 1px solid black;
+    padding: 2rem 0;
+    text-align: left;
+}
+
+.specs-table th {
+    font-family: var(--font-mincho);
+    font-weight: 900;
+    font-size: 1.2rem;
+    width: 30%;
+    color: var(--accent-color);
+    /* Red for Headers */
+}
+
+/* Seasonal Accent: The Hanko (Stamp) */
+.hanko-seal {
+    width: 60px;
+    height: 60px;
+    border: 2px solid var(--accent-color);
+    border-radius: 4px;
+    /* Rounded square */
+    color: var(--accent-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--font-mincho);
+    font-weight: 900;
+    font-size: 0.9rem;
+    writing-mode: vertical-rl;
+    position: absolute;
+    top: -30px;
+    right: 0;
+    background: white;
+}
+
+/* Footer */
+.footer {
+    padding: 5vh 5vw;
+    text-align: center;
+    font-size: 0.8rem;
+    opacity: 0.8;
+    background: #111;
+    color: white;
+    position: relative;
+}

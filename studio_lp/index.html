@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TAKUMI DESIGN | Future Architecture</title>
+    <!-- Importing Noto Sans JP and Inter for that "Swiss-JP" look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600;900&family=Noto+Sans+JP:wght@300;500;700&family=Zen+Old+Mincho:wght@700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="grid-overlay">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+
+    <header class="header">
+        <h1 class="logo">TAKUMI.<span class="jp">設計事務所</span></h1>
+        <nav class="nav">
+            <a href="#" class="nav-item">WORKS <span class="jp">実績</span></a>
+            <a href="#" class="nav-item">ABOUT <span class="jp">私たちについて</span></a>
+            <a href="#" class="nav-item">CONTACT <span class="jp">お問い合わせ</span></a>
+        </nav>
+    </header>
+
+    <main class="main-container">
+        <!-- FIRST VIEW -->
+        <section class="hero-section">
+            <div class="hero-text-wrapper">
+                <p class="hero-sub">JAPANESE AESTHETICS × DIGITAL LOGIC</p>
+                <h2 class="hero-title">
+                    <span class="line-reveal">DESIGN</span><br>
+                    <span class="line-reveal">ENGINEERING</span><br>
+                    <span class="line-reveal">CULTURE</span>
+                </h2>
+                <div class="hero-jp-description">
+                    <p>
+                        私たちは、美学と論理を融合させる。<br>
+                        日本独自の文化的背景をコードに変換し、<br>
+                        "100点満点"の体験を構築する。
+                    </p>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <span class="scroll-text">SCROLL</span>
+                <div class="scroll-line"></div>
+            </div>
+        </section>
+
+        <!-- WORKS: BENTO GRID -->
+        <section class="works-section">
+            <div class="section-label">SELECTED WORKS 01-04</div>
+            <div class="bento-grid">
+                <article class="work-card large" style="background-image: url('texture_washi.png');">
+                    <div class="work-overlay-gradient"></div>
+                    <div class="work-content">
+                        <span class="work-cat">MATERIAL</span>
+                        <h3 class="work-title">Washi "Kuro"</h3>
+                        <p class="work-jp">伝統工芸リブランディング</p>
+                    </div>
+                </article>
+                <article class="work-card small" style="background-image: url('work_fintech_ui.png');">
+                    <div class="work-overlay-gradient"></div>
+                    <div class="work-content">
+                        <span class="work-cat">UI/UX</span>
+                        <h3 class="work-title">FinTech "Trust"</h3>
+                        <p class="work-jp">銀行アプリ刷新</p>
+                    </div>
+                </article>
+                <article class="work-card tall" style="background-image: url('work_sake.png');">
+                    <div class="work-overlay-gradient"></div>
+                    <div class="work-content">
+                        <span class="work-cat">GRAPHIC</span>
+                        <h3 class="work-title">Sake "Zen"</h3>
+                        <p class="work-jp">パッケージデザイン</p>
+                    </div>
+                </article>
+                <article class="work-card medium">
+                    <div class="work-content">
+                        <span class="work-cat">WEB</span>
+                        <h3 class="work-title">Architecture Inc.</h3>
+                        <p class="work-jp">コーポレートサイト</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- PHILOSOPHY: VERTICAL TEXT ACCENT -->
+        <section class="philosophy-section">
+            <div class="tategaki-wrapper">
+                <h2 class="tategaki-title mincho">
+                    機能美の、<br>極致へ。
+                </h2>
+            </div>
+            <div class="philosophy-content">
+                <h3 class="en-header">DIGITAL ARTISAN</h3>
+                <p class="body-text mincho">
+                    私たちは、デジタルの職人（匠）である。<br>
+                    流行りのサイバーな装飾は要らない。<br>
+                    ただ、触れた瞬間の「質感」と、<br>
+                    迷いのない「導線」があればいい。<br><br>
+                    1ピクセルの狂いも許さない。<br>
+                    それが、TAKUMIの流儀。
+                </p>
+                <a href="#" class="btn-primary">
+                    OUR PHILOSOPHY <span class="arrow">→</span>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>ADDRESS</h4>
+                <p>Tokyo, Shibuya, 1-1-1<br>Gemini Bldg 9F</p>
+            </div>
+            <div class="footer-col">
+                <h4>SOCIAL</h4>
+                <a href="#">Instagram</a><br>
+                <a href="#">X (Twitter)</a>
+            </div>
+            <div class="footer-col copy">
+                &copy; 2026 TAKUMI DESIGN AGENT.
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

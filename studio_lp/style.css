@@ -1,0 +1,304 @@
+    --bg-color: #0d0d0d;
+    --text-main: #f2f2f2;
+    --text-sub: #a0a0a0;
+    --accent: #00ddff;
+    /* Brighter Cyan for "Lucid" look */
+    --line-color: rgba(255, 255, 255, 0.08);
+    --font-en: 'Inter',
+    sans-serif;
+    --font-jp-gothic: 'Noto Sans JP',
+    sans-serif;
+    --font-jp-mincho: 'Zen Old Mincho',
+    serif;
+    /* Heavy Mincho as requested */
+    /* For philosophy */
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        background-color: var(--bg-color);
+        color: var(--text-main);
+        font-family: var(--font-en);
+        line-height: 1.8;
+        /* Increased line-height for elegance */
+        overflow-x: hidden;
+    }
+
+    /* Typography Utility */
+    .jp {
+        font-family: var(--font-jp-gothic);
+    }
+
+    .mincho {
+        font-family: var(--font-jp-mincho);
+    }
+
+    a {
+        text-decoration: none;
+        color: inherit;
+        transition: 0.3s;
+    }
+
+    /* Background Grid Lines */
+    .grid-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: space-between;
+        pointer-events: none;
+        z-index: 0;
+        padding: 0 5vw;
+    }
+
+    .line {
+        width: 1px;
+        height: 100%;
+        background: var(--line-color);
+    }
+
+    /* Header */
+    .header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        padding: 2rem 5vw;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 100;
+        mix-blend-mode: difference;
+    }
+
+    .logo {
+        font-size: 1.2rem;
+        font-weight: 900;
+        letter-spacing: 0.05em;
+    }
+
+    .logo .jp {
+        font-size: 0.8rem;
+        font-weight: 300;
+        margin-left: 10px;
+        opacity: 0.7;
+    }
+
+    .nav {
+        display: flex;
+        gap: 2rem;
+    }
+
+    .nav-item {
+        font-size: 0.8rem;
+        letter-spacing: 0.1em;
+        position: relative;
+    }
+
+    .nav-item .jp {
+        display: block;
+        font-size: 0.6rem;
+        opacity: 0.5;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        white-space: nowrap;
+    }
+
+    /* Hero Section */
+    .hero-section {
+        height: 100vh;
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding: 0 5vw;
+        z-index: 10;
+        /* Changed to Concrete texture for "Materiality" */
+        background: url('texture_concrete.png') no-repeat center center/cover;
+    }
+
+    .hero-section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        /* Darker overlay for Wabi-Sabi feel */
+        background: linear-gradient(to right, rgba(13, 13, 13, 0.95) 40%, rgba(13, 13, 13, 0.6) 100%);
+        z-index: -1;
+    }
+
+    .hero-sub {
+        font-size: 0.9rem;
+        color: var(--accent);
+        letter-spacing: 0.2em;
+        margin-bottom: 2rem;
+    }
+
+    .hero-title {
+        font-family: var(--font-en);
+        font-size: clamp(3rem, 8vw, 8rem);
+        font-weight: 900;
+        line-height: 0.9;
+        letter-spacing: -0.02em;
+        margin-bottom: 4rem;
+    }
+
+    .hero-jp-description {
+        font-family: var(--font-jp);
+        font-size: 0.9rem;
+        color: var(--text-sub);
+        border-left: 2px solid var(--accent);
+        padding-left: 1.5rem;
+        max-width: 400px;
+        line-height: 2;
+    }
+
+    /* Works Section (Bento Grid) */
+    .works-section {
+        padding: 10vh 5vw;
+        position: relative;
+        z-index: 10;
+        border-top: 1px solid var(--line-color);
+    }
+
+    .section-label {
+        font-size: 0.8rem;
+        margin-bottom: 3rem;
+        opacity: 0.5;
+    }
+
+    .bento-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 350px);
+        gap: 1.5vw;
+    }
+
+    .work-card {
+        background: #1a1a1a;
+        border: 1px solid #333;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        transition: 0.4s ease;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .work-card:hover {
+        background: #252525;
+        border-color: var(--text-main);
+    }
+
+    .work-card.large {
+        grid-column: span 2;
+    }
+
+    .work-card.tall {
+        grid-row: span 2;
+    }
+
+    .work-cat {
+        font-size: 0.7rem;
+        color: var(--accent);
+        letter-spacing: 0.1em;
+        margin-bottom: 0.5rem;
+        display: block;
+    }
+
+    .work-title {
+        font-size: 2rem;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+    }
+
+    .work-jp {
+        font-family: var(--font-jp);
+        font-size: 0.8rem;
+        color: var(--text-sub);
+    }
+
+    /* Philosophy Section */
+    .philosophy-section {
+        padding: 15vh 5vw;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-top: 1px solid var(--line-color);
+        position: relative;
+        z-index: 10;
+    }
+
+    .tategaki-wrapper {
+        width: 30%;
+    }
+
+    .tategaki-title {
+        font-family: var(--font-jp-mincho);
+        font-size: 4rem;
+        /* Even larger */
+        font-weight: 900;
+        /* BLACK weight */
+        writing-mode: vertical-rl;
+        letter-spacing: 0.1em;
+        line-height: 1.8;
+        height: 500px;
+        text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+        /* Ink bleed effect */
+    }
+
+    .philosophy-content {
+        width: 50%;
+    }
+
+    .en-header {
+        font-size: 3rem;
+        font-weight: 900;
+        margin-bottom: 2rem;
+        color: transparent;
+        -webkit-text-stroke: 1px var(--text-main);
+    }
+
+    .body-text {
+        font-family: var(--font-jp);
+        color: var(--text-sub);
+        line-height: 2.2;
+        margin-bottom: 3rem;
+    }
+
+    .btn-primary {
+        display: inline-block;
+        padding: 1rem 3rem;
+        border: 1px solid var(--text-main);
+        font-size: 0.9rem;
+        letter-spacing: 0.1em;
+    }
+
+    .btn-primary:hover {
+        background: var(--text-main);
+        color: var(--bg-color);
+    }
+
+    /* Footer */
+    .footer {
+        padding: 5vh 5vw;
+        border-top: 1px solid var(--line-color);
+    }
+
+    .footer-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        font-size: 0.8rem;
+        color: var(--text-sub);
+        font-family: var(--font-en);
+    }

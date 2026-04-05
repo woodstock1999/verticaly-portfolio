@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PORTFOLIO | TAKUMI DESIGN</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600&family=Zen+Old+Mincho:wght@400;700&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #0a0a0a;
+            color: #fff;
+        }
+
+        .jp-font {
+            font-family: 'Zen Old Mincho', serif;
+        }
+
+        .card:hover .card-img {
+            transform: scale(1.05);
+        }
+
+        .card:hover .overlay {
+            opacity: 0.2;
+        }
+    </style>
+</head>
+
+<body class="min-h-screen p-8 md:p-16">
+    <header class="mb-24 flex justify-between items-end border-b border-white/20 pb-8">
+        <div>
+            <h1 class="text-4xl md:text-6xl font-bold tracking-tighter mb-2">DESIGN WORKS</h1>
+            <p class="text-gray-400">Selected Prototypes 2026</p>
+        </div>
+        <div class="jp-font text-right hidden md:block">
+            <p>日本的意匠 × 未来的実装</p>
+        </div>
+    </header>
+
+    <main class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- Work 01: Neo-Japonism (C) -->
+        <a href="studio_lp_c/index.html" class="block group card">
+            <div class="relative aspect-video bg-gray-800 overflow-hidden rounded-lg mb-4 border border-white/10">
+                <img src="neo_japonism_thumb.png"
+                    class="w-full h-full object-cover card-img transition duration-700 ease-out">
+                <div class="absolute inset-0 bg-black opacity-0 overlay transition duration-500"></div>
+            </div>
+            <h2 class="text-xl font-bold flex justify-between items-center">
+                Neo-Japonism <span class="text-xs border border-white/30 px-2 py-1 rounded">WINNER</span>
+            </h2>
+            <p class="text-gray-500 text-sm mt-1">Experimental / Three.js</p>
+        </a>
+
+        <!-- Work 02: Deep Dive (B) -->
+        <a href="studio_lp_b/index.html" class="block group card">
+            <div class="relative aspect-video bg-gray-800 overflow-hidden rounded-lg mb-4 border border-white/10">
+                <img src="deep_dive_thumb.png"
+                    class="w-full h-full object-cover card-img transition duration-700 ease-out">
+            </div>
+            <h2 class="text-xl font-bold">Deep Dive</h2>
+            <p class="text-gray-500 text-sm mt-1">Immersive / Dark Mode</p>
+        </a>
+
+        <!-- Work 06: Structured Chaos (A) -->
+        <a href="studio_lp_a/index.html" class="block group card">
+            <div class="relative aspect-video bg-gray-800 overflow-hidden rounded-lg mb-4 border border-white/10">
+                <img src="structured_chaos_thumb.png"
+                    class="w-full h-full object-cover card-img transition duration-700 ease-out">
+            </div>
+            <h2 class="text-xl font-bold">Structured Chaos</h2>
+            <p class="text-gray-500 text-sm mt-1">Deconstructivist / Parallax</p>
+        </a>
+
+        <!-- Work 03: KIWAMI (Sushi) -->
+        <a href="sushi_lp/index.html" class="block group card">
+            <div class="relative aspect-video bg-gray-800 overflow-hidden rounded-lg mb-4 border border-white/10">
+                <img src="sushi_hero_tuna_artifact.png"
+                    class="w-full h-full object-cover card-img transition duration-700 ease-out">
+                <div class="absolute top-2 right-2 bg-gold/90 text-black text-[10px] font-bold px-2 py-1 rounded-sm">NEW
+                </div>
+            </div>
+            <h2 class="text-xl font-bold jp-font">極 KIWAMI</h2>
+            <p class="text-gray-500 text-sm mt-1">Vertical Scrolls / Texture</p>
+        </a>
+
+        <!-- Work 04: DATASTREAM (SaaS) -->
+        <a href="saas_lp/index.html" class="block card">
+            <div class="relative aspect-video bg-gray-800 overflow-hidden rounded-lg mb-4 border border-white/10">
+                <img src="saas_hero_dashboard_artifact.png"
+                    class="w-full h-full object-cover card-img transition duration-700 ease-out">
+                <div class="absolute top-2 right-2 bg-blue-500 text-white text-[10px] font-bold px-2 py-1 rounded-sm">
+                    NEW</div>
+            </div>
+            <h2 class="text-xl font-bold">DATASTREAM</h2>
+            <p class="text-gray-500 text-sm mt-1">Glassmorphism / B2B</p>
+        </a>
+
+        <!-- Work 05: MA (Architect) -->
+        <a href="arch_lp/index.html" class="block card">
+            <div class="relative aspect-video bg-gray-800 overflow-hidden rounded-lg mb-4 border border-white/10">
+                <img src="arch_hero_minimal_artifact.png"
+                    class="w-full h-full object-cover card-img transition duration-700 ease-out">
+                <div class="absolute top-2 right-2 bg-gray-500 text-white text-[10px] font-bold px-2 py-1 rounded-sm">
+                    NEW</div>
+            </div>
+            <h2 class="text-xl font-bold">MA / ARCHITECTS</h2>
+            <p class="text-gray-500 text-sm mt-1">Brutalist / Minimal</p>
+        </a>
+
+        <!-- Work 07: DESIGN VAULT (Template Market) -->
+        <a href="template_market_lp/index.html" class="block card">
+            <div class="relative aspect-video bg-gray-800 overflow-hidden rounded-lg mb-4 border border-white/10">
+                <img src="template_market_lp/hero_template_collage_1767910671920.png"
+                    class="w-full h-full object-cover card-img transition duration-700 ease-out">
+                <div class="absolute top-2 right-2 bg-purple-500 text-white text-[10px] font-bold px-2 py-1 rounded-sm">
+                    LATEST</div>
+            </div>
+            <h2 class="text-xl font-bold">DESIGN VAULT</h2>
+            <p class="text-gray-500 text-sm mt-1">E-commerce / Template Market</p>
+        </a>
+
+        <!-- Work 08: ARTICLE GEN (AI Writing) -->
+        <a href="article_gen_lp/index.html" class="block card">
+            <div class="relative aspect-video bg-gray-800 overflow-hidden rounded-lg mb-4 border border-white/10">
+                <img src="article_gen_lp/ui_article_gen_dashboard_1767906497423.png"
+                    class="w-full h-full object-cover card-img transition duration-700 ease-out">
+            </div>
+            <h2 class="text-xl font-bold">ARTICLE GEN</h2>
+            <p class="text-gray-500 text-sm mt-1">Dashboard / AI Tool</p>
+        </a>
+
+        <!-- Work 09: STUDIO WHITE (Variation) -->
+        <a href="studio_lp_white/index.html" class="block card">
+            <div class="relative aspect-video bg-gray-800 overflow-hidden rounded-lg mb-4 border border-white/10">
+                <img src="studio_lp_white/hero_crystal_brain_white.png"
+                    class="w-full h-full object-cover card-img transition duration-700 ease-out">
+            </div>
+            <h2 class="text-xl font-bold">STUDIO WHITE</h2>
+            <p class="text-gray-500 text-sm mt-1">Experimental / White Mode</p>
+        </a>
+
+    </main>
+
+    <h2 class="text-3xl font-bold mt-24 mb-8">Concept Lab <span class="text-sm font-normal text-gray-500 ml-4">Coming
+            Soon</span></h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Work 10: AETHEL (Cosmetics) -->
+        <a href="cosmetics_lp/index.html" class="block card">
+            <div class="relative aspect-video bg-gray-800 overflow-hidden rounded-lg mb-4 border border-white/10">
+                <img src="thumb_beauty_aethel.png"
+                    class="w-full h-full object-cover card-img transition duration-700 ease-out">
+                <div class="absolute top-2 right-2 bg-pink-500 text-white text-[10px] font-bold px-2 py-1 rounded-sm">
+                    DEV</div>
+            </div>
+            <h2 class="text-xl font-bold">AETHEL</h2>
+            <p class="text-gray-500 text-sm mt-1">Cosmetics / Luxury</p>
+        </a>
+
+        <!-- Work 11: VITA FLORA (Health) -->
+        <a href="#" class="block card opacity-80 hover:opacity-100 transition">
+            <div class="relative aspect-video bg-gray-800 overflow-hidden rounded-lg mb-4 border border-white/10">
+                <img src="thumb_health_vitality.png"
+                    class="w-full h-full object-cover card-img transition duration-700 ease-out grayscale hover:grayscale-0">
+                <div class="absolute top-2 right-2 bg-gray-700 text-white text-[10px] font-bold px-2 py-1 rounded-sm">
+                    SOON</div>
+            </div>
+            <h2 class="text-xl font-bold">VITA FLORA</h2>
+            <p class="text-gray-500 text-sm mt-1">Health / E-commerce</p>
+        </a>
+
+        <!-- Work 12: THE TOWER (Real Estate) -->
+        <a href="#" class="block card opacity-80 hover:opacity-100 transition">
+            <div class="relative aspect-video bg-gray-800 overflow-hidden rounded-lg mb-4 border border-white/10">
+                <img src="thumb_realestate_tower.png"
+                    class="w-full h-full object-cover card-img transition duration-700 ease-out grayscale hover:grayscale-0">
+                <div class="absolute top-2 right-2 bg-gray-700 text-white text-[10px] font-bold px-2 py-1 rounded-sm">
+                    SOON</div>
+            </div>
+            <h2 class="text-xl font-bold">THE TOWER</h2>
+            <p class="text-gray-500 text-sm mt-1">Real Estate / Luxury</p>
+        </a>
+
+        <!-- Work 13: AURUM (Finance) -->
+        <a href="#" class="block card opacity-80 hover:opacity-100 transition">
+            <div class="relative aspect-video bg-gray-800 overflow-hidden rounded-lg mb-4 border border-white/10">
+                <img src="thumb_finance_card.png"
+                    class="w-full h-full object-cover card-img transition duration-700 ease-out grayscale hover:grayscale-0">
+                <div class="absolute top-2 right-2 bg-gray-700 text-white text-[10px] font-bold px-2 py-1 rounded-sm">
+                    SOON</div>
+            </div>
+            <h2 class="text-xl font-bold">AURUM</h2>
+            <p class="text-gray-500 text-sm mt-1">Fintech / Credit</p>
+        </a>
+
+        <!-- Work 14: GLITCH SYSTEMS (Fashion) -->
+        <a href="#" class="block card opacity-80 hover:opacity-100 transition">
+            <div class="relative aspect-video bg-gray-800 overflow-hidden rounded-lg mb-4 border border-white/10">
+                <img src="thumb_fashion_nexus.png"
+                    class="w-full h-full object-cover card-img transition duration-700 ease-out grayscale hover:grayscale-0">
+                <div class="absolute top-2 right-2 bg-gray-700 text-white text-[10px] font-bold px-2 py-1 rounded-sm">
+                    SOON</div>
+            </div>
+            <h2 class="text-xl font-bold">GLITCH SYSTEMS</h2>
+            <p class="text-gray-500 text-sm mt-1">Fashion / Streetwear</p>
+        </a>
+
+        <!-- Work 15: BLOOM HR (SaaS) -->
+        <a href="#" class="block card opacity-80 hover:opacity-100 transition">
+            <div class="relative aspect-video bg-gray-800 overflow-hidden rounded-lg mb-4 border border-white/10">
+                <img src="thumb_saas_hr.png"
+                    class="w-full h-full object-cover card-img transition duration-700 ease-out grayscale hover:grayscale-0">
+                <div class="absolute top-2 right-2 bg-gray-700 text-white text-[10px] font-bold px-2 py-1 rounded-sm">
+                    SOON</div>
+            </div>
+            <h2 class="text-xl font-bold">BLOOM HR</h2>
+            <p class="text-gray-500 text-sm mt-1">SaaS / Dashboard</p>
+        </a>
+
+        <!-- Work 16: SERENITY (Travel) -->
+        <a href="#" class="block card opacity-80 hover:opacity-100 transition">
+            <div class="relative aspect-video bg-gray-800 overflow-hidden rounded-lg mb-4 border border-white/10">
+                <img src="thumb_travel_escape.png"
+                    class="w-full h-full object-cover card-img transition duration-700 ease-out grayscale hover:grayscale-0">
+                <div class="absolute top-2 right-2 bg-gray-700 text-white text-[10px] font-bold px-2 py-1 rounded-sm">
+                    SOON</div>
+            </div>
+            <h2 class="text-xl font-bold">SERENITY</h2>
+            <p class="text-gray-500 text-sm mt-1">Travel / Resort</p>
+        </a>
+
+        <!-- Work 17: EASY CASH (Consumer App) -->
+        <a href="#" class="block card opacity-80 hover:opacity-100 transition">
+            <div class="relative aspect-video bg-gray-800 overflow-hidden rounded-lg mb-4 border border-white/10">
+                <img src="thumb_consumer_finance.png"
+                    class="w-full h-full object-cover card-img transition duration-700 ease-out grayscale hover:grayscale-0">
+                <div class="absolute top-2 right-2 bg-gray-700 text-white text-[10px] font-bold px-2 py-1 rounded-sm">
+                    SOON</div>
+            </div>
+            <h2 class="text-xl font-bold">EASY CASH</h2>
+            <p class="text-gray-500 text-sm mt-1">Finance / Consumer App</p>
+        </a>
+    </div>
+    </main>
+
+    <footer class="mt-32 border-t border-white/10 pt-8 text-center text-gray-600 text-sm">
+        <p>&copy; 2026 TAKUMI DESIGN AGENT. Powered by Gemini.</p>
+    </footer>
+</body>
+
+</html>
