@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Live - Next Gen Streaming</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Noto Sans JP', 'sans-serif'],
+                        display: ['Orbitron', 'sans-serif'],
+                    },
+                    colors: {
+                        neon: {
+                            pink: '#ff00aa',
+                            purple: '#9d00ff',
+                            cyan: '#00ffff',
+                            bg: '#0a0014'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0a0014;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        /* Glitch text effect */
+        .glitch-text {
+            position: relative;
+            color: white;
+            text-shadow: 0.05em 0 0 rgba(255,0,170,0.75),
+                        -0.025em -0.05em 0 rgba(0,255,255,0.75),
+                        0.025em 0.05em 0 rgba(157,0,255,0.75);
+            animation: glitch 2500ms infinite;
+        }
+
+        @keyframes glitch {
+            0% { text-shadow: 0.05em 0 0 rgba(255,0,170,0.75), -0.05em -0.025em 0 rgba(0,255,255,0.75), -0.025em 0.05em 0 rgba(157,0,255,0.75); }
+            14% { text-shadow: 0.05em 0 0 rgba(255,0,170,0.75), -0.05em -0.025em 0 rgba(0,255,255,0.75), -0.025em 0.05em 0 rgba(157,0,255,0.75); }
+            15% { text-shadow: -0.05em -0.025em 0 rgba(255,0,170,0.75), 0.025em 0.025em 0 rgba(0,255,255,0.75), -0.05em -0.05em 0 rgba(157,0,255,0.75); }
+            49% { text-shadow: -0.05em -0.025em 0 rgba(255,0,170,0.75), 0.025em 0.025em 0 rgba(0,255,255,0.75), -0.05em -0.05em 0 rgba(157,0,255,0.75); }
+            50% { text-shadow: 0.025em 0.05em 0 rgba(255,0,170,0.75), 0.05em 0 0 rgba(0,255,255,0.75), 0 -0.05em 0 rgba(157,0,255,0.75); }
+            99% { text-shadow: 0.025em 0.05em 0 rgba(255,0,170,0.75), 0.05em 0 0 rgba(0,255,255,0.75), 0 -0.05em 0 rgba(157,0,255,0.75); }
+            100% { text-shadow: -0.025em 0 0 rgba(255,0,170,0.75), -0.025em -0.025em 0 rgba(0,255,255,0.75), -0.025em -0.05em 0 rgba(157,0,255,0.75); }
+        }
+
+        /* Cyberpunk Button */
+        .neon-btn {
+            background: transparent;
+            color: #fff;
+            position: relative;
+            z-index: 1;
+            padding: 15px 30px;
+            font-family: 'Orbitron', sans-serif;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border: 2px solid #ff00aa;
+            transform-style: preserve-3d;
+            transition: all 0.3s;
+        }
+
+        .neon-btn::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: #ff00aa;
+            z-index: -1;
+            transform: scaleY(0);
+            transform-origin: bottom;
+            transition: transform 0.3s cubic-bezier(0.86, 0, 0.07, 1);
+        }
+
+        .neon-btn:hover::after {
+            transform: scaleY(1);
+            transform-origin: top;
+        }
+
+        .neon-btn:hover {
+            box-shadow: 0 0 20px #ff00aa, 0 0 40px #ff00aa;
+            border-color: transparent;
+        }
+
+        .neon-btn-cyan {
+            border-color: #00ffff;
+        }
+        .neon-btn-cyan::after { background: #00ffff; }
+        .neon-btn-cyan:hover { box-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff; color: #000; }
+
+        /* Hexagon Clip */
+        .hex-clip {
+            clip-path: polygon(50% 0%, 100% 15%, 100% 85%, 50% 100%, 0% 85%, 0% 15%);
+        }
+
+        /* Floating Animation */
+        .float { animation: float 4s ease-in-out infinite; }
+        @keyframes float {
+            0% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-15px) rotate(2deg); }
+            100% { transform: translateY(0px) rotate(0deg); }
+        }
+
+        /* Glass Panel */
+        .glass-dark {
+            background: rgba(16, 0, 32, 0.6);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 0, 170, 0.3);
+            border-top: 1px solid rgba(0, 255, 255, 0.5);
+        }
+
+        .neon-text-cyan {
+            text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
+            color: #00ffff;
+        }
+        .neon-text-pink {
+            text-shadow: 0 0 10px #ff00aa, 0 0 20px #ff00aa;
+            color: #ff00aa;
+        }
+        
+        .marquee-container {
+            width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+            background: #ff00aa;
+            color: #000;
+            padding: 10px 0;
+            font-family: 'Orbitron', monospace;
+            font-weight: bold;
+            letter-spacing: 5px;
+            transform: rotate(-2deg) scale(1.05);
+            margin: 20px 0;
+            box-shadow: 0 0 20px #ff00aa;
+        }
+        .marquee {
+            display: inline-block;
+            animation: marquee 20s linear infinite;
+        }
+        @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+    </style>
+</head>
+<body class="selection:bg-neon-pink selection:text-white">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 top-0 border-b border-neon-pink/30 bg-neon-bg/80 backdrop-blur-lg">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-display font-black tracking-widest text-white italic">
+                NEON<span class="neon-text-pink">LIVE</span>
+            </div>
+            <div class="hidden md:flex gap-8 text-sm font-display tracking-widest text-gray-300">
+                <a href="#" class="hover:text-neon-cyan transition drop-shadow-[0_0_5px_#00ffff]">SCHEDULE</a>
+                <a href="#" class="hover:text-neon-pink transition drop-shadow-[0_0_5px_#ff00aa]">MERCH</a>
+                <a href="#" class="hover:text-neon-purple transition drop-shadow-[0_0_5px_#9d00ff]">ABOUT</a>
+            </div>
+            <button class="neon-btn text-xs px-4 py-2">SUBSCRIBE</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 min-h-screen flex items-center overflow-hidden">
+        <!-- Background Gradients -->
+        <div class="absolute top-0 right-0 w-[800px] h-[800px] bg-neon-purple/20 blur-[150px] rounded-full mix-blend-screen pointer-events-none"></div>
+        <div class="absolute bottom-0 left-0 w-[600px] h-[600px] bg-neon-cyan/20 blur-[150px] rounded-full mix-blend-screen pointer-events-none"></div>
+        
+        <div class="max-w-7xl mx-auto px-6 w-full flex flex-col-reverse lg:flex-row items-center gap-12 z-10">
+            <!-- Left Text -->
+            <div class="lg:w-1/2 relative z-10">
+                <div class="inline-block px-4 py-1 border border-neon-cyan text-neon-cyan font-display text-xs tracking-widest mb-6 animate-pulse">
+                    ● REC / LIVE STREAM ONLINE
+                </div>
+                
+                <h1 class="text-6xl md:text-8xl font-display font-black leading-none mb-6">
+                    <span class="glitch-text block">ENTER</span>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-neon-cyan to-neon-purple">THE VOID.</span>
+                </h1>
+                
+                <p class="text-lg text-gray-400 mb-10 max-w-lg leading-relaxed">
+                    次世代のV-Tuber・ライバー専用ポータルサイト。リスナーとリアルタイムで脳内リンクする、完全没入型のサイバーパンク・ストリーミング体験。
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-6 font-display">
+                    <button class="neon-btn">ENTER STREAM ROOM</button>
+                    <button class="neon-btn neon-btn-cyan">VIEW ARCHIVES</button>
+                </div>
+                
+                <!-- Live Stats -->
+                <div class="mt-16 flex gap-6 bg-white/5 p-4 rounded-xl border border-white/10 backdrop-blur-sm max-w-md">
+                    <div class="flex-1 text-center border-r border-white/10">
+                        <div class="text-2xl font-bold font-display text-neon-cyan">24,591</div>
+                        <div class="text-[10px] text-gray-400 font-display tracking-widest mt-1">CURRENT VIEWERS</div>
+                    </div>
+                    <div class="flex-1 text-center">
+                        <div class="text-2xl font-bold font-display text-neon-pink">¥1.2M</div>
+                        <div class="text-[10px] text-gray-400 font-display tracking-widest mt-1">SUPER CHAT RATE</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Right Cyber Hero Image -->
+            <div class="lg:w-1/2 relative">
+                <div class="relative max-w-lg mx-auto">
+                    <!-- Decor elements -->
+                    <div class="absolute -top-10 -left-10 w-20 h-20 border-t-4 border-l-4 border-neon-cyan z-0 animate-pulse"></div>
+                    <div class="absolute -bottom-10 -right-10 w-20 h-20 border-b-4 border-r-4 border-neon-pink z-0 animate-pulse delay-500"></div>
+                    
+                    <img src="neon_liver_hero.png" alt="Cyber V-Tuber" class="w-full h-auto relative z-10 hex-clip drop-shadow-[0_0_30px_rgba(255,0,170,0.5)] float">
+                    
+                    <!-- Floating chat bubbles -->
+                    <div class="absolute top-1/4 -right-12 glass-dark p-3 rounded-lg border-l-4 border-neon-cyan z-20 float" style="animation-delay: 1s;">
+                        <p class="text-sm">"This stream is insane! 🚀"</p>
+                        <span class="text-[10px] text-neon-cyan font-mono">@CyberSamurai</span>
+                    </div>
+                    <div class="absolute bottom-1/4 -left-16 glass-dark p-3 rounded-lg border-l-4 border-neon-pink z-20 float" style="animation-delay: 2s;">
+                        <p class="text-sm font-bold text-neon-pink text-shadow">SUPERCHAT: ¥5,000</p>
+                        <span class="text-[10px] text-gray-400 font-mono">Nice play! LFG!</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Marquee Banner -->
+    <div class="marquee-container">
+        <div class="marquee">
+            <span>NEON LIVE // TOKYO CYBER STREAM // SYSTEM ONLINE // NEXT EVENT 04.25 // NEON LIVE // TOKYO CYBER STREAM // SYSTEM ONLINE // NEXT EVENT 04.25 // </span>
+        </div>
+    </div>
+
+    <!-- UI Feature Section -->
+    <section class="py-24 relative z-10">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-display font-black mb-4"><span class="neon-text-cyan">HOLOGRAPHIC</span> UI</h2>
+                <p class="text-gray-400 max-w-xl mx-auto">カスタムデザインの配信オーバーレイ。スーパーチャットやサブスク通知を、近未来的なホログラムエフェクトで画面上に演出します。</p>
+            </div>
+            
+            <div class="relative mx-auto rounded-xl overflow-hidden shadow-[0_0_50px_rgba(0,255,255,0.2)] group cursor-pointer max-w-5xl">
+                <img src="neon_liver_ui.png" alt="Stream UI" class="w-full h-auto transform group-hover:scale-105 transition duration-700">
+                <div class="absolute inset-0 bg-gradient-to-t from-neon-bg via-transparent to-transparent opacity-80"></div>
+                
+                <div class="absolute bottom-0 left-0 w-full p-8 flex justify-between items-end">
+                    <div>
+                        <div class="text-neon-cyan font-display tracking-widest text-sm mb-2">SYSTEM OVERLAY v2.0</div>
+                        <h3 class="text-2xl font-bold">Interactive Stream Deck</h3>
+                    </div>
+                    <button class="w-12 h-12 rounded-full border border-neon-pink flex items-center justify-center text-neon-pink hover:bg-neon-pink hover:text-white transition">
+                        →
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Grid Layout Latest Streams -->
+    <section class="py-24 bg-black relative border-t border-neon-purple/50">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-3xl font-display font-bold mb-12 border-l-4 border-neon-purple pl-4">ARCHIVE <span class="text-gray-600">// DATABASE</span></h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Video Item -->
+                <div class="group cursor-pointer">
+                    <div class="relative overflow-hidden aspect-video rounded-lg mb-4 border border-white/10 group-hover:border-neon-cyan transition">
+                        <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=800&q=80" alt="Thumb" class="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition">
+                        <div class="absolute bottom-2 right-2 bg-black/80 text-neon-cyan font-mono text-xs px-2 py-1 rounded border border-neon-cyan">02:45:10</div>
+                        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+                            <div class="w-16 h-16 rounded-full bg-neon-cyan/20 border border-neon-cyan flex items-center justify-center backdrop-blur-md">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="#00ffff"><path d="M8 5v14l11-7z"/></svg>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-bold mb-1">Night City Free Roam - EXTREME</h3>
+                    <p class="text-sm text-gray-500 font-display tracking-wide">64K VIEWS • 2 DAYS AGO</p>
+                </div>
+
+                <!-- Video Item -->
+                <div class="group cursor-pointer">
+                    <div class="relative overflow-hidden aspect-video rounded-lg mb-4 border border-white/10 group-hover:border-neon-pink transition">
+                        <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=800&q=80" alt="Thumb" class="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition">
+                        <div class="absolute bottom-2 right-2 bg-black/80 text-neon-pink font-mono text-xs px-2 py-1 rounded border border-neon-pink">04:12:05</div>
+                    </div>
+                    <h3 class="text-lg font-bold mb-1">Cyber Hack Tournament FINAL</h3>
+                    <p class="text-sm text-gray-500 font-display tracking-wide">120K VIEWS • 1 WEEK AGO</p>
+                </div>
+
+                <!-- Video Item -->
+                <div class="group cursor-pointer">
+                    <div class="relative overflow-hidden aspect-video rounded-lg mb-4 border border-white/10 group-hover:border-neon-purple transition">
+                        <img src="https://images.unsplash.com/photo-1552820728-8b83bb6b773f?w=800&q=80" alt="Thumb" class="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition">
+                        <div class="absolute bottom-2 right-2 bg-black/80 text-neon-purple font-mono text-xs px-2 py-1 rounded border border-neon-purple">01:55:30</div>
+                    </div>
+                    <h3 class="text-lg font-bold mb-1">Chit Chat & Q&A Time 🥂</h3>
+                    <p class="text-sm text-gray-500 font-display tracking-wide">45K VIEWS • 2 WEEKS AGO</p>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <button class="text-gray-400 font-display tracking-widest hover:text-white transition border-b border-gray-600 pb-1">LOAD MORE ARCHIVES ↓</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#05000a] py-16 border-t border-neon-cyan/20">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <h2 class="text-3xl font-display font-black mb-8 glitch-text">NEON LIVE</h2>
+            <div class="flex justify-center gap-8 mb-8">
+                <a href="#" class="text-gray-400 hover:text-neon-cyan transition font-display tracking-widest text-sm">TWITTER</a>
+                <a href="#" class="text-gray-400 hover:text-neon-pink transition font-display tracking-widest text-sm">YOUTUBE</a>
+                <a href="#" class="text-gray-400 hover:text-neon-purple transition font-display tracking-widest text-sm">DISCORD</a>
+            </div>
+            <p class="text-gray-600 text-xs font-mono">© 2026 NEON LIVE ENTERTAINMENT. ALL RIGHTS RESERVED. OVERSEER PROTOCOL ACTIVE.</p>
+        </div>
+    </footer>
+
+    <script>
+        gsap.from(".neon-btn", {
+            opacity: 0, scale: 0.8, y: 20, duration: 0.8, stagger: 0.2,
+            scrollTrigger: { trigger: ".neon-btn", start: "top 90%" }
+        });
+    </script>
+</body>
+</html>
