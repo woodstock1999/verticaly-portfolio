@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AETHEL | Spatial Formulated Cosmetics</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f5f5f7; color: #1d1d1f; overflow-x: hidden; }
+        .font-serif { font-family: 'Playfair Display', serif; }
+        .glass { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(24px); border: 1px solid rgba(0,0,0,0.05); border-radius: 32px; box-shadow: 0 8px 32px rgba(0,0,0,0.04); }
+        .ambient-glow { position: absolute; border-radius: 50%; filter: blur(120px); z-index: -1; opacity: 0.5; animation: pulse 15s infinite alternate; }
+        @keyframes pulse { 0% { transform: scale(1); } 100% { transform: scale(1.1) translate(5%, 5%); } }
+        .glow-1 { background: #ffd1dc; width: 600px; height: 600px; top: -100px; left: -100px; }
+        .glow-2 { background: #e0d4ff; width: 700px; height: 700px; bottom: 0; right: -100px; }
+    </style>
+</head>
+<body>
+    <div class="fixed inset-0 overflow-hidden pointer-events-none">
+        <div class="ambient-glow glow-1"></div>
+        <div class="ambient-glow glow-2"></div>
+    </div>
+
+    <nav class="fixed top-6 left-1/2 transform -translate-x-1/2 z-50 w-[95%] max-w-5xl glass px-8 py-4 flex justify-between items-center" id="navbar">
+        <div class="text-xl font-serif font-semibold">A E T H E L</div>
+        <div class="hidden md:flex gap-8 text-[13px] font-medium text-gray-500">
+            <a href="#" class="hover:text-black">The Science</a>
+            <a href="#" class="hover:text-black">Collections</a>
+        </div>
+        <button class="text-[13px] font-medium">Bag 0</button>
+    </nav>
+
+    <section class="min-h-screen flex flex-col items-center justify-center pt-32 px-6 text-center">
+        <div class="z-10 max-w-4xl" id="hero-text">
+            <h2 class="text-xs font-semibold tracking-[0.2em] text-gray-500 uppercase mb-6">Generative Formulation</h2>
+            <h1 class="text-6xl md:text-[80px] font-serif mb-6 leading-tight">
+                Precision beauty,<br>
+                <span class="italic text-gray-600">calculated for you.</span>
+            </h1>
+            <p class="text-lg text-gray-500 max-w-2xl mx-auto mb-10">2027年の最新Spatial AIが、あなたの肌データを解析。分子レベルで最適化されたスキンケア・フォーミュラを生成します。</p>
+        </div>
+
+        <div class="mt-20 w-full max-w-5xl aspect-video rounded-[40px] overflow-hidden glass relative">
+            <img src="../thumb_beauty_aethel_4k.png" alt="Aethel" class="w-full h-full object-cover">
+        </div>
+    </section>
+</body>
+</html>
