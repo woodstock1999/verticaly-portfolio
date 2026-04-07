@@ -7,14 +7,24 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <style>
+        :root { --surface: rgba(255, 255, 255, 0.7); --border: rgba(0, 0, 0, 0.05); }
         body { font-family: 'Inter', sans-serif; background-color: #f5f5f7; color: #1d1d1f; overflow-x: hidden; }
         .font-serif { font-family: 'Playfair Display', serif; }
-        .glass { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(24px); border: 1px solid rgba(0,0,0,0.05); border-radius: 32px; box-shadow: 0 8px 32px rgba(0,0,0,0.04); }
-        .ambient-glow { position: absolute; border-radius: 50%; filter: blur(120px); z-index: -1; opacity: 0.5; animation: pulse 15s infinite alternate; }
-        @keyframes pulse { 0% { transform: scale(1); } 100% { transform: scale(1.1) translate(5%, 5%); } }
+        .glass-panel { background: var(--surface); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); border: 1px solid var(--border); border-radius: 32px; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.04); transition: transform 0.5s ease; }
+        .glass-panel:hover { transform: translateY(-4px); box-shadow: 0 16px 48px rgba(0, 0, 0, 0.08); }
+        .ambient-glow { position: absolute; border-radius: 50%; filter: blur(120px); z-index: -1; opacity: 0.5; animation: pulse-glow 15s infinite alternate; }
+        @keyframes pulse-glow { 0% { transform: scale(1) translate(0, 0); } 100% { transform: scale(1.1) translate(5%, 5%); } }
         .glow-1 { background: #ffd1dc; width: 600px; height: 600px; top: -100px; left: -100px; }
         .glow-2 { background: #e0d4ff; width: 700px; height: 700px; bottom: 0; right: -100px; }
+        .bento-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 24px; auto-rows: minmax(100px, auto); }
+        .clip-text { background: linear-gradient(135deg, #1d1d1f 0%, #6e6e73 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .btn-spatial { background: rgba(255,255,255,0.8); backdrop-filter: blur(12px); border-radius: 999px; padding: 14px 28px; font-size: 15px; font-weight: 500; transition: all 0.3s; border: 1px solid rgba(0,0,0,0.06); box-shadow: 0 4px 16px rgba(0,0,0,0.04); }
+        .btn-spatial:hover { transform: scale(1.03); background: #fff; }
+        .btn-dark { background: #1d1d1f; color: #fff; border: none; }
+        .btn-dark:hover { background: #000; }
+        .reveal { opacity: 0; transform: translateY(40px); }
     </style>
 </head>
 <body>
@@ -23,28 +33,119 @@
         <div class="ambient-glow glow-2"></div>
     </div>
 
-    <nav class="fixed top-6 left-1/2 transform -translate-x-1/2 z-50 w-[95%] max-w-5xl glass px-8 py-4 flex justify-between items-center" id="navbar">
-        <div class="text-xl font-serif font-semibold">A E T H E L</div>
+    <nav class="fixed top-6 left-1/2 transform -translate-x-1/2 z-50 w-[95%] max-w-5xl glass-panel px-8 py-4 flex justify-between items-center" id="navbar">
+        <div class="text-xl font-serif font-semibold text-[#1d1d1f]">A E T H E L</div>
         <div class="hidden md:flex gap-8 text-[13px] font-medium text-gray-500">
-            <a href="#" class="hover:text-black">The Science</a>
-            <a href="#" class="hover:text-black">Collections</a>
+            <a href="#" class="hover:text-black transition">The Science</a>
+            <a href="#" class="hover:text-black transition">Collections</a>
+            <a href="#" class="hover:text-black transition">AI Diagnosis</a>
         </div>
-        <button class="text-[13px] font-medium">Bag 0</button>
+        <button class="text-[13px] font-medium hover:opacity-70 flex items-center gap-2">
+            Bag <span class="bg-[#1d1d1f] text-white rounded-full w-5 h-5 flex items-center justify-center text-[10px]">0</span>
+        </button>
     </nav>
 
-    <section class="min-h-screen flex flex-col items-center justify-center pt-32 px-6 text-center">
-        <div class="z-10 max-w-4xl" id="hero-text">
+    <!-- Hero -->
+    <section class="min-h-screen flex flex-col items-center justify-center pt-32 px-6 text-center relative">
+        <div class="z-10 max-w-4xl reveal" id="hero-text">
             <h2 class="text-xs font-semibold tracking-[0.2em] text-gray-500 uppercase mb-6">Generative Formulation</h2>
-            <h1 class="text-6xl md:text-[80px] font-serif mb-6 leading-tight">
+            <h1 class="text-6xl md:text-[80px] font-serif mb-6 leading-[1.1]">
                 Precision beauty,<br>
-                <span class="italic text-gray-600">calculated for you.</span>
+                <span class="clip-text italic">calculated for you.</span>
             </h1>
-            <p class="text-lg text-gray-500 max-w-2xl mx-auto mb-10">2027年の最新Spatial AIが、あなたの肌データを解析。分子レベルで最適化されたスキンケア・フォーミュラを生成します。</p>
+            <p class="text-lg text-gray-500 max-w-2xl mx-auto mb-10 leading-relaxed">2027年の最新Spatial AIが、あなたの肌の微細なデータを解析。分子レベルで最適化された、世界に一つのスキンケアを生成します。</p>
+            <div class="flex gap-4 justify-center">
+                <button class="btn-spatial btn-dark">Start Skin Scan</button>
+                <button class="btn-spatial">Explore Series</button>
+            </div>
         </div>
 
-        <div class="mt-20 w-full max-w-5xl aspect-video rounded-[40px] overflow-hidden glass relative">
-            <img src="../thumb_beauty_aethel_4k.png" alt="Aethel" class="w-full h-full object-cover">
+        <!-- Floating Hero Image/Video -->
+        <div class="mt-20 w-full max-w-6xl aspect-video md:aspect-[21/9] rounded-[40px] overflow-hidden glass-panel reveal relative" id="hero-media">
+            <img src="aethel_hero.png" alt="Aethel AI Cosmetics" class="w-full h-full object-cover transition-transform duration-1000 hover:scale-105">
+            <div class="absolute bottom-6 left-6 glass-panel px-6 py-4 backdrop-blur-md bg-white/40">
+                <div class="text-[10px] font-semibold text-gray-600 mb-1 tracking-widest uppercase">Currently Viewing</div>
+                <div class="font-medium text-[15px]">Serum N° 04 — Cellular Repair</div>
+            </div>
         </div>
     </section>
+
+    <!-- Content: Video & Features (Bento Grid) -->
+    <section class="py-32 px-6 max-w-7xl mx-auto">
+        <div class="text-center mb-16 reveal">
+            <h2 class="text-4xl md:text-5xl font-serif mb-4">The Science of Elegance</h2>
+            <p class="text-gray-500 text-lg">テクノロジーを感じさせない、至高の体験。</p>
+        </div>
+
+        <div class="bento-grid">
+            <!-- Full Width Video Panel -->
+            <div class="col-span-12 glass-panel overflow-hidden relative reveal h-[500px]">
+                <video class="w-full h-full object-cover opacity-80" autoplay loop muted playsinline>
+                    <source src="https://cdn.pixabay.com/video/2023/10/22/185987-876875953_large.mp4" type="video/mp4">
+                    <!-- fallback generic beauty fluid video -->
+                </video>
+                <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                <div class="absolute bottom-10 left-10 z-10 w-2/3">
+                    <h3 class="text-3xl font-serif text-white mb-4">Immersive Hydration</h3>
+                    <p class="text-gray-200">水分と有機成分の結合プロセス。ミクロレベルでの浸透をリアルタイムでシミュレートします。</p>
+                </div>
+            </div>
+
+            <!-- Big Feature 1 -->
+            <div class="col-span-12 md:col-span-8 glass-panel p-12 min-h-[460px] relative overflow-hidden flex flex-col justify-end reveal">
+                <div class="absolute right-[-10%] top-[-10%] w-[70%] h-[120%] bg-gradient-to-b from-[#ffd1dc]/60 to-transparent rounded-full filter blur-[80px]"></div>
+                <div class="relative z-20 w-full md:w-3/4">
+                    <h3 class="text-3xl lg:text-4xl font-serif mb-4">Neural Mapping</h3>
+                    <p class="text-gray-600 leading-relaxed text-[15px]">
+                        Vision OS対応デバイスの深度センサーが、目に見えない肌のマイクロバイオームを即座にスキャン。Core MLを用いた診断により、リアルタイムで最適解を導き出します。
+                    </p>
+                </div>
+            </div>
+
+            <!-- Small Detail Image -->
+            <div class="col-span-12 md:col-span-4 glass-panel p-2 min-h-[460px] reveal overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=800&q=80" alt="Detail" class="w-full h-full object-cover rounded-[28px]">
+            </div>
+
+            <!-- Precision Data -->
+            <div class="col-span-12 md:col-span-4 glass-panel p-10 min-h-[340px] flex flex-col text-center justify-center items-center reveal relative">
+                <div class="text-6xl font-serif mb-2 tracking-tighter">99.8<span class="text-3xl text-gray-400">%</span></div>
+                <p class="text-[11px] font-semibold text-gray-500 uppercase tracking-[0.2em] mt-2">Accuracy Match</p>
+            </div>
+
+            <!-- Dynamic Adaptation -->
+            <div class="col-span-12 md:col-span-8 glass-panel p-12 flex flex-col md:flex-row items-center justify-between gap-10 reveal overflow-hidden">
+                <div class="md:w-2/3">
+                    <h3 class="text-3xl font-serif mb-4">Dynamic Adaptation</h3>
+                    <p class="text-gray-600 leading-relaxed text-[15px]">
+                        季節、湿度、あなたのストレスレベル。環境APIとヘルスケアデータに連携し、毎月のフォーミュラ比率を全自動で微調整する次世代のサブスクリプション。
+                    </p>
+                </div>
+                <!-- Data Illustration -->
+                <img src="https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=800&q=80" alt="Texture" class="w-40 h-40 object-cover rounded-full mix-blend-multiply opacity-80">
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-16 border-t border-gray-200 text-center">
+        <div class="text-2xl font-serif font-semibold mb-8">A E T H E L</div>
+        <p class="text-[12px] text-gray-400">© 2027 AETHEL Beauty Holdings. Designed for Spatial Computing.</p>
+    </footer>
+
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+        gsap.to("#navbar", {y: 0, opacity: 1, duration: 1, delay: 0.1, startAt: {y: -20, opacity: 0}});
+        gsap.to("#hero-text", {y: 0, opacity: 1, duration: 1.2, delay: 0.3, startAt: {y: 40, opacity: 0}});
+        gsap.to("#hero-media", {y: 0, opacity: 1, duration: 1.2, delay: 0.5, startAt: {y: 40, opacity: 0}});
+
+        gsap.utils.toArray('.reveal').forEach(elem => {
+            if (elem.id) return;
+            gsap.to(elem, {
+                y: 0, opacity: 1, duration: 1, ease: "power3.out",
+                scrollTrigger: { trigger: elem, start: "top 85%", toggleActions: "play none none reverse" }
+            });
+        });
+    </script>
 </body>
 </html>
