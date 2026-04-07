@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SERENITY VOYAGES</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #000; color: #fff; overflow: hidden; }
+        .font-serif { font-family: 'Playfair Display', serif; }
+        .glass-panel { background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.2); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2); border-radius: 20px; }
+    </style>
+</head>
+<body class="relative w-screen h-screen">
+    <div class="absolute inset-0 z-0">
+        <img src="../thumb_travel_escape.png" class="w-full h-full object-cover opacity-90 transition duration-[20s] ease-out transform scale-105 hover:scale-100" alt="Resort">
+        <div class="absolute inset-0 bg-black/20"></div>
+    </div>
+
+    <nav class="absolute top-0 w-full z-50 px-10 py-8 flex justify-between items-center text-white mix-blend-overlay">
+        <div class="text-2xl font-serif font-semibold tracking-wide">SERENITY VOYAGES</div>
+        <div class="hidden md:flex gap-8 text-[14px]">
+            <a href="#" class="hover:underline">Destinations</a>
+            <a href="#" class="hover:underline">Experiences</a>
+            <a href="#" class="hover:underline">Luxury Stays</a>
+        </div>
+        <button class="border border-white/50 px-6 py-2 rounded-full text-sm hover:bg-white hover:text-black transition">Sign In</button>
+    </nav>
+
+    <div class="absolute inset-0 z-10 flex flex-col items-center justify-center p-6">
+        <div class="glass-panel w-full max-w-4xl p-10 md:p-16 text-center">
+            <h1 class="text-5xl md:text-7xl font-serif mb-6 font-semibold tracking-tight text-white drop-shadow-md">ESCAPE TO PARADISE</h1>
+            <p class="text-lg text-white/90 mb-10 font-light">Explore exotic destinations and book your dream getaway.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-1 border-t border-white/20 pt-8 mt-2">
+                <div class="text-left px-4">
+                    <div class="text-xs text-white/60 mb-1 uppercase tracking-wider">Where to?</div>
+                    <div class="font-medium">Maldives, Asia</div>
+                </div>
+                <div class="text-left px-4 border-l border-white/20">
+                    <div class="text-xs text-white/60 mb-1 uppercase tracking-wider">Check-in / out</div>
+                    <div class="font-medium">Nov 12 - Nov 18</div>
+                </div>
+                <div class="flex items-center justify-end px-4">
+                    <button class="bg-white text-black font-semibold px-8 py-3 rounded-xl hover:bg-gray-100 transition shadow-lg w-full">SEARCH & BOOK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

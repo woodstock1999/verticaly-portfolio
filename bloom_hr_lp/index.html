@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SYNAPSE | B2B Insights Hub</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8f9fa; color: #1a1f36; overflow-x: hidden; }
+        .glass-card { background: #ffffff; border: 1px solid #e3e8ee; border-radius: 16px; box-shadow: 0 4px 24px rgba(0,0,0,0.02); }
+        .sidebar { background: #1a1f36; color: #a3acb9; }
+        .nav-item.active { background: #2a2f4c; color: #fff; font-weight: 500; border-radius: 8px; }
+    </style>
+</head>
+<body class="flex h-screen overflow-hidden text-[14px]">
+    
+    <!-- Sidebar -->
+    <aside class="sidebar w-[240px] flex flex-col p-4 shrink-0 transition-all">
+        <div class="flex items-center gap-3 px-3 py-4 mb-6">
+            <div class="w-6 h-6 rounded-md bg-indigo-500"></div>
+            <span class="font-bold text-white tracking-wide">SYNAPSE</span>
+        </div>
+        <nav class="flex flex-col gap-1">
+            <a href="#" class="nav-item px-3 py-2 flex items-center gap-3 hover:text-white transition"><span class="w-4 h-4 border border-current rounded-sm"></span> Overview</a>
+            <a href="#" class="nav-item active px-3 py-2 flex items-center gap-3"><span class="w-4 h-4 border border-current rounded-sm bg-current"></span> Analytics</a>
+            <a href="#" class="nav-item px-3 py-2 flex items-center gap-3 hover:text-white transition"><span class="w-4 h-4 border border-current rounded-sm"></span> Performance</a>
+            <a href="#" class="nav-item px-3 py-2 flex items-center gap-3 hover:text-white transition"><span class="w-4 h-4 border border-current rounded-sm"></span> AI Insights</a>
+        </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="flex-1 overflow-y-auto px-8 py-6 relative">
+        <!-- Header -->
+        <header class="flex justify-between items-center mb-8">
+            <h1 class="text-2xl font-bold">Analytics Dashboard</h1>
+            <div class="flex gap-4 items-center">
+                <button class="bg-[#1a1f36] text-white px-4 py-2 rounded-lg font-medium shadow-sm hover:bg-black transition">Export Data</button>
+            </div>
+        </header>
+
+        <!-- Mockup Display Image -->
+        <div class="w-full max-w-5xl mx-auto rounded-[24px] overflow-hidden glass-card relative border-4 border-white/50">
+            <img src="../thumb_saas_hr.png" alt="SaaS Dashboard Interface" class="w-full h-auto">
+        </div>
+    </main>
+
+</body>
+</html>
