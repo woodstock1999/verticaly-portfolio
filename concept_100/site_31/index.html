@@ -1,14 +1,244 @@
-<!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>超高級タワーマンション (Meta Tower)</title><script src="https://cdn.tailwindcss.com"></script></head>
-<body class="relative w-screen h-screen overflow-hidden font-sans bg-black">
-    <div class="absolute inset-0 z-0"><img src="https://picsum.photos/seed/aethel31/1600/900" class="w-full h-full object-cover opacity-60" /></div>
-    <div class="absolute top-0 w-full p-8 flex justify-between text-white z-20 mix-blend-difference">
-        <div class="text-sm font-bold tracking-widest uppercase">4. Real Estate & Architecture (不動産・建築)</div><div class="text-sm font-mono">NO. 31 / 100</div>
-    </div>
-    <div class="absolute inset-0 z-10 flex flex-col items-center justify-center p-6">
-        <div class="bg-white/10 backdrop-blur-3xl border border-white/20 rounded-[32px] p-12 max-w-4xl text-center shadow-2xl text-white transition-transform duration-700 hover:scale-105">
-            <h1 class="text-5xl md:text-7xl font-semibold tracking-tighter mb-6">超高級タワーマンション (Meta Tower)</h1>
-            <p class="text-lg md:text-xl font-light text-white/90 leading-relaxed">巨大なセリフ体字、暖炉のある部屋の写真、BGMが鳴り出しそうなくらいのラグジュアリー。</p>
-            <div class="mt-10"><a href="../index.html" class="bg-white text-black px-8 py-4 rounded-full font-bold hover:bg-gray-200 transition">BACK TO GALLERY</a></div>
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AURELIUS RESIDENCES | Meta Tower</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background: #050505; color: #ece6da; overflow-x: hidden; }
+        .font-serif { font-family: 'Cinzel', serif; }
+        
+        /* Dark Luxury Utility */
+        .gold-border { border: 1px solid rgba(212, 175, 55, 0.3); }
+        .text-gold { color: #d4af37; }
+        .bg-gold { background-color: #d4af37; }
+        
+        /* Smooth Scrollbar */
+        ::-webkit-scrollbar { width: 4px; }
+        ::-webkit-scrollbar-track { background: #050505; }
+        ::-webkit-scrollbar-thumb { background: #d4af37; border-radius: 2px; }
+
+        /* Cinematic Blur Lines */
+        .cinematic-glow { box-shadow: 0 0 100px rgba(212, 175, 55, 0.05); }
+        .bg-noise { background-image: url('data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noise%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.8%22 numOctaves=%224%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noise)%22 opacity=%220.04%22/%3E%3C/svg%3E'); pointer-events: none; }
+    </style>
+</head>
+<body class="antialiased font-light relative">
+    
+    <div class="fixed inset-0 bg-noise z-50 mix-blend-overlay"></div>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full top-0 z-50 pt-8 pb-4 px-8 md:px-16 flex justify-between items-center mix-blend-difference transition-all duration-500" id="navbar">
+        <a href="../index.html" class="flex gap-2 items-center text-xs tracking-[0.2em] uppercase hover:text-gold transition">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+            Menu
+        </a>
+        <div class="text-2xl font-serif tracking-[0.3em] font-medium text-white">AURELIUS</div>
+        <div class="hidden md:flex gap-12 text-[10px] tracking-[0.2em] uppercase">
+            <a href="#vision" class="hover:text-gold transition">The Vision</a>
+            <a href="#residences" class="hover:text-gold transition">Residences</a>
+            <a href="#inquire" class="text-gold border-b border-gold pb-1 hover:opacity-70 transition">Inquire</a>
         </div>
-    </div>
-</body></html>
+    </nav>
+
+    <!-- 1. Immersive Cinematic Hero -->
+    <header class="relative w-screen h-screen flex flex-col justify-center items-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <!-- Fullscreen Video/Image Hero -->
+            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=2000&q=80" alt="Luxury Estate" class="w-full h-full object-cover opacity-60 brightness-75 scale-105" id="hero-bg">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-[#050505] opacity-90"></div>
+        </div>
+
+        <div class="z-10 text-center flex flex-col items-center mt-20">
+            <div class="text-gold text-[10px] tracking-[0.4em] uppercase mb-8 reveal-up">Edition 01 — New York</div>
+            <h1 class="text-6xl md:text-[8rem] font-serif tracking-widest leading-none mb-10 reveal-up" style="transform: translateY(20px); opacity: 0;">META TOWER</h1>
+            <p class="max-w-xl text-lg font-light tracking-wide text-white/50 leading-relaxed reveal-up" style="transform: translateY(20px); opacity: 0;">Beyond luxury. The pinnacle of architectural spatial design, situated above the clouds. Move in 2027.</p>
+        </div>
+
+        <div class="absolute bottom-12 flex flex-col items-center gap-4 z-10 reveal-up">
+            <div class="h-16 w-[1px] bg-gradient-to-b from-white/50 to-transparent"></div>
+            <div class="text-[9px] tracking-[0.3em] uppercase text-white/50">Scroll to Explore</div>
+        </div>
+    </header>
+
+    <!-- 2. Minimalist Split Focus Layout (Data & Copy) -->
+    <section class="py-32 px-8 md:px-16" id="vision">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-16 items-center">
+            <div class="md:col-span-5 flex order-2 md:order-1 justify-center md:justify-start">
+                <div class="grid grid-cols-2 gap-8 text-center md:text-left">
+                    <div>
+                        <div class="text-[10px] text-gold tracking-widest uppercase mb-2">Height</div>
+                        <div class="text-4xl font-serif">432m</div>
+                    </div>
+                    <div>
+                        <div class="text-[10px] text-gold tracking-widest uppercase mb-2">Residences</div>
+                        <div class="text-4xl font-serif">104</div>
+                    </div>
+                    <div>
+                        <div class="text-[10px] text-gold tracking-widest uppercase mb-2">Amenities</div>
+                        <div class="text-4xl font-serif">6th-9th</div>
+                    </div>
+                    <div>
+                        <div class="text-[10px] text-gold tracking-widest uppercase mb-2">Completion</div>
+                        <div class="text-4xl font-serif">Q4 '27</div>
+                    </div>
+                </div>
+            </div>
+            <div class="md:col-span-7 order-1 md:order-2">
+                <h2 class="text-3xl md:text-5xl font-serif tracking-wide leading-tight mb-8">REDEFINING THE <br>SKYLINE OF TOMORROW.</h2>
+                <p class="text-[15px] font-light text-white/60 leading-loose max-w-2xl">
+                    Every residence at Aurelius is a masterpiece of spatial engineering. We have eliminated walls in favor of fluid, dynamic smart-glass partitions that respond to natural light, effectively creating a living breathing organism that tunes itself to your daily rhythm.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Parallax Masonry Image Viewer -->
+    <section class="py-20 relative" id="residences">
+        <h3 class="text-center text-[10px] tracking-[0.4em] text-gold uppercase mb-16">The Residences</h3>
+        
+        <div class="flex flex-col md:flex-row gap-8 px-4 md:px-12 h-auto md:h-[90vh]">
+            <!-- Column 1 -->
+            <div class="flex-1 flex flex-col gap-8 transform translate-y-12" id="parallax-col-1">
+                <div class="w-full h-[60%] overflow-hidden relative group rounded-sm cinematic-glow">
+                    <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=800&q=80" class="w-full h-full object-cover transition duration-[2s] group-hover:scale-110 grayscale sepia-[0.1]">
+                    <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition duration-700"></div>
+                </div>
+                <div class="w-full flex-1 overflow-hidden relative group rounded-sm">
+                    <img src="https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?w=800&q=80" class="w-full h-full object-cover transition duration-[2s] group-hover:scale-110 grayscale sepia-[0.1]">
+                </div>
+            </div>
+            
+            <!-- Column 2 (Center, taller) -->
+            <div class="flex-1 lg:flex-[1.5] flex flex-col h-full transform -translate-y-8" id="parallax-col-2">
+                <div class="w-full h-full overflow-hidden relative group rounded-sm cinematic-glow">
+                    <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=1200&q=80" class="w-full h-full object-cover transition duration-[2s] group-hover:scale-105 grayscale sepia-[0.1]">
+                    <div class="absolute bottom-8 left-8">
+                        <div class="text-xs uppercase tracking-widest bg-black/40 backdrop-blur px-3 py-1 text-white border border-white/10">The Grand Penthouse</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Column 3 -->
+            <div class="flex-1 flex flex-col gap-8 transform translate-y-20" id="parallax-col-3">
+                <div class="w-full flex-1 overflow-hidden relative group rounded-sm">
+                    <img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=800&q=80" class="w-full h-full object-cover transition duration-[2s] group-hover:scale-110 grayscale sepia-[0.1]">
+                </div>
+                <div class="w-full h-[55%] overflow-hidden relative group rounded-sm cinematic-glow">
+                    <img src="https://images.unsplash.com/photo-1600607686527-6fb886090705?w=800&q=80" class="w-full h-full object-cover transition duration-[2s] group-hover:scale-110 grayscale sepia-[0.1]">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Interactive Configuration Panel (Dark Minimal UI) -->
+    <section class="py-40 px-8 md:px-16 bg-[#030303] border-y border-white/5 relative">
+        <div class="max-w-6xl mx-auto flex flex-col lg:flex-row gap-20 items-center">
+            
+            <!-- Interface Mockup -->
+            <div class="w-full lg:w-1/2 relative">
+                <div class="aspect-square bg-black border border-white/10 rounded-2xl p-8 relative overflow-hidden shadow-2xl shadow-black">
+                    <!-- Fake UI Top bar -->
+                    <div class="flex justify-between items-center border-b border-white/10 pb-4 mb-8">
+                        <div class="text-[10px] tracking-widest uppercase text-white/40">Home System AI</div>
+                        <div class="flex gap-2"><span class="w-2 h-2 bg-gold rounded-full"></span><span class="text-[10px] text-white/50">Active</span></div>
+                    </div>
+                    
+                    <!-- Circular Climate Control UI Mockup -->
+                    <div class="absolute inset-0 m-auto w-64 h-64 rounded-full border border-white/5 flex items-center justify-center">
+                        <div class="w-48 h-48 rounded-full border border-gold/30 flex flex-col items-center justify-center relative">
+                            <!-- SVG Spinners -->
+                            <svg class="absolute inset-0 w-full h-full animate-[spin_10s_linear_infinite]" viewBox="0 0 100 100">
+                                <circle cx="50" cy="50" r="48" fill="none" stroke="rgba(212,175,55,0.2)" stroke-width="1" stroke-dasharray="4 2"></circle>
+                            </svg>
+                            <div class="text-[10px] uppercase tracking-widest text-white/40 mb-2">Climate</div>
+                            <div class="text-5xl font-light font-serif">22°</div>
+                            <div class="text-[9px] uppercase tracking-widest mt-2 text-gold">Optimal</div>
+                        </div>
+                    </div>
+
+                    <!-- Room Switches -->
+                    <div class="absolute bottom-8 left-8 right-8 flex justify-between gap-2">
+                        <div class="flex-1 border border-white/10 p-3 rounded bg-white/5 backdrop-blur text-center text-[10px] tracking-widest uppercase text-white/50 hover:bg-white/10 cursor-pointer transition">Living</div>
+                        <div class="flex-1 border border-gold/40 p-3 rounded bg-gold/10 backdrop-blur text-center text-[10px] tracking-widest uppercase text-gold cursor-pointer">Master</div>
+                        <div class="flex-1 border border-white/10 p-3 rounded bg-white/5 backdrop-blur text-center text-[10px] tracking-widest uppercase text-white/50 hover:bg-white/10 cursor-pointer transition">Pool</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Copy -->
+            <div class="w-full lg:w-1/2">
+                <div class="text-gold text-[10px] tracking-[0.3em] uppercase mb-6">INTEGRATED SPATIAL OS</div>
+                <h2 class="text-4xl md:text-5xl font-serif tracking-wide leading-tight mb-8">SILENT INTELLIGENCE.</h2>
+                <p class="text-[15px] font-light text-white/60 leading-loose mb-10">
+                    The entire residence is woven with proximity sensors and thermal regulators. A single touch via your personal Spatial OS seamlessly dims the glass panels, regulates the ambient sound, and prepares the biometric locking systems. 
+                </p>
+                <a href="#" class="inline-flex items-center gap-4 text-xs tracking-widest uppercase pb-2 border-b border-white/20 hover:border-gold hover:text-gold transition-colors">
+                    Explore Technology <svg width="12" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Massive Cinematic Footer -->
+    <footer class="relative h-screen flex flex-col items-center justify-center overflow-hidden" id="inquire">
+        <!-- Background -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1600573472550-8090b5e0745e?w=2000&q=80" class="w-full h-full object-cover opacity-20 grayscale sepia-[0.2]">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/60 to-transparent"></div>
+        </div>
+        
+        <div class="relative z-10 text-center px-4 w-full max-w-4xl">
+            <div class="mx-auto w-12 h-12 border border-gold rounded-full flex items-center justify-center mb-10">
+                <span class="text-gold font-serif text-lg">A</span>
+            </div>
+            <h2 class="text-5xl md:text-7xl font-serif tracking-widest uppercase mb-12">Claim Your Place<br>In The Sky.</h2>
+            
+            <form class="max-w-md mx-auto relative group">
+                <input type="email" placeholder="ENTER YOUR EMAIL FOR PRIVATE PREVIEW" class="w-full bg-transparent border-b border-white/20 pb-4 text-center text-xs tracking-[0.2em] font-light outline-none text-white focus:border-gold transition-colors placeholder:text-white/20">
+                <button type="button" class="absolute right-0 top-0 text-white/50 hover:text-gold uppercase tracking-widest text-[10px] transition font-bold">Submit</button>
+            </form>
+        </div>
+
+        <div class="absolute bottom-8 w-full px-8 flex justify-between items-center text-[9px] tracking-[0.2em] uppercase text-white/30 font-light">
+            <div>© 2027 AURELIUS DEVELOPMENT INC.</div>
+            <div class="flex gap-6">
+                <a href="#" class="hover:text-white transition">Privacy</a>
+                <a href="#" class="hover:text-white transition">Terms</a>
+                <a href="#" class="hover:text-white transition">Instagram</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Animations -->
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Hero Reveal
+        const timeline = gsap.timeline();
+        timeline.to('#hero-bg', { scale: 1, duration: 2.5, ease: 'power2.out' })
+                .to('.reveal-up', { y: 0, opacity: 1, duration: 1.2, stagger: 0.15, ease: 'power3.out' }, "-=1.5");
+
+        // Masonry Parallax Effect
+        if (window.innerWidth > 768) {
+            gsap.to('#parallax-col-1', {
+                y: -60, ease: "none",
+                scrollTrigger: { trigger: "#residences", start: "top bottom", end: "bottom top", scrub: 1 }
+            });
+            gsap.to('#parallax-col-2', {
+                y: 40, ease: "none",
+                scrollTrigger: { trigger: "#residences", start: "top bottom", end: "bottom top", scrub: 1 }
+            });
+            gsap.to('#parallax-col-3', {
+                y: -100, ease: "none",
+                scrollTrigger: { trigger: "#residences", start: "top bottom", end: "bottom top", scrub: 1 }
+            });
+        }
+    </script>
+</body>
+</html>
