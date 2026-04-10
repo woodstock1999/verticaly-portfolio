@@ -1,17 +1,569 @@
-<!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>AI融資審査プラットフォーム (AI Lending)</title><script src="https://cdn.tailwindcss.com"></script></head>
-<body class="bg-[#f8f9fa] text-slate-800 p-6 md:p-16 font-sans min-h-screen">
-    <header class="mb-12 flex justify-between items-end max-w-6xl mx-auto border-b border-slate-200 pb-8">
-        <div><div class="text-sm font-medium text-blue-600 mb-2">1. Finance & Fintech (金融・経済) / Prototype 8</div><h1 class="text-4xl md:text-5xl font-bold tracking-tight">AI融資審査プラットフォーム (AI Lending)</h1></div>
-        <a href="../index.html" class="text-sm font-bold tracking-widest text-slate-400 hover:text-black uppercase">Close</a>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AURA美容クリニック | 表参道 | あなたらしい美しさを、医療の力で。</title>
+    <meta name="description" content="表参道駅徒歩3分。皮膚科専門医による美容医療。シミ・たるみ・ニキビ跡。まずは無料カウンセリングから。">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&family=Zen+Old+Mincho:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cream: '#FAF7F2', sand: '#E8DFD0', taupe: '#B8A594',
+                        bark: '#6B5B4E', charcoal: '#2C2520', accent: '#C4956A',
+                    },
+                    fontFamily: {
+                        sans: ['Noto Sans JP', 'sans-serif'],
+                        serif: ['Zen Old Mincho', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Noto Sans JP', sans-serif; background: #FAF7F2; color: #2C2520; }
+        ::-webkit-scrollbar { width: 4px; }
+        ::-webkit-scrollbar-track { background: #FAF7F2; }
+        ::-webkit-scrollbar-thumb { background: #C4956A; border-radius: 2px; }
+        .fade-in { opacity: 0; transform: translateY(24px); transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+        .count-up { font-variant-numeric: tabular-nums; }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Sticky Header -->
+    <header class="fixed w-full top-0 z-50 bg-cream/90 backdrop-blur-lg border-b border-charcoal/5 transition-all duration-300" id="header">
+        <div class="max-w-7xl mx-auto px-6 md:px-12 py-4 flex justify-between items-center">
+            <a href="../../index.html" class="text-xs text-bark hover:text-charcoal transition">← Portfolio</a>
+            <div class="flex items-center gap-2">
+                <span class="font-serif text-xl tracking-wider text-charcoal">AURA</span>
+                <span class="text-[10px] text-bark tracking-wider">美容クリニック</span>
+            </div>
+            <div class="hidden md:flex items-center gap-8 text-[12px] text-bark">
+                <a href="#menu" class="hover:text-charcoal transition">施術メニュー</a>
+                <a href="#doctor" class="hover:text-charcoal transition">医師紹介</a>
+                <a href="#flow" class="hover:text-charcoal transition">ご来院の流れ</a>
+                <a href="#faq" class="hover:text-charcoal transition">よくある質問</a>
+                <a href="#contact" class="bg-charcoal text-cream px-5 py-2.5 rounded-full text-[11px] tracking-wider hover:bg-bark transition-colors">無料カウンセリング</a>
+            </div>
+            <!-- Mobile menu button -->
+            <button class="md:hidden text-charcoal" id="menu-btn">
+                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+            </button>
+        </div>
     </header>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-        <div class="md:col-span-2 bg-white rounded-[24px] overflow-hidden shadow-lg border border-slate-100 flex flex-col justify-between">
-            <div class="h-64 object-cover relative"><img src="https://picsum.photos/seed/aethel8/1600/900" class="w-full h-full object-cover"></div>
-            <div class="p-10"><div class="text-2xl font-light leading-relaxed text-slate-600 mb-8">クライアントの顔認識とデータ解析を描画するクリーンなダッシュボード。</div></div>
+
+    <!-- 1. Hero: 悩み共感型ファーストビュー -->
+    <section class="pt-24 md:pt-32">
+        <div class="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-0 items-center min-h-[85vh]">
+            <div class="order-2 md:order-1 pb-12 md:pb-0">
+                <div class="text-[11px] tracking-[0.3em] text-accent mb-6 font-medium">表参道駅 徒歩3分 · 完全予約制</div>
+                <h1 class="text-3xl md:text-[2.8rem] font-serif leading-[1.7] mb-8 text-charcoal">
+                    <span class="inline-block">あなたらしい美しさを、</span><br>
+                    <span class="inline-block">医療の力で。</span>
+                </h1>
+                <p class="text-[15px] text-bark leading-[2] mb-10 max-w-md">
+                    <span class="inline-block">「このシミ、</span><span class="inline-block">もう少し薄くなったら」</span><span class="inline-block">「毛穴が</span><span class="inline-block">気にならなくなったら」</span><span class="inline-block">——そんな小さな願いに、</span><span class="inline-block">皮膚科専門医が</span><span class="inline-block">エビデンスに基づいた</span><span class="inline-block">最適な答えを</span><span class="inline-block">ご提案します。</span>
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#contact" class="bg-charcoal text-cream px-8 py-4 rounded-full text-sm text-center tracking-wider hover:bg-bark transition-colors">
+                        無料カウンセリング予約
+                    </a>
+                    <a href="#menu" class="border border-charcoal/20 text-charcoal px-8 py-4 rounded-full text-sm text-center tracking-wider hover:bg-charcoal/5 transition-colors">
+                        施術メニューを見る
+                    </a>
+                </div>
+                <div class="mt-10 flex gap-8 text-[11px] text-bark/60">
+                    <span>✓ 初診料無料</span>
+                    <span>✓ 当日施術OK</span>
+                    <span>✓ LINE予約対応</span>
+                </div>
+            </div>
+            <div class="order-1 md:order-2 relative">
+                <img src="img/hero.png" alt="AURA美容クリニック 受付" class="w-full rounded-2xl shadow-xl">
+                <div class="absolute -bottom-4 -left-4 bg-white rounded-xl shadow-lg p-4 hidden md:block">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-accent/20 rounded-full flex items-center justify-center">
+                            <span class="text-accent text-lg">★</span>
+                        </div>
+                        <div>
+                            <div class="text-xs font-bold">Google口コミ</div>
+                            <div class="text-accent font-bold">4.9<span class="text-bark/40 font-normal ml-1">/ 5.0 (328件)</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="bg-indigo-600 text-white rounded-[24px] p-10 shadow-lg flex flex-col justify-center items-center text-center">
-             <div class="w-24 h-24 rounded-full border-4 border-indigo-400/30 mb-6 flex items-center justify-center text-4xl">8</div>
-             <h3 class="text-xl font-bold mb-2">Live Demo Ready</h3>
+    </section>
+
+    <!-- 2. 実績数字セクション（信頼構築） -->
+    <section class="py-20 bg-white border-y border-charcoal/5">
+        <div class="max-w-5xl mx-auto px-6 md:px-12 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div class="fade-in">
+                <div class="text-3xl md:text-4xl font-serif text-charcoal count-up">15,000</div>
+                <div class="text-[11px] text-bark mt-2 tracking-wider">年間施術件数</div>
+            </div>
+            <div class="fade-in">
+                <div class="text-3xl md:text-4xl font-serif text-charcoal">98.2<span class="text-lg">%</span></div>
+                <div class="text-[11px] text-bark mt-2 tracking-wider">患者満足度</div>
+            </div>
+            <div class="fade-in">
+                <div class="text-3xl md:text-4xl font-serif text-charcoal">12</div>
+                <div class="text-[11px] text-bark mt-2 tracking-wider">在籍医師数</div>
+            </div>
+            <div class="fade-in">
+                <div class="text-3xl md:text-4xl font-serif text-charcoal">0<span class="text-lg">円</span></div>
+                <div class="text-[11px] text-bark mt-2 tracking-wider">初回カウンセリング</div>
+            </div>
         </div>
-    </div>
-</body></html>
+    </section>
+
+    <!-- 3. お悩み別セクション（ターゲットの課題に寄り添う） -->
+    <section class="py-24 px-6 md:px-12">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-16 fade-in">
+                <div class="text-[11px] tracking-[0.4em] text-accent mb-4 font-medium">YOUR CONCERNS</div>
+                <h2 class="text-2xl md:text-3xl font-serif leading-relaxed">
+                    <span class="inline-block">こんなお悩み、</span><span class="inline-block">ありませんか？</span>
+                </h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="fade-in bg-white rounded-2xl p-8 border border-charcoal/5 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-pointer group">
+                    <div class="text-3xl mb-4">🪞</div>
+                    <h3 class="font-medium text-lg mb-3">シミ・くすみ</h3>
+                    <p class="text-sm text-bark leading-relaxed">
+                        <span class="inline-block">年齢とともに増えてきた</span><span class="inline-block">シミやくすみ。</span><span class="inline-block">ファンデーションでは</span><span class="inline-block">隠しきれなくなった。</span>
+                    </p>
+                    <div class="mt-4 text-accent text-sm opacity-0 group-hover:opacity-100 transition">→ おすすめ施術を見る</div>
+                </div>
+                <div class="fade-in bg-white rounded-2xl p-8 border border-charcoal/5 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-pointer group">
+                    <div class="text-3xl mb-4">💧</div>
+                    <h3 class="font-medium text-lg mb-3">毛穴・ニキビ跡</h3>
+                    <p class="text-sm text-bark leading-relaxed">
+                        <span class="inline-block">開いた毛穴や</span><span class="inline-block">ニキビ跡の凹凸が</span><span class="inline-block">気になる。</span><span class="inline-block">すっぴんに自信を持ちたい。</span>
+                    </p>
+                    <div class="mt-4 text-accent text-sm opacity-0 group-hover:opacity-100 transition">→ おすすめ施術を見る</div>
+                </div>
+                <div class="fade-in bg-white rounded-2xl p-8 border border-charcoal/5 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-pointer group">
+                    <div class="text-3xl mb-4">✨</div>
+                    <h3 class="font-medium text-lg mb-3">たるみ・ハリ不足</h3>
+                    <p class="text-sm text-bark leading-relaxed">
+                        <span class="inline-block">フェイスラインが</span><span class="inline-block">ぼやけてきた。</span><span class="inline-block">以前のような</span><span class="inline-block">弾力を取り戻したい。</span>
+                    </p>
+                    <div class="mt-4 text-accent text-sm opacity-0 group-hover:opacity-100 transition">→ おすすめ施術を見る</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. 施術メニュー（価格・詳細・信頼） -->
+    <section class="py-24 px-6 md:px-12 bg-white" id="menu">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16 fade-in">
+                <div class="text-[11px] tracking-[0.4em] text-accent mb-4 font-medium">TREATMENT MENU</div>
+                <h2 class="text-2xl md:text-3xl font-serif leading-relaxed">
+                    <span class="inline-block">人気の施術メニュー</span>
+                </h2>
+                <p class="text-sm text-bark mt-4">
+                    <span class="inline-block">すべての施術に、</span><span class="inline-block">皮膚科専門医が</span><span class="inline-block">責任を持って対応いたします。</span>
+                </p>
+            </div>
+            
+            <!-- Menu Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="fade-in border border-charcoal/10 rounded-2xl overflow-hidden hover:shadow-xl transition-shadow duration-500 group">
+                    <div class="aspect-[16/9] overflow-hidden">
+                        <img src="img/treatment.png" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="bg-accent/10 text-accent text-[10px] font-bold px-3 py-1 rounded-full">人気 No.1</span>
+                            <span class="text-[10px] text-bark/50">施術時間: 60分</span>
+                        </div>
+                        <h3 class="text-xl font-medium mb-2">ピコレーザートーニング</h3>
+                        <p class="text-sm text-bark leading-relaxed mb-4">
+                            <span class="inline-block">肌全体のトーンアップと</span><span class="inline-block">シミ・そばかすの改善。</span><span class="inline-block">痛みが少なく、</span><span class="inline-block">ダウンタイムもほぼありません。</span>
+                        </p>
+                        <div class="flex justify-between items-end">
+                            <div>
+                                <div class="text-[10px] text-bark/50 mb-1">初回限定価格</div>
+                                <div class="text-2xl font-serif text-charcoal">¥9,800<span class="text-xs text-bark/50 ml-1">税込</span></div>
+                                <div class="text-[10px] text-bark/40 line-through">通常 ¥22,000</div>
+                            </div>
+                            <a href="#contact" class="bg-charcoal text-cream text-xs px-6 py-3 rounded-full hover:bg-bark transition-colors">予約する</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="fade-in border border-charcoal/10 rounded-2xl overflow-hidden hover:shadow-xl transition-shadow duration-500 group">
+                    <div class="aspect-[16/9] overflow-hidden bg-sand/50">
+                        <img src="img/hero.png" class="w-full h-full object-cover group-hover:scale-105 transition duration-700" style="object-position: center 60%;">
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="bg-accent/10 text-accent text-[10px] font-bold px-3 py-1 rounded-full">満足度 No.1</span>
+                            <span class="text-[10px] text-bark/50">施術時間: 90分</span>
+                        </div>
+                        <h3 class="text-xl font-medium mb-2">ハイフ（HIFU）全顔</h3>
+                        <p class="text-sm text-bark leading-relaxed mb-4">
+                            <span class="inline-block">超音波で</span><span class="inline-block">SMAS筋膜層にアプローチ。</span><span class="inline-block">メスを使わずに</span><span class="inline-block">リフトアップを実現し、</span><span class="inline-block">引き締まった</span><span class="inline-block">フェイスラインへ。</span>
+                        </p>
+                        <div class="flex justify-between items-end">
+                            <div>
+                                <div class="text-[10px] text-bark/50 mb-1">初回限定価格</div>
+                                <div class="text-2xl font-serif text-charcoal">¥29,800<span class="text-xs text-bark/50 ml-1">税込</span></div>
+                                <div class="text-[10px] text-bark/40 line-through">通常 ¥65,000</div>
+                            </div>
+                            <a href="#contact" class="bg-charcoal text-cream text-xs px-6 py-3 rounded-full hover:bg-bark transition-colors">予約する</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- More menu items in list form -->
+            <div class="mt-12 border border-charcoal/10 rounded-2xl overflow-hidden">
+                <div class="grid grid-cols-1 divide-y divide-charcoal/5">
+                    <a href="#" class="flex justify-between items-center p-6 hover:bg-cream/50 transition group">
+                        <div class="flex items-center gap-4">
+                            <span class="text-[10px] text-bark/40 w-16">注入</span>
+                            <span class="font-medium">ヒアルロン酸注入</span>
+                        </div>
+                        <div class="flex items-center gap-6">
+                            <span class="text-sm text-bark">¥44,000〜</span>
+                            <span class="text-bark/30 group-hover:text-accent transition">→</span>
+                        </div>
+                    </a>
+                    <a href="#" class="flex justify-between items-center p-6 hover:bg-cream/50 transition group">
+                        <div class="flex items-center gap-4">
+                            <span class="text-[10px] text-bark/40 w-16">注入</span>
+                            <span class="font-medium">ボトックス注射</span>
+                        </div>
+                        <div class="flex items-center gap-6">
+                            <span class="text-sm text-bark">¥16,500〜</span>
+                            <span class="text-bark/30 group-hover:text-accent transition">→</span>
+                        </div>
+                    </a>
+                    <a href="#" class="flex justify-between items-center p-6 hover:bg-cream/50 transition group">
+                        <div class="flex items-center gap-4">
+                            <span class="text-[10px] text-bark/40 w-16">点滴</span>
+                            <span class="font-medium">白玉点滴（グルタチオン）</span>
+                        </div>
+                        <div class="flex items-center gap-6">
+                            <span class="text-sm text-bark">¥8,800〜</span>
+                            <span class="text-bark/30 group-hover:text-accent transition">→</span>
+                        </div>
+                    </a>
+                    <a href="#" class="flex justify-between items-center p-6 hover:bg-cream/50 transition group">
+                        <div class="flex items-center gap-4">
+                            <span class="text-[10px] text-bark/40 w-16">導入</span>
+                            <span class="font-medium">エレクトロポレーション</span>
+                        </div>
+                        <div class="flex items-center gap-6">
+                            <span class="text-sm text-bark">¥13,200〜</span>
+                            <span class="text-bark/30 group-hover:text-accent transition">→</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="text-center mt-8">
+                <a href="#" class="text-sm text-accent hover:underline">すべての施術メニュー一覧 →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. 医師紹介（信頼の核） -->
+    <section class="py-24 px-6 md:px-12" id="doctor">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-16 fade-in">
+                <div class="text-[11px] tracking-[0.4em] text-accent mb-4 font-medium">DOCTOR</div>
+                <h2 class="text-2xl md:text-3xl font-serif">
+                    <span class="inline-block">医師紹介</span>
+                </h2>
+            </div>
+            <div class="fade-in grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="rounded-2xl overflow-hidden">
+                    <img src="img/doctor.png" alt="院長 田中明里" class="w-full">
+                </div>
+                <div>
+                    <div class="text-[10px] tracking-[0.3em] text-accent mb-4">DIRECTOR</div>
+                    <h3 class="text-2xl font-serif mb-2">院長　田中 明里</h3>
+                    <div class="text-xs text-bark/60 mb-6">医学博士 / 皮膚科専門医 / 日本美容外科学会認定専門医</div>
+                    <p class="text-[14px] text-bark leading-[2] mb-6">
+                        <span class="inline-block">東京大学医学部卒業後、</span><span class="inline-block">大学病院皮膚科で</span><span class="inline-block">10年間の臨床経験を積む。</span><span class="inline-block">その後、</span><span class="inline-block">美容皮膚科の最先端を学ぶため</span><span class="inline-block">米国ハーバード大学に留学。</span>
+                    </p>
+                    <p class="text-[14px] text-bark leading-[2] mb-8">
+                        <span class="inline-block">「患者さまの"なりたい"を</span><span class="inline-block">科学的に実現する」を</span><span class="inline-block">信条に、</span><span class="inline-block">一人ひとりの肌状態と</span><span class="inline-block">ライフスタイルに合った</span><span class="inline-block">オーダーメイド治療を</span><span class="inline-block">ご提案しています。</span>
+                    </p>
+                    <div class="space-y-2 text-xs text-bark/60">
+                        <div>・日本皮膚科学会 認定皮膚科専門医</div>
+                        <div>・日本美容外科学会 認定専門医</div>
+                        <div>・日本レーザー医学会 認定医</div>
+                        <div>・ハーバード大学医学部 客員研究員（2018-2020）</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. 口コミ・患者様の声 -->
+    <section class="py-24 px-6 md:px-12 bg-sand/30">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-16 fade-in">
+                <div class="text-[11px] tracking-[0.4em] text-accent mb-4 font-medium">VOICE</div>
+                <h2 class="text-2xl md:text-3xl font-serif">
+                    <span class="inline-block">患者さまの声</span>
+                </h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="fade-in bg-white rounded-2xl p-8">
+                    <div class="flex gap-1 mb-4 text-accent">★★★★★</div>
+                    <p class="text-sm text-bark leading-relaxed mb-6">
+                        <span class="inline-block">初めての美容クリニックで</span><span class="inline-block">緊張していましたが、</span><span class="inline-block">先生がとても丁寧に</span><span class="inline-block">説明してくださり安心しました。</span><span class="inline-block">ピコレーザー2回目で</span><span class="inline-block">すでに効果を実感しています。</span>
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-8 h-8 bg-sand rounded-full flex items-center justify-center text-xs text-bark">M</div>
+                        <div>
+                            <div class="text-xs font-medium">M.K. さま</div>
+                            <div class="text-[10px] text-bark/50">32歳 / 会社員 / シミ治療</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="fade-in bg-white rounded-2xl p-8">
+                    <div class="flex gap-1 mb-4 text-accent">★★★★★</div>
+                    <p class="text-sm text-bark leading-relaxed mb-6">
+                        <span class="inline-block">他院では</span><span class="inline-block">「とりあえずこれ」</span><span class="inline-block">という提案でしたが、</span><span class="inline-block">こちらでは肌診断の結果を</span><span class="inline-block">もとに丁寧にプランを</span><span class="inline-block">組み立ててくれました。</span><span class="inline-block">信頼できます。</span>
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-8 h-8 bg-sand rounded-full flex items-center justify-center text-xs text-bark">A</div>
+                        <div>
+                            <div class="text-xs font-medium">A.S. さま</div>
+                            <div class="text-[10px] text-bark/50">41歳 / 経営者 / 総合美肌</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="fade-in bg-white rounded-2xl p-8">
+                    <div class="flex gap-1 mb-4 text-accent">★★★★★</div>
+                    <p class="text-sm text-bark leading-relaxed mb-6">
+                        <span class="inline-block">ハイフを受けましたが、</span><span class="inline-block">想像していたより</span><span class="inline-block">痛みが少なくてびっくり。</span><span class="inline-block">1ヶ月後に</span><span class="inline-block">フェイスラインが</span><span class="inline-block">シュッとしてきて</span><span class="inline-block">感動しています。</span>
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-8 h-8 bg-sand rounded-full flex items-center justify-center text-xs text-bark">Y</div>
+                        <div>
+                            <div class="text-xs font-medium">Y.T. さま</div>
+                            <div class="text-[10px] text-bark/50">28歳 / IT企業 / HIFU</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. ご来院の流れ -->
+    <section class="py-24 px-6 md:px-12" id="flow">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-16 fade-in">
+                <div class="text-[11px] tracking-[0.4em] text-accent mb-4 font-medium">FLOW</div>
+                <h2 class="text-2xl md:text-3xl font-serif">
+                    <span class="inline-block">ご来院の流れ</span>
+                </h2>
+                <p class="text-sm text-bark mt-4">
+                    <span class="inline-block">初めての方でも</span><span class="inline-block">安心してお越しいただけるよう、</span><span class="inline-block">丁寧にご案内いたします。</span>
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="fade-in text-center">
+                    <div class="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-accent font-serif text-xl">01</span>
+                    </div>
+                    <h3 class="font-medium mb-2">ご予約</h3>
+                    <p class="text-xs text-bark/60 leading-relaxed">
+                        <span class="inline-block">Web・LINE・</span><span class="inline-block">お電話で</span><span class="inline-block">ご予約ください。</span><span class="inline-block">当日予約もOKです。</span>
+                    </p>
+                </div>
+                <div class="fade-in text-center">
+                    <div class="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-accent font-serif text-xl">02</span>
+                    </div>
+                    <h3 class="font-medium mb-2">カウンセリング</h3>
+                    <p class="text-xs text-bark/60 leading-relaxed">
+                        <span class="inline-block">医師が直接、</span><span class="inline-block">お悩みをお伺いし</span><span class="inline-block">最適なプランを</span><span class="inline-block">ご提案します。</span>
+                    </p>
+                </div>
+                <div class="fade-in text-center">
+                    <div class="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-accent font-serif text-xl">03</span>
+                    </div>
+                    <h3 class="font-medium mb-2">施術</h3>
+                    <p class="text-xs text-bark/60 leading-relaxed">
+                        <span class="inline-block">完全個室で</span><span class="inline-block">リラックスした状態で</span><span class="inline-block">施術を受けていただけます。</span>
+                    </p>
+                </div>
+                <div class="fade-in text-center">
+                    <div class="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-accent font-serif text-xl">04</span>
+                    </div>
+                    <h3 class="font-medium mb-2">アフターケア</h3>
+                    <p class="text-xs text-bark/60 leading-relaxed">
+                        <span class="inline-block">施術後の経過も</span><span class="inline-block">LINEで</span><span class="inline-block">いつでも</span><span class="inline-block">ご相談いただけます。</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. よくある質問 -->
+    <section class="py-24 px-6 md:px-12 bg-white" id="faq">
+        <div class="max-w-3xl mx-auto">
+            <div class="text-center mb-16 fade-in">
+                <div class="text-[11px] tracking-[0.4em] text-accent mb-4 font-medium">FAQ</div>
+                <h2 class="text-2xl md:text-3xl font-serif">
+                    <span class="inline-block">よくある質問</span>
+                </h2>
+            </div>
+            <div class="space-y-4">
+                <details class="fade-in group border border-charcoal/10 rounded-xl overflow-hidden">
+                    <summary class="flex justify-between items-center p-6 cursor-pointer hover:bg-cream/50 transition">
+                        <span class="font-medium text-sm pr-4">痛みはありますか？</span>
+                        <span class="text-bark/30 group-open:rotate-45 transition-transform text-xl">+</span>
+                    </summary>
+                    <div class="px-6 pb-6 text-sm text-bark leading-relaxed">
+                        <span class="inline-block">施術内容によって異なりますが、</span><span class="inline-block">多くの施術は麻酔クリームの塗布や</span><span class="inline-block">冷却装置の使用により、</span><span class="inline-block">痛みを最小限に抑えています。</span><span class="inline-block">痛みに弱い方には</span><span class="inline-block">笑気麻酔のご用意もございます。</span>
+                    </div>
+                </details>
+                <details class="fade-in group border border-charcoal/10 rounded-xl overflow-hidden">
+                    <summary class="flex justify-between items-center p-6 cursor-pointer hover:bg-cream/50 transition">
+                        <span class="font-medium text-sm pr-4">ダウンタイムはどのくらいですか？</span>
+                        <span class="text-bark/30 group-open:rotate-45 transition-transform text-xl">+</span>
+                    </summary>
+                    <div class="px-6 pb-6 text-sm text-bark leading-relaxed">
+                        <span class="inline-block">ピコレーザーは</span><span class="inline-block">ほぼダウンタイムなし。</span><span class="inline-block">ハイフは当日〜翌日に</span><span class="inline-block">軽い赤みが出る程度です。</span><span class="inline-block">施術後すぐに</span><span class="inline-block">メイクも可能です。</span>
+                    </div>
+                </details>
+                <details class="fade-in group border border-charcoal/10 rounded-xl overflow-hidden">
+                    <summary class="flex justify-between items-center p-6 cursor-pointer hover:bg-cream/50 transition">
+                        <span class="font-medium text-sm pr-4">初めてでも大丈夫ですか？</span>
+                        <span class="text-bark/30 group-open:rotate-45 transition-transform text-xl">+</span>
+                    </summary>
+                    <div class="px-6 pb-6 text-sm text-bark leading-relaxed">
+                        <span class="inline-block">当院の患者さまの約40%が</span><span class="inline-block">美容クリニック初体験の方です。</span><span class="inline-block">カウンセリングでは</span><span class="inline-block">施術内容・リスク・費用を</span><span class="inline-block">丁寧にご説明しますので、</span><span class="inline-block">ご安心ください。</span><span class="inline-block">無理な勧誘は</span><span class="inline-block">一切いたしません。</span>
+                    </div>
+                </details>
+                <details class="fade-in group border border-charcoal/10 rounded-xl overflow-hidden">
+                    <summary class="flex justify-between items-center p-6 cursor-pointer hover:bg-cream/50 transition">
+                        <span class="font-medium text-sm pr-4">支払い方法を教えてください。</span>
+                        <span class="text-bark/30 group-open:rotate-45 transition-transform text-xl">+</span>
+                    </summary>
+                    <div class="px-6 pb-6 text-sm text-bark leading-relaxed">
+                        <span class="inline-block">現金、各種クレジットカード、</span><span class="inline-block">医療ローン（最大84回払い）に</span><span class="inline-block">対応しております。</span><span class="inline-block">PayPay、LINE Payなどの</span><span class="inline-block">QR決済もご利用いただけます。</span>
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. アクセス・院内 -->
+    <section class="py-24 px-6 md:px-12">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-16 fade-in">
+                <div class="text-[11px] tracking-[0.4em] text-accent mb-4 font-medium">ACCESS</div>
+                <h2 class="text-2xl md:text-3xl font-serif">アクセス・院内のご案内</h2>
+            </div>
+            <div class="fade-in grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div class="rounded-2xl overflow-hidden aspect-[4/3] bg-sand/30">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.0!2d139.7!3d35.665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzXCsDM5JzU0LjAiTiAxMznCsDQyJzAwLjAiRQ!5e0!3m2!1sja!2sjp!4v1" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" class="rounded-2xl"></iframe>
+                </div>
+                <div>
+                    <h3 class="font-medium text-lg mb-6">AURA美容クリニック 表参道院</h3>
+                    <div class="space-y-4 text-sm text-bark">
+                        <div class="flex gap-4">
+                            <span class="text-bark/40 w-16 flex-shrink-0">住所</span>
+                            <span>〒107-0062 東京都港区南青山5-XX-XX 表参道ヒルズB1F</span>
+                        </div>
+                        <div class="flex gap-4">
+                            <span class="text-bark/40 w-16 flex-shrink-0">最寄り</span>
+                            <span>東京メトロ 表参道駅 A1出口 徒歩3分</span>
+                        </div>
+                        <div class="flex gap-4">
+                            <span class="text-bark/40 w-16 flex-shrink-0">診療時間</span>
+                            <span>10:00〜19:00（最終受付 18:00）</span>
+                        </div>
+                        <div class="flex gap-4">
+                            <span class="text-bark/40 w-16 flex-shrink-0">休診日</span>
+                            <span>水曜日・年末年始</span>
+                        </div>
+                        <div class="flex gap-4">
+                            <span class="text-bark/40 w-16 flex-shrink-0">電話</span>
+                            <span class="font-medium">03-XXXX-XXXX</span>
+                        </div>
+                    </div>
+                    <div class="mt-8 rounded-2xl overflow-hidden">
+                        <img src="img/treatment.png" alt="施術室" class="w-full h-48 object-cover rounded-2xl">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. CTA -->
+    <section class="py-24 px-6 md:px-12 bg-charcoal text-cream" id="contact">
+        <div class="max-w-3xl mx-auto text-center fade-in">
+            <div class="text-[11px] tracking-[0.4em] text-accent mb-6 font-medium">RESERVATION</div>
+            <h2 class="text-2xl md:text-4xl font-serif leading-relaxed mb-6">
+                <span class="inline-block">まずは、</span><span class="inline-block">お気軽にご相談ください。</span>
+            </h2>
+            <p class="text-sm text-cream/60 leading-relaxed mb-10">
+                <span class="inline-block">カウンセリングは無料です。</span><span class="inline-block">無理な勧誘は一切いたしません。</span><span class="inline-block">お一人おひとりの</span><span class="inline-block">お悩みに寄り添い、</span><span class="inline-block">最適なプランをご提案します。</span>
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#" class="bg-accent text-white px-10 py-4 rounded-full text-sm tracking-wider hover:bg-accent/80 transition-colors">
+                    📱 LINEで予約する
+                </a>
+                <a href="#" class="border border-cream/30 text-cream px-10 py-4 rounded-full text-sm tracking-wider hover:bg-cream/10 transition-colors">
+                    📞 電話で予約する
+                </a>
+            </div>
+            <div class="mt-8 text-[11px] text-cream/40">
+                受付時間 10:00〜19:00（水曜休診）
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-6 md:px-12 border-t border-charcoal/5">
+        <div class="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="flex items-center gap-2">
+                <span class="font-serif text-lg">AURA</span>
+                <span class="text-[10px] text-bark/60">美容クリニック 表参道</span>
+            </div>
+            <div class="flex gap-6 text-[11px] text-bark/50">
+                <a href="#" class="hover:text-charcoal transition">プライバシーポリシー</a>
+                <a href="#" class="hover:text-charcoal transition">特定商取引法に基づく表記</a>
+                <a href="#" class="hover:text-charcoal transition">Instagram</a>
+            </div>
+            <div class="text-[10px] text-bark/30">© 2026 AURA Beauty Clinic</div>
+        </div>
+    </footer>
+
+    <script>
+        // Scroll fade-in
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const h = document.getElementById('header');
+            if (window.scrollY > 50) {
+                h.classList.add('shadow-sm');
+            } else {
+                h.classList.remove('shadow-sm');
+            }
+        });
+    </script>
+</body>
+</html>
