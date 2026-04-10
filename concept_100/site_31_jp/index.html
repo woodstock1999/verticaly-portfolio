@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>洛 RAKU | Kyoto Meta Residences</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <style>
+        body { font-family: 'Noto Sans JP', sans-serif; background: #0a0a0a; color: #e6e2d3; overflow-x: hidden; }
+        .font-mincho { font-family: 'Shippori Mincho', serif; }
+        .tategaki { writing-mode: vertical-rl; text-orientation: upright; }
+        
+        /* Japanese Zen Luxury */
+        .washi-bg { background-image: url('https://www.transparenttextures.com/patterns/rice-paper-2.png'); mix-blend-mode: overlay; opacity: 0.15; pointer-events: none; }
+        .gold-leaf { color: #c6a87c; }
+        .border-gold { border-color: rgba(198, 168, 124, 0.4); }
+        .bg-gold { background-color: #c6a87c; }
+
+        /* Smooth Scrollbar */
+        ::-webkit-scrollbar { width: 4px; }
+        ::-webkit-scrollbar-track { background: #0a0a0a; }
+        ::-webkit-scrollbar-thumb { background: #c6a87c; border-radius: 2px; }
+
+        .shoji-shadow { box-shadow: inset 0 0 40px rgba(0,0,0,0.8); }
+        
+        /* Ambient mist */
+        .ambient-mist { background: radial-gradient(circle at 50% 50%, rgba(255,255,255,0.03) 0%, transparent 60%); }
+    </style>
+</head>
+<body class="antialiased font-light relative">
+    
+    <div class="fixed inset-0 washi-bg z-50"></div>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full top-0 z-50 pt-8 pb-4 px-8 md:px-16 flex justify-between items-center mix-blend-difference transition-all duration-500" id="navbar">
+        <a href="../../index.html" class="flex gap-2 items-center text-xs tracking-[0.2em] hover:text-[#c6a87c] transition font-mincho">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+            目次へ戻る
+        </a>
+        <div class="text-2xl font-mincho tracking-[0.4em] font-medium text-white">洛 <span class="text-[10px] tracking-widest text-[#c6a87c] ml-2">RAKU</span></div>
+        <div class="hidden md:flex gap-12 text-xs tracking-[0.2em] font-mincho">
+            <a href="#vision" class="hover:text-[#c6a87c] transition">理念</a>
+            <a href="#residences" class="hover:text-[#c6a87c] transition">意匠</a>
+            <a href="#inquire" class="text-[#c6a87c] border-b border-[#c6a87c] pb-1 hover:opacity-70 transition">拝観予約</a>
+        </div>
+    </nav>
+
+    <!-- 1. Immersive Zen Hero -->
+    <header class="relative w-screen h-screen flex flex-col justify-center items-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <!-- Fullscreen Wabi-sabi architecture Hero -->
+            <img src="https://images.unsplash.com/photo-1493976040322-c1ee8052d0b5?w=2000&q=80" alt="Kyoto Architecture" class="w-full h-full object-cover opacity-50 brightness-75 scale-105 filter contrast-125" id="hero-bg">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-black/40 to-[#0a0a0a] opacity-90"></div>
+        </div>
+
+        <div class="z-10 flex text-center mt-20 relative">
+            <div class="absolute -left-16 top-0 h-full flex items-center">
+                <div class="tategaki text-[10px] tracking-[0.5em] text-[#c6a87c] reveal-up">京都・メタレジデンス計画</div>
+            </div>
+            
+            <h1 class="tategaki text-6xl md:text-[10rem] font-mincho tracking-[0.2em] leading-none reveal-up text-white/90 drop-shadow-2xl" style="transform: translateY(20px); opacity: 0;">
+                洛
+            </h1>
+            
+            <div class="absolute -right-24 top-1/4 h-full">
+                <p class="tategaki text-lg font-mincho tracking-[0.4em] text-white/60 leading-[3] reveal-up" style="transform: translateY(20px); opacity: 0;">
+                    伝統の静寂と、<br>
+                    空間OSの融合。<br>
+                    二〇二七年、竣工。
+                </p>
+            </div>
+        </div>
+
+        <div class="absolute bottom-12 flex flex-col items-center gap-4 z-10 reveal-up">
+            <div class="h-20 w-[1px] bg-gradient-to-b from-[#c6a87c]/60 to-transparent"></div>
+            <div class="font-mincho text-[10px] tracking-[0.4em] text-white/50">紐解く</div>
+        </div>
+    </header>
+
+    <!-- 2. Minimalist Split Focus Layout (Tategaki & Data) -->
+    <section class="py-32 px-8 md:px-16" id="vision">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-20 items-center">
+            
+            <div class="md:col-span-7 order-2 md:order-1 flex justify-center md:justify-end">
+                <div class="flex gap-16 tategaki h-[400px]">
+                    <div>
+                        <div class="text-[10px] gold-leaf tracking-widest mb-4">階層</div>
+                        <div class="text-3xl font-mincho">地下弐階・地上拾弐階</div>
+                    </div>
+                    <div>
+                        <div class="text-[10px] gold-leaf tracking-widest mb-4">邸宅数</div>
+                        <div class="text-3xl font-mincho">僅か三拾邸</div>
+                    </div>
+                    <div>
+                        <div class="text-[10px] gold-leaf tracking-widest mb-4">共有</div>
+                        <div class="text-3xl font-mincho">枯山水・電脳茶室</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="md:col-span-5 order-1 md:order-2 tategaki h-[400px]">
+                <h2 class="text-3xl md:text-5xl font-mincho tracking-[0.3em] leading-[2] mb-12">
+                    千年の余白を、<br>
+                    テクノロジーで<br>
+                    支配する。
+                </h2>
+                <p class="text-[13px] font-light text-white/60 leading-[2.5] max-h-full">
+                    洛におけるすべての邸宅は、物理的な壁という概念を持たない。空間認識AIと連動したスマート・インショウジ（電子障子）が、あなたの精神状態と外光に合わせてシームレスに透光率を調整。和の重厚な静けさと、未来の居住体験がここで交差する。
+                </p>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- 3. Parallax Masonry Image Viewer (Wabi-Sabi filter) -->
+    <section class="py-20 relative" id="residences">
+        <div class="flex justify-center mb-16">
+            <h3 class="tategaki text-[12px] tracking-[0.6em] gold-leaf font-mincho">意匠の極致</h3>
+        </div>
+        
+        <div class="flex flex-col md:flex-row gap-6 px-4 md:px-10 h-auto md:h-[90vh]">
+            <!-- Column 1 -->
+            <div class="flex-1 flex flex-col gap-6 transform translate-y-12" id="parallax-col-1">
+                <div class="w-full h-[65%] overflow-hidden relative group rounded-sm shoji-shadow">
+                    <img src="https://images.unsplash.com/photo-1578308892403-bf5db92add72?w=800&q=80" class="w-full h-full object-cover transition duration-[3s] group-hover:scale-110 filter sepia-[0.3] brightness-75">
+                    <div class="absolute inset-0 bg-black/30 group-hover:bg-transparent transition duration-700"></div>
+                </div>
+                <div class="w-full flex-1 overflow-hidden relative group rounded-sm shoji-shadow">
+                    <img src="https://images.unsplash.com/photo-1582582490802-bd92ee9dc481?w=800&q=80" class="w-full h-full object-cover transition duration-[3s] group-hover:scale-110 filter sepia-[0.3] brightness-75">
+                </div>
+            </div>
+            
+            <!-- Column 2 (Center, taller) -->
+            <div class="flex-[1.2] flex flex-col h-full transform -translate-y-8" id="parallax-col-2">
+                <div class="w-full h-full overflow-hidden relative group rounded-sm shoji-shadow">
+                    <img src="https://images.unsplash.com/photo-1492520624021-3e3a478b8f2b?w=1200&q=80" class="w-full h-full object-cover transition duration-[3s] group-hover:scale-105 filter sepia-[0.4] brightness-75">
+                    <div class="absolute bottom-10 left-10">
+                        <div class="tategaki text-xs tracking-widest bg-[#0a0a0a]/80 backdrop-blur px-3 py-6 text-[#c6a87c] font-mincho border border-[#c6a87c]/30">最上層・天穹（てんきゅう）</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Column 3 -->
+            <div class="flex-1 flex flex-col gap-6 transform translate-y-20" id="parallax-col-3">
+                <div class="w-full flex-1 overflow-hidden relative group rounded-sm shoji-shadow">
+                    <img src="https://images.unsplash.com/photo-1490100667990-4fced8021649?w=800&q=80" class="w-full h-full object-cover transition duration-[3s] group-hover:scale-110 filter sepia-[0.3] brightness-75">
+                </div>
+                <div class="w-full h-[55%] overflow-hidden relative group rounded-sm shoji-shadow">
+                    <img src="https://images.unsplash.com/photo-1596700810486-574ab57845f2?w=800&q=80" class="w-full h-full object-cover transition duration-[3s] group-hover:scale-110 filter sepia-[0.3] brightness-75">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Interactive Configuration Panel (Japanese HUD) -->
+    <section class="py-40 px-8 md:px-16 bg-[#050505] border-y border-white/5 relative overflow-hidden">
+        <div class="absolute inset-0 ambient-mist"></div>
+        
+        <div class="max-w-6xl mx-auto flex flex-col lg:flex-row gap-24 items-center">
+            
+            <!-- Fake Japanese Cyber UI Mockup -->
+            <div class="w-full lg:w-1/2 relative z-10">
+                <div class="aspect-square bg-[#0a0a0a] border border-[#c6a87c]/20 rounded-sm p-10 relative overflow-hidden shadow-2xl">
+                    <div class="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-[#c6a87c]/50 to-transparent"></div>
+                    
+                    <!-- UI Top bar -->
+                    <div class="flex justify-between items-center border-b border-white/5 pb-4 mb-10">
+                        <div class="font-mincho text-[10px] tracking-[0.3em] gold-leaf">空間制御盤 - 零式</div>
+                        <div class="flex gap-3 items-center"><span class="w-1.5 h-1.5 bg-[#c6a87c] rounded-full animate-pulse"></span><span class="text-[10px] text-white/40 tracking-widest">同期完了</span></div>
+                    </div>
+                    
+                    <!-- Origami/Enso Circular Dial -->
+                    <div class="absolute inset-0 m-auto w-72 h-72 rounded-full flex items-center justify-center">
+                        <div class="w-56 h-56 rounded-full border-[0.5px] border-[#c6a87c]/20 flex flex-col items-center justify-center relative">
+                            <!-- Enso SVG Spinners -->
+                            <svg class="absolute inset-0 w-full h-full animate-[spin_20s_linear_infinite]" viewBox="0 0 100 100">
+                                <circle cx="50" cy="50" r="48" fill="none" stroke="rgba(198,168,124,0.15)" stroke-width="0.5" stroke-dasharray="10 40 30 10"></circle>
+                                <circle cx="50" cy="50" r="42" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="0.5" stroke-dasharray="2 6"></circle>
+                            </svg>
+                            <div class="tategaki text-[10px] tracking-[0.3em] font-mincho text-white/50 mb-4 h-16">室温</div>
+                            <div class="text-4xl font-mincho text-[#c6a87c]">二拾二<span class="text-xl">度</span></div>
+                            <div class="tategaki text-[9px] tracking-[0.4em] font-mincho mt-4 text-white/30 h-12">最適解</div>
+                        </div>
+                    </div>
+
+                    <!-- Room Switches Tategaki -->
+                    <div class="absolute bottom-10 left-10 right-10 flex justify-between gap-4 h-24">
+                        <div class="flex-1 border-[0.5px] border-white/10 p-2 bg-white/5 backdrop-blur hover:bg-white/10 transition cursor-pointer flex justify-center items-center">
+                            <span class="tategaki text-[10px] tracking-[0.3em] font-mincho text-white/50">居間・茶室</span>
+                        </div>
+                        <div class="flex-1 border-[0.5px] border-[#c6a87c]/40 p-2 bg-[#c6a87c]/10 backdrop-blur cursor-pointer flex justify-center items-center">
+                            <span class="tategaki text-[10px] tracking-[0.3em] font-mincho text-[#c6a87c]">主寝室</span>
+                        </div>
+                        <div class="flex-1 border-[0.5px] border-white/10 p-2 bg-white/5 backdrop-blur hover:bg-white/10 transition cursor-pointer flex justify-center items-center">
+                            <span class="tategaki text-[10px] tracking-[0.3em] font-mincho text-white/50">瞑想庭園</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Copy -->
+            <div class="w-full lg:w-1/2 flex justify-start z-10 pl-0 lg:pl-10 h-[450px]">
+                <div class="flex gap-16 tategaki">
+                    <h2 class="text-4xl md:text-5xl font-mincho tracking-[0.2em] leading-[2] drop-shadow-lg">
+                        息をのむ、<br>
+                        もてなしの演算。
+                    </h2>
+                    <p class="text-[14px] font-mincho text-white/70 leading-[2.5] mt-12 max-h-full">
+                        邸宅全体が、見えないAIの網の目で覆われている。あなたの体温、呼吸、視線の先。すべてを感知し、無音のままに最適な「間」を構築する。指先一つのARジェスチャーで、襖（ふすま）が透け、借景の庭がライトアップされる。ここに在るのは、伝統と演算が紡ぐ至高の安らぎ。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Minimal Cinematic Vertical Footer -->
+    <footer class="relative h-[80vh] flex justify-center items-center overflow-hidden" id="inquire">
+        <!-- Background -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1545569341-9eb8b30979d9?w=2000&q=80" class="w-full h-full object-cover opacity-10 filter sepia-[0.5] contrast-150">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/70 to-transparent"></div>
+        </div>
+        
+        <div class="relative z-10 flex gap-20 tategaki h-[400px]">
+            <h2 class="text-5xl md:text-6xl font-mincho tracking-[0.3em] text-white">
+                天空の洛裏へ、<br>
+                名を刻む。
+            </h2>
+            
+            <div class="flex flex-col items-center justify-center mt-16">
+                <!-- Vertical Input Form -->
+                <div class="relative border-l border-white/20 pl-4 h-full flex items-center group">
+                    <input type="text" placeholder="秘匿の招待状を希う" class="tategaki bg-transparent h-64 text-sm tracking-[0.4em] font-mincho outline-none text-[#c6a87c] transition-colors placeholder:text-white/20">
+                    <button type="button" class="mt-8 text-white/50 hover:text-[#c6a87c] tracking-[0.5em] text-[10px] font-mincho border border-white/20 hover:border-[#c6a87c] px-2 py-8 transition bg-[#0a0a0a]/50 backdrop-blur">
+                        送信
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="absolute bottom-8 right-8 tategaki text-[9px] tracking-[0.2em] font-mincho text-white/30 h-40 flex gap-6">
+            <div>二〇二七 洛開発機構 著作権保有</div>
+            <div class="flex flex-col gap-6 border-l border-white/10 pl-2">
+                <a href="#" class="hover:text-white transition">個人情報保護方針</a>
+                <a href="#" class="hover:text-white transition">利用規約</a>
+            </div>
+        </div>
+        <div class="absolute left-10 top-1/2 transform -translate-y-1/2 w-[1px] h-32 bg-[#c6a87c]/30"></div>
+    </footer>
+
+    <!-- Animations -->
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Hero Reveal
+        const timeline = gsap.timeline();
+        timeline.to('#hero-bg', { scale: 1, duration: 3, ease: 'power2.out' })
+                .to('.reveal-up', { y: 0, opacity: 1, duration: 1.5, stagger: 0.2, ease: 'power3.out' }, "-=2");
+
+        // Masonry Parallax Effect
+        if (window.innerWidth > 768) {
+            gsap.to('#parallax-col-1', {
+                y: -60, ease: "none",
+                scrollTrigger: { trigger: "#residences", start: "top bottom", end: "bottom top", scrub: 1.5 }
+            });
+            gsap.to('#parallax-col-2', {
+                y: 40, ease: "none",
+                scrollTrigger: { trigger: "#residences", start: "top bottom", end: "bottom top", scrub: 1.5 }
+            });
+            gsap.to('#parallax-col-3', {
+                y: -100, ease: "none",
+                scrollTrigger: { trigger: "#residences", start: "top bottom", end: "bottom top", scrub: 1.5 }
+            });
+        }
+    </script>
+</body>
+</html>
