@@ -1,17 +1,100 @@
-<!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>マイクロ投資アプリ (Micro Investment)</title><script src="https://cdn.tailwindcss.com"></script></head>
-<body class="bg-[#f8f9fa] text-slate-800 p-6 md:p-16 font-sans min-h-screen">
-    <header class="mb-12 flex justify-between items-end max-w-6xl mx-auto border-b border-slate-200 pb-8">
-        <div><div class="text-sm font-medium text-blue-600 mb-2">1. Finance & Fintech (金融・経済) / Prototype 5</div><h1 class="text-4xl md:text-5xl font-bold tracking-tight">マイクロ投資アプリ (Micro Investment)</h1></div>
-        <a href="../index.html" class="text-sm font-bold tracking-widest text-slate-400 hover:text-black uppercase">Close</a>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>一期庵 ICHIGOAN | 茶の湯体験</title>
+    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <style>
+        body { font-family: 'Noto Sans JP', sans-serif; background: #1a1a14; color: #d4cfc0; overflow-x: hidden; }
+        .font-mincho { font-family: 'Shippori Mincho', serif; }
+        ::-webkit-scrollbar { width: 3px; }
+        ::-webkit-scrollbar-track { background: #1a1a14; }
+        ::-webkit-scrollbar-thumb { background: #5a7a50; border-radius: 2px; }
+    </style>
+</head>
+<body class="antialiased font-light">
+
+    <nav class="fixed w-full top-0 z-50 px-8 md:px-16 py-6 flex justify-between items-center mix-blend-difference">
+        <a href="../../index.html" class="text-xs tracking-[0.2em] hover:opacity-60 transition font-mincho">← 目次</a>
+        <div class="font-mincho text-xl tracking-[0.5em]">一期庵</div>
+        <div class="hidden md:flex gap-10 text-[11px] tracking-[0.2em] font-mincho">
+            <a href="#about" class="hover:opacity-60 transition">茶の心</a>
+            <a href="#experience" class="hover:opacity-60 transition">体験</a>
+            <a href="#reserve" class="hover:opacity-60 transition">ご予約</a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="relative h-screen flex items-end overflow-hidden">
+        <div class="absolute inset-0">
+            <img src="img/hero.png" alt="Tea Ceremony" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#1a1a14] via-[#1a1a14]/30 to-transparent"></div>
+        </div>
+        <div class="relative z-10 p-8 md:p-20 pb-20 md:pb-32 max-w-2xl">
+            <div class="text-[11px] tracking-[0.6em] text-[#8aad6e] font-mincho mb-6">
+                <span class="inline-block">京都 北山</span><span class="inline-block ml-4">完全予約制</span>
+            </div>
+            <h1 class="text-5xl md:text-7xl font-mincho tracking-[0.2em] mb-8 leading-tight">
+                <span class="inline-block">一碗の、</span><span class="inline-block">宇宙。</span>
+            </h1>
+            <p class="text-[15px] text-white/50 leading-[2]">
+                <span class="inline-block">四百年の作法を、</span><span class="inline-block">現代に開く。</span><span class="inline-block">茶道未経験の方も、</span><span class="inline-block">心からくつろげる</span><span class="inline-block">茶の湯体験を。</span>
+            </p>
+        </div>
     </header>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-        <div class="md:col-span-2 bg-white rounded-[24px] overflow-hidden shadow-lg border border-slate-100 flex flex-col justify-between">
-            <div class="h-64 object-cover relative"><img src="https://picsum.photos/seed/aethel5/1600/900" class="w-full h-full object-cover"></div>
-            <div class="p-10"><div class="text-2xl font-light leading-relaxed text-slate-600 mb-8">ゲーミフィケーションを取り入れた、ポップでクリーンなUI。</div></div>
+
+    <!-- About -->
+    <section class="py-32 px-8 md:px-20" id="about">
+        <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-20 items-start">
+            <div>
+                <div class="text-[10px] tracking-[0.5em] text-[#8aad6e] font-mincho mb-8">PHILOSOPHY</div>
+                <h2 class="text-3xl md:text-4xl font-mincho tracking-[0.15em] leading-relaxed mb-10">
+                    <span class="inline-block">不完全さの中に、</span><span class="inline-block">美を見出す。</span>
+                </h2>
+                <p class="text-[14px] text-white/55 leading-[2.2] mb-6">
+                    <span class="inline-block">一期庵では、</span><span class="inline-block">利休が追い求めた</span><span class="inline-block">「侘び」の精神を</span><span class="inline-block">大切にしています。</span>
+                </p>
+                <p class="text-[14px] text-white/55 leading-[2.2]">
+                    <span class="inline-block">完璧を目指すのではなく、</span><span class="inline-block">その瞬間にしかない</span><span class="inline-block">一回性の出会いを</span><span class="inline-block">味わう。</span><span class="inline-block">それが茶の湯の</span><span class="inline-block">本質です。</span>
+                </p>
+            </div>
+            <div class="grid grid-cols-1 gap-8">
+                <div class="border-l-2 border-[#8aad6e]/40 pl-8 py-4">
+                    <div class="font-mincho text-lg mb-2 text-[#8aad6e]">薄茶体験</div>
+                    <p class="text-sm text-white/50"><span class="inline-block">季節の主菓子と</span><span class="inline-block">薄茶一服。</span><span class="inline-block">90分 / ¥8,800</span></p>
+                </div>
+                <div class="border-l-2 border-[#8aad6e]/40 pl-8 py-4">
+                    <div class="font-mincho text-lg mb-2 text-[#8aad6e]">濃茶と懐石</div>
+                    <p class="text-sm text-white/50"><span class="inline-block">正式な茶事体験。</span><span class="inline-block">懐石料理付き。</span><span class="inline-block">3時間 / ¥38,500</span></p>
+                </div>
+                <div class="border-l-2 border-[#8aad6e]/40 pl-8 py-4">
+                    <div class="font-mincho text-lg mb-2 text-[#8aad6e]">貸切茶会</div>
+                    <p class="text-sm text-white/50"><span class="inline-block">企業・団体向け。</span><span class="inline-block">最大8名様。</span><span class="inline-block">要ご相談</span></p>
+                </div>
+            </div>
         </div>
-        <div class="bg-indigo-600 text-white rounded-[24px] p-10 shadow-lg flex flex-col justify-center items-center text-center">
-             <div class="w-24 h-24 rounded-full border-4 border-indigo-400/30 mb-6 flex items-center justify-center text-4xl">5</div>
-             <h3 class="text-xl font-bold mb-2">Live Demo Ready</h3>
-        </div>
-    </div>
-</body></html>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-40 border-t border-white/5 text-center" id="reserve">
+        <h2 class="text-4xl font-mincho tracking-[0.3em] mb-8 ml-[0.2em]">
+            <span class="inline-block">一期一会の、</span><span class="inline-block">席へ。</span>
+        </h2>
+        <p class="text-sm text-white/40 mb-12 font-mincho">
+            <span class="inline-block">完全予約制にて</span><span class="inline-block">承っております。</span>
+        </p>
+        <a href="#" class="inline-block border border-[#8aad6e]/50 text-[#8aad6e] font-mincho text-sm tracking-[0.3em] px-12 py-4 hover:bg-[#8aad6e] hover:text-[#1a1a14] transition-all duration-500">
+            予約する
+        </a>
+        <div class="mt-24 text-[10px] text-white/20 tracking-wider font-mincho">© 2026 一期庵</div>
+    </footer>
+
+    <script>
+        gsap.from('header h1', { y: 30, opacity: 0, duration: 1.5, ease: 'power3.out', delay: 0.3 });
+        gsap.from('header p', { y: 20, opacity: 0, duration: 1.2, ease: 'power3.out', delay: 0.6 });
+    </script>
+</body>
+</html>

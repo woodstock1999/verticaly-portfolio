@@ -1,12 +1,160 @@
-<!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>デジタル遺産管理 (Digital Estate)</title><script src="https://cdn.tailwindcss.com"></script><link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet"></head>
-<body class="bg-[#050505] text-[#ededed] min-h-screen flex items-center justify-center p-8">
-    <a href="../index.html" class="absolute top-8 right-8 text-xs tracking-[0.2em] uppercase text-white/50 hover:text-white">Return</a>
-    <div class="relative w-full max-w-6xl aspect-[21/9] rounded-xl overflow-hidden shadow-2xl">
-        <img src="https://picsum.photos/seed/aethel6/1600/900" class="absolute inset-0 w-full h-full object-cover opacity-30 grayscale sepia-[.3]" />
-        <div class="absolute inset-0 p-16 flex flex-col justify-end bg-gradient-to-t from-black via-black/40 to-transparent">
-            <div class="text-[#d4af37] text-sm tracking-[0.3em] uppercase mb-4 font-bold border-l-2 border-[#d4af37] pl-4">1. Finance & Fintech (金融・経済) - 006</div>
-            <h1 class="text-5xl md:text-7xl font-bold tracking-wide mb-6" style="font-family: 'Playfair Display', serif;">デジタル遺産管理 (Digital Estate)</h1>
-            <p class="text-xl font-light max-w-3xl text-white/60 leading-loose">荘厳で落ち着いたセリフ体、クリーム色の背景、高い信頼感。</p>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>窯元 土と火 TSUCHI TO HI | 陶芸工房</title>
+    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <style>
+        body { font-family: 'Noto Sans JP', sans-serif; background: #f5f0e8; color: #2c2418; overflow-x: hidden; }
+        .font-mincho { font-family: 'Shippori Mincho', serif; }
+        ::-webkit-scrollbar { width: 3px; }
+        ::-webkit-scrollbar-track { background: #f5f0e8; }
+        ::-webkit-scrollbar-thumb { background: #8b6b45; border-radius: 2px; }
+    </style>
+</head>
+<body class="antialiased font-light">
+
+    <nav class="fixed w-full top-0 z-50 px-8 md:px-16 py-6 flex justify-between items-center bg-[#f5f0e8]/80 backdrop-blur-md border-b border-[#2c2418]/5">
+        <a href="../../index.html" class="text-xs tracking-[0.2em] hover:opacity-60 transition font-mincho text-[#2c2418]/60">← 目次</a>
+        <div class="font-mincho text-xl tracking-[0.5em] text-[#2c2418]">土と火</div>
+        <div class="hidden md:flex gap-10 text-[11px] tracking-[0.2em] font-mincho text-[#2c2418]/60">
+            <a href="#works" class="hover:text-[#2c2418] transition">作品</a>
+            <a href="#process" class="hover:text-[#2c2418] transition">制作</a>
+            <a href="#order" class="hover:text-[#2c2418] transition">注文</a>
         </div>
-    </div>
-</body></html>
+    </nav>
+
+    <!-- Hero -->
+    <header class="relative h-screen flex items-center overflow-hidden pt-20">
+        <div class="absolute inset-0">
+            <img src="img/hero.png" alt="Pottery" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-r from-[#f5f0e8] via-[#f5f0e8]/60 to-transparent"></div>
+        </div>
+        <div class="relative z-10 px-8 md:px-20 max-w-xl">
+            <div class="text-[11px] tracking-[0.6em] text-[#8b6b45] font-mincho mb-8">信楽 · 三代目窯元</div>
+            <h1 class="text-4xl md:text-6xl font-mincho tracking-[0.15em] leading-relaxed mb-8 text-[#2c2418]">
+                <span class="inline-block">土に還り、</span><span class="inline-block">火に問う。</span>
+            </h1>
+            <p class="text-[14px] text-[#2c2418]/60 leading-[2.2]">
+                <span class="inline-block">信楽の土と</span><span class="inline-block">登り窯の炎が生み出す、</span><span class="inline-block">唯一無二の景色。</span><span class="inline-block">日常に寄り添う</span><span class="inline-block">器をお届けします。</span>
+            </p>
+        </div>
+    </header>
+
+    <!-- Works Grid -->
+    <section class="py-32 px-8 md:px-20" id="works">
+        <div class="mb-16">
+            <div class="text-[10px] tracking-[0.5em] text-[#8b6b45] font-mincho mb-4">COLLECTION</div>
+            <h2 class="text-3xl font-mincho tracking-[0.15em] text-[#2c2418]">
+                <span class="inline-block">日々の器</span>
+            </h2>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-6 max-w-5xl">
+            <div class="group cursor-pointer">
+                <div class="aspect-square bg-[#e8dfd0] border border-[#2c2418]/10 overflow-hidden mb-4 flex items-center justify-center">
+                    <div class="text-5xl font-mincho text-[#8b6b45]/60 group-hover:scale-110 transition duration-500">碗</div>
+                </div>
+                <h3 class="font-mincho tracking-wider mb-1">飯碗</h3>
+                <p class="text-xs text-[#2c2418]/50">¥4,400〜</p>
+            </div>
+            <div class="group cursor-pointer">
+                <div class="aspect-square bg-[#e0dcd2] border border-[#2c2418]/10 overflow-hidden mb-4 flex items-center justify-center">
+                    <div class="text-5xl font-mincho text-[#8b6b45]/60 group-hover:scale-110 transition duration-500">皿</div>
+                </div>
+                <h3 class="font-mincho tracking-wider mb-1">銘々皿</h3>
+                <p class="text-xs text-[#2c2418]/50">¥3,300〜</p>
+            </div>
+            <div class="group cursor-pointer">
+                <div class="aspect-square bg-[#ddd8cc] border border-[#2c2418]/10 overflow-hidden mb-4 flex items-center justify-center">
+                    <div class="text-5xl font-mincho text-[#8b6b45]/60 group-hover:scale-110 transition duration-500">杯</div>
+                </div>
+                <h3 class="font-mincho tracking-wider mb-1">ぐい呑</h3>
+                <p class="text-xs text-[#2c2418]/50">¥5,500〜</p>
+            </div>
+            <div class="group cursor-pointer">
+                <div class="aspect-square bg-[#d8d3c8] border border-[#2c2418]/10 overflow-hidden mb-4 flex items-center justify-center">
+                    <div class="text-5xl font-mincho text-[#8b6b45]/60 group-hover:scale-110 transition duration-500">壺</div>
+                </div>
+                <h3 class="font-mincho tracking-wider mb-1">花入</h3>
+                <p class="text-xs text-[#2c2418]/50">¥16,500〜</p>
+            </div>
+            <div class="group cursor-pointer">
+                <div class="aspect-square bg-[#d4cfc2] border border-[#2c2418]/10 overflow-hidden mb-4 flex items-center justify-center">
+                    <div class="text-5xl font-mincho text-[#8b6b45]/60 group-hover:scale-110 transition duration-500">鉢</div>
+                </div>
+                <h3 class="font-mincho tracking-wider mb-1">盛鉢</h3>
+                <p class="text-xs text-[#2c2418]/50">¥8,800〜</p>
+            </div>
+            <div class="group cursor-pointer">
+                <div class="aspect-square bg-[#cfc9bc] border border-[#2c2418]/10 overflow-hidden mb-4 flex items-center justify-center">
+                    <div class="text-5xl font-mincho text-[#8b6b45]/60 group-hover:scale-110 transition duration-500">急</div>
+                </div>
+                <h3 class="font-mincho tracking-wider mb-1">急須</h3>
+                <p class="text-xs text-[#2c2418]/50">¥12,100〜</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process -->
+    <section class="py-32 bg-[#2c2418] text-[#e8e0d0]" id="process">
+        <div class="max-w-5xl mx-auto px-8 md:px-20">
+            <div class="text-[10px] tracking-[0.5em] text-[#c8a882] font-mincho mb-4">PROCESS</div>
+            <h2 class="text-3xl md:text-4xl font-mincho tracking-[0.15em] leading-relaxed mb-16">
+                <span class="inline-block">土から器へ、</span><span class="inline-block">七十二時間。</span>
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+                <div class="border-t border-[#c8a882]/30 pt-6">
+                    <div class="text-3xl font-mincho text-[#c8a882] mb-4">01</div>
+                    <h3 class="font-mincho text-lg mb-2">土練り</h3>
+                    <p class="text-sm text-white/50 leading-relaxed">
+                        <span class="inline-block">信楽の原土を</span><span class="inline-block">丹念に練り上げ、</span><span class="inline-block">気泡を抜く。</span>
+                    </p>
+                </div>
+                <div class="border-t border-[#c8a882]/30 pt-6">
+                    <div class="text-3xl font-mincho text-[#c8a882] mb-4">02</div>
+                    <h3 class="font-mincho text-lg mb-2">成形</h3>
+                    <p class="text-sm text-white/50 leading-relaxed">
+                        <span class="inline-block">轆轤（ろくろ）で</span><span class="inline-block">一つひとつ</span><span class="inline-block">手挽きで成形。</span>
+                    </p>
+                </div>
+                <div class="border-t border-[#c8a882]/30 pt-6">
+                    <div class="text-3xl font-mincho text-[#c8a882] mb-4">03</div>
+                    <h3 class="font-mincho text-lg mb-2">釉掛け</h3>
+                    <p class="text-sm text-white/50 leading-relaxed">
+                        <span class="inline-block">自家調合の</span><span class="inline-block">灰釉・長石釉を</span><span class="inline-block">掛け分ける。</span>
+                    </p>
+                </div>
+                <div class="border-t border-[#c8a882]/30 pt-6">
+                    <div class="text-3xl font-mincho text-[#c8a882] mb-4">04</div>
+                    <h3 class="font-mincho text-lg mb-2">焼成</h3>
+                    <p class="text-sm text-white/50 leading-relaxed">
+                        <span class="inline-block">登り窯にて</span><span class="inline-block">72時間、</span><span class="inline-block">1300度の炎で焼き締める。</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-40 text-center" id="order">
+        <h2 class="text-4xl font-mincho tracking-[0.2em] mb-8 text-[#2c2418]">
+            <span class="inline-block">あなただけの</span><span class="inline-block">一器を。</span>
+        </h2>
+        <p class="text-sm text-[#2c2418]/50 mb-12 font-mincho">
+            <span class="inline-block">特注も承ります。</span><span class="inline-block">お気軽にご相談ください。</span>
+        </p>
+        <a href="#" class="inline-block border border-[#2c2418]/30 text-[#2c2418] font-mincho text-sm tracking-[0.3em] px-12 py-4 hover:bg-[#2c2418] hover:text-[#f5f0e8] transition-all duration-500">
+            お問い合わせ
+        </a>
+        <div class="mt-24 text-[10px] text-[#2c2418]/30 tracking-wider font-mincho">© 2026 窯元 土と火</div>
+    </footer>
+
+    <script>
+        gsap.from('header h1', { y: 30, opacity: 0, duration: 1.5, ease: 'power3.out', delay: 0.3 });
+        gsap.from('header p', { y: 20, opacity: 0, duration: 1.2, ease: 'power3.out', delay: 0.6 });
+    </script>
+</body>
+</html>
