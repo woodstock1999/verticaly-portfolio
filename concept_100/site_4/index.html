@@ -1,14 +1,154 @@
-<!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>国際送金サービス (Global Transfer)</title><script src="https://cdn.tailwindcss.com"></script></head>
-<body class="relative w-screen h-screen overflow-hidden font-sans bg-black">
-    <div class="absolute inset-0 z-0"><img src="https://picsum.photos/seed/aethel4/1600/900" class="w-full h-full object-cover opacity-60" /></div>
-    <div class="absolute top-0 w-full p-8 flex justify-between text-white z-20 mix-blend-difference">
-        <div class="text-sm font-bold tracking-widest uppercase">1. Finance & Fintech (金融・経済)</div><div class="text-sm font-mono">NO. 4 / 100</div>
-    </div>
-    <div class="absolute inset-0 z-10 flex flex-col items-center justify-center p-6">
-        <div class="bg-white/10 backdrop-blur-3xl border border-white/20 rounded-[32px] p-12 max-w-4xl text-center shadow-2xl text-white transition-transform duration-700 hover:scale-105">
-            <h1 class="text-5xl md:text-7xl font-semibold tracking-tighter mb-6">国際送金サービス (Global Transfer)</h1>
-            <p class="text-lg md:text-xl font-light text-white/90 leading-relaxed">世界地図のWebGLパーティクルと、シームレスな入力フォーム。</p>
-            <div class="mt-10"><a href="../index.html" class="bg-white text-black px-8 py-4 rounded-full font-bold hover:bg-gray-200 transition">BACK TO GALLERY</a></div>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>菓匠 花暦 HANAGOYOMI | 和菓子</title>
+    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700&family=Zen+Maru+Gothic:wght@300;400;500&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <style>
+        body { font-family: 'Zen Maru Gothic', sans-serif; background: #f7f3ed; color: #2a2118; overflow-x: hidden; }
+        .font-mincho { font-family: 'Shippori Mincho', serif; }
+        ::-webkit-scrollbar { width: 3px; }
+        ::-webkit-scrollbar-track { background: #f7f3ed; }
+        ::-webkit-scrollbar-thumb { background: #c8a882; border-radius: 2px; }
+        .fade-up { opacity: 0; transform: translateY(20px); transition: all 0.8s ease; }
+        .fade-up.visible { opacity: 1; transform: translateY(0); }
+    </style>
+</head>
+<body class="antialiased font-light">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full top-0 z-50 px-8 md:px-16 py-6 flex justify-between items-center bg-[#f7f3ed]/80 backdrop-blur-md border-b border-[#2a2118]/5">
+        <a href="../../index.html" class="text-xs tracking-[0.2em] hover:opacity-60 transition font-mincho text-[#2a2118]/60">← 目次</a>
+        <div class="font-mincho text-xl tracking-[0.5em] text-[#2a2118]">花暦</div>
+        <div class="hidden md:flex gap-10 text-[11px] tracking-[0.2em] font-mincho text-[#2a2118]/60">
+            <a href="#season" class="hover:text-[#2a2118] transition">季節の菓子</a>
+            <a href="#about" class="hover:text-[#2a2118] transition">歴史</a>
+            <a href="#order" class="hover:text-[#2a2118] transition">ご注文</a>
         </div>
-    </div>
-</body></html>
+    </nav>
+
+    <!-- Hero: Light Elegant -->
+    <header class="relative h-screen flex items-center overflow-hidden pt-20">
+        <div class="absolute inset-0">
+            <img src="img/hero.png" alt="Wagashi" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-r from-[#f7f3ed] via-[#f7f3ed]/70 to-transparent"></div>
+        </div>
+        <div class="relative z-10 px-8 md:px-20 max-w-xl">
+            <div class="text-[11px] tracking-[0.6em] text-[#c8a882] font-mincho mb-8">京都 東山 · 創業 文政八年</div>
+            <h1 class="text-4xl md:text-6xl font-mincho tracking-[0.15em] leading-relaxed mb-8 text-[#2a2118]">
+                <span class="inline-block">季節を、</span><span class="inline-block">いただく。</span>
+            </h1>
+            <p class="text-[14px] text-[#2a2118]/60 leading-[2.2]">
+                <span class="inline-block">二百年の歳月が育んだ</span><span class="inline-block">菓匠の技と、</span><span class="inline-block">移ろう四季の美しさを</span><span class="inline-block">一粒に閉じ込めた</span><span class="inline-block">上生菓子をお届けします。</span>
+            </p>
+        </div>
+    </header>
+
+    <!-- Season: Horizontal Scroll -->
+    <section class="py-32" id="season">
+        <div class="px-8 md:px-20 mb-16">
+            <div class="text-[10px] tracking-[0.5em] text-[#c8a882] font-mincho mb-4">SEASONAL COLLECTION</div>
+            <h2 class="text-3xl font-mincho tracking-[0.15em] text-[#2a2118]">
+                <span class="inline-block">四季の上生菓子</span>
+            </h2>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 px-8 md:px-20">
+            <div class="fade-up group cursor-pointer">
+                <div class="aspect-square bg-[#f0e8dc] border border-[#2a2118]/10 overflow-hidden mb-4 flex items-center justify-center">
+                    <div class="text-6xl font-mincho text-[#c8a882] group-hover:scale-110 transition duration-500">春</div>
+                </div>
+                <h3 class="font-mincho text-lg tracking-wider mb-1">花霞（はながすみ）</h3>
+                <p class="text-xs text-[#2a2118]/50">桜こし餡 / 薯蕷製</p>
+                <div class="text-sm font-mincho text-[#c8a882] mt-2">¥680</div>
+            </div>
+            <div class="fade-up group cursor-pointer">
+                <div class="aspect-square bg-[#e8f0e4] border border-[#2a2118]/10 overflow-hidden mb-4 flex items-center justify-center">
+                    <div class="text-6xl font-mincho text-[#6b8f5e] group-hover:scale-110 transition duration-500">夏</div>
+                </div>
+                <h3 class="font-mincho text-lg tracking-wider mb-1">清流（せいりゅう）</h3>
+                <p class="text-xs text-[#2a2118]/50">葛製 / 抹茶餡</p>
+                <div class="text-sm font-mincho text-[#c8a882] mt-2">¥720</div>
+            </div>
+            <div class="fade-up group cursor-pointer">
+                <div class="aspect-square bg-[#f5e6d8] border border-[#2a2118]/10 overflow-hidden mb-4 flex items-center justify-center">
+                    <div class="text-6xl font-mincho text-[#c47840] group-hover:scale-110 transition duration-500">秋</div>
+                </div>
+                <h3 class="font-mincho text-lg tracking-wider mb-1">錦秋（きんしゅう）</h3>
+                <p class="text-xs text-[#2a2118]/50">栗餡 / 練り切り</p>
+                <div class="text-sm font-mincho text-[#c8a882] mt-2">¥750</div>
+            </div>
+            <div class="fade-up group cursor-pointer">
+                <div class="aspect-square bg-[#e4e8f0] border border-[#2a2118]/10 overflow-hidden mb-4 flex items-center justify-center">
+                    <div class="text-6xl font-mincho text-[#7888a0] group-hover:scale-110 transition duration-500">冬</div>
+                </div>
+                <h3 class="font-mincho text-lg tracking-wider mb-1">初雪（はつゆき）</h3>
+                <p class="text-xs text-[#2a2118]/50">白餡 / 雪平製</p>
+                <div class="text-sm font-mincho text-[#c8a882] mt-2">¥680</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About: Image Left, Text Right -->
+    <section class="py-32 bg-[#2a2118] text-[#e8e0d0]" id="about">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-0 px-4 md:px-0">
+            <div class="aspect-[3/4] md:aspect-auto overflow-hidden">
+                <img src="img/kimono.png" class="w-full h-full object-cover">
+            </div>
+            <div class="p-10 md:p-20 flex flex-col justify-center">
+                <div class="text-[10px] tracking-[0.5em] text-[#c8a882] font-mincho mb-8">EST. 1825</div>
+                <h2 class="text-3xl md:text-4xl font-mincho tracking-[0.15em] leading-relaxed mb-10">
+                    <span class="inline-block">手から手へ、</span><span class="inline-block">二百年の技。</span>
+                </h2>
+                <p class="text-[14px] text-white/60 leading-[2.2] mb-6">
+                    <span class="inline-block">文政八年（1825年）、</span><span class="inline-block">京都東山の地で</span><span class="inline-block">初代 花暦庵が</span><span class="inline-block">暖簾を掲げて以来、</span><span class="inline-block">八代にわたり</span><span class="inline-block">和菓子一筋。</span>
+                </p>
+                <p class="text-[14px] text-white/60 leading-[2.2]">
+                    <span class="inline-block">素材は丹波大納言小豆、</span><span class="inline-block">吉野本葛、</span><span class="inline-block">和三盆糖のみ。</span><span class="inline-block">余計なものは</span><span class="inline-block">一切加えず、</span><span class="inline-block">素材そのものの</span><span class="inline-block">美しさを引き出します。</span>
+                </p>
+                <div class="mt-10 w-12 h-[1px] bg-[#c8a882]"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order CTA -->
+    <section class="py-40 text-center" id="order">
+        <div class="text-[10px] tracking-[0.5em] text-[#c8a882] font-mincho mb-8">ONLINE SHOP</div>
+        <h2 class="text-4xl md:text-5xl font-mincho tracking-[0.2em] mb-8 text-[#2a2118]">
+            <span class="inline-block">季節の詰め合わせ</span>
+        </h2>
+        <p class="text-[14px] text-[#2a2118]/50 leading-[2] max-w-md mx-auto mb-12">
+            <span class="inline-block">全国への発送を</span><span class="inline-block">承っております。</span><span class="inline-block">大切な方への</span><span class="inline-block">贈り物にも。</span>
+        </p>
+        <a href="#" class="inline-block border border-[#2a2118]/30 text-[#2a2118] font-mincho text-sm tracking-[0.3em] px-12 py-4 hover:bg-[#2a2118] hover:text-[#f7f3ed] transition-all duration-500">
+            オンラインショップ
+        </a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-16 border-t border-[#2a2118]/10 text-center">
+        <div class="text-[10px] text-[#2a2118]/30 tracking-wider font-mincho">
+            © 2026 菓匠 花暦 京都東山
+        </div>
+    </footer>
+
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+        gsap.from('header h1', { y: 30, opacity: 0, duration: 1.5, ease: 'power3.out', delay: 0.3 });
+        gsap.from('header p', { y: 20, opacity: 0, duration: 1.2, ease: 'power3.out', delay: 0.6 });
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry, i) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => entry.target.classList.add('visible'), i * 100);
+                }
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

@@ -1,17 +1,164 @@
-<!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>クリプト・ポートフォリオ (DeFi Hub)</title><script src="https://cdn.tailwindcss.com"></script></head>
-<body class="bg-[#f8f9fa] text-slate-800 p-6 md:p-16 font-sans min-h-screen">
-    <header class="mb-12 flex justify-between items-end max-w-6xl mx-auto border-b border-slate-200 pb-8">
-        <div><div class="text-sm font-medium text-blue-600 mb-2">1. Finance & Fintech (金融・経済) / Prototype 2</div><h1 class="text-4xl md:text-5xl font-bold tracking-tight">クリプト・ポートフォリオ (DeFi Hub)</h1></div>
-        <a href="../index.html" class="text-sm font-bold tracking-widest text-slate-400 hover:text-black uppercase">Close</a>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>醸 KAMOSU | 日本酒ブランドサイト</title>
+    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <style>
+        body { font-family: 'Noto Sans JP', sans-serif; background: #0c0a08; color: #e8e0d0; overflow-x: hidden; }
+        .font-mincho { font-family: 'Shippori Mincho', serif; }
+        ::-webkit-scrollbar { width: 3px; }
+        ::-webkit-scrollbar-track { background: #0c0a08; }
+        ::-webkit-scrollbar-thumb { background: #8b7355; border-radius: 2px; }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full top-0 z-50 px-8 md:px-16 py-6 flex justify-between items-center mix-blend-difference">
+        <a href="../../index.html" class="text-xs tracking-[0.2em] hover:opacity-60 transition font-mincho">← 目次</a>
+        <div class="font-mincho text-xl tracking-[0.5em]">醸</div>
+        <div class="hidden md:flex gap-10 text-[11px] tracking-[0.2em] font-mincho">
+            <a href="#story" class="hover:opacity-60 transition">物語</a>
+            <a href="#lineup" class="hover:opacity-60 transition">銘柄</a>
+            <a href="#contact" class="hover:opacity-60 transition">蔵元訪問</a>
+        </div>
+    </nav>
+
+    <!-- Hero: Full-bleed cinematic -->
+    <header class="relative h-screen flex items-end overflow-hidden">
+        <div class="absolute inset-0">
+            <img src="img/hero.png" alt="Japanese Sake" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0c0a08] via-[#0c0a08]/40 to-transparent"></div>
+        </div>
+        <div class="relative z-10 p-8 md:p-20 pb-20 md:pb-32 max-w-3xl">
+            <div class="text-[11px] tracking-[0.6em] text-[#c6a87c] font-mincho mb-6">
+                <span class="inline-block">山口県岩国市</span><span class="inline-block ml-4">創業 寛政三年</span>
+            </div>
+            <h1 class="text-5xl md:text-7xl font-mincho tracking-[0.2em] mb-8 leading-tight">
+                <span class="inline-block">一滴に、</span><span class="inline-block">二百年。</span>
+            </h1>
+            <p class="text-[15px] text-white/60 leading-[2] max-w-md">
+                <span class="inline-block">清冽な錦川の伏流水と、</span><span class="inline-block">杜氏の魂が織りなす</span><span class="inline-block">純米大吟醸の世界。</span>
+            </p>
+        </div>
     </header>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-        <div class="md:col-span-2 bg-white rounded-[24px] overflow-hidden shadow-lg border border-slate-100 flex flex-col justify-between">
-            <div class="h-64 object-cover relative"><img src="https://picsum.photos/seed/aethel2/1600/900" class="w-full h-full object-cover"></div>
-            <div class="p-10"><div class="text-2xl font-light leading-relaxed text-slate-600 mb-8">ダークマットな背景に、ネオンではなく「ホログラム風」の淡い光のグラフ。</div></div>
+
+    <!-- Story: Horizontal Split -->
+    <section class="py-32 px-8 md:px-20" id="story">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+            <div>
+                <div class="text-[10px] tracking-[0.5em] text-[#c6a87c] font-mincho mb-8">OUR PHILOSOPHY</div>
+                <h2 class="text-3xl md:text-4xl font-mincho tracking-[0.15em] leading-relaxed mb-10">
+                    <span class="inline-block">米の声を聴き、</span><span class="inline-block">水の記憶を醸す。</span>
+                </h2>
+                <p class="text-[14px] text-white/60 leading-[2.2] mb-6">
+                    <span class="inline-block">当蔵では、</span><span class="inline-block">山田錦の中でも</span><span class="inline-block">特等米のみを使用。</span><span class="inline-block">精米歩合23%まで</span><span class="inline-block">丁寧に磨き上げた</span><span class="inline-block">その一粒一粒が、</span><span class="inline-block">雑味のない</span><span class="inline-block">透明感ある味わいを</span><span class="inline-block">生み出します。</span>
+                </p>
+                <p class="text-[14px] text-white/60 leading-[2.2]">
+                    <span class="inline-block">低温発酵に</span><span class="inline-block">45日間をかけ、</span><span class="inline-block">杜氏が五感のすべてで</span><span class="inline-block">醪（もろみ）の状態を見極める。</span><span class="inline-block">この手間こそが、</span><span class="inline-block">醸の真髄です。</span>
+                </p>
+            </div>
+            <div class="grid grid-cols-2 gap-6">
+                <div class="border-t border-[#c6a87c]/30 pt-6">
+                    <div class="text-[10px] text-[#c6a87c] tracking-[0.3em] font-mincho mb-3">精米歩合</div>
+                    <div class="text-4xl font-mincho">23<span class="text-lg text-white/40 ml-1">%</span></div>
+                </div>
+                <div class="border-t border-[#c6a87c]/30 pt-6">
+                    <div class="text-[10px] text-[#c6a87c] tracking-[0.3em] font-mincho mb-3">発酵日数</div>
+                    <div class="text-4xl font-mincho">45<span class="text-lg text-white/40 ml-1">日</span></div>
+                </div>
+                <div class="border-t border-[#c6a87c]/30 pt-6">
+                    <div class="text-[10px] text-[#c6a87c] tracking-[0.3em] font-mincho mb-3">創業</div>
+                    <div class="text-4xl font-mincho">1791</div>
+                </div>
+                <div class="border-t border-[#c6a87c]/30 pt-6">
+                    <div class="text-[10px] text-[#c6a87c] tracking-[0.3em] font-mincho mb-3">受賞歴</div>
+                    <div class="text-4xl font-mincho">Gold<span class="text-lg text-white/40 ml-1">×12</span></div>
+                </div>
+            </div>
         </div>
-        <div class="bg-indigo-600 text-white rounded-[24px] p-10 shadow-lg flex flex-col justify-center items-center text-center">
-             <div class="w-24 h-24 rounded-full border-4 border-indigo-400/30 mb-6 flex items-center justify-center text-4xl">2</div>
-             <h3 class="text-xl font-bold mb-2">Live Demo Ready</h3>
+    </section>
+
+    <!-- Lineup: Horizontal Scroll Cards -->
+    <section class="py-24 border-t border-white/5" id="lineup">
+        <div class="px-8 md:px-20 mb-12">
+            <div class="text-[10px] tracking-[0.5em] text-[#c6a87c] font-mincho mb-4">LINEUP</div>
+            <h2 class="text-3xl font-mincho tracking-[0.15em]">銘柄一覧</h2>
         </div>
-    </div>
-</body></html>
+        <div class="flex gap-8 overflow-x-auto px-8 md:px-20 pb-8 snap-x snap-mandatory" style="-webkit-overflow-scrolling: touch;">
+            <div class="min-w-[300px] md:min-w-[360px] snap-start bg-white/[0.03] border border-white/10 p-8 flex-shrink-0 group hover:border-[#c6a87c]/40 transition-colors duration-500">
+                <div class="text-[10px] tracking-[0.4em] text-[#c6a87c] font-mincho mb-4">JUNMAI DAIGINJO</div>
+                <h3 class="text-2xl font-mincho mb-2 tracking-wider">醸 二割三分</h3>
+                <p class="text-sm text-white/50 leading-relaxed mb-6">
+                    <span class="inline-block">最高峰の純米大吟醸。</span><span class="inline-block">華やかな吟醸香と、</span><span class="inline-block">繊細な甘みが広がる一杯。</span>
+                </p>
+                <div class="flex justify-between items-end">
+                    <div class="text-2xl font-mincho text-[#c6a87c]">¥16,500<span class="text-xs text-white/30 ml-1">税込</span></div>
+                    <div class="text-[10px] tracking-widest text-white/40">720ml</div>
+                </div>
+            </div>
+            <div class="min-w-[300px] md:min-w-[360px] snap-start bg-white/[0.03] border border-white/10 p-8 flex-shrink-0 group hover:border-[#c6a87c]/40 transition-colors duration-500">
+                <div class="text-[10px] tracking-[0.4em] text-[#c6a87c] font-mincho mb-4">JUNMAI GINJO</div>
+                <h3 class="text-2xl font-mincho mb-2 tracking-wider">醸 三割九分</h3>
+                <p class="text-sm text-white/50 leading-relaxed mb-6">
+                    <span class="inline-block">バランスの取れた</span><span class="inline-block">味わい深い一本。</span><span class="inline-block">食中酒として最高の</span><span class="inline-block">パートナー。</span>
+                </p>
+                <div class="flex justify-between items-end">
+                    <div class="text-2xl font-mincho text-[#c6a87c]">¥5,500<span class="text-xs text-white/30 ml-1">税込</span></div>
+                    <div class="text-[10px] tracking-widest text-white/40">720ml</div>
+                </div>
+            </div>
+            <div class="min-w-[300px] md:min-w-[360px] snap-start bg-white/[0.03] border border-white/10 p-8 flex-shrink-0 group hover:border-[#c6a87c]/40 transition-colors duration-500">
+                <div class="text-[10px] tracking-[0.4em] text-[#c6a87c] font-mincho mb-4">SPARKLING</div>
+                <h3 class="text-2xl font-mincho mb-2 tracking-wider">醸 泡 AWA</h3>
+                <p class="text-sm text-white/50 leading-relaxed mb-6">
+                    <span class="inline-block">瓶内二次発酵による</span><span class="inline-block">きめ細かな泡立ち。</span><span class="inline-block">乾杯の一杯に。</span>
+                </p>
+                <div class="flex justify-between items-end">
+                    <div class="text-2xl font-mincho text-[#c6a87c]">¥3,850<span class="text-xs text-white/30 ml-1">税込</span></div>
+                    <div class="text-[10px] tracking-widest text-white/40">360ml</div>
+                </div>
+            </div>
+            <div class="min-w-[300px] md:min-w-[360px] snap-start bg-white/[0.03] border border-white/10 p-8 flex-shrink-0 group hover:border-[#c6a87c]/40 transition-colors duration-500">
+                <div class="text-[10px] tracking-[0.4em] text-[#c6a87c] font-mincho mb-4">SEASONAL LIMITED</div>
+                <h3 class="text-2xl font-mincho mb-2 tracking-wider">醸 霞 KASUMI</h3>
+                <p class="text-sm text-white/50 leading-relaxed mb-6">
+                    <span class="inline-block">春季限定のにごり酒。</span><span class="inline-block">桜の季節に寄り添う</span><span class="inline-block">やわらかな甘み。</span>
+                </p>
+                <div class="flex justify-between items-end">
+                    <div class="text-2xl font-mincho text-[#c6a87c]">¥4,400<span class="text-xs text-white/30 ml-1">税込</span></div>
+                    <div class="text-[10px] tracking-widest text-white/40">720ml</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer CTA -->
+    <footer class="py-40 px-8 md:px-20 border-t border-white/5 text-center" id="contact">
+        <div class="text-[10px] tracking-[0.5em] text-[#c6a87c] font-mincho mb-8">BREWERY VISIT</div>
+        <h2 class="text-4xl md:text-5xl font-mincho tracking-[0.2em] mb-8">
+            <span class="inline-block">蔵元を、</span><span class="inline-block">訪ねる。</span>
+        </h2>
+        <p class="text-[14px] text-white/50 leading-[2] max-w-md mx-auto mb-12">
+            <span class="inline-block">完全予約制にて</span><span class="inline-block">蔵見学を承っております。</span><span class="inline-block">杜氏による解説と</span><span class="inline-block">限定酒の試飲を</span><span class="inline-block">お楽しみください。</span>
+        </p>
+        <a href="#" class="inline-block border border-[#c6a87c]/50 text-[#c6a87c] font-mincho text-sm tracking-[0.3em] px-12 py-4 hover:bg-[#c6a87c] hover:text-[#0c0a08] transition-all duration-500">
+            予約する
+        </a>
+        <div class="mt-32 text-[10px] text-white/30 tracking-[0.2em] font-mincho">
+            © 2026 醸酒造株式会社
+        </div>
+    </footer>
+
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+        gsap.from('header h1', { y: 40, opacity: 0, duration: 1.5, ease: 'power3.out', delay: 0.3 });
+        gsap.from('header p', { y: 30, opacity: 0, duration: 1.2, ease: 'power3.out', delay: 0.6 });
+    </script>
+</body>
+</html>
