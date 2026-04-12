@@ -3,407 +3,369 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JOINPAD | 採用から定着まで、ひとつのプラットフォームで。</title>
-    <meta name="description" content="採用・入社手続き・人材管理をひとつに。中小企業の人事を変えるクラウドHRプラットフォーム。">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>JOINPAD | 次世代HRプラットフォーム</title>
+    <meta name="description" content="採用から定着まで、人事業務のすべてをスマートに。2,400社が選ぶクラウドHRの決定版。">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        primary: '#4F46E5', 'primary-light': '#EEF2FF',
-                        dark: '#111827', muted: '#6B7280', light: '#F9FAFB',
+                        brand: {
+                            50: '#f0f4ff', 100: '#e1e9ff', 200: '#c8d7ff',
+                            300: '#a1bbff', 400: '#7192ff', 500: '#3b5cff',
+                            600: '#1d31ff', 700: '#0010ff', 800: '#000ddb',
+                            900: '#0008b4', 950: '#00046b',
+                        },
+                        dark: '#0A0B10', surface: '#12141C', 'surface-light': '#1E212D'
                     },
                     fontFamily: {
-                        sans: ['Noto Sans JP', 'Inter', 'sans-serif'],
+                        sans: ['Plus Jakarta Sans', 'Noto Sans JP', 'sans-serif'],
                     }
                 }
             }
         }
     </script>
     <style>
-        body { font-family: 'Noto Sans JP', 'Inter', sans-serif; }
-        .fade-in { opacity: 0; transform: translateY(20px); transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1); }
-        .fade-in.visible { opacity: 1; transform: translateY(0); }
-        .gradient-text { background: linear-gradient(135deg, #4F46E5, #7C3AED); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        :root { --glass: rgba(255, 255, 255, 0.03); --glass-border: rgba(255, 255, 255, 0.08); }
+        body { background-color: #0A0B10; color: #FFFFFF; }
+        .glass { background: var(--glass); backdrop-filter: blur(12px); border: 1px solid var(--glass-border); }
+        .gradient-brand { background: linear-gradient(135deg, #3B5CFF 0%, #0010FF 100%); }
+        .gradient-text { background: linear-gradient(135deg, #FFFFFF 0%, #A1BBFF 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .glow { position: absolute; border-radius: 50%; filter: blur(120px); z-index: -1; opacity: 0.15; }
+        .bunsetsu { display: inline-block; }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        .animate-float { animation: float 6s ease-in-out infinite; }
     </style>
 </head>
-<body class="bg-white text-dark antialiased">
+<body class="antialiased selection:bg-brand-500/30">
+
+    <!-- Background Glows -->
+    <div class="glow w-[600px] h-[600px] bg-brand-600 top-[-200px] right-[-200px]"></div>
+    <div class="glow w-[500px] h-[500px] bg-indigo-500 bottom-[-100px] left-[-100px]"></div>
 
     <!-- Header -->
-    <header class="fixed w-full top-0 z-50 bg-white/90 backdrop-blur-lg border-b border-gray-100">
-        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="flex items-center gap-8">
-                <a href="../../index.html" class="text-xs text-muted hover:text-dark transition">← Portfolio</a>
-                <div class="flex items-center gap-2">
-                    <div class="w-7 h-7 bg-primary rounded-lg flex items-center justify-center">
-                        <span class="text-white text-xs font-bold">J</span>
+    <header class="fixed w-full top-0 z-50 border-b border-white/5 bg-dark/60 backdrop-blur-xl">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-10">
+                <a href="../../index.html" class="text-[10px] tracking-widest text-white/40 hover:text-white transition uppercase">← Portfolio</a>
+                <div class="flex items-center gap-2.5">
+                    <div class="w-8 h-8 rounded-lg gradient-brand flex items-center justify-center shadow-lg shadow-brand-500/20">
+                        <span class="text-white font-bold text-sm italic">J</span>
                     </div>
-                    <span class="font-bold text-lg">JOINPAD</span>
+                    <span class="font-bold text-lg tracking-tight">JOINPAD</span>
                 </div>
             </div>
-            <div class="hidden md:flex items-center gap-8 text-sm text-muted">
-                <a href="#features" class="hover:text-dark transition">機能</a>
-                <a href="#pricing" class="hover:text-dark transition">料金</a>
-                <a href="#cases" class="hover:text-dark transition">導入事例</a>
-                <a href="#" class="text-dark font-medium">ログイン</a>
-                <a href="#cta" class="bg-primary text-white px-5 py-2.5 rounded-lg text-sm font-medium hover:bg-primary/90 transition">無料で始める</a>
-            </div>
+            <nav class="hidden md:flex items-center gap-8 text-[13px] font-medium text-white/60">
+                <a href="#features" class="hover:text-white transition">Features</a>
+                <a href="#impact" class="hover:text-white transition">Impact</a>
+                <a href="#pricing" class="hover:text-white transition">Pricing</a>
+                <a href="#" class="bg-white/5 hover:bg-white/10 px-6 py-2.5 rounded-full border border-white/10 transition">Login</a>
+                <a href="#cta" class="gradient-brand text-white px-6 py-2.5 rounded-full shadow-lg shadow-brand-500/20 hover:scale-105 transition-all active:scale-95">Get Started</a>
+            </nav>
         </div>
     </header>
 
-    <!-- 1. Hero -->
-    <section class="pt-32 pb-20 px-6">
-        <div class="max-w-5xl mx-auto text-center">
-            <div class="inline-block bg-primary-light text-primary text-xs font-medium px-4 py-1.5 rounded-full mb-6">
-                🎉 シリーズB 調達完了 — 導入社数 2,400社突破
+    <!-- 1. Hero Section -->
+    <section class="relative pt-40 pb-24 px-6 overflow-hidden">
+        <div class="max-w-7xl mx-auto flex flex-col items-center">
+            <div class="gsap-reveal-hero inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass mb-8">
+                <span class="relative flex h-2 w-2">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-400 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2 w-2 bg-brand-500"></span>
+                </span>
+                <span class="text-[11px] font-semibold tracking-wider text-brand-300">NEW: エンゲージメントAI分析機能をリリース</span>
             </div>
-            <h1 class="text-4xl md:text-[3.2rem] font-bold leading-tight mb-6">
-                <span class="inline-block">採用から定着まで、</span><br>
-                <span class="inline-block gradient-text">ひとつのプラットフォームで。</span>
+            
+            <h1 class="gsap-reveal-hero text-center text-5xl md:text-[5.5rem] font-bold leading-[1.05] tracking-tight mb-8">
+                <span class="gradient-text">人事業務のすべてを、</span><br>
+                <span class="text-white/40">ひとつの体験に。</span>
             </h1>
-            <p class="text-lg text-muted leading-relaxed max-w-2xl mx-auto mb-10">
-                <span class="inline-block">求人作成・応募者管理・入社手続き・人材データベース。</span><span class="inline-block">バラバラだった人事業務が、</span><span class="inline-block">JOINPADひとつで完結します。</span>
+            
+            <p class="gsap-reveal-hero text-center text-white/60 text-lg md:text-xl leading-relaxed max-w-2xl mb-12">
+                <span class="bunsetsu">採用管理、</span><span class="bunsetsu">入社手続き、</span><span class="bunsetsu">人材データベースまで。</span><span class="bunsetsu">バラバラだったツールをJOINPADが統合し、</span><span class="bunsetsu">組織のパフォーマンスを最大化します。</span>
             </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center mb-6">
-                <a href="#cta" class="bg-primary text-white px-8 py-4 rounded-xl text-sm font-medium hover:bg-primary/90 transition shadow-lg shadow-primary/20">
-                    まずは無料で試す →
+
+            <div class="gsap-reveal-hero flex flex-col sm:flex-row gap-5 mb-24">
+                <a href="#cta" class="gradient-brand px-10 py-5 rounded-2xl text-[15px] font-bold shadow-2xl shadow-brand-500/40 hover:scale-105 transition-all">
+                    無料で試してみる
                 </a>
-                <a href="#" class="border border-gray-200 text-dark px-8 py-4 rounded-xl text-sm font-medium hover:bg-gray-50 transition">
-                    📹 3分でわかる紹介動画
+                <a href="#" class="glass px-10 py-5 rounded-2xl text-[15px] font-bold hover:bg-white/5 transition-all">
+                    デモを予約する
                 </a>
             </div>
-            <p class="text-xs text-muted">クレジットカード不要 · 14日間無料トライアル · いつでも解約OK</p>
-        </div>
-        <!-- Dashboard Image -->
-        <div class="max-w-5xl mx-auto mt-16 rounded-2xl overflow-hidden shadow-2xl shadow-primary/10 border border-gray-100">
-            <img src="img/dashboard.png" alt="JOINPAD ダッシュボード" class="w-full">
-        </div>
-    </section>
 
-    <!-- 2. 導入企業ロゴ -->
-    <section class="py-16 px-6 border-y border-gray-100 bg-light">
-        <div class="max-w-5xl mx-auto text-center">
-            <p class="text-xs text-muted tracking-wider mb-8">スタートアップから上場企業まで、2,400社以上が導入</p>
-            <div class="flex flex-wrap justify-center items-center gap-10 md:gap-16 opacity-40">
-                <span class="text-xl font-bold">SmartHR</span>
-                <span class="text-xl font-bold">freee</span>
-                <span class="text-xl font-bold">LayerX</span>
-                <span class="text-xl font-bold">ANDPAD</span>
-                <span class="text-xl font-bold">Ubie</span>
-                <span class="text-xl font-bold">TIMEE</span>
+            <!-- Dashboard Mockup -->
+            <div class="gsap-reveal-hero relative w-full max-w-6xl mx-auto group">
+                <div class="absolute -inset-4 bg-brand-500/20 rounded-[40px] blur-3xl opacity-0 group-hover:opacity-100 transition duration-700"></div>
+                <div class="relative bg-[#0F111A] rounded-[32px] p-2 border border-white/10 shadow-3xl overflow-hidden">
+                    <div class="flex items-center gap-1.5 px-6 py-4 border-b border-white/5 bg-white/[0.02]">
+                        <div class="w-3 h-3 rounded-full bg-[#FF5F57]"></div>
+                        <div class="w-3 h-3 rounded-full bg-[#FFBD2E]"></div>
+                        <div class="w-3 h-3 rounded-full bg-[#28C840]"></div>
+                        <div class="flex-1 text-center text-[11px] text-white/20 font-medium tracking-wider">joinpad.app/dashboard</div>
+                    </div>
+                    <img src="img/dashboard.png" alt="JOINPAD Dashboard" class="w-full h-auto rounded-b-[24px]">
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- 3. 課題→解決（Before/After型） -->
-    <section class="py-24 px-6">
-        <div class="max-w-5xl mx-auto">
-            <div class="text-center mb-16 fade-in">
-                <div class="text-xs text-primary font-medium tracking-wider mb-3">THE PROBLEM</div>
-                <h2 class="text-2xl md:text-3xl font-bold leading-relaxed">
-                    <span class="inline-block">人事担当、</span><span class="inline-block">ひとりで抱えすぎていませんか。</span>
+    <!-- 2. Trusted By -->
+    <section class="py-20 border-y border-white/5 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6">
+            <p class="text-center text-[11px] font-bold tracking-[0.3em] text-white/30 uppercase mb-12">Empowering the world's most innovative teams</p>
+            <div class="flex flex-wrap justify-center items-center gap-12 md:gap-20 opacity-30 grayscale hover:grayscale-0 transition-all duration-700">
+                <img src="https://logodix.com/logo/184428.png" class="h-6 md:h-8" alt="Partner">
+                <img src="https://logodix.com/logo/184419.png" class="h-6 md:h-8" alt="Partner">
+                <img src="https://logodix.com/logo/184411.png" class="h-7 md:h-9" alt="Partner">
+                <img src="https://logodix.com/logo/184435.png" class="h-6 md:h-8" alt="Partner">
+                <img src="https://logodix.com/logo/184425.png" class="h-6 md:h-8" alt="Partner">
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Features (Bento Grid) -->
+    <section class="py-32 px-6" id="features">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-24 gsap-reveal">
+                <h2 class="text-3xl md:text-5xl font-bold mb-6">
+                    <span class="gradient-text">人事のすべてを、</span><br>
+                    <span class="text-white/40">劇的にシンプルへ。</span>
                 </h2>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- Before -->
-                <div class="fade-in bg-red-50 rounded-2xl p-8 border border-red-100">
-                    <div class="text-sm font-bold text-red-600 mb-6">😰 JOINPADがない世界</div>
-                    <ul class="space-y-4 text-sm text-red-900/80">
-                        <li class="flex gap-3"><span class="text-red-400">✗</span><span><span class="inline-block">求人媒体ごとに</span><span class="inline-block">管理画面が別々</span></span></li>
-                        <li class="flex gap-3"><span class="text-red-400">✗</span><span><span class="inline-block">入社書類は</span><span class="inline-block">紙とExcelで手作業</span></span></li>
-                        <li class="flex gap-3"><span class="text-red-400">✗</span><span><span class="inline-block">「あの候補者、</span><span class="inline-block">今どのステータス？」が</span><span class="inline-block">すぐ分からない</span></span></li>
-                        <li class="flex gap-3"><span class="text-red-400">✗</span><span><span class="inline-block">従業員情報が</span><span class="inline-block">部署ごとにバラバラ</span></span></li>
-                        <li class="flex gap-3"><span class="text-red-400">✗</span><span><span class="inline-block">離職の兆候に</span><span class="inline-block">気づけない</span></span></li>
-                    </ul>
-                </div>
-                <!-- After -->
-                <div class="fade-in bg-primary-light rounded-2xl p-8 border border-indigo-100">
-                    <div class="text-sm font-bold text-primary mb-6">✨ JOINPADがある世界</div>
-                    <ul class="space-y-4 text-sm text-indigo-900/80">
-                        <li class="flex gap-3"><span class="text-primary">✓</span><span><span class="inline-block">全媒体の応募者を</span><span class="inline-block">ひとつのパイプラインで管理</span></span></li>
-                        <li class="flex gap-3"><span class="text-primary">✓</span><span><span class="inline-block">入社手続きは</span><span class="inline-block">ワンクリックで電子化</span></span></li>
-                        <li class="flex gap-3"><span class="text-primary">✓</span><span><span class="inline-block">候補者のステータスが</span><span class="inline-block">リアルタイムで見える</span></span></li>
-                        <li class="flex gap-3"><span class="text-primary">✓</span><span><span class="inline-block">従業員データベースを</span><span class="inline-block">一元管理、API連携</span></span></li>
-                        <li class="flex gap-3"><span class="text-primary">✓</span><span><span class="inline-block">エンゲージメント分析で</span><span class="inline-block">離職リスクを早期検知</span></span></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- 4. 数字で見る導入効果 -->
-    <section class="py-20 px-6 bg-dark text-white">
-        <div class="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            <div class="fade-in">
-                <div class="text-4xl md:text-5xl font-bold gradient-text">72%</div>
-                <div class="text-sm text-gray-400 mt-2">採用業務の工数削減</div>
-            </div>
-            <div class="fade-in">
-                <div class="text-4xl md:text-5xl font-bold gradient-text">3.2x</div>
-                <div class="text-sm text-gray-400 mt-2">応募者対応スピード</div>
-            </div>
-            <div class="fade-in">
-                <div class="text-4xl md:text-5xl font-bold gradient-text">89%</div>
-                <div class="text-sm text-gray-400 mt-2">入社手続きの電子化率</div>
-            </div>
-            <div class="fade-in">
-                <div class="text-4xl md:text-5xl font-bold gradient-text">41%</div>
-                <div class="text-sm text-gray-400 mt-2">早期離職率の低下</div>
-            </div>
-        </div>
-    </section>
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-6 auto-rows-[450px]">
+                <!-- ATS -->
+                <div class="md:col-span-8 glass rounded-[40px] p-10 overflow-hidden relative group gsap-reveal">
+                    <div class="relative z-10 max-w-sm">
+                        <div class="w-12 h-12 rounded-2xl glass flex items-center justify-center mb-6">
+                            <span class="text-2xl">📋</span>
+                        </div>
+                        <h3 class="text-3xl font-bold mb-4">採用管理 (ATS)</h3>
+                        <p class="text-white/50 leading-relaxed mb-8">
+                            <span class="bunsetsu">求人票の自動生成から、</span><span class="bunsetsu">各媒体の応募者管理まで一元化。</span><span class="bunsetsu">パイプラインを止めることなく、</span><span class="bunsetsu">最高の人材との出会いを最大化します。</span>
+                        </p>
+                    </div>
+                    <div class="absolute right-[-20%] bottom-[-10%] w-[70%] transform group-hover:-translate-y-5 transition duration-700">
+                        <img src="img/ats.png" alt="ATS UI" class="rounded-2xl shadow-2xl border border-white/10">
+                    </div>
+                </div>
 
-    <!-- 5. 機能紹介 -->
-    <section class="py-24 px-6" id="features">
-        <div class="max-w-5xl mx-auto">
-            <div class="text-center mb-16 fade-in">
-                <div class="text-xs text-primary font-medium tracking-wider mb-3">FEATURES</div>
-                <h2 class="text-2xl md:text-3xl font-bold">
-                    <span class="inline-block">人事のすべてが、</span><span class="inline-block">ここに集まる。</span>
-                </h2>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="fade-in p-8 rounded-2xl border border-gray-100 hover:shadow-lg hover:border-primary/20 transition-all duration-300 group">
-                    <div class="w-12 h-12 bg-primary-light rounded-xl flex items-center justify-center mb-5 group-hover:bg-primary group-hover:text-white transition-colors">
-                        <span class="text-primary group-hover:text-white text-xl">📋</span>
+                <!-- Digital Signing -->
+                <div class="md:col-span-4 glass rounded-[40px] p-10 flex flex-col group gsap-reveal">
+                    <div class="w-12 h-12 rounded-2xl glass flex items-center justify-center mb-6">
+                        <span class="text-2xl">📝</span>
                     </div>
-                    <h3 class="font-bold text-lg mb-3">採用管理（ATS）</h3>
-                    <p class="text-sm text-muted leading-relaxed">
-                        <span class="inline-block">求人作成から</span><span class="inline-block">内定通知まで。</span><span class="inline-block">Indeed・Wantedly等と</span><span class="inline-block">自動連携。</span><span class="inline-block">カンバン式の</span><span class="inline-block">パイプライン管理で</span><span class="inline-block">見落としゼロに。</span>
+                    <h3 class="text-2xl font-bold mb-4">入社手続き電子化</h3>
+                    <p class="text-white/50 text-sm leading-relaxed mb-10 flex-1">
+                        <span class="bunsetsu">煩雑な契約締結を</span><span class="bunsetsu">わずか数分で完了。</span><span class="bunsetsu">スマホで完結する</span><span class="bunsetsu">次世代の入社体験を。</span>
                     </p>
-                </div>
-                <div class="fade-in p-8 rounded-2xl border border-gray-100 hover:shadow-lg hover:border-primary/20 transition-all duration-300 group">
-                    <div class="w-12 h-12 bg-primary-light rounded-xl flex items-center justify-center mb-5 group-hover:bg-primary transition-colors">
-                        <span class="text-primary group-hover:text-white text-xl">📝</span>
+                    <div class="relative rounded-2xl overflow-hidden shadow-2xl border border-white/10">
+                        <img src="img/onboarding.png" alt="Onboarding UI" class="w-full group-hover:scale-105 transition duration-700">
                     </div>
-                    <h3 class="font-bold text-lg mb-3">入社手続き電子化</h3>
-                    <p class="text-sm text-muted leading-relaxed">
-                        <span class="inline-block">雇用契約書・</span><span class="inline-block">マイナンバー収集・</span><span class="inline-block">社保手続きまで</span><span class="inline-block">すべてオンライン。</span><span class="inline-block">入社者もスマホで</span><span class="inline-block">かんたん完了。</span>
-                    </p>
                 </div>
-                <div class="fade-in p-8 rounded-2xl border border-gray-100 hover:shadow-lg hover:border-primary/20 transition-all duration-300 group">
-                    <div class="w-12 h-12 bg-primary-light rounded-xl flex items-center justify-center mb-5 group-hover:bg-primary transition-colors">
-                        <span class="text-primary group-hover:text-white text-xl">👥</span>
-                    </div>
-                    <h3 class="font-bold text-lg mb-3">人材データベース</h3>
-                    <p class="text-sm text-muted leading-relaxed">
-                        <span class="inline-block">従業員の基本情報・</span><span class="inline-block">スキル・評価履歴を</span><span class="inline-block">一元管理。</span><span class="inline-block">組織図の自動生成や</span><span class="inline-block">異動シミュレーションも。</span>
-                    </p>
-                </div>
-                <div class="fade-in p-8 rounded-2xl border border-gray-100 hover:shadow-lg hover:border-primary/20 transition-all duration-300 group">
-                    <div class="w-12 h-12 bg-primary-light rounded-xl flex items-center justify-center mb-5 group-hover:bg-primary transition-colors">
-                        <span class="text-primary group-hover:text-white text-xl">📊</span>
-                    </div>
-                    <h3 class="font-bold text-lg mb-3">エンゲージメント分析</h3>
-                    <p class="text-sm text-muted leading-relaxed">
-                        <span class="inline-block">定期パルスサーベイと</span><span class="inline-block">AIスコアリングで</span><span class="inline-block">離職リスクを可視化。</span><span class="inline-block">手を打つべきタイミングを</span><span class="inline-block">逃しません。</span>
-                    </p>
-                </div>
-                <div class="fade-in p-8 rounded-2xl border border-gray-100 hover:shadow-lg hover:border-primary/20 transition-all duration-300 group">
-                    <div class="w-12 h-12 bg-primary-light rounded-xl flex items-center justify-center mb-5 group-hover:bg-primary transition-colors">
-                        <span class="text-primary group-hover:text-white text-xl">🔗</span>
-                    </div>
-                    <h3 class="font-bold text-lg mb-3">API連携 & 拡張</h3>
-                    <p class="text-sm text-muted leading-relaxed">
-                        <span class="inline-block">Slack・freee・</span><span class="inline-block">マネーフォワードなど</span><span class="inline-block">50以上のサービスと</span><span class="inline-block">ネイティブ連携。</span><span class="inline-block">Open APIも公開中。</span>
-                    </p>
-                </div>
-                <div class="fade-in p-8 rounded-2xl border border-gray-100 hover:shadow-lg hover:border-primary/20 transition-all duration-300 group">
-                    <div class="w-12 h-12 bg-primary-light rounded-xl flex items-center justify-center mb-5 group-hover:bg-primary transition-colors">
-                        <span class="text-primary group-hover:text-white text-xl">🛡️</span>
-                    </div>
-                    <h3 class="font-bold text-lg mb-3">セキュリティ & 権限管理</h3>
-                    <p class="text-sm text-muted leading-relaxed">
-                        <span class="inline-block">ISO 27001取得済み。</span><span class="inline-block">SSO・IP制限・</span><span class="inline-block">監査ログなど</span><span class="inline-block">エンタープライズレベルの</span><span class="inline-block">セキュリティ基盤。</span>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- 6. 導入事例 -->
-    <section class="py-24 px-6 bg-light" id="cases">
-        <div class="max-w-5xl mx-auto">
-            <div class="text-center mb-16 fade-in">
-                <div class="text-xs text-primary font-medium tracking-wider mb-3">CASE STUDY</div>
-                <h2 class="text-2xl md:text-3xl font-bold">
-                    <span class="inline-block">導入された企業の、</span><span class="inline-block">リアルな変化。</span>
-                </h2>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="fade-in bg-white rounded-2xl p-8 border border-gray-100">
-                    <div class="flex items-center gap-3 mb-6">
-                        <div class="w-10 h-10 bg-orange-100 rounded-full flex items-center justify-center text-orange-600 font-bold text-sm">A</div>
-                        <div>
-                            <div class="font-bold text-sm">株式会社アルファテック</div>
-                            <div class="text-xs text-muted">IT / 従業員 85名</div>
+                <!-- Analytics -->
+                <div class="md:col-span-12 glass rounded-[40px] p-10 grid grid-cols-1 md:grid-cols-2 gap-12 items-center group gsap-reveal">
+                    <div class="order-2 md:order-1 relative">
+                        <div class="absolute inset-0 bg-brand-500/20 blur-[100px] opacity-0 group-hover:opacity-100 transition duration-700"></div>
+                        <img src="img/analytics.png" alt="Analytics UI" class="relative rounded-2xl shadow-2xl border border-white/10 w-full group-hover:-translate-y-2 transition duration-700">
+                    </div>
+                    <div class="order-1 md:order-2">
+                        <div class="w-12 h-12 rounded-2xl glass flex items-center justify-center mb-6">
+                            <span class="text-2xl">📊</span>
+                        </div>
+                        <h3 class="text-3xl font-bold mb-4">組織エンゲージメント分析</h3>
+                        <p class="text-white/50 leading-relaxed">
+                            <span class="bunsetsu">単なるデータの蓄積ではありません。</span><span class="bunsetsu">AIが従業員のアクションを多角的に分析し、</span><span class="bunsetsu">離職リスクの早期検知や</span><span class="bunsetsu">最適な配置をレコメンドします。</span><span class="bunsetsu">「なんとなく」の組織運営に</span><span class="bunsetsu">終止符を打ちましょう。</span>
+                        </p>
+                        <div class="mt-10 flex gap-6">
+                            <div>
+                                <div class="text-[10px] uppercase tracking-widest text-white/30 mb-1">Impact</div>
+                                <div class="text-2xl font-bold text-brand-300">41%<span class="text-xs text-brand-300/40 ml-1">Churn Reduction</span></div>
+                            </div>
+                            <div class="w-[1px] h-full bg-white/10"></div>
+                            <div>
+                                <div class="text-[10px] uppercase tracking-widest text-white/30 mb-1">Reliability</div>
+                                <div class="text-2xl font-bold text-brand-300">92%<span class="text-xs text-brand-300/40 ml-1">Prediction Rate</span></div>
+                            </div>
                         </div>
                     </div>
-                    <p class="text-sm text-muted leading-relaxed mb-6">
-                        <span class="inline-block">「毎月20時間かかっていた</span><span class="inline-block">入退社の手続きが、</span><span class="inline-block">JOINPAD導入後は</span><span class="inline-block">3時間に。</span><span class="inline-block">採用フローも可視化されて、</span><span class="inline-block">面接の取りこぼしが</span><span class="inline-block">ゼロになりました。」</span>
-                    </p>
-                    <div class="text-xs text-muted">人事部 マネージャー 鈴木様</div>
-                </div>
-                <div class="fade-in bg-white rounded-2xl p-8 border border-gray-100">
-                    <div class="flex items-center gap-3 mb-6">
-                        <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 font-bold text-sm">B</div>
-                        <div>
-                            <div class="font-bold text-sm">株式会社ブルーマート</div>
-                            <div class="text-xs text-muted">小売 / 従業員 320名</div>
-                        </div>
-                    </div>
-                    <p class="text-sm text-muted leading-relaxed mb-6">
-                        <span class="inline-block">「パート・アルバイトを含む</span><span class="inline-block">300名超の従業員管理が</span><span class="inline-block">一画面で完結。</span><span class="inline-block">エンゲージメント調査で</span><span class="inline-block">早期離職が前年比40%減。</span><span class="inline-block">現場の声が</span><span class="inline-block">見えるようになりました。」</span>
-                    </p>
-                    <div class="text-xs text-muted">代表取締役 田中様</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 7. 料金プラン -->
-    <section class="py-24 px-6" id="pricing">
+    <!-- 4. Impact Numbers -->
+    <section class="py-32 bg-brand-600/5" id="impact">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
+                <div class="gsap-counter">
+                    <div class="text-5xl md:text-7xl font-bold mb-4 tracking-tighter tabular-nums">72<span class="text-brand-500">%</span></div>
+                    <div class="text-[11px] font-bold tracking-[0.2em] text-white/40 uppercase">業務時間の削減</div>
+                </div>
+                <div class="gsap-counter">
+                    <div class="text-5xl md:text-7xl font-bold mb-4 tracking-tighter tabular-nums">3.2<span class="text-brand-500">x</span></div>
+                    <div class="text-[11px] font-bold tracking-[0.2em] text-white/40 uppercase">採用スピードの向上</div>
+                </div>
+                <div class="gsap-counter">
+                    <div class="text-5xl md:text-7xl font-bold mb-4 tracking-tighter tabular-nums">0<span class="text-brand-500">h</span></div>
+                    <div class="text-[11px] font-bold tracking-[0.2em] text-white/40 uppercase">ペーパーレス化の実現</div>
+                </div>
+                <div class="gsap-counter">
+                    <div class="text-5xl md:text-7xl font-bold mb-4 tracking-tighter tabular-nums">2,400<span class="text-brand-500">+</span></div>
+                    <div class="text-[11px] font-bold tracking-[0.2em] text-white/40 uppercase">導入企業の成功</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Interactive Pricing -->
+    <section class="py-32 px-6" id="pricing">
         <div class="max-w-5xl mx-auto">
-            <div class="text-center mb-16 fade-in">
-                <div class="text-xs text-primary font-medium tracking-wider mb-3">PRICING</div>
-                <h2 class="text-2xl md:text-3xl font-bold">
-                    <span class="inline-block">必要な分だけ、</span><span class="inline-block">シンプルな料金体系。</span>
-                </h2>
-                <p class="text-sm text-muted mt-4">14日間の無料トライアル付き。いつでもプラン変更OKです。</p>
+            <div class="text-center mb-20 gsap-reveal">
+                <h2 class="text-3xl md:text-5xl font-bold mb-6">すべての成長に、<br>最適なプランを。</h2>
+                <div class="flex items-center justify-center gap-4 mt-10">
+                    <span class="text-sm text-white/40">月払い</span>
+                    <button class="w-12 h-6 rounded-full bg-brand-600 relative p-1 shadow-inner shadow-black/20" id="pricing-toggle">
+                        <div class="w-4 h-4 bg-white rounded-full transition-transform translate-x-6"></div>
+                    </button>
+                    <span class="text-sm font-bold">年払い <span class="text-[10px] text-brand-300 bg-brand-500/20 px-2 py-0.5 rounded ml-1">20% OFF</span></span>
+                </div>
             </div>
+
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="fade-in rounded-2xl border border-gray-200 p-8 hover:shadow-lg transition-shadow">
-                    <div class="text-xs text-muted font-medium tracking-wider mb-2">STARTER</div>
-                    <h3 class="text-xl font-bold mb-1">スターター</h3>
-                    <p class="text-xs text-muted mb-6">〜30名の企業向け</p>
-                    <div class="text-3xl font-bold mb-1">¥29,800<span class="text-sm text-muted font-normal">/月</span></div>
-                    <p class="text-xs text-muted mb-8">一人あたり ¥993/月〜</p>
-                    <ul class="space-y-3 text-sm text-muted mb-8">
-                        <li>✓ 採用管理（ATS）</li>
-                        <li>✓ 入社手続き電子化</li>
-                        <li>✓ 人材データベース</li>
-                        <li>✓ メールサポート</li>
+                <!-- Starter -->
+                <div class="glass border-white/5 rounded-[40px] p-10 flex flex-col h-full gsap-reveal">
+                    <div class="text-brand-400 font-bold tracking-widest text-[11px] mb-2 uppercase">Starter</div>
+                    <h3 class="text-3xl font-bold mb-2">スタートアップ</h3>
+                    <div class="text-4xl font-bold mb-8">¥29,800<span class="text-sm text-white/30 font-normal">/月</span></div>
+                    <ul class="space-y-4 mb-12 flex-1">
+                        <li class="text-sm text-white/60 flex items-center gap-3"><span class="text-brand-400">✓</span> <span>採用管理ツール (ATS)</span></li>
+                        <li class="text-sm text-white/60 flex items-center gap-3"><span class="text-brand-400">✓</span> <span>入社手続き電子化</span></li>
+                        <li class="text-sm text-white/60 flex items-center gap-3"><span class="text-brand-400">✓</span> <span>基本人材データベース</span></li>
                     </ul>
-                    <a href="#cta" class="block text-center border border-primary text-primary px-6 py-3 rounded-lg text-sm font-medium hover:bg-primary hover:text-white transition-colors">無料で試す</a>
+                    <a href="#" class="w-full glass py-4 rounded-2xl text-[13px] font-bold text-center hover:bg-white/5 transition">14日間無料で試す</a>
                 </div>
-                <div class="fade-in rounded-2xl border-2 border-primary p-8 shadow-lg shadow-primary/10 relative">
-                    <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-white text-[10px] font-bold px-4 py-1 rounded-full">人気 No.1</div>
-                    <div class="text-xs text-primary font-medium tracking-wider mb-2">GROWTH</div>
-                    <h3 class="text-xl font-bold mb-1">グロース</h3>
-                    <p class="text-xs text-muted mb-6">31〜200名の企業向け</p>
-                    <div class="text-3xl font-bold mb-1">¥79,800<span class="text-sm text-muted font-normal">/月</span></div>
-                    <p class="text-xs text-muted mb-8">一人あたり ¥399/月〜</p>
-                    <ul class="space-y-3 text-sm text-muted mb-8">
-                        <li>✓ スターターの全機能</li>
-                        <li>✓ エンゲージメント分析</li>
-                        <li>✓ API連携（50+）</li>
-                        <li>✓ 専任カスタマーサクセス</li>
-                        <li>✓ Slack連携</li>
-                    </ul>
-                    <a href="#cta" class="block text-center bg-primary text-white px-6 py-3 rounded-lg text-sm font-medium hover:bg-primary/90 transition-colors">無料で試す</a>
+
+                <!-- Growth -->
+                <div class="gradient-brand rounded-[40px] p-1 w-full scale-105 shadow-2xl shadow-brand-500/40 gsap-reveal">
+                    <div class="bg-surface rounded-[38px] p-10 flex flex-col h-full h-full relative overflow-hidden">
+                        <div class="absolute top-0 right-0 py-1.5 px-6 gradient-brand text-[10px] font-bold uppercase tracking-widest transform rotate-45 translate-x-10 translate-y-3">Popular</div>
+                        <div class="text-brand-400 font-bold tracking-widest text-[11px] mb-2 uppercase">Pro</div>
+                        <h3 class="text-3xl font-bold mb-2">グロース</h3>
+                        <div class="text-4xl font-bold mb-8">¥79,800<span class="text-sm text-white/30 font-normal">/月</span></div>
+                        <ul class="space-y-4 mb-12 flex-1">
+                            <li class="text-sm text-white/60 flex items-center gap-3"><span class="text-brand-400">✓</span> <span>Starterの全機能</span></li>
+                            <li class="text-sm text-white/60 flex items-center gap-3"><span class="text-brand-400">✓</span> <span>エンゲージメント分析AI</span></li>
+                            <li class="text-sm text-white/60 flex items-center gap-3"><span class="text-brand-400">✓</span> <span>外部ツール連携 (API)</span></li>
+                            <li class="text-sm text-white/60 flex items-center gap-3"><span class="text-brand-400">✓</span> <span>専任サポート担当</span></li>
+                        </ul>
+                        <a href="#" class="w-full gradient-brand py-4 rounded-2xl text-[13px] font-bold text-center shadow-lg shadow-brand-500/20 hover:scale-105 transition">まずは資料請求する</a>
+                    </div>
                 </div>
-                <div class="fade-in rounded-2xl border border-gray-200 p-8 hover:shadow-lg transition-shadow">
-                    <div class="text-xs text-muted font-medium tracking-wider mb-2">ENTERPRISE</div>
-                    <h3 class="text-xl font-bold mb-1">エンタープライズ</h3>
-                    <p class="text-xs text-muted mb-6">200名以上の企業向け</p>
-                    <div class="text-3xl font-bold mb-1">要相談</div>
-                    <p class="text-xs text-muted mb-8">カスタムプラン</p>
-                    <ul class="space-y-3 text-sm text-muted mb-8">
-                        <li>✓ グロースの全機能</li>
-                        <li>✓ SSO / IP制限</li>
-                        <li>✓ 監査ログ</li>
-                        <li>✓ SLAの個別設定</li>
-                        <li>✓ オンボーディング支援</li>
+
+                <!-- Enterprise -->
+                <div class="glass border-white/5 rounded-[40px] p-10 flex flex-col h-full gsap-reveal">
+                    <div class="text-white/30 font-bold tracking-widest text-[11px] mb-2 uppercase">Enterprise</div>
+                    <h3 class="text-3xl font-bold mb-2">エンタープライズ</h3>
+                    <div class="text-4xl font-bold mb-8">要相談</div>
+                    <ul class="space-y-4 mb-12 flex-1">
+                        <li class="text-sm text-white/60 flex items-center gap-3"><span class="text-brand-400">✓</span> <span>全機能への無制限アクセス</span></li>
+                        <li class="text-sm text-white/60 flex items-center gap-3"><span class="text-brand-400">✓</span> <span>カスタム権限管理</span></li>
+                        <li class="text-sm text-white/60 flex items-center gap-3"><span class="text-brand-400">✓</span> <span>監査ログ & 高度なセキュリティ</span></li>
+                        <li class="text-sm text-white/60 flex items-center gap-3"><span class="text-brand-400">✓</span> <span>SLA 99.9% 保証</span></li>
                     </ul>
-                    <a href="#cta" class="block text-center border border-gray-300 text-dark px-6 py-3 rounded-lg text-sm font-medium hover:bg-gray-50 transition-colors">お問い合わせ</a>
+                    <a href="#" class="w-full glass py-4 rounded-2xl text-[13px] font-bold text-center hover:bg-white/5 transition">専門チームに相談</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 8. FAQ -->
-    <section class="py-24 px-6 bg-light">
-        <div class="max-w-3xl mx-auto">
-            <div class="text-center mb-16 fade-in">
-                <div class="text-xs text-primary font-medium tracking-wider mb-3">FAQ</div>
-                <h2 class="text-2xl md:text-3xl font-bold">よくある質問</h2>
-            </div>
-            <div class="space-y-4">
-                <details class="fade-in group bg-white rounded-xl border border-gray-100 overflow-hidden">
-                    <summary class="flex justify-between items-center p-6 cursor-pointer hover:bg-gray-50 transition font-medium text-sm">
-                        既存の勤怠・給与ソフトと併用できますか？
-                        <span class="text-muted group-open:rotate-45 transition-transform text-lg">+</span>
-                    </summary>
-                    <div class="px-6 pb-6 text-sm text-muted leading-relaxed">
-                        <span class="inline-block">はい。JOINPADは</span><span class="inline-block">freee人事労務・マネーフォワード・</span><span class="inline-block">ジョブカンなど</span><span class="inline-block">主要サービスとAPI連携しています。</span><span class="inline-block">既存ツールを活かしたまま</span><span class="inline-block">段階的に移行できます。</span>
-                    </div>
-                </details>
-                <details class="fade-in group bg-white rounded-xl border border-gray-100 overflow-hidden">
-                    <summary class="flex justify-between items-center p-6 cursor-pointer hover:bg-gray-50 transition font-medium text-sm">
-                        導入にどのくらいの期間がかかりますか？
-                        <span class="text-muted group-open:rotate-45 transition-transform text-lg">+</span>
-                    </summary>
-                    <div class="px-6 pb-6 text-sm text-muted leading-relaxed">
-                        <span class="inline-block">スターター・グロースプランは</span><span class="inline-block">最短当日から利用可能です。</span><span class="inline-block">エンタープライズプランでも</span><span class="inline-block">通常2〜4週間で</span><span class="inline-block">稼働開始いただけます。</span>
-                    </div>
-                </details>
-                <details class="fade-in group bg-white rounded-xl border border-gray-100 overflow-hidden">
-                    <summary class="flex justify-between items-center p-6 cursor-pointer hover:bg-gray-50 transition font-medium text-sm">
-                        セキュリティは大丈夫ですか？
-                        <span class="text-muted group-open:rotate-45 transition-transform text-lg">+</span>
-                    </summary>
-                    <div class="px-6 pb-6 text-sm text-muted leading-relaxed">
-                        <span class="inline-block">ISO 27001認証取得済み。</span><span class="inline-block">データは国内のAWSリージョンに</span><span class="inline-block">暗号化して保存。</span><span class="inline-block">SOC2 Type II レポートも</span><span class="inline-block">ご要望に応じて</span><span class="inline-block">開示しております。</span>
-                    </div>
-                </details>
-            </div>
-        </div>
-    </section>
-
-    <!-- 9. CTA -->
-    <section class="py-24 px-6 bg-dark text-white" id="cta">
-        <div class="max-w-3xl mx-auto text-center fade-in">
-            <h2 class="text-3xl md:text-4xl font-bold leading-relaxed mb-6">
-                <span class="inline-block">人事業務を、</span><span class="inline-block">もっとシンプルに。</span>
-            </h2>
-            <p class="text-gray-400 leading-relaxed mb-10">
-                <span class="inline-block">14日間の無料トライアルで</span><span class="inline-block">すべての機能をお試しいただけます。</span><span class="inline-block">クレジットカードは不要です。</span>
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="#" class="bg-primary text-white px-10 py-4 rounded-xl text-sm font-medium hover:bg-primary/90 transition shadow-lg shadow-primary/30">
-                    無料トライアルを始める →
-                </a>
-                <a href="#" class="border border-gray-600 text-gray-300 px-10 py-4 rounded-xl text-sm font-medium hover:bg-gray-800 transition">
-                    資料をダウンロード
+    <!-- Footer / Last CTA -->
+    <footer class="py-24 border-t border-white/5 relative bg-dark" id="cta">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-4xl md:text-6xl font-bold mb-8">組織の未来を、<br>今、アップデートしよう。</h2>
+            <div class="flex flex-col sm:flex-row gap-5 justify-center mb-16">
+                <a href="#" class="gradient-brand px-12 py-5 rounded-2xl text-base font-bold shadow-2xl shadow-brand-500/40 hover:scale-105 transition-all">
+                    14日間のフリートライアルを開始
                 </a>
             </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="py-12 px-6 border-t border-gray-100">
-        <div class="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
-            <div class="flex items-center gap-2">
-                <div class="w-6 h-6 bg-primary rounded flex items-center justify-center"><span class="text-white text-[10px] font-bold">J</span></div>
-                <span class="font-bold">JOINPAD</span>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-left mb-24 border-t border-white/5 pt-16">
+                <div>
+                    <h4 class="text-xs font-bold tracking-widest text-white/20 uppercase mb-6">Product</h4>
+                    <ul class="space-y-3 text-[13px] text-white/50">
+                        <li><a href="#" class="hover:text-white transition">Features</a></li>
+                        <li><a href="#" class="hover:text-white transition">Integrations</a></li>
+                        <li><a href="#" class="hover:text-white transition">Security</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xs font-bold tracking-widest text-white/20 uppercase mb-6">Company</h4>
+                    <ul class="space-y-3 text-[13px] text-white/50">
+                        <li><a href="#" class="hover:text-white transition">About us</a></li>
+                        <li><a href="#" class="hover:text-white transition">Careers</a></li>
+                        <li><a href="#" class="hover:text-white transition">Terms</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xs font-bold tracking-widest text-white/20 uppercase mb-6">Resources</h4>
+                    <ul class="space-y-3 text-[13px] text-white/50">
+                        <li><a href="#" class="hover:text-white transition">Blog</a></li>
+                        <li><a href="#" class="hover:text-white transition">Status</a></li>
+                        <li><a href="#" class="hover:text-white transition">Docs</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <div class="flex items-center gap-2 mb-6">
+                        <div class="w-6 h-6 rounded bg-brand-600 flex items-center justify-center font-bold text-[10px] italic">J</div>
+                        <span class="font-bold text-sm tracking-tight text-white/80">JOINPAD</span>
+                    </div>
+                    <p class="text-[11px] text-white/30 leading-relaxed">© 2026 JOINPAD Inc.<br>Omotesando Hills B1F, Jingumae, Shibuya-ku, Tokyo</p>
+                </div>
             </div>
-            <div class="flex gap-6 text-xs text-muted">
-                <a href="#" class="hover:text-dark transition">利用規約</a>
-                <a href="#" class="hover:text-dark transition">プライバシーポリシー</a>
-                <a href="#" class="hover:text-dark transition">特定商取引法</a>
-                <a href="#" class="hover:text-dark transition">セキュリティ</a>
-            </div>
-            <div class="text-xs text-muted">© 2026 JOINPAD Inc.</div>
         </div>
     </footer>
 
     <script>
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
-        }, { threshold: 0.1 });
-        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Hero Stagger
+        gsap.from(".gsap-reveal-hero", {
+            y: 30, opacity: 0, duration: 1, stagger: 0.15, ease: "power4.out", delay: 0.2
+        });
+
+        // Content Scroll Reveal
+        document.querySelectorAll('.gsap-reveal').forEach((el) => {
+            gsap.from(el, {
+                scrollTrigger: { trigger: el, start: "top 85%", toggleActions: "play none none none" },
+                y: 40, opacity: 0, duration: 1, ease: "power3.out"
+            });
+        });
+
+        // Counter Animation
+        document.querySelectorAll('.gsap-counter').forEach((el) => {
+            const numEl = el.querySelector('.font-bold');
+            const target = parseFloat(numEl.innerText);
+            gsap.fromTo(numEl, { innerText: 0 }, {
+                innerText: target, duration: 2, ease: "power2.out",
+                scrollTrigger: { trigger: el, start: "top 90%" },
+                snap: { innerText: target % 1 === 0 ? 1 : 0.1 },
+                onUpdate: function() {
+                    const current = parseFloat(this.targets()[0].innerText);
+                    numEl.innerHTML = (current % 1 === 0 ? current : current.toFixed(1)) + numEl.innerHTML.replace(/[0-9.]/g, '');
+                }
+            });
+        });
     </script>
 </body>
 </html>
