@@ -43,10 +43,83 @@
         </div>
     </header>
 
+    
+    <div class="mb-8 flex flex-wrap gap-3" id="filter-buttons">
+        <button data-filter="all" class="filter-btn active px-4 py-2 bg-white text-black font-bold rounded-full text-sm hover:bg-gray-200 transition">All</button>
+        <button data-filter="fashion" class="filter-btn px-4 py-2 border border-white/20 text-white font-bold rounded-full text-sm hover:bg-white/10 transition">Fashion & Apparel</button>
+        <button data-filter="saas" class="filter-btn px-4 py-2 border border-white/20 text-white font-bold rounded-full text-sm hover:bg-white/10 transition">SaaS & B2B</button>
+        <button data-filter="local" class="filter-btn px-4 py-2 border border-white/20 text-white font-bold rounded-full text-sm hover:bg-white/10 transition">Local & Real Estate</button>
+        <button data-filter="finance" class="filter-btn px-4 py-2 border border-white/20 text-white font-bold rounded-full text-sm hover:bg-white/10 transition">Finance & E-commerce</button>
+        <button data-filter="health" class="filter-btn px-4 py-2 border border-white/20 text-white font-bold rounded-full text-sm hover:bg-white/10 transition">Health Tech</button>
+        <button data-filter="experimental" class="filter-btn px-4 py-2 border border-white/20 text-white font-bold rounded-full text-sm hover:bg-white/10 transition">Experimental</button>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const cards = document.querySelectorAll('.card');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Update Active Style
+                    filterBtns.forEach(b => {
+                        b.classList.remove('bg-white', 'text-black', 'border-transparent');
+                        b.classList.add('border', 'border-white/20', 'text-white');
+                    });
+                    btn.classList.add('bg-white', 'text-black', 'border-transparent');
+                    btn.classList.remove('border', 'border-white/20', 'text-white');
+
+                    const filter = btn.getAttribute('data-filter');
+                    
+                    cards.forEach(card => {
+                        if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+
     <main class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
+        <!-- Work: CYBERWEAR (Site 40) -->
+        <a href="concept_100/site_40/index.html" data-category="fashion" class="block group card">
+            <div class="relative aspect-video bg-gray-800 overflow-hidden rounded-lg mb-4 border border-white/10">
+                <img src="concept_100/site_40/img/ui.png" class="w-full h-full object-cover card-img transition duration-700 ease-out" alt="Techwear UI">
+                <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition duration-500"></div>
+                <div class="absolute top-2 right-2 bg-pink-600 text-white text-[10px] font-bold px-2 py-1 rounded-sm">NEW</div>
+            </div>
+            <h2 class="text-xl font-bold font-en text-pink-500">CYBERWEAR N-X</h2>
+            <p class="text-gray-500 text-sm mt-1">Fashion / Techwear / E-Commerce</p>
+        </a>
+
+        <!-- Work: REVIVE ARCHIVE (Site 41) -->
+        <a href="concept_100/site_41/index.html" data-category="fashion" class="block group card">
+            <div class="relative aspect-video bg-gray-800 overflow-hidden rounded-lg mb-4 border border-white/10">
+                <img src="concept_100/site_41/img/ui.png" class="w-full h-full object-cover card-img transition duration-700 ease-out" alt="Vintage UI">
+                <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition duration-500"></div>
+                <div class="absolute top-2 right-2 bg-yellow-700 text-white text-[10px] font-bold px-2 py-1 rounded-sm">NEW</div>
+            </div>
+            <h2 class="text-xl font-bold font-en text-yellow-600">REVIVE ARCHIVE</h2>
+            <p class="text-gray-500 text-sm mt-1">Fashion / Premium Vintage / Marketplace</p>
+        </a>
+
+        <!-- Work: AURA STYLIST (Site 42) -->
+        <a href="concept_100/site_42/index.html" data-category="fashion" class="block group card">
+            <div class="relative aspect-video bg-gray-800 overflow-hidden rounded-lg mb-4 border border-white/10">
+                <img src="concept_100/site_42/img/ui.png" class="w-full h-full object-cover card-img transition duration-700 ease-out" alt="AI Stylist UI">
+                <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition duration-500"></div>
+                <div class="absolute top-2 right-2 bg-purple-600 text-white text-[10px] font-bold px-2 py-1 rounded-sm">NEW</div>
+            </div>
+            <h2 class="text-xl font-bold font-en text-purple-400">AURA AI-STYLIST</h2>
+            <p class="text-gray-500 text-sm mt-1">Fashion / AI Dashboard / Gen-Z</p>
+        </a>
+
         <!-- Work: TAKUMI EXTERIOR -->
-        <a href="concept_100/site_32/index.html" class="block group card">
+        <a href="concept_100/site_32/index.html" data-category="local" class="block group card">
             <div class="relative aspect-video bg-gray-800 overflow-hidden rounded-lg mb-4 border border-white/10">
                 <img src="concept_100/site_32/img/ui.png" class="w-full h-full object-cover card-img transition duration-700 ease-out" alt="TAKUMI Exterior UI">
                 <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition duration-500"></div>
@@ -57,7 +130,7 @@
         </a>
 
         <!-- Work: INHERITANCE RESCUE -->
-        <a href="concept_100/site_33/index.html" class="block group card">
+        <a href="concept_100/site_33/index.html" data-category="local" class="block group card">
             <div class="relative aspect-video bg-gray-800 overflow-hidden rounded-lg mb-4 border border-white/10">
                 <img src="concept_100/site_33/img/ui.png" class="w-full h-full object-cover card-img transition duration-700 ease-out" alt="Inheritance Rescue UI">
                 <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition duration-500"></div>
@@ -68,7 +141,7 @@
         </a>
 
         <!-- Work: MANPUKUMARU (Site 30) -->
-        <a href="concept_100/site_30/index.html" class="block group card">
+        <a href="concept_100/site_30/index.html" data-category="local" class="block group card">
             <div class="relative aspect-video bg-gray-800 overflow-hidden rounded-lg mb-4 border border-white/10">
                 <img src="concept_100/site_30/img/ui.png" class="w-full h-full object-cover card-img transition duration-700 ease-out" alt="Manpukumaru UI" onerror="this.src='https://picsum.photos/seed/manpukumaru/800/450'">
                 <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition duration-500"></div>
@@ -79,7 +152,7 @@
         </a>
 
         <!-- Work: PAYFLOW (Site 24) -->
-        <a href="concept_100/site_24/index.html" class="block group card">
+        <a href="concept_100/site_24/index.html" data-category="saas" class="block group card">
             <div class="relative aspect-video bg-gray-800 overflow-hidden rounded-lg mb-4 border border-white/10">
                 <img src="concept_100/site_24/img/ui.png" class="w-full h-full object-cover card-img transition duration-700 ease-out" alt="Payflow UI" onerror="this.src='https://picsum.photos/seed/payflow/800/450'">
                 <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition duration-500"></div>
@@ -90,7 +163,7 @@
         </a>
 
         <!-- Work: OMNI LOGIS (Site 23) -->
-        <a href="concept_100/site_23/index.html" class="block group card">
+        <a href="concept_100/site_23/index.html" data-category="other" class="block group card">
             <div class="relative aspect-video bg-gray-800 overflow-hidden rounded-lg mb-4 border border-white/10">
                 <img src="concept_100/site_23/img/ui.png" class="w-full h-full object-cover card-img transition duration-700 ease-out" alt="Omni Logis UI" onerror="this.src='https://picsum.photos/seed/omnilogis/800/450'">
                 <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition duration-500"></div>
@@ -101,7 +174,7 @@
         </a>
 
         <!-- Work: MEDICORE (Site 22) -->
-        <a href="concept_100/site_22/index.html" class="block group card">
+        <a href="concept_100/site_22/index.html" data-category="saas" class="block group card">
             <div class="relative aspect-video bg-gray-800 overflow-hidden rounded-lg mb-4 border border-white/10">
                 <img src="concept_100/site_22/img/ui.png" class="w-full h-full object-cover card-img transition duration-700 ease-out" alt="Medicore UI" onerror="this.src='https://picsum.photos/seed/medicore/800/450'">
                 <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition duration-500"></div>
@@ -112,7 +185,7 @@
         </a>
 
         <!-- Work: ECHO (Site 21) -->
-        <a href="concept_100/site_21/index.html" class="block group card">
+        <a href="concept_100/site_21/index.html" data-category="other" class="block group card">
             <div class="relative aspect-video bg-gray-800 overflow-hidden rounded-lg mb-4 border border-white/10">
                 <img src="concept_100/site_21/img/ui.png" class="w-full h-full object-cover card-img transition duration-700 ease-out" alt="Echo UI" onerror="this.src='https://picsum.photos/seed/echoesg/800/450'">
                 <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition duration-500"></div>
@@ -122,8 +195,8 @@
             <p class="text-gray-500 text-sm mt-1">ESG / Carbon Accounting / Glassmorphism</p>
         </a>
 
-        <!-- Work: NOMARK -->
-        <a href="concept_100/site_34/index.html" class="block group card">
+        <!-- [HIDDEN/PRIVATE] <!-- Work: NOMARK -->
+        <a href="concept_100/site_34/index.html" data-category="saas" class="block group card">
             <div class="relative aspect-video bg-gray-800 overflow-hidden rounded-lg mb-4 border border-white/10">
                 <img src="concept_100/site_34/img/ui.png" class="w-full h-full object-cover card-img transition duration-700 ease-out" alt="NOMARK UI">
                 <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition duration-500"></div>
@@ -131,10 +204,10 @@
             </div>
             <h2 class="text-xl font-bold jp-font text-amber-500">NOMARK インバウンド決済</h2>
             <p class="text-gray-500 text-sm mt-1">SaaS / Local Business / DR-LP</p>
-        </a>
+        </a> -->
 
         <!-- Work: CLIPSTORM.AI -->
-        <a href="concept_100/site_35/index.html" class="block group card">
+        <a href="concept_100/site_35/index.html" data-category="saas" class="block group card">
             <div class="relative aspect-video bg-gray-800 overflow-hidden rounded-lg mb-4 border border-white/10">
                 <img src="concept_100/site_35/img/ui.png" class="w-full h-full object-cover card-img transition duration-700 ease-out" alt="CLIPSTORM.AI UI">
                 <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition duration-500"></div>
@@ -145,7 +218,7 @@
         </a>
 
         <!-- Work: BIO-CLEAN NET -->
-        <a href="concept_100/site_36/index.html" class="block group card">
+        <a href="concept_100/site_36/index.html" data-category="saas" class="block group card">
             <div class="relative aspect-video bg-gray-800 overflow-hidden rounded-lg mb-4 border border-white/10">
                 <img src="concept_100/site_36/img/ui.png" class="w-full h-full object-cover card-img transition duration-700 ease-out" alt="BIO-CLEAN NET UI">
                 <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition duration-500"></div>
@@ -156,7 +229,7 @@
         </a>
 
         <!-- Work: MIND-RADAR -->
-        <a href="concept_100/site_37/index.html" class="block group card">
+        <a href="concept_100/site_37/index.html" data-category="other" class="block group card">
             <div class="relative aspect-video bg-gray-800 overflow-hidden rounded-lg mb-4 border border-white/10">
                 <img src="concept_100/site_37/img/ui.png" class="w-full h-full object-cover card-img transition duration-700 ease-out" alt="MIND-RADAR UI">
                 <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition duration-500"></div>
@@ -167,7 +240,7 @@
         </a>
 
         <!-- Work 01: Neo-Japonism (C) -->
-        <a href="studio_lp_c/index.html" class="block group card">
+        <a href="studio_lp_c/index.html" data-category="experimental" class="block group card">
             <div class="relative aspect-video bg-gray-800 overflow-hidden rounded-lg mb-4 border border-white/10">
                 <img src="neo_japonism_thumb.png"
                     class="w-full h-full object-cover card-img transition duration-700 ease-out">
@@ -180,7 +253,7 @@
         </a>
 
         <!-- Work: LEGACY M&A -->
-        <a href="concept_100/site_31/index.html" class="block group card">
+        <a href="concept_100/site_31/index.html" data-category="other" class="block group card">
             <div class="relative aspect-video bg-gray-800 overflow-hidden rounded-lg mb-4 border border-white/10">
                 <img src="concept_100/site_31/img/ui.png" class="w-full h-full object-cover card-img transition duration-700 ease-out" alt="Legacy M&A UI">
                 <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition duration-500"></div>
@@ -191,7 +264,7 @@
         </a>
 
         <!-- Work 02: Deep Dive (B) -->
-        <a href="studio_lp_b/index.html" class="block group card">
+        <a href="studio_lp_b/index.html" data-category="other" class="block group card">
             <div class="relative aspect-video bg-gray-800 overflow-hidden rounded-lg mb-4 border border-white/10">
                 <img src="deep_dive_thumb.png"
                     class="w-full h-full object-cover card-img transition duration-700 ease-out">
@@ -201,7 +274,7 @@
         </a>
 
         <!-- Work 06: Structured Chaos (A) -->
-        <a href="studio_lp_a/index.html" class="block group card">
+        <a href="studio_lp_a/index.html" data-category="other" class="block group card">
             <div class="relative aspect-video bg-gray-800 overflow-hidden rounded-lg mb-4 border border-white/10">
                 <img src="structured_chaos_thumb.png"
                     class="w-full h-full object-cover card-img transition duration-700 ease-out">
@@ -211,7 +284,7 @@
         </a>
 
         <!-- Work 03: KIWAMI (Sushi) -->
-        <a href="sushi_lp/index.html" class="block group card">
+        <a href="sushi_lp/index.html" data-category="other" class="block group card">
             <div class="relative aspect-video bg-gray-800 overflow-hidden rounded-lg mb-4 border border-white/10">
                 <img src="sushi_hero_tuna_artifact.png"
                     class="w-full h-full object-cover card-img transition duration-700 ease-out">
@@ -223,7 +296,7 @@
         </a>
 
         <!-- Work 04: DATASTREAM (SaaS) -->
-        <a href="saas_lp/index.html" class="block card">
+        <a href="saas_lp/index.html" data-category="saas" class="block card">
             <div class="relative aspect-video bg-gray-800 overflow-hidden rounded-lg mb-4 border border-white/10">
                 <img src="saas_hero_dashboard_artifact.png"
                     class="w-full h-full object-cover card-img transition duration-700 ease-out">
@@ -235,7 +308,7 @@
         </a>
 
         <!-- Work 05: MA (Architect) -->
-        <a href="arch_lp/index.html" class="block card">
+        <a href="arch_lp/index.html" data-category="local" class="block card">
             <div class="relative aspect-video bg-gray-800 overflow-hidden rounded-lg mb-4 border border-white/10">
                 <img src="arch_hero_minimal_artifact.png"
                     class="w-full h-full object-cover card-img transition duration-700 ease-out">
@@ -247,7 +320,7 @@
         </a>
 
         <!-- Work 07: DESIGN VAULT (Template Market) -->
-        <a href="template_market_lp/index.html" class="block card">
+        <a href="template_market_lp/index.html" data-category="other" class="block card">
             <div class="relative aspect-video bg-gray-800 overflow-hidden rounded-lg mb-4 border border-white/10">
                 <img src="template_market_lp/hero_template_collage_1767910671920.png"
                     class="w-full h-full object-cover card-img transition duration-700 ease-out">
@@ -259,7 +332,7 @@
         </a>
 
         <!-- Work 08: ARTICLE GEN (AI Writing) -->
-        <a href="article_gen_lp/index.html" class="block card">
+        <a href="article_gen_lp/index.html" data-category="other" class="block card">
             <div class="relative aspect-video bg-gray-800 overflow-hidden rounded-lg mb-4 border border-white/10">
                 <img src="article_gen_lp/ui_article_gen_dashboard_1767906497423.png"
                     class="w-full h-full object-cover card-img transition duration-700 ease-out">
@@ -269,7 +342,7 @@
         </a>
 
         <!-- Work 09: STUDIO WHITE (Variation) -->
-        <a href="studio_lp_white/index.html" class="block card">
+        <a href="studio_lp_white/index.html" data-category="experimental" class="block card">
             <div class="relative aspect-video bg-gray-800 overflow-hidden rounded-lg mb-4 border border-white/10">
                 <img src="studio_lp_white/hero_crystal_brain_white.png"
                     class="w-full h-full object-cover card-img transition duration-700 ease-out">
@@ -297,7 +370,7 @@
             Soon</span></h2>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <!-- Work 10: AETHEL (Cosmetics) -->
-        <a href="cosmetics_lp/index.html" class="block card">
+        <a href="cosmetics_lp/index.html" data-category="fashion" class="block card">
             <div class="relative aspect-video bg-gray-800 overflow-hidden rounded-lg mb-4 border border-white/10">
                 <img src="thumb_beauty_aethel.png"
                     class="w-full h-full object-cover card-img transition duration-700 ease-out">
@@ -309,7 +382,7 @@
         </a>
 
         <!-- Work 11: VITA FLORA (Health) -->
-        <a href="health_lp/index.html" class="block card opacity-80 hover:opacity-100 transition">
+        <a href="health_lp/index.html" data-category="health" class="block card opacity-80 hover:opacity-100 transition">
             <div class="relative aspect-video bg-gray-800 overflow-hidden rounded-lg mb-4 border border-white/10">
                 <img src="thumb_health_vitality.png?v=2"
                     class="w-full h-full object-cover card-img transition duration-700 ease-out">
@@ -321,7 +394,7 @@
         </a>
 
         <!-- Work 12: THE TOWER (Real Estate) -->
-        <a href="real_estate_lp/index.html" class="block card opacity-80 hover:opacity-100 transition">
+        <a href="real_estate_lp/index.html" data-category="local" class="block card opacity-80 hover:opacity-100 transition">
             <div class="relative aspect-video bg-gray-800 overflow-hidden rounded-lg mb-4 border border-white/10">
                 <img src="thumb_realestate_tower.png?v=2"
                     class="w-full h-full object-cover card-img transition duration-700 ease-out">
@@ -333,7 +406,7 @@
         </a>
 
         <!-- Work 13: FINTRA BANK (Finance) -->
-        <a href="fintech_lp/index.html" class="block card transition">
+        <a href="fintech_lp/index.html" data-category="finance" class="block card transition">
             <div class="relative aspect-video bg-gray-800 overflow-hidden rounded-lg mb-4 border border-white/10">
                 <img src="fintech_lp/fintech_hero_card.png"
                     class="w-full h-full object-cover card-img transition duration-700 ease-out">
@@ -345,7 +418,7 @@
         </a>
 
         <!-- Work 14: GLITCH SYSTEMS (Fashion) -->
-        <a href="glitch_systems_lp/index.html" class="block card opacity-80 hover:opacity-100 transition">
+        <a href="glitch_systems_lp/index.html" data-category="fashion" class="block card opacity-80 hover:opacity-100 transition">
             <div class="relative aspect-video bg-gray-800 overflow-hidden rounded-lg mb-4 border border-white/10">
                 <img src="thumb_fashion_nexus.png?v=2"
                     class="w-full h-full object-cover card-img transition duration-700 ease-out">
@@ -357,7 +430,7 @@
         </a>
 
         <!-- Work 15: BLOOM HR (SaaS) -->
-        <a href="bloom_hr_lp/index.html" class="block card opacity-80 hover:opacity-100 transition">
+        <a href="bloom_hr_lp/index.html" data-category="saas" class="block card opacity-80 hover:opacity-100 transition">
             <div class="relative aspect-video bg-gray-800 overflow-hidden rounded-lg mb-4 border border-white/10">
                 <img src="thumb_saas_hr.png?v=2"
                     class="w-full h-full object-cover card-img transition duration-700 ease-out">
@@ -369,7 +442,7 @@
         </a>
 
         <!-- Work 16: SERENITY (Travel) -->
-        <a href="travel_lp/index.html" class="block card opacity-80 hover:opacity-100 transition">
+        <a href="travel_lp/index.html" data-category="other" class="block card opacity-80 hover:opacity-100 transition">
             <div class="relative aspect-video bg-gray-800 overflow-hidden rounded-lg mb-4 border border-white/10">
                 <img src="thumb_travel_escape.png?v=2"
                     class="w-full h-full object-cover card-img transition duration-700 ease-out">
@@ -381,7 +454,7 @@
         </a>
 
         <!-- Work 17: EASY CASH (Consumer App) -->
-        <a href="consumer_app_lp/index.html" class="block card opacity-80 hover:opacity-100 transition">
+        <a href="consumer_app_lp/index.html" data-category="finance" class="block card opacity-80 hover:opacity-100 transition">
             <div class="relative aspect-video bg-gray-800 overflow-hidden rounded-lg mb-4 border border-white/10">
                 <img src="thumb_consumer_finance.png?v=2"
                     class="w-full h-full object-cover card-img transition duration-700 ease-out">
