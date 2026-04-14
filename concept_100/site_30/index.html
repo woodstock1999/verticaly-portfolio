@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>【即金買取り】万福丸｜その「ガラクタ」、いますぐ現金に換えます。</title>
-    <!-- ド直球で視覚に刺さる極太ゴシック -->
+    <title>【公式】高価即金買取の万福丸｜捨てる前に必ずお電話ください</title>
     <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@600;900&family=Noto+Sans+JP:wght@700;900&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -13,8 +12,9 @@
                 extend: {
                     colors: {
                         pitchBlack: '#0a0a0a',
-                        cashGold: '#FDE047', /* 目を惹く強い黄色 */
-                        alertRed: '#EF4444', /* アラート・緊急の赤 */
+                        cashGold: '#FDE047',
+                        alertRed: '#EF4444',
+                        darkRed: '#991B1B',
                     },
                     fontFamily: {
                         sans: ['Noto Sans JP', 'Gothic A1', 'sans-serif'],
@@ -26,181 +26,323 @@
     <style>
         body { font-family: 'Noto Sans JP', 'Gothic A1', sans-serif; background-color: #0a0a0a; color: #fff; line-height: 1.6; }
         
-        /* ギラギラしたインパクトテキスト */
-        .text-impact { text-shadow: 2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 0 4px 10px rgba(0,0,0,0.8); }
-        .bg-impact { background: repeating-linear-gradient(45deg, #0a0a0a, #0a0a0a 10px, #1a1a1a 10px, #1a1a1a 20px); }
+        .text-impact { text-shadow: 2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 0 5px 15px rgba(0,0,0,0.9); }
+        .bg-impact { background: repeating-linear-gradient(45deg, #0a0a0a, #0a0a0a 10px, #151515 10px, #151515 20px); }
+        .bg-danger { background: repeating-linear-gradient(-45deg, #EF4444, #EF4444 20px, #DC2626 20px, #DC2626 40px); }
 
-        /* CVボタンが脈打つアクション */
         .pulsing-cta { animation: pulseWarning 1.5s infinite; }
-        @keyframes pulseWarning { 0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7); } 50% { transform: scale(1.02); box-shadow: 0 0 0 15px rgba(239, 68, 68, 0); } 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); } }
+        @keyframes pulseWarning { 0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.8); } 50% { transform: scale(1.02); box-shadow: 0 0 0 20px rgba(239, 68, 68, 0); } 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); } }
 
-        /* スマホ向け固定バー */
-        .sticky-footer-cta { position: fixed; bottom: 0; left: 0; width: 100%; z-index: 100; background: #EF4444; border-top: 4px solid #FDE047; }
+        .sticky-footer-cta { position: fixed; bottom: 0; left: 0; width: 100%; z-index: 100; border-top: 5px solid #FDE047; box-shadow: 0 -10px 30px rgba(0,0,0,0.5); }
     </style>
 </head>
-<body class="antialiased pb-24 md:pb-0">
+<body class="antialiased pb-32 md:pb-0">
 
-    <!-- 危機感を煽るヘッダーテキスト -->
-    <div class="bg-cashGold text-pitchBlack text-center py-3 font-black text-sm md:text-xl tracking-widest w-full">
-        ⚠️ 捨てる前に待った！それ、実は<span class="text-alertRed border-b-2 border-alertRed">数万円のお宝</span>かもしれません！
+    <!-- 危機感煽りヘッダー -->
+    <div class="bg-cashGold text-pitchBlack text-center py-2 font-black text-sm md:text-xl tracking-widest w-full">
+        <span class="animate-pulse inline-block mr-2 text-alertRed font-extrabold pb-1">⚠ 警告</span> ゴミとして捨てようとしているソレ、実は<span class="text-alertRed border-b-4 border-alertRed md:text-2xl ml-1">数万円の現金</span>になります！
     </div>
 
-    <!-- FV (First View) : The Sizzle / Macro Focus -->
-    <section class="relative w-full overflow-hidden bg-pitchBlack border-b-8 border-alertRed">
-        <!-- 背景画像 (The Appraisal Macro Sizzle) -->
+    <!-- FV (The Macro Sizzle) -->
+    <section class="relative w-full overflow-hidden bg-pitchBlack border-b-[10px] border-alertRed">
         <div class="absolute inset-0 z-0">
-            <img src="img/ui.png" alt="プロ鑑定士の鋭い眼光とルーペ" class="w-full h-full object-cover opacity-60 filter contrast-150 grayscale-[20%]">
-            <div class="absolute inset-0 bg-gradient-to-b from-black/20 via-black/50 to-black/90"></div>
+            <img src="img/ui.png" alt="鑑定士の鋭い眼" class="w-full h-full object-cover opacity-70 filter contrast-150 grayscale-[10%]">
+            <div class="absolute inset-0 bg-gradient-to-b from-black/0 via-black/40 to-black/95"></div>
         </div>
 
-        <div class="relative z-10 max-w-4xl mx-auto px-4 pt-16 pb-12 flex flex-col items-center text-center">
+        <div class="relative z-10 max-w-4xl mx-auto px-4 pt-12 pb-16 flex flex-col items-center text-center">
             
-            <!-- 大見出し -->
-            <div class="bg-alertRed text-white font-black px-6 py-2 text-xl md:text-3xl border-4 border-pitchBlack shadow-[4px_4px_0_#FFF] transform -rotate-2 mb-6">
-                実績30年・プロの鑑識眼
+            <div class="bg-alertRed text-white font-black px-6 py-2 text-xl md:text-3xl border-4 border-pitchBlack shadow-[6px_6px_0_#FFF] transform -rotate-3 mb-8 flex items-center gap-2">
+                出張費完全無料・査定費0円！
             </div>
             
-            <h1 class="text-4xl md:text-6xl lg:text-[5rem] font-black leading-tight text-white mb-6 text-impact">
-                他店で断られた<span class="text-cashGold">「ごみ」</span>を<br>
-                プロが<span class="text-cashGold">「即・現金」</span>に換える。
+            <h1 class="text-4xl md:text-6xl lg:text-[5.5rem] font-black leading-tight text-white mb-8 text-impact tracking-tighter">
+                他店で断られた<span class="text-cashGold">「不要品」</span>を<br>
+                プロの眼が<span class="text-cashGold">「即・現金」</span>に。
             </h1>
 
-            <p class="text-lg md:text-2xl font-black text-white bg-black/60 px-6 py-3 border border-gray-600 mb-10">
-                出張費無料・査定費完全ゼロ・その場で現金渡し
+            <p class="text-xl md:text-3xl font-black text-white bg-black/80 px-8 py-4 border-2 border-cashGold mb-12 shadow-[0_0_30px_rgba(253,224,71,0.3)]">
+                22ジャンル一括査定・そのままの状態でOK
             </p>
 
-            <!-- メインCTA -->
-            <a href="tel:0120000000" class="w-full max-w-md bg-alertRed text-white border-4 border-white rounded-[40px] py-6 px-4 pulsing-cta flex flex-col items-center justify-center">
-                <span class="text-sm md:text-base font-black mb-1 tracking-widest">たった1本の電話から始まります！</span>
-                <div class="flex items-center gap-4">
-                    <span class="text-4xl md:text-5xl font-black tracking-widest text-impact">0120-000-000</span>
-                </div>
+            <a href="tel:0120000000" class="w-full max-w-xl bg-alertRed text-white border-[6px] border-white rounded-[50px] py-6 px-4 pulsing-cta flex flex-col items-center justify-center">
+                <span class="text-base md:text-xl font-black mb-1 tracking-widest">お電話1本で、プロを呼び出す ▼</span>
+                <span class="text-5xl md:text-6xl font-black tracking-wider text-impact">0120-000-000</span>
+                <span class="font-bold text-sm mt-3 bg-white text-alertRed px-4 py-1 rounded-full">365日 年中無休（受付 9:00〜21:00）</span>
             </a>
-            <a href="#form" class="mt-6 text-cashGold font-bold text-lg md:text-xl border-b-2 border-cashGold hover:opacity-70 transition">
-                📱 スマホで今すぐ査定依頼 (WEB予約)
+            <a href="#form" class="mt-8 text-cashGold font-bold text-xl border-b-2 border-cashGold hover:opacity-70 transition pb-1">
+                📱 スマホで今すぐ査定依頼 (WEB予約) ＞
             </a>
+        </div>
+    </section>
 
+    <!-- 悩みセクション（ターゲットの痛みの共感） -->
+    <section class="py-20 bg-white text-pitchBlack">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-3xl md:text-5xl font-black text-center mb-16 text-alertRed border-b-8 border-alertRed inline-block w-full pb-4 leading-tight">
+                こんなお悩み、抱えていませんか？<br>
+                <span class="text-2xl md:text-3xl text-pitchBlack mt-4 inline-block">一つでも当てはまれば、万福丸の出番です！</span>
+            </h2>
+            
+            <div class="bg-gray-100 p-8 md:p-12 border-4 border-gray-300 rounded-3xl shadow-xl space-y-6">
+                <div class="flex items-start gap-4">
+                    <span class="text-3xl md:text-4xl text-alertRed mt-[-5px]">✔</span>
+                    <p class="text-xl md:text-2xl font-black">家の中にモノが多すぎて、<span class="bg-cashGold px-2 text-pitchBlack">どこから片付ければいいか分からない。</span></p>
+                </div>
+                <div class="flex items-start gap-4">
+                    <span class="text-3xl md:text-4xl text-alertRed mt-[-5px]">✔</span>
+                    <p class="text-xl md:text-2xl font-black">親の遺品の整理…価値があるのか無いのか<span class="bg-cashGold px-2 text-pitchBlack">全く判断がつかない。</span></p>
+                </div>
+                <div class="flex items-start gap-4">
+                    <span class="text-3xl md:text-4xl text-alertRed mt-[-5px]">✔</span>
+                    <p class="text-xl md:text-2xl font-black">価値ゼロと言われたが、<span class="bg-cashGold px-2 text-pitchBlack">ただゴミとして捨てるのはもったいない。</span></p>
+                </div>
+                <div class="flex items-start gap-4">
+                    <span class="text-3xl md:text-4xl text-alertRed mt-[-5px]">✔</span>
+                    <p class="text-xl md:text-2xl font-black">重くて運べないし、箱に詰めるのも<span class="bg-cashGold px-2 text-pitchBlack">面倒くさい！</span></p>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12 bg-danger text-white py-6 px-4 rounded-xl shadow-2xl transform rotate-1">
+                <p class="font-black text-2xl md:text-4xl tracking-tight text-impact">
+                    お待ちください！<br>
+                    すべて私たちが<span class="text-cashGold text-5xl inline-block mx-2 mt-4 underline decoration-8">現金</span>に換えます！！
+                </p>
+            </div>
         </div>
     </section>
 
     <!-- プロの眼力（シズル感のDR的表現） -->
-    <section class="py-16 bg-impact text-white border-b-2 border-gray-800">
-        <div class="max-w-4xl mx-auto px-6 text-center">
-            <h2 class="text-3xl md:text-4xl font-black mb-10"><span class="text-alertRed">「素人目には見えない価値」</span>を見抜く<br>圧倒的な鑑定力</h2>
+    <section class="py-24 bg-impact text-white border-y-8 border-gray-800">
+        <div class="max-w-5xl mx-auto px-6 text-center">
+            <p class="text-cashGold font-black text-xl mb-4 tracking-widest shadow-black drop-shadow-md">なぜ、万福丸なら高く買えるのか？</p>
+            <h2 class="text-4xl md:text-6xl font-black mb-16 leading-tight">
+                <span class="text-alertRed text-impact">「素人目には見えない価値」</span>を見抜く<br>
+                圧倒的プロの鑑定眼
+            </h2>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
-                <div class="bg-pitchBlack p-8 border-2 border-gray-800 shadow-[0_0_20px_rgba(253,224,71,0.1)]">
-                    <div class="text-cashGold font-black text-2xl mb-4">🔍 ミクロの刻印を見逃さない</div>
-                    <p class="font-bold text-gray-300 leading-relaxed text-lg">
-                        動かなくなった時計、黒く変色した指輪、ホコリだらけの絵画。一目見て「価値なし」と判定されるモノの中に、ルーペでしか見えない作家の刻印や、機械式ムーブメントの希少素材が隠れています。私たちのプロの眼は、1gの損もさせません。
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 text-left">
+                <!-- 鑑定力1 -->
+                <div class="bg-pitchBlack p-10 border-4 border-gray-800 hover:border-cashGold transition duration-500 shadow-[0_10px_30px_rgba(253,224,71,0.05)]">
+                    <div class="text-cashGold font-black text-3xl mb-6 flex items-center gap-4">
+                        <span class="text-5xl drop-shadow-lg">🔍</span> ミクロの刻印を見逃さない
+                    </div>
+                    <p class="font-bold text-gray-300 leading-loose text-lg border-t-2 border-gray-800 pt-6">
+                        動かなくなった時計、黒く変色した指輪、ホコリだらけの絵画。一目見て「価値なし」と判定されるモノの中に、ルーペでしか見えない作家の刻印や希少素材が隠れています。私たちのプロの眼は、1gの損もさせません。
                     </p>
                 </div>
-                <div class="bg-pitchBlack p-8 border-2 border-gray-800 shadow-[0_0_20px_rgba(239,68,68,0.1)]">
-                    <div class="text-alertRed font-black text-2xl mb-4">💨 価値の仕分けから搬出まで瞬殺</div>
-                    <p class="font-bold text-gray-300 leading-relaxed text-lg">
-                        ゴミ袋まみれの部屋でも、足の踏み場がない蔵でも構いません。凄腕の鑑定士が現場に入り、数十分で「価値のあるもの」を正確に抽出・算定し、そのまま車へ運び出します。あなたはただ見ているだけで、その日に現金が手に入ります。
+                <!-- 鑑定力2 -->
+                <div class="bg-pitchBlack p-10 border-4 border-gray-800 hover:border-alertRed transition duration-500 shadow-[0_10px_30px_rgba(239,68,68,0.05)]">
+                    <div class="text-alertRed font-black text-3xl mb-6 flex items-center gap-4">
+                        <span class="text-5xl drop-shadow-lg">💨</span> 価値の抽出から搬出まで瞬殺
+                    </div>
+                    <p class="font-bold text-gray-300 leading-loose text-lg border-t-2 border-gray-800 pt-6">
+                        梱包不要！ゴミ袋まみれの部屋でも足の踏み場がない蔵でも、そのまま現場に入ります。凄腕の鑑定士が数十分で「価値のあるもの」を正確に算定し、車へ搬出。あなたはただお茶を飲んで見ているだけです。
                     </p>
                 </div>
+            </div>
+            
+            <!-- 権威性バッジ -->
+            <div class="mt-16 flex flex-wrap justify-center gap-6">
+                <div class="bg-white text-pitchBlack font-black text-xl px-8 py-4 rounded-full border-4 border-cashGold shadow-xl">🏆 世界基準のオークションデータ相場直結</div>
+                <div class="bg-white text-pitchBlack font-black text-xl px-8 py-4 rounded-full border-4 border-cashGold shadow-xl">🇯🇵 専門鑑定チーム在籍数 国内トップクラス</div>
             </div>
         </div>
     </section>
 
     <!-- 激アツ！なんでも買います（具体的なメリット） -->
-    <section class="py-16 bg-white text-pitchBlack text-center">
-        <div class="max-w-5xl mx-auto px-6">
-            <h2 class="text-3xl md:text-5xl font-black mb-4">本当に<span class="text-alertRed border-b-4 border-alertRed">「なんでも」</span>買います。</h2>
-            <p class="font-bold text-xl text-gray-600 mb-12">ボロボロでも、壊れていても絶対に捨てないでください！</p>
+    <section class="py-24 bg-white text-pitchBlack text-center">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-4xl md:text-5xl font-black mb-6 leading-tight">
+                本当に<span class="text-alertRed text-6xl">「なんでも」</span>見ます。<br>
+                ボロボロでも絶対に捨てないで！
+            </h2>
+            <p class="font-black text-2xl text-gray-600 mb-16 bg-gray-100 py-4 px-6 inline-block rounded-xl border-2 border-gray-300">
+                22ジャンル制覇！他社で断られたものこそお持ちください。
+            </p>
             
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 font-black text-lg md:text-xl">
-                <!-- アイテム群 -->
-                <div class="bg-gray-100 p-6 rounded-lg border-2 border-gray-300 relative overflow-hidden group">
-                    <div class="absolute inset-0 bg-alertRed transform translate-y-full group-hover:translate-y-0 transition-transform flex items-center justify-center text-white z-10">大歓迎！</div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 font-black text-xl md:text-2xl">
+                <!-- アイテム1 -->
+                <div class="bg-gray-50 p-8 rounded-2xl border-4 border-gray-200 relative overflow-hidden group shadow-lg">
+                    <div class="absolute inset-0 bg-alertRed transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 flex items-center justify-center text-white text-3xl z-10 border-4 border-darkRed rounded-xl">即金大歓迎！</div>
                     <div class="relative z-0">
-                        <div class="text-5xl mb-4">⌚️</div>
-                        ガラスの割れた時計
+                        <div class="text-7xl mb-6 drop-shadow-md">⌚️</div>
+                        ガラスの割れた<br>高級時計
                     </div>
                 </div>
-                <!-- アイテム群 -->
-                <div class="bg-gray-100 p-6 rounded-lg border-2 border-gray-300 relative overflow-hidden group">
-                    <div class="absolute inset-0 bg-alertRed transform translate-y-full group-hover:translate-y-0 transition-transform flex items-center justify-center text-white z-10">大歓迎！</div>
+                <!-- アイテム2 -->
+                <div class="bg-gray-50 p-8 rounded-2xl border-4 border-gray-200 relative overflow-hidden group shadow-lg">
+                    <div class="absolute inset-0 bg-alertRed transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 flex items-center justify-center text-white text-3xl z-10 border-4 border-darkRed rounded-xl">即金大歓迎！</div>
                     <div class="relative z-0">
-                        <div class="text-5xl mb-4">💍</div>
-                        石の取れた指輪
+                        <div class="text-7xl mb-6 drop-shadow-md">💍</div>
+                        石の取れた<br>古い指輪・金歯
                     </div>
                 </div>
-                <!-- アイテム群 -->
-                <div class="bg-gray-100 p-6 rounded-lg border-2 border-gray-300 relative overflow-hidden group">
-                    <div class="absolute inset-0 bg-alertRed transform translate-y-full group-hover:translate-y-0 transition-transform flex items-center justify-center text-white z-10">大歓迎！</div>
+                <!-- アイテム3 -->
+                <div class="bg-gray-50 p-8 rounded-2xl border-4 border-gray-200 relative overflow-hidden group shadow-lg">
+                    <div class="absolute inset-0 bg-alertRed transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 flex items-center justify-center text-white text-3xl z-10 border-4 border-darkRed rounded-xl">即金大歓迎！</div>
                     <div class="relative z-0">
-                        <div class="text-5xl mb-4">👘</div>
-                        シミだらけの着物
+                        <div class="text-7xl mb-6 drop-shadow-md">👘</div>
+                        シミ・カビのある<br>着物や帯
                     </div>
                 </div>
-                <!-- アイテム群 -->
-                <div class="bg-gray-100 p-6 rounded-lg border-2 border-gray-300 relative overflow-hidden group">
-                    <div class="absolute inset-0 bg-alertRed transform translate-y-full group-hover:translate-y-0 transition-transform flex items-center justify-center text-white z-10">大歓迎！</div>
+                <!-- アイテム4 -->
+                <div class="bg-gray-50 p-8 rounded-2xl border-4 border-gray-200 relative overflow-hidden group shadow-lg">
+                    <div class="absolute inset-0 bg-alertRed transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 flex items-center justify-center text-white text-3xl z-10 border-4 border-darkRed rounded-xl">即金大歓迎！</div>
                     <div class="relative z-0">
-                        <div class="text-5xl mb-4">🏺</div>
-                        箱のない茶道具
+                        <div class="text-7xl mb-6 drop-shadow-md">🏺</div>
+                        作家不明の<br>茶道具・骨董品
                     </div>
+                </div>
+                <!-- アイテム5-8 (省略表現) -->
+                <div class="col-span-2 md:col-span-4 mt-4 bg-gray-100 py-6 font-black text-gray-500 border-4 border-dashed border-gray-300 text-2xl flex items-center justify-center gap-4">
+                    <span>カメラ 📷</span> <span>切手 🎴</span> <span>洋酒 🍾</span> <span>ブランド品 👜</span> <span>楽器 🎸</span> <span>なんでも！</span>
                 </div>
             </div>
             
-            <div class="mt-12 bg-cashGold text-pitchBlack text-2xl md:text-4xl font-black py-4 inline-block px-8 transform -rotate-1 shadow-[4px_4px_0_#000]">
-                22ジャンル、ゴミ袋に突っ込む前に見せてください！！
+            <div class="mt-16 bg-cashGold text-pitchBlack text-3xl md:text-5xl font-black py-6 px-10 inline-block transform -rotate-2 shadow-[8px_8px_0_#000] border-4 border-pitchBlack">
+                ゴミ袋に突っ込む前に、プロに見せてください！
             </div>
         </div>
     </section>
 
-    <!-- 即金支払いアピール -->
+    <!-- 中間CTA (画面を引き締める) -->
     <section class="py-16 bg-pitchBlack text-white border-t-8 border-cashGold">
         <div class="max-w-4xl mx-auto px-6 text-center">
-            <h2 class="text-3xl md:text-5xl font-black mb-8">査定完了から<span class="text-cashGold">「即・現金」</span>払い。</h2>
-            <p class="font-bold text-xl md:text-2xl leading-loose mb-10">
-                金額にご納得いただければ、どんな高額でも<br class="hidden md:block">
-                その場で現金（キャッシュ）にてお支払いいたします。<br>
-                後日振り込みを待たせるような不安は一切ありません！
+            <h2 class="text-4xl font-black mb-8">査定完了から<span class="text-cashGold">「即・現金」</span>払い。</h2>
+            <p class="font-bold text-2xl leading-loose mb-10 text-gray-300">
+                金額にご納得いただければ、どんな高額でも<br>その場で現金（キャッシュ）にてお支払いいたします。
             </p>
-            <div class="font-black text-3xl md:text-6xl text-impact text-cashGold mb-4">
-                💰 最短当日 出張可能！ 💰
+            <a href="tel:0120000000" class="w-full bg-alertRed text-white border-[6px] border-white rounded-[50px] py-6 px-4 pulsing-cta flex flex-col items-center justify-center">
+                <span class="text-lg font-black mb-1 tracking-widest text-cashGold">＼ 今すぐ無料出張を依頼する ／</span>
+                <span class="text-5xl font-black tracking-wider text-impact">0120-000-000</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- 買取実績（強烈な証拠） -->
+    <section class="py-24 bg-bgLight text-pitchBlack">
+        <div class="max-w-5xl mx-auto px-6">
+            <h2 class="text-center font-black text-4xl mb-16 border-b-8 border-pitchBlack inline-block w-full pb-4">
+                驚きの価格が続出！<br><span class="text-alertRed text-3xl md:text-5xl mt-4 inline-block">最新の高額買取実績</span>
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- 実績1 -->
+                <div class="bg-white border-4 border-gray-200 p-6 flex flex-col pt-12 relative shadow-lg">
+                    <div class="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-pitchBlack text-cashGold font-black text-xl px-6 py-2 rounded-full border-4 border-white whitespace-nowrap">他社で0円と言われた</div>
+                    <div class="text-center mb-4 text-7xl">🏺</div>
+                    <h3 class="font-black text-2xl mb-2 text-center text-alertRed">遺品の古い壺</h3>
+                    <p class="font-bold text-gray-600 mb-6 text-sm flex-grow">蔵の掃除で出てきたホコリまみれの品。鑑定の結果、江戸初期の希少な古伊万里と判明。</p>
+                    <div class="bg-cashGold text-pitchBlack font-black text-center py-4 text-2xl border-4 border-pitchBlack">
+                        ¥ 1,250,000
+                    </div>
+                </div>
+
+                <!-- 実績2 -->
+                <div class="bg-white border-4 border-gray-200 p-6 flex flex-col pt-12 relative shadow-lg">
+                    <div class="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-pitchBlack text-cashGold font-black text-xl px-6 py-2 rounded-full border-4 border-white whitespace-nowrap">動かなくても価値アリ</div>
+                    <div class="text-center mb-4 text-7xl">⌚️</div>
+                    <h3 class="font-black text-2xl mb-2 text-center text-alertRed">サビたアンティーク時計</h3>
+                    <p class="font-bold text-gray-600 mb-6 text-sm flex-grow">ガラスが割れ、針も動かない状態でしたが、内部部品の海外需要が高く高額査定に。</p>
+                    <div class="bg-cashGold text-pitchBlack font-black text-center py-4 text-2xl border-4 border-pitchBlack">
+                        ¥ 680,000
+                    </div>
+                </div>
+
+                <!-- 実績3 -->
+                <div class="bg-white border-4 border-gray-200 p-6 flex flex-col pt-12 relative shadow-lg">
+                    <div class="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-pitchBlack text-cashGold font-black text-xl px-6 py-2 rounded-full border-4 border-white whitespace-nowrap">ただの布切れかと思いきや</div>
+                    <div class="text-center mb-4 text-7xl">👘</div>
+                    <h3 class="font-black text-2xl mb-2 text-center text-alertRed">数十着の古い着物</h3>
+                    <p class="font-bold text-gray-600 mb-6 text-sm flex-grow">タンスの肥やしになっていた着物の山。その中に人間国宝の作品が混ざっているのを発見。</p>
+                    <div class="bg-cashGold text-pitchBlack font-black text-center py-4 text-2xl border-4 border-pitchBlack">
+                        ¥ 430,000
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Webフォーム -->
-    <section class="py-20 bg-gray-100 text-pitchBlack" id="form">
-        <div class="max-w-2xl mx-auto px-4">
-            <div class="bg-white p-8 md:p-10 rounded-2xl shadow-2xl border-4 border-alertRed">
-                <h3 class="text-2xl md:text-3xl font-black mb-8 text-center text-alertRed border-b-2 border-alertRed pb-4">
-                    無料出張・WEB査定依頼
-                </h3>
-                <form class="space-y-6">
+    <!-- よくある質問 (FAQ: 不安払拭) -->
+    <section class="py-20 bg-gray-100 text-pitchBlack">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-center font-black text-4xl mb-16 text-pitchBlack">よくあるご質問</h2>
+            
+            <div class="space-y-6">
+                <!-- Q1 -->
+                <div class="bg-white border-2 border-gray-300 p-6 rounded-lg shadow-sm">
+                    <div class="flex items-start gap-4 mb-4">
+                        <span class="text-alertRed font-black text-3xl leading-none">Q.</span>
+                        <h3 class="font-black text-2xl mt-1">本当に出張費や査定費は無料ですか？</h3>
+                    </div>
+                    <div class="flex items-start gap-4 border-t-2 border-dashed border-gray-200 pt-4">
+                        <span class="text-blue-600 font-black text-3xl leading-none">A.</span>
+                        <p class="font-bold text-lg text-gray-700 mt-1">はい、完全無料です。日本全国どこへでも出張費0円、査定費0円でお伺いします。仮にご提示した金額にご満足いただけずお売り頂かない場合でも、キャンセル料等の名目で1円も頂戴することはありません。</p>
+                    </div>
+                </div>
+                <!-- Q2 -->
+                <div class="bg-white border-2 border-gray-300 p-6 rounded-lg shadow-sm">
+                    <div class="flex items-start gap-4 mb-4">
+                        <span class="text-alertRed font-black text-3xl leading-none">Q.</span>
+                        <h3 class="font-black text-2xl mt-1">1品だけでも出張してくれますか？</h3>
+                    </div>
+                    <div class="flex items-start gap-4 border-t-2 border-dashed border-gray-200 pt-4">
+                        <span class="text-blue-600 font-black text-3xl leading-none">A.</span>
+                        <p class="font-bold text-lg text-gray-700 mt-1">喜んでお伺いいたします。壊れたアクセサリー1点、古いカメラ1台からでも、専門の鑑定士が真心をこめて査定に上がります。遠慮なくお電話ください。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 最終Webフォーム（ダメ押しのクロージング） -->
+    <section class="py-24 bg-danger text-white border-t-[10px] border-pitchBlack" id="form">
+        <div class="max-w-3xl mx-auto px-4">
+            <h2 class="text-4xl md:text-5xl font-black text-center mb-8 text-impact tracking-widest">お申し込みはコチラから！</h2>
+            <p class="text-center font-bold text-xl mb-12 shadow-black drop-shadow-md">最短即日対応！まずは金額を知るだけでもOKです！</p>
+
+            <div class="bg-white text-pitchBlack p-10 rounded-[30px] border-[8px] border-pitchBlack shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
+                <form class="space-y-8">
                     <div>
-                        <label class="block font-black text-lg mb-2">お名前 <span class="text-white bg-alertRed px-2 py-1 text-xs rounded">必須</span></label>
-                        <input type="text" class="w-full bg-gray-50 border-2 border-gray-300 p-4 font-bold text-xl focus:outline-none focus:border-alertRed" placeholder="山田 太郎">
+                        <label class="block font-black text-2xl mb-3 flex items-center gap-3">
+                            👨 お名前 <span class="bg-alertRed text-white px-3 py-1 text-sm rounded border-2 border-darkRed">必須</span>
+                        </label>
+                        <input type="text" class="w-full bg-gray-50 border-4 border-gray-300 p-5 font-bold text-2xl focus:outline-none focus:border-alertRed transition" placeholder="山田 太郎">
                     </div>
                     <div>
-                        <label class="block font-black text-lg mb-2">お電話番号 <span class="text-white bg-alertRed px-2 py-1 text-xs rounded">必須</span></label>
-                        <input type="tel" class="w-full bg-gray-50 border-2 border-gray-300 p-4 font-bold text-xl focus:outline-none focus:border-alertRed" placeholder="090-0000-0000">
+                        <label class="block font-black text-2xl mb-3 flex items-center gap-3">
+                            📞 お電話番号 <span class="bg-alertRed text-white px-3 py-1 text-sm rounded border-2 border-darkRed">必須</span>
+                        </label>
+                        <input type="tel" class="w-full bg-gray-50 border-4 border-gray-300 p-5 font-bold text-2xl focus:outline-none focus:border-alertRed transition" placeholder="090-0000-0000">
                     </div>
                     <div>
-                        <label class="block font-black text-lg mb-2">ご覧になりたいお品物 <span class="text-gray-500 text-xs">（任意・わかる範囲でOK）</span></label>
-                        <textarea class="w-full bg-gray-50 border-2 border-gray-300 p-4 font-bold focus:outline-none focus:border-alertRed" rows="3" placeholder="古いROLEXの時計と、奥さんが着ていた大量の着物があります。"></textarea>
+                        <label class="block font-black text-xl mb-3 text-gray-600">お品物の内容（任意 / わからなければ空欄でOK！）</label>
+                        <textarea class="w-full bg-gray-50 border-4 border-gray-300 p-4 font-bold text-xl focus:outline-none focus:border-alertRed transition" rows="4" placeholder="とりあえず部屋にあるものを全部見てほしい"></textarea>
                     </div>
-                    <button type="submit" class="w-full bg-alertRed text-white font-black text-2xl md:text-3xl py-6 rounded-xl shadow-[0_8px_0_#991B1B] hover:translate-y-[4px] hover:shadow-[0_4px_0_#991B1B] transition-all mt-4">
-                        無料で査定を依頼する！
+                    <button type="submit" class="w-full bg-alertRed text-white font-black text-3xl md:text-4xl py-8 rounded-[20px] shadow-[0_10px_0_#991B1B] hover:translate-y-[5px] hover:shadow-[0_5px_0_#991B1B] transition-all mt-4 border-4 border-darkRed pulsing-cta">
+                        完全無料！ プロの査定を呼ぶ ＞
                     </button>
-                    <p class="text-center font-bold text-sm mt-6">お電話でのご依頼は 0120-000-000 (9:00〜21:00)</p>
+                    <p class="text-center font-black text-lg mt-8 text-alertRed">お急ぎの方はお電話で: 0120-000-000</p>
                 </form>
             </div>
         </div>
     </section>
 
+    <!-- フッター -->
+    <footer class="bg-pitchBlack text-gray-500 text-center py-16 text-sm font-bold border-t-2 border-gray-800">
+        <p class="text-xl text-gray-400 mb-2">日本全国スピード出張 万福丸</p>
+        <p>&copy; 2026 古物商許可番号 第0000000000号</p>
+    </footer>
+
     <!-- モバイル向け 超強力固定フッターCTA -->
-    <div class="sticky-footer-cta md:hidden">
-        <a href="tel:0120000000" class="block w-full text-white py-3 text-center flex flex-col items-center justify-center">
-            <span class="text-xs font-black tracking-widest mb-1 shadow-sm">＼ 捨てちゃう前に、今すぐ電話！ ／</span>
-            <span class="text-4xl font-black text-impact tracking-widest drop-shadow-md">0120-000-000</span>
+    <div class="sticky-footer-cta md:hidden bg-danger">
+        <a href="tel:0120000000" class="block w-full text-white py-3 text-center flex flex-col items-center justify-center pulsing-cta">
+            <span class="text-xs font-black tracking-widest mb-1 shadow-sm border-b border-white pb-1">＼ 金額に不満なら即キャンセルOK！ ／</span>
+            <div class="flex items-center gap-2">
+                <span class="text-3xl">📞</span>
+                <span class="text-4xl font-black text-impact tracking-widest drop-shadow-md">0120-000-000</span>
+            </div>
         </a>
     </div>
 
