@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NEON HIRE | Gen Z-Optimized ATS</title>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Noto+Sans+JP:wght@700;900&display=swap" rel="stylesheet">
+    <title>NEON HIRE | Z世代に特化したカルチャーフィット採用ツール</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700;900&family=Noto+Sans+JP:wght@500;700;900&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -23,93 +23,373 @@
                     boxShadow: {
                         'neo': '6px 6px 0px 0px rgba(17, 17, 17, 1)',
                         'neo-hover': '2px 2px 0px 0px rgba(17, 17, 17, 1)',
+                        'neo-lg': '12px 12px 0px 0px rgba(17, 17, 17, 1)',
                     }
                 }
             }
         }
     </script>
     <style>
-        body { background-color: #F4F4F4; color: #111111; font-family: 'Noto Sans JP', sans-serif; overflow-x: hidden; }
+        body { background-color: #F4F4F4; color: #111111; font-family: 'Noto Sans JP', sans-serif; overflow-x: hidden; line-height: 1.8; }
         .br-neo { border: 4px solid #111111; }
+        .br-neo-b { border-bottom: 4px solid #111111; }
         
-        /* Marquee Animation */
         .marquee { white-space: nowrap; overflow: hidden; box-sizing: border-box; }
         .marquee span { display: inline-block; padding-left: 100%; animation: marquee 15s linear infinite; }
         @keyframes marquee { 0% { transform: translate(0, 0); } 100% { transform: translate(-100%, 0); } }
         
         .hover-lift { transition: transform 0.1s ease, box-shadow 0.1s ease; }
         .hover-lift:hover { transform: translate(4px, 4px); box-shadow: 2px 2px 0px 0px rgba(17,17,17,1) !important; }
+        
+        h1, h2, h3 { line-height: 1.4; word-break: keep-all; overflow-wrap: break-word; }
+        .phrase { display: inline-block; }
     </style>
 </head>
 <body class="antialiased">
 
     <!-- Top Marquee -->
-    <div class="bg-secondary text-white font-display text-lg py-2 br-neo border-x-0 border-t-0 marquee shadow-neo mb-6">
-        <span>⚡️ HIRING IS BROKEN ⚡️ WE FIXED IT ⚡️ Z-GEN OPTIMIZED ATS ⚡️ NO MORE BORING RESUMES ⚡️ HIRING IS BROKEN ⚡️ WE FIXED IT ⚡️ Z-GEN OPTIMIZED ATS ⚡️ NO MORE BORING RESUMES ⚡️</span>
+    <div class="bg-secondary text-white font-display text-lg py-2 br-neo border-x-0 border-t-0 marquee shadow-neo sticky top-0 z-50">
+        <span class="font-bold tracking-widest uppercase">⚡️ Stop matching keywords. Start matching culture. ⚡️ Z-gen optimized ATS ⚡️ Stop matching keywords. Start matching culture. ⚡️ Z-gen optimized ATS ⚡️</span>
     </div>
 
     <!-- Header -->
-    <header class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center mb-12">
-        <div class="font-display font-bold text-4xl tracking-tighter mix-blend-difference">NEON HIRE</div>
-        <a href="#" class="bg-primary px-6 py-2 br-neo shadow-neo font-display font-bold hover-lift">GET DEMO</a>
+    <header class="max-w-7xl mx-auto px-4 py-6 flex flex-col md:flex-row justify-between items-center z-40 relative">
+        <div class="font-display font-black text-4xl tracking-tighter mb-4 md:mb-0">NEON HIRE</div>
+        <div class="flex gap-4">
+            <a href="#features" class="hidden md:block font-bold mt-2 hover:text-secondary">機能</a>
+            <a href="#pricing" class="hidden md:block font-bold mt-2 mr-6 hover:text-secondary">料金</a>
+            <a href="#contact" class="bg-primary px-6 py-3 br-neo shadow-neo font-display font-bold hover-lift">GET DEMO</a>
+        </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8 mb-24">
-        <!-- Text Content -->
+    <!-- 1. Hero Section -->
+    <section class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8 mb-32 mt-12 relative z-10">
         <div class="flex flex-col justify-center">
-            <div class="inline-block bg-cyan br-neo font-bold text-sm px-3 py-1 mb-6 w-fit transform -rotate-2">
+            <div class="inline-block bg-cyan br-neo font-bold text-sm px-4 py-2 mb-8 w-fit transform -rotate-2">
                 FOR STARTUPS & CREATIVE TEAMS
             </div>
-            <h1 class="text-5xl md:text-7xl font-black mb-6 leading-tight">
-                <span class="bg-white">カルチャーフィットを</span><br>
-                <span class="bg-primary px-2">ハックせよ。</span>
+            <h1 class="text-5xl md:text-6xl lg:text-7xl font-black mb-8 leading-tight">
+                <span class="phrase bg-white px-2 mb-2">履歴書では、</span><br>
+                <span class="phrase bg-white px-2 mb-2">もう優秀層は</span><br>
+                <span class="phrase bg-primary px-2">見抜けない。</span>
             </h1>
-            <p class="text-xl font-bold mb-8 leading-relaxed">
-                履歴書だけじゃわからない。<br>
-                Z世代の「熱量」と「センス」を可視化する、<br>
-                全く新しい採用管理システム。
+            <p class="text-xl font-bold mb-10 leading-relaxed text-dark/80">
+                <span class="phrase">キーワードマッチングだけの採用は終わりです。</span><br>
+                <span class="phrase">Z世代の「熱量」と「センス」を可視化し、</span><span class="phrase">カルチャーフィット率を3倍に引き上げる</span><span class="phrase">全く新しい採用プラットフォーム。</span>
             </p>
-            <div class="flex gap-4">
-                <a href="#" class="bg-secondary text-white px-8 py-4 text-xl font-bold br-neo shadow-neo hover-lift text-center w-full md:w-auto">TRY FOR FREE</a>
+            <div class="flex flex-col sm:flex-row gap-6">
+                <a href="#contact" class="bg-secondary text-white px-8 py-5 text-xl font-black br-neo shadow-neo hover-lift text-center w-full sm:w-auto">14日間 無料で試す</a>
+                <a href="#contact" class="bg-white px-8 py-5 text-xl font-bold br-neo shadow-neo hover-lift text-center w-full sm:w-auto">資料DL</a>
             </div>
         </div>
 
-        <!-- Image Content -->
-        <div class="relative">
+        <div class="relative mt-8 md:mt-0">
             <div class="absolute inset-0 bg-cyan br-neo transform translate-x-4 translate-y-4"></div>
-            <img src="img/hero.png" alt="Creative Team" class="w-full h-auto object-cover relative z-10 br-neo filter contrast-125 saturate-150">
+            <img src="img/hero.png" alt="Creative Team" class="w-full h-auto object-cover relative z-10 br-neo">
             <!-- Floating Badge -->
-            <div class="absolute -bottom-6 -left-6 bg-primary br-neo shadow-neo p-4 z-20 transform rotate-6">
-                <div class="font-display font-bold text-3xl">300%</div>
-                <div class="font-bold text-sm">MATCH RATE UP</div>
+            <div class="absolute -bottom-6 -left-6 bg-primary br-neo shadow-neo p-6 z-20 transform rotate-6 border-b-8 border-r-8">
+                <div class="font-display font-black text-4xl">300%</div>
+                <div class="font-bold text-sm">マッチング率向上*</div>
+                <div class="text-[10px]">*当社調べ</div>
             </div>
         </div>
     </section>
 
-    <!-- Features Bento Grid (Neo-brutalism style) -->
-    <section class="max-w-7xl mx-auto px-4 mb-24">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <!-- Card 1 -->
-            <div class="bg-white p-8 br-neo shadow-neo hover-lift">
-                <div class="text-4xl mb-4">🎥</div>
-                <h3 class="text-2xl font-black mb-2 bg-primary inline-block">1-Min Video Pitch</h3>
-                <p class="font-bold mt-4">テキストの履歴書は廃止。TikTok感覚で自己PR動画を提出させ、人柄を瞬時に把握。</p>
+    <!-- 2. The Problem (Pain Empathy) -->
+    <section class="border-y-4 border-dark bg-white py-24 mb-32 relative overflow-hidden">
+        <!-- Abstract BG shapes -->
+        <div class="absolute top-0 right-0 w-64 h-64 bg-primary rounded-full blur-[100px] opacity-30"></div>
+        
+        <div class="max-w-5xl mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-5xl font-black mb-12">
+                <span class="phrase">従来の採用ツールで、</span><span class="phrase">こんな「妥協」していませんか？</span>
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
+                <div class="bg-gray-100 p-8 br-neo relative">
+                    <div class="absolute -top-5 -left-5 bg-secondary text-white w-10 h-10 flex items-center justify-center font-display font-bold text-xl br-neo rotate-6 block">!</div>
+                    <h3 class="text-xl font-bold mb-4">学歴と職歴でしかソートできない</h3>
+                    <p class="text-dark/70 font-semibold">本来自社にフィットするはずの「ポテンシャル層」や「尖った才能」が、検索条件の時点でふるい落とされている。</p>
+                </div>
+                <div class="bg-gray-100 p-8 br-neo relative">
+                    <div class="absolute -top-5 -left-5 bg-cyan w-10 h-10 flex items-center justify-center font-display font-bold text-xl br-neo -rotate-6 block">!</div>
+                    <h3 class="text-xl font-bold mb-4">面接前後のやり取りがメールのみ</h3>
+                    <p class="text-dark/70 font-semibold">堅苦しいメール文化を嫌うZ世代の離脱率が高い。日程調整だけで何日もかかり、他社にスピードで負ける。</p>
+                </div>
             </div>
-            <!-- Card 2 -->
-            <div class="bg-cyan p-8 br-neo shadow-neo hover-lift">
-                <div class="text-4xl mb-4">💬</div>
-                <h3 class="text-2xl font-black mb-2 bg-white inline-block">Native Chat UI</h3>
-                <p class="font-bold mt-4">面接調整はすべてLINE連携のチャットUI。メールの堅苦しいやり取りを排除し、離脱率を激減。</p>
-            </div>
-            <!-- Card 3 -->
-            <div class="bg-secondary text-white p-8 br-neo shadow-neo hover-lift">
-                <div class="text-4xl mb-4">📊</div>
-                <h3 class="text-2xl font-black mb-2 bg-dark text-white inline-block px-1">Vibe Match Score</h3>
-                <p class="font-bold mt-4">独自のAIが、求職者のスキルと社風（Vibe）の適合度を0-100点で自動スコアリング。</p>
+            
+            <div class="mt-16">
+                <div class="bg-primary inline-block font-black text-2xl md:text-4xl px-6 py-4 br-neo transform rotate-1 shadow-neo">
+                    NEON HIRE が全て解決します。
+                </div>
             </div>
         </div>
     </section>
+
+    <!-- 3. Core Features (Deep Volume) -->
+    <section class="max-w-7xl mx-auto px-4 mb-32" id="features">
+        <div class="text-center mb-16">
+            <h2 class="font-display font-black text-5xl md:text-7xl tracking-tighter uppercase mb-4 text-white" style="-webkit-text-stroke: 2px #111;">CORE FEATURES</h2>
+            <p class="text-xl font-bold">Z世代の採用をハックする、3つの狂った機能</p>
+        </div>
+
+        <div class="space-y-16">
+            <!-- Feature 1 -->
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center bg-white p-8 md:p-12 br-neo shadow-neo">
+                <div class="md:col-span-5 relative">
+                    <div class="aspect-square bg-cyan br-neo flex items-center justify-center overflow-hidden relative">
+                        <!-- Abstract UI representation -->
+                        <div class="w-3/4 h-3/4 bg-white br-neo flex flex-col p-4 shadow-neo hover-lift">
+                            <div class="w-12 h-12 bg-secondary rounded-full br-neo mb-4"></div>
+                            <div class="w-full h-8 bg-gray-200 br-neo mb-2"></div>
+                            <div class="w-2/3 h-4 bg-primary br-neo"></div>
+                            <div class="mt-auto flex justify-between">
+                                <span class="bg-dark text-white px-2 py-1 text-xs br-neo">Vibe Score: 98</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:col-span-7 md:pl-12">
+                    <div class="font-display text-secondary font-black text-2xl mb-2">01</div>
+                    <h3 class="text-3xl font-black mb-6 bg-primary inline-block px-2">Vibe Match AI (バイブス判定)</h3>
+                    <p class="text-lg font-bold mb-6">
+                        <span class="phrase">自社のハイパフォーマーへのアンケートデータと、</span><span class="phrase">候補者の回答をAIが瞬時に分析。</span><span class="phrase">学歴ではなく「価値観」と「カルチャー」の適合度を0〜100点で可視化します。</span>
+                    </p>
+                    <ul class="space-y-2 font-bold opacity-80 list-disc list-inside">
+                        <li>自社のカルチャーを10問の直感的な質問で定義</li>
+                        <li>履歴書の前にスコアで足切り・優先度付けが可能</li>
+                        <li>入社後の早期離職率を徹底的に防ぐ</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Feature 2 -->
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center bg-dark text-white p-8 md:p-12 br-neo shadow-neo">
+                <div class="md:col-span-7 md:pr-12 order-2 md:order-1">
+                    <div class="font-display text-primary font-black text-2xl mb-2">02</div>
+                    <h3 class="text-3xl font-black mb-6 bg-cyan text-dark inline-block px-2">1-Min TikTok Pitch (動画PR)</h3>
+                    <p class="text-lg font-bold mb-6">
+                        <span class="phrase">テキストの自己PRはもう誰も読みません。</span><span class="phrase">スマホから1分間のショート動画を提出させることで、</span><span class="phrase">書類だけでは見えない「プレゼン力」「熱量」「キャラクター」を瞬時に把握できます。</span>
+                    </p>
+                    <ul class="space-y-2 font-bold opacity-80 list-disc list-inside">
+                        <li>アプリインストール不要、ブラウザから即録画</li>
+                        <li>採用チームでの動画共有・コメント機能</li>
+                        <li>動画提出率の高さで「志望度」を自動スクリーニング</li>
+                    </ul>
+                </div>
+                <div class="md:col-span-5 relative order-1 md:order-2">
+                    <div class="aspect-[3/4] bg-secondary br-neo flex items-center justify-center p-6 transform rotate-3 hover:rotate-0 transition-transform">
+                        <div class="w-full h-full bg-white br-neo flex flex-col justify-center items-center text-dark relative">
+                            <div class="w-16 h-16 bg-primary br-neo rounded-full border-t-0 flex items-center justify-center mb-4">▶</div>
+                            <span class="font-black text-xl text-center">PLAY TO MEET<br>YOUR HERO</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Feature 3 -->
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center bg-white p-8 md:p-12 br-neo shadow-neo">
+                <div class="md:col-span-5 relative">
+                    <div class="aspect-square bg-gray-200 br-neo flex items-center justify-center p-8">
+                        <div class="w-full space-y-4">
+                            <div class="bg-primary p-3 br-neo text-sm font-bold shadow-neo transform -translate-x-4">面接、明日の14時はどうですか？</div>
+                            <div class="bg-white p-3 br-neo text-sm font-bold shadow-neo transform translate-x-4 text-right">大丈夫です！よろしくお願いします🔥</div>
+                            <div class="bg-cyan p-3 br-neo text-sm font-bold shadow-neo text-center">🗓 Google Calendar Updated</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:col-span-7 md:pl-12">
+                    <div class="font-display text-secondary font-black text-2xl mb-2">03</div>
+                    <h3 class="text-3xl font-black mb-6 bg-primary inline-block px-2">Native Chat & Sync (即時連携)</h3>
+                    <p class="text-lg font-bold mb-6">
+                        <span class="phrase">面接調整はすべてLINEまたはネイティブチャットで。</span><span class="phrase">さらにSlack、Notion、Google Calendarと完全連携し、</span><span class="phrase">採用担当者の事務作業をゼロにします。</span>
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-dark text-white px-3 py-1 font-bold text-sm br-neo">Slack</span>
+                        <span class="bg-dark text-white px-3 py-1 font-bold text-sm br-neo">Notion</span>
+                        <span class="bg-dark text-white px-3 py-1 font-bold text-sm br-neo">Google Meet</span>
+                        <span class="bg-dark text-white px-3 py-1 font-bold text-sm br-neo">LINE</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Proof Stack (Social Proof) -->
+    <section class="bg-primary border-y-4 border-dark py-24 mb-32">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-center font-black text-3xl md:text-5xl mb-16">
+                <span class="bg-white px-4 py-2 br-neo shadow-neo transform -rotate-2 inline-block">既に500社以上のスタートアップが熱狂</span>
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-8 br-neo shadow-neo relative">
+                    <div class="font-display text-4xl text-cyan font-black mb-4">"GAME CHANGER"</div>
+                    <p class="font-bold mb-6">「Vibeスコアのおかげで、1次面接からいきなり深い話ができるようになりました。面接官の工数が半減し、内定承諾率は2倍に跳ね上がりました。」</p>
+                    <div class="flex items-center gap-4 border-t-2 border-dark pt-4">
+                        <div class="w-12 h-12 bg-secondary br-neo"></div>
+                        <div>
+                            <div class="font-black">田中 翔太</div>
+                            <div class="text-sm font-bold opacity-70">SaaS Startup / CEO</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-8 br-neo shadow-neo relative">
+                    <div class="font-display text-4xl text-secondary font-black mb-4">"BYE RESUMES"</div>
+                    <p class="font-bold mb-6">「1分動画アピールが最高。文字だけじゃ絶対に引っかからない、熱量のあるダイヤの原石を見つけることができます。もう履歴書には戻れません。」</p>
+                    <div class="flex items-center gap-4 border-t-2 border-dark pt-4">
+                        <div class="w-12 h-12 bg-primary br-neo"></div>
+                        <div>
+                            <div class="font-black">鈴木 ミカ</div>
+                            <div class="text-sm font-bold opacity-70">Creative Agency / CHRO</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial 3 -->
+                <div class="bg-white p-8 br-neo shadow-neo relative">
+                    <div class="font-display text-4xl text-dark font-black mb-4">"SPEED WINS"</div>
+                    <p class="font-bold mb-6">「LINE連携チャットにより、応募から面接設定までが当日に完結。優秀なZ世代はスピードで他社に取られていたので、このUXは圧倒的武器です。」</p>
+                    <div class="flex items-center gap-4 border-t-2 border-dark pt-4">
+                        <div class="w-12 h-12 bg-cyan br-neo"></div>
+                        <div>
+                            <div class="font-black">佐藤 健</div>
+                            <div class="text-sm font-bold opacity-70">Web3 Tech / VP of HR</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Pricing (Bento Style) -->
+    <section class="max-w-5xl mx-auto px-4 mb-32" id="pricing">
+        <div class="text-center mb-16">
+            <h2 class="font-black text-4xl md:text-5xl mb-4">シンプルで透明な料金体系</h2>
+            <p class="font-bold text-lg opacity-80">採用人数が増えても、追加課金は一切ありません。</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Plan 1 -->
+            <div class="bg-white p-10 br-neo shadow-neo hover-lift flex flex-col">
+                <div class="inline-block bg-primary font-black px-3 py-1 br-neo w-fit transform -rotate-2 mb-6">SEED & EARLY</div>
+                <h3 class="font-display font-black text-3xl mb-2">LITE PLAN</h3>
+                <div class="text-4xl font-black mb-6">¥30,000<span class="text-lg opacity-50">/mo</span></div>
+                <ul class="space-y-4 font-bold mb-10 flex-grow">
+                    <li class="flex gap-2"><span>✅</span> 月間候補者数: 50名まで</li>
+                    <li class="flex gap-2"><span>✅</span> Vibe Match AI 制限あり</li>
+                    <li class="flex gap-2"><span>✅</span> 1分動画フォーム対応</li>
+                    <li class="flex gap-2"><span>✅</span> 基本チャット連携</li>
+                </ul>
+                <a href="#contact" class="bg-white text-dark w-full block text-center py-4 font-black br-neo shadow-neo">START LITE</a>
+            </div>
+
+            <!-- Plan 2 (Recommended) -->
+            <div class="bg-dark text-white p-10 br-neo shadow-neo hover-lift flex flex-col relative transform md:scale-105 z-10 border-cyan">
+                <div class="absolute -top-4 -right-4 bg-secondary text-white font-display font-black text-xl px-4 py-2 br-neo rotate-6 shadow-neo">
+                    POPULAR
+                </div>
+                <div class="inline-block bg-cyan text-dark font-black px-3 py-1 br-neo w-fit transform -rotate-2 mb-6">GROWTH & MIDDLE</div>
+                <h3 class="font-display font-black text-3xl mb-2 text-primary">SCALE PLAN</h3>
+                <div class="text-4xl font-black mb-6">¥80,000<span class="text-lg opacity-50">/mo</span></div>
+                <ul class="space-y-4 font-bold mb-10 flex-grow border-white/20 pb-4">
+                    <li class="flex gap-2"><span>🔥</span> 月間候補者数: 無制限</li>
+                    <li class="flex gap-2"><span>🔥</span> Vibe Match AI 完全開放</li>
+                    <li class="flex gap-2"><span>🔥</span> Slack/Notion 自動連携</li>
+                    <li class="flex gap-2"><span>🔥</span> 専任採用サクセス担当</li>
+                </ul>
+                <a href="#contact" class="bg-primary text-dark w-full block text-center py-4 font-black br-neo shadow-neo transition hover:bg-white">START SCALE</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. FAQ Section -->
+    <section class="max-w-4xl mx-auto px-4 mb-32">
+        <h2 class="font-black text-3xl md:text-5xl mb-12 text-center bg-cyan py-2 br-neo inline-block px-6 transform -rotate-1 shadow-neo">FAQ</h2>
+        <div class="space-y-6">
+            <details class="bg-white p-6 br-neo shadow-neo cursor-pointer group">
+                <summary class="font-black text-xl flex justify-between items-center list-none">
+                    導入までどのくらいかかりますか？
+                    <span class="text-secondary font-display group-open:rotate-45 transition-transform">+</span>
+                </summary>
+                <p class="font-bold mt-4 pt-4 border-t-2 border-dark/10 opacity-80">
+                    最短即日でアカウント発行が完了します。自社のカルチャー定義（Vibeスコア用）のアンケート作成も、テンプレートを使用すれば10分程度で設定可能です。
+                </p>
+            </details>
+            <details class="bg-white p-6 br-neo shadow-neo cursor-pointer group">
+                <summary class="font-black text-xl flex justify-between items-center list-none">
+                    既存のATS（採用管理ツール）からの移行はできますか？
+                    <span class="text-secondary font-display group-open:rotate-45 transition-transform">+</span>
+                </summary>
+                <p class="font-bold mt-4 pt-4 border-t-2 border-dark/10 opacity-80">
+                    はい。CSVエクスポート機能を持つツールからであれば、過去の候補者情報を一括インポート可能です。専任のCSチームが移行作業を無償でサポートいたします。
+                </p>
+            </details>
+            <details class="bg-white p-6 br-neo shadow-neo cursor-pointer group">
+                <summary class="font-black text-xl flex justify-between items-center list-none">
+                    応募者は専用アプリを入れる必要がありますか？
+                    <span class="text-secondary font-display group-open:rotate-45 transition-transform">+</span>
+                </summary>
+                <p class="font-bold mt-4 pt-4 border-t-2 border-dark/10 opacity-80">
+                    不要です。アンケート回答、1分動画の録画・提出、面接日程の調整など、すべてスマホのブラウザ上からシームレスに完了します。これが応募完了率が高い最大の理由です。
+                </p>
+            </details>
+        </div>
+    </section>
+
+    <!-- 7. Final Action (Contact) -->
+    <section class="bg-primary border-y-4 border-dark py-32" id="contact">
+        <div class="max-w-3xl mx-auto px-4 text-center">
+            <div class="w-16 h-16 bg-secondary br-neo shadow-neo flex items-center justify-center font-display font-black text-white text-3xl mx-auto transform rotate-12 mb-8">!</div>
+            <h2 class="text-4xl md:text-6xl font-black mb-8 leading-tight">
+                <span class="bg-white px-2">採用プロセスを</span><br>
+                <span class="bg-dark text-white px-2">今日、破壊しよう。</span>
+            </h2>
+            <p class="text-xl font-bold mb-12">
+                まずはデモ画面で、圧倒的なUI/UXを体験してください。<br>
+                14日間の無料トライアルを実施中。
+            </p>
+            
+            <form class="bg-white p-8 br-neo shadow-neo-lg text-left max-w-xl mx-auto transform rotate-1">
+                <div class="mb-6">
+                    <label class="block font-black mb-2 text-lg">会社用メールアドレス</label>
+                    <input type="email" class="w-full bg-gray-100 p-4 br-neo focus:outline-none focus:bg-cyan/10 transition-colors" placeholder="hello@company.com" required>
+                </div>
+                <div class="mb-8">
+                    <label class="block font-black mb-2 text-lg">ご要望</label>
+                    <select class="w-full bg-gray-100 p-4 br-neo focus:outline-none font-bold">
+                        <option>まずは14日間無料で試したい</option>
+                        <option>オンラインデモを見てみたい</option>
+                        <option>資料だけダウンロードしたい</option>
+                    </select>
+                </div>
+                <button type="submit" class="w-full bg-secondary text-white py-5 font-black text-xl br-neo shadow-neo hover-lift">
+                    今すぐ始める ⚡️
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-12 px-4 border-t-8 border-secondary">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8 border-b-2 border-white/20 pb-8 mb-8">
+            <div class="font-display font-black text-3xl">NEON HIRE</div>
+            <div class="flex flex-wrap gap-6 font-bold">
+                <a href="#" class="hover:text-cyan transition-colors">機能</a>
+                <a href="#" class="hover:text-cyan transition-colors">料金</a>
+                <a href="#" class="hover:text-cyan transition-colors">導入事例</a>
+                <a href="#" class="hover:text-cyan transition-colors">会社概要</a>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 opacity-60 text-sm font-bold">
+            <div>&copy; 2026 NEON HIRE Inc. All rights reserved.</div>
+            <div class="flex gap-4">
+                <a href="#" class="hover:text-white">利用規約</a>
+                <a href="#" class="hover:text-white">プライバシーポリシー</a>
+            </div>
+        </div>
+    </footer>
 
 </body>
 </html>

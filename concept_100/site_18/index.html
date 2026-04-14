@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TERRA FIRMA | Premium Real Estate & M&A</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Noto+Serif+JP:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>TERRA FIRMA | Private Wealth Asset Management</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Noto+Serif+JP:wght@300;400;600&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- GSAP for Horizontal Scroll -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script>
@@ -16,7 +15,8 @@
                     colors: {
                         bg: '#EBEAE5',     /* Warm Stone Light */
                         textPrimary: '#2B2B29', /* Charcoal */
-                        accent: '#8C7A6B', /* Muted Earth */
+                        accent: '#8C7A6B', /* Muted Earth / Bronze */
+                        dark: '#1A1A19',
                     },
                     fontFamily: {
                         sans: ['Noto Serif JP', 'serif'],
@@ -27,100 +27,253 @@
         }
     </script>
     <style>
-        body { background-color: #EBEAE5; color: #2B2B29; font-family: 'Noto Serif JP', serif; font-size: 16px; font-weight: 300; overflow-x: hidden; }
-        
-        .horizontal-scroll-wrapper { width: 100vw; height: 100vh; overflow: hidden; display: flex; flex-direction: column; }
-        .horizontal-container { width: 300vw; height: 100%; display: flex; flex-wrap: nowrap; }
-        .panel { width: 100vw; height: 100vh; display: flex; align-items: center; justify-content: center; padding: 10%; position: relative;}
+        body { background-color: #EBEAE5; color: #2B2B29; font-family: 'Noto Serif JP', serif; font-size: 16px; font-weight: 300; overflow-x: hidden; line-height: 2; }
         
         .phrase { display: inline-block; }
         h1, h2, h3 { line-height: 1.6; letter-spacing: 0.1em; }
         .text-border { border-left: 1px solid #8C7A6B; padding-left: 2rem; }
+
+        /* Horizontal Scroll specifics */
+        .horizontal-scroll-wrapper { width: 100vw; height: 100vh; overflow: hidden; display: flex; flex-direction: column; background: #1A1A19; color: #EBEAE5; }
+        .horizontal-container { width: 400vw; height: 100%; display: flex; flex-wrap: nowrap; }
+        .panel { width: 100vw; height: 100vh; display: flex; align-items: center; justify-content: center; padding: 5%; position: relative; }
+        
+        /* Smooth fade for vertical sections */
+        .fade-up { opacity: 0; transform: translateY(30px); transition: opacity 1s ease, transform 1s ease; }
+        .fade-up.visible { opacity: 1; transform: translateY(0); }
     </style>
 </head>
 <body class="antialiased">
 
-    <!-- Fixed Quiet Header -->
-    <header class="fixed w-full top-0 px-8 py-6 flex justify-between items-center z-50 mix-blend-difference text-[#EBEAE5]">
-        <div class="font-serif text-xl tracking-[0.2em] uppercase">Terra Firma</div>
-        <div class="text-[10px] tracking-widest uppercase">Private Wealth Asset Management</div>
+    <!-- Fixed Header -->
+    <header class="fixed w-full top-0 px-6 md:px-12 py-8 flex items-center justify-between z-50 mix-blend-difference text-[#EBEAE5]">
+        <div class="font-serif text-2xl tracking-[0.2em] uppercase">Terra Firma</div>
+        <div class="hidden md:flex gap-8 text-[10px] tracking-[0.2em] uppercase">
+            <a href="#philosophy" class="hover:text-accent transition">Philosophy</a>
+            <a href="#portfolio" class="hover:text-accent transition">Portfolio</a>
+            <a href="#network" class="hover:text-accent transition">Network</a>
+            <a href="#contact" class="hover:text-accent transition">Membership</a>
+        </div>
     </header>
 
-    <!-- Scroll Container -->
-    <div class="scroll-container">
-        <!-- Intro -->
-        <section class="h-screen flex items-center px-12 md:px-24">
-            <div class="max-w-4xl">
-                <h1 class="text-3xl md:text-5xl font-light leading-relaxed mb-12">
-                    <span class="phrase">真に価値ある資産は、</span><br>
-                    <span class="phrase text-accent font-serif italic">Never Appears on the Market.</span>
-                </h1>
-                <p class="text-textPrimary/80 leading-[2.5] max-w-2xl text-border">
-                    <span class="phrase">当社は、一般市場には出回らない「水面下の優良アセット」</span><span class="phrase">（都心最高級レジデンス、非公開M&A案件）のみを、</span><span class="phrase">限られたプライベートクライアントへご提供する会員制プラットフォームです。</span>
-                </p>
-                <div class="mt-16 text-xs tracking-widest text-accent uppercase">Scroll to explore ⬇</div>
-            </div>
-        </section>
+    <!-- 1. Hero (Vertical) -->
+    <section class="min-h-screen flex items-center px-6 md:px-12 relative pt-20">
+        <div class="max-w-5xl">
+            <div class="font-serif text-accent text-sm tracking-[0.3em] uppercase mb-8 italic">The Unlisted Assets.</div>
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-light leading-relaxed mb-16">
+                <span class="phrase">真に価値ある資産は、</span><br>
+                <span class="phrase text-accent font-serif italic">Never Appears on the Market.</span>
+            </h1>
+            <p class="text-textPrimary/80 leading-[2.5] max-w-2xl text-border text-lg md:text-xl">
+                <span class="phrase">当社は、一般市場には絶対に出回らない「完全非公開の超優良アセット」</span><br>
+                <span class="phrase">（都心最高級レジデンス、一棟リテール、非公開M&A）のみを、</span><br>
+                <span class="phrase">厳格な審査を通過したプライベートメンバーへご提供する、</span><br>
+                <span class="phrase">完全招待制のアセットマネジメント・ファームです。</span>
+            </p>
+        </div>
+        
+        <div class="absolute bottom-12 left-12 flex items-center gap-4 text-xs tracking-widest text-accent uppercase">
+            <span>Scroll</span>
+            <div class="w-12 h-[1px] bg-accent"></div>
+        </div>
+    </section>
 
-        <!-- GSAP Horizontal Scroll Section -->
-        <section class="horizontal-scroll-wrapper bg-textPrimary text-bg" id="pinSection">
-            <div class="horizontal-container" id="horizontalContainer">
-                
-                <!-- Panel 1: Image -->
-                <div class="panel w-screen flex-shrink-0">
-                    <div class="w-full h-[70vh] relative">
-                        <img src="img/hero.png" alt="Luxury Real Estate" class="w-full h-full object-cover">
-                        <div class="absolute bottom-10 left-10 text-bg">
-                            <div class="font-serif text-xs tracking-[0.3em] mb-2 uppercase opacity-70">Case .01 / Real Estate</div>
-                            <h3 class="text-2xl font-light tracking-widest">Minato-ku, Exclusive Listing</h3>
+    <!-- 2. Methodology (Vertical) -->
+    <section class="py-32 px-6 md:px-12 bg-white" id="philosophy">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+            <div class="order-2 md:order-1">
+                <img src="img/hero.png" alt="Architecture Details" class="w-full h-auto grayscale-[40%] object-cover max-h-[70vh]">
+            </div>
+            <div class="order-1 md:order-2">
+                <h2 class="text-3xl md:text-4xl font-light leading-loose mb-10">
+                    <span class="phrase">情報の非対称性を、</span><br>
+                    <span class="phrase">極限までコントロールする。</span>
+                </h2>
+                <div class="space-y-8 text-textPrimary/80 leading-[2.2]">
+                    <p>
+                        事業承継に伴う非公開売却、著名人の完全プライベートな不動産取引において、情報漏洩は致命傷となります。そのため、真のエクスクルーシブ案件は、インターネットや一般的な仲介業者のシステムに登録されることはありません。
+                    </p>
+                    <p>
+                        私たちは、富裕層ファミリーオフィスや非公開プライベートバンクとの強固なアライアンスにより、この「クローズドな水面下市場」にのみアクセスし、真摯に投資を検討されるVIPメンバーにダイレクトに接続します。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. GSAP Horizontal Scroll Section (Portfolio Showcase) -->
+    <section class="horizontal-scroll-wrapper" id="portfolio">
+        <div class="horizontal-container" id="horizontalContainer">
+            
+            <!-- Panel 1: Intro to horizontal -->
+            <div class="panel w-screen flex-shrink-0">
+                <div class="max-w-3xl pl-12 md:pl-24">
+                    <div class="font-serif text-accent text-sm tracking-[0.3em] uppercase mb-6 italic">Selected Portfolio</div>
+                    <h2 class="text-4xl md:text-6xl font-light leading-relaxed mb-8">
+                        <span class="phrase">私たちが扱うのは、</span><br>
+                        <span class="phrase">「唯一無二」のみ。</span>
+                    </h2>
+                    <p class="text-bg/60 text-lg">Swipe / Scroll Right ➝</p>
+                </div>
+            </div>
+
+            <!-- Panel 2: Image Case -->
+            <div class="panel w-screen flex-shrink-0 px-12 md:px-24">
+                <div class="w-full h-[70vh] relative max-w-5xl mx-auto">
+                    <img src="img/hero.png" alt="Minato-ku Residence" class="w-full h-full object-cover grayscale-[20%]">
+                    <div class="absolute -bottom-10 md:bottom-10 -left-6 md:-left-12 bg-dark p-8 md:p-12 w-[90%] md:w-auto border border-accent/20">
+                        <div class="font-serif text-xs tracking-[0.3em] mb-4 text-accent uppercase">Case .01 / Real Estate</div>
+                        <h3 class="text-2xl font-light tracking-widest mb-6 leading-relaxed">Minato-ku, Azabu<br>Exclusive Penthouse</h3>
+                        <div class="flex gap-8 text-[11px] text-bg/60 tracking-widest border-t border-accent/20 pt-4">
+                            <div>OFF MARKET</div>
+                            <div>PRICE: UNDISCLOSED</div>
                         </div>
                     </div>
                 </div>
-
-                <!-- Panel 2: Text -->
-                <div class="panel w-screen flex-shrink-0">
-                    <div class="max-w-3xl">
-                        <h2 class="text-2xl md:text-4xl font-light leading-loose mb-10">
-                            <span class="phrase">売却の「噂」すら立たない。</span><br>
-                            <span class="phrase">それが極秘案件の条件。</span>
-                        </h2>
-                        <p class="text-bg/70 leading-[2.2] border-l border-accent/50 pl-6">
-                            事業承継に伴う非公開売却や、著名人の完全プライベートな不動産取引において、情報漏洩は命取りです。<br>
-                            私たちは情報の非対称性を極限までコントロールし、真摯に投資を検討されるVIPメンバーにのみダイレクトに接続します。
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Panel 3: Action -->
-                <div class="panel w-screen flex-shrink-0">
-                    <div class="text-center">
-                        <h2 class="font-serif text-3xl mb-8 italic text-accent">Invitation Only</h2>
-                        <p class="text-sm tracking-widest mb-12 opacity-80">新規会員登録は、既存クライアント様からのご紹介のみとさせていただいております。<br>紹介コードをお持ちの方は、下記よりお進みください。</p>
-                        <a href="#" class="inline-block border border-bg px-12 py-4 text-sm tracking-widest uppercase hover:bg-bg hover:text-textPrimary transition duration-500">
-                            Enter Code
-                        </a>
-                    </div>
-                </div>
-
             </div>
-        </section>
-    </div>
 
-    <!-- GSAP Logic -->
+            <!-- Panel 3: Stats/Proof -->
+            <div class="panel w-screen flex-shrink-0 px-12 md:px-24">
+                <div class="max-w-4xl mx-auto">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-32">
+                        <div>
+                            <div class="font-serif text-5xl md:text-7xl font-light text-bg mb-2">0<span class="text-2xl ml-2">件</span></div>
+                            <div class="text-[10px] tracking-[0.3em] uppercase text-accent mb-6 border-b border-accent/30 pb-4">Public Listings</div>
+                            <p class="text-sm leading-relaxed text-bg/70">Terra Firmaが一般公開市場（レインズ等）へ掲載している物件数は常にゼロです。すべてのマッチングは「相対取引」で成立します。</p>
+                        </div>
+                        <div>
+                            <div class="font-serif text-5xl md:text-7xl font-light text-bg mb-2">94<span class="text-2xl ml-2">%</span></div>
+                            <div class="text-[10px] tracking-[0.3em] uppercase text-accent mb-6 border-b border-accent/30 pb-4">Off-Market Success Rate</div>
+                            <p class="text-sm leading-relaxed text-bg/70">売却側からの厳格なオーダーに応え、情報公開前にダイレクトマッチングを成立させる確率です。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Panel 4: M&A / Corporate -->
+            <div class="panel w-screen flex-shrink-0 px-12 md:px-24">
+                <div class="max-w-4xl mx-auto border border-accent/30 p-12 md:p-24 relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-1 h-full bg-accent"></div>
+                    <div class="font-serif text-xs tracking-[0.3em] mb-4 text-accent uppercase">Case .02 / Corporate M&A</div>
+                    <h3 class="text-3xl font-light tracking-widest mb-8 leading-relaxed">Quiet Succession.<br>老舗企業の静かなる承継。</h3>
+                    <p class="text-bg/70 leading-[2.2] mb-8">
+                        不動産だけでなく、歴史ある非公開企業のM&A（事業承継）も手がけます。従業員や取引先に一切の不安を与えない「完全なる静寂」の中で、最適なスポンサー企業との融合をコーディネートします。
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 4. Network & Security (Vertical) -->
+    <section class="py-32 px-6 md:px-12" id="network">
+        <div class="max-w-4xl mx-auto text-center fade-up observer-target">
+            <h2 class="text-3xl md:text-4xl font-light leading-loose mb-12">
+                <span class="phrase">情報網の核となる、</span><br>
+                <span class="phrase">3つの強固なアライアンス。</span>
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left mt-20">
+                <div class="bg-white p-10 border-t-2 border-accent">
+                    <h4 class="font-serif text-xl italic mb-4 text-accent">Private Banks</h4>
+                    <p class="text-sm leading-[2.2] text-textPrimary/80">国内・外資系のプライベートベンカーと密に連携。彼らの顧客である超富裕層のもつ資産入替の初期フェーズ情報を取得します。</p>
+                </div>
+                <div class="bg-white p-10 border-t-2 border-accent">
+                    <h4 class="font-serif text-xl italic mb-4 text-accent">Family Offices</h4>
+                    <p class="text-sm leading-[2.2] text-textPrimary/80">一族の資産を管理するファミリーオフィス専属のコンサルタントとして、不動産ポートフォリオの再編を水面下で主導します。</p>
+                </div>
+                <div class="bg-white p-10 border-t-2 border-accent">
+                    <h4 class="font-serif text-xl italic mb-4 text-accent">Top Law Firms</h4>
+                    <p class="text-sm leading-[2.2] text-textPrimary/80">大手法律事務所や税理士法人と連携し、相続発生や事業再編に伴う急を要する非公開売却案件に対し、迅速な現金化ソリューションを提供します。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. CTA (Membership form) -->
+    <section class="py-32 bg-dark text-bg px-6 md:px-12 relative" id="contact">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="font-serif text-4xl md:text-5xl mb-8 italic text-accent">Strictly Invitation Only.</h2>
+            <p class="text-[13px] tracking-widest leading-[2.5] mb-16 opacity-70">
+                <span class="phrase">Terra Firmaの新規会員登録は、クオリティ維持と情報漏洩防止のため、</span><span class="phrase">既存クライアント様、または弊社提携金融機関からの「ご紹介のみ」とさせていただいております。</span>
+            </p>
+            
+            <div class="border border-accent/20 p-12 max-w-xl mx-auto bg-dark/50">
+                <form class="space-y-8 text-left">
+                    <div>
+                        <label class="block text-[10px] tracking-[0.2em] uppercase text-accent mb-3">Invitation Code (紹介コード)</label>
+                        <input type="text" class="w-full bg-transparent border-b border-accent/30 py-3 text-bg focus:outline-none focus:border-accent transition-colors font-serif tracking-widest text-center" placeholder="XXXX-XXXX" required>
+                    </div>
+                    <div>
+                        <label class="block text-[10px] tracking-[0.2em] uppercase text-accent mb-3">Email Address (ご紹介先メールアドレス)</label>
+                        <input type="email" class="w-full bg-transparent border-b border-accent/30 py-3 text-bg focus:outline-none focus:border-accent transition-colors" required>
+                    </div>
+                    <div class="pt-8 text-center">
+                        <button type="submit" class="inline-block bg-accent text-dark px-12 py-4 text-xs tracking-[0.2em] uppercase font-bold hover:bg-bg transition duration-500">
+                            Verify Identity
+                        </button>
+                    </div>
+                </form>
+            </div>
+            
+            <div class="mt-20">
+                <p class="text-[11px] text-accent/60 tracking-widest">ご紹介のない法人・個人投資家様は、お待ちいただいてもご登録できません。<br>あらかじめご了承ください。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#111110] text-[#EBEAE5]/40 py-16 px-6 md:px-12 font-serif text-[11px] tracking-widest uppercase">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="text-xl text-[#EBEAE5]/80">TERRA FIRMA</div>
+            <div class="flex gap-8">
+                <a href="#" class="hover:text-accent transition">Terms of Service</a>
+                <a href="#" class="hover:text-accent transition">Privacy Policy</a>
+                <a href="#" class="hover:text-accent transition">Anti-Money Laundering</a>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto mt-12 text-center md:text-left opacity-60">
+            &copy; 2026 Terra Firma Asset Management.
+        </div>
+    </footer>
+
+    <!-- GSAP & Intersection Observer Logic -->
     <script>
+        // Horizontal Scroll
         gsap.registerPlugin(ScrollTrigger);
 
+        // Ensures the horizontal container width matches the number of panels
         let container = document.getElementById("horizontalContainer");
-
-        gsap.to(container, {
+        
+        let horizontalScroll = gsap.to(container, {
             x: () => -(container.scrollWidth - window.innerWidth) + "px",
             ease: "none",
             scrollTrigger: {
-                trigger: "#pinSection",
+                trigger: "#portfolio",
                 pin: true,
                 scrub: 1,
                 end: () => "+=" + container.scrollWidth
             }
+        });
+
+        // Vertical Fade Up using Vanilla JS Observer
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.observer-target').forEach(el => {
+            observer.observe(el);
         });
     </script>
 </body>
