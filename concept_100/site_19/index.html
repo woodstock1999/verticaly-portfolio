@@ -1,14 +1,272 @@
-<!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>ヴィーガン専用Eコマース (Vegan Market)</title><script src="https://cdn.tailwindcss.com"></script></head>
-<body class="relative w-screen h-screen overflow-hidden font-sans bg-black">
-    <div class="absolute inset-0 z-0"><img src="https://picsum.photos/seed/aethel19/1600/900" class="w-full h-full object-cover opacity-60" /></div>
-    <div class="absolute top-0 w-full p-8 flex justify-between text-white z-20 mix-blend-difference">
-        <div class="text-sm font-bold tracking-widest uppercase">2. Health & Wellness (医療・ヘルスケア)</div><div class="text-sm font-mono">NO. 19 / 100</div>
-    </div>
-    <div class="absolute inset-0 z-10 flex flex-col items-center justify-center p-6">
-        <div class="bg-white/10 backdrop-blur-3xl border border-white/20 rounded-[32px] p-12 max-w-4xl text-center shadow-2xl text-white transition-transform duration-700 hover:scale-105">
-            <h1 class="text-5xl md:text-7xl font-semibold tracking-tighter mb-6">ヴィーガン専用Eコマース (Vegan Market)</h1>
-            <p class="text-lg md:text-xl font-light text-white/90 leading-relaxed">新緑の葉の超ティテール写真と、アースカラーのパレット。</p>
-            <div class="mt-10"><a href="../index.html" class="bg-white text-black px-8 py-4 rounded-full font-bold hover:bg-gray-200 transition">BACK TO GALLERY</a></div>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZERO TRUST | Enterprise Cyber Security SaaS</title>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dark: '#050505',
+                        primary: '#00FF41', /* Matrix Green */
+                        accent: '#008F11',
+                    },
+                    fontFamily: {
+                        sans: ['Noto Sans JP', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #050505; color: #FFFFFF; font-family: 'Noto Sans JP', sans-serif; overflow-x: hidden; line-height: 1.8; }
+        
+        /* Grid Background Pattern */
+        .cyber-grid {
+            background-size: 40px 40px;
+            background-image: 
+                linear-gradient(to right, rgba(0, 255, 65, 0.05) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(0, 255, 65, 0.05) 1px, transparent 1px);
+        }
+
+        /* Clip Path Reveal Section */
+        .reveal-container { height: 300vh; position: relative; }
+        .clip-section {
+            position: sticky; top: 0; width: 100vw; height: 100vh; overflow: hidden;
+            display: flex; align-items: center; justify-content: center;
+        }
+        .clip-box {
+            width: 100vw; height: 100vh;
+            background-color: #000;
+            clip-path: polygon(40% 40%, 60% 40%, 60% 60%, 40% 60%); /* Starting small */
+            display: flex; align-items: center; justify-content: center;
+            position: relative;
+        }
+
+        /* Glitch text effect */
+        .glitch-wrapper { position: relative; display: inline-block; }
+        .glitch-wrapper::before, .glitch-wrapper::after {
+            content: attr(data-text); position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            background: #050505;
+        }
+        .glitch-wrapper::before { left: 2px; text-shadow: -1px 0 red; clip: rect(24px, 550px, 90px, 0); animation: glitch-anim-2 3s infinite linear alternate-reverse; }
+        .glitch-wrapper::after { left: -2px; text-shadow: -1px 0 blue; clip: rect(85px, 550px, 140px, 0); animation: glitch-anim 2.5s infinite linear alternate-reverse; }
+        
+        @keyframes glitch-anim {
+            0% { clip: rect(10px, 9999px, 34px, 0); }
+            20% { clip: rect(72px, 9999px, 14px, 0); }
+            40% { clip: rect(6px, 9999px, 86px, 0); }
+            60% { clip: rect(86px, 9999px, 35px, 0); }
+            80% { clip: rect(4px, 9999px, 55px, 0); }
+            100% { clip: rect(75px, 9999px, 44px, 0); }
+        }
+        @keyframes glitch-anim-2 {
+            0% { clip: rect(65px, 9999px, 100px, 0); }
+            20% { clip: rect(3px, 9999px, 33px, 0); }
+            40% { clip: rect(45px, 9999px, 12px, 0); }
+            60% { clip: rect(98px, 9999px, 78px, 0); }
+            80% { clip: rect(34px, 9999px, 22px, 0); }
+            100% { clip: rect(12px, 9999px, 66px, 0); }
+        }
+
+        .border-glow { border: 1px solid rgba(0, 255, 65, 0.3); box-shadow: 0 0 15px rgba(0, 255, 65, 0.1); }
+        .phrase { display: inline-block; }
+    </style>
+</head>
+<body class="antialiased selection:bg-primary selection:text-dark">
+
+    <header class="fixed w-full top-0 z-50 mix-blend-difference font-mono px-6 py-4 flex justify-between border-b-2 border-primary/20 bg-dark/80 backdrop-blur">
+        <div class="font-bold text-xl text-primary tracking-widest"><span class="animate-pulse mr-2">█</span>ZERO TRUST</div>
+        <div class="flex gap-6 text-sm">
+            <a href="#threat" class="hover:text-primary transition">Threat Model</a>
+            <a href="#features" class="hover:text-primary transition">Architecture</a>
+            <a href="#pricing" class="hover:text-primary transition">Deploy</a>
+        </div>
+    </header>
+
+    <!-- 1. Hero / Clip Mask Reveal (GSAP driven) -->
+    <div class="reveal-container cyber-grid" id="revealContainer">
+        <!-- Background text visible behind the mask -->
+        <div class="absolute inset-0 flex items-center justify-center -z-10 opacity-20 font-mono text-[10vw] font-black leading-none break-all overflow-hidden tracking-tighter">
+            ACCESS DENIED ACCESS DENIED ACCESS DENIED ACCESS DENIED
+        </div>
+
+        <div class="clip-section">
+            <div class="clip-box bg-dark cyber-grid flex flex-col justify-center items-center text-center p-4 border border-primary/20" id="clipBox">
+                <div class="font-mono text-primary text-sm tracking-[0.3em] mb-4">SYSTEM BREACH DETECTED</div>
+                <h1 class="text-4xl md:text-7xl font-black mb-8 glitch-wrapper uppercase tracking-tighter" data-text="TRUST NO ONE">
+                    TRUST NO ONE
+                </h1>
+                <p class="font-mono text-white/70 max-w-2xl text-sm md:text-base leading-relaxed mb-8">
+                    境界防御の時代は終わった。<br>
+                    すべてのアクセスを疑い、検証し、封じ込める。<br>
+                    次世代エンタープライズのエンドポイント・セキュリティ。
+                </p>
+                <div class="font-mono text-[10px] text-primary/50 animate-bounce">S C R O L L _ T O _ I N I T I A T E</div>
+            </div>
         </div>
     </div>
-</body></html>
+
+    <!-- 2. Pain Empathy -->
+    <section class="py-32 bg-dark relative z-10 border-t border-primary/20" id="threat">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <div class="font-mono text-primary text-xs mb-8 tracking-widest">[THREAT ANALYSIS]</div>
+            <h2 class="text-3xl md:text-5xl font-black mb-12">
+                <span class="phrase">社内ネットワークは、</span><br>
+                <span class="phrase">もはや「安全圏」ではない。</span>
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left mt-16 font-mono text-sm border-l border-r border-primary/20 p-8">
+                <div>
+                    <div class="text-red-500 font-bold mb-2">ERROR 01: VPNの限界</div>
+                    <p class="text-white/60">一度VPNを通過した攻撃者は、社内ネットワーク内で水平移動（ラテラルムーブメント）を繰り返し、最も重要なDBへ容赦なく到達します。</p>
+                </div>
+                <div>
+                    <div class="text-red-500 font-bold mb-2">ERROR 02: クラウド時代の境界消失</div>
+                    <p class="text-white/60">SaaSの乱立、リモートワークの常態化により、「社内と社外」を分ける境界線（ファイアウォール）は物理的な意味を消失しました。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Core Features (Code/Abstract Bento) -->
+    <section class="py-32 cyber-grid border-y border-primary/20" id="features">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="font-mono text-primary text-xs mb-8 tracking-widest text-center">[CORE ARCHITECTURE]</div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[300px]">
+                <!-- Feature 1 -->
+                <div class="md:col-span-2 bg-dark/80 backdrop-blur-md p-10 border-glow relative overflow-hidden flex flex-col justify-between">
+                    <div class="absolute top-0 right-0 p-4 font-mono text-white/10 text-6xl font-black">01</div>
+                    <div>
+                        <div class="text-primary font-mono text-sm mb-4">Identity Verification</div>
+                        <h3 class="text-2xl font-bold mb-4">1リクエストごとの<br>動的アイデンティティ検証</h3>
+                    </div>
+                    <p class="text-sm text-white/70 max-w-md">従来の「一度ログインすればOK」を廃止。ユーザーの振る舞い、デバイスの健全性などを毎リクエストごとに評価し、リスクスコアをリアルタイムに算出します。</p>
+                </div>
+                
+                <!-- Feature 2 -->
+                <div class="bg-dark/80 backdrop-blur-md p-10 border-glow flex flex-col justify-between group">
+                    <div>
+                        <div class="text-primary font-mono text-sm mb-4">Micro Segmentation</div>
+                        <h3 class="text-xl font-bold mb-4">最小権限の原則</h3>
+                    </div>
+                    <div class="h-1 w-full bg-primary/20 group-hover:bg-primary transition-colors"></div>
+                    <p class="text-xs text-white/70 mt-4">ネットワークを極小単位に分割。仮に1つのエンドポイントが侵害されても、被害の拡大を物理的に遮断します。</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="bg-dark/80 backdrop-blur-md flex items-center justify-center border-glow overflow-hidden">
+                    <div class="font-mono text-[10px] leading-tight text-primary/40 text-left p-4">
+                        > INITIALIZING SECURE TUNNEL...<br>
+                        > VERIFYING DEVICE POSTURE... [OK]<br>
+                        > CHECKING CONTEXT AWARENESS... [OK]<br>
+                        > ENCRYPTING PAYLOAD (AES-256)...<br>
+                        > CONNECTION ESTABLISHED.
+                    </div>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="md:col-span-2 bg-dark/80 backdrop-blur-md p-10 border-glow flex flex-col justify-between">
+                    <div>
+                        <div class="text-primary font-mono text-sm mb-4">Agentless Deployment</div>
+                        <h3 class="text-2xl font-bold mb-4">わずか15分。<br>エージェントレスの爆速導入</h3>
+                    </div>
+                    <p class="text-sm text-white/70">従業員の端末に重いセキュリティソフトをインストールする必要はありません。ブラウザベースのセキュアアクセス技術により、オンボーディングのコストをゼロにします。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Proof Stack (Terminal Style) -->
+    <section class="py-32 bg-dark">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="border border-primary/30 bg-[#0a0a0a] p-2 font-mono text-sm mb-16 shadow-[0px_0px_20px_rgba(0,255,65,0.1)]">
+                <div class="flex gap-2 border-b border-primary/20 pb-2 mb-4 px-2">
+                    <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                    <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                    <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                    <span class="ml-4 text-white/40text-[10px]">soc2_compliance_checker.sh</span>
+                </div>
+                <div class="p-4 text-primary opacity-80 leading-loose">
+                    $ ./verify_compliance --all <br>
+                    > Checking SOC2 Type II certification... <span class="text-white font-bold">[PASSED]</span><br>
+                    > Checking ISO/IEC 27001 ISMS... <span class="text-white font-bold">[PASSED]</span><br>
+                    > Verifying End-to-End Encryption... <span class="text-white font-bold">[VERIFIED]</span><br>
+                    > Scanning for stored plaintext passwords... <span class="text-white font-bold">[0 FOUND]</span><br>
+                    <br>
+                    <span class="text-white animate-pulse">SYSTEM IS SECURE. READY FOR ENTERPRISE DEPLOYMENT.</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. CTA / Form -->
+    <section class="py-32 cyber-grid border-t border-primary/20" id="pricing">
+        <div class="max-w-xl mx-auto px-6 text-center">
+            <h2 class="font-mono text-3xl font-black mb-8 uppercase tracking-widest text-shadow">Initiate Sequence</h2>
+            <p class="text-sm text-white/60 mb-12">
+                導入を検討中の企業様向けに、デモ環境へのアクセス権を付与します。<br>
+                下記のフォームよりリクエストを送信してください。
+            </p>
+
+            <form class="bg-dark/90 backdrop-blur p-8 border-glow text-left font-mono">
+                <div class="mb-6">
+                    <label class="block text-primary text-xs mb-2">> EMAIL_ADDRESS *</label>
+                    <input type="email" class="w-full bg-transparent border-b border-primary/40 py-2 text-white placeholder-white/20 focus:outline-none focus:border-primary transition-colors" placeholder="user@enterprise.com" required>
+                </div>
+                <div class="mb-10">
+                    <label class="block text-primary text-xs mb-2">> ENDPOINT_COUNT</label>
+                    <select class="w-full bg-dark border-b border-primary/40 py-2 text-white focus:outline-none focus:border-primary">
+                        <option>100 - 500</option>
+                        <option>501 - 2000</option>
+                        <option>2000+</option>
+                    </select>
+                </div>
+                <button type="submit" class="w-full bg-primary text-dark font-black py-4 hover:bg-white transition-colors uppercase tracking-widest">
+                    Request Demo Access
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#020202] py-8 border-t border-primary/20 font-mono text-[10px] text-white/40 text-center uppercase tracking-widest">
+        &copy; 2026 ZERO TRUST SEC. ALL SYSTEMS SECURE.
+    </footer>
+
+    <!-- GSAP Clip-Path Scroll Animation -->
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: "#revealContainer",
+                start: "top top",
+                end: "bottom top", 
+                pin: true,
+                scrub: 1, 
+            }
+        });
+
+        // Expand the clip-path from a small box to full screen
+        tl.to("#clipBox", {
+            clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+            ease: "power2.inOut",
+            duration: 1
+        });
+        
+        // Fade out the initial text to show the actual background strictly
+        tl.to(".clip-box > *", {
+            opacity: 0,
+            duration: 0.5
+        }, "-=0.5");
+    </script>
+</body>
+</html>

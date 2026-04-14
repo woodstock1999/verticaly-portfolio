@@ -1,12 +1,144 @@
-<!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>自律走行タクシー予約 (Robo Taxi)</title><script src="https://cdn.tailwindcss.com"></script><link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet"></head>
-<body class="bg-[#050505] text-[#ededed] min-h-screen flex items-center justify-center p-8">
-    <a href="../index.html" class="absolute top-8 right-8 text-xs tracking-[0.2em] uppercase text-white/50 hover:text-white">Return</a>
-    <div class="relative w-full max-w-6xl aspect-[21/9] rounded-xl overflow-hidden shadow-2xl">
-        <img src="https://picsum.photos/seed/aethel21/1600/900" class="absolute inset-0 w-full h-full object-cover opacity-30 grayscale sepia-[.3]" />
-        <div class="absolute inset-0 p-16 flex flex-col justify-end bg-gradient-to-t from-black via-black/40 to-transparent">
-            <div class="text-[#d4af37] text-sm tracking-[0.3em] uppercase mb-4 font-bold border-l-2 border-[#d4af37] pl-4">3. Mobility & Transportation (モビリティ・交通) - 0021</div>
-            <h1 class="text-5xl md:text-7xl font-bold tracking-wide mb-6" style="font-family: 'Playfair Display', serif;">自律走行タクシー予約 (Robo Taxi)</h1>
-            <p class="text-xl font-light max-w-3xl text-white/60 leading-loose">アプリ内で現在地と車の位置を示すリアルタイム・グリッドUI。</p>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECHO | ESG & Carbon Accounting</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&family=Noto+Sans+JP:wght@300;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        leaf: '#2A4D34', /* Deep Pine Green */
+                        earth: '#D9D0C1', /* Sand/Beige */
+                        light: '#F5F5F0', /* Off-white */
+                        dark: '#1C2321', /* Almost Black */
+                    },
+                    fontFamily: {
+                        sans: ['Outfit', 'Noto Sans JP', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #F5F5F0; color: #1C2321; font-family: 'Outfit', 'Noto Sans JP', sans-serif; overflow-x: hidden; line-height: 1.8; }
+        
+        /* Parallax Sticky Deck CSS */
+        .deck-container { position: relative; padding-bottom: 20vh; }
+        .sticky-card {
+            position: sticky;
+            top: 10vh; /* Cards stack below this point */
+            height: 80vh;
+            margin-bottom: 5vh;
+            border-radius: 2rem;
+            box-shadow: 0 -20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+            display: flex; flex-direction: column; justify-content: center;
+            transform-origin: top center;
+        }
+        
+        /* Slight offset to make them look stacked */
+        #card1 { top: 10vh; z-index: 10; }
+        #card2 { top: 13vh; z-index: 20; }
+        #card3 { top: 16vh; z-index: 30; }
+
+        .phrase { display: inline-block; }
+    </style>
+</head>
+<body class="antialiased font-light selection:bg-leaf selection:text-white">
+
+    <header class="fixed w-full top-0 px-6 md:px-12 py-6 flex justify-between items-center z-50 mix-blend-multiply">
+        <div class="font-bold text-2xl tracking-tighter text-leaf flex items-center gap-2">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            ECHO
         </div>
-    </div>
-</body></html>
+        <a href="#demo" class="border border-leaf text-leaf px-6 py-2 rounded-full text-sm font-medium hover:bg-leaf hover:text-white transition-colors">
+            Request Demo
+        </a>
+    </header>
+
+    <!-- 1. Soft Hero -->
+    <section class="h-screen flex flex-col justify-center items-center text-center px-4 max-w-4xl mx-auto">
+        <div class="text-xs font-bold tracking-[0.2em] uppercase text-leaf/60 mb-6 border border-leaf/20 px-4 py-1 rounded-full">Carbon Accounting Platform</div>
+        <h1 class="text-5xl md:text-7xl font-bold mb-8 leading-tight tracking-tight text-leaf">
+            <span class="phrase">地球の未来を、</span><br>
+            <span class="phrase">正確な「数字」で語る。</span>
+        </h1>
+        <p class="text-lg md:text-xl text-dark/70 leading-relaxed font-medium">
+            <span class="phrase">サプライチェーン全体の温室効果ガス（Scope 1-3）を自動算出し、</span><br>
+            <span class="phrase">ESG情報開示基準に準拠したレポートをワンクリックで生成。</span><br>
+            <span class="phrase">企業の環境価値を最大化するデータ基盤。</span>
+        </p>
+    </section>
+
+    <!-- 2. The Sticky Parallax Deck (Core Features) -->
+    <section class="deck-container max-w-6xl mx-auto px-4">
+        
+        <!-- Card 1 -->
+        <div class="sticky-card bg-earth p-12 md:p-20" id="card1">
+            <div class="font-bold text-leaf font-medium tracking-[0.2em] mb-4">STEP 01: COLLECTION</div>
+            <h2 class="text-4xl md:text-6xl font-bold mb-6 text-leaf">ERP/APIからの<br>自動データ抽出</h2>
+            <p class="text-lg text-dark/80 max-w-xl font-medium leading-loose">
+                各部署がエクセルで手入力していた電気代や出張データを完全撤廃。
+                スマートメーターや既存の会計ソフト、ERPシステム（SAP等）からAPI経由で排出活動データを自動収集します。人的ミスをゼロに。
+            </p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="sticky-card bg-leaf text-light p-12 md:p-20" id="card2">
+            <div class="font-bold text-earth font-medium tracking-[0.2em] mb-4">STEP 02: CALCULATION</div>
+            <h2 class="text-4xl md:text-6xl font-bold mb-6">Scope 3 の<br>可視化と高精度算定</h2>
+            <p class="text-lg text-light/80 max-w-xl font-medium leading-loose">
+                自社の排出（Scope 1,2）だけでなく、難易度の高いサプライチェーン全体（Scope 3）の算定ロジックを最新の環境省ガイドラインに基づいて自動化。膨大な一次データから、最も正確なCO2排出量を導き出します。
+            </p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="sticky-card bg-dark text-earth p-12 md:p-20" id="card3">
+            <div class="font-bold text-leaf font-medium tracking-[0.2em] mb-4">STEP 03: REPORTING</div>
+            <h2 class="text-4xl md:text-6xl font-bold mb-6">TCFD / ISSB<br>準拠のワンクリック開示</h2>
+            <p class="text-lg text-earth/80 max-w-xl font-medium leading-loose">
+                算定されたデータは、投資家が求める国際的な情報開示フォーマット（TCFD提言、ISSB基準、CDP質問書など）に従って自動レポート化。監査対応にかかる莫大なコンサルティング費用と社内工数を削減します。
+            </p>
+        </div>
+
+    </section>
+
+    <!-- 3. Proof Stack & CTA -->
+    <section class="py-32 bg-light border-y border-leaf/10" id="demo">
+        <div class="max-w-3xl mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-5xl font-bold text-leaf mb-12">脱炭素を、コストから競争力へ。</h2>
+            <div class="grid grid-cols-2 gap-8 mb-16 font-bold text-dark/70 text-left border-t border-b border-leaf/20 py-8">
+                <div>
+                    <div class="text-5xl font-bold text-leaf mb-2">80<span class="text-xl">%</span></div>
+                    <div class="text-sm">算定・レポーティング工数の削減</div>
+                </div>
+                <div>
+                    <div class="text-5xl font-bold text-leaf mb-2">100<span class="text-xl">+</span></div>
+                    <div class="text-sm">プライム市場上場企業の導入実績</div>
+                </div>
+            </div>
+            
+            <form class="bg-white p-8 rounded-3xl shadow-xl text-left border border-leaf/10">
+                <h3 class="text-xl font-bold text-leaf mb-6">デモ環境リクエスト</h3>
+                <div class="mb-4">
+                    <label class="block text-sm font-bold text-leaf mb-2">会社用メールアドレス</label>
+                    <input type="email" class="w-full bg-light border-none p-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-leaf font-medium" required>
+                </div>
+                <button type="submit" class="w-full bg-leaf text-white font-bold py-4 rounded-xl mt-4 hover:bg-leaf/90 transition-colors">
+                    算出シミュレーションを試す
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-earth/40 py-12 text-center text-sm font-medium">
+        <p>ECHO Sustainability Index &copy; 2026. Enabling Net-Zero.</p>
+    </footer>
+
+</body>
+</html>
