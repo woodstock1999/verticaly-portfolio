@@ -13,8 +13,9 @@
                     colors: {
                         dark: '#030405',
                         industrial: '#1A1D20',
-                        neonOrange: '#FF4500', /* Safety Orange */
+                        neonOrange: '#FF4500', 
                         neonYellow: '#FFD700',
+                        terminalGreen: '#00FA9A',
                     },
                     fontFamily: {
                         sans: ['Noto Sans JP', 'sans-serif'],
@@ -35,14 +36,15 @@
         }
 
         /* Industrial UI Border Panels */
-        .panel { border: 1px solid rgba(255,255,255,0.1); background-color: #0d0f12; position: relative; }
+        .panel { border: 1px solid rgba(255,255,255,0.1); background-color: rgba(13, 15, 18, 0.8); backdrop-filter: blur(10px); position: relative; transition: all 0.3s ease; }
         .panel::before {
-            content: ''; position: absolute; top: -1px; left: -1px; width: 10px; height: 10px;
+            content: ''; position: absolute; top: -1px; left: -1px; width: 15px; height: 15px;
             border-top: 2px solid #FF4500; border-left: 2px solid #FF4500;
         }
+        .panel:hover { border-color: rgba(255,69,0,0.5); box-shadow: 0 0 30px rgba(255,69,0,0.05); transform: translateY(-5px); }
 
         .marquee-container { overflow: hidden; white-space: nowrap; width: 100vw; border-top: 1px solid #333; border-bottom: 1px solid #333; padding: 10px 0; background: #000; }
-        .marquee-inner { display: inline-block; animation: scroll-left 20s linear infinite; font-family: 'Syncopate', sans-serif; opacity: 0.5; }
+        .marquee-inner { display: inline-block; animation: scroll-left 25s linear infinite; font-family: 'Syncopate', sans-serif; opacity: 0.5; }
         @keyframes scroll-left { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
 
         .phrase { display: inline-block; }
@@ -51,94 +53,238 @@
 <body class="antialiased selection:bg-neonOrange selection:text-white bg-grid">
 
     <!-- Header Marquee -->
-    <div class="marquee-container fixed top-0 z-50 mix-blend-screen text-xs tracking-widest text-neonOrange">
+    <div class="marquee-container fixed top-0 z-50 mix-blend-screen text-[10px] tracking-widest text-neonOrange">
         <div class="marquee-inner">
-            ROUTE OPTIMIZATION ACTIVE • SUPPLY CHAIN INTEGRITY 99.9% • FLEET TRACKING ONLINE • ROUTE OPTIMIZATION ACTIVE • SUPPLY CHAIN INTEGRITY 99.9% • FLEET TRACKING ONLINE • 
+            ROUTE OPTIMIZATION ACTIVE // SUPPLY CHAIN INTEGRITY 99.9% // FLEET TRACKING ONLINE // CARGO TEMPERATURE STABLE // SATELLITE UPLINK SECURE // ROUTE OPTIMIZATION ACTIVE // SUPPLY CHAIN INTEGRITY 99.9% // 
         </div>
     </div>
 
+    <!-- Navigation Overlay -->
+    <nav class="fixed w-full top-10 px-6 md:px-12 py-4 flex justify-between items-center z-40 pointer-events-none">
+        <div class="font-display font-bold text-xl tracking-widest pointer-events-auto">OMNI.LOGIS</div>
+        <div class="hidden md:flex gap-8 text-[11px] font-bold uppercase tracking-widest text-white/50 pointer-events-auto">
+            <a href="#bottleneck" class="hover:text-neonOrange transition">Bottleneck</a>
+            <a href="#engine" class="hover:text-neonOrange transition">AI Engine</a>
+            <a href="#metrics" class="hover:text-neonOrange transition">Metrics</a>
+            <a href="#terminal" class="hover:text-neonOrange transition">Terminal</a>
+        </div>
+    </nav>
+
     <!-- 1. Industrial Hero + Visual Dashboard -->
-    <section class="min-h-screen pt-24 px-6 md:px-12 flex flex-col justify-center max-w-7xl mx-auto relative">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+    <section class="min-h-screen pt-32 px-6 md:px-12 flex flex-col justify-center max-w-7xl mx-auto relative border-b border-white/10 pb-20">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             
             <div class="z-10">
-                <div class="font-display text-sm tracking-[0.3em] text-neonOrange mb-6 uppercase"> Omni Logis Matrix</div>
+                <div class="font-display text-sm md:text-base tracking-[0.4em] text-neonOrange mb-6 uppercase flex items-center gap-3">
+                    <span class="w-2 h-2 bg-neonOrange rounded-full animate-ping"></span> Global Master Control
+                </div>
                 <h1 class="text-5xl md:text-7xl font-black mb-8 leading-[1.1] tracking-tight">
                     <span class="phrase">物流の停滞は、</span><br>
                     <span class="phrase text-transparent bg-clip-text bg-gradient-to-r from-neonOrange to-neonYellow">経済の敗北。</span>
                 </h1>
                 <p class="text-lg text-white/60 font-medium leading-loose mb-12 max-w-lg">
-                    陸・海・空。すべての輸送モードを単一のグローバルマップ上に統合。AIによる動的ルート最適化で、燃料コストを15%削減し、配送遅延要因を完全に排除するロジスティクス界のマスターコントロール基盤。
+                    陸・海・空。分離されたすべての輸送モードとフォワーダーを、単一のグローバルマップ上に統合。<br>
+                    AIによる動的ルート最適化で、港湾滞船（デマレージ）リスクを完全予測し、サプライチェーンの淀みを破壊する次世代ロジスティクス基盤。
                 </p>
                 <div class="flex gap-6">
-                    <a href="#demo" class="bg-neonOrange text-white font-bold px-8 py-4 uppercase tracking-widest text-sm hover:bg-white hover:text-dark transition">Initialize Demo</a>
+                    <a href="#terminal" class="bg-neonOrange text-white font-bold px-8 py-5 uppercase tracking-widest text-sm hover:bg-white hover:text-dark transition shadow-[0_0_20px_rgba(255,69,0,0.4)]">
+                        Initialize Demo
+                    </a>
                 </div>
             </div>
 
             <!-- Visual Mockup (The Hero image focus) -->
-            <div class="relative z-10 w-full aspect-video lg:aspect-square bg-[#050505] border border-white/10 p-2 shadow-[0_0_50px_rgba(255,69,0,0.1)]">
+            <div class="relative z-10 w-full aspect-video lg:aspect-square bg-[#050505] border border-white/10 p-2 shadow-[0_0_50px_rgba(255,69,0,0.15)] group">
                 <!-- Abstract UI Frame overlay -->
-                <div class="absolute inset-0 border border-neonOrange/20 pointer-events-none"></div>
-                <img src="img/ui.png" alt="Logistics Map Dashboard" class="w-full h-full object-cover grayscale-[30%] contrast-125 opacity-90 hover:grayscale-0 transition-all duration-700">
-                <div class="absolute bottom-4 left-4 bg-dark/80 backdrop-blur text-neonOrange text-[10px] font-display font-bold px-3 py-1 border border-neonOrange/50">LIVE TRACKING HUD</div>
+                <div class="absolute inset-0 border border-neonOrange/20 pointer-events-none z-20"></div>
+                <!-- 4 corner brackets -->
+                <div class="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-neonOrange z-20"></div>
+                <div class="absolute top-0 right-0 w-8 h-8 border-t-2 border-r-2 border-neonOrange z-20"></div>
+                <div class="absolute bottom-0 left-0 w-8 h-8 border-b-2 border-l-2 border-neonOrange z-20"></div>
+                <div class="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-neonOrange z-20"></div>
+                
+                <img src="img/ui.png" alt="Logistics Map Dashboard" class="w-full h-full object-cover grayscale-[20%] contrast-125 opacity-90 group-hover:grayscale-0 transition-all duration-700 relative z-10">
+                
+                <div class="absolute bottom-6 left-6 bg-dark/90 backdrop-blur text-neonOrange text-[10px] font-display font-bold px-4 py-2 border border-neonOrange/50 z-30 flex items-center gap-2">
+                    <div class="w-1.5 h-1.5 bg-terminalGreen rounded-full"></div> SATELLITE FEED LINKED
+                </div>
             </div>
-            
         </div>
     </section>
 
-    <!-- 2. Logic (Industrial Panels) -->
-    <section class="py-32 border-t border-white/10">
+    <!-- 2. The Bottleneck (Pain Empathy) -->
+    <section class="py-32 bg-[#08090b] relative" id="bottleneck">
+        <!-- Abstract shipping container lines -->
+        <div class="absolute top-0 left-0 w-1/3 h-full border-r border-dashed border-white/5 pointer-events-none"></div>
+        <div class="absolute top-0 right-0 w-1/3 h-full border-l border-dashed border-white/5 pointer-events-none"></div>
+
+        <div class="max-w-5xl mx-auto px-6 text-center relative z-10">
+            <h2 class="text-3xl md:text-5xl font-black mb-16 leading-tight">
+                <span class="phrase">なぜ、あなたの船は港で</span><span class="phrase text-red-500 border-b-4 border-red-500">2週間も止まるのか。</span>
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 text-left">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 text-white/90">ブラックボックス化した海外輸送網</h3>
+                    <p class="text-white/50 font-medium leading-loose text-sm border-l-2 border-white/10 pl-4">
+                        自社の国内倉庫を出た瞬間から、貨物の現在地は「各国のフォワーダーからの不定期なエクセル報告」に依存しています。スエズ運河の渋滞や、西海岸港湾ストライキが発生しても、あなたは数日後にニュースで知ることになります。
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4 text-white/90">膨れ上がるデマレージ（滞船料）</h3>
+                    <p class="text-white/50 font-medium leading-loose text-sm border-l-2 border-white/10 pl-4">
+                        天候や通関トラブルによる遅延。コンテナヤードでの保管超過により、大企業は年間数千万から数億円の「見えない滞留コスト」を支払い続けています。情報の遅れはダイレクトに利益を侵食します。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Logic & Capabilities (Bento Panels) -->
+    <section class="py-32 border-y border-white/10 bg-dark" id="engine">
         <div class="max-w-7xl mx-auto px-6">
-            <h2 class="font-display text-2xl md:text-4xl text-center mb-16 tracking-widest text-white/80">CORE <span class="text-neonOrange">CAPABILITIES</span></h2>
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+                <div>
+                    <h2 class="font-display text-3xl md:text-5xl font-bold tracking-widest text-white">CORE <span class="text-neonOrange">CAPABILITIES</span></h2>
+                    <p class="text-white/50 mt-4 font-medium">OMNI.LOGIS AI 搭載 モジュール</p>
+                </div>
+                <div class="font-display text-xs tracking-widest text-white/30 border border-white/10 px-4 py-2">SYS.VER. 4.9.2</div>
+            </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Panel 1 -->
-                <div class="panel p-8 group hover:border-neonOrange/50 transition">
-                    <div class="text-neonOrange font-display text-4xl font-bold mb-6 opacity-30 group-hover:opacity-100 transition">01</div>
-                    <h3 class="text-xl font-bold mb-4">動的ルート再構築 (AI)</h3>
-                    <p class="text-sm text-white/60 leading-loose">気象データ、港湾の混雑状況、各国の交通インフラ情報をリアルタイム統合。コンテナ船の遅延を予測し、代替輸送ルート（陸路・空路）への切り替えを自動提案します。</p>
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+                <!-- Panel 1: Route Optimization (Large) -->
+                <div class="md:col-span-8 panel p-10 flex flex-col justify-between min-h-[350px]">
+                    <div>
+                        <div class="text-neonOrange font-display text-6xl font-bold mb-4 opacity-10 absolute top-4 right-6">01</div>
+                        <h3 class="text-2xl font-bold mb-4 flex items-center gap-4">
+                            <svg class="w-6 h-6 text-neonOrange" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                            動的ルート再構築 (AI Predictive Routing)
+                        </h3>
+                        <p class="text-white/70 leading-loose max-w-xl">
+                            気象データ（衛星観測）、世界500港の混雑状況、地政学リスクをリアルタイム統合。航海中のコンテナ船の遅延確率を事前に計算し、陸路・空路へのシフトや経由港の変更を自動で再計算・提案します。
+                        </p>
+                    </div>
+                    <div class="mt-8 pt-6 border-t border-white/10 flex gap-4">
+                        <span class="bg-white/5 px-3 py-1 text-xs font-bold text-white/60">API連携: Maersk, ONE, MSC</span>
+                    </div>
                 </div>
-                <!-- Panel 2 -->
-                <div class="panel p-8 group hover:border-neonOrange/50 transition bg-neonOrange/5">
-                    <div class="text-neonOrange font-display text-4xl font-bold mb-6 opacity-30 group-hover:opacity-100 transition">02</div>
-                    <h3 class="text-xl font-bold mb-4">IoT トラック＆トレース</h3>
-                    <p class="text-sm text-white/60 leading-loose">温度管理が必要なコールドチェーンに完全対応。コンテナ内部の温度異常や不活性ガス濃度を数秒単位で監視し、異常検知時にドライバーへ即時アラートを発火。</p>
+
+                <!-- Panel 2: IoT -->
+                <div class="md:col-span-4 panel p-10 flex flex-col justify-between">
+                    <div>
+                        <div class="text-neonOrange font-display text-6xl font-bold mb-4 opacity-10 absolute top-4 right-6">02</div>
+                        <h3 class="text-xl font-bold mb-4 text-neonYellow">IoT コールドチェーン監視</h3>
+                        <p class="text-sm text-white/60 leading-loose">
+                            医薬品・生鮮食品向け。コンテナ内部の温度異常や不活性ガス濃度を15秒単位で監視。異常検知時、荷主と運送ドライバーの端末へ強制アラートを発火します。
+                        </p>
+                    </div>
+                    <div class="mt-6 flex items-center gap-2 text-xs font-bold text-terminalGreen">
+                        <span class="w-2 h-2 rounded-full bg-terminalGreen animate-pulse"></span> SENSORS ACTIVE
+                    </div>
                 </div>
-                <!-- Panel 3 -->
-                <div class="panel p-8 group hover:border-neonOrange/50 transition">
-                    <div class="text-neonOrange font-display text-4xl font-bold mb-6 opacity-30 group-hover:opacity-100 transition">03</div>
-                    <h3 class="text-xl font-bold mb-4">SCM 需給予測分析</h3>
-                    <p class="text-sm text-white/60 leading-loose">「荷物がどこにあるか」だけでなく、「どこに向かうべきか」を提示。過去の購買データや季節要因から物流拠点の最適在庫を算出するプロアクティブな配置を実現。</p>
+
+                <!-- Panel 3: Customs & Compliance -->
+                <div class="md:col-span-5 panel p-10">
+                    <div class="text-neonOrange font-display text-6xl font-bold mb-4 opacity-10 absolute top-4 right-6">03</div>
+                    <h3 class="text-xl font-bold mb-4">通関ドキュメント自動生成API</h3>
+                    <p class="text-sm text-white/60 leading-loose">
+                        Invoice, Packing List, Certificate of Originなど、煩雑な貿易書類をERPからデータ取得し、各国の税関フォーマットに合わせて自動生成・翻訳。通関での差し止めリスクを極限までゼロに近づけます。
+                    </p>
+                </div>
+
+                <!-- Panel 4: Supply/Demand Analytics -->
+                <div class="md:col-span-7 panel p-10 bg-gradient-to-br from-transparent to-neonOrange/10 border-neonOrange/30">
+                    <div class="text-neonOrange font-display text-6xl font-bold mb-4 opacity-10 absolute top-4 right-6">04</div>
+                    <h3 class="text-2xl font-bold mb-4">SCM 需給・在庫予測分析</h3>
+                    <p class="text-white/70 leading-loose mb-6">
+                        「荷物がどこにあるか」を追うだけの時代は終わりました。過去5年分の購買POSデータと季節要因から、各グローバル拠点の最適な「配置すべき在庫数」を算出し、輸送計画を上流からコントロールします。
+                    </p>
+                    <button class="text-xs uppercase tracking-widest text-neonOrange font-bold hover:text-white border-b border-neonOrange pb-1 transition">Read Case Study ➝</button>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 3. Form -->
-    <section class="py-32 bg-[#050608] border-t border-white/10" id="demo">
-        <div class="max-w-4xl mx-auto px-6 text-center">
-            <h2 class="text-3xl md:text-5xl font-black mb-8 tracking-tight">サプライチェーンの死角を消す。</h2>
-            <p class="text-white/60 mb-12">現状の輸送網のボトルネック分析をご希望の企業様は、下記よりホワイトペーパー及びデモ用アカウント発行をリクエストしてください。</p>
+    <!-- 4. Data Proof / Metrics -->
+    <section class="py-32 bg-[#050608]" id="metrics">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-center font-display font-black text-3xl md:text-5xl text-white/90 mb-20 tracking-tighter uppercase">Demonstrated Impact.</h2>
             
-            <form class="panel p-10 max-w-lg mx-auto text-left">
-                <div class="mb-6">
-                    <label class="block text-xs uppercase tracking-widest text-white/40 mb-2">Corporate ID (Email)</label>
-                    <input type="email" class="w-full bg-dark border border-white/20 p-4 text-white focus:outline-none focus:border-neonOrange transition" required>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center divide-y md:divide-y-0 md:divide-x divide-white/10">
+                <div class="flex flex-col items-center justify-center p-4">
+                    <div class="font-display font-black text-6xl text-neonOrange mb-4 tracking-tighter">15<span class="text-3xl">%</span></div>
+                    <div class="font-bold text-lg mb-2">輸送燃料コストの削減</div>
+                    <p class="text-xs font-medium text-white/40 max-w-xs">AIルート最適化による、寄港スケジュールと速度の理想的なコントロール結果。</p>
                 </div>
-                <div class="mb-8">
-                    <label class="block text-xs uppercase tracking-widest text-white/40 mb-2">Fleet Size</label>
-                    <select class="w-full bg-dark border border-white/20 p-4 text-white focus:outline-none focus:border-neonOrange transition">
-                        <option>10 - 100 ユニット</option>
-                        <option>100 - 500 ユニット</option>
-                        <option>Global (500+)</option>
+                <div class="flex flex-col items-center justify-center p-4">
+                    <div class="font-display font-black text-6xl text-neonYellow mb-4 tracking-tighter">99.9<span class="text-3xl">%</span></div>
+                    <div class="font-bold text-lg mb-2">リアルタイム可視化率</div>
+                    <p class="text-xs font-medium text-white/40 max-w-xs">全輸送モード（海・空・陸）を横断した、ブラックボックスのないサプライチェーン。</p>
+                </div>
+                <div class="flex flex-col items-center justify-center p-4">
+                    <div class="font-display font-black text-6xl text-white mb-4 tracking-tighter">60<span class="text-3xl">%</span></div>
+                    <div class="font-bold text-lg mb-2">通関・事務工数の削減</div>
+                    <p class="text-xs font-medium text-white/40 max-w-xs">ドキュメントの自動生成と税関API連携による、バックオフィス業務の劇的効率化。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Form (Terminal Style) -->
+    <section class="py-32 border-t border-neonOrange/20 relative overflow-hidden" id="terminal">
+        <!-- Background Grid intense -->
+        <div class="absolute inset-0 bg-grid opacity-50"></div>
+        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-3/4 h-3/4 bg-neonOrange/5 rounded-full blur-[150px] pointer-events-none"></div>
+
+        <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
+            <h2 class="text-3xl md:text-5xl font-black mb-6 tracking-tight">エンタープライズの物流に、<br>軍事レベルの解像度を。</h2>
+            <p class="text-white/60 mb-12 font-medium">現状の輸送網のボトルネック分析をご希望の企業様は、下記よりホワイトペーパー及びデモ用アカウント発行をリクエストしてください。</p>
+            
+            <form class="panel p-10 max-w-xl mx-auto text-left shadow-2xl">
+                <div class="font-display text-neonOrange text-xs tracking-widest mb-8 border-b border-white/10 pb-4">:: INITIATE DATALINK_</div>
+                
+                <div class="mb-6">
+                    <label class="block text-xs uppercase tracking-widest text-white/50 mb-2 font-bold">Corporate ID (Email) *</label>
+                    <input type="email" class="w-full bg-[#0a0b0d] border border-white/20 p-4 text-white font-mono focus:outline-none focus:border-neonOrange transition" placeholder="manager@company.com" required>
+                </div>
+                <div class="grid grid-cols-2 gap-4 mb-6">
+                    <div>
+                        <label class="block text-xs uppercase tracking-widest text-white/50 mb-2 font-bold">Company Name</label>
+                        <input type="text" class="w-full bg-[#0a0b0d] border border-white/20 p-4 text-white font-mono focus:outline-none focus:border-neonOrange transition" required>
+                    </div>
+                    <div>
+                        <label class="block text-xs uppercase tracking-widest text-white/50 mb-2 font-bold">Main Industry</label>
+                        <select class="w-full bg-[#0a0b0d] border border-white/20 p-4 text-white/80 font-mono focus:outline-none focus:border-neonOrange transition">
+                            <option>製造・メーカー</option>
+                            <option>小売・EC</option>
+                            <option>医薬・化学</option>
+                            <option>その他（海運・3PL）</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="mb-10">
+                    <label class="block text-xs uppercase tracking-widest text-white/50 mb-2 font-bold">Estimated Monthly TEU (取扱コンテナ量)</label>
+                    <select class="w-full bg-[#0a0b0d] border border-white/20 p-4 text-white/80 font-mono focus:outline-none focus:border-neonOrange transition">
+                        <option>10 - 100 TEU</option>
+                        <option>100 - 500 TEU</option>
+                        <option>Global (500+ TEU)</option>
                     </select>
                 </div>
-                <button type="submit" class="w-full bg-neonOrange text-dark font-display font-bold uppercase tracking-widest py-4 hover:bg-white transition">
-                    ENTER DATALINK
+                <button type="submit" class="w-full bg-neonOrange text-[#0a0b0d] font-display font-black text-lg uppercase tracking-widest py-5 hover:bg-white transition-colors duration-300">
+                    REQUEST ARCHITECTURE
                 </button>
             </form>
         </div>
     </section>
+
+    <!-- Footer -->
+    <footer class="bg-black py-12 border-t-2 border-white/10 text-center text-white/30 font-display text-[10px] tracking-[0.3em] uppercase">
+        <div class="flex justify-center gap-8 mb-6 font-bold">
+            <a href="#" class="hover:text-neonOrange text-white/50">Terms</a>
+            <a href="#" class="hover:text-neonOrange text-white/50">Privacy</a>
+            <a href="#" class="hover:text-neonOrange text-white/50">API Docs</a>
+        </div>
+        &copy; 2026 OMNI LOGISTICS AI SYSTEMS. SECURE LINK.
+    </footer>
 
 </body>
 </html>
