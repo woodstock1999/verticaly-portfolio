@@ -1,12 +1,152 @@
-<!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>電動キックボードシェア (E-Scooter)</title><script src="https://cdn.tailwindcss.com"></script><link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet"></head>
-<body class="bg-[#050505] text-[#ededed] min-h-screen flex items-center justify-center p-8">
-    <a href="../index.html" class="absolute top-8 right-8 text-xs tracking-[0.2em] uppercase text-white/50 hover:text-white">Return</a>
-    <div class="relative w-full max-w-6xl aspect-[21/9] rounded-xl overflow-hidden shadow-2xl">
-        <img src="https://picsum.photos/seed/aethel24/1600/900" class="absolute inset-0 w-full h-full object-cover opacity-30 grayscale sepia-[.3]" />
-        <div class="absolute inset-0 p-16 flex flex-col justify-end bg-gradient-to-t from-black via-black/40 to-transparent">
-            <div class="text-[#d4af37] text-sm tracking-[0.3em] uppercase mb-4 font-bold border-l-2 border-[#d4af37] pl-4">3. Mobility & Transportation (モビリティ・交通) - 0024</div>
-            <h1 class="text-5xl md:text-7xl font-bold tracking-wide mb-6" style="font-family: 'Playfair Display', serif;">電動キックボードシェア (E-Scooter)</h1>
-            <p class="text-xl font-light max-w-3xl text-white/60 leading-loose">スポーティなオレンジ＆ブラック。現在地からの距離をARで示す画面。</p>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAYFLOW CREATOR | Creator Fintech</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&family=Noto+Sans+JP:wght@500;700;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bg: '#F2F0EC', /* Cream */
+                        dark: '#111111', 
+                        hotpink: '#FF007F',
+                        electricblue: '#00F0FF',
+                    },
+                    fontFamily: {
+                        sans: ['Noto Sans JP', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'brutal': '8px 8px 0px 0px rgba(17,17,17,1)',
+                        'brutal-hover': '3px 3px 0px 0px rgba(17,17,17,1)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #F2F0EC; color: #111111; font-family: 'Noto Sans JP', sans-serif; overflow-x: hidden; line-height: 1.6; }
+        
+        .brutal-border { border: 4px solid #111111; border-radius: 20px; }
+        .brutal-btn {
+            border: 4px solid #111111; border-radius: 999px;
+            box-shadow: 4px 4px 0px 0px rgba(17,17,17,1); transition: all 0.1s ease;
+        }
+        .brutal-btn:hover { transform: translate(2px, 2px); box-shadow: 2px 2px 0px 0px rgba(17,17,17,1); }
+
+        .phrase { display: inline-block; }
+
+        /* Marquee background */
+        .marquee { position: absolute; white-space: nowrap; font-family: 'Outfit', sans-serif; font-weight: 900; font-size: 15rem; color: #111; opacity: 0.03; line-height: 0.8; z-index: -1; }
+        .m1 { top: 10%; animation: scroll 25s linear infinite; }
+        .m2 { top: 50%; animation: scroll 35s linear infinite reverse; }
+        @keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+    </style>
+</head>
+<body class="antialiased selection:bg-hotpink selection:text-white relative">
+
+    <div class="marquee m1">GET PAID GET PAID GET PAID GET PAID </div>
+    <div class="marquee m2">NO MORE WAITING NO MORE WAITING</div>
+
+    <!-- Header -->
+    <header class="w-full px-6 py-6 flex justify-between items-center z-50">
+        <div class="font-display font-black text-3xl tracking-tighter">PAYFLOW.</div>
+        <a href="#app" class="brutal-btn bg-electricblue px-8 py-3 text-sm font-black uppercase">Open App</a>
+    </header>
+
+    <!-- 1. Hero Content & Mobile Visuals -->
+    <section class="min-h-screen px-6 py-12 flex flex-col justify-center max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            
+            <div class="order-2 lg:order-1">
+                <div class="inline-block bg-hotpink text-white font-bold px-4 py-2 rounded-full border-2 border-dark mb-8 transform -rotate-3 text-sm">
+                    For YouТubers, TikTokers, and Freelancers
+                </div>
+                <h1 class="text-6xl md:text-8xl font-black mb-8 leading-[0.9] tracking-tight font-display">
+                    <span class="inline-block bg-white brutal-border px-4 py-2 mb-2">F*CK</span><br>
+                    <span class="inline-block bg-white brutal-border px-4 py-2 mb-2 text-hotpink">NET-60</span><br>
+                    <span class="inline-block bg-white brutal-border px-4 py-2">PAYMENTS.</span>
+                </h1>
+                <p class="text-xl font-bold text-dark/80 mb-10 leading-relaxed max-w-lg">
+                    <span class="phrase">案件のギャラ振り込みまで、まだ「翌々月末」とか待ってるの？</span>
+                    <span class="phrase">PAYFLOWなら、SNSの収益もスポンサー案件の報酬も、「今すぐ」引き出せる。</span>
+                    <span class="phrase">クリエイターのための、即日キャッシュ・アプリ。</span>
+                </p>
+                <div class="flex gap-4">
+                    <a href="#app" class="brutal-btn bg-dark text-white px-8 py-4 font-black text-lg">App Store</a>
+                    <a href="#app" class="brutal-btn bg-white px-8 py-4 font-black text-lg">Google Play</a>
+                </div>
+            </div>
+
+            <!-- VISUAL REALIZATION (Mobile App UI) -->
+            <div class="order-1 lg:order-2 flex justify-center lg:justify-end relative">
+                <!-- Abstract pop blob behind phone -->
+                <div class="absolute w-72 h-72 bg-electricblue rounded-full filter blur-[50px] opacity-50 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 -z-10"></div>
+                <!-- The Phone Mockup containing UI -->
+                <div class="w-[300px] h-[600px] brutal-border bg-white p-4 shadow-brutal flex flex-col relative transform rotate-3 hover:rotate-0 transition-transform duration-300 bg-white">
+                    <div class="w-full flex-grow border-2 border-dark rounded-xl overflow-hidden relative">
+                        <img src="img/ui.png" alt="Payflow Fintech App UI" class="w-full h-full object-cover">
+                        <!-- Flashy UI Overlay marker -->
+                        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 bg-hotpink text-white font-black text-xs py-2 px-6 rounded-full border-2 border-dark whitespace-nowrap shadow-brutal-hover animate-bounce">
+                            INSTANT PAYOUT: $4,500
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
-    </div>
-</body></html>
+    </section>
+
+    <!-- 2. Logic & Features -->
+    <section class="py-32 bg-dark text-white border-y-4 border-dark">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-4xl md:text-6xl font-black mb-20 text-center uppercase font-display tracking-tight">How We Break The Core Logic</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white text-dark p-8 brutal-border shadow-brutal transform -rotate-1 relative overflow-hidden group">
+                    <div class="font-display font-black text-6xl text-hotpink mb-4 opacity-20 group-hover:opacity-100 transition">1</div>
+                    <h3 class="text-2xl font-black mb-4">You Tube Data API 連携</h3>
+                    <p class="font-bold opacity-80">登録者数や再生回数のアナリティクスデータを元に、あなたの「将来の確実な収益」を独自AIが瞬時にスコアリング。信用情報を不要にします。</p>
+                </div>
+                <div class="bg-electricblue text-dark p-8 brutal-border shadow-brutal transform rotate-2 relative overflow-hidden group">
+                    <div class="font-display font-black text-6xl text-white mb-4 opacity-50 group-hover:opacity-100 transition">2</div>
+                    <h3 class="text-2xl font-black mb-4">即時ファクタリング</h3>
+                    <p class="font-bold opacity-80">タイアップ企業に請求書を提出した瞬間、アプリ上のボタン1つでPAYFLOWが先に立て替えます。面倒な審査書類は1枚もありません。</p>
+                </div>
+                <div class="bg-white text-dark p-8 brutal-border shadow-brutal transform -rotate-1 relative overflow-hidden group">
+                    <div class="font-display font-black text-6xl text-hotpink mb-4 opacity-20 group-hover:opacity-100 transition">3</div>
+                    <h3 class="text-2xl font-black mb-4">透明な手数料一律3%</h3>
+                    <p class="font-bold opacity-80">怪しい金融業者のような隠れコストは一切なし。引き出す額の3%だけ。機材の購入や外注費のキャッシュフローを劇的に改善します。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Final Form CTA -->
+    <section class="py-32 bg-hotpink border-b-4 border-dark" id="app">
+        <div class="max-w-2xl mx-auto px-6 text-center text-white">
+            <h2 class="text-5xl md:text-7xl font-black mb-6 font-display tracking-tight uppercase">Don't Wait.</h2>
+            <p class="text-xl font-bold mb-12">あなたの才能の対価は、今すぐ手元にあるべきだ。</p>
+            
+            <form class="bg-white p-8 brutal-border shadow-brutal text-dark text-left transform rotate-1">
+                <div class="mb-6">
+                    <label class="block font-black mb-2 text-lg">Your Creator Email</label>
+                    <input type="email" class="w-full bg-bg brutal-border py-4 px-4 font-bold focus:outline-none focus:bg-electricblue/10" placeholder="hello@creator.com" required>
+                </div>
+                <button type="submit" class="w-full brutal-btn bg-dark text-white font-black text-xl py-5 uppercase tracking-widest hover:bg-electricblue hover:text-dark">
+                    Get Early Access
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="text-center py-8 font-bold text-dark/50 text-sm">
+        PAYFLOW FINTECH INC. &copy; 2026
+    </footer>
+
+</body>
+</html>
