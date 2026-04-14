@@ -1,244 +1,199 @@
 <!DOCTYPE html>
-<html lang="ja" class="scroll-smooth">
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AURELIUS RESIDENCES | Meta Tower</title>
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <title>【事業承継・会社売却】次世代へ技術を繋ぐ | レクシードM&A</title>
+    <!-- 誠実さと重厚感を伝えるフォント -->
+    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@600;800&family=Noto+Sans+JP:wght@500;700;900&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <style>
-        body { font-family: 'Inter', sans-serif; background: #050505; color: #ece6da; overflow-x: hidden; }
-        .font-serif { font-family: 'Cinzel', serif; }
-        
-        /* Dark Luxury Utility */
-        .gold-border { border: 1px solid rgba(212, 175, 55, 0.3); }
-        .text-gold { color: #d4af37; }
-        .bg-gold { background-color: #d4af37; }
-        
-        /* Smooth Scrollbar */
-        ::-webkit-scrollbar { width: 4px; }
-        ::-webkit-scrollbar-track { background: #050505; }
-        ::-webkit-scrollbar-thumb { background: #d4af37; border-radius: 2px; }
-
-        /* Cinematic Blur Lines */
-        .cinematic-glow { box-shadow: 0 0 100px rgba(212, 175, 55, 0.05); }
-        .bg-noise { background-image: url('data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noise%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.8%22 numOctaves=%224%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noise)%22 opacity=%220.04%22/%3E%3C/svg%3E'); pointer-events: none; }
-    </style>
-</head>
-<body class="antialiased font-light relative">
-    
-    <div class="fixed inset-0 bg-noise z-50 mix-blend-overlay"></div>
-
-    <!-- Navigation -->
-    <nav class="fixed w-full top-0 z-50 pt-8 pb-4 px-8 md:px-16 flex justify-between items-center mix-blend-difference transition-all duration-500" id="navbar">
-        <a href="../index.html" class="flex gap-2 items-center text-xs tracking-[0.2em] uppercase hover:text-gold transition">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
-            Menu
-        </a>
-        <div class="text-2xl font-serif tracking-[0.3em] font-medium text-white">AURELIUS</div>
-        <div class="hidden md:flex gap-12 text-[10px] tracking-[0.2em] uppercase">
-            <a href="#vision" class="hover:text-gold transition">The Vision</a>
-            <a href="#residences" class="hover:text-gold transition">Residences</a>
-            <a href="#inquire" class="text-gold border-b border-gold pb-1 hover:opacity-70 transition">Inquire</a>
-        </div>
-    </nav>
-
-    <!-- 1. Immersive Cinematic Hero -->
-    <header class="relative w-screen h-screen flex flex-col justify-center items-center overflow-hidden">
-        <div class="absolute inset-0 z-0">
-            <!-- Fullscreen Video/Image Hero -->
-            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=2000&q=80" alt="Luxury Estate" class="w-full h-full object-cover opacity-60 brightness-75 scale-105" id="hero-bg">
-            <div class="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-[#050505] opacity-90"></div>
-        </div>
-
-        <div class="z-10 text-center flex flex-col items-center mt-20">
-            <div class="text-gold text-[10px] tracking-[0.4em] uppercase mb-8 reveal-up">Edition 01 — New York</div>
-            <h1 class="text-6xl md:text-[8rem] font-serif tracking-widest leading-none mb-10 reveal-up" style="transform: translateY(20px); opacity: 0;">META TOWER</h1>
-            <p class="max-w-xl text-lg font-light tracking-wide text-white/50 leading-relaxed reveal-up" style="transform: translateY(20px); opacity: 0;">Beyond luxury. The pinnacle of architectural spatial design, situated above the clouds. Move in 2027.</p>
-        </div>
-
-        <div class="absolute bottom-12 flex flex-col items-center gap-4 z-10 reveal-up">
-            <div class="h-16 w-[1px] bg-gradient-to-b from-white/50 to-transparent"></div>
-            <div class="text-[9px] tracking-[0.3em] uppercase text-white/50">Scroll to Explore</div>
-        </div>
-    </header>
-
-    <!-- 2. Minimalist Split Focus Layout (Data & Copy) -->
-    <section class="py-32 px-8 md:px-16" id="vision">
-        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-16 items-center">
-            <div class="md:col-span-5 flex order-2 md:order-1 justify-center md:justify-start">
-                <div class="grid grid-cols-2 gap-8 text-center md:text-left">
-                    <div>
-                        <div class="text-[10px] text-gold tracking-widest uppercase mb-2">Height</div>
-                        <div class="text-4xl font-serif">432m</div>
-                    </div>
-                    <div>
-                        <div class="text-[10px] text-gold tracking-widest uppercase mb-2">Residences</div>
-                        <div class="text-4xl font-serif">104</div>
-                    </div>
-                    <div>
-                        <div class="text-[10px] text-gold tracking-widest uppercase mb-2">Amenities</div>
-                        <div class="text-4xl font-serif">6th-9th</div>
-                    </div>
-                    <div>
-                        <div class="text-[10px] text-gold tracking-widest uppercase mb-2">Completion</div>
-                        <div class="text-4xl font-serif">Q4 '27</div>
-                    </div>
-                </div>
-            </div>
-            <div class="md:col-span-7 order-1 md:order-2">
-                <h2 class="text-3xl md:text-5xl font-serif tracking-wide leading-tight mb-8">REDEFINING THE <br>SKYLINE OF TOMORROW.</h2>
-                <p class="text-[15px] font-light text-white/60 leading-loose max-w-2xl">
-                    Every residence at Aurelius is a masterpiece of spatial engineering. We have eliminated walls in favor of fluid, dynamic smart-glass partitions that respond to natural light, effectively creating a living breathing organism that tunes itself to your daily rhythm.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- 3. Parallax Masonry Image Viewer -->
-    <section class="py-20 relative" id="residences">
-        <h3 class="text-center text-[10px] tracking-[0.4em] text-gold uppercase mb-16">The Residences</h3>
-        
-        <div class="flex flex-col md:flex-row gap-8 px-4 md:px-12 h-auto md:h-[90vh]">
-            <!-- Column 1 -->
-            <div class="flex-1 flex flex-col gap-8 transform translate-y-12" id="parallax-col-1">
-                <div class="w-full h-[60%] overflow-hidden relative group rounded-sm cinematic-glow">
-                    <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=800&q=80" class="w-full h-full object-cover transition duration-[2s] group-hover:scale-110 grayscale sepia-[0.1]">
-                    <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition duration-700"></div>
-                </div>
-                <div class="w-full flex-1 overflow-hidden relative group rounded-sm">
-                    <img src="https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?w=800&q=80" class="w-full h-full object-cover transition duration-[2s] group-hover:scale-110 grayscale sepia-[0.1]">
-                </div>
-            </div>
-            
-            <!-- Column 2 (Center, taller) -->
-            <div class="flex-1 lg:flex-[1.5] flex flex-col h-full transform -translate-y-8" id="parallax-col-2">
-                <div class="w-full h-full overflow-hidden relative group rounded-sm cinematic-glow">
-                    <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=1200&q=80" class="w-full h-full object-cover transition duration-[2s] group-hover:scale-105 grayscale sepia-[0.1]">
-                    <div class="absolute bottom-8 left-8">
-                        <div class="text-xs uppercase tracking-widest bg-black/40 backdrop-blur px-3 py-1 text-white border border-white/10">The Grand Penthouse</div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Column 3 -->
-            <div class="flex-1 flex flex-col gap-8 transform translate-y-20" id="parallax-col-3">
-                <div class="w-full flex-1 overflow-hidden relative group rounded-sm">
-                    <img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=800&q=80" class="w-full h-full object-cover transition duration-[2s] group-hover:scale-110 grayscale sepia-[0.1]">
-                </div>
-                <div class="w-full h-[55%] overflow-hidden relative group rounded-sm cinematic-glow">
-                    <img src="https://images.unsplash.com/photo-1600607686527-6fb886090705?w=800&q=80" class="w-full h-full object-cover transition duration-[2s] group-hover:scale-110 grayscale sepia-[0.1]">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 4. Interactive Configuration Panel (Dark Minimal UI) -->
-    <section class="py-40 px-8 md:px-16 bg-[#030303] border-y border-white/5 relative">
-        <div class="max-w-6xl mx-auto flex flex-col lg:flex-row gap-20 items-center">
-            
-            <!-- Interface Mockup -->
-            <div class="w-full lg:w-1/2 relative">
-                <div class="aspect-square bg-black border border-white/10 rounded-2xl p-8 relative overflow-hidden shadow-2xl shadow-black">
-                    <!-- Fake UI Top bar -->
-                    <div class="flex justify-between items-center border-b border-white/10 pb-4 mb-8">
-                        <div class="text-[10px] tracking-widest uppercase text-white/40">Home System AI</div>
-                        <div class="flex gap-2"><span class="w-2 h-2 bg-gold rounded-full"></span><span class="text-[10px] text-white/50">Active</span></div>
-                    </div>
-                    
-                    <!-- Circular Climate Control UI Mockup -->
-                    <div class="absolute inset-0 m-auto w-64 h-64 rounded-full border border-white/5 flex items-center justify-center">
-                        <div class="w-48 h-48 rounded-full border border-gold/30 flex flex-col items-center justify-center relative">
-                            <!-- SVG Spinners -->
-                            <svg class="absolute inset-0 w-full h-full animate-[spin_10s_linear_infinite]" viewBox="0 0 100 100">
-                                <circle cx="50" cy="50" r="48" fill="none" stroke="rgba(212,175,55,0.2)" stroke-width="1" stroke-dasharray="4 2"></circle>
-                            </svg>
-                            <div class="text-[10px] uppercase tracking-widest text-white/40 mb-2">Climate</div>
-                            <div class="text-5xl font-light font-serif">22°</div>
-                            <div class="text-[9px] uppercase tracking-widest mt-2 text-gold">Optimal</div>
-                        </div>
-                    </div>
-
-                    <!-- Room Switches -->
-                    <div class="absolute bottom-8 left-8 right-8 flex justify-between gap-2">
-                        <div class="flex-1 border border-white/10 p-3 rounded bg-white/5 backdrop-blur text-center text-[10px] tracking-widest uppercase text-white/50 hover:bg-white/10 cursor-pointer transition">Living</div>
-                        <div class="flex-1 border border-gold/40 p-3 rounded bg-gold/10 backdrop-blur text-center text-[10px] tracking-widest uppercase text-gold cursor-pointer">Master</div>
-                        <div class="flex-1 border border-white/10 p-3 rounded bg-white/5 backdrop-blur text-center text-[10px] tracking-widest uppercase text-white/50 hover:bg-white/10 cursor-pointer transition">Pool</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Copy -->
-            <div class="w-full lg:w-1/2">
-                <div class="text-gold text-[10px] tracking-[0.3em] uppercase mb-6">INTEGRATED SPATIAL OS</div>
-                <h2 class="text-4xl md:text-5xl font-serif tracking-wide leading-tight mb-8">SILENT INTELLIGENCE.</h2>
-                <p class="text-[15px] font-light text-white/60 leading-loose mb-10">
-                    The entire residence is woven with proximity sensors and thermal regulators. A single touch via your personal Spatial OS seamlessly dims the glass panels, regulates the ambient sound, and prepares the biometric locking systems. 
-                </p>
-                <a href="#" class="inline-flex items-center gap-4 text-xs tracking-widest uppercase pb-2 border-b border-white/20 hover:border-gold hover:text-gold transition-colors">
-                    Explore Technology <svg width="12" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- 5. Massive Cinematic Footer -->
-    <footer class="relative h-screen flex flex-col items-center justify-center overflow-hidden" id="inquire">
-        <!-- Background -->
-        <div class="absolute inset-0 z-0">
-            <img src="https://images.unsplash.com/photo-1600573472550-8090b5e0745e?w=2000&q=80" class="w-full h-full object-cover opacity-20 grayscale sepia-[0.2]">
-            <div class="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/60 to-transparent"></div>
-        </div>
-        
-        <div class="relative z-10 text-center px-4 w-full max-w-4xl">
-            <div class="mx-auto w-12 h-12 border border-gold rounded-full flex items-center justify-center mb-10">
-                <span class="text-gold font-serif text-lg">A</span>
-            </div>
-            <h2 class="text-5xl md:text-7xl font-serif tracking-widest uppercase mb-12">Claim Your Place<br>In The Sky.</h2>
-            
-            <form class="max-w-md mx-auto relative group">
-                <input type="email" placeholder="ENTER YOUR EMAIL FOR PRIVATE PREVIEW" class="w-full bg-transparent border-b border-white/20 pb-4 text-center text-xs tracking-[0.2em] font-light outline-none text-white focus:border-gold transition-colors placeholder:text-white/20">
-                <button type="button" class="absolute right-0 top-0 text-white/50 hover:text-gold uppercase tracking-widest text-[10px] transition font-bold">Submit</button>
-            </form>
-        </div>
-
-        <div class="absolute bottom-8 w-full px-8 flex justify-between items-center text-[9px] tracking-[0.2em] uppercase text-white/30 font-light">
-            <div>© 2027 AURELIUS DEVELOPMENT INC.</div>
-            <div class="flex gap-6">
-                <a href="#" class="hover:text-white transition">Privacy</a>
-                <a href="#" class="hover:text-white transition">Terms</a>
-                <a href="#" class="hover:text-white transition">Instagram</a>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Animations -->
     <script>
-        gsap.registerPlugin(ScrollTrigger);
-
-        // Hero Reveal
-        const timeline = gsap.timeline();
-        timeline.to('#hero-bg', { scale: 1, duration: 2.5, ease: 'power2.out' })
-                .to('.reveal-up', { y: 0, opacity: 1, duration: 1.2, stagger: 0.15, ease: 'power3.out' }, "-=1.5");
-
-        // Masonry Parallax Effect
-        if (window.innerWidth > 768) {
-            gsap.to('#parallax-col-1', {
-                y: -60, ease: "none",
-                scrollTrigger: { trigger: "#residences", start: "top bottom", end: "bottom top", scrub: 1 }
-            });
-            gsap.to('#parallax-col-2', {
-                y: 40, ease: "none",
-                scrollTrigger: { trigger: "#residences", start: "top bottom", end: "bottom top", scrub: 1 }
-            });
-            gsap.to('#parallax-col-3', {
-                y: -100, ease: "none",
-                scrollTrigger: { trigger: "#residences", start: "top bottom", end: "bottom top", scrub: 1 }
-            });
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bizNavy: '#0F203C',
+                        bizGold: '#C5A880',
+                        bizRed: '#B91C1C',
+                        bizGray: '#F3F4F6',
+                    },
+                    fontFamily: {
+                        serif: ['Shippori Mincho B1', 'serif'],
+                        sans: ['Noto Sans JP', 'sans-serif'],
+                    }
+                }
+            }
         }
     </script>
+    <style>
+        body { font-family: 'Noto Sans JP', sans-serif; background-color: #F8F9FA; color: #1A1A1A; line-height: 1.8; word-break: auto-phrase; }
+        
+        .title-mark { background: linear-gradient(transparent 60%, rgba(197, 168, 128, 0.4) 60%); display: inline-block; }
+        
+        .pulse-btn { animation: pulseBiz 2s infinite; }
+        @keyframes pulseBiz { 0% { box-shadow: 0 0 0 0 rgba(197, 168, 128, 0.7); } 50% { box-shadow: 0 0 0 15px rgba(197, 168, 128, 0); } 100% { box-shadow: 0 0 0 0 rgba(197, 168, 128, 0); } }
+
+        /* 改行コントロール用 */
+        .ib { display: inline-block; }
+    </style>
+</head>
+<body class="antialiased pb-20 md:pb-0">
+
+    <!-- アラート帯 -->
+    <div class="bg-bizNavy text-white text-center py-2 font-bold text-sm md:text-base tracking-widest w-full border-b-2 border-bizGold">
+        <span class="text-bizGold mr-2">【後継者不在の経営者様へ】</span> 廃業を選ぶ前に、必ず一度ご相談ください。着手金は完全無料です。
+    </div>
+
+    <!-- FV -->
+    <section class="bg-white relative border-b-8 border-bizNavy shadow-xl">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center">
+            <!-- テキストエリア -->
+            <div class="w-full md:w-1/2 p-6 md:p-12 z-10">
+                <div class="inline-block border-2 border-bizRed text-bizRed font-black px-4 py-1 text-sm md:text-base mb-6">
+                    最短45日でマッチング成立
+                </div>
+                <h1 class="text-3xl md:text-5xl font-serif font-extrabold leading-[1.3] mb-6 text-bizNavy">
+                    <span class="ib">あなたが人生をかけて</span><span class="ib">育てた技術は、</span><br>
+                    <span class="text-bizRed ib">億単位の価値</span><span class="ib">を持っています。</span>
+                </h1>
+                <p class="text-lg md:text-xl font-bold mb-8 text-gray-700 leading-relaxed">
+                    <span class="ib">「うちみたいな小さな工場、誰も買わないよ…」</span><br>
+                    <span class="ib">そう思い込み、黒字のまま廃業を検討していませんか？</span><br>
+                    <span class="ib title-mark">あなたの会社の「見えない資産」を正当に評価し、</span><br>
+                    <span class="ib title-mark">大企業への売却によって創業者利益を確保します。</span>
+                </p>
+                <a href="#consult" class="block w-full bg-bizNavy border border-bizGold text-white text-center rounded text-xl font-bold py-5 pulse-btn hover:bg-bizGold transition">
+                    <span class="ib">まずは匿名で自社の「売却価値」を知る ＞</span>
+                </a>
+            </div>
+            
+            <!-- ビジュアルエリア (シズル感) -->
+            <div class="w-full md:w-1/2 relative h-[60vh] md:h-[80vh]">
+                <img src="img/ui.png" alt="町工場の職人の手と精密部品" class="absolute inset-0 w-full h-full object-cover filter contrast-125 grayscale-[10%]">
+                <div class="absolute inset-0 bg-gradient-to-r from-white via-white/20 to-transparent md:bg-gradient-to-l md:from-transparent md:via-white/20 md:to-white"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ターゲットの痛み（共感） -->
+    <section class="py-20 bg-bizGray border-b border-gray-300">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-center font-black text-2xl md:text-4xl text-bizNavy mb-12 flex flex-col items-center">
+                <span class="text-bizRed text-xl mb-2">▼ こんな経営課題はありませんか？</span>
+                <span class="title-mark">一つでも当てはまれば「売却」が最適解です</span>
+            </h2>
+            
+            <div class="bg-white p-8 md:p-10 rounded-lg shadow-md border-t-4 border-bizNavy space-y-6">
+                <div class="flex items-start gap-4 p-4 border border-gray-200 rounded hover:bg-gray-50 transition">
+                    <div class="bg-bizNavy text-white font-black px-3 py-1 rounded">1</div>
+                    <p class="text-lg font-bold"><span class="ib">息子や娘に会社を継がせる意思がなく、</span><span class="ib text-bizRed underline decoration-bizRed/30">後継者がいない。</span></p>
+                </div>
+                <div class="flex items-start gap-4 p-4 border border-gray-200 rounded hover:bg-gray-50 transition">
+                    <div class="bg-bizNavy text-white font-black px-3 py-1 rounded">2</div>
+                    <p class="text-lg font-bold"><span class="ib">従業員の雇用は守りたいが、</span><span class="ib text-bizRed underline decoration-bizRed/30">自分自身の体力と気力の限界が近い。</span></p>
+                </div>
+                <div class="flex items-start gap-4 p-4 border border-gray-200 rounded hover:bg-gray-50 transition">
+                    <div class="bg-bizNavy text-white font-black px-3 py-1 rounded">3</div>
+                    <p class="text-lg font-bold"><span class="ib">借入金（個人保証）が残っており、</span><span class="ib text-bizRed underline decoration-bizRed/30">廃業しようにも清算できない。</span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 実利（成功事例・キャッシュ化） -->
+    <section class="py-24 bg-white">
+        <div class="max-w-5xl mx-auto px-6">
+            <h2 class="text-center font-black text-3xl md:text-4xl text-bizNavy mb-16">
+                <span class="ib">廃業コスト（数千万）を回避し、</span><br>
+                <span class="text-bizRed ib">数億円の「創業者利益（キャッシュ）」</span><span class="ib">を手に入れた実績</span>
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- 事例1 -->
+                <div class="border-2 border-bizGold rounded-xl p-8 relative shadow-lg bg-white">
+                    <div class="absolute -top-5 left-8 bg-bizGold text-white font-black px-4 py-1 text-sm tracking-widest">赤字ギリギリからの大逆転</div>
+                    <h3 class="text-xl font-bold mb-4 mt-2">特殊金属加工業（従業員12名）の場合</h3>
+                    <p class="text-gray-600 font-medium leading-loose mb-6">
+                        長年の取引先の減少により利益はほぼゼロに。しかし、同社が持つ「独自の研磨技術」を喉から手が出るほど欲しがっていた大手上場メーカーとマッチング。
+                    </p>
+                    <div class="bg-bizGray p-4 rounded text-center border border-gray-200">
+                        <div class="text-sm font-bold text-gray-500 mb-1">経営者の手取り譲渡益</div>
+                        <div class="text-4xl font-black text-bizRed">1億4,000万円</div>
+                    </div>
+                </div>
+
+                <!-- 事例2 -->
+                <div class="border-2 border-bizGold rounded-xl p-8 relative shadow-lg bg-white">
+                    <div class="absolute -top-5 left-8 bg-bizGold text-white font-black px-4 py-1 text-sm tracking-widest">後継者不在の解決</div>
+                    <h3 class="text-xl font-bold mb-4 mt-2">地域密着の建設業（従業員25名）の場合</h3>
+                    <p class="text-gray-600 font-medium leading-loose mb-6">
+                        社長（72歳）が引退を決意するも後継者ゼロ。借入金（社長の個人保証）が1億円残っていたが、同業の中堅企業へ全株式を譲渡。従業員の雇用を100%維持。
+                    </p>
+                    <div class="bg-bizGray p-4 rounded text-center border border-gray-200">
+                        <div class="text-sm font-bold text-gray-500 mb-1">借入金完済 ＋ 創業者利益</div>
+                        <div class="text-4xl font-black text-bizRed">2億8,000万円</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WEB・電話フォーム CTA -->
+    <section class="py-24 bg-bizNavy text-white" id="consult">
+        <div class="max-w-3xl mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-5xl font-serif font-bold mb-8"><span class="ib">秘密厳守で、まずは</span><span class="ib text-bizGold">「自社の価値」</span><span class="ib">を算定しませんか？</span></h2>
+            <p class="text-lg font-medium text-gray-300 mb-12">
+                <span class="ib">ご相談から企業価値算定まで、初期費用や着手金は「完全無料」です。</span><br>
+                <span class="ib">完全成功報酬制のため、売却が成立するまで1円もいただきません。</span>
+            </p>
+
+            <div class="bg-white p-8 rounded-lg text-left shadow-2xl">
+                <h3 class="text-xl font-black text-bizNavy mb-6 border-b-2 border-bizGray pb-4 text-center">無料・企業価値シミュレーション依頼</h3>
+                <form class="space-y-6">
+                    <div>
+                        <label class="block text-bizNavy font-bold mb-2">御社名（または匿名でも可）</label>
+                        <input type="text" class="w-full border border-gray-300 bg-gray-50 p-3 text-bizNavy font-bold rounded focus:border-bizGold focus:outline-none placeholder-gray-400" placeholder="株式会社 〇〇製作所">
+                    </div>
+                    <div>
+                        <label class="block text-bizNavy font-bold mb-2">直近の年商（概算）</label>
+                        <select class="w-full border border-gray-300 bg-gray-50 p-3 text-bizNavy font-bold rounded focus:border-bizGold focus:outline-none">
+                            <option>1億円未満</option>
+                            <option>1億円〜5億円</option>
+                            <option>5億円〜10億円</option>
+                            <option>10億円以上</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-bizNavy font-bold mb-2">電話番号（担当者へ直通します） <span class="bg-bizRed text-white text-xs px-2 py-1 rounded ml-2">必須</span></label>
+                        <input type="tel" class="w-full border border-gray-300 bg-gray-50 p-3 text-bizNavy font-bold rounded focus:border-bizGold focus:outline-none" placeholder="090-0000-0000">
+                    </div>
+                    <button type="submit" class="w-full bg-bizRed text-white font-black text-2xl py-5 rounded shadow-[0_6px_0_#7F1D1D] hover:translate-y-[3px] hover:shadow-[0_3px_0_#7F1D1D] transition-all mt-4">
+                        <span class="ib">無料で自社の価値を算定する ＞</span>
+                    </button>
+                    <p class="text-center font-bold text-sm text-gray-500 mt-4">お急ぎの経営者様は専用ダイヤルへ: <span class="text-bizNavy text-lg">0120-000-000</span></p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-[#0A1526] text-gray-500 text-center py-10 text-sm font-bold border-t border-gray-800">
+        <p>&copy; 2026 レクシードM&Aコンサルティング株式会社</p>
+    </footer>
+
+    <!-- Mobile Sticky CTA -->
+    <div class="fixed bottom-0 left-0 w-full bg-white border-t-2 border-bizGold p-2 md:hidden z-50 flex items-center justify-between shadow-[0_-5px_20px_rgba(0,0,0,0.1)]">
+        <div class="flex-1 text-center border-r border-gray-300">
+            <a href="tel:0120000000" class="block w-full py-2">
+                <span class="block text-[10px] font-bold text-gray-500">お電話でのご相談(無料)</span>
+                <span class="block text-xl font-black text-bizNavy">0120-000-000</span>
+            </a>
+        </div>
+        <div class="flex-1 px-2">
+            <a href="#consult" class="block w-full bg-bizRed text-white bg-gradient-to-r from-bizRed to-[#991B1B] text-center font-bold text-sm py-3 rounded shadow pulse-btn">
+                WEBで価値算定 ＞
+            </a>
+        </div>
+    </div>
+
 </body>
 </html>

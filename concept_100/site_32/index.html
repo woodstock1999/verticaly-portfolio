@@ -1,17 +1,174 @@
-<!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>火星移住用ドーム (Mars Habitat)</title><script src="https://cdn.tailwindcss.com"></script></head>
-<body class="bg-[#f8f9fa] text-slate-800 p-6 md:p-16 font-sans min-h-screen">
-    <header class="mb-12 flex justify-between items-end max-w-6xl mx-auto border-b border-slate-200 pb-8">
-        <div><div class="text-sm font-medium text-blue-600 mb-2">4. Real Estate & Architecture (不動産・建築) / Prototype 32</div><h1 class="text-4xl md:text-5xl font-bold tracking-tight">火星移住用ドーム (Mars Habitat)</h1></div>
-        <a href="../index.html" class="text-sm font-bold tracking-widest text-slate-400 hover:text-black uppercase">Close</a>
-    </header>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-        <div class="md:col-span-2 bg-white rounded-[24px] overflow-hidden shadow-lg border border-slate-100 flex flex-col justify-between">
-            <div class="h-64 object-cover relative"><img src="https://picsum.photos/seed/aethel32/1600/900" class="w-full h-full object-cover"></div>
-            <div class="p-10"><div class="text-2xl font-light leading-relaxed text-slate-600 mb-8">赤茶色の広大な風景と、白い曲線状の建築を描くSF的だがリアルなUI。</div></div>
-        </div>
-        <div class="bg-indigo-600 text-white rounded-[24px] p-10 shadow-lg flex flex-col justify-center items-center text-center">
-             <div class="w-24 h-24 rounded-full border-4 border-indigo-400/30 mb-6 flex items-center justify-center text-4xl">32</div>
-             <h3 class="text-xl font-bold mb-2">Live Demo Ready</h3>
-        </div>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【公式】外壁塗装の匠魂 ｜ 地元密着・悪徳業者を完全排除</title>
+    <!-- 現場の力強さと誠実さを伝えるゴシック体 -->
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500;700;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        craftNavy: '#1E3A8A', /* 職人の紺色 */
+                        warningOrange: '#FF6B00', /* 警告・注目 */
+                        safeGreen: '#10B981', /* 安心感 */
+                    },
+                    fontFamily: {
+                        sans: ['Zen Kaku Gothic New', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Zen Kaku Gothic New', sans-serif; background-color: #F8FAFC; color: #1E293B; line-height: 1.8; word-break: auto-phrase; }
+        
+        .hl-orange { background: linear-gradient(transparent 60%, rgba(255, 107, 0, 0.3) 60%); display: inline-block; }
+        .text-impact { text-shadow: 2px 2px 0 #fff, -2px -2px 0 #fff, 2px -2px 0 #fff, -2px 2px 0 #fff, 0 4px 10px rgba(0,0,0,0.3); }
+
+        /* 斜めストライプ背景 (現場・バリケード感) */
+        .bg-stripes { background: repeating-linear-gradient(45deg, #FF6B00, #FF6B00 10px, #EA580C 10px, #EA580C 20px); }
+
+        .ib { display: inline-block; }
+    </style>
+</head>
+<body class="antialiased pb-24 md:pb-0">
+
+    <!-- 強烈な警告帯 (悪徳業者対策への共感) -->
+    <div class="bg-stripes text-white text-center py-3 font-black text-sm md:text-xl tracking-widest w-full">
+        ⚠️ <span class="ib border-b-2 border-white leading-tight">「お宅の屋根、剥がれてますよ」...その飛び込み営業、ちょっと待った！</span>
     </div>
-</body></html>
+
+    <!-- ファーストビュー (シズル感＝職人の目ヂカラと塗料の輝き) -->
+    <section class="max-w-5xl mx-auto bg-white shadow-2xl relative overflow-hidden pb-12 w-full mt-4 rounded-t-xl border-x-4 border-t-4 border-craftNavy">
+        <div class="relative w-full aspect-[4/3] md:aspect-[2/1]">
+            <img src="img/ui.png" alt="真剣なまなざしで外壁を塗る職人" class="w-full h-full object-cover">
+            
+            <div class="absolute inset-0 bg-gradient-to-t from-craftNavy/90 via-craftNavy/40 to-transparent flex flex-col justify-end p-6 md:p-12">
+                <div class="bg-warningOrange text-white font-black text-lg md:text-2xl px-6 py-2 inline-block w-fit mb-4 transform -skew-x-12 shadow-lg">
+                    下請けを挟まないから【適正価格】！
+                </div>
+                <h1 class="text-white font-black text-3xl md:text-6xl leading-tight mb-4 tracking-tighter">
+                    <span class="ib">手抜き工事を絶対に許さない、</span><br>
+                    <span class="text-yellow-400 text-impact ib">地元密着の「職人直営店」</span>
+                </h1>
+                <p class="text-white font-bold text-lg md:text-2xl drop-shadow-md bg-black/50 p-3 inline-block w-fit border-l-4 border-warningOrange">
+                    見積もりの透明性100%。完全自社施工で10年保証。
+                </p>
+            </div>
+        </div>
+
+        <div class="px-6 md:px-12 mt-10 text-center">
+            <p class="text-warningOrange font-black mb-3 text-lg">▼ 「他社の見積もりが高すぎる…」と思ったら即お電話を ▼</p>
+            <a href="tel:0120000000" class="block w-full bg-safeGreen text-white py-6 rounded-2xl shadow-[0_8px_0_#047857] hover:translate-y-[4px] hover:shadow-[0_4px_0_#047857] transition-all flex flex-col items-center justify-center">
+                <span class="text-sm font-bold bg-white text-safeGreen px-4 py-1 rounded-full mb-2">相見積もり大歓迎・無料現地調査 (9:00〜19:00)</span>
+                <div class="text-4xl md:text-6xl font-black tracking-widest drop-shadow-md">0120-000-000</div>
+            </a>
+            <p class="mt-4 font-bold text-gray-500">※しつこい営業電話は一切いたしません。</p>
+        </div>
+    </section>
+
+    <!-- 痛みの共感（訪問営業への不安） -->
+    <section class="py-16 bg-slate-100">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-center font-black text-2xl md:text-4xl text-craftNavy mb-12 border-b-4 border-craftNavy inline-block pb-2 w-full">
+                <span class="ib">外壁塗装の業界は、</span><span class="ib text-warningOrange">不透明なことだらけ</span><span class="ib">です。</span>
+            </h2>
+            
+            <div class="bg-white p-8 rounded-xl shadow-md border-2 border-red-200">
+                <ul class="space-y-8">
+                    <li class="flex items-start gap-4">
+                        <span class="text-4xl text-red-500 mt-[-5px]">💣</span>
+                        <p class="text-lg md:text-xl font-bold"><span class="ib hl-orange">「今すぐ足場を組まないと雨漏りしますよ！」</span><span class="ib">と突然訪問営業が来て不安を煽られた。</span></p>
+                    </li>
+                    <li class="flex items-start gap-4">
+                        <span class="text-4xl text-red-500 mt-[-5px]">💣</span>
+                        <p class="text-lg md:text-xl font-bold"><span class="ib">見積もりを取ったら、</span><span class="ib hl-orange">「今契約すれば100万円値引きします」</span><span class="ib">と言われ不信感しかない。</span></p>
+                    </li>
+                    <li class="flex items-start gap-4">
+                        <span class="text-4xl text-red-500 mt-[-5px]">💣</span>
+                        <p class="text-lg md:text-xl font-bold"><span class="ib">営業マンは調子が良いが、</span><span class="ib hl-orange">実際に塗る職人がどんな人か分からず</span><span class="ib">手抜きされないか心配。</span></p>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="text-center mt-12">
+                <div class="text-craftNavy font-black text-2xl md:text-4xl leading-relaxed">
+                    <span class="ib">その不安、すべて</span><br class="md:hidden">
+                    <span class="text-warningOrange text-4xl md:text-6xl underline decoration-8 mt-2 inline-block">「職人直営店」</span><span class="ib text-3xl">が解決します！</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 解決策・強み（中間マージンカット・職人品質） -->
+    <section class="py-20 bg-white">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                
+                <!-- 強み1: 適正価格 -->
+                <div class="bg-slate-50 p-8 border-4 border-slate-200 rounded-2xl relative shadow-lg">
+                    <div class="absolute -top-6 left-8 bg-craftNavy text-white font-black text-2xl px-6 py-2 rounded-lg transform -rotate-3">理由 1</div>
+                    <h3 class="text-2xl font-black text-craftNavy mt-6 mb-4">中間マージン「ゼロ」の適正価格</h3>
+                    <p class="font-bold text-gray-700 leading-loose">
+                        大手ハウスメーカーや訪問業者の見積もりには、膨大な「営業マンの歩合」と「下請け業者へのマージン」が30〜40%も上乗せされています。私たちは営業マンを持たない完全自社の職人集団。お客様の払ったお金は、100%『最高級の塗料』と『職人の技』に還元されます。
+                    </p>
+                </div>
+
+                <!-- 強み2: 妥協なき3回塗り -->
+                <div class="bg-slate-50 p-8 border-4 border-slate-200 rounded-2xl relative shadow-lg">
+                    <div class="absolute -top-6 left-8 bg-craftNavy text-white font-black text-2xl px-6 py-2 rounded-lg transform -rotate-3">理由 2</div>
+                    <h3 class="text-2xl font-black text-craftNavy mt-6 mb-4">写真提出付きの「絶対3回塗り」</h3>
+                    <p class="font-bold text-gray-700 leading-loose">
+                        外壁塗装の手抜きで最も多いのが「塗布量をごまかす」「中塗りを省く」ことです。当店では、下塗り・中塗り・上塗りの各工程ごとに施工箇所をすべて写真撮影し、完了後にアルバムにしてお渡しします。ごまかしは一切通用しません。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- フォーム CTA -->
+    <section class="py-20 bg-craftNavy text-white" id="form">
+        <div class="max-w-3xl mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-5xl font-black mb-8 leading-tight"><span class="ib">相見積もりの1社に、</span><br><span class="text-warningOrange">ぜひ私たちを加えてください。</span></h2>
+            <p class="text-lg font-bold text-slate-300 mb-12">
+                「他社の見積もりが妥当か見てほしい」そんなご相談だけでも大歓迎です。<br>ご自宅の面積と状態をプロの目で正確に測り、1円単位で根拠のあるお見積書をお作りします。
+            </p>
+
+            <form class="bg-white p-8 md:p-10 rounded-2xl text-left shadow-2xl border-[6px] border-warningOrange">
+                <h3 class="text-2xl font-black text-craftNavy mb-6 text-center border-b-2 border-slate-200 pb-4">無料・現地調査＆お見積もり依頼</h3>
+                <div class="space-y-6">
+                    <div>
+                        <label class="block text-craftNavy font-bold mb-2">お名前 <span class="bg-red-500 text-white text-xs px-2 py-1 rounded ml-2">必須</span></label>
+                        <input type="text" class="w-full border-2 border-slate-300 bg-slate-50 p-4 text-craftNavy font-bold rounded-lg focus:border-warningOrange focus:outline-none" placeholder="山田 太郎">
+                    </div>
+                    <div>
+                        <label class="block text-craftNavy font-bold mb-2">お電話番号 <span class="bg-red-500 text-white text-xs px-2 py-1 rounded ml-2">必須</span></label>
+                        <input type="tel" class="w-full border-2 border-slate-300 bg-slate-50 p-4 text-craftNavy font-bold rounded-lg focus:border-warningOrange focus:outline-none" placeholder="090-0000-0000">
+                    </div>
+                    <div>
+                        <label class="block text-craftNavy font-bold mb-2">ご相談内容（気になるところ）</label>
+                        <textarea class="w-full border-2 border-slate-300 bg-slate-50 p-4 text-craftNavy font-bold rounded-lg focus:border-warningOrange focus:outline-none" rows="3" placeholder="築15年で壁にヒビが入っているので見てほしい。他社の見積もりが高くて悩んでいる。"></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-warningOrange text-white font-black text-2xl py-6 rounded-xl shadow-[0_6px_0_#C2410C] hover:translate-y-[3px] hover:shadow-[0_3px_0_#C2410C] transition-all mt-4">
+                        <span class="ib">無料でプロに調査を依頼する ＞</span>
+                    </button>
+                    <p class="text-center font-bold text-sm text-slate-500 mt-6">押し売り営業などは絶対にいたしません。</p>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Mobile Sticky CTA -->
+    <div class="fixed bottom-0 left-0 w-full bg-warningOrange md:hidden z-50 p-3 border-t-[6px] border-craftNavy shadow-[0_-10px_20px_rgba(0,0,0,0.2)]">
+        <a href="tel:0120000000" class="flex flex-col items-center justify-center text-white">
+            <span class="text-xs font-black tracking-widest bg-white text-warningOrange px-3 py-1 rounded-full mb-1">他社の見積もりが高いと思ったらスグ電話！</span>
+            <span class="text-3xl font-black tracking-wider text-impact drop-shadow-md">0120-000-000</span>
+        </a>
+    </div>
+
+</body>
+</html>

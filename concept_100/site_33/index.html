@@ -1,12 +1,195 @@
-<!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>VR内見プラットフォーム (Virtual Open House)</title><script src="https://cdn.tailwindcss.com"></script><link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet"></head>
-<body class="bg-[#050505] text-[#ededed] min-h-screen flex items-center justify-center p-8">
-    <a href="../index.html" class="absolute top-8 right-8 text-xs tracking-[0.2em] uppercase text-white/50 hover:text-white">Return</a>
-    <div class="relative w-full max-w-6xl aspect-[21/9] rounded-xl overflow-hidden shadow-2xl">
-        <img src="https://picsum.photos/seed/aethel33/1600/900" class="absolute inset-0 w-full h-full object-cover opacity-30 grayscale sepia-[.3]" />
-        <div class="absolute inset-0 p-16 flex flex-col justify-end bg-gradient-to-t from-black via-black/40 to-transparent">
-            <div class="text-[#d4af37] text-sm tracking-[0.3em] uppercase mb-4 font-bold border-l-2 border-[#d4af37] pl-4">4. Real Estate & Architecture (不動産・建築) - 0033</div>
-            <h1 class="text-5xl md:text-7xl font-bold tracking-wide mb-6" style="font-family: 'Playfair Display', serif;">VR内見プラットフォーム (Virtual Open House)</h1>
-            <p class="text-xl font-light max-w-3xl text-white/60 leading-loose">ドラッグ＆ドロップで視点が変わるインタラクティブなフロアマップ。</p>
-        </div>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【実家・空き家の直接買取】そのまま放置は危険です | 相続不動産レスキュー</title>
+    <!-- 温かみと安心感を伝える丸ゴシック -->
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700;900&family=Noto+Sans+JP:wght@500;700;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        earthGreen: '#2F5C3E', /* 自然・安心・土地 */
+                        warmBrown: '#8B5A2B',  /* 温もり・家 */
+                        alertYellow: '#FCD34D',
+                    },
+                    fontFamily: {
+                        sans: ['M PLUS Rounded 1c', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'M PLUS Rounded 1c', sans-serif; background-color: #F9FAFB; color: #1F2937; line-height: 1.8; word-break: auto-phrase; }
+        
+        .hl-green { background: linear-gradient(transparent 60%, rgba(47, 92, 62, 0.2) 60%); display: inline-block; }
+        .text-impact { text-shadow: 1px 1px 0 #FFF, -1px -1px 0 #FFF, 1px -1px 0 #FFF, -1px 1px 0 #FFF, 0 3px 8px rgba(0,0,0,0.4); }
+
+        .ib { display: inline-block; }
+    </style>
+</head>
+<body class="antialiased pb-24 md:pb-0">
+
+    <!-- 気付きのヘッダー -->
+    <div class="bg-alertYellow text-earthGreen text-center py-3 font-black text-xs md:text-lg tracking-widest w-full">
+        <span class="ib">【誰も住まない実家を相続した方へ】</span> <span class="ib">固定資産税を毎年払い続けていませんか？</span>
     </div>
-</body></html>
+
+    <!-- FV (エモーショナルだが結論を急ぐ) -->
+    <section class="w-full relative bg-white border-b-8 border-earthGreen shadow-2xl">
+        <div class="relative w-full h-[60vh] md:h-[70vh]">
+            <!-- Sizzle: Nostalgic house golden hour -->
+            <img src="img/ui.png" alt="夕暮れ時の誰も住んでいない庭草の伸びた日本の家屋" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-earthGreen/90 via-earthGreen/60 to-transparent"></div>
+            
+            <div class="absolute inset-0 flex flex-col justify-end p-6 md:p-12 max-w-5xl mx-auto w-full pb-16">
+                <div class="bg-white text-earthGreen font-black px-6 py-2 inline-block w-fit mb-4 text-sm md:text-xl rounded-full shadow-lg border-2 border-earthGreen">
+                    築古・雨漏り・草ボウボウ、大歓迎！
+                </div>
+                <h1 class="text-white font-black text-3xl md:text-5xl lg:text-6xl leading-tight mb-6 text-impact">
+                    <span class="ib">ボロボロになった実家も、</span><br>
+                    <span class="text-alertYellow text-4xl md:text-7xl ib mt-2 underline decoration-4 underline-offset-8 decoration-white">「現状のまま」お買取りします。</span>
+                </h1>
+                <p class="text-white font-bold text-lg md:text-2xl drop-shadow-md bg-black/40 px-4 py-2 inline-block w-fit rounded">
+                    仲介手数料0円！ 当社が直接買い取るため最短1週間で現金化。
+                </p>
+            </div>
+        </div>
+
+        <div class="max-w-4xl mx-auto px-6 -mt-8 relative z-20">
+            <div class="bg-white p-6 md:p-8 rounded-2xl shadow-xl border-4 border-earthGreen text-center">
+                <h2 class="font-black text-xl md:text-2xl text-warmBrown mb-4">お荷物になる前に、まずは無料で査定額をご確認ください。</h2>
+                <a href="tel:0120000000" class="block w-full bg-earthGreen text-white py-5 rounded-xl shadow-[0_8px_0_#1E3F29] hover:translate-y-[4px] hover:shadow-[0_4px_0_#1E3F29] transition-all flex flex-col items-center justify-center">
+                    <span class="text-sm font-bold bg-white text-earthGreen px-4 py-1 rounded-full mb-2">通話無料・秘密厳守 (9:00〜20:00)</span>
+                    <div class="text-4xl md:text-5xl font-black tracking-widest drop-shadow-md">0120-000-000</div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 痛みの共感（空き家リスク） -->
+    <section class="py-24 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-center font-black text-3xl md:text-4xl text-warmBrown mb-12 flex flex-col items-center">
+                <span class="text-alertYellow text-stroke text-5xl mb-2">⚠</span>
+                <span class="ib">空き家の放置は</span><span class="ib">「百害あって一利なし」です</span>
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-white p-8 rounded-xl shadow border-t-8 border-red-500">
+                    <h3 class="text-2xl font-black text-red-600 mb-4">特定空き家に指定されると<br>固定資産税が「6倍」に！</h3>
+                    <p class="font-bold text-gray-700 leading-relaxed">
+                        法改正により、管理されていない空き家は「特定空き家」に指定され、住宅用地の特例から外れて固定資産税が跳ね上がります。持っているだけで毎年猛烈な赤字が垂れ流されます。
+                    </p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow border-t-8 border-red-500">
+                    <h3 class="text-2xl font-black text-red-600 mb-4">放火・倒壊・ご近所トラブル<br>賠償責任の恐れも</h3>
+                    <p class="font-bold text-gray-700 leading-relaxed">
+                        庭木が隣の家にはみ出す、台風で瓦が飛んで他人の車を傷つける、不法投棄されるなど、遠方に住んでいると管理ができず、大きなトラブルの火種になります。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 解決策（なぜ直接買取がいいのか） -->
+    <section class="py-20 bg-earthGreen text-white">
+        <div class="max-w-5xl mx-auto px-6">
+            <h2 class="text-center font-black text-3xl md:text-4xl mb-16">
+                <span class="ib text-alertYellow">「仲介（町の不動産屋）」</span><span class="ib">との決定的な違い</span>
+            </h2>
+            
+            <div class="space-y-10">
+                <!-- Point 1 -->
+                <div class="flex flex-col md:flex-row bg-white text-earthGreen rounded-2xl overflow-hidden shadow-xl">
+                    <div class="md:w-1/4 bg-warmBrown text-white p-6 flex flex-col justify-center items-center">
+                        <div class="font-black text-5xl mb-2">01</div>
+                        <div class="font-black text-lg">スピード</div>
+                    </div>
+                    <div class="md:w-3/4 p-8">
+                        <h3 class="text-2xl font-black mb-3">買い手を探さないから、即現金化</h3>
+                        <p class="font-bold text-gray-700 leading-loose">
+                            「仲介」は買いたい人が現れるまで何年でも放置されます。当社は自社の資金で「直接」買い取るため、最短1週間で数千万円の口座振込が可能です。
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Point 2 -->
+                <div class="flex flex-col md:flex-row bg-white text-earthGreen rounded-2xl overflow-hidden shadow-xl">
+                    <div class="md:w-1/4 bg-warmBrown text-white p-6 flex flex-col justify-center items-center">
+                        <div class="font-black text-5xl mb-2">02</div>
+                        <div class="font-black text-lg">手間ゼロ</div>
+                    </div>
+                    <div class="md:w-3/4 p-8">
+                        <h3 class="text-2xl font-black mb-3">残置物撤去・リフォーム一切不要</h3>
+                        <p class="font-bold text-gray-700 leading-loose">
+                            箪笥の中に古い服が詰まっていても、雨漏りしていても、そのままでOKです。売却のためのリフォーム代や処分費用をあなたが持ち出しで払う必要は1円もありません。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Point 3 -->
+                <div class="flex flex-col md:flex-row bg-white text-earthGreen rounded-2xl overflow-hidden shadow-xl">
+                    <div class="md:w-1/4 bg-warmBrown text-white p-6 flex flex-col justify-center items-center">
+                        <div class="font-black text-5xl mb-2">03</div>
+                        <div class="font-black text-lg">コストゼロ</div>
+                    </div>
+                    <div class="md:w-3/4 p-8">
+                        <h3 class="text-2xl font-black mb-3">仲介手数料（数十万〜）が不要</h3>
+                        <p class="font-bold text-gray-700 leading-loose">
+                            不動産屋を通して売ると「売買価格の3%＋6万円」の仲介手数料が引かれますが、当社との直接取引ならこの手数料が完全に無料（0円）になります。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- フォーム CTA -->
+    <section class="py-24 bg-white" id="form">
+        <div class="max-w-3xl mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-5xl font-black mb-8 leading-tight text-warmBrown"><span class="ib">遠方にお住まいでも</span><span class="ib text-earthGreen">大丈夫です。</span></h2>
+            <p class="text-lg font-bold text-gray-600 mb-12">
+                立ち合いなしでの現地確認も可能です。まずは「いくらで売れるのか？」無料査定をお申し込みください。
+            </p>
+
+            <form class="bg-gray-50 p-8 md:p-12 rounded-3xl text-left shadow-[0_0_40px_rgba(47,92,62,0.1)] border border-gray-200">
+                <div class="space-y-6">
+                    <div>
+                        <label class="block text-earthGreen font-black mb-2">お名前 <span class="bg-red-500 text-white text-xs px-2 py-1 rounded ml-2">必須</span></label>
+                        <input type="text" class="w-full border-2 border-gray-300 bg-white p-4 text-gray-800 font-bold rounded-xl focus:border-earthGreen focus:outline-none" placeholder="山田 太郎">
+                    </div>
+                    <div>
+                        <label class="block text-earthGreen font-black mb-2">ご連絡先電話番号 <span class="bg-red-500 text-white text-xs px-2 py-1 rounded ml-2">必須</span></label>
+                        <input type="tel" class="w-full border-2 border-gray-300 bg-white p-4 text-gray-800 font-bold rounded-xl focus:border-earthGreen focus:outline-none" placeholder="090-0000-0000">
+                    </div>
+                    <div>
+                        <label class="block text-earthGreen font-black mb-2">売却予定の物件の住所 <span class="text-gray-500 text-sm font-normal">（わかる範囲でOK）</span></label>
+                        <input type="text" class="w-full border-2 border-gray-300 bg-white p-4 text-gray-800 font-bold rounded-xl focus:border-earthGreen focus:outline-none" placeholder="〇〇県〇〇市〜">
+                    </div>
+                    <button type="submit" class="w-full bg-alertYellow text-earthGreen border-4 border-earthGreen font-black text-2xl py-6 rounded-xl shadow-[0_6px_0_#2F5C3E] hover:translate-y-[3px] hover:shadow-[0_3px_0_#2F5C3E] transition-all mt-8">
+                        <span class="ib">完全無料！物件の査定を依頼する ＞</span>
+                    </button>
+                    <p class="text-center font-bold text-sm text-gray-500 mt-6">しつこい営業のお電話は絶対にいたしません。ご安心ください。</p>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Mobile Sticky CTA -->
+    <div class="fixed bottom-0 left-0 w-full bg-earthGreen md:hidden z-50 p-3 shadow-[0_-10px_20px_rgba(0,0,0,0.2)]">
+        <a href="tel:0120000000" class="flex flex-col items-center justify-center text-white">
+            <span class="text-xs font-bold tracking-widest text-alertYellow mb-1">【無料】固定資産税に悩む前に即お電話を</span>
+            <div class="flex items-center gap-3">
+                <span class="text-2xl">📞</span>
+                <span class="text-3xl font-black tracking-wider text-impact drop-shadow-md">0120-000-000</span>
+            </div>
+        </a>
+    </div>
+
+</body>
+</html>
