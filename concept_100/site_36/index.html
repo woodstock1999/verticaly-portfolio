@@ -1,12 +1,139 @@
-<!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>都市開発のマスタープラン (Smart City)</title><script src="https://cdn.tailwindcss.com"></script><link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet"></head>
-<body class="bg-[#050505] text-[#ededed] min-h-screen flex items-center justify-center p-8">
-    <a href="../index.html" class="absolute top-8 right-8 text-xs tracking-[0.2em] uppercase text-white/50 hover:text-white">Return</a>
-    <div class="relative w-full max-w-6xl aspect-[21/9] rounded-xl overflow-hidden shadow-2xl">
-        <img src="https://picsum.photos/seed/aethel36/1600/900" class="absolute inset-0 w-full h-full object-cover opacity-30 grayscale sepia-[.3]" />
-        <div class="absolute inset-0 p-16 flex flex-col justify-end bg-gradient-to-t from-black via-black/40 to-transparent">
-            <div class="text-[#d4af37] text-sm tracking-[0.3em] uppercase mb-4 font-bold border-l-2 border-[#d4af37] pl-4">4. Real Estate & Architecture (不動産・建築) - 0036</div>
-            <h1 class="text-5xl md:text-7xl font-bold tracking-wide mb-6" style="font-family: 'Playfair Display', serif;">都市開発のマスタープラン (Smart City)</h1>
-            <p class="text-xl font-light max-w-3xl text-white/60 leading-loose">何百万もの生活データが流れる都市の鳥瞰図WebGL。</p>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIO-CLEAN NETWORK | 激汚れ清掃系YouTuber向け・業務用特殊洗剤サプライ</title>
+    <!-- インダストリアルでタフな印象のフォント -->
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Zen+Kaku+Gothic+New:wght@700;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        toxicDark: '#0A0F12',
+                        toxicGreen: '#00FF41',
+                        toxicBlue: '#00E5FF',
+                        toxicGray: '#1C2329',
+                    },
+                    fontFamily: {
+                        en: ['Oswald', 'sans-serif'],
+                        ja: ['Zen Kaku Gothic New', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Zen Kaku Gothic New', sans-serif; background-color: #0A0F12; color: #fff; overflow-x: hidden; }
+        .text-neon { text-shadow: 0 0 10px rgba(0, 229, 255, 0.7); }
+        .border-neon { border-color: #00E5FF; box-shadow: 0 0 15px rgba(0, 229, 255, 0.2); }
+        .grid-bg { background-size: 40px 40px; background-image: linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px); }
+    </style>
+</head>
+<body class="antialiased selection:bg-toxicBlue selection:text-toxicDark grid-bg">
+
+    <!-- Header -->
+    <header class="w-full flex justify-between items-center p-6 bg-toxicDark/90 backdrop-blur border-b border-toxicBlue/20 fixed top-0 z-50">
+        <div class="font-en text-2xl font-bold tracking-widest text-toxicBlue text-neon">BIO-CLEAN NET</div>
+        <div class="font-bold text-sm tracking-wider border border-toxicBlue text-toxicBlue px-4 py-1 rounded hover:bg-toxicBlue hover:text-toxicDark transition cursor-pointer">
+            CREATOR LOGIN
         </div>
-    </div>
-</body></html>
+    </header>
+
+    <!-- FV -->
+    <section class="h-screen relative flex items-center justify-center pt-20">
+        <div class="absolute inset-0 z-0">
+            <!-- Sizzle: Macro mold cleaning action -->
+            <img src="img/ui.png" alt="ネオンブルーの特殊洗剤で激しいカビを清掃し動画撮影する様子" class="w-full h-full object-cover opacity-60">
+            <div class="absolute inset-0 bg-gradient-to-t from-toxicDark via-toxicDark/50 to-transparent"></div>
+        </div>
+
+        <div class="relative z-10 max-w-5xl mx-auto px-6 w-full mt-20">
+            <div class="flex flex-col md:flex-row gap-12 items-center">
+                <div class="flex-1 text-center md:text-left">
+                    <div class="inline-block bg-toxicBlue text-toxicDark font-black px-4 py-1 mb-6 uppercase tracking-widest text-sm transform -skew-x-12">
+                        For Extreme Cleaning Creators
+                    </div>
+                    <h1 class="text-4xl md:text-6xl lg:text-7xl font-black mb-6 leading-tight">
+                        絶望的な汚れを、<br>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-toxicBlue to-toxicGreen text-neon">「最高のエンタメ」へ。</span>
+                    </h1>
+                    <p class="text-lg md:text-xl font-bold text-gray-300 mb-10 leading-relaxed border-l-4 border-toxicBlue pl-4 text-left mx-auto md:mx-0 max-w-lg">
+                        ゴミ屋敷、孤独死現場、真っ黒なカビ。<br>
+                        過激な清掃系YouTuber向けに、市販されない「最高純度の業務用特殊洗剤」を提供し、案件スポンサーとのマッチングを行うクローズド・プラットフォーム。
+                    </p>
+                    <a href="#apply" class="inline-block bg-white text-toxicDark font-black text-xl px-10 py-5 hover:bg-toxicBlue transition duration-300 border-4 border-white hover:border-toxicBlue w-full md:w-auto text-center">
+                        審査に申し込む (登録無料)
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Bento -->
+    <section class="py-24 bg-toxicDark">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="mb-16">
+                <h2 class="font-en text-5xl text-toxicBlue font-bold tracking-widest mb-2">PLATFORM BENEFITS</h2>
+                <p class="text-gray-400 font-bold">過激な清掃現場で戦うクリエイターのための武器と資金。</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+                
+                <!-- Bento 1 -->
+                <div class="md:col-span-8 bg-toxicGray p-8 md:p-12 border-neon flex flex-col justify-center">
+                    <h3 class="text-3xl font-black mb-4">劇薬指定レベルの専売ケミカル提供</h3>
+                    <p class="text-gray-400 font-bold leading-loose max-w-xl">
+                        動画の「Before / After」のインパクトこそが命。市販のクリーナーでは落ちない長年の水垢、尿石、重度の黒カビを一瞬で溶かす、当ネットワーク提携の化学プラントから直送されるプロ専用の特殊洗剤を原価で提供。動画内でその威力を存分に魅せつけてください。
+                    </p>
+                </div>
+
+                <!-- Bento 2 -->
+                <div class="md:col-span-4 bg-toxicGray p-8 border-2 border-gray-800 hover:border-neon transition flex flex-col items-center justify-center text-center">
+                    <div class="text-6xl mb-4 font-en text-toxicGreen">💰</div>
+                    <h3 class="text-2xl font-black mb-2">動画スポンサー獲得</h3>
+                    <p class="text-sm text-gray-400 font-bold">
+                        清掃用具メーカーやハウスクリーニング業者から、あなたのチャンネルへの「タイアップ案件」を自動マッチング。広告収益以外でのマネタイズを実現。
+                    </p>
+                </div>
+
+                <!-- Bento 3 -->
+                <div class="md:col-span-4 bg-toxicGray p-8 border-2 border-gray-800 hover:border-neon transition text-center">
+                    <h3 class="text-xl font-black mb-4">モザイク・自動ボカシAIツール</h3>
+                    <p class="text-sm text-gray-400 font-bold mb-6">
+                        ゴミ屋敷の中で映ってはいけないもの（個人情報や過激な汚物）をAIが一瞬で検知し自動モザイク処理。編集時間を大幅に短縮。
+                    </p>
+                </div>
+
+                <!-- Bento 4 -->
+                <div class="md:col-span-8 bg-toxicGray p-8 md:p-12 border-2 border-gray-800 hover:border-neon transition flex items-center gap-8">
+                    <div>
+                        <h3 class="text-3xl font-black mb-4">現場SOSネットワーク</h3>
+                        <p class="text-gray-400 font-bold leading-loose max-w-xl">
+                            「一人では終わらないレベルのゴミ屋敷だった」「特殊清掃レベルの現場に当たってしまった」。そんな時、近隣の同業YouTuberやプロの業者に即座に応援を要請・コラボできるSOS掲示板を完備。
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer CTA -->
+    <section class="py-32 bg-[#05080A] text-center border-t border-toxicBlue/20" id="apply">
+        <div class="max-w-2xl mx-auto px-6">
+            <h2 class="font-black text-3xl md:text-4xl mb-6">あなたの「掃除」は、最強のコンテンツだ。</h2>
+            <p class="text-gray-400 font-bold mb-10">※本ネットワークは審査制です。対象は清掃系/DIY系の発信者に限ります。</p>
+            <form class="flex flex-col gap-4 max-w-md mx-auto">
+                <input type="url" placeholder="YouTubeチャンネルのURL" class="w-full bg-toxicGray border border-gray-700 p-4 text-white font-bold focus:outline-none focus:border-toxicBlue transition">
+                <button type="submit" class="w-full bg-toxicBlue text-toxicDark font-black text-xl py-5 hover:bg-white transition cursor-pointer">
+                    審査へ進む ＞
+                </button>
+            </form>
+        </div>
+    </section>
+
+</body>
+</html>

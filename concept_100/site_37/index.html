@@ -1,14 +1,166 @@
-<!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>コンテナハウス・カスタマイザー (Modular Home)</title><script src="https://cdn.tailwindcss.com"></script></head>
-<body class="relative w-screen h-screen overflow-hidden font-sans bg-black">
-    <div class="absolute inset-0 z-0"><img src="https://picsum.photos/seed/aethel37/1600/900" class="w-full h-full object-cover opacity-60" /></div>
-    <div class="absolute top-0 w-full p-8 flex justify-between text-white z-20 mix-blend-difference">
-        <div class="text-sm font-bold tracking-widest uppercase">4. Real Estate & Architecture (不動産・建築)</div><div class="text-sm font-mono">NO. 37 / 100</div>
-    </div>
-    <div class="absolute inset-0 z-10 flex flex-col items-center justify-center p-6">
-        <div class="bg-white/10 backdrop-blur-3xl border border-white/20 rounded-[32px] p-12 max-w-4xl text-center shadow-2xl text-white transition-transform duration-700 hover:scale-105">
-            <h1 class="text-5xl md:text-7xl font-semibold tracking-tighter mb-6">コンテナハウス・カスタマイザー (Modular Home)</h1>
-            <p class="text-lg md:text-xl font-light text-white/90 leading-relaxed">ブロックを組み立てる感覚で家を設計するコンフィギュレーター。</p>
-            <div class="mt-10"><a href="../index.html" class="bg-white text-black px-8 py-4 rounded-full font-bold hover:bg-gray-200 transition">BACK TO GALLERY</a></div>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIND-RADAR | 離職予測・組織崩壊アラートAI</title>
+    <!-- 知的で信頼感のあるモダンフォント -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        corpBlue: '#0B132B',
+                        alertRed: '#E63946',
+                        techCyan: '#48CAE4',
+                        cardBg: '#1C2541',
+                    },
+                    fontFamily: {
+                        en: ['Inter', 'sans-serif'],
+                        ja: ['Noto Sans JP', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Noto Sans JP', sans-serif; background-color: #0B132B; color: #FFFFFF; overflow-x: hidden; }
+        
+        .glass-panel { background: rgba(28, 37, 65, 0.6); backdrop-filter: blur(12px); border: 1px solid rgba(72, 202, 228, 0.2); }
+        .glass-panel:hover { border-color: rgba(72, 202, 228, 0.6); }
+
+        .radar-sweep { position: absolute; width: 100%; height: 100%; top: 0; left: 0; background: conic-gradient(from 0deg, transparent 70%, rgba(72, 202, 228, 0.2) 100%); animation: radar 4s linear infinite; border-radius: 50%; pointer-events: none; }
+        @keyframes radar { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+    </style>
+</head>
+<body class="antialiased selection:bg-techCyan selection:text-corpBlue">
+
+    <!-- Header -->
+    <header class="w-full flex justify-between items-center px-8 py-5 absolute top-0 z-50">
+        <div class="font-en text-xl font-bold tracking-widest text-white flex items-center gap-2">
+            <span class="w-3 h-3 bg-alertRed rounded-full animate-pulse"></span> MIND-RADAR
         </div>
-    </div>
-</body></html>
+        <div class="hidden md:flex gap-6 text-sm font-medium text-gray-300">
+            <a href="#" class="hover:text-techCyan transition">Product</a>
+            <a href="#" class="hover:text-techCyan transition">Security</a>
+            <a href="#" class="px-5 py-2 bg-white text-corpBlue font-bold rounded hover:bg-gray-200 transition">お問い合わせ</a>
+        </div>
+    </header>
+
+    <!-- FV -->
+    <section class="min-h-screen relative flex items-center pt-20 overflow-hidden bg-corpBlue">
+        <div class="absolute inset-0 z-0 flex items-center justify-end">
+            <!-- Sizzle: Corporate burnout dashboard AI -->
+            <img src="img/ui.png" alt="深い夜の中小企業のオフィスと空中に浮かぶストレスヒートマップのホログラム" class="w-[80%] h-[120%] object-cover opacity-30 transform translate-x-10 translate-y-10 filter saturate-50">
+            <div class="absolute inset-0 bg-gradient-to-r from-corpBlue via-corpBlue/90 to-transparent"></div>
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-6 w-full flex flex-col md:flex-row items-center">
+            
+            <div class="w-full md:w-1/2 pt-12 md:pt-0">
+                <div class="inline-block border border-techCyan text-techCyan font-bold text-xs px-3 py-1 rounded mb-6 font-en tracking-widest">
+                    TURNOVER PREVENTION AI SaaS
+                </div>
+                
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+                    「突然の退職」は、<br>
+                    予測できるデータである。
+                </h1>
+                
+                <p class="text-lg text-gray-300 leading-relaxed mb-10 font-medium">
+                    中小企業の深刻な人材流出を防ぐ。Slack、Teams、社内メールのテキストニュアンスと稼働ログをAIが個人情報を匿名化した上で常時解析。<br>
+                    「バーンアウト（燃え尽き）」や「見えない不満」の兆候を察知し、手遅れになる前に人事へピンポイントでアラートを送ります。
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <button class="bg-techCyan text-corpBlue font-bold text-lg px-8 py-4 rounded shadow-[0_0_20px_rgba(72,202,228,0.3)] hover:bg-white transition flex items-center justify-center gap-2">
+                        デモ画面を見る <span>→</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Dashboard Mockup Element -->
+            <div class="w-full md:w-1/2 mt-16 md:mt-0 relative hidden md:block">
+                <div class="glass-panel p-6 rounded-xl relative overflow-hidden shadow-2xl ml-10">
+                    <div class="flex justify-between items-center mb-6 border-b border-white/10 pb-4">
+                        <div class="font-en font-bold text-sm text-gray-400">ALERT METRICS : ENGINEERING TEAM</div>
+                        <div class="px-2 py-1 bg-alertRed/20 text-alertRed text-xs font-bold rounded">HIGH RISK DETECTED</div>
+                    </div>
+                    
+                    <!-- Fake UI Graph -->
+                    <div class="space-y-4">
+                        <div class="flex justify-between text-sm">
+                            <span class="text-gray-300">テキストネガティブ度の上昇</span>
+                            <span class="text-alertRed font-bold">+42% (Warning)</span>
+                        </div>
+                        <div class="w-full bg-gray-800 h-2 rounded"><div class="bg-alertRed h-2 rounded w-[85%]"></div></div>
+
+                        <div class="flex justify-between text-sm mt-4">
+                            <span class="text-gray-300">深夜帯チャットログの増加</span>
+                            <span class="text-yellow-400 font-bold">+28% (Caution)</span>
+                        </div>
+                        <div class="w-full bg-gray-800 h-2 rounded"><div class="bg-yellow-400 h-2 rounded w-[60%]"></div></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="py-24 bg-[#080E20]">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-center text-3xl md:text-4xl font-bold mb-16">
+                アンケートでは見えない、<br><span class="text-techCyan">「本音データ」</span>による離職防止。
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Feature 1 -->
+                <div class="glass-panel p-8 rounded-xl hover:-translate-y-2 transition duration-300">
+                    <div class="w-12 h-12 rounded-full bg-techCyan/10 flex items-center justify-center text-techCyan mb-6 border border-techCyan/30">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">テキスト感情解析 AI</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        SlackやTeams上の「返信の遅延」「句読点の変化」「感謝ワードの減少」など、人間では気づきにくい微細なストレスサインを自然言語処理AIがスコアリングします。
+                    </p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="glass-panel p-8 rounded-xl hover:-translate-y-2 transition duration-300 relative overflow-hidden text-center flex flex-col justify-center border-alertRed/30 border-2">
+                    <div class="absolute inset-0 bg-alertRed/5"></div>
+                    <div class="w-16 h-16 mx-auto rounded-full bg-alertRed/20 flex items-center justify-center text-alertRed mb-4 animate-pulse">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white relative z-10">サイレント退職アラート</h3>
+                    <p class="text-gray-300 text-sm leading-relaxed relative z-10">
+                        「突然辞めます」と言われる前に。閾値を超えた社員単位で、直属の上司や人事部へ「1on1の推奨」アラートを通知します。
+                    </p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="glass-panel p-8 rounded-xl hover:-translate-y-2 transition duration-300">
+                    <div class="w-12 h-12 rounded-full bg-techCyan/10 flex items-center justify-center text-techCyan mb-6 border border-techCyan/30">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">プライバシー完全配慮</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        メッセージの具体的内容（誰が何を言ったか）はAI内部でハッシュ化・隠蔽され、人事・管理画面にテキスト自体は閲覧不可の状態で「感情スコア」のみを出力します。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <section class="py-20 border-t border-white/10 text-center">
+        <h2 class="text-2xl font-bold mb-6">社員一人を採用・育成するコストを、無駄にしない。</h2>
+        <a href="#" class="inline-block bg-white text-corpBlue font-bold px-10 py-4 rounded hover:bg-techCyan transition">
+            まずは30日間の無料トライアル
+        </a>
+    </section>
+
+</body>
+</html>
