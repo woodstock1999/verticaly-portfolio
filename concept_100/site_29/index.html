@@ -1,17 +1,151 @@
-<!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>海底トンネル輸送ネットワーク (Undersea Tube)</title><script src="https://cdn.tailwindcss.com"></script></head>
-<body class="bg-[#f8f9fa] text-slate-800 p-6 md:p-16 font-sans min-h-screen">
-    <header class="mb-12 flex justify-between items-end max-w-6xl mx-auto border-b border-slate-200 pb-8">
-        <div><div class="text-sm font-medium text-blue-600 mb-2">3. Mobility & Transportation (モビリティ・交通) / Prototype 29</div><h1 class="text-4xl md:text-5xl font-bold tracking-tight">海底トンネル輸送ネットワーク (Undersea Tube)</h1></div>
-        <a href="../index.html" class="text-sm font-bold tracking-widest text-slate-400 hover:text-black uppercase">Close</a>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REFINED HERITAGE - 万福丸</title>
+    <!-- 洗練されたモダンさと伝統の融合 -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;600&family=Shippori+Mincho+B1:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        stone: '#1A1A1A',
+                        mortar: '#EAE8E3', /* モルタルのようなオフホワイト */
+                        wood: '#A67C52',
+                    },
+                    fontFamily: {
+                        serif: ['Shippori Mincho B1', 'serif'],
+                        display: ['Cormorant Garamond', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #EAE8E3; color: #1A1A1A; font-family: 'Shippori Mincho B1', serif; overflow-x: hidden; }
+        
+        .vertical-text {
+            writing-mode: vertical-rl;
+            text-orientation: upright;
+            line-height: 2.5;
+            letter-spacing: 0.3em;
+        }
+
+        /* Architectural lines */
+        .frame-line { position: relative; }
+        .frame-line::before { content: ''; position: absolute; left: 0; top: 0; height: 1px; width: 100%; background: #1A1A1A; transform: scaleX(0); transform-origin: left; animation: drawLine 1.5s ease forwards; }
+        @keyframes drawLine { to { transform: scaleX(1); } }
+    </style>
+</head>
+<body class="antialiased selection:bg-stone selection:text-mortar">
+
+    <header class="w-full px-8 py-8 flex justify-between items-center fixed top-0 z-50 mix-blend-difference text-white">
+        <div class="font-display font-semibold text-xl tracking-[0.3em]">MANPUKUMARU</div>
+        <div class="font-serif text-xs tracking-widest uppercase">Appraisal Studio</div>
     </header>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-        <div class="md:col-span-2 bg-white rounded-[24px] overflow-hidden shadow-lg border border-slate-100 flex flex-col justify-between">
-            <div class="h-64 object-cover relative"><img src="https://picsum.photos/seed/aethel29/1600/900" class="w-full h-full object-cover"></div>
-            <div class="p-10"><div class="text-2xl font-light leading-relaxed text-slate-600 mb-8">深海の水滴とガラスチューブを模した透明感のあるUI。</div></div>
+
+    <!-- 1. The Architectural Hero (洗練) -->
+    <section class="min-h-screen px-4 md:px-12 flex flex-col justify-center relative pt-20">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center max-w-[1400px] mx-auto w-full">
+            
+            <!-- Minimal Typography -->
+            <div class="lg:col-span-4 z-10 flex flex-col justify-center order-2 lg:order-1 h-full pt-12 lg:pt-0 pl-4 lg:pl-12">
+                <div class="vertical-text hidden lg:block text-2xl font-medium tracking-[0.5em] h-[400px]">
+                    美意識を継承する、<br>
+                    至極の査定空間。
+                </div>
+                <!-- Mobile text -->
+                <div class="lg:hidden text-2xl font-medium tracking-[0.3em] leading-loose mb-8">
+                    美意識を継承する、<br>至極の査定空間。
+                </div>
+                
+                <div class="mt-8 lg:mt-auto">
+                    <p class="text-sm leading-loose opacity-70 mb-8 max-w-xs">
+                        空間を圧迫する不要な物たちが、<br>実は歴史ある意匠の欠片かもしれない。<br>私たちはそれを「処分」ではなく、「再評価」いたします。
+                    </p>
+                    <a href="#book" class="inline-block border-b border-stone pb-2 font-display uppercase tracking-[0.3em] text-xs hover:opacity-50 transition">
+                        Request Valuation ➝
+                    </a>
+                </div>
+            </div>
+
+            <!-- VISUAL REALIZATION (Modern Heritage Image) -->
+            <div class="lg:col-span-8 order-1 lg:order-2 w-full h-[60vh] lg:h-[85vh] relative">
+                <!-- Frame lines for architectural feel -->
+                <div class="absolute inset-0 border border-stone/20 m-4 lg:m-8 z-20 pointer-events-none"></div>
+                
+                <img src="img/ui.png" alt="ギャラリーのようなモダン和風空間での査定" class="w-full h-full object-cover filter contrast-125 saturate-50 relative z-10">
+                
+                <div class="absolute bottom-12 right-12 bg-mortar/90 backdrop-blur-md p-6 z-30 max-w-[250px]">
+                    <div class="font-display text-wood text-xs tracking-widest mb-2">22 CATEGORIES</div>
+                    <div class="text-sm font-medium leading-relaxed">
+                        着物、骨董、茶道具から<br>現代のブランド品まで、<br>あらゆるカテゴリの美を<br>鑑定いたします。
+                    </div>
+                </div>
+            </div>
+
         </div>
-        <div class="bg-indigo-600 text-white rounded-[24px] p-10 shadow-lg flex flex-col justify-center items-center text-center">
-             <div class="w-24 h-24 rounded-full border-4 border-indigo-400/30 mb-6 flex items-center justify-center text-4xl">29</div>
-             <h3 class="text-xl font-bold mb-2">Live Demo Ready</h3>
+    </section>
+
+    <!-- 2. The Process (Elegant minimalism) -->
+    <section class="py-32 border-t border-stone/10 frame-line">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="font-display text-2xl tracking-[0.4em] mb-24 text-center uppercase">The Philosophy</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-16">
+                <!-- Step 1 -->
+                <div>
+                    <div class="font-display text-4xl text-stone/20 mb-6">01.</div>
+                    <h3 class="text-xl font-bold mb-4">空間への敬意</h3>
+                    <p class="text-sm opacity-70 leading-loose">
+                        鑑定士がお伺いする際、お客様の大切な居住空間を乱すことはありません。静かに、そして迅速に、まるでギャラリーのキュレーターのように振る舞います。
+                    </p>
+                </div>
+                <!-- Step 2 -->
+                <div>
+                    <div class="font-display text-4xl text-stone/20 mb-6">02.</div>
+                    <h3 class="text-xl font-bold mb-4">文脈の読み解き</h3>
+                    <p class="text-sm opacity-70 leading-loose">
+                        傷や汚れがある品物でも、作られた年代や技法、作者の「文脈（コンテクスト）」を読み解くことで、予想外の高い流動価値を見出します。
+                    </p>
+                </div>
+                <!-- Step 3 -->
+                <div>
+                    <div class="font-display text-4xl text-stone/20 mb-6">03.</div>
+                    <h3 class="text-xl font-bold mb-4">透明なる取引</h3>
+                    <p class="text-sm opacity-70 leading-loose">
+                        査定額の根拠を、最新のグローバルなオークションデータを交えて論理的にご説明します。出張費・鑑定費はすべて当スタジオが負担いたします。
+                    </p>
+                </div>
+            </div>
         </div>
-    </div>
-</body></html>
+    </section>
+
+    <!-- 3. Form -->
+    <section class="py-32 bg-stone text-mortar" id="book">
+        <div class="max-w-2xl mx-auto px-6 text-center">
+            <div class="font-display text-wood tracking-[0.5em] text-xs mb-8">EVALUATION INQUIRY</div>
+            <h2 class="text-3xl font-medium mb-16 tracking-widest leading-loose">洗練された空間を取り戻す<br>第一歩を。</h2>
+            
+            <form class="space-y-12 text-left">
+                <div class="border-b border-mortar/30 pb-2">
+                    <input type="text" placeholder="御名前 / Name" class="w-full bg-transparent text-mortar focus:outline-none placeholder-mortar/40 font-serif tracking-widest">
+                </div>
+                <div class="border-b border-mortar/30 pb-2">
+                    <input type="tel" placeholder="御連絡先 / Phone Number" class="w-full bg-transparent text-mortar focus:outline-none placeholder-mortar/40 font-serif tracking-widest">
+                </div>
+                <div class="pt-8">
+                    <button type="submit" class="w-full bg-mortar text-stone font-display font-semibold tracking-[0.3em] py-5 hover:bg-wood hover:text-white transition duration-500">
+                        BOOK APPOINTMENT
+                    </button>
+                    <p class="text-center text-xs opacity-40 mt-8 tracking-widest font-sans">受付ダイヤル: 0120-000-000</p>
+                </div>
+            </form>
+        </div>
+    </section>
+
+</body>
+</html>

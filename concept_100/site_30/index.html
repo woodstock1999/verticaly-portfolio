@@ -1,12 +1,139 @@
-<!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>次世代型自転車のブランドサイト (Smart Bike)</title><script src="https://cdn.tailwindcss.com"></script><link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet"></head>
-<body class="bg-[#050505] text-[#ededed] min-h-screen flex items-center justify-center p-8">
-    <a href="../index.html" class="absolute top-8 right-8 text-xs tracking-[0.2em] uppercase text-white/50 hover:text-white">Return</a>
-    <div class="relative w-full max-w-6xl aspect-[21/9] rounded-xl overflow-hidden shadow-2xl">
-        <img src="https://picsum.photos/seed/aethel30/1600/900" class="absolute inset-0 w-full h-full object-cover opacity-30 grayscale sepia-[.3]" />
-        <div class="absolute inset-0 p-16 flex flex-col justify-end bg-gradient-to-t from-black via-black/40 to-transparent">
-            <div class="text-[#d4af37] text-sm tracking-[0.3em] uppercase mb-4 font-bold border-l-2 border-[#d4af37] pl-4">3. Mobility & Transportation (モビリティ・交通) - 0030</div>
-            <h1 class="text-5xl md:text-7xl font-bold tracking-wide mb-6" style="font-family: 'Playfair Display', serif;">次世代型自転車のブランドサイト (Smart Bike)</h1>
-            <p class="text-xl font-light max-w-3xl text-white/60 leading-loose">バイクの各パーツをスクロールで分解して見せるシネマティックUI。</p>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sizzle & Master Appraisers - 万福丸</title>
+    <!-- 映画のようなシリアスさとプロフェッショナル感 -->
+    <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@400;700;900&family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        deepBlack: '#050505',
+                        tungsten: '#FFD1A9', /* 暖かみのあるスポットライトの色 */
+                    },
+                    fontFamily: {
+                        sans: ['Noto Sans JP', 'Gothic A1', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #050505; color: #ffffff; font-family: 'Noto Sans JP', sans-serif; overflow-x: hidden; }
+        
+        /* シネマティックなフェードイン */
+        .cinematic-img { mask-image: linear-gradient(to top, transparent 5%, black 40%); -webkit-mask-image: linear-gradient(to top, transparent 0%, black 60%); }
+        
+        .pulse-light { animation: breathe 4s ease-in-out infinite alternate; }
+        @keyframes breathe { from { opacity: 0.6; box-shadow: 0 0 20px rgba(255, 209, 169, 0.1); } to { opacity: 1; box-shadow: 0 0 50px rgba(255, 209, 169, 0.3); } }
+    </style>
+</head>
+<body class="antialiased selection:bg-tungsten selection:text-deepBlack">
+
+    <header class="w-full px-6 py-6 flex justify-between items-center fixed top-0 z-50 mix-blend-difference">
+        <div class="font-black text-2xl tracking-[0.2em] uppercase text-white">MANPUKUMARU</div>
+        <div class="text-xs font-bold tracking-[0.2em] text-tungsten border border-tungsten px-3 py-1">22 GENRES APPRAISAL</div>
+    </header>
+
+    <!-- 1. The Sizzle Hero (シズル感 / 深い没入感) -->
+    <section class="h-screen w-full relative flex items-end pb-24 md:pb-32 px-6 md:px-12 bg-deepBlack">
+        <!-- VISUAL REALIZATION (Macro Appraisal Sizzle Image) -->
+        <div class="absolute inset-0 z-0">
+            <img src="img/ui.png" alt="鑑定士のルーペ越しの視線とアンティーク時計" class="w-full h-full object-cover cinematic-img opacity-80 filter contrast-125 saturate-50">
         </div>
-    </div>
-</body></html>
+        
+        <!-- Tungsten cinematic spotlight effect -->
+        <div class="absolute top-0 right-0 w-3/4 h-3/4 bg-tungsten rounded-full blur-[200px] opacity-10 pulse-light z-0 pointer-events-none"></div>
+
+        <div class="relative z-10 w-full max-w-6xl mx-auto border-l-4 border-tungsten pl-6 md:pl-10">
+            <h1 class="text-5xl md:text-7xl lg:text-[6rem] font-black leading-[1.0] mb-6 tracking-tighter">
+                傷ひとつに、<br>
+                <span class="text-tungsten">歴史を見出す。</span>
+            </h1>
+            <p class="text-lg md:text-2xl font-bold opacity-80 max-w-2xl leading-relaxed mb-10 text-gray-300">
+                キズだらけの時計。シミのある古い着物。刻印が潰れた指輪。<br>
+                素人目には「不要なゴミ」に見える微細なディテールの中に、私たちのルーペは「数十万の価値」を発見します。<br>
+                圧倒的な鑑定力が、あなたの家にあるモノの価値を逆転させる。
+            </p>
+            
+            <a href="#call" class="inline-block bg-tungsten text-deepBlack px-10 py-5 font-black text-xl tracking-widest hover:bg-white transition duration-300">
+                プロの視点を依頼する
+            </a>
+        </div>
+    </section>
+
+    <!-- 2. Dark Bento / Mastery Features -->
+    <section class="py-32 bg-deepBlack border-t border-white/5">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                
+                <!-- Mastery 1 -->
+                <div class="bg-[#0f0f0f] p-10 border border-white/5 hover:border-tungsten/50 transition duration-500 group">
+                    <div class="text-tungsten font-black text-5xl mb-6 opacity-30 group-hover:opacity-100 transition">01.</div>
+                    <h3 class="text-2xl font-black mb-4">ミクロのホールマーク鑑定</h3>
+                    <p class="text-gray-400 leading-loose font-medium">
+                        貴金属の純度を示す極小の刻印（ホールマーク）や、機械式時計のムーブメント内部の型番。肉眼では見えない世界を正確に捉え、1gの価値も逃しません。
+                    </p>
+                </div>
+
+                <!-- Mastery 2 -->
+                <div class="bg-[#0f0f0f] p-10 border border-white/5 hover:border-tungsten/50 transition duration-500 group">
+                    <div class="text-tungsten font-black text-5xl mb-6 opacity-30 group-hover:opacity-100 transition">02.</div>
+                    <h3 class="text-2xl font-black mb-4">22ジャンルを網羅する守備範囲</h3>
+                    <p class="text-gray-400 leading-loose font-medium">
+                        古美術、カメラ、切手、お酒、ブランド品まで。「これとこれは別の業者に…」といった手間は一切不要。一つの現場で多角的な価値を同時算定します。
+                    </p>
+                </div>
+
+                <!-- Mastery 3 (Full width) -->
+                <div class="bg-[#0f0f0f] p-10 border border-white/5 md:col-span-2 flex flex-col md:flex-row items-center gap-10 hover:border-tungsten/50 transition duration-500 group">
+                    <div class="text-tungsten font-black text-7xl md:text-[8rem] leading-none opacity-20 group-hover:opacity-100 transition">03.</div>
+                    <div>
+                        <h3 class="text-3xl font-black mb-4">「そのまま」で構いません</h3>
+                        <p class="text-gray-400 leading-loose font-medium max-w-2xl">
+                            ホコリを払う必要も、箱に詰める必要もありません。そのままの状態で拝見させてください。歴史の匂いが残る現場から、私たちプロフェッショナルがすべてを仕分けし、価値あるものを抽出・搬出します。
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Heavy CTA Form -->
+    <section class="py-32 bg-tungsten text-deepBlack" id="call">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-4xl md:text-5xl font-black mb-8 tracking-tighter">妥協なき査定を、出張費無料で。</h2>
+            <p class="text-xl font-bold opacity-80 mb-16">
+                経験豊富な査定員が全国どこへでも伺います。<br>キャンセル料や手数料は一切発生いたしません。
+            </p>
+            
+            <div class="bg-deepBlack p-10 text-white text-left">
+                <form class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="col-span-1 md:col-span-2 border-b-2 border-white/10 pb-2">
+                        <label class="text-xs font-bold text-tungsten tracking-widest uppercase mb-2 block">お名前</label>
+                        <input type="text" class="w-full bg-transparent text-xl font-bold focus:outline-none focus:border-tungsten py-2">
+                    </div>
+                    <div class="col-span-1 md:col-span-2 border-b-2 border-white/10 pb-2">
+                        <label class="text-xs font-bold text-tungsten tracking-widest uppercase mb-2 block">お電話番号</label>
+                        <input type="tel" class="w-full bg-transparent text-xl font-bold focus:outline-none focus:border-tungsten py-2">
+                    </div>
+                    <div class="col-span-1 md:col-span-2 mt-8">
+                        <button type="submit" class="w-full bg-tungsten text-deepBlack font-black text-2xl py-6 hover:bg-white transition duration-300 uppercase tracking-widest">
+                            査定を依頼する
+                        </button>
+                        <div class="mt-6 text-center text-sm font-bold opacity-50">
+                            お急ぎの方はお電話で: 0120-000-000
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

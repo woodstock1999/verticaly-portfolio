@@ -1,14 +1,167 @@
-<!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>自動運転トラックのフリート管理 (Truck Fleet)</title><script src="https://cdn.tailwindcss.com"></script></head>
-<body class="relative w-screen h-screen overflow-hidden font-sans bg-black">
-    <div class="absolute inset-0 z-0"><img src="https://picsum.photos/seed/aethel28/1600/900" class="w-full h-full object-cover opacity-60" /></div>
-    <div class="absolute top-0 w-full p-8 flex justify-between text-white z-20 mix-blend-difference">
-        <div class="text-sm font-bold tracking-widest uppercase">3. Mobility & Transportation (モビリティ・交通)</div><div class="text-sm font-mono">NO. 28 / 100</div>
-    </div>
-    <div class="absolute inset-0 z-10 flex flex-col items-center justify-center p-6">
-        <div class="bg-white/10 backdrop-blur-3xl border border-white/20 rounded-[32px] p-12 max-w-4xl text-center shadow-2xl text-white transition-transform duration-700 hover:scale-105">
-            <h1 class="text-5xl md:text-7xl font-semibold tracking-tighter mb-6">自動運転トラックのフリート管理 (Truck Fleet)</h1>
-            <p class="text-lg md:text-xl font-light text-white/90 leading-relaxed">夜間のハイウェイと、赤と青のセンサーUI。</p>
-            <div class="mt-10"><a href="../index.html" class="bg-white text-black px-8 py-4 rounded-full font-bold hover:bg-gray-200 transition">BACK TO GALLERY</a></div>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>万福丸 ｜ 真心の出張買取</title>
+    <!-- 誠実さと読みやすさを兼ね備えたフォント -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;900&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        waWhite: '#FDFBF7', /* 胡粉色（ごふんいろ） */
+                        waBlue: '#165E83',  /* 藍色（あいいろ） - 誠実・信頼 */
+                        waGold: '#D7C49E',  /* 砂色（すないろ） - 上品な輝き */
+                        waBlack: '#2B2B2B', /* 墨色（すみいろ） */
+                    },
+                    fontFamily: {
+                        serif: ['Noto Serif JP', 'serif'],
+                        sans: ['Zen Kaku Gothic New', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #FDFBF7; color: #2B2B2B; font-family: 'Zen Kaku Gothic New', sans-serif; line-height: 2.0; }
+        
+        /* 縦書き用のユーティリティ */
+        .vertical-text {
+            writing-mode: vertical-rl;
+            text-orientation: upright;
+        }
+
+        /* 柔らかな筆を思わせるアクセント */
+        .brush-border {
+            position: relative;
+        }
+        .brush-border::after {
+            content: ''; position: absolute; bottom: -10px; left: 0; width: 100%; height: 2px;
+            background: linear-gradient(90deg, transparent, #165E83, transparent);
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-waBlue selection:text-white">
+
+    <header class="w-full px-6 py-4 flex justify-between items-center bg-white shadow-sm sticky top-0 z-50">
+        <div class="font-serif font-black text-2xl text-waBlue tracking-widest">万福丸</div>
+        <div class="flex items-center gap-4">
+            <div class="hidden md:block text-right">
+                <div class="text-xs font-bold text-gray-500">ご相談・出張予約 (通話無料)</div>
+                <div class="text-xl font-black text-waBlue tracking-widest font-serif">0120-000-000</div>
+            </div>
+            <a href="#contact" class="bg-waBlue text-white px-6 py-3 rounded text-sm font-bold shadow-md hover:bg-opacity-90 transition">
+                WEB予約
+            </a>
         </div>
-    </div>
-</body></html>
+    </header>
+
+    <!-- 1. The Heritage & Hospitality Hero (安心感) -->
+    <section class="max-w-7xl mx-auto px-4 py-12 md:py-20 lg:py-24">
+        <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+            
+            <!-- Message -->
+            <div class="order-2 lg:order-1 flex-1 text-center lg:text-left">
+                <p class="text-waBlue font-bold tracking-[0.3em] text-sm mb-6 uppercase">Omotenashi Appraisal</p>
+                <h1 class="font-serif text-3xl md:text-5xl lg:text-[3.5rem] font-bold leading-tight mb-8 text-waBlack">
+                    長年寄り添ったモノに、<br>
+                    <span class="text-waBlue">敬意と真心を込めて。</span>
+                </h1>
+                <p class="text-lg md:text-xl font-medium mb-10 text-gray-600 leading-relaxed">
+                    お部屋に積み重なった思い出の品々。「何から手を付ければいいか分からない…」と仰るお客様の元へ、百貨店の外商のような礼儀作法を身につけたプロの査定員がお伺いします。<br><br>
+                    箱詰めや整理は一切不要。お茶を飲みながら、私たちにすべてお任せください。
+                </p>
+                
+                <div class="bg-white border border-gray-200 p-6 rounded-lg inline-block text-left shadow-[0_10px_30px_rgba(22,94,131,0.05)] w-full lg:w-auto">
+                    <div class="text-sm font-bold text-gray-400 mb-2">22ジャンル 総合出張買取</div>
+                    <div class="flex flex-wrap gap-2 font-bold text-waBlue">
+                        <span class="bg-waGold/20 px-3 py-1 rounded">着物</span>
+                        <span class="bg-waGold/20 px-3 py-1 rounded">骨董品</span>
+                        <span class="bg-waGold/20 px-3 py-1 rounded">貴金属</span>
+                        <span class="bg-waGold/20 px-3 py-1 rounded">時計</span>
+                        <span class="text-gray-500 px-2 py-1">など、何でも拝見します</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- VISUAL REALIZATION (Japanese Concierge Image) -->
+            <div class="order-1 lg:order-2 flex-1 relative w-full aspect-[4/3] lg:aspect-square">
+                <!-- 装飾的な和の枠 -->
+                <div class="absolute -inset-4 border border-waGold/40 z-0 hidden md:block"></div>
+                <div class="absolute inset-0 bg-waBlue/5 transform translate-x-4 translate-y-4 z-0"></div>
+                <img src="img/ui.png" alt="礼儀正しく丁寧な査定風景" class="w-full h-full object-cover relative z-10 shadow-2xl">
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 2. The Philosophy of Trust -->
+    <section class="py-24 bg-waBlue text-white border-y-[8px] border-waGold">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="font-serif text-3xl md:text-4xl font-bold mb-16 tracking-widest brush-border inline-block pb-4">万福丸が約束する、３つの安心</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-left mt-8">
+                <div>
+                    <h3 class="text-2xl font-serif font-bold mb-4 flex items-center gap-2">
+                        <span class="text-waGold text-3xl">壱.</span> 白手袋の徹底
+                    </h3>
+                    <p class="text-gray-200 leading-loose text-sm font-medium border-l border-waGold/30 pl-4">
+                        お客様の大切なご自宅にお上がりする際、そしてお品物に触れる際は、必ず新しい白手袋を着用いたします。モノへの敬意を態度で示します。
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-serif font-bold mb-4 flex items-center gap-2">
+                        <span class="text-waGold text-3xl">弐.</span> 整理・運搬は丸投げで
+                    </h3>
+                    <p class="text-gray-200 leading-loose text-sm font-medium border-l border-waGold/30 pl-4">
+                        押し入れの奥に眠ったままでも、ホコリを被っていても構いません。重い荷物の運び出しから仕分けまで、すべて私たちの仕事です。
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-serif font-bold mb-4 flex items-center gap-2">
+                        <span class="text-waGold text-3xl">参.</span> 断りやすい査定
+                    </h3>
+                    <p class="text-gray-200 leading-loose text-sm font-medium border-l border-waGold/30 pl-4">
+                        無理な買取（押し買い）は一切いたしません。金額にご納得いただけない場合は、笑顔でそのままお返しします。キャンセル料等は1円もかかりません。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Final Conversion CTA -->
+    <section class="py-32 bg-waWhite" id="contact">
+        <div class="max-w-3xl mx-auto px-4 text-center">
+            <h2 class="font-serif text-3xl md:text-5xl font-bold text-waBlack mb-8">まずは、お茶を飲む感覚で<br>お呼びください。</h2>
+            <p class="text-lg text-gray-600 mb-12 font-medium">日本全国、どこへでも出張費無料で駆けつけます。</p>
+            
+            <div class="bg-white p-8 md:p-12 rounded-xl shadow-[0_20px_50px_rgba(22,94,131,0.1)] border border-gray-100">
+                <a href="tel:0120000000" class="block w-full bg-waBlue text-white py-6 rounded-lg shadow-md hover:bg-waBlack transition transform hover:-translate-y-1 mb-8">
+                    <div class="flex flex-col items-center justify-center">
+                        <span class="text-sm font-bold mb-1">通話無料・年中無休 (9:00〜21:00)</span>
+                        <span class="font-serif text-4xl md:text-5xl font-black tracking-widest">0120-000-000</span>
+                    </div>
+                </a>
+                
+                <div class="relative flex py-5 items-center mb-8">
+                    <div class="flex-grow border-t border-gray-300"></div>
+                    <span class="flex-shrink-0 mx-4 text-gray-400 font-bold text-sm">または</span>
+                    <div class="flex-grow border-t border-gray-300"></div>
+                </div>
+
+                <a href="#form" class="block w-full border-2 border-waBlue text-waBlue py-5 rounded-lg hover:bg-waBlue hover:text-white transition text-xl font-bold">
+                    WEBから出張予約をする（24時間受付）
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-waBlack text-gray-400 text-center py-10 text-sm font-medium">
+        <p>総合買取 万福丸 &copy; 2026. 古物商許可番号 第0000000000号</p>
+    </footer>
+
+</body>
+</html>
