@@ -1,17 +1,105 @@
-<!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>AI姿勢補正デバイス (Posture AI)</title><script src="https://cdn.tailwindcss.com"></script></head>
-<body class="bg-[#f8f9fa] text-slate-800 p-6 md:p-16 font-sans min-h-screen">
-    <header class="mb-12 flex justify-between items-end max-w-6xl mx-auto border-b border-slate-200 pb-8">
-        <div><div class="text-sm font-medium text-blue-600 mb-2">2. Health & Wellness (医療・ヘルスケア) / Prototype 17</div><h1 class="text-4xl md:text-5xl font-bold tracking-tight">AI姿勢補正デバイス (Posture AI)</h1></div>
-        <a href="../index.html" class="text-sm font-bold tracking-widest text-slate-400 hover:text-black uppercase">Close</a>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AURORA AI | Enterprise AI Studio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600&family=Noto+Sans+JP:wght@300;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dark: '#02050A',
+                        cyan: '#00F0FF',
+                        purple: '#8A2BE2',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'Noto Sans JP', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #02050A; color: #FFFFFF; font-family: 'Inter', 'Noto Sans JP', sans-serif; cursor: none; margin: 0; overflow-x: hidden; }
+        
+        /* Magic Mouse Cursor / Spotlight effect */
+        #cursor-glow {
+            width: 400px; height: 400px;
+            background: radial-gradient(circle, rgba(0,240,255,0.15) 0%, rgba(138,43,226,0.1) 40%, rgba(0,0,0,0) 70%);
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            transform: translate(-50%, -50%);
+            z-index: 0;
+            transition: left 0.1s ease-out, top 0.1s ease-out;
+        }
+        
+        .glass {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            position: relative;
+            z-index: 10;
+        }
+
+        .gradient-text {
+            background: linear-gradient(to right, #00F0FF, #8A2BE2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Ambient background animation */
+        .ambient-bg {
+            position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+            background-image: url('img/hero.png');
+            background-size: cover; background-position: center;
+            opacity: 0.2; z-index: -1;
+            animation: pulse 10s infinite alternate;
+        }
+        @keyframes pulse { 0% { opacity: 0.1; transform: scale(1); } 100% { opacity: 0.3; transform: scale(1.05); } }
+    </style>
+</head>
+<body class="antialiased selection:bg-cyan selection:text-dark">
+
+    <div id="cursor-glow"></div>
+    <div class="ambient-bg"></div>
+
+    <header class="fixed w-full top-0 z-50 glass border-b border-white/5 mix-blend-screen">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="font-bold tracking-widest text-sm letter-space"><span class="text-cyan">A U R O R A .</span> A I</div>
+            <a href="#" class="text-xs uppercase tracking-widest opacity-60 hover:opacity-100 hover:text-cyan transition">Contact Studio</a>
+        </div>
     </header>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-        <div class="md:col-span-2 bg-white rounded-[24px] overflow-hidden shadow-lg border border-slate-100 flex flex-col justify-between">
-            <div class="h-64 object-cover relative"><img src="https://picsum.photos/seed/aethel17/1600/900" class="w-full h-full object-cover"></div>
-            <div class="p-10"><div class="text-2xl font-light leading-relaxed text-slate-600 mb-8">人体の筋肉をワイヤーフレームで美しく表現するWebGL。</div></div>
+
+    <section class="min-h-screen flex items-center justify-center relative z-10 px-4">
+        <div class="text-center max-w-4xl">
+            <div class="text-xs tracking-[0.3em] uppercase text-cyan mb-6">Cognitive Architecture</div>
+            <h1 class="text-4xl md:text-7xl font-semibold mb-8 leading-tight tracking-tight">
+                Design the <span class="gradient-text italic font-serif">Deep Logic</span><br>
+                of Tomorrow.
+            </h1>
+            <p class="text-gray-400 font-light text-lg md:text-xl leading-relaxed mb-12 max-w-2xl mx-auto border-l border-white/10 pl-6">
+                私たちは、汎用的なAIツールを導入する会社ではありません。<br>
+                貴社の深遠なビジネスロジックを学習した、<br>
+                独自の「自律思考型AI（Cognitive Agent）」をゼロから設計する<br>
+                ハイエンドなAI開発スタジオです。
+            </p>
+            <a href="#" class="inline-block border border-white/20 px-10 py-5 rounded-full text-sm tracking-widest uppercase hover:bg-white hover:text-dark transition duration-500 glass">
+                Enter The Matrix
+            </a>
         </div>
-        <div class="bg-indigo-600 text-white rounded-[24px] p-10 shadow-lg flex flex-col justify-center items-center text-center">
-             <div class="w-24 h-24 rounded-full border-4 border-indigo-400/30 mb-6 flex items-center justify-center text-4xl">17</div>
-             <h3 class="text-xl font-bold mb-2">Live Demo Ready</h3>
-        </div>
-    </div>
-</body></html>
+    </section>
+
+    <!-- Custom Cursor Logic -->
+    <script>
+        const cursor = document.getElementById('cursor-glow');
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+        });
+    </script>
+</body>
+</html>

@@ -1,14 +1,115 @@
-<!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>スマート病院の予約システム (Smart Hospital)</title><script src="https://cdn.tailwindcss.com"></script></head>
-<body class="relative w-screen h-screen overflow-hidden font-sans bg-black">
-    <div class="absolute inset-0 z-0"><img src="https://picsum.photos/seed/aethel16/1600/900" class="w-full h-full object-cover opacity-60" /></div>
-    <div class="absolute top-0 w-full p-8 flex justify-between text-white z-20 mix-blend-difference">
-        <div class="text-sm font-bold tracking-widest uppercase">2. Health & Wellness (医療・ヘルスケア)</div><div class="text-sm font-mono">NO. 16 / 100</div>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEON HIRE | Gen Z-Optimized ATS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Noto+Sans+JP:wght@700;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#E0FF00', // Neon Yellow
+                        secondary: '#FF00FF', // Magenta
+                        cyan: '#00FFFF', // Cyan
+                        dark: '#111111',
+                    },
+                    fontFamily: {
+                        sans: ['Noto Sans JP', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'neo': '6px 6px 0px 0px rgba(17, 17, 17, 1)',
+                        'neo-hover': '2px 2px 0px 0px rgba(17, 17, 17, 1)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #F4F4F4; color: #111111; font-family: 'Noto Sans JP', sans-serif; overflow-x: hidden; }
+        .br-neo { border: 4px solid #111111; }
+        
+        /* Marquee Animation */
+        .marquee { white-space: nowrap; overflow: hidden; box-sizing: border-box; }
+        .marquee span { display: inline-block; padding-left: 100%; animation: marquee 15s linear infinite; }
+        @keyframes marquee { 0% { transform: translate(0, 0); } 100% { transform: translate(-100%, 0); } }
+        
+        .hover-lift { transition: transform 0.1s ease, box-shadow 0.1s ease; }
+        .hover-lift:hover { transform: translate(4px, 4px); box-shadow: 2px 2px 0px 0px rgba(17,17,17,1) !important; }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Top Marquee -->
+    <div class="bg-secondary text-white font-display text-lg py-2 br-neo border-x-0 border-t-0 marquee shadow-neo mb-6">
+        <span>⚡️ HIRING IS BROKEN ⚡️ WE FIXED IT ⚡️ Z-GEN OPTIMIZED ATS ⚡️ NO MORE BORING RESUMES ⚡️ HIRING IS BROKEN ⚡️ WE FIXED IT ⚡️ Z-GEN OPTIMIZED ATS ⚡️ NO MORE BORING RESUMES ⚡️</span>
     </div>
-    <div class="absolute inset-0 z-10 flex flex-col items-center justify-center p-6">
-        <div class="bg-white/10 backdrop-blur-3xl border border-white/20 rounded-[32px] p-12 max-w-4xl text-center shadow-2xl text-white transition-transform duration-700 hover:scale-105">
-            <h1 class="text-5xl md:text-7xl font-semibold tracking-tighter mb-6">スマート病院の予約システム (Smart Hospital)</h1>
-            <p class="text-lg md:text-xl font-light text-white/90 leading-relaxed">待ち時間を無くす特急UI。極細のアイコンと機能美。</p>
-            <div class="mt-10"><a href="../index.html" class="bg-white text-black px-8 py-4 rounded-full font-bold hover:bg-gray-200 transition">BACK TO GALLERY</a></div>
+
+    <!-- Header -->
+    <header class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center mb-12">
+        <div class="font-display font-bold text-4xl tracking-tighter mix-blend-difference">NEON HIRE</div>
+        <a href="#" class="bg-primary px-6 py-2 br-neo shadow-neo font-display font-bold hover-lift">GET DEMO</a>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8 mb-24">
+        <!-- Text Content -->
+        <div class="flex flex-col justify-center">
+            <div class="inline-block bg-cyan br-neo font-bold text-sm px-3 py-1 mb-6 w-fit transform -rotate-2">
+                FOR STARTUPS & CREATIVE TEAMS
+            </div>
+            <h1 class="text-5xl md:text-7xl font-black mb-6 leading-tight">
+                <span class="bg-white">カルチャーフィットを</span><br>
+                <span class="bg-primary px-2">ハックせよ。</span>
+            </h1>
+            <p class="text-xl font-bold mb-8 leading-relaxed">
+                履歴書だけじゃわからない。<br>
+                Z世代の「熱量」と「センス」を可視化する、<br>
+                全く新しい採用管理システム。
+            </p>
+            <div class="flex gap-4">
+                <a href="#" class="bg-secondary text-white px-8 py-4 text-xl font-bold br-neo shadow-neo hover-lift text-center w-full md:w-auto">TRY FOR FREE</a>
+            </div>
         </div>
-    </div>
-</body></html>
+
+        <!-- Image Content -->
+        <div class="relative">
+            <div class="absolute inset-0 bg-cyan br-neo transform translate-x-4 translate-y-4"></div>
+            <img src="img/hero.png" alt="Creative Team" class="w-full h-auto object-cover relative z-10 br-neo filter contrast-125 saturate-150">
+            <!-- Floating Badge -->
+            <div class="absolute -bottom-6 -left-6 bg-primary br-neo shadow-neo p-4 z-20 transform rotate-6">
+                <div class="font-display font-bold text-3xl">300%</div>
+                <div class="font-bold text-sm">MATCH RATE UP</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Bento Grid (Neo-brutalism style) -->
+    <section class="max-w-7xl mx-auto px-4 mb-24">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Card 1 -->
+            <div class="bg-white p-8 br-neo shadow-neo hover-lift">
+                <div class="text-4xl mb-4">🎥</div>
+                <h3 class="text-2xl font-black mb-2 bg-primary inline-block">1-Min Video Pitch</h3>
+                <p class="font-bold mt-4">テキストの履歴書は廃止。TikTok感覚で自己PR動画を提出させ、人柄を瞬時に把握。</p>
+            </div>
+            <!-- Card 2 -->
+            <div class="bg-cyan p-8 br-neo shadow-neo hover-lift">
+                <div class="text-4xl mb-4">💬</div>
+                <h3 class="text-2xl font-black mb-2 bg-white inline-block">Native Chat UI</h3>
+                <p class="font-bold mt-4">面接調整はすべてLINE連携のチャットUI。メールの堅苦しいやり取りを排除し、離脱率を激減。</p>
+            </div>
+            <!-- Card 3 -->
+            <div class="bg-secondary text-white p-8 br-neo shadow-neo hover-lift">
+                <div class="text-4xl mb-4">📊</div>
+                <h3 class="text-2xl font-black mb-2 bg-dark text-white inline-block px-1">Vibe Match Score</h3>
+                <p class="font-bold mt-4">独自のAIが、求職者のスキルと社風（Vibe）の適合度を0-100点で自動スコアリング。</p>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
