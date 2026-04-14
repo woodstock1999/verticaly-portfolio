@@ -1,12 +1,202 @@
-<!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>AI物流トラッキング (AI Logistics)</title><script src="https://cdn.tailwindcss.com"></script><link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet"></head>
-<body class="bg-[#050505] text-[#ededed] min-h-screen flex items-center justify-center p-8">
-    <a href="../index.html" class="absolute top-8 right-8 text-xs tracking-[0.2em] uppercase text-white/50 hover:text-white">Return</a>
-    <div class="relative w-full max-w-6xl aspect-[21/9] rounded-xl overflow-hidden shadow-2xl">
-        <img src="https://picsum.photos/seed/aethel27/1600/900" class="absolute inset-0 w-full h-full object-cover opacity-30 grayscale sepia-[.3]" />
-        <div class="absolute inset-0 p-16 flex flex-col justify-end bg-gradient-to-t from-black via-black/40 to-transparent">
-            <div class="text-[#d4af37] text-sm tracking-[0.3em] uppercase mb-4 font-bold border-l-2 border-[#d4af37] pl-4">3. Mobility & Transportation (モビリティ・交通) - 0027</div>
-            <h1 class="text-5xl md:text-7xl font-bold tracking-wide mb-6" style="font-family: 'Playfair Display', serif;">AI物流トラッキング (AI Logistics)</h1>
-            <p class="text-xl font-light max-w-3xl text-white/60 leading-loose">コンテナの動きを一目で把握できる、コンポーネント指向の管理画面。</p>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>30秒お片付けスマホ診断 - 万福丸</title>
+    <!-- フレンドリーでモダンなフォント -->
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        appGreen: '#00B987', /* エメラルドグリーン */
+                        appLight: '#E6F8F2', /* うすい緑 */
+                        appDark: '#1A332B',
+                        appAction: '#FF6B6B', /* コーラルレッド（通知用） */
+                    },
+                    fontFamily: {
+                        sans: ['M PLUS Rounded 1c', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #f5f7f9; color: #1A332B; font-family: 'M PLUS Rounded 1c', sans-serif; overflow-x: hidden; }
+        
+        /* インタラクティブなアプリ風カード */
+        .diag-card { background: white; border: 3px solid #e2e8f0; border-radius: 24px; padding: 1.5rem; text-align: center; transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s; cursor: pointer; }
+        .diag-card:hover, .diag-card.selected { transform: translateY(-5px); border-color: #00B987; box-shadow: 0 10px 25px rgba(0, 185, 135, 0.2); }
+        .diag-card.selected { background-color: #E6F8F2; }
+
+        .pulse-btn { animation: buttonPulse 2s infinite; }
+        @keyframes buttonPulse {
+            0% { box-shadow: 0 0 0 0 rgba(0, 185, 135, 0.4); }
+            70% { box-shadow: 0 0 0 15px rgba(0, 185, 135, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(0, 185, 135, 0); }
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-appGreen selection:text-white">
+
+    <header class="w-full px-6 py-4 flex justify-between items-center bg-white shadow-sm sticky top-0 z-50">
+        <div class="font-extrabold text-2xl text-appGreen flex items-center gap-2">
+            <span class="text-3xl">🏠</span> 万福丸の買取
         </div>
-    </div>
-</body></html>
+        <div class="bg-appLight text-appGreen px-4 py-2 rounded-full font-bold text-sm hidden md:block">
+            かんたんWEB診断受付中
+        </div>
+    </header>
+
+    <!-- 1. Interactive Diagnostic Hero -->
+    <section class="pt-12 pb-24 px-4 bg-gradient-to-b from-white to-appLight">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            
+            <div class="text-center lg:text-left">
+                <div class="inline-block bg-appAction text-white font-bold px-4 py-1 rounded-full text-sm mb-6 animate-bounce">
+                    お電話不要！まずはスマホでポチポチするだけ
+                </div>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-black mb-6 leading-tight">
+                    おうちにあるモノ、<br>
+                    <span class="text-appGreen">どれくらい売れるか</span><br>
+                    分かりますか？
+                </h1>
+                <p class="text-lg md:text-xl font-medium text-gray-600 mb-10 leading-relaxed">
+                    「こんな古いもの売れるの？」「家に来られるのはまだ早い…」<br>
+                    そんな方は、まずは下記の３つの質問に答えるだけ。<br>
+                    AIシステムが過去の買取データから、おおよその目安を即座に計算します。
+                </p>
+            </div>
+
+            <!-- VISUAL REALIZATION: Tablet UI Mockup representing the Diagnostic Tool -->
+            <div class="relative w-full aspect-square md:aspect-[4/3] bg-white rounded-[40px] shadow-2xl p-4 md:p-8 border-8 border-gray-100 flex flex-col justify-center items-center">
+                <!-- Status Bar -->
+                <div class="w-full flex justify-between text-xs text-gray-400 font-bold mb-6">
+                    <div>Step 1 of 3</div>
+                    <div class="flex gap-1">
+                        <div class="w-8 h-2 bg-appGreen rounded-full"></div>
+                        <div class="w-8 h-2 bg-gray-200 rounded-full"></div>
+                        <div class="w-8 h-2 bg-gray-200 rounded-full"></div>
+                    </div>
+                </div>
+
+                <h3 class="text-xl md:text-2xl font-black mb-8 text-appDark">いま一番、おうちで<br class="md:hidden">「スペースを取っている」ものは？</h3>
+                
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-4 w-full mb-8">
+                    <!-- Interactive Cards (Visual Only for Demo) -->
+                    <div class="diag-card group">
+                        <div class="text-5xl mb-4 group-hover:scale-110 transition">📚</div>
+                        <div class="font-bold">大量の<br>本・レコード</div>
+                    </div>
+                    <div class="diag-card group">
+                        <div class="text-5xl mb-4 group-hover:scale-110 transition">👗</div>
+                        <div class="font-bold">昔の<br>着物・洋服</div>
+                    </div>
+                    <div class="diag-card group">
+                        <div class="text-5xl mb-4 group-hover:scale-110 transition">🏺</div>
+                        <div class="font-bold">骨董・<br>コレクション</div>
+                    </div>
+                    <div class="diag-card group">
+                        <div class="text-5xl mb-4 group-hover:scale-110 transition">💍</div>
+                        <div class="font-bold">使わない<br>アクセサリー</div>
+                    </div>
+                    <div class="diag-card group hidden md:block">
+                        <div class="text-5xl mb-4 group-hover:scale-110 transition">📷</div>
+                        <div class="font-bold">カメラ<br>家電類</div>
+                    </div>
+                    <div class="diag-card group hidden md:block">
+                        <div class="text-5xl mb-4 group-hover:scale-110 transition">📦</div>
+                        <div class="font-bold">なんだか<br>分からない</div>
+                    </div>
+                </div>
+
+                <button class="w-full bg-appDark text-white font-black text-xl py-4 rounded-2xl hover:bg-appGreen transition">
+                    これを選んで次へ進む
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 2. Reassurance / Benefits (List style for seniors) -->
+    <section class="py-24 bg-white">
+        <div class="max-w-5xl mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-black text-center mb-4 text-appDark">診断結果を見てから決めてOK！</h2>
+            <p class="text-center font-bold text-gray-500 mb-16">万福丸が選ばれる３つの理由</p>
+            
+            <div class="space-y-6 max-w-3xl mx-auto">
+                <div class="flex items-center gap-6 p-6 md:p-8 bg-gray-50 rounded-3xl border border-gray-200">
+                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center text-3xl shadow-sm flex-shrink-0">📱</div>
+                    <div>
+                        <h3 class="text-xl font-black mb-2 text-appDark">スマホで完結、電話不要</h3>
+                        <p class="text-gray-600 font-medium">「いきなり電話するのは怖い…」という方でも大丈夫。LINEやこちらの画面から、数回タップするだけで申し込みが完了します。</p>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-6 p-6 md:p-8 bg-appLight rounded-3xl border border-appGreen/30">
+                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center text-3xl shadow-sm text-appGreen font-bold flex-shrink-0">📦</div>
+                    <div>
+                        <h3 class="text-xl font-black mb-2 text-appDark">ゴミ袋に入ったままでも査定します</h3>
+                        <p class="text-gray-600 font-medium">整理や仕分けは一切不要！「とりあえずこの部屋にあるもの全部見て！」というご依頼が一番多いので、恥ずかしがる必要はありません。</p>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-6 p-6 md:p-8 bg-gray-50 rounded-3xl border border-gray-200">
+                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center text-3xl shadow-sm flex-shrink-0">💰</div>
+                    <div>
+                        <h3 class="text-xl font-black mb-2 text-appDark">その場で「現金」お渡し</h3>
+                        <p class="text-gray-600 font-medium">査定金額にご納得いただければ、その場で現金にてお支払いします。もちろん、金額に納得いかなければキャンセル無料です。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. AI Generated Senior UI integration -->
+    <section class="py-24 bg-appDark text-white overflow-hidden">
+        <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div class="order-2 md:order-1 relative">
+                <!-- AI Generated Tablet image -->
+                <div class="relative w-full max-w-md mx-auto transform -rotate-3 hover:rotate-0 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-appGreen rounded-3xl blur-2xl opacity-40"></div>
+                    <img src="img/ui.png" alt="シニア向けタブレット診断UI" class="w-full h-auto rounded-3xl shadow-2xl relative border-4 border-white/10">
+                </div>
+            </div>
+            <div class="order-1 md:order-2 text-center md:text-left">
+                <div class="text-appGreen font-black text-6xl mb-4">50<span class="text-3xl">代からの</span></div>
+                <h2 class="text-3xl md:text-5xl font-black mb-8 leading-tight">画面の大きなタブレットで<br>ラクラク診断。</h2>
+                <p class="text-lg font-medium text-gray-300 leading-relaxed mb-8">
+                    私たちは、シニアの方でも迷わずに使える専用のシステムを独自開発しました。<br>
+                    難しい文字を入力する必要はありません。指でポンポンと選んでいくだけで、ご自宅にある「資産」の価値が分かります。
+                </p>
+                <div class="bg-white/10 p-4 rounded-xl border border-white/20 inline-block font-bold">
+                    👥 月間利用者数: 10,000人突破！
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Final CTA Button -->
+    <section class="py-32 bg-white text-center">
+        <div class="max-w-2xl mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-black mb-6 text-appDark">今すぐ、診断を始めてみませんか？</h2>
+            <p class="text-gray-500 font-bold mb-10">※個人情報の入力なしで、すぐに概算結果が分かります。</p>
+            
+            <button class="w-full text-2xl md:text-3xl bg-appGreen text-white font-black py-8 rounded-[40px] pulse-btn hover:bg-emerald-600 transition transform hover:-translate-y-2 shadow-2xl">
+                👆 今すぐ無料診断スタート
+            </button>
+            <div class="mt-6 text-appDark font-bold">
+                お電話でのご相談は <span class="text-2xl">0120-000-000</span> (年中無休)
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-100 py-12 text-center text-gray-500 font-bold text-sm">
+        &copy; 2026 万福丸 スマホ査定サービス
+    </footer>
+
+</body>
+</html>
