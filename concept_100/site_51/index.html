@@ -1,12 +1,94 @@
-<!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>VRライブプラットフォーム (Holo Live)</title><script src="https://cdn.tailwindcss.com"></script><link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet"></head>
-<body class="bg-[#050505] text-[#ededed] min-h-screen flex items-center justify-center p-8">
-    <a href="../index.html" class="absolute top-8 right-8 text-xs tracking-[0.2em] uppercase text-white/50 hover:text-white">Return</a>
-    <div class="relative w-full max-w-6xl aspect-[21/9] rounded-xl overflow-hidden shadow-2xl">
-        <img src="https://picsum.photos/seed/aethel51/1600/900" class="absolute inset-0 w-full h-full object-cover opacity-30 grayscale sepia-[.3]" />
-        <div class="absolute inset-0 p-16 flex flex-col justify-end bg-gradient-to-t from-black via-black/40 to-transparent">
-            <div class="text-[#d4af37] text-sm tracking-[0.3em] uppercase mb-4 font-bold border-l-2 border-[#d4af37] pl-4">6. Entertainment & Media (エンタメ・メディア) - 0051</div>
-            <h1 class="text-5xl md:text-7xl font-bold tracking-wide mb-6" style="font-family: 'Playfair Display', serif;">VRライブプラットフォーム (Holo Live)</h1>
-            <p class="text-xl font-light max-w-3xl text-white/60 leading-loose">Glitchエフェクト、強烈なタイポグラフィ、サイバーパンク寄りのチケット販売。</p>
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIDNIGHT DROP | 飲食店向け</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', 'Noto Sans JP', sans-serif; }
+    </style>
+</head>
+<body class="bg-[#09090b] text-white min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 backdrop-blur-md bg-opacity-80 bg-black/50 border-b border-white/10 px-6 py-4 flex justify-between items-center transition-all">
+        <div class="font-black text-2xl tracking-tighter text-fuchsia-400">MIDNIGHT DROP</div>
+        <div class="hidden md:flex gap-8 text-sm font-bold text-gray-300">
+            <a href="#" class="hover:text-fuchsia-400 transition">特徴</a>
+            <a href="#" class="hover:text-fuchsia-400 transition">機能</a>
+            <a href="#" class="hover:text-fuchsia-400 transition">料金</a>
         </div>
-    </div>
-</body></html>
+        <a href="#" class="bg-fuchsia-600 hover:bg-fuchsia-500 px-6 py-2 rounded-full font-bold text-sm transition transform hover:scale-105">店舗登録して今すぐ集客</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <main class="pt-32 pb-20 px-6 md:px-12 max-w-7xl mx-auto">
+        <div class="text-center max-w-4xl mx-auto mb-16">
+            <span class="bg-fuchsia-900/50 text-fuchsia-300 border-fuchsia-500 border px-3 py-1 text-xs font-bold rounded-full tracking-widest uppercase mb-6 inline-block">Niche Local Solution</span>
+            <h1 class="text-4xl md:text-6xl font-black mb-8 leading-tight tracking-tight">深夜の空席と余った酒を、<br>ゲリラ通知でお金に換える。</h1>
+            <p class="text-lg md:text-xl text-gray-400 font-medium leading-relaxed max-w-2xl mx-auto">深夜2時、客はいないが閉めるには早い。外にはまだ歩いている人がいるのにアプローチできない...。そんな深夜営業の悩みを解決するフラッシュオファーSaaS。半径1kmの「今飲みたい人」に直接通知を届けます。</p>
+        </div>
+
+        <!-- Simulated UI Showcase Fallback -->
+        <div class="relative w-full aspect-[21/9] md:aspect-video rounded-3xl overflow-hidden shadow-2xl mb-24 border border-white/10 shadow-black/80 group bg-gray-800 flex items-center justify-center">
+            
+            <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=800&q=80" class="absolute inset-0 w-full h-full object-cover opacity-40 mix-blend-overlay group-hover:scale-105 transition duration-[3s]">
+            <div class="z-10 bg-white/10 backdrop-blur-xl border border-white/20 p-8 md:p-12 rounded-2xl shadow-2xl flex flex-col items-center">
+                <svg class="w-12 h-12 text-fuchsia-400 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                <div class="text-xl md:text-3xl font-black text-white tracking-widest">FLASH OFFER RADAR</div>
+                <div class="text-white/60 text-sm mt-2 font-mono">[UI MOCKUP PROCESSING]</div>
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none"></div>
+        </div>
+
+        <!-- Features -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24">
+            
+            <div class="bg-white/5 border border-white/10 p-8 rounded-2xl hover:shadow-lg transition">
+                <div class="w-12 h-12 rounded-full flex items-center justify-center mb-6 bg-fuchsia-900/50 text-fuchsia-300 border-fuchsia-500 border">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                </div>
+                <h3 class="text-xl font-bold mb-4 text-white">リアルタイムMAP通知</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">現在地周辺でアプリを開いているユーザーへ、「今から1杯半額！」などのプッシュ通知を即時配信。</p>
+            </div>
+            
+            <div class="bg-white/5 border border-white/10 p-8 rounded-2xl hover:shadow-lg transition">
+                <div class="w-12 h-12 rounded-full flex items-center justify-center mb-6 bg-fuchsia-900/50 text-fuchsia-300 border-fuchsia-500 border">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                </div>
+                <h3 class="text-xl font-bold mb-4 text-white">余剰在庫の解消</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">賞味期限が近い、あるいは捌きたい食材・お酒をピンポイントで限定オファーにし、廃棄ロスを削減。</p>
+            </div>
+            
+            <div class="bg-white/5 border border-white/10 p-8 rounded-2xl hover:shadow-lg transition">
+                <div class="w-12 h-12 rounded-full flex items-center justify-center mb-6 bg-fuchsia-900/50 text-fuchsia-300 border-fuchsia-500 border">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                </div>
+                <h3 class="text-xl font-bold mb-4 text-white">深夜のスマート決済</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">決済はアプリ内で完結。深夜の面倒な現金トラブルや食い逃げリスクを完全にゼロにします。</p>
+            </div>
+            
+        </div>
+
+        <!-- CTA -->
+        <div class="text-center bg-white/5 border border-white/10 rounded-3xl p-12 md:p-24">
+            <h2 class="text-3xl md:text-5xl font-black mb-6 text-white">次のステージへ。</h2>
+            <p class="text-gray-400 mb-10 max-w-lg mx-auto">最新のテクノロジーを活用して、あなたの生活とビジネスに革命を起こしましょう。</p>
+            <a href="#" class="bg-fuchsia-600 hover:bg-fuchsia-500 px-10 py-5 rounded-full font-bold text-lg inline-flex items-center gap-2 transition transform hover:-translate-y-1 hover:shadow-xl ">
+                店舗登録して今すぐ集客
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+            </a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-8 text-center text-sm font-medium text-zinc-600 border-t border-white/10">
+        <p>&copy; 2026 MIDNIGHT DROP. TAKUMI DESIGN AGENT.</p>
+    </footer>
+
+</body>
+</html>
