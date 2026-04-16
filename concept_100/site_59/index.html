@@ -1,17 +1,88 @@
-<!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>メタバース上の美術館 (Virtual Museum)</title><script src="https://cdn.tailwindcss.com"></script></head>
-<body class="bg-[#f8f9fa] text-slate-800 p-6 md:p-16 font-sans min-h-screen">
-    <header class="mb-12 flex justify-between items-end max-w-6xl mx-auto border-b border-slate-200 pb-8">
-        <div><div class="text-sm font-medium text-blue-600 mb-2">6. Entertainment & Media (エンタメ・メディア) / Prototype 59</div><h1 class="text-4xl md:text-5xl font-bold tracking-tight">メタバース上の美術館 (Virtual Museum)</h1></div>
-        <a href="../index.html" class="text-sm font-bold tracking-widest text-slate-400 hover:text-black uppercase">Close</a>
-    </header>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-        <div class="md:col-span-2 bg-white rounded-[24px] overflow-hidden shadow-lg border border-slate-100 flex flex-col justify-between">
-            <div class="h-64 object-cover relative"><img src="https://picsum.photos/seed/aethel59/1600/900" class="w-full h-full object-cover"></div>
-            <div class="p-10"><div class="text-2xl font-light leading-relaxed text-slate-600 mb-8">静かで荘厳な大理石のテクスチャと、浮かぶ美術品。</div></div>
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GENTLE-LAMP | 高齢者見守り</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', 'Noto Sans JP', sans-serif; }
+    </style>
+</head>
+<body class="bg-[#fdfbf7] text-gray-800 min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 backdrop-blur-md bg-opacity-80 bg-black/50 border-b border-white/10 px-6 py-4 flex justify-between items-center transition-all">
+        <div class="font-black text-2xl tracking-tighter text-amber-700">GENTLE-LAMP</div>
+        <div class="hidden md:flex gap-8 text-sm font-bold text-gray-300">
+            <a href="#" class="hover:text-amber-700 transition">特徴</a>
+            <a href="#" class="hover:text-amber-700 transition">機能</a>
+            <a href="#" class="hover:text-amber-700 transition">料金</a>
         </div>
-        <div class="bg-indigo-600 text-white rounded-[24px] p-10 shadow-lg flex flex-col justify-center items-center text-center">
-             <div class="w-24 h-24 rounded-full border-4 border-indigo-400/30 mb-6 flex items-center justify-center text-4xl">59</div>
-             <h3 class="text-xl font-bold mb-2">Live Demo Ready</h3>
+        <a href="#" class="bg-amber-600 hover:bg-amber-500 text-white px-6 py-2 rounded-full font-bold text-sm transition transform hover:scale-105">トライアル電球を申し込む</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <main class="pt-32 pb-20 px-6 md:px-12 max-w-7xl mx-auto">
+        <div class="text-center max-w-4xl mx-auto mb-16">
+            <span class="bg-amber-900/30 text-amber-500 border border-amber-500/50 px-3 py-1 text-xs font-bold rounded-full tracking-widest uppercase mb-6 inline-block">health</span>
+            <h1 class="text-4xl md:text-6xl font-black mb-8 leading-tight tracking-tight">見守られていることに、<br>気づかない安心感。</h1>
+            <p class="text-lg md:text-xl text-gray-400 font-medium leading-relaxed max-w-2xl mx-auto">離れて暮らす親が心配。でも室内にカメラを置いたり、毎日生存確認の電話をするのは「監視されているようだ」と嫌がられてしまう。プライバシーを完全に守る「そっとした見守り」の形。</p>
         </div>
-    </div>
-</body></html>
+
+        <!-- Real UI Image Showcase -->
+        <div class="relative w-full aspect-[21/9] md:aspect-video rounded-3xl overflow-hidden shadow-2xl mb-24 border border-white/10 shadow-black/80 group">
+            <img src="img/ui.png" alt="UI Dashboard" class="w-full h-full object-cover transition-transform duration-[2s] group-hover:scale-[1.02]">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none"></div>
+        </div>
+
+        <!-- Features -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24">
+            
+            <div class="bg-white/5 border border-white/10 p-8 rounded-2xl hover:shadow-lg transition">
+                <div class="w-12 h-12 rounded-full flex items-center justify-center mb-6 bg-amber-900/30 text-amber-500 border border-amber-500/50">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                </div>
+                <h3 class="text-xl font-bold mb-4 text-white">電球を替えるだけ</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">いつものリビングやトイレの電球をGENTLE-LAMPに替えるだけ。工事もWi-Fi設定も一切不要です。</p>
+            </div>
+            
+            <div class="bg-white/5 border border-white/10 p-8 rounded-2xl hover:shadow-lg transition">
+                <div class="w-12 h-12 rounded-full flex items-center justify-center mb-6 bg-amber-900/30 text-amber-500 border border-amber-500/50">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                </div>
+                <h3 class="text-xl font-bold mb-4 text-white">行動リズム解析AI</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">「朝の点灯」「夜の消灯」のリズムをAIが学習。いつもと違う行動パターンが起きた時だけ静かにお知らせ。</p>
+            </div>
+            
+            <div class="bg-white/5 border border-white/10 p-8 rounded-2xl hover:shadow-lg transition">
+                <div class="w-12 h-12 rounded-full flex items-center justify-center mb-6 bg-amber-900/30 text-amber-500 border border-amber-500/50">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                </div>
+                <h3 class="text-xl font-bold mb-4 text-white">カメラレス・マイクレス</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">映像や音声は一切取得しません。だからこそ寝室や脱衣所など、本当に倒れるリスクが高い場所にも設置可能。</p>
+            </div>
+            
+        </div>
+
+        <!-- CTA -->
+        <div class="text-center bg-white/5 border border-white/10 rounded-3xl p-12 md:p-24">
+            <h2 class="text-3xl md:text-5xl font-black mb-6 text-white">次のステージへ。</h2>
+            <p class="text-gray-400 mb-10 max-w-lg mx-auto">最新のテクノロジーを活用して、あなたの生活とビジネスに革命を起こしましょう。</p>
+            <a href="#" class="bg-amber-600 hover:bg-amber-500 text-white px-10 py-5 rounded-full font-bold text-lg inline-flex items-center gap-2 transition transform hover:-translate-y-1 hover:shadow-xl ">
+                トライアル電球を申し込む
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+            </a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-8 text-center text-sm font-medium text-zinc-600 border-t border-white/10">
+        <p>&copy; 2026 GENTLE-LAMP. TAKUMI DESIGN AGENT.</p>
+    </footer>
+
+</body>
+</html>
