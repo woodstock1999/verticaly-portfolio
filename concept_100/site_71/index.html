@@ -1,17 +1,91 @@
-<!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>完全自動化された都市型垂直農法 (Vertical Farm)</title><script src="https://cdn.tailwindcss.com"></script></head>
-<body class="bg-[#f8f9fa] text-slate-800 p-6 md:p-16 font-sans min-h-screen">
-    <header class="mb-12 flex justify-between items-end max-w-6xl mx-auto border-b border-slate-200 pb-8">
-        <div><div class="text-sm font-medium text-blue-600 mb-2">8. Agriculture & Environment (農業・環境) / Prototype 71</div><h1 class="text-4xl md:text-5xl font-bold tracking-tight">完全自動化された都市型垂直農法 (Vertical Farm)</h1></div>
-        <a href="../index.html" class="text-sm font-bold tracking-widest text-slate-400 hover:text-black uppercase">Close</a>
-    </header>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-        <div class="md:col-span-2 bg-white rounded-[24px] overflow-hidden shadow-lg border border-slate-100 flex flex-col justify-between">
-            <div class="h-64 object-cover relative"><img src="https://picsum.photos/seed/aethel71/1600/900" class="w-full h-full object-cover"></div>
-            <div class="p-10"><div class="text-2xl font-light leading-relaxed text-slate-600 mb-8">レーザーの赤い光と植物の緑のコントラスト、温度湿度のリアルタイムグラフ。</div></div>
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>V-CHARGE | EV充電最適化</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', 'Noto Sans JP', sans-serif; }
+    </style>
+</head>
+<body class="bg-[#050b14] text-blue-200 min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 backdrop-blur-md bg-opacity-80 bg-black/50 border-b border-white/10 px-8 py-5 flex justify-between items-center transition-all">
+        <div class="font-black text-2xl tracking-tighter text-cyan-400">V-CHARGE</div>
+        <div class="hidden md:flex gap-10 text-sm font-bold text-gray-300">
+            <a href="#" class="hover:text-cyan-400 transition">機能</a>
+            <a href="#" class="hover:text-cyan-400 transition">ユースケース</a>
+            <a href="#" class="hover:text-cyan-400 transition">料金体系</a>
         </div>
-        <div class="bg-indigo-600 text-white rounded-[24px] p-10 shadow-lg flex flex-col justify-center items-center text-center">
-             <div class="w-24 h-24 rounded-full border-4 border-indigo-400/30 mb-6 flex items-center justify-center text-4xl">71</div>
-             <h3 class="text-xl font-bold mb-2">Live Demo Ready</h3>
+        <a href="#" class="bg-cyan-500 hover:bg-cyan-400 text-black px-6 py-2.5 rounded-full font-bold text-sm transition transform hover:scale-105">導入シミュレーション</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <main class="pt-36 pb-24 px-6 md:px-12 max-w-7xl mx-auto">
+        <div class="text-center max-w-4xl mx-auto mb-20 relative">
+            <span class="bg-blue-900/20 text-text-cyan-400 border border-blue-500/30 px-4 py-1.5 text-xs font-bold rounded-full tracking-widest uppercase mb-6 inline-block shadow-sm backdrop-blur-sm">saas</span>
+            <h1 class="text-4xl md:text-6xl font-black mb-8 leading-tight tracking-tight">EV充電ステーションの<br>収益をAIで最大化する。</h1>
+            <p class="text-lg md:text-xl text-gray-400 font-medium leading-relaxed max-w-2xl mx-auto">商業施設やマンションに設置したEV充電器。ただ置いているだけでは稼働率が低く、電気代の基本料金ばかりが嵩んでしまう。ダイナミックプライシングで、稼働率と利益を劇的に改善します。</p>
         </div>
-    </div>
-</body></html>
+
+        <!-- Real UI Image Showcase -->
+        <div class="relative w-full aspect-[21/9] md:aspect-video rounded-[2rem] overflow-hidden shadow-2xl mb-32 border border-white/5 shadow-[0_20px_50px_rgba(0,0,0,0.5)] group ring-1 ring-white/10">
+            <img src="img/ui.png" alt="UI Dashboard" class="w-full h-full object-cover transition-transform duration-[3s] group-hover:scale-[1.02]">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none mix-blend-overlay"></div>
+        </div>
+
+        <!-- Features -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-32">
+            
+            <div class="bg-white/[0.02] border border-white/5 p-10 rounded-3xl hover:shadow-2xl transition transform hover:-translate-y-2 duration-300">
+                <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-8 bg-blue-500/10 text-cyan-400 border border-blue-500/20">
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                </div>
+                <h3 class="text-2xl font-bold mb-4 text-white tracking-wide">AIダイナミックプライシング</h3>
+                <p class="text-gray-400 text-base leading-relaxed break-words">周辺の交通量と電力需給データから、時間帯ごとに最適な充電料金をAIが自動設定。ピークシフトを促しながら利益を最大化します。</p>
+            </div>
+            
+            <div class="bg-white/[0.02] border border-white/5 p-10 rounded-3xl hover:shadow-2xl transition transform hover:-translate-y-2 duration-300">
+                <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-8 bg-blue-500/10 text-cyan-400 border border-blue-500/20">
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                </div>
+                <h3 class="text-2xl font-bold mb-4 text-white tracking-wide">空き状況リアルタイム配信</h3>
+                <p class="text-gray-400 text-base leading-relaxed break-words">提携するカーナビやEVアプリへ「今空いている」情報をプッシュ配信。ドライバーをステーションへ誘導します。</p>
+            </div>
+            
+            <div class="bg-white/[0.02] border border-white/5 p-10 rounded-3xl hover:shadow-2xl transition transform hover:-translate-y-2 duration-300">
+                <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-8 bg-blue-500/10 text-cyan-400 border border-blue-500/20">
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                </div>
+                <h3 class="text-2xl font-bold mb-4 text-white tracking-wide">故障予知メンテナンス</h3>
+                <p class="text-gray-400 text-base leading-relaxed break-words">電圧異常や通信エラーの兆候を検知し、完全に故障する前に保守を手配。ダウンタイムをゼロに近づけます。</p>
+            </div>
+            
+        </div>
+
+        <!-- CTA -->
+        <div class="text-center bg-gradient-to-br from-white/5 to-transparent border border-white/10 rounded-[3rem] p-16 md:p-28 relative overflow-hidden group">
+            <div class="absolute inset-0 bg-blue-500/5 opacity-0 group-hover:opacity-100 transition duration-1000"></div>
+            <div class="relative z-10">
+                <h2 class="text-4xl md:text-6xl font-black mb-8 text-white">イノベーションを体験する</h2>
+                <p class="text-gray-400 mb-12 max-w-xl mx-auto text-lg">ビジネスと日常を劇的に進化させるプロダクトへのファーストアクセス。</p>
+                <a href="#" class="bg-cyan-500 hover:bg-cyan-400 text-black px-12 py-5 rounded-full font-bold text-lg inline-flex items-center gap-3 transition transform hover:-translate-y-1 shadow-2xl shadow-blue-500/20">
+                    導入シミュレーション
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-12 text-center text-sm font-medium text-gray-600 border-t border-white/10 bg-black/20">
+        <p>&copy; 2026 V-CHARGE. ALL RIGHTS RESERVED BY TAKUMI DESIGN AGENT.</p>
+    </footer>
+
+</body>
+</html>

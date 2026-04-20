@@ -1,12 +1,91 @@
-<!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>スマート浄水・水資源管理 (Water AI)</title><script src="https://cdn.tailwindcss.com"></script><link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet"></head>
-<body class="bg-[#050505] text-[#ededed] min-h-screen flex items-center justify-center p-8">
-    <a href="../index.html" class="absolute top-8 right-8 text-xs tracking-[0.2em] uppercase text-white/50 hover:text-white">Return</a>
-    <div class="relative w-full max-w-6xl aspect-[21/9] rounded-xl overflow-hidden shadow-2xl">
-        <img src="https://picsum.photos/seed/aethel75/1600/900" class="absolute inset-0 w-full h-full object-cover opacity-30 grayscale sepia-[.3]" />
-        <div class="absolute inset-0 p-16 flex flex-col justify-end bg-gradient-to-t from-black via-black/40 to-transparent">
-            <div class="text-[#d4af37] text-sm tracking-[0.3em] uppercase mb-4 font-bold border-l-2 border-[#d4af37] pl-4">8. Agriculture & Environment (農業・環境) - 0075</div>
-            <h1 class="text-5xl md:text-7xl font-bold tracking-wide mb-6" style="font-family: 'Playfair Display', serif;">スマート浄水・水資源管理 (Water AI)</h1>
-            <p class="text-xl font-light max-w-3xl text-white/60 leading-loose">澄んだ青い海と、水滴の波紋を模した流体シミュレーションWebGL。</p>
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OMAKASE-AI | 寿司職人SaaS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', 'Noto Sans JP', sans-serif; }
+    </style>
+</head>
+<body class="bg-[#161616] text-neutral-400 min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 backdrop-blur-md bg-opacity-80 bg-black/50 border-b border-white/10 px-8 py-5 flex justify-between items-center transition-all">
+        <div class="font-black text-2xl tracking-tighter text-amber-100">OMAKASE-AI</div>
+        <div class="hidden md:flex gap-10 text-sm font-bold text-gray-300">
+            <a href="#" class="hover:text-amber-100 transition">機能</a>
+            <a href="#" class="hover:text-amber-100 transition">ユースケース</a>
+            <a href="#" class="hover:text-amber-100 transition">料金体系</a>
         </div>
-    </div>
-</body></html>
+        <a href="#" class="bg-[#aa8855] hover:bg-[#886633] text-white px-6 py-2.5 rounded-full font-bold text-sm transition transform hover:scale-105">職人専用デモを予約</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <main class="pt-36 pb-24 px-6 md:px-12 max-w-7xl mx-auto">
+        <div class="text-center max-w-4xl mx-auto mb-20 relative">
+            <span class="bg-gray-900/20 text-text-amber-100 border border-gray-500/30 px-4 py-1.5 text-xs font-bold rounded-full tracking-widest uppercase mb-6 inline-block shadow-sm backdrop-blur-sm">food</span>
+            <h1 class="text-4xl md:text-6xl font-black mb-8 leading-tight tracking-tight">データが握る、<br>最高峰の「おまかせコース」。</h1>
+            <p class="text-lg md:text-xl text-gray-400 font-medium leading-relaxed max-w-2xl mx-auto">毎日の豊洲市場での仕入れ。経験と勘だけに頼っていては、原価率の悪化やフードロスは避けられません。「旬の食材」と「利益率」の完璧なバランス、AIがその答えを出します。</p>
+        </div>
+
+        <!-- Real UI Image Showcase -->
+        <div class="relative w-full aspect-[21/9] md:aspect-video rounded-[2rem] overflow-hidden shadow-2xl mb-32 border border-white/5 shadow-[0_20px_50px_rgba(0,0,0,0.5)] group ring-1 ring-white/10">
+            <img src="img/ui.png" alt="UI Dashboard" class="w-full h-full object-cover transition-transform duration-[3s] group-hover:scale-[1.02]">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none mix-blend-overlay"></div>
+        </div>
+
+        <!-- Features -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-32">
+            
+            <div class="bg-white/[0.02] border border-white/5 p-10 rounded-3xl hover:shadow-2xl transition transform hover:-translate-y-2 duration-300">
+                <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-8 bg-gray-500/10 text-amber-100 border border-gray-500/20">
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                </div>
+                <h3 class="text-2xl font-bold mb-4 text-white tracking-wide">本日のAIおまかせ構成</h3>
+                <p class="text-gray-400 text-base leading-relaxed break-words">市場の卸売価格データ、天候予測、昨日の在庫状況から、粗利率を最大化しつつ顧客満足度を下げることのない「今日のおまかせ全15品」を自動提案。</p>
+            </div>
+            
+            <div class="bg-white/[0.02] border border-white/5 p-10 rounded-3xl hover:shadow-2xl transition transform hover:-translate-y-2 duration-300">
+                <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-8 bg-gray-500/10 text-amber-100 border border-gray-500/20">
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                </div>
+                <h3 class="text-2xl font-bold mb-4 text-white tracking-wide">顧客データ完全記憶</h3>
+                <p class="text-gray-400 text-base leading-relaxed break-words">「このお客様はウニが苦手」「前回は赤身を多めに出した」など、常連客の好みを瞬時に呼び出し、コース内容をパーソナライズ。</p>
+            </div>
+            
+            <div class="bg-white/[0.02] border border-white/5 p-10 rounded-3xl hover:shadow-2xl transition transform hover:-translate-y-2 duration-300">
+                <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-8 bg-gray-500/10 text-amber-100 border border-gray-500/20">
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                </div>
+                <h3 class="text-2xl font-bold mb-4 text-white tracking-wide">スマート在庫連携</h3>
+                <p class="text-gray-400 text-base leading-relaxed break-words">冷蔵庫内の特殊タグと連動し「消費期限が迫っているネタ」をコース前半の『つまみ』に組み込むようAIが指示。ロスをゼロに。</p>
+            </div>
+            
+        </div>
+
+        <!-- CTA -->
+        <div class="text-center bg-gradient-to-br from-white/5 to-transparent border border-white/10 rounded-[3rem] p-16 md:p-28 relative overflow-hidden group">
+            <div class="absolute inset-0 bg-gray-500/5 opacity-0 group-hover:opacity-100 transition duration-1000"></div>
+            <div class="relative z-10">
+                <h2 class="text-4xl md:text-6xl font-black mb-8 text-white">イノベーションを体験する</h2>
+                <p class="text-gray-400 mb-12 max-w-xl mx-auto text-lg">ビジネスと日常を劇的に進化させるプロダクトへのファーストアクセス。</p>
+                <a href="#" class="bg-[#aa8855] hover:bg-[#886633] text-white px-12 py-5 rounded-full font-bold text-lg inline-flex items-center gap-3 transition transform hover:-translate-y-1 shadow-2xl shadow-gray-500/20">
+                    職人専用デモを予約
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-12 text-center text-sm font-medium text-gray-600 border-t border-white/10 bg-black/20">
+        <p>&copy; 2026 OMAKASE-AI. ALL RIGHTS RESERVED BY TAKUMI DESIGN AGENT.</p>
+    </footer>
+
+</body>
+</html>

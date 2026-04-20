@@ -1,12 +1,90 @@
-<!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>グローバル大学のメタバースキャンパス (Meta Uni)</title><script src="https://cdn.tailwindcss.com"></script><link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet"></head>
-<body class="bg-[#050505] text-[#ededed] min-h-screen flex items-center justify-center p-8">
-    <a href="../index.html" class="absolute top-8 right-8 text-xs tracking-[0.2em] uppercase text-white/50 hover:text-white">Return</a>
-    <div class="relative w-full max-w-6xl aspect-[21/9] rounded-xl overflow-hidden shadow-2xl">
-        <img src="https://picsum.photos/seed/aethel69/1600/900" class="absolute inset-0 w-full h-full object-cover opacity-30 grayscale sepia-[.3]" />
-        <div class="absolute inset-0 p-16 flex flex-col justify-end bg-gradient-to-t from-black via-black/40 to-transparent">
-            <div class="text-[#d4af37] text-sm tracking-[0.3em] uppercase mb-4 font-bold border-l-2 border-[#d4af37] pl-4">7. Education & HR (教育・人材) - 0069</div>
-            <h1 class="text-5xl md:text-7xl font-bold tracking-wide mb-6" style="font-family: 'Playfair Display', serif;">グローバル大学のメタバースキャンパス (Meta Uni)</h1>
-            <p class="text-xl font-light max-w-3xl text-white/60 leading-loose">バーチャル空間の緑豊かなキャンパスの俯瞰図。</p>
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SILENT-STUDY | 究極のスマホ断ち</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', 'Noto Sans JP', sans-serif; }
+    </style>
+</head>
+<body class="bg-white text-gray-900 min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 backdrop-blur-md bg-opacity-80 bg-white/80 border-b border-gray-200 px-6 py-4 flex justify-between items-center transition-all">
+        <div class="font-black text-2xl tracking-tighter text-black">SILENT-STUDY</div>
+        <div class="hidden md:flex gap-8 text-sm font-bold text-gray-600">
+            <a href="#" class="hover:text-black transition">特徴</a>
+            <a href="#" class="hover:text-black transition">機能</a>
+            <a href="#" class="hover:text-black transition">料金</a>
         </div>
-    </div>
-</body></html>
+        <a href="#" class="bg-red-700 hover:bg-red-600 text-white px-6 py-2 rounded-full font-bold text-sm transition transform hover:scale-105">覚悟を決めてダウンロード</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <main class="pt-32 pb-20 px-6 md:px-12 max-w-7xl mx-auto">
+        <div class="text-center max-w-4xl mx-auto mb-16">
+            <span class="bg-red-900/30 text-text-black border border-red-500/50 px-3 py-1 text-xs font-bold rounded-full tracking-widest uppercase mb-6 inline-block shadow-sm">experimental</span>
+            <h1 class="text-4xl md:text-6xl font-black mb-8 leading-tight tracking-tight">究極の集中。スマホを触れば、<br>自動で「100円」没収。</h1>
+            <p class="text-lg md:text-xl text-gray-600 font-medium leading-relaxed max-w-2xl mx-auto">試験勉強や締め切り前。ついついスマホを見てしまい、気づけば1時間が溶けている。「気合い」や「スクリーンタイム制限」ではもう自分を止められない、意志の弱いあなたへ。</p>
+        </div>
+
+        <!-- Real UI Image Showcase -->
+        <div class="relative w-full aspect-[21/9] md:aspect-video rounded-3xl overflow-hidden shadow-2xl mb-24 border border-gray-200 shadow-xl group">
+            <img src="img/ui.png" alt="UI Dashboard" class="w-full h-full object-cover transition-transform duration-[3s] group-hover:scale-[1.03]">
+            <div class="absolute inset-0 bg-gradient-to-t from-white/30 to-transparent pointer-events-none"></div>
+        </div>
+
+        <!-- Features -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24">
+            
+            <div class="bg-white border border-gray-200 shadow-sm p-8 rounded-2xl hover:shadow-lg transition transform hover:-translate-y-1">
+                <div class="w-12 h-12 rounded-full flex items-center justify-center mb-6 bg-red-900/30 text-black border border-red-500/50">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                </div>
+                <h3 class="text-xl font-bold mb-4 text-black">強制的な無音の規律</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">ポモドーロ（25分）をセットしてスマホを裏返します。途中で持ち上げたり、他のアプリを開くと、即座にクレジットカードから100円が引き落とされます。</p>
+            </div>
+            
+            <div class="bg-white border border-gray-200 shadow-sm p-8 rounded-2xl hover:shadow-lg transition transform hover:-translate-y-1">
+                <div class="w-12 h-12 rounded-full flex items-center justify-center mb-6 bg-red-900/30 text-black border border-red-500/50">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                </div>
+                <h3 class="text-xl font-bold mb-4 text-black">没収金は全額寄付</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">あなたが集中を乱して支払ったペナルティは、非営利の教育支援団体へ自動的に寄付されます。「無駄遣い」にはなりません。</p>
+            </div>
+            
+            <div class="bg-white border border-gray-200 shadow-sm p-8 rounded-2xl hover:shadow-lg transition transform hover:-translate-y-1">
+                <div class="w-12 h-12 rounded-full flex items-center justify-center mb-6 bg-red-900/30 text-black border border-red-500/50">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                </div>
+                <h3 class="text-xl font-bold mb-4 text-black">ストイック・ダッシュボード</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">「自分がどれだけ集中できたか」「どれだけスマホの誘惑に負けて寄付したか」を容赦なくグラフ化。</p>
+            </div>
+            
+        </div>
+
+        <!-- CTA -->
+        <div class="text-center bg-gray-100 border border-gray-200 focus-ring rounded-3xl p-12 md:p-24 relative overflow-hidden">
+            <div class="relative z-10">
+                <h2 class="text-3xl md:text-5xl font-black mb-6 text-black">次のステージへ。</h2>
+                <p class="text-gray-600 mb-10 max-w-lg mx-auto">最先端のテクノロジーで、業界の常識を覆しましょう。</p>
+                <a href="#" class="bg-red-700 hover:bg-red-600 text-white px-10 py-5 rounded-full font-bold text-lg inline-flex items-center gap-2 transition transform hover:-translate-y-1 hover:shadow-xl ">
+                    覚悟を決めてダウンロード
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-8 text-center text-sm font-medium text-gray-400 border-t border-gray-200">
+        <p>&copy; 2026 SILENT-STUDY. TAKUMI DESIGN AGENT.</p>
+    </footer>
+
+</body>
+</html>

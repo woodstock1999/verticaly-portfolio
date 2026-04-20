@@ -1,14 +1,95 @@
-<!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>建設用人型重機 (Robo Builder)</title><script src="https://cdn.tailwindcss.com"></script></head>
-<body class="relative w-screen h-screen overflow-hidden font-sans bg-black">
-    <div class="absolute inset-0 z-0"><img src="https://picsum.photos/seed/aethel88/1600/900" class="w-full h-full object-cover opacity-60" /></div>
-    <div class="absolute top-0 w-full p-8 flex justify-between text-white z-20 mix-blend-difference">
-        <div class="text-sm font-bold tracking-widest uppercase">9. Heavy Industry & Deep Tech (重工業・ディープテック)</div><div class="text-sm font-mono">NO. 88 / 100</div>
-    </div>
-    <div class="absolute inset-0 z-10 flex flex-col items-center justify-center p-6">
-        <div class="bg-white/10 backdrop-blur-3xl border border-white/20 rounded-[32px] p-12 max-w-4xl text-center shadow-2xl text-white transition-transform duration-700 hover:scale-105">
-            <h1 class="text-5xl md:text-7xl font-semibold tracking-tighter mb-6">建設用人型重機 (Robo Builder)</h1>
-            <p class="text-lg md:text-xl font-light text-white/90 leading-relaxed">金属の重厚感と、イエロー／ブラックの無骨なインダストリアルデザイン。</p>
-            <div class="mt-10"><a href="../index.html" class="bg-white text-black px-8 py-4 rounded-full font-bold hover:bg-gray-200 transition">BACK TO GALLERY</a></div>
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TINY-TALENT | 才能発見AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', 'Noto Sans JP', sans-serif; }
+    </style>
+</head>
+<body class="bg-orange-50 text-stone-700 min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 backdrop-blur-lg bg-opacity-80 bg-white/70 border-b border-gray-200 px-8 mb-4 py-5 flex justify-between items-center transition-all">
+        <div class="font-black text-2xl tracking-tighter text-orange-600">TINY-TALENT</div>
+        <div class="hidden md:flex gap-10 text-sm font-bold text-gray-600">
+            <a href="#" class="hover:text-orange-600 transition">機能・メリット</a>
+            <a href="#" class="hover:text-orange-600 transition">活用事例</a>
+            <a href="#" class="hover:text-orange-600 transition">ご導入について</a>
         </div>
-    </div>
-</body></html>
+        <a href="#" class="bg-orange-400 hover:bg-orange-500 text-white px-6 py-2.5 rounded-full font-bold text-sm transition transform hover:scale-105">無料で才能診断を試す</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <main class="pt-[140px] pb-24 px-6 md:px-12 max-w-7xl mx-auto">
+        <div class="text-center max-w-4xl mx-auto mb-20 relative">
+            <span class="bg-gray-100 text-text-orange-600 border border-gray-200 px-5 py-2 text-xs font-black rounded-full tracking-widest uppercase mb-8 inline-block shadow-sm">CONCEPT / education</span>
+            <h1 class="text-4xl md:text-[54px] font-black mb-8 leading-[1.2] tracking-tight text-gray-900">お絵かきから、<br>我が子の「隠れた天才性」を見抜く。</h1>
+            <p class="text-lg md:text-xl text-gray-600 font-medium leading-relaxed max-w-3xl mx-auto">「うちの子は落ち着きがない」—それは欠点ではなく、並外れた空間認識能力の裏返しかも。AIが子供の遊びを分析し、最適な才能を伸ばすツールを提示。</p>
+        </div>
+
+        <!-- Real UI Image or Prototype Showcase -->
+        <div class="relative w-full aspect-[21/9] md:aspect-video rounded-[32px] overflow-hidden shadow-2xl mb-32 border border-gray-200/50 shadow-xl group bg-zinc-900">
+            <div class="w-full h-full bg-gradient-to-br from-gray-900 to-black flex items-center justify-center p-8 border border-white/10 rounded-2xl">
+             <div class="text-center">
+               <div class="w-24 h-24 mx-auto border-4 border-yellow-500/50 rounded-full border-t-yellow-500 animate-spin mb-8"></div>
+               <h3 class="text-3xl font-black text-white tracking-widest uppercase mb-4 opacity-80">UI SYSTEM ONLINE</h3>
+               <p class="text-yellow-400 font-mono text-sm">[ PROTOTYPE CONCEPT RENDER ]</p>
+             </div>
+           </div>
+        </div>
+
+        <!-- Features -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-32">
+            
+            <div class="bg-white border border-gray-100 shadow-xl p-10 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+                <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-8 bg-gray-50 text-orange-600 border border-gray-200">
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                </div>
+                <h3 class="text-2xl font-bold mb-4 text-gray-900">描画プロセス分析</h3>
+                <p class="text-gray-600 text-base leading-relaxed">描いた絵そのものではなく「どの色から塗ったか」「線の筆圧」を分析し認知特性を割り出します。</p>
+            </div>
+            
+            <div class="bg-white border border-gray-100 shadow-xl p-10 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+                <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-8 bg-gray-50 text-orange-600 border border-gray-200">
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                </div>
+                <h3 class="text-2xl font-bold mb-4 text-gray-900">言語発達ダッシュボード</h3>
+                <p class="text-gray-600 text-base leading-relaxed">毎日の会話録音から使用語彙数をトラッキングし、同年代平均との比較や特異な興味分野を言語化。</p>
+            </div>
+            
+            <div class="bg-white border border-gray-100 shadow-xl p-10 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+                <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-8 bg-gray-50 text-orange-600 border border-gray-200">
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                </div>
+                <h3 class="text-2xl font-bold mb-4 text-gray-900">パーソナライズ知育玩具提案</h3>
+                <p class="text-gray-600 text-base leading-relaxed">その子の現在の発達段階と強みにフォーカスした、世界中のエドテック玩具を毎月サブスクでお届け。</p>
+            </div>
+            
+        </div>
+
+        <!-- CTA -->
+        <div class="text-center bg-gray-50 border border-gray-200 rounded-[3rem] p-16 md:p-32 relative overflow-hidden group">
+            <div class="relative z-10">
+                <h2 class="text-4xl md:text-5xl font-black mb-8 text-gray-900">イノベーションを社会実装する。</h2>
+                <p class="text-gray-600 mb-12 max-w-xl mx-auto text-lg leading-relaxed">このコンセプトに関心がありますか？最新のテクノロジーを活用して、私達と共に業界の常識を覆しましょう。</p>
+                <a href="#" class="bg-orange-400 hover:bg-orange-500 text-white px-12 py-5 rounded-full font-bold text-lg inline-flex items-center gap-3 transition transform hover:-translate-y-1">
+                    無料で才能診断を試す
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-12 text-center text-sm font-medium text-gray-400 bg-gray-50 border-t border-gray-200">
+        <p>&copy; 2026 TINY-TALENT. EXCLUSIVE CONCEPT DESIGN.</p>
+    </footer>
+
+</body>
+</html>

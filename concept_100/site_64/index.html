@@ -1,14 +1,90 @@
-<!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>次世代の人事評価ダッシュボード (HR Analytics)</title><script src="https://cdn.tailwindcss.com"></script></head>
-<body class="relative w-screen h-screen overflow-hidden font-sans bg-black">
-    <div class="absolute inset-0 z-0"><img src="https://picsum.photos/seed/aethel64/1600/900" class="w-full h-full object-cover opacity-60" /></div>
-    <div class="absolute top-0 w-full p-8 flex justify-between text-white z-20 mix-blend-difference">
-        <div class="text-sm font-bold tracking-widest uppercase">7. Education & HR (教育・人材)</div><div class="text-sm font-mono">NO. 64 / 100</div>
-    </div>
-    <div class="absolute inset-0 z-10 flex flex-col items-center justify-center p-6">
-        <div class="bg-white/10 backdrop-blur-3xl border border-white/20 rounded-[32px] p-12 max-w-4xl text-center shadow-2xl text-white transition-transform duration-700 hover:scale-105">
-            <h1 class="text-5xl md:text-7xl font-semibold tracking-tighter mb-6">次世代の人事評価ダッシュボード (HR Analytics)</h1>
-            <p class="text-lg md:text-xl font-light text-white/90 leading-relaxed">人材のスキルツリーが直感的にわかる、ゲームライクなSaaS画面。</p>
-            <div class="mt-10"><a href="../index.html" class="bg-white text-black px-8 py-4 rounded-full font-bold hover:bg-gray-200 transition">BACK TO GALLERY</a></div>
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SITE-MIND | 建設安全AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', 'Noto Sans JP', sans-serif; }
+    </style>
+</head>
+<body class="bg-[#111111] text-neutral-300 min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 backdrop-blur-md bg-opacity-80 bg-black/50 border-b border-white/10 px-6 py-4 flex justify-between items-center transition-all">
+        <div class="font-black text-2xl tracking-tighter text-amber-400">SITE-MIND</div>
+        <div class="hidden md:flex gap-8 text-sm font-bold text-gray-300">
+            <a href="#" class="hover:text-amber-400 transition">特徴</a>
+            <a href="#" class="hover:text-amber-400 transition">機能</a>
+            <a href="#" class="hover:text-amber-400 transition">料金</a>
         </div>
-    </div>
-</body></html>
+        <a href="#" class="bg-amber-400 hover:bg-amber-300 text-black px-6 py-2 rounded-full font-bold text-sm transition transform hover:scale-105">現場デモを依頼する</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <main class="pt-32 pb-20 px-6 md:px-12 max-w-7xl mx-auto">
+        <div class="text-center max-w-4xl mx-auto mb-16">
+            <span class="bg-yellow-900/30 text-text-amber-400 border border-yellow-500/50 px-3 py-1 text-xs font-bold rounded-full tracking-widest uppercase mb-6 inline-block shadow-sm">saas</span>
+            <h1 class="text-4xl md:text-6xl font-black mb-8 leading-tight tracking-tight">現場の「ヒヤリハット」を、<br>AIが事故になる前に予測する。</h1>
+            <p class="text-lg md:text-xl text-gray-400 font-medium leading-relaxed max-w-2xl mx-auto">建設現場での事故は会社にとって致命的。しかしベテランの減少により、新人作業員の危険行動をすべて監視するのは不可能です。安全パトロールの限界をAIとIoTで超えます。</p>
+        </div>
+
+        <!-- Real UI Image Showcase -->
+        <div class="relative w-full aspect-[21/9] md:aspect-video rounded-3xl overflow-hidden shadow-2xl mb-24 border border-white/10 shadow-black/80 group">
+            <img src="img/ui.png" alt="UI Dashboard" class="w-full h-full object-cover transition-transform duration-[3s] group-hover:scale-[1.03]">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none"></div>
+        </div>
+
+        <!-- Features -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24">
+            
+            <div class="bg-white/5 border border-white/10 p-8 rounded-2xl hover:shadow-lg transition transform hover:-translate-y-1">
+                <div class="w-12 h-12 rounded-full flex items-center justify-center mb-6 bg-yellow-900/30 text-amber-400 border border-yellow-500/50">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                </div>
+                <h3 class="text-xl font-bold mb-4 text-white">危険エリア高精度トラッキング</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">重機の稼働範囲と作業員の位置情報をリアルタイム比較。接触の危険があれば、即座にスマートヘルメットへ警告音を送信。</p>
+            </div>
+            
+            <div class="bg-white/5 border border-white/10 p-8 rounded-2xl hover:shadow-lg transition transform hover:-translate-y-1">
+                <div class="w-12 h-12 rounded-full flex items-center justify-center mb-6 bg-yellow-900/30 text-amber-400 border border-yellow-500/50">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                </div>
+                <h3 class="text-xl font-bold mb-4 text-white">熱中症・疲労度検知センサー</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">バイタルデータから「疲労による注意力散漫」を予測。事故が起きる前に休憩をシステムが自動指示します。</p>
+            </div>
+            
+            <div class="bg-white/5 border border-white/10 p-8 rounded-2xl hover:shadow-lg transition transform hover:-translate-y-1">
+                <div class="w-12 h-12 rounded-full flex items-center justify-center mb-6 bg-yellow-900/30 text-amber-400 border border-yellow-500/50">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                </div>
+                <h3 class="text-xl font-bold mb-4 text-white">KY（危険予知）自動レポート</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">その日の現場の状況に基づいたKY活動票を生成。形骸化しがちな安全確認をデジタルにアップデート。</p>
+            </div>
+            
+        </div>
+
+        <!-- CTA -->
+        <div class="text-center bg-white/5 border border-white/10 rounded-3xl p-12 md:p-24 relative overflow-hidden">
+            <div class="relative z-10">
+                <h2 class="text-3xl md:text-5xl font-black mb-6 text-white">次のステージへ。</h2>
+                <p class="text-gray-400 mb-10 max-w-lg mx-auto">最先端のテクノロジーで、業界の常識を覆しましょう。</p>
+                <a href="#" class="bg-amber-400 hover:bg-amber-300 text-black px-10 py-5 rounded-full font-bold text-lg inline-flex items-center gap-2 transition transform hover:-translate-y-1 hover:shadow-xl shadow-lg">
+                    現場デモを依頼する
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-8 text-center text-sm font-medium text-zinc-600 border-t border-white/10">
+        <p>&copy; 2026 SITE-MIND. TAKUMI DESIGN AGENT.</p>
+    </footer>
+
+</body>
+</html>

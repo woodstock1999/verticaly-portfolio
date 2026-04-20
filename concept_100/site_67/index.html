@@ -1,14 +1,90 @@
-<!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>AIによるクリエイターの自動マッチング (Talent Mesh)</title><script src="https://cdn.tailwindcss.com"></script></head>
-<body class="relative w-screen h-screen overflow-hidden font-sans bg-black">
-    <div class="absolute inset-0 z-0"><img src="https://picsum.photos/seed/aethel67/1600/900" class="w-full h-full object-cover opacity-60" /></div>
-    <div class="absolute top-0 w-full p-8 flex justify-between text-white z-20 mix-blend-difference">
-        <div class="text-sm font-bold tracking-widest uppercase">7. Education & HR (教育・人材)</div><div class="text-sm font-mono">NO. 67 / 100</div>
-    </div>
-    <div class="absolute inset-0 z-10 flex flex-col items-center justify-center p-6">
-        <div class="bg-white/10 backdrop-blur-3xl border border-white/20 rounded-[32px] p-12 max-w-4xl text-center shadow-2xl text-white transition-transform duration-700 hover:scale-105">
-            <h1 class="text-5xl md:text-7xl font-semibold tracking-tighter mb-6">AIによるクリエイターの自動マッチング (Talent Mesh)</h1>
-            <p class="text-lg md:text-xl font-light text-white/90 leading-relaxed">色の違うドットが磁石のようにくっつくアニメーション。</p>
-            <div class="mt-10"><a href="../index.html" class="bg-white text-black px-8 py-4 rounded-full font-bold hover:bg-gray-200 transition">BACK TO GALLERY</a></div>
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GENESIS-MATCH | 遺伝子婚活</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', 'Noto Sans JP', sans-serif; }
+    </style>
+</head>
+<body class="bg-[#1f0f15] text-rose-100 min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 backdrop-blur-md bg-opacity-80 bg-black/50 border-b border-white/10 px-6 py-4 flex justify-between items-center transition-all">
+        <div class="font-black text-2xl tracking-tighter text-rose-300">GENESIS-MATCH</div>
+        <div class="hidden md:flex gap-8 text-sm font-bold text-gray-300">
+            <a href="#" class="hover:text-rose-300 transition">特徴</a>
+            <a href="#" class="hover:text-rose-300 transition">機能</a>
+            <a href="#" class="hover:text-rose-300 transition">料金</a>
         </div>
-    </div>
-</body></html>
+        <a href="#" class="bg-rose-800 hover:bg-rose-700 text-rose-100 px-6 py-2 rounded-full font-bold text-sm transition transform hover:scale-105">遺伝子検査キットを取り寄せる</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <main class="pt-32 pb-20 px-6 md:px-12 max-w-7xl mx-auto">
+        <div class="text-center max-w-4xl mx-auto mb-16">
+            <span class="bg-red-900/30 text-text-rose-300 border border-red-500/50 px-3 py-1 text-xs font-bold rounded-full tracking-widest uppercase mb-6 inline-block shadow-sm">health</span>
+            <h1 class="text-4xl md:text-6xl font-black mb-8 leading-tight tracking-tight">年収でも、顔でもない。<br>「遺伝子レベル」で惹かれ合う出会いを。</h1>
+            <p class="text-lg md:text-xl text-gray-400 font-medium leading-relaxed max-w-2xl mx-auto">マッチングアプリでの条件検索に疲れた。会ってみても「生理的に合わない」「匂いがダメ」という直感的なミスマッチが多すぎる。もっと本能的で、科学的な出会いはないか。</p>
+        </div>
+
+        <!-- Real UI Image Showcase -->
+        <div class="relative w-full aspect-[21/9] md:aspect-video rounded-3xl overflow-hidden shadow-2xl mb-24 border border-white/10 shadow-black/80 group">
+            <img src="img/ui.png" alt="UI Dashboard" class="w-full h-full object-cover transition-transform duration-[3s] group-hover:scale-[1.03]">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none"></div>
+        </div>
+
+        <!-- Features -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24">
+            
+            <div class="bg-white/5 border border-white/10 p-8 rounded-2xl hover:shadow-lg transition transform hover:-translate-y-1">
+                <div class="w-12 h-12 rounded-full flex items-center justify-center mb-6 bg-red-900/30 text-rose-300 border border-red-500/50">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                </div>
+                <h3 class="text-xl font-bold mb-4 text-white">HLA遺伝子スクリーニング</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">免疫を司るHLA遺伝子の型を検査キットで事前に分析。「本能的に惹かれ合う（相性の良い）」遺伝子型同士だけをマッチング。</p>
+            </div>
+            
+            <div class="bg-white/5 border border-white/10 p-8 rounded-2xl hover:shadow-lg transition transform hover:-translate-y-1">
+                <div class="w-12 h-12 rounded-full flex items-center justify-center mb-6 bg-red-900/30 text-rose-300 border border-red-500/50">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                </div>
+                <h3 class="text-xl font-bold mb-4 text-white">ハイエンド審査制コミュニティ</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">遺伝子検査をパスした、完全審査制のクローズドなコミュニティ。スペックの偽装は一切不可能です。</p>
+            </div>
+            
+            <div class="bg-white/5 border border-white/10 p-8 rounded-2xl hover:shadow-lg transition transform hover:-translate-y-1">
+                <div class="w-12 h-12 rounded-full flex items-center justify-center mb-6 bg-red-900/30 text-rose-300 border border-red-500/50">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                </div>
+                <h3 class="text-xl font-bold mb-4 text-white">フェロモン適合度100%保証</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">「初対面なのに昔から知っているような安心感」を科学が約束します。究極の長期パートナーシップ。</p>
+            </div>
+            
+        </div>
+
+        <!-- CTA -->
+        <div class="text-center bg-white/5 border border-white/10 rounded-3xl p-12 md:p-24 relative overflow-hidden">
+            <div class="relative z-10">
+                <h2 class="text-3xl md:text-5xl font-black mb-6 text-white">次のステージへ。</h2>
+                <p class="text-gray-400 mb-10 max-w-lg mx-auto">最先端のテクノロジーで、業界の常識を覆しましょう。</p>
+                <a href="#" class="bg-rose-800 hover:bg-rose-700 text-rose-100 px-10 py-5 rounded-full font-bold text-lg inline-flex items-center gap-2 transition transform hover:-translate-y-1 hover:shadow-xl shadow-lg">
+                    遺伝子検査キットを取り寄せる
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-8 text-center text-sm font-medium text-zinc-600 border-t border-white/10">
+        <p>&copy; 2026 GENESIS-MATCH. TAKUMI DESIGN AGENT.</p>
+    </footer>
+
+</body>
+</html>

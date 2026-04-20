@@ -1,12 +1,91 @@
-<!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>気候変動予測・CO2取引 (Carbon Market)</title><script src="https://cdn.tailwindcss.com"></script><link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet"></head>
-<body class="bg-[#050505] text-[#ededed] min-h-screen flex items-center justify-center p-8">
-    <a href="../index.html" class="absolute top-8 right-8 text-xs tracking-[0.2em] uppercase text-white/50 hover:text-white">Return</a>
-    <div class="relative w-full max-w-6xl aspect-[21/9] rounded-xl overflow-hidden shadow-2xl">
-        <img src="https://picsum.photos/seed/aethel72/1600/900" class="absolute inset-0 w-full h-full object-cover opacity-30 grayscale sepia-[.3]" />
-        <div class="absolute inset-0 p-16 flex flex-col justify-end bg-gradient-to-t from-black via-black/40 to-transparent">
-            <div class="text-[#d4af37] text-sm tracking-[0.3em] uppercase mb-4 font-bold border-l-2 border-[#d4af37] pl-4">8. Agriculture & Environment (農業・環境) - 0072</div>
-            <h1 class="text-5xl md:text-7xl font-bold tracking-wide mb-6" style="font-family: 'Playfair Display', serif;">気候変動予測・CO2取引 (Carbon Market)</h1>
-            <p class="text-xl font-light max-w-3xl text-white/60 leading-loose">繊細な地球儀のワイヤーフレームと、クリーンな環境データ。</p>
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VILLA-SYNC | 別荘の分割所有</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', 'Noto Sans JP', sans-serif; }
+    </style>
+</head>
+<body class="bg-[#fdfbf7] text-stone-800 min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 backdrop-blur-md bg-opacity-80 bg-white/70 border-b border-gray-200 px-8 py-5 flex justify-between items-center transition-all">
+        <div class="font-black text-2xl tracking-tighter text-[#aa8855]">VILLA-SYNC</div>
+        <div class="hidden md:flex gap-10 text-sm font-bold text-gray-600">
+            <a href="#" class="hover:text-[#aa8855] transition">機能</a>
+            <a href="#" class="hover:text-[#aa8855] transition">ユースケース</a>
+            <a href="#" class="hover:text-[#aa8855] transition">料金体系</a>
         </div>
-    </div>
-</body></html>
+        <a href="#" class="bg-[#aa8855] hover:bg-[#886633] text-white px-6 py-2.5 rounded-full font-bold text-sm transition transform hover:scale-105">物件ポートフォリオを見る</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <main class="pt-36 pb-24 px-6 md:px-12 max-w-7xl mx-auto">
+        <div class="text-center max-w-4xl mx-auto mb-20 relative">
+            <span class="bg-amber-900/20 text-text-[#aa8855] border border-amber-500/30 px-4 py-1.5 text-xs font-bold rounded-full tracking-widest uppercase mb-6 inline-block shadow-sm backdrop-blur-sm">realestate</span>
+            <h1 class="text-4xl md:text-6xl font-black mb-8 leading-tight tracking-tight">数億円の絶景ヴィラを、<br>あなたの「週末の隠れ家」に。</h1>
+            <p class="text-lg md:text-xl text-gray-600 font-medium leading-relaxed max-w-2xl mx-auto">一流の建築家が手掛けたリゾート別荘。しかし、年に数回しか行かないのに数億円の購入費と高額な維持費を払うのは非合理的。所有の喜びと合理性を両立した、新しい富裕層向けインフラ。</p>
+        </div>
+
+        <!-- Real UI Image Showcase -->
+        <div class="relative w-full aspect-[21/9] md:aspect-video rounded-[2rem] overflow-hidden shadow-2xl mb-32 border border-gray-200/50 shadow-xl group ring-1 ring-white/10">
+            <img src="img/ui.png" alt="UI Dashboard" class="w-full h-full object-cover transition-transform duration-[3s] group-hover:scale-[1.02]">
+            <div class="absolute inset-0 bg-gradient-to-t from-white/40 to-transparent pointer-events-none mix-blend-overlay"></div>
+        </div>
+
+        <!-- Features -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-32">
+            
+            <div class="bg-white border border-gray-100 shadow-lg p-10 rounded-3xl hover:shadow-2xl transition transform hover:-translate-y-2 duration-300">
+                <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-8 bg-amber-500/10 text-[#aa8855] border border-amber-500/20">
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                </div>
+                <h3 class="text-2xl font-bold mb-4 text-gray-900">厳選された1/12所有権</h3>
+                <p class="text-gray-600 text-base leading-relaxed break-words">ニセコ、軽井沢、箱根など、審査を通過した最高級ヴィラのみを12口で分割所有。年間30日間の確約滞在権を付与します。</p>
+            </div>
+            
+            <div class="bg-white border border-gray-100 shadow-lg p-10 rounded-3xl hover:shadow-2xl transition transform hover:-translate-y-2 duration-300">
+                <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-8 bg-amber-500/10 text-[#aa8855] border border-amber-500/20">
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                </div>
+                <h3 class="text-2xl font-bold mb-4 text-gray-900">ホテルライクな管理維持</h3>
+                <p class="text-gray-600 text-base leading-relaxed break-words">清掃、設備のメンテナンス、アメニティの補充はすべて専用コンシェルジュが担当。あなたは手ぶらで訪れるだけです。</p>
+            </div>
+            
+            <div class="bg-white border border-gray-100 shadow-lg p-10 rounded-3xl hover:shadow-2xl transition transform hover:-translate-y-2 duration-300">
+                <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-8 bg-amber-500/10 text-[#aa8855] border border-amber-500/20">
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                </div>
+                <h3 class="text-2xl font-bold mb-4 text-gray-900">セカンダリーマーケット</h3>
+                <p class="text-gray-600 text-base leading-relaxed break-words">ライフスタイルの変化に合わせて、所有権（NFT）をプラットフォーム内でシームレスに売却可能。流動性を担保します。</p>
+            </div>
+            
+        </div>
+
+        <!-- CTA -->
+        <div class="text-center bg-gray-50 border border-gray-200 rounded-[3rem] p-16 md:p-28 relative overflow-hidden group">
+            <div class="absolute inset-0 bg-amber-500/5 opacity-0 group-hover:opacity-100 transition duration-1000"></div>
+            <div class="relative z-10">
+                <h2 class="text-4xl md:text-6xl font-black mb-8 text-gray-900">イノベーションを体験する</h2>
+                <p class="text-gray-600 mb-12 max-w-xl mx-auto text-lg">ビジネスと日常を劇的に進化させるプロダクトへのファーストアクセス。</p>
+                <a href="#" class="bg-[#aa8855] hover:bg-[#886633] text-white px-12 py-5 rounded-full font-bold text-lg inline-flex items-center gap-3 transition transform hover:-translate-y-1 shadow-xl">
+                    物件ポートフォリオを見る
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-12 text-center text-sm font-medium text-gray-500 border-t border-gray-200 bg-black/20">
+        <p>&copy; 2026 VILLA-SYNC. ALL RIGHTS RESERVED BY TAKUMI DESIGN AGENT.</p>
+    </footer>
+
+</body>
+</html>
