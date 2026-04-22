@@ -12,10 +12,10 @@
         body { font-family: 'Inter', 'Noto Sans JP', sans-serif; }
     </style>
 </head>
-<body class="bg-neutral-900 text-neutral-400 min-h-screen">
+<body class="bg-gray-50 text-stone-800 min-h-screen font-sans antialiased overflow-x-hidden">
 
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 backdrop-blur-lg bg-opacity-80 bg-black/50 border-b border-white/5 px-8 mb-4 py-5 flex justify-between items-center transition-all">
+    <nav class="fixed w-full z-50 backdrop-blur-md bg-opacity-90 bg-white/90 border-b border-gray-200 px-8 py-4 flex justify-between items-center transition-all shadow-sm">
         <div class="font-black text-2xl tracking-tighter text-neutral-300">PART-SURGEON</div>
         <div class="hidden md:flex gap-10 text-sm font-bold text-gray-400">
             <a href="#" class="hover:text-neutral-300 transition">機能・メリット</a>
@@ -26,60 +26,140 @@
     </nav>
 
     <!-- Hero Section -->
+    
     <main class="pt-[140px] pb-24 px-6 md:px-12 max-w-7xl mx-auto">
         <div class="text-center max-w-4xl mx-auto mb-20 relative">
-            <span class="bg-white/5 text-text-neutral-300 border border-white/10 px-5 py-2 text-xs font-black rounded-full tracking-widest uppercase mb-8 inline-block shadow-sm">CONCEPT / saas</span>
-            <h1 class="text-4xl md:text-[54px] font-black mb-8 leading-[1.2] tracking-tight text-white">人間の目より速く、正確に。<br>工場のマイクロクラックを検知。</h1>
-            <p class="text-lg md:text-xl text-gray-400 font-medium leading-relaxed max-w-3xl mx-auto">自動車部品などの精密工場。熟練スタッフの目視検査に頼っていては、ヒューマンエラーによる不良品流出のリスクが消えません。月額数万円で導入できる産業用AIビジョン。</p>
+            <span class="bg-gray-100 text-red-600 border border-gray-200 px-5 py-2 text-xs font-black rounded-full tracking-widest mb-8 inline-block shadow-sm">B2B SaaS / Manufacturing</span>
+            <h1 class="text-4xl md:text-[54px] font-black mb-8 leading-[1.2] tracking-tight text-gray-900">人間の目より速く、正確に。<br>リアルタイムAI不良検知システム</h1>
+            <p class="text-lg md:text-xl text-gray-600 font-medium leading-relaxed max-w-3xl mx-auto">製造ラインの最後を飾る、究極の見張り番。1秒間に数千フレームの解像度で微小な亀裂や塗装ムラを発見し、歩留まりを極限まで改善するマニュファクチャリング・インテリジェンス。</p>
         </div>
 
-        <!-- Real UI Image or Prototype Showcase -->
-        <div class="relative w-full aspect-[21/9] md:aspect-video rounded-[32px] overflow-hidden shadow-2xl mb-32 border border-white/10 shadow-[0_30px_60px_rgba(0,0,0,0.8)] group bg-zinc-900">
+        <!-- 1: UI Image Block -->
+        <div class="relative w-full aspect-[21/9] md:aspect-video rounded-[32px] overflow-hidden shadow-2xl mb-32 border border-gray-200/50 group bg-zinc-900">
             <img src="img/ui.png" alt="UI Dashboard" class="w-full h-full object-cover transition-transform duration-[3s] group-hover:scale-[1.02]">
-           <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none blend-overlay"></div></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none blend-overlay"></div>
         </div>
 
-        <!-- Features -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-32">
-            
-            <div class="bg-white/[0.02] border border-white/5 shadow-2xl p-10 rounded-3xl transition transform hover:-translate-y-2 duration-300">
-                <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-8 bg-white/5 text-neutral-300 border border-white/10">
-                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+        <!-- Extra Blocks generation -->
+        <div class="flex flex-col gap-32 mb-32">
+        
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-red-600 font-bold tracking-widest text-sm uppercase">INDUSTRIAL PARADIGM</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">「熟練の目」への依存を断ち切る</h2>
+                        <div class="w-12 h-1 bg-red-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">日本の製造業を支えてきた職人の目視検査。しかし、高齢化と人手不足により、そのクオリティを維持することは限界を迎えています。PART-SURGEONは、属人化した「勘と経験」をディープラーニングで完全に数値化・自動化し、ヒューマンエラーをゼロにします。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-red-900/20 to-transparent"></div>
+                    </div>
                 </div>
-                <h3 class="text-2xl font-bold mb-4 text-white tracking-wide">0.01mmの特異点検知</h3>
-                <p class="text-gray-400 text-base leading-relaxed">良品の画像データを学習させ、ミリ単位のキズ、サビ、色ムラをコンベア上で瞬時に赤枠でアラート。</p>
-            </div>
-            
-            <div class="bg-white/[0.02] border border-white/5 shadow-2xl p-10 rounded-3xl transition transform hover:-translate-y-2 duration-300">
-                <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-8 bg-white/5 text-neutral-300 border border-white/10">
-                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                
+                <div class="mt-10">
+                    <div class="text-center mb-16">
+                        <span class="text-red-600 font-bold tracking-widest text-sm uppercase">MICRO-INSPECTION</span>
+                        <h2 class="text-3xl md:text-4xl font-black mt-4 text-gray-900">ミクロン単位の異常を可視化する超高解像度解析</h2>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-red-50 text-red-600 border border-red-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">3Dスキャン・トポグラフィ</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">表面設計だけでなく、部品の微細な凹凸や歪みをミリ秒単位で立体的に把握し、基準値との差異を即座に計算。</p>
+</div>
+
+
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-red-50 text-red-600 border border-red-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">異常値の予測モデリング</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">過去数百万件の不良データを学習し、不良が発生する傾向を事前のライン環境（温度・振動）から予測。</p>
+</div>
+
+
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-red-50 text-red-600 border border-red-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">素材を問わない適応性</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">金属の反射、樹脂の透明度、布のテクスチャ。あらゆる素材特性に対して専用のライティングAIが自動最適化。</p>
+</div>
+
+                    </div>
                 </div>
-                <h3 class="text-2xl font-bold mb-4 text-white tracking-wide">ノーコードAI学習</h3>
-                <p class="text-gray-400 text-base leading-relaxed">AIの知識がゼロの現場スタッフでも、タブレットで『OK/NG』をスワイプするだけで自社専用モデルへ成長。</p>
-            </div>
-            
-            <div class="bg-white/[0.02] border border-white/5 shadow-2xl p-10 rounded-3xl transition transform hover:-translate-y-2 duration-300">
-                <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-8 bg-white/5 text-neutral-300 border border-white/10">
-                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-red-600 font-bold tracking-widest text-sm uppercase">HYPER-SPEED INFERENCE</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">秒間500個。歩止まりを落とさない圧倒的な速度</h2>
+                        <div class="w-12 h-1 bg-red-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">検査精度を上げるために生産速度を落とす必要はありません。エッジコンピューティングによる最適化された推論モデルが、コンベアの最高速度であってもリアルタイムで全数検査を実行。不良品のみを物理的にパージするシステムとシームレスに連動します。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-red-900/20 to-transparent"></div>
+                    </div>
                 </div>
-                <h3 class="text-2xl font-bold mb-4 text-white tracking-wide">既存カメラへ後付け設置</h3>
-                <p class="text-gray-400 text-base leading-relaxed">数百万の高価な専用システムは不要。今あるWebカメラにエッジAIデバイスを繋ぐだけで即日稼働します。</p>
-            </div>
-            
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-red-600 font-bold tracking-widest text-sm uppercase">ROOT-CAUSE ANALYTICS</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">生産プロセスの「真の原因」を特定</h2>
+                        <div class="w-12 h-1 bg-red-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">不良品を弾くだけなら既存のシステムでも十分です。PART-SURGEONは、「なぜその不良が起きたのか」をラインのセンサーデータと統合して分析。金型の摩耗や、塗料の粘度変化など、上流工程へのフィードバックを自動でダッシュボードにレポートします。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: bottom right;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-red-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-red-600 font-bold tracking-widest text-sm uppercase">PROVEN ROI</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">Case Study | 大手自動車部品メーカー</h2>
+                        <div class="w-12 h-1 bg-red-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">複雑な曲面を持つエンジン部品の目視検査では、見逃し率が常に3%存在していました。導入後わずか2週間で、AIモデルが光の屈折を利用した独自の亀裂発見パターンを生成。見逃し率0.001%未満を達成し、検査コストを年間1.5億円削減しました。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-red-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-red-600 font-bold tracking-widest text-sm uppercase">SEAMLESS INTEGRATION</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">ダウンタイムゼロ。既存ラインへの無停止導入</h2>
+                        <div class="w-12 h-1 bg-red-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">大規模なカメラ設備の入れ替えは不要です。既存のIPカメラや産業用ロボットにAPI経由で接続し、即日推論を開始。ノーコードで検査基準値（しきい値）を微調整できる直感的なUIを提供します。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: bottom right;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-red-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
         </div>
 
-        <!-- CTA -->
-        <div class="text-center bg-[#050505] border border-white/5 rounded-[3rem] p-16 md:p-32 relative overflow-hidden group">
+        <!-- Final CTA Block -->
+        <div class="text-center bg-gray-900 border border-gray-800 rounded-[3rem] p-16 md:p-32 relative overflow-hidden group shadow-2xl">
+            <div class="absolute inset-0 bg-gradient-to-br from-red-900/40 to-transparent"></div>
             <div class="relative z-10">
-                <h2 class="text-4xl md:text-5xl font-black mb-8 text-white">イノベーションを社会実装する。</h2>
-                <p class="text-gray-400 mb-12 max-w-xl mx-auto text-lg leading-relaxed">このコンセプトに関心がありますか？最新のテクノロジーを活用して、私達と共に業界の常識を覆しましょう。</p>
-                <a href="#" class="bg-neutral-200 hover:bg-white text-black px-12 py-5 rounded-full font-bold text-lg inline-flex items-center gap-3 transition transform hover:-translate-y-1">
-                    1週間のPoCを申し込む
+                <h2 class="text-4xl md:text-5xl font-black mb-8 text-white">品質管理の限界を、AIで突破する。</h2>
+                <p class="text-gray-300 mb-12 max-w-xl mx-auto text-lg leading-relaxed">あなたの工場の歩留まりは、まだ改善できます。圧倒的な精度の検知を、今すぐ体感してください。</p>
+                <a href="#" class="bg-red-500 hover:bg-red-400 text-white px-12 py-5 rounded-full font-bold text-lg inline-flex items-center gap-3 transition transform hover:-translate-y-1 shadow-lg shadow-red-500/30">
+                    デモを予約する
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
                 </a>
             </div>
         </div>
     </main>
+        
 
     <!-- Footer -->
     <footer class="py-12 text-center text-sm font-medium text-gray-600 bg-black border-t border-white/5">

@@ -12,10 +12,10 @@
         body { font-family: 'Inter', 'Noto Sans JP', sans-serif; }
     </style>
 </head>
-<body class="bg-orange-50 text-stone-700 min-h-screen">
+<body class="bg-gray-50 text-stone-800 min-h-screen font-sans antialiased overflow-x-hidden">
 
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 backdrop-blur-lg bg-opacity-80 bg-white/70 border-b border-gray-200 px-8 mb-4 py-5 flex justify-between items-center transition-all">
+    <nav class="fixed w-full z-50 backdrop-blur-md bg-opacity-90 bg-white/90 border-b border-gray-200 px-8 py-4 flex justify-between items-center transition-all shadow-sm">
         <div class="font-black text-2xl tracking-tighter text-orange-600">TINY-TALENT</div>
         <div class="hidden md:flex gap-10 text-sm font-bold text-gray-600">
             <a href="#" class="hover:text-orange-600 transition">機能・メリット</a>
@@ -26,60 +26,140 @@
     </nav>
 
     <!-- Hero Section -->
+    
     <main class="pt-[140px] pb-24 px-6 md:px-12 max-w-7xl mx-auto">
         <div class="text-center max-w-4xl mx-auto mb-20 relative">
-            <span class="bg-gray-100 text-text-orange-600 border border-gray-200 px-5 py-2 text-xs font-black rounded-full tracking-widest uppercase mb-8 inline-block shadow-sm">CONCEPT / education</span>
+            <span class="bg-gray-100 text-orange-600 border border-gray-200 px-5 py-2 text-xs font-black rounded-full tracking-widest mb-8 inline-block shadow-sm">CONCEPT / AI EdTech</span>
             <h1 class="text-4xl md:text-[54px] font-black mb-8 leading-[1.2] tracking-tight text-gray-900">お絵かきから、<br>我が子の「隠れた天才性」を見抜く。</h1>
-            <p class="text-lg md:text-xl text-gray-600 font-medium leading-relaxed max-w-3xl mx-auto">「うちの子は落ち着きがない」—それは欠点ではなく、並外れた空間認識能力の裏返しかも。AIが子供の遊びを分析し、最適な才能を伸ばすツールを提示。</p>
+            <p class="text-lg md:text-xl text-gray-600 font-medium leading-relaxed max-w-3xl mx-auto">「うちの子は落ち着きがない」—それは欠点ではなく、並外れた空間認識能力の裏返しかも。AIが子供の日常の遊びや描画プロセスを解析し、独自の才能を発掘します。</p>
         </div>
 
-        <!-- Real UI Image or Prototype Showcase -->
-        <div class="relative w-full aspect-[21/9] md:aspect-video rounded-[32px] overflow-hidden shadow-2xl mb-32 border border-gray-200/50 shadow-xl group bg-zinc-900">
+        <!-- 1: UI Image Block -->
+        <div class="relative w-full aspect-[21/9] md:aspect-video rounded-[32px] overflow-hidden shadow-2xl mb-32 border border-gray-200/50 group bg-zinc-900">
             <img src="img/ui.png" alt="UI Dashboard" class="w-full h-full object-cover transition-transform duration-[3s] group-hover:scale-[1.02]">
-           <div class="absolute inset-0 bg-gradient-to-t from-white/40 via-transparent to-transparent pointer-events-none blend-overlay"></div></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none blend-overlay"></div>
         </div>
 
-        <!-- Features -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-32">
-            
-            <div class="bg-white border border-gray-100 shadow-xl p-10 rounded-3xl transition transform hover:-translate-y-2 duration-300">
-                <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-8 bg-gray-50 text-orange-600 border border-gray-200">
-                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+        <!-- Extra Blocks generation -->
+        <div class="flex flex-col gap-32 mb-32">
+        
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-orange-600 font-bold tracking-widest text-sm uppercase">PARADIGM SHIFT</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">大人の「正解」に、子供を当てはめない。</h2>
+                        <div class="w-12 h-1 bg-orange-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">IQテストや学力偏差値は、子供が持つポテンシャルのごく一部しか反映していません。TINY-TALENTが着目するのは「無意識の遊び」。ブロックの積み方、クレヨンの筆圧、絵を描く順番。そこには、将来のクリエイターやエンジニア、アーティストとなる萌芽が確実に隠されています。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-orange-900/20 to-transparent"></div>
+                    </div>
                 </div>
-                <h3 class="text-2xl font-bold mb-4 text-gray-900">描画プロセス分析</h3>
-                <p class="text-gray-600 text-base leading-relaxed">描いた絵そのものではなく「どの色から塗ったか」「線の筆圧」を分析し認知特性を割り出します。</p>
-            </div>
-            
-            <div class="bg-white border border-gray-100 shadow-xl p-10 rounded-3xl transition transform hover:-translate-y-2 duration-300">
-                <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-8 bg-gray-50 text-orange-600 border border-gray-200">
-                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                
+                <div class="mt-10">
+                    <div class="text-center mb-16">
+                        <span class="text-orange-600 font-bold tracking-widest text-sm uppercase">CORE TECHNOLOGY</span>
+                        <h2 class="text-3xl md:text-4xl font-black mt-4 text-gray-900">結果論ではない、「過程」を解析するAI</h2>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-orange-50 text-orange-600 border border-orange-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">ストローク解析技術</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">完成した絵ではなく、描くプロセス（筆圧、速度、色の選択順）を独自アルゴリズムで分析し、認知バイアスを測定。</p>
+</div>
+
+
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-orange-50 text-orange-600 border border-orange-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">マルチモーダル行動認識</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">カメラ越しにブロック遊びやパズルのアプローチを解析。仮説検証のサイクル速度や空間把握力を見抜きます。</p>
+</div>
+
+
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-orange-50 text-orange-600 border border-orange-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">自然言語発達トラッキング</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">日常の会話の中で頻出する語彙の傾向をマッピングし、並外れた興味の方向性や論理構築力を可視化。</p>
+</div>
+
+                    </div>
                 </div>
-                <h3 class="text-2xl font-bold mb-4 text-gray-900">言語発達ダッシュボード</h3>
-                <p class="text-gray-600 text-base leading-relaxed">毎日の会話録音から使用語彙数をトラッキングし、同年代平均との比較や特異な興味分野を言語化。</p>
-            </div>
-            
-            <div class="bg-white border border-gray-100 shadow-xl p-10 rounded-3xl transition transform hover:-translate-y-2 duration-300">
-                <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-8 bg-gray-50 text-orange-600 border border-gray-200">
-                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-orange-600 font-bold tracking-widest text-sm uppercase">DYNAMIC TALENT GRAPH</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">「才能のレーダーチャート」が日々進化する</h2>
+                        <div class="w-12 h-1 bg-orange-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">子供の成長は一直線ではありません。TINY-TALENTのダッシュボードは、空間認識、言語理解、芸術性、論理的思考などの認知特性をリアルタイムで3Dグラフ化。得意な部分が突出していくプロセスを、親が一目で理解できる視覚的な体験として提供します。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-orange-900/20 to-transparent"></div>
+                    </div>
                 </div>
-                <h3 class="text-2xl font-bold mb-4 text-gray-900">パーソナライズ知育玩具提案</h3>
-                <p class="text-gray-600 text-base leading-relaxed">その子の現在の発達段階と強みにフォーカスした、世界中のエドテック玩具を毎月サブスクでお届け。</p>
-            </div>
-            
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-orange-600 font-bold tracking-widest text-sm uppercase">ACTIONABLE OUTCOME</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">才能に直結する、パーソナライズ知育</h2>
+                        <div class="w-12 h-1 bg-orange-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">「すごい才能がある」と分かっただけでは終わりません。データ分析に基づき、その子の「今、一番伸びる力」を極限まで刺激する知育玩具やオリジナル絵本を毎月最適化してお届けします。市販のおもちゃ選びで迷い、無駄な投資をする必要はもうありません。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: bottom right;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-orange-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-orange-600 font-bold tracking-widest text-sm uppercase">SUCCESS STORY</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">Case 01 | 5歳のEmilyの軌跡</h2>
+                        <div class="w-12 h-1 bg-orange-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">『一つの遊びに集中できない』と悩んでいたご両親。しかしAIは、彼女がブロックを組み立てる際の「特異な立体把握能力と、破壊して再構築するサイクルの速さ」を検知。空間設計に特化した教材を推奨したところ、5歳にして複雑な幾何学構造のアートを作り上げるようになりました。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-orange-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-orange-600 font-bold tracking-widest text-sm uppercase">FUTURE PASSPORT</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">一生使える「才能のポートフォリオ」</h2>
+                        <div class="w-12 h-1 bg-orange-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">幼少期の純粋なデータは、将来の学習カリキュラムの選択や、得意分野の発見において最も強力なポートフォリオになります。TINY-TALENTは、子供の一生の武器となるデータをブロックチェーンで安全に蓄積し、未来へのパスポートを構築します。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: bottom right;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-orange-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
         </div>
 
-        <!-- CTA -->
-        <div class="text-center bg-gray-50 border border-gray-200 rounded-[3rem] p-16 md:p-32 relative overflow-hidden group">
+        <!-- Final CTA Block -->
+        <div class="text-center bg-gray-900 border border-gray-800 rounded-[3rem] p-16 md:p-32 relative overflow-hidden group shadow-2xl">
+            <div class="absolute inset-0 bg-gradient-to-br from-orange-900/40 to-transparent"></div>
             <div class="relative z-10">
-                <h2 class="text-4xl md:text-5xl font-black mb-8 text-gray-900">イノベーションを社会実装する。</h2>
-                <p class="text-gray-600 mb-12 max-w-xl mx-auto text-lg leading-relaxed">このコンセプトに関心がありますか？最新のテクノロジーを活用して、私達と共に業界の常識を覆しましょう。</p>
-                <a href="#" class="bg-orange-400 hover:bg-orange-500 text-white px-12 py-5 rounded-full font-bold text-lg inline-flex items-center gap-3 transition transform hover:-translate-y-1">
+                <h2 class="text-4xl md:text-5xl font-black mb-8 text-white">眠れる才能を、可視化しよう。</h2>
+                <p class="text-gray-300 mb-12 max-w-xl mx-auto text-lg leading-relaxed">すべての子供は天才として生まれ、システムによって凡人になる。私達と一緒に、その才能を守り抜きませんか。</p>
+                <a href="#" class="bg-orange-500 hover:bg-orange-400 text-white px-12 py-5 rounded-full font-bold text-lg inline-flex items-center gap-3 transition transform hover:-translate-y-1 shadow-lg shadow-orange-500/30">
                     無料で才能診断を試す
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
                 </a>
             </div>
         </div>
     </main>
+        
 
     <!-- Footer -->
     <footer class="py-12 text-center text-sm font-medium text-gray-400 bg-gray-50 border-t border-gray-200">
