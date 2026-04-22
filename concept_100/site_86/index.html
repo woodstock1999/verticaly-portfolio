@@ -12,10 +12,10 @@
         body { font-family: 'Inter', 'Noto Sans JP', sans-serif; }
     </style>
 </head>
-<body class="bg-[#f2fcfd] text-slate-600 min-h-screen">
+<body class="bg-gray-50 text-stone-800 min-h-screen font-sans antialiased overflow-x-hidden">
 
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 backdrop-blur-lg bg-opacity-80 bg-black/50 border-b border-white/5 px-8 mb-4 py-5 flex justify-between items-center transition-all">
+    <nav class="fixed w-full z-50 backdrop-blur-md bg-opacity-90 bg-white/90 border-b border-gray-200 px-8 py-4 flex justify-between items-center transition-all shadow-sm">
         <div class="font-black text-2xl tracking-tighter text-teal-800">SYNAPTA-VR</div>
         <div class="hidden md:flex gap-10 text-sm font-bold text-gray-400">
             <a href="#" class="hover:text-teal-800 transition">機能・メリット</a>
@@ -26,60 +26,137 @@
     </nav>
 
     <!-- Hero Section -->
+    
     <main class="pt-[140px] pb-24 px-6 md:px-12 max-w-7xl mx-auto">
         <div class="text-center max-w-4xl mx-auto mb-20 relative">
-            <span class="bg-white/5 text-text-teal-800 border border-white/10 px-5 py-2 text-xs font-black rounded-full tracking-widest uppercase mb-8 inline-block shadow-sm">CONCEPT / health</span>
-            <h1 class="text-4xl md:text-[54px] font-black mb-8 leading-[1.2] tracking-tight text-white">失われた手足の痛みを、<br>VRの鏡で治療する。</h1>
-            <p class="text-lg md:text-xl text-gray-400 font-medium leading-relaxed max-w-3xl mx-auto">手足を切断した後に、無い手足が激しく痛む「幻肢痛」。クスリが効かないこの神経のバグを、最先端のVRミラーバイオフィードバックで脳をごまかし治療します。</p>
+            <span class="bg-gray-100 text-amber-600 border border-gray-200 px-5 py-2 text-xs font-black rounded-full tracking-widest mb-8 inline-block shadow-sm uppercase">REAL ESTATE / CROWDFUNDING</span>
+            <h1 class="text-4xl md:text-[54px] font-black mb-8 leading-[1.2] tracking-tight text-gray-900">見捨てられた空き家を、<br>街の資産に変える。</h1>
+            <p class="text-lg md:text-xl text-gray-600 font-medium leading-relaxed max-w-3xl mx-auto">日本全国に溢れる800万戸の空き家。HOME-HACKは、放置された古民家をDIYクリエイターや地域おこし協力隊と結びつけ、クラウドファンディングで資金を集めて再生するソーシャル・リアルエステート・プラットフォーム。</p>
         </div>
 
-        <!-- Real UI Image or Prototype Showcase -->
-        <div class="relative w-full aspect-[21/9] md:aspect-video rounded-[32px] overflow-hidden shadow-2xl mb-32 border border-white/10 shadow-[0_30px_60px_rgba(0,0,0,0.8)] group bg-zinc-900">
+        <div class="relative w-full aspect-[21/9] md:aspect-video rounded-[32px] overflow-hidden shadow-2xl mb-32 border border-gray-200/50 group bg-zinc-900">
             <img src="img/ui.png" alt="UI Dashboard" class="w-full h-full object-cover transition-transform duration-[3s] group-hover:scale-[1.02]">
-           <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none blend-overlay"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none blend-overlay"></div>
         </div>
 
-        <!-- Features -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-32">
-            
-            <div class="bg-white/[0.02] border border-white/5 shadow-2xl p-10 rounded-3xl transition transform hover:-translate-y-2 duration-300">
-                <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-8 bg-white/5 text-teal-800 border border-white/10">
-                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+        <div class="flex flex-col gap-32 mb-32">
+        
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-amber-600 font-bold tracking-widest text-sm uppercase">THE CORE ISSUE</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">「負動産」と呼ばれる社会問題</h2>
+                        <div class="w-12 h-1 bg-amber-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">相続しても住む人がおらず、固定資産税だけがかかり、倒壊の危険すらある空き家。不動産価値がゼロに等しいため、銀行も融資できず放置される悪循環。しかし、その朽ち果てた家には、誰かの思い出と、再利用可能な美しい古材が眠っています。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-amber-900/20 to-transparent"></div>
+                    </div>
                 </div>
-                <h3 class="text-2xl font-bold mb-4 text-white tracking-wide">没入型ミラーセラピー</h3>
-                <p class="text-gray-400 text-base leading-relaxed">VR内で健常な手足の動きを反転させ、「失われた手が動いている」という視覚情報を脳に送り、痛みのループを遮断。</p>
-            </div>
-            
-            <div class="bg-white/[0.02] border border-white/5 shadow-2xl p-10 rounded-3xl transition transform hover:-translate-y-2 duration-300">
-                <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-8 bg-white/5 text-teal-800 border border-white/10">
-                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                
+                <div class="mt-10">
+                    <div class="text-center mb-16">
+                        <span class="text-amber-600 font-bold tracking-widest text-sm uppercase">THE ECOSYSTEM</span>
+                        <h2 class="text-3xl md:text-4xl font-black mt-4 text-gray-900">「資金・技術・想い」の三位一体マッチング</h2>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-amber-50 text-amber-600 border border-amber-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">空き家再生クラウドファンディング</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">「1万円からの少額投資」で空き家再生のパトロンに。改修後の家賃収入からの利回り分配や、ゲストハウスとしての無料宿泊権などをリターンとして受け取れます。</p>
+</div>
+
+
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-amber-50 text-amber-600 border border-amber-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">DIYクリエイターとのマッチング</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">「改修費用がない」オーナーと、「家をいじりたい」DIY系YouTuberや建築学生をマッチング。作業そのものをエンタメ化し、コストを劇的に下げます。</p>
+</div>
+
+
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-amber-50 text-amber-600 border border-amber-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">改修後の運営サポート</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">ただ直すだけではありません。再生した空き家をシェアハウス、コワーキングスペース、カフェとして運用するためのノウハウと集客システムをワンストップで提供します。</p>
+</div>
+
+                    </div>
                 </div>
-                <h3 class="text-2xl font-bold mb-4 text-white tracking-wide">脳波・筋電フィードバック</h3>
-                <p class="text-gray-400 text-base leading-relaxed">切断端の筋肉の微細な信号を読み取り、VR内の義手を直感的に操作。脳の可塑性を促進します。</p>
-            </div>
-            
-            <div class="bg-white/[0.02] border border-white/5 shadow-2xl p-10 rounded-3xl transition transform hover:-translate-y-2 duration-300">
-                <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-8 bg-white/5 text-teal-800 border border-white/10">
-                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-amber-600 font-bold tracking-widest text-sm uppercase">VISIONARY TECH</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">3Dスキャンによる「完成予想図」の可視化</h2>
+                        <div class="w-12 h-1 bg-amber-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">ボロボロの空き家の写真だけでは資金は集まりません。HOME-HACKは、物件の3Dスキャンデータをもとに、AIが「モダンな古民家カフェに改装された姿」や「開放的なシェアハウス」の高精細な完成予想CGを自動生成し、投資家の想像力を掻き立てます。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-amber-900/20 to-transparent"></div>
+                    </div>
                 </div>
-                <h3 class="text-2xl font-bold mb-4 text-white tracking-wide">遠隔リハビリ管理</h3>
-                <p class="text-gray-400 text-base leading-relaxed">病院に通わずとも、自宅で毎日のトレーニング履歴を主治医が細かくモニタリング可能。</p>
-            </div>
-            
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-amber-600 font-bold tracking-widest text-sm uppercase">COMMUNITY ENGAGEMENT</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">プロセス自体をエンターテインメントに</h2>
+                        <div class="w-12 h-1 bg-amber-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">壁を抜き、床板を張り替える。その泥臭くもクリエイティブな過程を、プラットフォーム上で動画として定期配信。投資家は単にお金を出すだけでなく、完成までの「ドキュメンタリー」を共有する熱狂的なファンとなります。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: bottom right;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-amber-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-amber-600 font-bold tracking-widest text-sm uppercase">SUCCESS STORY</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">Case Study | 尾道の坂道にある古民家</h2>
+                        <div class="w-12 h-1 bg-amber-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">車も入れない坂道にあり、解体すら困難だった築80年の空き家。HOME-HACKを通じて全国から資金を集め、地元の若者たちとDIYでゲストハウスへと再生。今では、その過程を見たインバウンド観光客が絶え間なく訪れる、地域の新たなシンボルとなっています。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-amber-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-amber-600 font-bold tracking-widest text-sm uppercase">OUR VISION</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">スクラップ＆ビルドの終わり</h2>
+                        <div class="w-12 h-1 bg-amber-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">新しい家を建て続ける時代は終わりました。過去の人々が残した建物の「記憶」を受け継ぎ、現代のテクノロジーとコミュニティの力で新たな命を吹き込む。HOME-HACKは、日本全土をリノベーションします。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: bottom right;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-amber-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
         </div>
 
-        <!-- CTA -->
-        <div class="text-center bg-[#050505] border border-white/5 rounded-[3rem] p-16 md:p-32 relative overflow-hidden group">
+        <div class="text-center bg-gray-900 border border-gray-800 rounded-[3rem] p-16 md:p-32 relative overflow-hidden group shadow-2xl">
+            <div class="absolute inset-0 bg-gradient-to-br from-amber-900/40 to-transparent"></div>
             <div class="relative z-10">
-                <h2 class="text-4xl md:text-5xl font-black mb-8 text-white">イノベーションを社会実装する。</h2>
-                <p class="text-gray-400 mb-12 max-w-xl mx-auto text-lg leading-relaxed">このコンセプトに関心がありますか？最新のテクノロジーを活用して、私達と共に業界の常識を覆しましょう。</p>
-                <a href="#" class="bg-teal-400 hover:bg-teal-300 text-teal-900 font-bold px-12 py-5 rounded-full font-bold text-lg inline-flex items-center gap-3 transition transform hover:-translate-y-1">
-                    臨床データを確認する
+                <h2 class="text-4xl md:text-5xl font-black mb-8 text-white">廃墟を、次のストーリーの舞台に。</h2>
+                <p class="text-gray-300 mb-12 max-w-xl mx-auto text-lg leading-relaxed">ただ家を壊すのではなく、想いを繋ぐ。あなたも、日本の風景を守るプロジェクトの「共同オーナー」になりませんか？</p>
+                <a href="#" class="bg-amber-500 hover:bg-amber-400 text-white px-12 py-5 rounded-full font-bold text-lg inline-flex items-center gap-3 transition transform hover:-translate-y-1 shadow-lg shadow-amber-500/30">
+                    再生プロジェクトを探す
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
                 </a>
             </div>
         </div>
     </main>
+        
 
     <!-- Footer -->
     <footer class="py-12 text-center text-sm font-medium text-gray-600 bg-black border-t border-white/5">

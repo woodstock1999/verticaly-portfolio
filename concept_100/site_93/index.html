@@ -12,10 +12,10 @@
         body { font-family: 'Inter', 'Noto Sans JP', sans-serif; }
     </style>
 </head>
-<body class="bg-[#090b24] text-indigo-200 min-h-screen">
+<body class="bg-gray-50 text-stone-800 min-h-screen font-sans antialiased overflow-x-hidden">
 
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 backdrop-blur-lg bg-opacity-80 bg-black/50 border-b border-white/5 px-8 mb-4 py-5 flex justify-between items-center transition-all">
+    <nav class="fixed w-full z-50 backdrop-blur-md bg-opacity-90 bg-white/90 border-b border-gray-200 px-8 py-4 flex justify-between items-center transition-all shadow-sm">
         <div class="font-black text-2xl tracking-tighter text-indigo-400">SLEEP-SYNC</div>
         <div class="hidden md:flex gap-10 text-sm font-bold text-gray-400">
             <a href="#" class="hover:text-indigo-400 transition">機能・メリット</a>
@@ -26,60 +26,137 @@
     </nav>
 
     <!-- Hero Section -->
+    
     <main class="pt-[140px] pb-24 px-6 md:px-12 max-w-7xl mx-auto">
         <div class="text-center max-w-4xl mx-auto mb-20 relative">
-            <span class="bg-white/5 text-text-indigo-400 border border-white/10 px-5 py-2 text-xs font-black rounded-full tracking-widest uppercase mb-8 inline-block shadow-sm">CONCEPT / health</span>
-            <h1 class="text-4xl md:text-[54px] font-black mb-8 leading-[1.2] tracking-tight text-white">あなたの睡眠の「質」を、<br>IoTマットレスが自動でコントロール。</h1>
-            <p class="text-lg md:text-xl text-gray-400 font-medium leading-relaxed max-w-3xl mx-auto">朝起きても疲れが取れない。スマートウォッチで睡眠ログを取っても「浅い」と分かるだけで、解決策がない。ログの取得から「解決行動」への介入を全自動化します。</p>
+            <span class="bg-gray-100 text-indigo-600 border border-gray-200 px-5 py-2 text-xs font-black rounded-full tracking-widest mb-8 inline-block shadow-sm">HEALTHTECH / SLEEP IoT</span>
+            <h1 class="text-4xl md:text-[54px] font-black mb-8 leading-[1.2] tracking-tight text-gray-900">最高の眠りを、<br>AIが「自動操縦」する。</h1>
+            <p class="text-lg md:text-xl text-gray-600 font-medium leading-relaxed max-w-3xl mx-auto">もう、自分に合うマットレスを探し回る必要はありません。あなたの体型、寝返り、心拍数に合わせて、マットレスの硬さと温度が一晩中リアルタイムに変化し続ける、究極のスマートスリープ体験。</p>
         </div>
 
-        <!-- Real UI Image or Prototype Showcase -->
-        <div class="relative w-full aspect-[21/9] md:aspect-video rounded-[32px] overflow-hidden shadow-2xl mb-32 border border-white/10 shadow-[0_30px_60px_rgba(0,0,0,0.8)] group bg-zinc-900">
+        <div class="relative w-full aspect-[21/9] md:aspect-video rounded-[32px] overflow-hidden shadow-2xl mb-32 border border-gray-200/50 group bg-zinc-900">
             <img src="img/ui.png" alt="UI Dashboard" class="w-full h-full object-cover transition-transform duration-[3s] group-hover:scale-[1.02]">
-           <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none blend-overlay"></div></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none blend-overlay"></div>
         </div>
 
-        <!-- Features -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-32">
-            
-            <div class="bg-white/[0.02] border border-white/5 shadow-2xl p-10 rounded-3xl transition transform hover:-translate-y-2 duration-300">
-                <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-8 bg-white/5 text-indigo-400 border border-white/10">
-                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+        <div class="flex flex-col gap-32 mb-32">
+        
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-indigo-600 font-bold tracking-widest text-sm uppercase">THE PROBLEM</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">「静的」な寝具の限界</h2>
+                        <div class="w-12 h-1 bg-indigo-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">店舗で数分間試して買ったマットレスが、本当に毎日の身体に合っているでしょうか。人間の筋肉の疲労度や体温は毎日異なります。SLEEP-SYNCは、あなたの今日の状態に合わせて「形を変える」動的な寝具です。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-indigo-900/20 to-transparent"></div>
+                    </div>
                 </div>
-                <h3 class="text-2xl font-bold mb-4 text-white tracking-wide">体感温度スマート調節</h3>
-                <p class="text-gray-400 text-base leading-relaxed">マットレス内蔵のセンサーが睡眠サイクルを検知。深い眠り（ノンレム睡眠）の時はマットレスを冷やし、起床前には徐々に温めます。</p>
-            </div>
-            
-            <div class="bg-white/[0.02] border border-white/5 shadow-2xl p-10 rounded-3xl transition transform hover:-translate-y-2 duration-300">
-                <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-8 bg-white/5 text-indigo-400 border border-white/10">
-                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                
+                <div class="mt-10">
+                    <div class="text-center mb-16">
+                        <span class="text-indigo-600 font-bold tracking-widest text-sm uppercase">CORE FEATURES</span>
+                        <h2 class="text-3xl md:text-4xl font-black mt-4 text-gray-900">一晩中、あなたに合わせて変化するテクノロジー</h2>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-indigo-50 text-indigo-600 border border-indigo-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">ダイナミック・コンプレッション</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">マットレス内に内蔵された数百のエアセルが、寝返りを打つたびに瞬時に圧力を再計算し、理想的な体圧分散を維持します。</p>
+</div>
+
+
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-indigo-50 text-indigo-600 border border-indigo-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">デュアル・クライメート制御</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">入眠時は深部体温を下げるために涼しく、起床時は自然な目覚めのために暖かく。AIが睡眠サイクルに合わせて温度を自動調整。</p>
+</div>
+
+
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-indigo-50 text-indigo-600 border border-indigo-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">無拘束バイタルセンシング</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">身につけるデバイスは不要。シーツの下のピエゾセンサーが、心拍数、呼吸数、睡眠の深さを医療機器レベルの精度で計測します。</p>
+</div>
+
+                    </div>
                 </div>
-                <h3 class="text-2xl font-bold mb-4 text-white tracking-wide">いびき自動緩和システム</h3>
-                <p class="text-gray-400 text-base leading-relaxed">いびきの音響データを検知すると、マットレスの頭部側が数度だけ静かに隆起し、気道を自動で確保します。</p>
-            </div>
-            
-            <div class="bg-white/[0.02] border border-white/5 shadow-2xl p-10 rounded-3xl transition transform hover:-translate-y-2 duration-300">
-                <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-8 bg-white/5 text-indigo-400 border border-white/10">
-                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-indigo-600 font-bold tracking-widest text-sm uppercase">SMART ECOSYSTEM</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">スマートホーム連動による「完全な入眠空間」</h2>
+                        <div class="w-12 h-1 bg-indigo-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">SLEEP-SYNCは寝具だけにとどまりません。あなたがベッドに入り呼吸が深くなると、AIが部屋の照明を徐々に暗くし、スマートカーテンを閉め、エアコンの温度を睡眠モードに切り替える。空間全体を一つの「睡眠カプセル」にします。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-indigo-900/20 to-transparent"></div>
+                    </div>
                 </div>
-                <h3 class="text-2xl font-bold mb-4 text-white tracking-wide">スマートホーム完全連携</h3>
-                <p class="text-gray-400 text-base leading-relaxed">眠りに落ちた瞬間に部屋の照明をオフにし、エアコンの温度を睡眠最適モードへ切り替えます。</p>
-            </div>
-            
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-indigo-600 font-bold tracking-widest text-sm uppercase">PERSONALIZED INSIGHTS</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">翌朝届く、あなた専属の睡眠レポート</h2>
+                        <div class="w-12 h-1 bg-indigo-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">毎朝、スマホアプリに昨晩の睡眠スコアと詳細な分析が届きます。「昨日はカフェインの影響で深い睡眠が20分減少しました。今日は就寝前の室温を1度下げてみます」といった、具体的なアクションとAIからの提案が得られます。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: bottom right;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-indigo-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-indigo-600 font-bold tracking-widest text-sm uppercase">HIGH PERFORMANCE</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">Case Study | プロアスリートのリカバリー</h2>
+                        <div class="w-12 h-1 bg-indigo-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">トップリーグのサッカー選手が導入。激しいトレーニング後の筋肉の張り（偏った体圧）をAIが自動検知し、腰から脚にかけてのサポートを強化。導入後、リカバリースコアが平均15%向上し、怪我のリスク低減に貢献しています。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-indigo-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-indigo-600 font-bold tracking-widest text-sm uppercase">OUR VISION</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">睡眠負債からの解放</h2>
+                        <div class="w-12 h-1 bg-indigo-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">現代人の多くが抱える「睡眠負債」。私たちはテクノロジーの力で、眠りの「量」だけでなく「質」を極限まで高め、すべての人にクリアな頭脳と活力ある朝を約束します。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: bottom right;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-indigo-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
         </div>
 
-        <!-- CTA -->
-        <div class="text-center bg-[#050505] border border-white/5 rounded-[3rem] p-16 md:p-32 relative overflow-hidden group">
+        <div class="text-center bg-gray-900 border border-gray-800 rounded-[3rem] p-16 md:p-32 relative overflow-hidden group shadow-2xl">
+            <div class="absolute inset-0 bg-gradient-to-br from-indigo-900/40 to-transparent"></div>
             <div class="relative z-10">
-                <h2 class="text-4xl md:text-5xl font-black mb-8 text-white">イノベーションを社会実装する。</h2>
-                <p class="text-gray-400 mb-12 max-w-xl mx-auto text-lg leading-relaxed">このコンセプトに関心がありますか？最新のテクノロジーを活用して、私達と共に業界の常識を覆しましょう。</p>
-                <a href="#" class="bg-indigo-600 hover:bg-indigo-500 text-white px-12 py-5 rounded-full font-bold text-lg inline-flex items-center gap-3 transition transform hover:-translate-y-1">
-                    デバイスを予約（1万名限定）
+                <h2 class="text-4xl md:text-5xl font-black mb-8 text-white">人生の1/3を、データで最適化する。</h2>
+                <p class="text-gray-300 mb-12 max-w-xl mx-auto text-lg leading-relaxed">睡眠は休息ではなく、翌日のパフォーマンスを決める最大の投資です。SLEEP-SYNCで、あなたの睡眠を再定義しましょう。</p>
+                <a href="#" class="bg-indigo-500 hover:bg-indigo-400 text-white px-12 py-5 rounded-full font-bold text-lg inline-flex items-center gap-3 transition transform hover:-translate-y-1 shadow-lg shadow-indigo-500/30">
+                    睡眠体験をアップグレード
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
                 </a>
             </div>
         </div>
     </main>
+        
 
     <!-- Footer -->
     <footer class="py-12 text-center text-sm font-medium text-gray-600 bg-black border-t border-white/5">

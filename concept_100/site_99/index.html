@@ -12,10 +12,10 @@
         body { font-family: 'Inter', 'Noto Sans JP', sans-serif; }
     </style>
 </head>
-<body class="bg-zinc-100 text-slate-800 min-h-screen">
+<body class="bg-gray-50 text-stone-800 min-h-screen font-sans antialiased overflow-x-hidden">
 
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 backdrop-blur-lg bg-opacity-80 bg-white/70 border-b border-gray-200 px-8 mb-4 py-5 flex justify-between items-center transition-all">
+    <nav class="fixed w-full z-50 backdrop-blur-md bg-opacity-90 bg-white/90 border-b border-gray-200 px-8 py-4 flex justify-between items-center transition-all shadow-sm">
         <div class="font-black text-2xl tracking-tighter text-cyan-700">CYBER-BENTO</div>
         <div class="hidden md:flex gap-10 text-sm font-bold text-gray-600">
             <a href="#" class="hover:text-cyan-700 transition">機能・メリット</a>
@@ -26,60 +26,137 @@
     </nav>
 
     <!-- Hero Section -->
+    
     <main class="pt-[140px] pb-24 px-6 md:px-12 max-w-7xl mx-auto">
         <div class="text-center max-w-4xl mx-auto mb-20 relative">
-            <span class="bg-gray-100 text-text-cyan-700 border border-gray-200 px-5 py-2 text-xs font-black rounded-full tracking-widest uppercase mb-8 inline-block shadow-sm">CONCEPT / food</span>
-            <h1 class="text-4xl md:text-[54px] font-black mb-8 leading-[1.2] tracking-tight text-gray-900">あなたの血液データから、<br>今日食べるべき弁当を生成する。</h1>
-            <p class="text-lg md:text-xl text-gray-600 font-medium leading-relaxed max-w-3xl mx-auto">ITエンジニアの健康問題。コンビニ弁当やエナジードリンクばかりでパフォーマスが落ちている。企業の福利厚生として導入する、超パーソナライズされたシリコンバレー式弁当デリバリー。</p>
+            <span class="bg-gray-100 text-cyan-600 border border-gray-200 px-5 py-2 text-xs font-black rounded-full tracking-widest mb-8 inline-block shadow-sm uppercase">FOODTECH / CORP WELLNESS</span>
+            <h1 class="text-4xl md:text-[54px] font-black mb-8 leading-[1.2] tracking-tight text-gray-900">血液データから、<br>今日の弁当を生成する。</h1>
+            <p class="text-lg md:text-xl text-gray-600 font-medium leading-relaxed max-w-3xl mx-auto">社員の健康診断データ、スマートウォッチの活動量、そして朝のストレススコアをAIが統合分析。その日のその人に「1グラム単位」で最適化されたマクロ栄養素のお弁当をオフィスに届ける「CYBER-BENTO」。</p>
         </div>
 
-        <!-- Real UI Image or Prototype Showcase -->
-        <div class="relative w-full aspect-[21/9] md:aspect-video rounded-[32px] overflow-hidden shadow-2xl mb-32 border border-gray-200/50 shadow-xl group bg-zinc-900">
+        <div class="relative w-full aspect-[21/9] md:aspect-video rounded-[32px] overflow-hidden shadow-2xl mb-32 border border-gray-200/50 group bg-zinc-900">
             <img src="img/ui.png" alt="UI Dashboard" class="w-full h-full object-cover transition-transform duration-[3s] group-hover:scale-[1.02]">
-           <div class="absolute inset-0 bg-gradient-to-t from-white/40 via-transparent to-transparent pointer-events-none blend-overlay"></div></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none blend-overlay"></div>
         </div>
 
-        <!-- Features -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-32">
-            
-            <div class="bg-white border border-gray-100 shadow-xl p-10 rounded-3xl transition transform hover:-translate-y-2 duration-300">
-                <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-8 bg-gray-50 text-cyan-700 border border-gray-200">
-                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+        <div class="flex flex-col gap-32 mb-32">
+        
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-cyan-600 font-bold tracking-widest text-sm uppercase">THE PROBLEM</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">「全員同じランチ」の非効率性</h2>
+                        <div class="w-12 h-1 bg-cyan-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">昨日徹夜したエンジニアと、今日マラソン大会を控えるセールス担当。必要な栄養素が全く違うにも関わらず、同じ唐揚げ弁当を食べて午後を眠気と戦いながら過ごす。この栄養のミスマッチが、企業の生産性を著しく低下させています。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-cyan-900/20 to-transparent"></div>
+                    </div>
                 </div>
-                <h3 class="text-2xl font-bold mb-4 text-gray-900">健康診断データ連動</h3>
-                <p class="text-gray-600 text-base leading-relaxed">社員の健康診断結果やApple HealthのデータをAIが解析。「中性脂肪が高めなAさんには糖質オフ弁当」などを完全個別アサイン。</p>
-            </div>
-            
-            <div class="bg-white border border-gray-100 shadow-xl p-10 rounded-3xl transition transform hover:-translate-y-2 duration-300">
-                <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-8 bg-gray-50 text-cyan-700 border border-gray-200">
-                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                
+                <div class="mt-10">
+                    <div class="text-center mb-16">
+                        <span class="text-cyan-600 font-bold tracking-widest text-sm uppercase">DATA-DRIVEN NUTRITION</span>
+                        <h2 class="text-3xl md:text-4xl font-black mt-4 text-gray-900">超解像度パーソナライゼーションの裏側</h2>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-cyan-50 text-cyan-600 border border-cyan-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">バイオメトリクス連携</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">年1回の健康診断データ（血糖値、コレステロール等）と、ウェアラブル端末の睡眠・心拍データをセキュアに同期し、不足栄養素を特定。</p>
+</div>
+
+
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-cyan-50 text-cyan-600 border border-cyan-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">AIロボティック・キッチンテック</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">工場ではAIの指示に基づき、ロボットアームが「タンパク質32g」「炭水化物45g」など、個人ごとの指示通りにミリグラム単位で食材を自動計量・配膳。</p>
+</div>
+
+
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-cyan-50 text-cyan-600 border border-cyan-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">ダイナミック・メニュー生成</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">同じ栄養素でも「昨日は魚だったから今日は鶏肉」など、味の飽きがこないよう数百万通りの組み合わせからレシピを自動生成。</p>
+</div>
+
+                    </div>
                 </div>
-                <h3 class="text-2xl font-bold mb-4 text-gray-900">集中力ブースト成分配合</h3>
-                <p class="text-gray-600 text-base leading-relaxed">午後の眠気を防止するため、血糖値の急上昇を抑える低GI食材と、脳細胞を活性化するMCTオイルやオメガ3を意図的に配合。</p>
-            </div>
-            
-            <div class="bg-white border border-gray-100 shadow-xl p-10 rounded-3xl transition transform hover:-translate-y-2 duration-300">
-                <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-8 bg-gray-50 text-cyan-700 border border-gray-200">
-                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-cyan-600 font-bold tracking-widest text-sm uppercase">GLUCOSE MANAGEMENT</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">午後の眠気を完全にコントロールする</h2>
+                        <div class="w-12 h-1 bg-cyan-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">食後の強烈な眠気は、血糖値の急激な乱高下（グルコーススパイク）が原因です。CYBER-BENTOは、その人の代謝能力に合わせて低GI食品を最適にブレンド。血糖値を緩やかに保ち、午後イチの重要な会議から夕方まで、クリエイティビティと集中力を最大化させます。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-cyan-900/20 to-transparent"></div>
+                    </div>
                 </div>
-                <h3 class="text-2xl font-bold mb-4 text-gray-900">顔認証スマート冷蔵庫</h3>
-                <p class="text-gray-600 text-base leading-relaxed">オフィスに設置された専用冷蔵庫。社員が顔を近づけるだけで「今日のあなたの最適弁当はこれです」とロックが解除されます。</p>
-            </div>
-            
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-cyan-600 font-bold tracking-widest text-sm uppercase">ROI OF WELLNESS</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">企業価値を高める「攻めの健康経営」</h2>
+                        <div class="w-12 h-1 bg-cyan-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">社員食堂を持つ余裕のないスタートアップでも、世界最高水準のパーソナライズ栄養管理を福利厚生として提供可能。採用時の強力なアピールポイントになるだけでなく、病欠率の低下による明確なROI（投資対効果）をダッシュボードで確認できます。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: bottom right;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-cyan-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-cyan-600 font-bold tracking-widest text-sm uppercase">PROVEN RESULTS</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">Case Study | シリコンバレー系IT企業</h2>
+                        <div class="w-12 h-1 bg-cyan-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">全社員200名にCYBER-BENTOを導入。導入後3ヶ月で、ウェアラブル端末のデータから「深い睡眠」の割合が平均22%向上。午後のカフェイン消費量が半減し、社内アンケートでは「午後3時の倦怠感が完全に消えた」との声が殺到しました。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-cyan-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-cyan-600 font-bold tracking-widest text-sm uppercase">OUR VISION</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">食事を「アルゴリズム」へと昇華する</h2>
+                        <div class="w-12 h-1 bg-cyan-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">私たちはフードデリバリー会社ではありません。人間の身体という最も複雑なハードウェアに対し、最適な燃料（栄養）というソフトウェアをインストールする、究極のヒューマン・パフォーマンス・カンパニーです。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: bottom right;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-cyan-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
         </div>
 
-        <!-- CTA -->
-        <div class="text-center bg-gray-50 border border-gray-200 rounded-[3rem] p-16 md:p-32 relative overflow-hidden group">
+        <div class="text-center bg-gray-900 border border-gray-800 rounded-[3rem] p-16 md:p-32 relative overflow-hidden group shadow-2xl">
+            <div class="absolute inset-0 bg-gradient-to-br from-cyan-900/40 to-transparent"></div>
             <div class="relative z-10">
-                <h2 class="text-4xl md:text-5xl font-black mb-8 text-gray-900">イノベーションを社会実装する。</h2>
-                <p class="text-gray-600 mb-12 max-w-xl mx-auto text-lg leading-relaxed">このコンセプトに関心がありますか？最新のテクノロジーを活用して、私達と共に業界の常識を覆しましょう。</p>
-                <a href="#" class="bg-cyan-600 hover:bg-cyan-500 text-white px-12 py-5 rounded-full font-bold text-lg inline-flex items-center gap-3 transition transform hover:-translate-y-1">
-                    オフィスの無料テスト導入
+                <h2 class="text-4xl md:text-5xl font-black mb-8 text-white">福利厚生を、パフォーマンス・ハックへ。</h2>
+                <p class="text-gray-300 mb-12 max-w-xl mx-auto text-lg leading-relaxed">社員の不調による見えないコスト（プレゼンティーイズム）を、毎日のランチで解決しませんか？</p>
+                <a href="#" class="bg-cyan-500 hover:bg-cyan-400 text-white px-12 py-5 rounded-full font-bold text-lg inline-flex items-center gap-3 transition transform hover:-translate-y-1 shadow-lg shadow-cyan-500/30">
+                    デモ・導入のご相談
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
                 </a>
             </div>
         </div>
     </main>
+        
 
     <!-- Footer -->
     <footer class="py-12 text-center text-sm font-medium text-gray-400 bg-gray-50 border-t border-gray-200">

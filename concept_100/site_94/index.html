@@ -12,10 +12,10 @@
         body { font-family: 'Inter', 'Noto Sans JP', sans-serif; }
     </style>
 </head>
-<body class="bg-[#fdf9f1] text-stone-700 min-h-screen">
+<body class="bg-gray-50 text-stone-800 min-h-screen font-sans antialiased overflow-x-hidden">
 
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 backdrop-blur-lg bg-opacity-80 bg-white/70 border-b border-gray-200 px-8 mb-4 py-5 flex justify-between items-center transition-all">
+    <nav class="fixed w-full z-50 backdrop-blur-md bg-opacity-90 bg-white/90 border-b border-gray-200 px-8 py-4 flex justify-between items-center transition-all shadow-sm">
         <div class="font-black text-2xl tracking-tighter text-orange-700">VIRTUAL-VET</div>
         <div class="hidden md:flex gap-10 text-sm font-bold text-gray-600">
             <a href="#" class="hover:text-orange-700 transition">機能・メリット</a>
@@ -26,60 +26,137 @@
     </nav>
 
     <!-- Hero Section -->
+    
     <main class="pt-[140px] pb-24 px-6 md:px-12 max-w-7xl mx-auto">
         <div class="text-center max-w-4xl mx-auto mb-20 relative">
-            <span class="bg-gray-100 text-text-orange-700 border border-gray-200 px-5 py-2 text-xs font-black rounded-full tracking-widest uppercase mb-8 inline-block shadow-sm">CONCEPT / health</span>
-            <h1 class="text-4xl md:text-[54px] font-black mb-8 leading-[1.2] tracking-tight text-gray-900">爬虫類・鳥類・小動物。<br>専門医のいない地域の命を救う。</h1>
-            <p class="text-lg md:text-xl text-gray-600 font-medium leading-relaxed max-w-3xl mx-auto">ハリネズミやフクロウなど、エキゾチックアニマルの飼育者が増加。しかし対応できる専門獣医は都市部にしかおらず、手遅れになるケースが多発。全国の専門医とスマホで繋がります。</p>
+            <span class="bg-gray-100 text-orange-600 border border-gray-200 px-5 py-2 text-xs font-black rounded-full tracking-widest mb-8 inline-block shadow-sm">PETTECH / TELEMEDICINE</span>
+            <h1 class="text-4xl md:text-[54px] font-black mb-8 leading-[1.2] tracking-tight text-gray-900">エキゾチックペットの命を救う、<br>24時間オンライン診療。</h1>
+            <p class="text-lg md:text-xl text-gray-600 font-medium leading-relaxed max-w-3xl mx-auto">犬猫と違い、爬虫類や鳥類を診れる専門医は極めて稀です。VIRTUAL-VETは、全国の専門獣医師と飼い主を即座に繋ぎ、特有の症状に特化したAI問診で手遅れを防ぎます。</p>
         </div>
 
-        <!-- Real UI Image or Prototype Showcase -->
-        <div class="relative w-full aspect-[21/9] md:aspect-video rounded-[32px] overflow-hidden shadow-2xl mb-32 border border-gray-200/50 shadow-xl group bg-zinc-900">
+        <div class="relative w-full aspect-[21/9] md:aspect-video rounded-[32px] overflow-hidden shadow-2xl mb-32 border border-gray-200/50 group bg-zinc-900">
             <img src="img/ui.png" alt="UI Dashboard" class="w-full h-full object-cover transition-transform duration-[3s] group-hover:scale-[1.02]">
-           <div class="absolute inset-0 bg-gradient-to-t from-white/40 via-transparent to-transparent pointer-events-none blend-overlay"></div></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none blend-overlay"></div>
         </div>
 
-        <!-- Features -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-32">
-            
-            <div class="bg-white border border-gray-100 shadow-xl p-10 rounded-3xl transition transform hover:-translate-y-2 duration-300">
-                <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-8 bg-gray-50 text-orange-700 border border-gray-200">
-                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+        <div class="flex flex-col gap-32 mb-32">
+        
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-orange-600 font-bold tracking-widest text-sm uppercase">THE PAIN</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">「診てくれる病院がない」という絶望</h2>
+                        <div class="w-12 h-1 bg-orange-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">ハリネズミがご飯を食べない、カメレオンの肌の色がおかしい。慌てて動物病院に駆け込んでも「犬猫専門なので診られません」と断られる。この残酷な現状が、多くの小さな命を奪ってきました。私たちはこの医療格差をテクノロジーで埋めます。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-orange-900/20 to-transparent"></div>
+                    </div>
                 </div>
-                <h3 class="text-2xl font-bold mb-4 text-gray-900">24時間専門医ビデオ通話</h3>
-                <p class="text-gray-600 text-base leading-relaxed">犬猫以外の特殊な動物に精通した獣医師を全国からネットワーク化。深夜の異変でもスマホ一つですぐに相談可能。</p>
-            </div>
-            
-            <div class="bg-white border border-gray-100 shadow-xl p-10 rounded-3xl transition transform hover:-translate-y-2 duration-300">
-                <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-8 bg-gray-50 text-orange-700 border border-gray-200">
-                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                
+                <div class="mt-10">
+                    <div class="text-center mb-16">
+                        <span class="text-orange-600 font-bold tracking-widest text-sm uppercase">SPECIALIZED FEATURES</span>
+                        <h2 class="text-3xl md:text-4xl font-black mt-4 text-gray-900">エキゾチックペットに特化した独自機能</h2>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-orange-50 text-orange-600 border border-orange-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">AI症状チェッカー</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">「トカゲ・食欲不振・温度28度」などの条件を入力すると、数万件の症例データベースから緊急度を即座に判定し、受診を推奨します。</p>
+</div>
+
+
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-orange-50 text-orange-600 border border-orange-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">高画質カメラ・共有ツール</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">微細なフンの状態や、皮膚の変色などを獣医師に正確に伝えるため、マクロ撮影モードや動画の事前アップロード機能を搭載。</p>
+</div>
+
+
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-orange-50 text-orange-600 border border-orange-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">飼育環境のIoT連携</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">スマート温湿度計と連携し、ケージ内の過去24時間の環境データを獣医師に自動共有。環境要因による体調不良を素早く特定します。</p>
+</div>
+
+                    </div>
                 </div>
-                <h3 class="text-2xl font-bold mb-4 text-gray-900">AI症状チェック</h3>
-                <p class="text-gray-600 text-base leading-relaxed">「便の色がおかしい」「食欲がない」などの症状を入力すると、緊急性をAIが判定。今すぐ病院へ行くべきか教えます。</p>
-            </div>
-            
-            <div class="bg-white border border-gray-100 shadow-xl p-10 rounded-3xl transition transform hover:-translate-y-2 duration-300">
-                <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-8 bg-gray-50 text-orange-700 border border-gray-200">
-                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-orange-600 font-bold tracking-widest text-sm uppercase">EXPERT DOCTORS</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">全国トップクラスの専門医ネットワーク</h2>
+                        <div class="w-12 h-1 bg-orange-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">VIRTUAL-VETに登録しているのは、エキゾチックアニマルの臨床経験が豊富な認定医のみ。地方に住んでいても、東京の専門医によるセカンドオピニオンや、緊急のオンライン処置指導を受けることが可能です。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-orange-900/20 to-transparent"></div>
+                    </div>
                 </div>
-                <h3 class="text-2xl font-bold mb-4 text-gray-900">処方薬の即日配送</h3>
-                <p class="text-gray-600 text-base leading-relaxed">ビデオ診療後、法的に問題のない範囲での一次対応薬や専用サプリメントを、最短当日配送でお届けします。</p>
-            </div>
-            
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-orange-600 font-bold tracking-widest text-sm uppercase">HOME DELIVERY</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">オンラインで完結するお薬の処方・配送</h2>
+                        <div class="w-12 h-1 bg-orange-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">ビデオ通話での診察後、必要なお薬や専用の流動食、サプリメントをご自宅まで最短当日配送。ストレスに弱い小動物を、無理に病院へ連れ出すリスクを最小限に抑えます。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: bottom right;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-orange-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-orange-600 font-bold tracking-widest text-sm uppercase">SAVING LIVES</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">Case Study | フクロモモンガの危機</h2>
+                        <div class="w-12 h-1 bg-orange-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">深夜に突然自傷行為を始めたフクロモモンガ。近くの救急病院は全滅でしたが、VIRTUAL-VETを通じて専門医に繋がり、動画で症状を確認。「自咬症」と診断され、応急処置としてのカラーの作り方と鎮静方法の指導を受け、一命を取り留めました。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-orange-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-orange-600 font-bold tracking-widest text-sm uppercase">OUR MISSION</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">すべてのペットに、平等な医療を</h2>
+                        <div class="w-12 h-1 bg-orange-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">どんなに小さく、珍しい動物であっても、飼い主にとってはかけがえのない家族です。私たちはオンライン診療という形で、すべてのペットが適切な医療にアクセスできる世界を実現します。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: bottom right;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-orange-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
         </div>
 
-        <!-- CTA -->
-        <div class="text-center bg-gray-50 border border-gray-200 rounded-[3rem] p-16 md:p-32 relative overflow-hidden group">
+        <div class="text-center bg-gray-900 border border-gray-800 rounded-[3rem] p-16 md:p-32 relative overflow-hidden group shadow-2xl">
+            <div class="absolute inset-0 bg-gradient-to-br from-orange-900/40 to-transparent"></div>
             <div class="relative z-10">
-                <h2 class="text-4xl md:text-5xl font-black mb-8 text-gray-900">イノベーションを社会実装する。</h2>
-                <p class="text-gray-600 mb-12 max-w-xl mx-auto text-lg leading-relaxed">このコンセプトに関心がありますか？最新のテクノロジーを活用して、私達と共に業界の常識を覆しましょう。</p>
-                <a href="#" class="bg-orange-500 hover:bg-orange-400 text-white px-12 py-5 rounded-full font-bold text-lg inline-flex items-center gap-3 transition transform hover:-translate-y-1">
-                    アプリをダウンロード
+                <h2 class="text-4xl md:text-5xl font-black mb-8 text-white">小さな命のSOSを、見逃さない。</h2>
+                <p class="text-gray-300 mb-12 max-w-xl mx-auto text-lg leading-relaxed">エキゾチックペットは、病気を隠す習性があります。異変に気付いた時が、行動する時です。アプリをダウンロードして備えましょう。</p>
+                <a href="#" class="bg-orange-500 hover:bg-orange-400 text-white px-12 py-5 rounded-full font-bold text-lg inline-flex items-center gap-3 transition transform hover:-translate-y-1 shadow-lg shadow-orange-500/30">
+                    今すぐ獣医師に相談する
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
                 </a>
             </div>
         </div>
     </main>
+        
 
     <!-- Footer -->
     <footer class="py-12 text-center text-sm font-medium text-gray-400 bg-gray-50 border-t border-gray-200">

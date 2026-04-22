@@ -12,10 +12,10 @@
         body { font-family: 'Inter', 'Noto Sans JP', sans-serif; }
     </style>
 </head>
-<body class="bg-[#0b0000] text-gray-300 min-h-screen">
+<body class="bg-gray-50 text-stone-800 min-h-screen font-sans antialiased overflow-x-hidden">
 
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 backdrop-blur-lg bg-opacity-80 bg-black/50 border-b border-white/5 px-8 mb-4 py-5 flex justify-between items-center transition-all">
+    <nav class="fixed w-full z-50 backdrop-blur-md bg-opacity-90 bg-white/90 border-b border-gray-200 px-8 py-4 flex justify-between items-center transition-all shadow-sm">
         <div class="font-black text-2xl tracking-tighter text-red-500">DYNAQ TICKETS</div>
         <div class="hidden md:flex gap-10 text-sm font-bold text-gray-400">
             <a href="#" class="hover:text-red-500 transition">機能・メリット</a>
@@ -26,60 +26,137 @@
     </nav>
 
     <!-- Hero Section -->
+    
     <main class="pt-[140px] pb-24 px-6 md:px-12 max-w-7xl mx-auto">
         <div class="text-center max-w-4xl mx-auto mb-20 relative">
-            <span class="bg-white/5 text-text-red-500 border border-white/10 px-5 py-2 text-xs font-black rounded-full tracking-widest uppercase mb-8 inline-block shadow-sm">CONCEPT / entertainment</span>
-            <h1 class="text-4xl md:text-[54px] font-black mb-8 leading-[1.2] tracking-tight text-white">高額転売を、物理的に100%不可能にする。</h1>
-            <p class="text-lg md:text-xl text-gray-400 font-medium leading-relaxed max-w-3xl mx-auto">人気アーティストのライブ。本当に見たいファンが買えず、転売ヤーが暴利を貪る現状。生体認証とダイナミック更新されるブロックチェーンQRで、不正を完全にシャットアウトします。</p>
+            <span class="bg-gray-100 text-teal-600 border border-gray-200 px-5 py-2 text-xs font-black rounded-full tracking-widest mb-8 inline-block shadow-sm uppercase">MEDICAL / AI ACCESSIBILITY</span>
+            <h1 class="text-4xl md:text-[54px] font-black mb-8 leading-[1.2] tracking-tight text-gray-900">「言いたい言葉」を、<br>AIが優しくすくい上げる。</h1>
+            <p class="text-lg md:text-xl text-gray-600 font-medium leading-relaxed max-w-3xl mx-auto">認知症や失語症により、頭の中にある思いを言葉にできないもどかしさ。MIND-MELDは、会話の文脈と視線データをAIがリアルタイムに解析し、患者が「次に発したい言葉」を先回りして提示する言語補助ツールです。</p>
         </div>
 
-        <!-- Real UI Image or Prototype Showcase -->
-        <div class="relative w-full aspect-[21/9] md:aspect-video rounded-[32px] overflow-hidden shadow-2xl mb-32 border border-white/10 shadow-[0_30px_60px_rgba(0,0,0,0.8)] group bg-zinc-900">
+        <div class="relative w-full aspect-[21/9] md:aspect-video rounded-[32px] overflow-hidden shadow-2xl mb-32 border border-gray-200/50 group bg-zinc-900">
             <img src="img/ui.png" alt="UI Dashboard" class="w-full h-full object-cover transition-transform duration-[3s] group-hover:scale-[1.02]">
-           <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none blend-overlay"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none blend-overlay"></div>
         </div>
 
-        <!-- Features -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-32">
-            
-            <div class="bg-white/[0.02] border border-white/5 shadow-2xl p-10 rounded-3xl transition transform hover:-translate-y-2 duration-300">
-                <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-8 bg-white/5 text-red-500 border border-white/10">
-                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+        <div class="flex flex-col gap-32 mb-32">
+        
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-teal-600 font-bold tracking-widest text-sm uppercase">THE SILENT STRUGGLE</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">言葉が「喉まで出ている」苦しみ</h2>
+                        <div class="w-12 h-1 bg-teal-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">認知症や脳卒中の後遺症による言語障害。彼らは決して何も考えていないわけではありません。頭の中には豊かな感情や伝えたい意思があるのに、それを適切な「単語」としてアウトプットする回路が繋がらないだけなのです。その歯がゆさと孤立感は計り知れません。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-teal-900/20 to-transparent"></div>
+                    </div>
                 </div>
-                <h3 class="text-2xl font-bold mb-4 text-white tracking-wide">1秒ごとに変化する動的QR</h3>
-                <p class="text-gray-400 text-base leading-relaxed">スクショや画面録画での譲渡は無効。専用アプリ内で3秒ごとに暗号が切り替わるダイナミックQRコード。</p>
-            </div>
-            
-            <div class="bg-white/[0.02] border border-white/5 shadow-2xl p-10 rounded-3xl transition transform hover:-translate-y-2 duration-300">
-                <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-8 bg-white/5 text-red-500 border border-white/10">
-                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                
+                <div class="mt-10">
+                    <div class="text-center mb-16">
+                        <span class="text-teal-600 font-bold tracking-widest text-sm uppercase">PREDICTIVE COMMUNICATION</span>
+                        <h2 class="text-3xl md:text-4xl font-black mt-4 text-gray-900">文脈と視線から「意図」を推論する</h2>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-teal-50 text-teal-600 border border-teal-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">視線トラッキング（アイトラッキング）</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">タブレットやスマートグラスのカメラで視線の先を検知。「お茶」を見つめていれば、AIが「喉が渇きましたか？」「温かいお茶がいいですか？」などの候補を即座に提示します。</p>
+</div>
+
+
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-teal-50 text-teal-600 border border-teal-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">文脈理解型サジェスト</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">現在の日時、天気、これまでの会話の文脈をLLM（大規模言語モデル）が常に分析。「今日は寒いね」と言われたら、「上着を着ようか」「ストーブをつけて」といった自然な返答候補を予測します。</p>
+</div>
+
+
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-teal-50 text-teal-600 border border-teal-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">パーソナライズされた「個人の辞書」</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">過去の日記やSNSの文章、家族との会話履歴をAIが学習。一般的なフレーズではなく、その人が普段使っていた「その人らしい口調・言い回し」で言葉を補完します。</p>
+</div>
+
+                    </div>
                 </div>
-                <h3 class="text-2xl font-bold mb-4 text-white tracking-wide">端末＆生体バインディング</h3>
-                <p class="text-gray-400 text-base leading-relaxed">購入時のスマホ端末と顔認証データをチケットのスマートコントラクトに紐付け。本人以外は入場ゲートが開きません。</p>
-            </div>
-            
-            <div class="bg-white/[0.02] border border-white/5 shadow-2xl p-10 rounded-3xl transition transform hover:-translate-y-2 duration-300">
-                <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-8 bg-white/5 text-red-500 border border-white/10">
-                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-teal-600 font-bold tracking-widest text-sm uppercase">ACCESSIBLE INTERFACE</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">指一本、あるいは瞬きだけで会話する</h2>
+                        <div class="w-12 h-1 bg-teal-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">複雑なキーボード入力は不要です。画面に大きく表示された3〜4つの候補から、タッチ、視線の滞留、あるいは頷きなどの微細な動作だけで、自分の意思を選択・合成音声で発話させることができます。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-teal-900/20 to-transparent"></div>
+                    </div>
                 </div>
-                <h3 class="text-2xl font-bold mb-4 text-white tracking-wide">公式リセール自動化</h3>
-                <p class="text-gray-400 text-base leading-relaxed">急に行けなくなった場合は、アプリ内の公式リセールで定価で譲渡可能。利益目的の転売を根絶します。</p>
-            </div>
-            
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-teal-600 font-bold tracking-widest text-sm uppercase">CAREGIVER SUPPORT</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">介護者の心理的負担を劇的に軽減</h2>
+                        <div class="w-12 h-1 bg-teal-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">「何を求めているのかわからない」というコミュニケーションエラーは、介護者にとって最大のストレスです。MIND-MELDが間に介入することで、スムーズな意思疎通が可能になり、双方が穏やかな気持ちで向き合う時間を生み出します。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: bottom right;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-teal-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-teal-600 font-bold tracking-widest text-sm uppercase">MOMENT OF CONNECTION</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">Case Study | 重度失語症の患者様</h2>
+                        <div class="w-12 h-1 bg-teal-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">脳梗塞で倒れ、単語の羅列しかできなくなったおじいさん。お孫さんが遊びに来た日、MIND-MELDの画面上で視線を動かし、AIが補完して合成音声で発した言葉は「大きくなったな、ランドセル似合ってるぞ」。その瞬間、家族全員が涙を流して喜び合いました。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-teal-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-teal-600 font-bold tracking-widest text-sm uppercase">OUR MISSION</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">人間の尊厳を守るテクノロジー</h2>
+                        <div class="w-12 h-1 bg-teal-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">私たちは利便性のためにAIを作っているのではありません。人間が人間らしく、最後まで尊厳を持って他者と繋がり続けるための架け橋として、このテクノロジーを届けます。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: bottom right;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-teal-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
         </div>
 
-        <!-- CTA -->
-        <div class="text-center bg-[#050505] border border-white/5 rounded-[3rem] p-16 md:p-32 relative overflow-hidden group">
+        <div class="text-center bg-gray-900 border border-gray-800 rounded-[3rem] p-16 md:p-32 relative overflow-hidden group shadow-2xl">
+            <div class="absolute inset-0 bg-gradient-to-br from-teal-900/40 to-transparent"></div>
             <div class="relative z-10">
-                <h2 class="text-4xl md:text-5xl font-black mb-8 text-white">イノベーションを社会実装する。</h2>
-                <p class="text-gray-400 mb-12 max-w-xl mx-auto text-lg leading-relaxed">このコンセプトに関心がありますか？最新のテクノロジーを活用して、私達と共に業界の常識を覆しましょう。</p>
-                <a href="#" class="bg-red-700 hover:bg-red-600 text-white px-12 py-5 rounded-full font-bold text-lg inline-flex items-center gap-3 transition transform hover:-translate-y-1">
-                    導入シミュレーション
+                <h2 class="text-4xl md:text-5xl font-black mb-8 text-white">言葉を失っても、繋がりは失わせない。</h2>
+                <p class="text-gray-300 mb-12 max-w-xl mx-auto text-lg leading-relaxed">コミュニケーションの断絶は、本人も介護者も深く傷つけます。AIの力で、もう一度心を通い合わせましょう。</p>
+                <a href="#" class="bg-teal-500 hover:bg-teal-400 text-white px-12 py-5 rounded-full font-bold text-lg inline-flex items-center gap-3 transition transform hover:-translate-y-1 shadow-lg shadow-teal-500/30">
+                    テクノロジーの詳細を見る
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
                 </a>
             </div>
         </div>
     </main>
+        
 
     <!-- Footer -->
     <footer class="py-12 text-center text-sm font-medium text-gray-600 bg-black border-t border-white/5">

@@ -12,10 +12,10 @@
         body { font-family: 'Inter', 'Noto Sans JP', sans-serif; }
     </style>
 </head>
-<body class="bg-[#0b001a] text-gray-300 min-h-screen">
+<body class="bg-gray-50 text-stone-800 min-h-screen font-sans antialiased overflow-x-hidden">
 
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 backdrop-blur-lg bg-opacity-80 bg-black/50 border-b border-white/5 px-8 mb-4 py-5 flex justify-between items-center transition-all">
+    <nav class="fixed w-full z-50 backdrop-blur-md bg-opacity-90 bg-white/90 border-b border-gray-200 px-8 py-4 flex justify-between items-center transition-all shadow-sm">
         <div class="font-black text-2xl tracking-tighter text-fuchsia-400">NEO-NOH</div>
         <div class="hidden md:flex gap-10 text-sm font-bold text-gray-400">
             <a href="#" class="hover:text-fuchsia-400 transition">機能・メリット</a>
@@ -26,60 +26,137 @@
     </nav>
 
     <!-- Hero Section -->
+    
     <main class="pt-[140px] pb-24 px-6 md:px-12 max-w-7xl mx-auto">
         <div class="text-center max-w-4xl mx-auto mb-20 relative">
-            <span class="bg-white/5 text-text-fuchsia-400 border border-white/10 px-5 py-2 text-xs font-black rounded-full tracking-widest uppercase mb-8 inline-block shadow-sm">CONCEPT / entertainment</span>
-            <h1 class="text-4xl md:text-[54px] font-black mb-8 leading-[1.2] tracking-tight text-white">室町時代から続く「幽玄」を、<br>ホログラムで全世界へ同時配信。</h1>
-            <p class="text-lg md:text-xl text-gray-400 font-medium leading-relaxed max-w-3xl mx-auto">日本が誇る伝統芸能「能」。しかし観客の高齢化により存続が危ぶまれている。演者の3Dモーションデータを取得し、ニューヨークやパリの劇場に等身大のホログラムとしてリアルタイム召喚。</p>
+            <span class="bg-gray-100 text-fuchsia-600 border border-gray-200 px-5 py-2 text-xs font-black rounded-full tracking-widest mb-8 inline-block shadow-sm uppercase">ENTERTAINMENT / AR VR</span>
+            <h1 class="text-4xl md:text-[54px] font-black mb-8 leading-[1.2] tracking-tight text-gray-900">室町時代から続く幽玄を、<br>全世界の「空間」へ。</h1>
+            <p class="text-lg md:text-xl text-gray-600 font-medium leading-relaxed max-w-3xl mx-auto">600年の歴史を持つ世界最古の舞台芸術「能（NOH）」。その幽玄の美を、リアルタイムのボリュメトリックキャプチャとAR/VR技術で空間ごとデジタル化。世界中のリビングルームに、本物の能楽師をホログラムで召喚するプラットフォーム「NEO-NOH」。</p>
         </div>
 
-        <!-- Real UI Image or Prototype Showcase -->
-        <div class="relative w-full aspect-[21/9] md:aspect-video rounded-[32px] overflow-hidden shadow-2xl mb-32 border border-white/10 shadow-[0_30px_60px_rgba(0,0,0,0.8)] group bg-zinc-900">
+        <div class="relative w-full aspect-[21/9] md:aspect-video rounded-[32px] overflow-hidden shadow-2xl mb-32 border border-gray-200/50 group bg-zinc-900">
             <img src="img/ui.png" alt="UI Dashboard" class="w-full h-full object-cover transition-transform duration-[3s] group-hover:scale-[1.02]">
-           <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none blend-overlay"></div></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none blend-overlay"></div>
         </div>
 
-        <!-- Features -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-32">
-            
-            <div class="bg-white/[0.02] border border-white/5 shadow-2xl p-10 rounded-3xl transition transform hover:-translate-y-2 duration-300">
-                <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-8 bg-white/5 text-fuchsia-400 border border-white/10">
-                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+        <div class="flex flex-col gap-32 mb-32">
+        
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-fuchsia-600 font-bold tracking-widest text-sm uppercase">BEYOND THE STAGE</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">物理的制約に縛られた「伝統」の解放</h2>
+                        <div class="w-12 h-1 bg-fuchsia-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">能楽堂という限られた空間、限られた座席。本物の能を体験できる人は世界でもごく僅かです。平面の映像配信では決して伝わらない「舞の立体感」と「面（おもて）が落とす影の美しさ」。NEO-NOHは、空間コンピューティングによって伝統芸能のアウラ（纏うオーラ）を完全再現します。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-fuchsia-900/20 to-transparent"></div>
+                    </div>
                 </div>
-                <h3 class="text-2xl font-bold mb-4 text-white tracking-wide">ボリュメトリックキャプチャ</h3>
-                <p class="text-gray-400 text-base leading-relaxed">能舞台を囲む数十台のカメラが演者の動きと衣装の質感を3Dデータ化。髪の毛一本までリアルタイムでデジタル空間へ転送。</p>
-            </div>
-            
-            <div class="bg-white/[0.02] border border-white/5 shadow-2xl p-10 rounded-3xl transition transform hover:-translate-y-2 duration-300">
-                <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-8 bg-white/5 text-fuchsia-400 border border-white/10">
-                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                
+                <div class="mt-10">
+                    <div class="text-center mb-16">
+                        <span class="text-fuchsia-600 font-bold tracking-widest text-sm uppercase">VOLUMETRIC CAPTURE</span>
+                        <h2 class="text-3xl md:text-4xl font-black mt-4 text-gray-900">狂気の解像度を実現するテクノロジー</h2>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-fuchsia-50 text-fuchsia-600 border border-fuchsia-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">超高精細リアルタイム3Dキャプチャ</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">能楽堂に設置された100台以上の特殊カメラが、演者の動き、装束の絹の光沢、扇の角度まで、空間ごとミリ単位でリアルタイムに3Dデータ化。</p>
+</div>
+
+
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-fuchsia-50 text-fuchsia-600 border border-fuchsia-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">AI空間音響（Spatial Audio）</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">囃子方の鼓の音響や、地謡の重低音。あなたの部屋の音響特性をデバイスが瞬時にマッピングし、国立能楽堂の神聖な音の反響を部屋全体にシミュレート。</p>
+</div>
+
+
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-fuchsia-50 text-fuchsia-600 border border-fuchsia-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">インタラクティブな「幽玄」エフェクト</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">ただの録画ではありません。演目の世界観（桜の吹雪や、怨霊の妖気など）が、AR機能によってあなたの部屋の家具や壁に浸食するデジタル演出を付加。</p>
+</div>
+
+                    </div>
                 </div>
-                <h3 class="text-2xl font-bold mb-4 text-white tracking-wide">MR（複合現実）字幕解説</h3>
-                <p class="text-gray-400 text-base leading-relaxed">古文で理解が難しい能の台詞。観客がMRグラスをかけると、演者の頭上に現代語訳や多言語翻訳が空間に浮かび上がります。</p>
-            </div>
-            
-            <div class="bg-white/[0.02] border border-white/5 shadow-2xl p-10 rounded-3xl transition transform hover:-translate-y-2 duration-300">
-                <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-8 bg-white/5 text-fuchsia-400 border border-white/10">
-                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-fuchsia-600 font-bold tracking-widest text-sm uppercase">FREE-VIEWPOINT</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">あらゆる角度から「芸の真髄」を解剖する</h2>
+                        <div class="w-12 h-1 bg-fuchsia-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">劇場では正面からしか見られません。しかしNEO-NOHでは、演者の背後から摺り足の軌跡を見たり、真上から舞台全体のフォーメーションを確認したり、さらには「演者自身の視点」に乗り移って能舞台から観客席を見渡すことも可能です。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-fuchsia-900/20 to-transparent"></div>
+                    </div>
                 </div>
-                <h3 class="text-2xl font-bold mb-4 text-white tracking-wide">伝統芸能デジタル・アーカイブ化</h3>
-                <p class="text-gray-400 text-base leading-relaxed">人間国宝の動きをモーションデータとして永久保存。AIがその動きを学習し、100年後のクリエイターがその「型」をアバターに使用可能。</p>
-            </div>
-            
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-fuchsia-600 font-bold tracking-widest text-sm uppercase">GLOBAL ACCESSIBILITY</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">多言語AIリアルタイム解説システム</h2>
+                        <div class="w-12 h-1 bg-fuchsia-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">能の難解なストーリーや古語の台詞も、もう壁にはなりません。AIが演目の進行に合わせて、空間上に美しくタイポグラフィ化された現代語訳や英語の字幕をホログラム表示。背景の歴史や「型」の意味を、視線を送るだけでポップアップ解説します。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: bottom right;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-fuchsia-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-fuchsia-600 font-bold tracking-widest text-sm uppercase">MOMENT OF TRUTH</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">The Experience | 葵上（Aoi no Ue）</h2>
+                        <div class="w-12 h-1 bg-fuchsia-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">あなたが自室のソファでスマートグラスをかけると、床一面が総檜の舞台へと変化。目の前数十センチの距離で、般若の面をつけた六条御息所の怨霊が舞い狂う。その圧倒的な実在感と迫力に、世界中のユーザーが畏怖の念を抱きます。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-fuchsia-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-fuchsia-600 font-bold tracking-widest text-sm uppercase">NEO-JAPONISM</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">日本の魂を、メタバースの基幹コンテンツへ</h2>
+                        <div class="w-12 h-1 bg-fuchsia-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">アニメやゲームに続く、日本発の最強のグローバル・コンテンツは「伝統芸能」です。私たちは600年続く美意識を最先端のテクノロジーでパッケージングし、世界規模のバーチャル経済圏へと解き放ちます。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: bottom right;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-fuchsia-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
         </div>
 
-        <!-- CTA -->
-        <div class="text-center bg-[#050505] border border-white/5 rounded-[3rem] p-16 md:p-32 relative overflow-hidden group">
+        <div class="text-center bg-gray-900 border border-gray-800 rounded-[3rem] p-16 md:p-32 relative overflow-hidden group shadow-2xl">
+            <div class="absolute inset-0 bg-gradient-to-br from-fuchsia-900/40 to-transparent"></div>
             <div class="relative z-10">
-                <h2 class="text-4xl md:text-5xl font-black mb-8 text-white">イノベーションを社会実装する。</h2>
-                <p class="text-gray-400 mb-12 max-w-xl mx-auto text-lg leading-relaxed">このコンセプトに関心がありますか？最新のテクノロジーを活用して、私達と共に業界の常識を覆しましょう。</p>
-                <a href="#" class="bg-fuchsia-700 hover:bg-fuchsia-600 text-white px-12 py-5 rounded-full font-bold text-lg inline-flex items-center gap-3 transition transform hover:-translate-y-1">
-                    グローバル配信のデモを見る
+                <h2 class="text-4xl md:text-5xl font-black mb-8 text-white">最古のアートを、最新のフォーマットで。</h2>
+                <p class="text-gray-300 mb-12 max-w-xl mx-auto text-lg leading-relaxed">能舞台の神聖な空気感を、あなたの部屋で。Apple Vision Pro / Meta Quest 対応。</p>
+                <a href="#" class="bg-fuchsia-500 hover:bg-fuchsia-400 text-white px-12 py-5 rounded-full font-bold text-lg inline-flex items-center gap-3 transition transform hover:-translate-y-1 shadow-lg shadow-fuchsia-500/30">
+                    ホログラム体験版をダウンロード
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
                 </a>
             </div>
         </div>
     </main>
+        
 
     <!-- Footer -->
     <footer class="py-12 text-center text-sm font-medium text-gray-600 bg-black border-t border-white/5">

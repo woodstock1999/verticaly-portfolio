@@ -12,10 +12,10 @@
         body { font-family: 'Inter', 'Noto Sans JP', sans-serif; }
     </style>
 </head>
-<body class="bg-stone-100 text-gray-600 min-h-screen">
+<body class="bg-gray-50 text-stone-800 min-h-screen font-sans antialiased overflow-x-hidden">
 
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 backdrop-blur-lg bg-opacity-80 bg-black/50 border-b border-white/5 px-8 mb-4 py-5 flex justify-between items-center transition-all">
+    <nav class="fixed w-full z-50 backdrop-blur-md bg-opacity-90 bg-white/90 border-b border-gray-200 px-8 py-4 flex justify-between items-center transition-all shadow-sm">
         <div class="font-black text-2xl tracking-tighter text-stone-800">ZEN-DESK</div>
         <div class="hidden md:flex gap-10 text-sm font-bold text-gray-400">
             <a href="#" class="hover:text-stone-800 transition">機能・メリット</a>
@@ -26,60 +26,137 @@
     </nav>
 
     <!-- Hero Section -->
+    
     <main class="pt-[140px] pb-24 px-6 md:px-12 max-w-7xl mx-auto">
         <div class="text-center max-w-4xl mx-auto mb-20 relative">
-            <span class="bg-white/5 text-text-stone-800 border border-white/10 px-5 py-2 text-xs font-black rounded-full tracking-widest uppercase mb-8 inline-block shadow-sm">CONCEPT / saas</span>
-            <h1 class="text-4xl md:text-[54px] font-black mb-8 leading-[1.2] tracking-tight text-white">「使われていないデスク」の維持費、<br>年にいくら払っていますか。</h1>
-            <p class="text-lg md:text-xl text-gray-400 font-medium leading-relaxed max-w-3xl mx-auto">リモートワークの定着により、オフィスはガラガラ。しかし「たまに出社するから」と広大なオフィスを借り続けている中小企業向けに、空間利用率の可視化と最適化を行います。</p>
+            <span class="bg-gray-100 text-gray-600 border border-gray-200 px-5 py-2 text-xs font-black rounded-full tracking-widest mb-8 inline-block shadow-sm">PROPTECH / B2B SaaS</span>
+            <h1 class="text-4xl md:text-[54px] font-black mb-8 leading-[1.2] tracking-tight text-gray-900">無駄なオフィスを手放そう。<br>空間最適化AIプラットフォーム</h1>
+            <p class="text-lg md:text-xl text-gray-600 font-medium leading-relaxed max-w-3xl mx-auto">「週3日出社」のハイブリッドワーク時代において、固定デスクは企業の最大の負債です。IoTセンサーとAIでオフィス稼働率を可視化し、最適なレイアウトと面積縮小を提案するZEN-DESK。</p>
         </div>
 
-        <!-- Real UI Image or Prototype Showcase -->
-        <div class="relative w-full aspect-[21/9] md:aspect-video rounded-[32px] overflow-hidden shadow-2xl mb-32 border border-white/10 shadow-[0_30px_60px_rgba(0,0,0,0.8)] group bg-zinc-900">
+        <div class="relative w-full aspect-[21/9] md:aspect-video rounded-[32px] overflow-hidden shadow-2xl mb-32 border border-gray-200/50 group bg-zinc-900">
             <img src="img/ui.png" alt="UI Dashboard" class="w-full h-full object-cover transition-transform duration-[3s] group-hover:scale-[1.02]">
-           <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none blend-overlay"></div></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none blend-overlay"></div>
         </div>
 
-        <!-- Features -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-32">
-            
-            <div class="bg-white/[0.02] border border-white/5 shadow-2xl p-10 rounded-3xl transition transform hover:-translate-y-2 duration-300">
-                <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-8 bg-white/5 text-stone-800 border border-white/10">
-                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+        <div class="flex flex-col gap-32 mb-32">
+        
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-gray-600 font-bold tracking-widest text-sm uppercase">THE PROBLEM</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">「とりあえず広いオフィス」という思考停止</h2>
+                        <div class="w-12 h-1 bg-gray-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">コロナ禍を経て働き方が多様化したにも関わらず、多くの企業が「全社員分のデスク」を維持し続けています。しかし、私達のデータによれば、平均的な都内オフィスの実態稼働率はわずか42%。ZEN-DESKは、この目に見えない巨大なコストを削減します。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-gray-900/20 to-transparent"></div>
+                    </div>
                 </div>
-                <h3 class="text-2xl font-bold mb-4 text-white tracking-wide">IoT着座センサー連動</h3>
-                <p class="text-gray-400 text-base leading-relaxed">デスクの裏に貼るだけの小型センサーで、誰がいつどこに座っているかの稼働率マップを自動生成。</p>
-            </div>
-            
-            <div class="bg-white/[0.02] border border-white/5 shadow-2xl p-10 rounded-3xl transition transform hover:-translate-y-2 duration-300">
-                <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-8 bg-white/5 text-stone-800 border border-white/10">
-                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                
+                <div class="mt-10">
+                    <div class="text-center mb-16">
+                        <span class="text-gray-600 font-bold tracking-widest text-sm uppercase">IOT SENSOR NETWORK</span>
+                        <h2 class="text-3xl md:text-4xl font-black mt-4 text-gray-900">全席の稼働状況を1秒単位でトラッキング</h2>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-gray-50 text-gray-600 border border-gray-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">ミリ波レーダーセンサー</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">カメラを使わず、プライバシーに配慮しながら「人がそこにいるか」を超高精度で検知。デスク下や天井に簡単設置。</p>
+</div>
+
+
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-gray-50 text-gray-600 border border-gray-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">リアルタイム・ヒートマップ</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">フロアごとの混雑状況や、人気のある共有スペース、誰にも使われていない死角を直感的な3Dマップで可視化。</p>
+</div>
+
+
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-gray-50 text-gray-600 border border-gray-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">会議室の空予約防止</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">「予約されているのに誰もいない会議室」を検知し、開始10分で自動キャンセル。リソースの奪い合いを解決します。</p>
+</div>
+
+                    </div>
                 </div>
-                <h3 class="text-2xl font-bold mb-4 text-white tracking-wide">減床（ダウンサイズ）AI提案</h3>
-                <p class="text-gray-400 text-base leading-relaxed">実稼働データに基づき、「オフィスを半分にしても業務に支障が出ない」具体的な移転・縮小プランとコスト削減額を提示。</p>
-            </div>
-            
-            <div class="bg-white/[0.02] border border-white/5 shadow-2xl p-10 rounded-3xl transition transform hover:-translate-y-2 duration-300">
-                <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-8 bg-white/5 text-stone-800 border border-white/10">
-                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-gray-600 font-bold tracking-widest text-sm uppercase">DOWNSIZING AI</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">データに基づいた「減床」シミュレーション</h2>
+                        <div class="w-12 h-1 bg-gray-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">1ヶ月の稼働データが貯まれば、AIが「最適なオフィス面積」と「推奨レイアウト（フリーアドレス、集中ブースの比率等）」を自動生成します。年間数千万〜数億円の賃料削減インパクトを、具体的な数値として経営陣に提示できます。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-gray-900/20 to-transparent"></div>
+                    </div>
                 </div>
-                <h3 class="text-2xl font-bold mb-4 text-white tracking-wide">ハイブリッドABW予約</h3>
-                <p class="text-gray-400 text-base leading-relaxed">残したスモールオフィスは、アプリから出社前に『窓際集中席』『ソファMTG席』をフリーアドレスで予約可能に。</p>
-            </div>
-            
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-gray-600 font-bold tracking-widest text-sm uppercase">EMPLOYEE WELLBEING</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">従業員の「心地よさ」も最大化する</h2>
+                        <div class="w-12 h-1 bg-gray-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">コスト削減だけが目的ではありません。空いたスペースをカフェラウンジやウェルネスルームに転換することで、出社したくなるオフィス環境を構築。ZEN-DESKは、削減したコストを従業員満足度へ再投資するサイクルを生み出します。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: bottom right;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-gray-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-gray-600 font-bold tracking-widest text-sm uppercase">PROVEN RESULTS</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">Case Study | ITメガベンチャー</h2>
+                        <div class="w-12 h-1 bg-gray-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">全社員1,000名に対し、座席数を500席へ半減。フリーアドレス制とZEN-DESKの予約システムを導入した結果、オフィスの賃料を年間1.2億円削減しつつ、アンケートでの「オフィスの働きやすさ」スコアは30%向上しました。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-gray-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-gray-600 font-bold tracking-widest text-sm uppercase">AUTOPILOT FACILITY</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">ファシリティマネジメントの完全自動化</h2>
+                        <div class="w-12 h-1 bg-gray-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">清掃スタッフへの「使用されたデスクのみの清掃指示」や、稼働状況に応じた空調・照明の自動制御（スマートビル連携）など、ZEN-DESKはオフィス運営のすべてを自動化するOSとして機能します。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: bottom right;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-gray-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
         </div>
 
-        <!-- CTA -->
-        <div class="text-center bg-[#050505] border border-white/5 rounded-[3rem] p-16 md:p-32 relative overflow-hidden group">
+        <div class="text-center bg-gray-900 border border-gray-800 rounded-[3rem] p-16 md:p-32 relative overflow-hidden group shadow-2xl">
+            <div class="absolute inset-0 bg-gradient-to-br from-gray-900/40 to-transparent"></div>
             <div class="relative z-10">
-                <h2 class="text-4xl md:text-5xl font-black mb-8 text-white">イノベーションを社会実装する。</h2>
-                <p class="text-gray-400 mb-12 max-w-xl mx-auto text-lg leading-relaxed">このコンセプトに関心がありますか？最新のテクノロジーを活用して、私達と共に業界の常識を覆しましょう。</p>
-                <a href="#" class="bg-stone-800 hover:bg-stone-700 text-white px-12 py-5 rounded-full font-bold text-lg inline-flex items-center gap-3 transition transform hover:-translate-y-1">
-                    オフィスの無駄を無料診断
+                <h2 class="text-4xl md:text-5xl font-black mb-8 text-white">その空席に、いくら払っていますか？</h2>
+                <p class="text-gray-300 mb-12 max-w-xl mx-auto text-lg leading-relaxed">稼働率50%のオフィスは、利益の半分をドブに捨てているのと同じです。まずは無料のセンサーキットで、オフィスの「真の利用率」を可視化しましょう。</p>
+                <a href="#" class="bg-gray-500 hover:bg-gray-400 text-white px-12 py-5 rounded-full font-bold text-lg inline-flex items-center gap-3 transition transform hover:-translate-y-1 shadow-lg shadow-gray-500/30">
+                    無料で稼働状況を診断する
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
                 </a>
             </div>
         </div>
     </main>
+        
 
     <!-- Footer -->
     <footer class="py-12 text-center text-sm font-medium text-gray-600 bg-black border-t border-white/5">

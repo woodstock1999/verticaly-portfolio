@@ -12,10 +12,10 @@
         body { font-family: 'Inter', 'Noto Sans JP', sans-serif; }
     </style>
 </head>
-<body class="bg-[#fff0f3] text-black min-h-screen">
+<body class="bg-gray-50 text-stone-800 min-h-screen font-sans antialiased overflow-x-hidden">
 
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 backdrop-blur-lg bg-opacity-80 bg-white/70 border-b border-gray-200 px-8 mb-4 py-5 flex justify-between items-center transition-all">
+    <nav class="fixed w-full z-50 backdrop-blur-md bg-opacity-90 bg-white/90 border-b border-gray-200 px-8 py-4 flex justify-between items-center transition-all shadow-sm">
         <div class="font-black text-2xl tracking-tighter text-rose-800">SENIOR-SWIPE</div>
         <div class="hidden md:flex gap-10 text-sm font-bold text-gray-600">
             <a href="#" class="hover:text-rose-800 transition">機能・メリット</a>
@@ -26,60 +26,137 @@
     </nav>
 
     <!-- Hero Section -->
+    
     <main class="pt-[140px] pb-24 px-6 md:px-12 max-w-7xl mx-auto">
         <div class="text-center max-w-4xl mx-auto mb-20 relative">
-            <span class="bg-gray-100 text-text-rose-800 border border-gray-200 px-5 py-2 text-xs font-black rounded-full tracking-widest uppercase mb-8 inline-block shadow-sm">CONCEPT / lifestyle</span>
-            <h1 class="text-4xl md:text-[54px] font-black mb-8 leading-[1.2] tracking-tight text-gray-900">人生の残り時間。<br>もう一度、誰かと手を繋ごう。</h1>
-            <p class="text-lg md:text-xl text-gray-600 font-medium leading-relaxed max-w-3xl mx-auto">配偶者との死別。子供も独立し、残された時間は長いのに「今さら出会いなんて」と寂しさを抱えるシニア層向け。徹底的な安全管理とアナログサポートに特化した専用マッチング。</p>
+            <span class="bg-gray-100 text-rose-600 border border-gray-200 px-5 py-2 text-xs font-black rounded-full tracking-widest mb-8 inline-block shadow-sm uppercase">SILVER MARKET / MATCHMAKING</span>
+            <h1 class="text-4xl md:text-[54px] font-black mb-8 leading-[1.2] tracking-tight text-gray-900">もう一度、<br>誰かと手を繋ごう。</h1>
+            <p class="text-lg md:text-xl text-gray-600 font-medium leading-relaxed max-w-3xl mx-auto">70歳からの、新しい人生のパートナー探し。配偶者との死別や長年の孤独を経て、「最後の日々を誰かと笑って過ごしたい」と願うシニアに特化した、温かく安全なマッチングプラットフォーム。</p>
         </div>
 
-        <!-- Real UI Image or Prototype Showcase -->
-        <div class="relative w-full aspect-[21/9] md:aspect-video rounded-[32px] overflow-hidden shadow-2xl mb-32 border border-gray-200/50 shadow-xl group bg-zinc-900">
+        <div class="relative w-full aspect-[21/9] md:aspect-video rounded-[32px] overflow-hidden shadow-2xl mb-32 border border-gray-200/50 group bg-zinc-900">
             <img src="img/ui.png" alt="UI Dashboard" class="w-full h-full object-cover transition-transform duration-[3s] group-hover:scale-[1.02]">
-           <div class="absolute inset-0 bg-gradient-to-t from-white/40 via-transparent to-transparent pointer-events-none blend-overlay"></div></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none blend-overlay"></div>
         </div>
 
-        <!-- Features -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-32">
-            
-            <div class="bg-white border border-gray-100 shadow-xl p-10 rounded-3xl transition transform hover:-translate-y-2 duration-300">
-                <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-8 bg-gray-50 text-rose-800 border border-gray-200">
-                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+        <div class="flex flex-col gap-32 mb-32">
+        
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-rose-600 font-bold tracking-widest text-sm uppercase">THE LONELINESS</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">孤独という、最も静かな社会課題</h2>
+                        <div class="w-12 h-1 bg-rose-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">子供たちは独立し、伴侶を見送り、一人で食べる夕食。日本には今、深刻な孤独を抱えるシニア層が何百万人も存在しています。「恋人」というより、「一緒にお茶を飲み、他愛のない話ができる相手」が欲しい。SENIOR-SWIPEはその切実な願いに応えます。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-rose-900/20 to-transparent"></div>
+                    </div>
                 </div>
-                <h3 class="text-2xl font-bold mb-4 text-gray-900">完全身元確認・独身証明</h3>
-                <p class="text-gray-600 text-base leading-relaxed">免許証だけでなく、独身証明書や年金手帳による厳格な審査を実施。結婚詐欺やロマンス詐欺をプラットフォームから排除。</p>
-            </div>
-            
-            <div class="bg-white border border-gray-100 shadow-xl p-10 rounded-3xl transition transform hover:-translate-y-2 duration-300">
-                <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-8 bg-gray-50 text-rose-800 border border-gray-200">
-                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                
+                <div class="mt-10">
+                    <div class="text-center mb-16">
+                        <span class="text-rose-600 font-bold tracking-widest text-sm uppercase">ACCESSIBILITY & SAFETY</span>
+                        <h2 class="text-3xl md:text-4xl font-black mt-4 text-gray-900">徹底的に「高齢者目線」で作られたUIと安全網</h2>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-rose-50 text-rose-600 border border-rose-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">超シンプル・大きな文字のアプリ設計</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">スワイプや複雑なタップは不要。一日一枚、あなたに合いそうなお相手の大きな写真とプロフィールがゆっくり表示されます。</p>
+</div>
+
+
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-rose-50 text-rose-600 border border-rose-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">身元保証と「対面」による入会審査</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">オンライン完結ではありません。初回は必ず運営スタッフ（同世代のシニアコンシェルジュ）とオンライン面談を行い、身元と人柄を確認します。</p>
+</div>
+
+
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-rose-50 text-rose-600 border border-rose-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">家族共有モード</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">「怪しい詐欺に引っかからないか」というご家族の不安を払拭。マッチングの状況を娘・息子さんにも共有できる安心設定。</p>
+</div>
+
+                    </div>
                 </div>
-                <h3 class="text-2xl font-bold mb-4 text-gray-900">スマホ不要・電話サポート</h3>
-                <p class="text-gray-600 text-base leading-relaxed">「使い方がわからない」方のために、専用コンシェルジュが電話であなたのお話をヒアリングし、相手を直接紹介するプランを完備。</p>
-            </div>
-            
-            <div class="bg-white border border-gray-100 shadow-xl p-10 rounded-3xl transition transform hover:-translate-y-2 duration-300">
-                <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-8 bg-gray-50 text-rose-800 border border-gray-200">
-                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-rose-600 font-bold tracking-widest text-sm uppercase">DEEP EMPATHY</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">共通の「喪失」から始まる、深い理解</h2>
+                        <div class="w-12 h-1 bg-rose-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">多くの会員が、愛する人との別れを経験しています。だからこそ、相手の傷に寄り添い、過度な期待を押し付けない、成熟した穏やかな関係が築けます。プロフィールには「配偶者との死別」や「現在の健康状態」などを正直に記載できる項目を設けています。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-rose-900/20 to-transparent"></div>
+                    </div>
                 </div>
-                <h3 class="text-2xl font-bold mb-4 text-gray-900">お茶会・バスツアー連動</h3>
-                <p class="text-gray-600 text-base leading-relaxed">文字だけのメッセージが苦手な方へ。システムが「共通の趣味を持つ5人」を集め、安全なランチ会へ自動的にお誘いします。</p>
-            </div>
-            
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-rose-600 font-bold tracking-widest text-sm uppercase">OFFLINE EVENTS</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">「デート」ではなく「お見合い茶会」</h2>
+                        <div class="w-12 h-1 bg-rose-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">二人きりで会うのが不安な方のために、運営が主催する少人数の「お茶会」や「寺社仏閣巡り」を毎週開催。スタッフが自然な会話をサポートし、趣味を通じてゆっくりと関係を温めることができます。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: bottom right;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-rose-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-rose-600 font-bold tracking-widest text-sm uppercase">SUCCESS STORY</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">Case Study | 76歳 タカシさんと73歳 ヒロコさん</h2>
+                        <div class="w-12 h-1 bg-rose-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">奥様を亡くして5年間、ほとんど外出していなかったタカシさん。娘さんの勧めで登録し、同じ趣味（盆栽）を持つヒロコさんと出会いました。今では毎週末、二人で植物園を歩き、ベンチで数時間語り合うのが最高の楽しみだと笑います。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-rose-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-rose-600 font-bold tracking-widest text-sm uppercase">OUR MISSION</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">誰もが最後まで、愛される権利を</h2>
+                        <div class="w-12 h-1 bg-rose-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">「この歳で恥ずかしい」。その言葉で、残り20年もの時間を一人で過ごす必要はありません。SENIOR-SWIPEは、シニア層の恋愛やパートナーシップを社会的に肯定し、明るい老後の新しいスタンダードを作ります。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: bottom right;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-rose-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
         </div>
 
-        <!-- CTA -->
-        <div class="text-center bg-gray-50 border border-gray-200 rounded-[3rem] p-16 md:p-32 relative overflow-hidden group">
+        <div class="text-center bg-gray-900 border border-gray-800 rounded-[3rem] p-16 md:p-32 relative overflow-hidden group shadow-2xl">
+            <div class="absolute inset-0 bg-gradient-to-br from-rose-900/40 to-transparent"></div>
             <div class="relative z-10">
-                <h2 class="text-4xl md:text-5xl font-black mb-8 text-gray-900">イノベーションを社会実装する。</h2>
-                <p class="text-gray-600 mb-12 max-w-xl mx-auto text-lg leading-relaxed">このコンセプトに関心がありますか？最新のテクノロジーを活用して、私達と共に業界の常識を覆しましょう。</p>
-                <a href="#" class="bg-rose-600 hover:bg-rose-500 text-white px-12 py-5 rounded-full font-bold text-lg inline-flex items-center gap-3 transition transform hover:-translate-y-1">
-                    無料パンフレットを請求
+                <h2 class="text-4xl md:text-5xl font-black mb-8 text-white">人生の午後は、まだまだ長い。</h2>
+                <p class="text-gray-300 mb-12 max-w-xl mx-auto text-lg leading-relaxed">家族への遠慮も、年齢への諦めもいりません。同世代の専任スタッフが、あなたの新しい一歩を全力でサポートします。</p>
+                <a href="#" class="bg-rose-500 hover:bg-rose-400 text-white px-12 py-5 rounded-full font-bold text-lg inline-flex items-center gap-3 transition transform hover:-translate-y-1 shadow-lg shadow-rose-500/30">
+                    無料で登録する
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
                 </a>
             </div>
         </div>
     </main>
+        
 
     <!-- Footer -->
     <footer class="py-12 text-center text-sm font-medium text-gray-400 bg-gray-50 border-t border-gray-200">

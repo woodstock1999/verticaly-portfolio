@@ -12,10 +12,10 @@
         body { font-family: 'Inter', 'Noto Sans JP', sans-serif; }
     </style>
 </head>
-<body class="bg-[#110c1c] text-slate-300 min-h-screen">
+<body class="bg-gray-50 text-stone-800 min-h-screen font-sans antialiased overflow-x-hidden">
 
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 backdrop-blur-lg bg-opacity-80 bg-black/50 border-b border-white/5 px-8 mb-4 py-5 flex justify-between items-center transition-all">
+    <nav class="fixed w-full z-50 backdrop-blur-md bg-opacity-90 bg-white/90 border-b border-gray-200 px-8 py-4 flex justify-between items-center transition-all shadow-sm">
         <div class="font-black text-2xl tracking-tighter text-fuchsia-400">ANIME-DRAFT</div>
         <div class="hidden md:flex gap-10 text-sm font-bold text-gray-400">
             <a href="#" class="hover:text-fuchsia-400 transition">機能・メリット</a>
@@ -26,60 +26,137 @@
     </nav>
 
     <!-- Hero Section -->
+    
     <main class="pt-[140px] pb-24 px-6 md:px-12 max-w-7xl mx-auto">
         <div class="text-center max-w-4xl mx-auto mb-20 relative">
-            <span class="bg-white/5 text-text-fuchsia-400 border border-white/10 px-5 py-2 text-xs font-black rounded-full tracking-widest uppercase mb-8 inline-block shadow-sm">CONCEPT / saas</span>
-            <h1 class="text-4xl md:text-[54px] font-black mb-8 leading-[1.2] tracking-tight text-white">アニメ監督の脳内イメージを、<br>一瞬で絵コンテに変換。</h1>
-            <p class="text-lg md:text-xl text-gray-400 font-medium leading-relaxed max-w-3xl mx-auto">日本のアニメ産業は深刻な人手不足。特に監督の構想をクリエイターに伝える「絵コンテ」の作成は異常な労力。言語と簡単なラフ画から、プロ品質のレイアウトをAIが即座に出力。</p>
+            <span class="bg-gray-100 text-fuchsia-600 border border-gray-200 px-5 py-2 text-xs font-black rounded-full tracking-widest mb-8 inline-block shadow-sm">CREATOR SAAS / GENERATIVE AI</span>
+            <h1 class="text-4xl md:text-[54px] font-black mb-8 leading-[1.2] tracking-tight text-gray-900">監督の脳内を、<br>一瞬でコンテに変換する。</h1>
+            <p class="text-lg md:text-xl text-gray-600 font-medium leading-relaxed max-w-3xl mx-auto">テキストのプロットや脚本を入力するだけで、カット割り、カメラワーク、キャラクターの構図をAIが自動生成。日本のアニメ制作パイプラインを破壊的に加速させる魔法のツール「ANIME-DRAFT」。</p>
         </div>
 
-        <!-- Real UI Image or Prototype Showcase -->
-        <div class="relative w-full aspect-[21/9] md:aspect-video rounded-[32px] overflow-hidden shadow-2xl mb-32 border border-white/10 shadow-[0_30px_60px_rgba(0,0,0,0.8)] group bg-zinc-900">
+        <div class="relative w-full aspect-[21/9] md:aspect-video rounded-[32px] overflow-hidden shadow-2xl mb-32 border border-gray-200/50 group bg-zinc-900">
             <img src="img/ui.png" alt="UI Dashboard" class="w-full h-full object-cover transition-transform duration-[3s] group-hover:scale-[1.02]">
-           <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none blend-overlay"></div></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none blend-overlay"></div>
         </div>
 
-        <!-- Features -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-32">
-            
-            <div class="bg-white/[0.02] border border-white/5 shadow-2xl p-10 rounded-3xl transition transform hover:-translate-y-2 duration-300">
-                <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-8 bg-white/5 text-fuchsia-400 border border-white/10">
-                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+        <div class="flex flex-col gap-32 mb-32">
+        
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-fuchsia-600 font-bold tracking-widest text-sm uppercase">THE BOTTLENECK</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">アニメ制作の最深部にあるボトルネック</h2>
+                        <div class="w-12 h-1 bg-fuchsia-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">日本のアニメ産業は世界を席巻していますが、その制作現場は過酷です。特に「絵コンテ」は監督やトップアニメーターの属人的な作業であり、1話分を描き上げるのに数週間〜数ヶ月を要します。ここが詰まることで、全体のスケジュールが崩壊するのです。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-fuchsia-900/20 to-transparent"></div>
+                    </div>
                 </div>
-                <h3 class="text-2xl font-bold mb-4 text-white tracking-wide">シナリオto絵コンテ機能</h3>
-                <p class="text-gray-400 text-base leading-relaxed">「夕暮れの教室、窓際の少女、カメラはパンダウン」というテキストから、パースの狂いのない構図を数パターンのラフで生成。</p>
-            </div>
-            
-            <div class="bg-white/[0.02] border border-white/5 shadow-2xl p-10 rounded-3xl transition transform hover:-translate-y-2 duration-300">
-                <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-8 bg-white/5 text-fuchsia-400 border border-white/10">
-                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                
+                <div class="mt-10">
+                    <div class="text-center mb-16">
+                        <span class="text-fuchsia-600 font-bold tracking-widest text-sm uppercase">GENERATIVE STORYBOARDING</span>
+                        <h2 class="text-3xl md:text-4xl font-black mt-4 text-gray-900">言語から映像へのダイレクト・トランスレーション</h2>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-fuchsia-50 text-fuchsia-600 border border-fuchsia-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">脚本解釈AI</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">「夕暮れの教室、窓辺で黄昏れる少女。カメラはゆっくりと引き…」というト書きから、最適な画角やライティングを理解し、画像を生成。</p>
+</div>
+
+
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-fuchsia-50 text-fuchsia-600 border border-fuchsia-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">一貫性のあるキャラクター保持</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">事前のキャラクターデザイン設定を読み込ませることで、全カットで同一人物の顔立ちや服装を正確に維持したコンテを出力。</p>
+</div>
+
+
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-fuchsia-50 text-fuchsia-600 border border-fuchsia-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">カメラワーク・尺の自動計算</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">PAN（パン）やT.U（トラックアップ）などの指示をメタデータとして付与し、ビデオコンテ（Vコン）としてのプレビューも即座に生成。</p>
+</div>
+
+                    </div>
                 </div>
-                <h3 class="text-2xl font-bold mb-4 text-white tracking-wide">キャラクター設定の保持</h3>
-                <p class="text-gray-400 text-base leading-relaxed">自社のキャラクターデザインを事前にLoRA学習させることで、設定に完全に準拠した一貫性のあるキャラコンテを描画。</p>
-            </div>
-            
-            <div class="bg-white/[0.02] border border-white/5 shadow-2xl p-10 rounded-3xl transition transform hover:-translate-y-2 duration-300">
-                <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-8 bg-white/5 text-fuchsia-400 border border-white/10">
-                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-fuchsia-600 font-bold tracking-widest text-sm uppercase">CO-CREATION, NOT REPLACEMENT</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">人間のクリエイティビティを奪わない設計</h2>
+                        <div class="w-12 h-1 bg-fuchsia-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">ANIME-DRAFTはアニメーターから仕事を奪うものではありません。AIが生成したコンテはあくまで「叩き台（ドラフト）」。キャンバス上でペンを使って直接加筆修正したり、カットの順番をドラッグ＆ドロップで入れ替えたり、人間の演出意図を柔軟に反映できるUIを備えています。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-fuchsia-900/20 to-transparent"></div>
+                    </div>
                 </div>
-                <h3 class="text-2xl font-bold mb-4 text-white tracking-wide">タイムライン連動アニマティクス</h3>
-                <p class="text-gray-400 text-base leading-relaxed">生成した静止画をBPMやセリフ秒数に合わせて自動的に繋ぎ合わせ、動画化（Vコンテ）までをブラウザ上で完結。</p>
-            </div>
-            
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-fuchsia-600 font-bold tracking-widest text-sm uppercase">CLOUD COLLABORATION</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">チーム全体でのリアルタイム同期</h2>
+                        <div class="w-12 h-1 bg-fuchsia-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">生成されたコンテはクラウド上で即座に共有されます。作画監督、美術設定、音響監督が同じコンテを見ながら、カット単位でコメントを残したり、修正指示（リテイク）を出すことが可能。アナログな紙のやり取りを完全に撤廃します。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: bottom right;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-fuchsia-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-fuchsia-600 font-bold tracking-widest text-sm uppercase">STUDIO ADOPTION</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">Case Study | 新進気鋭のアニメスタジオ</h2>
+                        <div class="w-12 h-1 bg-fuchsia-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">オリジナルTVアニメの制作において導入。監督が深夜に思いついたアクションシーンのアイデアを、その場でテキスト入力してコンテ化。翌朝の会議で即座にチームに共有し、コンテ作業にかかる時間を従来の1/3に短縮。クリティカルな演出の推敲に時間を割けるようになりました。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-fuchsia-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-fuchsia-600 font-bold tracking-widest text-sm uppercase">INDUSTRY EVOLUTION</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">アニメ産業を、次のステージへ</h2>
+                        <div class="w-12 h-1 bg-fuchsia-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">労働環境の改善と、圧倒的なクオリティの両立。ANIME-DRAFTはテクノロジーの力で、日本のクリエイターが「本当に創りたかったもの」に集中できる環境を提供し、世界へ発信する力を底上げします。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: bottom right;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-fuchsia-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
         </div>
 
-        <!-- CTA -->
-        <div class="text-center bg-[#050505] border border-white/5 rounded-[3rem] p-16 md:p-32 relative overflow-hidden group">
+        <div class="text-center bg-gray-900 border border-gray-800 rounded-[3rem] p-16 md:p-32 relative overflow-hidden group shadow-2xl">
+            <div class="absolute inset-0 bg-gradient-to-br from-fuchsia-900/40 to-transparent"></div>
             <div class="relative z-10">
-                <h2 class="text-4xl md:text-5xl font-black mb-8 text-white">イノベーションを社会実装する。</h2>
-                <p class="text-gray-400 mb-12 max-w-xl mx-auto text-lg leading-relaxed">このコンセプトに関心がありますか？最新のテクノロジーを活用して、私達と共に業界の常識を覆しましょう。</p>
-                <a href="#" class="bg-fuchsia-700 hover:bg-fuchsia-600 text-white px-12 py-5 rounded-full font-bold text-lg inline-flex items-center gap-3 transition transform hover:-translate-y-1">
-                    スタジオ法人の申し込み
+                <h2 class="text-4xl md:text-5xl font-black mb-8 text-white">創造力に、ブーストをかけろ。</h2>
+                <p class="text-gray-300 mb-12 max-w-xl mx-auto text-lg leading-relaxed">もう白紙の絵コンテ用紙を前に何時間も悩む必要はありません。あなたのアイデアを、圧倒的なスピードで視覚化しましょう。</p>
+                <a href="#" class="bg-fuchsia-500 hover:bg-fuchsia-400 text-white px-12 py-5 rounded-full font-bold text-lg inline-flex items-center gap-3 transition transform hover:-translate-y-1 shadow-lg shadow-fuchsia-500/30">
+                    コンテ生成を試す
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
                 </a>
             </div>
         </div>
     </main>
+        
 
     <!-- Footer -->
     <footer class="py-12 text-center text-sm font-medium text-gray-600 bg-black border-t border-white/5">
