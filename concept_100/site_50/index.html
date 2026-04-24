@@ -12,10 +12,10 @@
         body { font-family: 'Inter', 'Noto Sans JP', sans-serif; }
     </style>
 </head>
-<body class="bg-zinc-950 text-white min-h-screen">
+<body class="bg-gray-50 text-stone-800 min-h-screen font-sans antialiased overflow-x-hidden">
 
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 backdrop-blur-md bg-opacity-80 bg-black/50 border-b border-white/10 px-6 py-4 flex justify-between items-center transition-all">
+    <nav class="fixed w-full z-50 backdrop-blur-md bg-opacity-90 bg-white/90 border-b border-gray-200 px-8 py-4 flex justify-between items-center transition-all shadow-sm">
         <div class="font-black text-2xl tracking-tighter text-emerald-400">DENTO MAP PRO</div>
         <div class="hidden md:flex gap-8 text-sm font-bold text-gray-300">
             <a href="#" class="hover:text-emerald-400 transition">特徴</a>
@@ -26,61 +26,137 @@
     </nav>
 
     <!-- Hero Section -->
-    <main class="pt-32 pb-20 px-6 md:px-12 max-w-7xl mx-auto">
-        <div class="text-center max-w-4xl mx-auto mb-16">
-            <span class="bg-emerald-900/50 text-emerald-300 border-emerald-500 border px-3 py-1 text-xs font-bold rounded-full tracking-widest uppercase mb-6 inline-block">Niche Local Solution</span>
-            <h1 class="text-4xl md:text-6xl font-black mb-8 leading-tight tracking-tight">地域の歯医者探しで「1位」に。<br>★5レビューの自動獲得プラットフォーム</h1>
-            <p class="text-lg md:text-xl text-gray-400 font-medium leading-relaxed max-w-2xl mx-auto">腕には自信があるのに、Googleマップの口コミが少なくて新規の患者さんが来ない。忙しい院長に代わる、究極のMEO獲得ツール。</p>
+    
+    <main class="pt-[140px] pb-24 px-6 md:px-12 max-w-7xl mx-auto">
+        <div class="text-center max-w-4xl mx-auto mb-20 relative">
+            <span class="bg-gray-100 text-blue-600 border border-gray-200 px-5 py-2 text-xs font-black rounded-full tracking-widest mb-8 inline-block shadow-sm uppercase">MARKETING TECH / LOCAL SEO</span>
+            <h1 class="text-4xl md:text-[54px] font-black mb-8 leading-[1.2] tracking-tight text-gray-900">「近くの〇〇」という検索を、<br>すべてあなたの店に。</h1>
+            <p class="text-lg md:text-xl text-gray-600 font-medium leading-relaxed max-w-3xl mx-auto">現代の集客はGoogleマップを制する者が勝ちます。LOCAL MEOは、複数店舗のMEO（マップ検索エンジン最適化）対策、クチコミ管理、データ分析を全自動で行う、ローカルビジネス向け最強のマーケティングSaaS。</p>
         </div>
 
-        <!-- UI Showcase -->
-        <div class="relative w-full aspect-video rounded-2xl overflow-hidden shadow-2xl mb-24 border border-white/10 shadow-black/80 group">
-            <img src="img/ui.png" alt="UI Dashboard" class="w-full h-full object-cover transition-transform duration-[2s] group-hover:scale-105">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
-            <div class="absolute bottom-8 left-8">
-                <div class="px-4 py-2 bg-black/70 backdrop-blur text-white rounded-lg text-sm font-bold shadow-lg">⚡ AI-Powered Dashboard</div>
-            </div>
+        <div class="relative w-full aspect-[21/9] md:aspect-video rounded-[32px] overflow-hidden shadow-2xl mb-32 border border-gray-200/50 group bg-zinc-900">
+            <img src="img/ui.png" alt="UI Dashboard" class="w-full h-full object-cover transition-transform duration-[3s] group-hover:scale-[1.02]">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none blend-overlay"></div>
         </div>
 
-        <!-- Features -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24">
-            
-            <div class="bg-white/5 border border-white/10 p-8 rounded-2xl hover:shadow-lg transition">
-                <div class="w-12 h-12 rounded-full flex items-center justify-center mb-6 bg-emerald-900/50 text-emerald-300 border-emerald-500 border">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+        <div class="flex flex-col gap-32 mb-32">
+        
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-blue-600 font-bold tracking-widest text-sm uppercase">THE LOCAL SEARCH WAR</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">「検索されない」という最大の機会損失</h2>
+                        <div class="w-12 h-1 bg-blue-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">「近くの美味しいカフェ」「今すぐ入れる歯医者」。消費者の行動は、今や100%Googleマップによって決定されています。ここで検索結果のトップ3に入らなければ、あなたの店舗はネット上に存在しないのと同じです。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-blue-900/20 to-transparent"></div>
+                    </div>
                 </div>
-                <h3 class="text-xl font-bold mb-4 text-white">SMS自動レビュー依頼</h3>
-                <p class="text-gray-400 text-sm leading-relaxed">治療後のお礼とともに口コミリンクを自動送信。高評価のみGoogleへ誘導。</p>
-            </div>
-            
-            <div class="bg-white/5 border border-white/10 p-8 rounded-2xl hover:shadow-lg transition">
-                <div class="w-12 h-12 rounded-full flex items-center justify-center mb-6 bg-emerald-900/50 text-emerald-300 border-emerald-500 border">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                
+                <div class="mt-10">
+                    <div class="text-center mb-16">
+                        <span class="text-blue-600 font-bold tracking-widest text-sm uppercase">CENTRALIZED COMMAND</span>
+                        <h2 class="text-3xl md:text-4xl font-black mt-4 text-gray-900">全店舗のマップ情報を、一つの画面で制圧する</h2>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-blue-50 text-blue-600 border border-blue-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">一括情報アップデート</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">営業時間の変更や新しいメニューの追加を、1つのダッシュボードから全店舗のGoogleビジネスプロフィールへ一瞬で同期。修正漏れを防ぎます。</p>
+</div>
+
+
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-blue-50 text-blue-600 border border-blue-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">AIクチコミ自動返信アシスタント</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">日々寄せられるレビューに対し、AIが「店舗のトーン＆マナー」に合わせた丁寧な返信文を自動生成。炎上リスクを回避しつつ、エンゲージメントを高めます。</p>
+</div>
+
+
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-blue-50 text-blue-600 border border-blue-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">ローカル競合トラッキング</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">半径5km以内のライバル店舗の検索順位やプロモーション状況を常に監視し、「今、どんな施策を打つべきか」をアラート通知します。</p>
+</div>
+
+                    </div>
                 </div>
-                <h3 class="text-xl font-bold mb-4 text-white">地域別ランキング監視</h3>
-                <p class="text-gray-400 text-sm leading-relaxed">「地域名 × 歯医者」の検索順位を毎日自動チェックし、競合との差を可視化。</p>
-            </div>
-            
-            <div class="bg-white/5 border border-white/10 p-8 rounded-2xl hover:shadow-lg transition">
-                <div class="w-12 h-12 rounded-full flex items-center justify-center mb-6 bg-emerald-900/50 text-emerald-300 border-emerald-500 border">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-blue-600 font-bold tracking-widest text-sm uppercase">GEOSPATIAL ANALYTICS</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">「どこから検索されたか」を可視化するヒートマップ</h2>
+                        <div class="w-12 h-1 bg-blue-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">単なる検索回数ではありません。「どの交差点から」「どの駅の出口から」検索された時に、あなたの店が上位表示されたのかを地図上で色分け（ヒートマップ化）。効果的なチラシ配りや看板設置のデータとしても活用できます。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-blue-900/20 to-transparent"></div>
+                    </div>
                 </div>
-                <h3 class="text-xl font-bold mb-4 text-white">Googleプロフィール最適化</h3>
-                <p class="text-gray-400 text-sm leading-relaxed">最新情報や写真を自動投稿し、検索アルゴリズムからの評価を常に高く保ちます。</p>
-            </div>
-            
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-blue-600 font-bold tracking-widest text-sm uppercase">REPUTATION SHIELD</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">不正なネガティブレビューからの防衛</h2>
+                        <div class="w-12 h-1 bg-blue-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">競合他社からの嫌がらせや、Botによる大量の低評価を検知。Googleのポリシー違反に該当する悪質なクチコミを自動でフラグ付けし、プラットフォームへの削除申請プロセスをワンクリックでサポートします。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: bottom right;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-blue-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-blue-600 font-bold tracking-widest text-sm uppercase">CLIENT SUCCESS</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">Case Study | 全国50店舗の飲食チェーン</h2>
+                        <div class="w-12 h-1 bg-blue-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">全店舗のMEO管理を店長任せにしていた結果、情報のサイロ化とクチコミの放置が起きていた企業。LOCAL MEO導入後、本部で一括管理しAI返信を活用。わずか3ヶ月でマップ経由の経路検索数が全店平均で180%増加し、来店者数の明確な底上げに成功しました。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-blue-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-blue-600 font-bold tracking-widest text-sm uppercase">OUR VISION</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">ローカルビジネスに、デジタルの牙を</h2>
+                        <div class="w-12 h-1 bg-blue-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">美味しい料理や素晴らしいサービスを提供しているのに、知られていない。私たちは、地域に根ざしたビジネスが正当な評価と集客を得られるよう、最強の武器を提供します。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: bottom right;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-blue-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
         </div>
 
-        <!-- CTA -->
-        <div class="text-center bg-white/5 border border-white/10 rounded-3xl p-12 md:p-24">
-            <h2 class="text-3xl md:text-5xl font-black mb-6 text-white">さあ、ビジネスを加速させましょう。</h2>
-            <p class="text-gray-400 mb-10 max-w-lg mx-auto">地域で選ばれる圧倒的なNo.1になるために、最新のAIアシスタントを導入しませんか？</p>
-            <a href="#" class="bg-emerald-600 hover:bg-emerald-500 text-white px-10 py-5 rounded-full font-bold text-lg inline-flex items-center gap-2 transition transform hover:-translate-y-1 hover:shadow-xl ">
-                導入事例と料金表を見る
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-            </a>
+        <div class="text-center bg-gray-900 border border-gray-800 rounded-[3rem] p-16 md:p-32 relative overflow-hidden group shadow-2xl">
+            <div class="absolute inset-0 bg-gradient-to-br from-blue-900/40 to-transparent"></div>
+            <div class="relative z-10">
+                <h2 class="text-4xl md:text-5xl font-black mb-8 text-white">看板を変えるより、ピンを立てろ。</h2>
+                <p class="text-gray-300 mb-12 max-w-xl mx-auto text-lg leading-relaxed">通行人の目を引くより、検索する人のスマホをハックする方が確実です。圧倒的な集客力を、今すぐあなたの店舗へ。</p>
+                <a href="#" class="bg-blue-500 hover:bg-blue-400 text-white px-12 py-5 rounded-full font-bold text-lg inline-flex items-center gap-3 transition transform hover:-translate-y-1 shadow-lg shadow-blue-500/30">
+                    無料診断を始める
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                </a>
+            </div>
         </div>
     </main>
+        
 
     <!-- Footer -->
     <footer class="py-8 text-center text-sm font-medium text-zinc-600 border-t border-white/10">

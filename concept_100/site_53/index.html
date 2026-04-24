@@ -12,10 +12,10 @@
         body { font-family: 'Inter', 'Noto Sans JP', sans-serif; }
     </style>
 </head>
-<body class="bg-black text-white min-h-screen">
+<body class="bg-gray-50 text-stone-800 min-h-screen font-sans antialiased overflow-x-hidden">
 
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 backdrop-blur-md bg-opacity-80 bg-black/50 border-b border-white/10 px-6 py-4 flex justify-between items-center transition-all">
+    <nav class="fixed w-full z-50 backdrop-blur-md bg-opacity-90 bg-white/90 border-b border-gray-200 px-8 py-4 flex justify-between items-center transition-all shadow-sm">
         <div class="font-black text-2xl tracking-tighter text-amber-500">VAULT PROXY</div>
         <div class="hidden md:flex gap-8 text-sm font-bold text-gray-300">
             <a href="#" class="hover:text-amber-500 transition">特徴</a>
@@ -26,61 +26,137 @@
     </nav>
 
     <!-- Hero Section -->
-    <main class="pt-32 pb-20 px-6 md:px-12 max-w-7xl mx-auto">
-        <div class="text-center max-w-4xl mx-auto mb-16">
-            <span class="bg-amber-900/40 text-amber-300 border-amber-600 border px-3 py-1 text-xs font-bold rounded-full tracking-widest uppercase mb-6 inline-block">Niche Local Solution</span>
-            <h1 class="text-4xl md:text-6xl font-black mb-8 leading-tight tracking-tight">最高額で売るための、<br>圧倒的「丸投げ」オークション代行。</h1>
-            <p class="text-lg md:text-xl text-gray-400 font-medium leading-relaxed max-w-2xl mx-auto">クローゼットに眠るハイブランド服。フリマアプリでのやり取りや値引き交渉、梱包は疲れる。リサイクルショップでは二束三文。誰か高く売るプロに全部任せたい。</p>
+    
+    <main class="pt-[140px] pb-24 px-6 md:px-12 max-w-7xl mx-auto">
+        <div class="text-center max-w-4xl mx-auto mb-20 relative">
+            <span class="bg-gray-100 text-indigo-600 border border-gray-200 px-5 py-2 text-xs font-black rounded-full tracking-widest mb-8 inline-block shadow-sm uppercase">CYBER SECURITY / WEB3</span>
+            <h1 class="text-4xl md:text-[54px] font-black mb-8 leading-[1.2] tracking-tight text-gray-900">ハッカーの攻撃を、<br>迷宮入りさせる盾。</h1>
+            <p class="text-lg md:text-xl text-gray-600 font-medium leading-relaxed max-w-3xl mx-auto">あなたの暗号資産とデジタルデータを守る絶対防壁。VAULT PROXYは、Web3の複雑なトランザクションを仲介し、悪意あるスマートコントラクトやフィッシング詐欺からユーザーを物理的に切り離す次世代プロキシサーバーです。</p>
         </div>
 
-                <!-- UI Showcase -->
-        <div class="relative w-full aspect-video rounded-2xl overflow-hidden shadow-2xl mb-24 border border-white/10 shadow-black/80 group">
-            <img src="img/ui.png" alt="UI Dashboard" class="w-full h-full object-cover transition-transform duration-[2s] group-hover:scale-105">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
-            <div class="absolute bottom-8 left-8">
-                <div class="px-4 py-2 bg-black/70 backdrop-blur text-white rounded-lg text-sm font-bold shadow-lg">⚡ AI-Powered Dashboard</div>
-            </div>
+        <div class="relative w-full aspect-[21/9] md:aspect-video rounded-[32px] overflow-hidden shadow-2xl mb-32 border border-gray-200/50 group bg-zinc-900">
+            <img src="img/ui.png" alt="UI Dashboard" class="w-full h-full object-cover transition-transform duration-[3s] group-hover:scale-[1.02]">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none blend-overlay"></div>
         </div>
 
-        <!-- Features -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24">
-            
-            <div class="bg-white/5 border border-white/10 p-8 rounded-2xl hover:shadow-lg transition">
-                <div class="w-12 h-12 rounded-full flex items-center justify-center mb-6 bg-amber-900/40 text-amber-300 border-amber-600 border">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+        <div class="flex flex-col gap-32 mb-32">
+        
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-indigo-600 font-bold tracking-widest text-sm uppercase">THE WILD WEST</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">「自己責任」という言葉で放置された危険</h2>
+                        <div class="w-12 h-1 bg-indigo-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">Web3の世界は革新的ですが、同時に史上最も危険なダークフォレスト（暗黒の森）です。難解なプログラムに隠された「資金を引き抜く罠」を、一般ユーザーが見破ることは不可能です。私たちは、この無法地帯に安全なゲートウェイを構築します。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-indigo-900/20 to-transparent"></div>
+                    </div>
                 </div>
-                <h3 class="text-xl font-bold mb-4 text-white">箱に詰めて送るだけ</h3>
-                <p class="text-gray-400 text-sm leading-relaxed">ユーザーがやることは送るだけ。アイロン掛けからプロのモデル撮影まで全て代行します。</p>
-            </div>
-            
-            <div class="bg-white/5 border border-white/10 p-8 rounded-2xl hover:shadow-lg transition">
-                <div class="w-12 h-12 rounded-full flex items-center justify-center mb-6 bg-amber-900/40 text-amber-300 border-amber-600 border">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                
+                <div class="mt-10">
+                    <div class="text-center mb-16">
+                        <span class="text-indigo-600 font-bold tracking-widest text-sm uppercase">PRE-TRANSACTION SIMULATION</span>
+                        <h2 class="text-3xl md:text-4xl font-black mt-4 text-gray-900">署名する前に「未来」を見せるAI</h2>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-indigo-50 text-indigo-600 border border-indigo-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">スマートコントラクト・シミュレーター</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">あなたがメタマスクで「承認」ボタンを押す前に、そのトランザクションがブロックチェーン上でどのような結果をもたらすか（例：NFTが盗まれる等）を仮想環境でシミュレートし、警告します。</p>
+</div>
+
+
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-indigo-50 text-indigo-600 border border-indigo-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">動的フィッシングURLブロック</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">DiscordやXで流れてくる偽のミントサイトを、ドメインの登録日時やUIのクローン率からAIが瞬時に判定。アクセスそのものを遮断します。</p>
+</div>
+
+
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-indigo-50 text-indigo-600 border border-indigo-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">マルチシグ・ソーシャルリカバリー</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">秘密鍵を紛失しても、信頼できる友人やデバイス群（ソーシャルリカバリー）を通じて、安全にウォレットへのアクセスを復旧させるバックアップ機能。</p>
+</div>
+
+                    </div>
                 </div>
-                <h3 class="text-xl font-bold mb-4 text-white">世界向けグローバル販売</h3>
-                <p class="text-gray-400 text-sm leading-relaxed">国内のフリマだけでなく、海外の富裕層向けアーカイブ市場へも同時出品。一番高いバイヤーへ。</p>
-            </div>
-            
-            <div class="bg-white/5 border border-white/10 p-8 rounded-2xl hover:shadow-lg transition">
-                <div class="w-12 h-12 rounded-full flex items-center justify-center mb-6 bg-amber-900/40 text-amber-300 border-amber-600 border">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-indigo-600 font-bold tracking-widest text-sm uppercase">ANONYMITY SHIELD</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">IPアドレスとウォレットの紐付けを断つ</h2>
+                        <div class="w-12 h-1 bg-indigo-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">ブロックチェーンは匿名だと思われがちですが、RPCノードを経由する際にあなたのIPアドレスは筒抜けです。VAULT PROXYは、Torネットワークのような多段ルーティングを用いてトラフィックを暗号化・分散させ、物理的な身元を完全に秘匿します。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-indigo-900/20 to-transparent"></div>
+                    </div>
                 </div>
-                <h3 class="text-xl font-bold mb-4 text-white">完全透明なAI査定</h3>
-                <p class="text-gray-400 text-sm leading-relaxed">リアルタイムの市場価格推移が見れるダッシュボードを提供。売却までのステップをスマホで確認可能。</p>
-            </div>
-            
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-indigo-600 font-bold tracking-widest text-sm uppercase">COLD-HOT BRIDGE</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">機関投資家レベルの「コールドストレージ連動」</h2>
+                        <div class="w-12 h-1 bg-indigo-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">高額な資産はネットから切り離されたハードウェアウォレットに置きつつ、DeFiでの運用はプロキシ上の仮想ホットウォレットで行う。資産の分離と運用益の追求を、極めてシームレスなUIで両立させます。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: bottom right;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-indigo-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-indigo-600 font-bold tracking-widest text-sm uppercase">ATTACK DEFLECTED</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">Case Study | NFTコレクターの防御ログ</h2>
+                        <div class="w-12 h-1 bg-indigo-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">数億円相当のBored Apeを保有するコレクター。彼が偽のエアドロップサイトでうっかり署名をしてしまった瞬間、VAULT PROXYが「Asset Drainer（全資産引き抜き）」のコードを検知。トランザクションを強制ブロックし、一瞬の隙から全財産を守り抜きました。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-indigo-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-indigo-600 font-bold tracking-widest text-sm uppercase">OUR VISION</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">Web3を、すべての人が歩ける道へ</h2>
+                        <div class="w-12 h-1 bg-indigo-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">セキュリティの不安がある限り、マスアダプション（大衆化）は起こりません。私たちは、専門知識がなくても誰もが安全に分散型エコシステムを享受できる、透明で強固なインフラを提供します。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: bottom right;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-indigo-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
         </div>
 
-        <!-- CTA -->
-        <div class="text-center bg-white/5 border border-white/10 rounded-3xl p-12 md:p-24">
-            <h2 class="text-3xl md:text-5xl font-black mb-6 text-white">次のステージへ。</h2>
-            <p class="text-gray-400 mb-10 max-w-lg mx-auto">最新のテクノロジーを活用して、あなたの生活とビジネスに革命を起こしましょう。</p>
-            <a href="#" class="bg-amber-600 hover:bg-amber-500 text-white px-10 py-5 rounded-full font-bold text-lg inline-flex items-center gap-2 transition transform hover:-translate-y-1 hover:shadow-xl ">
-                無料の専用ボックスを取り寄せる
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-            </a>
+        <div class="text-center bg-gray-900 border border-gray-800 rounded-[3rem] p-16 md:p-32 relative overflow-hidden group shadow-2xl">
+            <div class="absolute inset-0 bg-gradient-to-br from-indigo-900/40 to-transparent"></div>
+            <div class="relative z-10">
+                <h2 class="text-4xl md:text-5xl font-black mb-8 text-white">自己責任の海で、最高の防具を。</h2>
+                <p class="text-gray-300 mb-12 max-w-xl mx-auto text-lg leading-relaxed">1回のクリックミスで全財産を失う世界。VAULT PROXYを通さないトランザクションは、ノーガードで戦場に出るのと同じです。</p>
+                <a href="#" class="bg-indigo-500 hover:bg-indigo-400 text-white px-12 py-5 rounded-full font-bold text-lg inline-flex items-center gap-3 transition transform hover:-translate-y-1 shadow-lg shadow-indigo-500/30">
+                    ウォレットを保護する
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                </a>
+            </div>
         </div>
     </main>
+        
 
     <!-- Footer -->
     <footer class="py-8 text-center text-sm font-medium text-zinc-600 border-t border-white/10">

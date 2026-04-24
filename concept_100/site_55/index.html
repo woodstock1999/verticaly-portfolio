@@ -12,10 +12,10 @@
         body { font-family: 'Inter', 'Noto Sans JP', sans-serif; }
     </style>
 </head>
-<body class="bg-neutral-950 text-white min-h-screen">
+<body class="bg-gray-50 text-stone-800 min-h-screen font-sans antialiased overflow-x-hidden">
 
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 backdrop-blur-md bg-opacity-80 bg-black/50 border-b border-white/10 px-6 py-4 flex justify-between items-center transition-all">
+    <nav class="fixed w-full z-50 backdrop-blur-md bg-opacity-90 bg-white/90 border-b border-gray-200 px-8 py-4 flex justify-between items-center transition-all shadow-sm">
         <div class="font-black text-2xl tracking-tighter text-indigo-400">DOPAMINE-BRAKE</div>
         <div class="hidden md:flex gap-8 text-sm font-bold text-gray-300">
             <a href="#" class="hover:text-indigo-400 transition">特徴</a>
@@ -26,61 +26,137 @@
     </nav>
 
     <!-- Hero Section -->
-    <main class="pt-32 pb-20 px-6 md:px-12 max-w-7xl mx-auto">
-        <div class="text-center max-w-4xl mx-auto mb-16">
-            <span class="bg-indigo-900/50 text-indigo-300 border-indigo-500 border px-3 py-1 text-xs font-bold rounded-full tracking-widest uppercase mb-6 inline-block">Niche Local Solution</span>
-            <h1 class="text-4xl md:text-6xl font-black mb-8 leading-tight tracking-tight">無意識のネットサーフィンを、<br>デジタル・ハンドスピナーで止める。</h1>
-            <p class="text-lg md:text-xl text-gray-400 font-medium leading-relaxed max-w-2xl mx-auto">スクリーンタイムの制限なんてパスワード入力ですぐ解除してしまう。YouTubeやSNSを開く前の「あの衝動」を、もっと直感的に抑えきれないか。</p>
+    
+    <main class="pt-[140px] pb-24 px-6 md:px-12 max-w-7xl mx-auto">
+        <div class="text-center max-w-4xl mx-auto mb-20 relative">
+            <span class="bg-gray-100 text-rose-600 border border-gray-200 px-5 py-2 text-xs font-black rounded-full tracking-widest mb-8 inline-block shadow-sm uppercase">WELLNESS / DIGITAL DETOX</span>
+            <h1 class="text-4xl md:text-[54px] font-black mb-8 leading-[1.2] tracking-tight text-gray-900">スマホに奪われた「意志」を、<br>強制的に取り戻す。</h1>
+            <p class="text-lg md:text-xl text-gray-600 font-medium leading-relaxed max-w-3xl mx-auto">TikTok、YouTube、Instagram。無限スクロールがもたらすドーパミン中毒からあなたの脳を解放する。DOPAMINE-BRAKEは、脳波とスクリーンタイムを監視し、依存の兆候を検知した瞬間にデバイスを「物理的に沈黙」させるデジタル・デトックスAIです。</p>
         </div>
 
-                <!-- UI Showcase -->
-        <div class="relative w-full aspect-video rounded-2xl overflow-hidden shadow-2xl mb-24 border border-white/10 shadow-black/80 group">
-            <img src="img/ui.png" alt="UI Dashboard" class="w-full h-full object-cover transition-transform duration-[2s] group-hover:scale-105">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
-            <div class="absolute bottom-8 left-8">
-                <div class="px-4 py-2 bg-black/70 backdrop-blur text-white rounded-lg text-sm font-bold shadow-lg">⚡ AI-Powered Dashboard</div>
-            </div>
+        <div class="relative w-full aspect-[21/9] md:aspect-video rounded-[32px] overflow-hidden shadow-2xl mb-32 border border-gray-200/50 group bg-zinc-900">
+            <img src="img/ui.png" alt="UI Dashboard" class="w-full h-full object-cover transition-transform duration-[3s] group-hover:scale-[1.02]">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none blend-overlay"></div>
         </div>
 
-        <!-- Features -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24">
-            
-            <div class="bg-white/5 border border-white/10 p-8 rounded-2xl hover:shadow-lg transition">
-                <div class="w-12 h-12 rounded-full flex items-center justify-center mb-6 bg-indigo-900/50 text-indigo-300 border-indigo-500 border">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+        <div class="flex flex-col gap-32 mb-32">
+        
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-rose-600 font-bold tracking-widest text-sm uppercase">THE ATTENTION THEFT</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">「Attention Economy」という合法的な搾取</h2>
+                        <div class="w-12 h-1 bg-rose-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">シリコンバレーの天才たちが何十億ドルも投じて開発しているのは、「いかにあなたを画面に釘付けにするか」というアルゴリズムです。SNSの無限スクロールはスロットマシンと同じように脳の報酬系（ドーパミン）を刺激し、あなたの最も貴重な資産である「時間と集中力」を搾取し続けています。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-rose-900/20 to-transparent"></div>
+                    </div>
                 </div>
-                <h3 class="text-xl font-bold mb-4 text-white">起動前30秒ハプティック</h3>
-                <p class="text-gray-400 text-sm leading-relaxed">指定アプリを開く際、画面に超リアルな3Dスピナーが出現。30秒回し続けないとアプリが開きません。</p>
-            </div>
-            
-            <div class="bg-white/5 border border-white/10 p-8 rounded-2xl hover:shadow-lg transition">
-                <div class="w-12 h-12 rounded-full flex items-center justify-center mb-6 bg-indigo-900/50 text-indigo-300 border-indigo-500 border">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                
+                <div class="mt-10">
+                    <div class="text-center mb-16">
+                        <span class="text-rose-600 font-bold tracking-widest text-sm uppercase">ADDICTION DETECTION</span>
+                        <h2 class="text-3xl md:text-4xl font-black mt-4 text-gray-900">依存を検知する「行動パターン解析」</h2>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-rose-50 text-rose-600 border border-rose-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">スクロール速度の異常検知</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">「目的なくただ画面をスワイプし続けている」時の特有の指の速度とリズムをAIが検知。この状態（ゾンビ・スクロール）が3分続くとアラートを発動します。</p>
+</div>
+
+
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-rose-50 text-rose-600 border border-rose-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">アプリ間反復のトラッキング</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">Instagramを開き、何も見ずにXを開き、またInstagramに戻る。この「無意識のループ行動」を検知した瞬間に、両方のアプリに強制的な遅延（5秒間のローディング）を発生させ、我に返らせます。</p>
+</div>
+
+
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-rose-50 text-rose-600 border border-rose-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">バイオメトリクス連動</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">スマートウォッチの心拍変動（HRV）から「脳の疲労状態」を推測。疲れている時ほどSNSに依存しやすいため、その時間帯の利用制限を自動で厳しくします。</p>
+</div>
+
+                    </div>
                 </div>
-                <h3 class="text-xl font-bold mb-4 text-white">指先でのドーパミン置換</h3>
-                <p class="text-gray-400 text-sm leading-relaxed">圧倒的に気持ちいい振動フィードバックにより、「情報を見たい」欲求を「物理的な快感」にすり替えます。</p>
-            </div>
-            
-            <div class="bg-white/5 border border-white/10 p-8 rounded-2xl hover:shadow-lg transition">
-                <div class="w-12 h-12 rounded-full flex items-center justify-center mb-6 bg-indigo-900/50 text-indigo-300 border-indigo-500 border">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-rose-600 font-bold tracking-widest text-sm uppercase">GRAYSCALE HACK</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">「見れない」のではなく「見えなくなる」魔法</h2>
+                        <div class="w-12 h-1 bg-rose-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">単にアプリをロックするだけでは、イライラして解除してしまいます。DOPAMINE-BRAKEは制限時間を超えると、画面全体を鮮やかなフルカラーから「完全なモノクロ（白黒）」へと徐々にフェードアウトさせます。脳への視覚的刺激が激減し、自然とスマホを置きたくなる心理的なハックです。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-rose-900/20 to-transparent"></div>
+                    </div>
                 </div>
-                <h3 class="text-xl font-bold mb-4 text-white">依存度・無意識分析</h3>
-                <p class="text-gray-400 text-sm leading-relaxed">無意識にアプリを開こうとした回数と、スピナーで思い止まった回数を美しいUIで可視化。</p>
-            </div>
-            
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-rose-600 font-bold tracking-widest text-sm uppercase">LIFE RECLAIMED</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">取り戻した時間を可視化するダッシュボード</h2>
+                        <div class="w-12 h-1 bg-rose-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">「今週、スマホを見なかったことで読書できた時間：4時間」「睡眠時間の増加：1.5時間」。制限によって『失ったもの』ではなく、現実世界で『得たもの』を美しく可視化し、デジタルデトックスのモチベーションを維持します。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: bottom right;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-rose-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-rose-600 font-bold tracking-widest text-sm uppercase">USER SUCCESS</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">Case Study | 慢性的な不眠に悩む20代</h2>
+                        <div class="w-12 h-1 bg-rose-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">ベッドに入ってから2時間以上ショート動画を見てしまい、日中のパフォーマンスが著しく低下していたユーザー。就寝1時間前に「ドーパミン・ブレーキ」が作動するよう設定したところ、モノクロ化された画面に興味を失い、入眠までの時間が平均15分へと劇的に改善しました。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-rose-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-rose-600 font-bold tracking-widest text-sm uppercase">OUR VISION</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">テクノロジーを、人間の「道具」に戻す</h2>
+                        <div class="w-12 h-1 bg-rose-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">私たちはスマートフォンを否定しているわけではありません。ただ、デバイスの「奴隷」から「主人」へと主従関係を逆転させるだけです。取り戻した時間で、あなたが本当に愛することをしてください。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: bottom right;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-rose-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
         </div>
 
-        <!-- CTA -->
-        <div class="text-center bg-white/5 border border-white/10 rounded-3xl p-12 md:p-24">
-            <h2 class="text-3xl md:text-5xl font-black mb-6 text-white">次のステージへ。</h2>
-            <p class="text-gray-400 mb-10 max-w-lg mx-auto">最新のテクノロジーを活用して、あなたの生活とビジネスに革命を起こしましょう。</p>
-            <a href="#" class="bg-indigo-600 hover:bg-indigo-500 text-white px-10 py-5 rounded-full font-bold text-lg inline-flex items-center gap-2 transition transform hover:-translate-y-1 hover:shadow-xl ">
-                今すぐデジタルデトックス
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-            </a>
+        <div class="text-center bg-gray-900 border border-gray-800 rounded-[3rem] p-16 md:p-32 relative overflow-hidden group shadow-2xl">
+            <div class="absolute inset-0 bg-gradient-to-br from-rose-900/40 to-transparent"></div>
+            <div class="relative z-10">
+                <h2 class="text-4xl md:text-5xl font-black mb-8 text-white">1日2時間の「空白」が、人生を変える。</h2>
+                <p class="text-gray-300 mb-12 max-w-xl mx-auto text-lg leading-relaxed">気合いでスマホは手放せません。最強のアルゴリズムには、より強力なアルゴリズムで対抗しましょう。</p>
+                <a href="#" class="bg-rose-500 hover:bg-rose-400 text-white px-12 py-5 rounded-full font-bold text-lg inline-flex items-center gap-3 transition transform hover:-translate-y-1 shadow-lg shadow-rose-500/30">
+                    アプリをインストール
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                </a>
+            </div>
         </div>
     </main>
+        
 
     <!-- Footer -->
     <footer class="py-8 text-center text-sm font-medium text-zinc-600 border-t border-white/10">

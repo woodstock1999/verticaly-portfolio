@@ -12,10 +12,10 @@
         body { font-family: 'Inter', 'Noto Sans JP', sans-serif; }
     </style>
 </head>
-<body class="bg-orange-50 text-gray-900 min-h-screen">
+<body class="bg-gray-50 text-stone-800 min-h-screen font-sans antialiased overflow-x-hidden">
 
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 backdrop-blur-md bg-opacity-80 bg-white/80 border-b border-gray-200 px-6 py-4 flex justify-between items-center transition-all">
+    <nav class="fixed w-full z-50 backdrop-blur-md bg-opacity-90 bg-white/90 border-b border-gray-200 px-8 py-4 flex justify-between items-center transition-all shadow-sm">
         <div class="font-black text-2xl tracking-tighter text-orange-600">PAW-SYNC</div>
         <div class="hidden md:flex gap-8 text-sm font-bold text-gray-600">
             <a href="#" class="hover:text-orange-600 transition">特徴</a>
@@ -26,58 +26,137 @@
     </nav>
 
     <!-- Hero Section -->
-    <main class="pt-32 pb-20 px-6 md:px-12 max-w-7xl mx-auto">
-        <div class="text-center max-w-4xl mx-auto mb-16">
-            <span class="bg-orange-900/30 text-orange-500 border border-orange-500/50 px-3 py-1 text-xs font-bold rounded-full tracking-widest uppercase mb-6 inline-block">health</span>
-            <h1 class="text-4xl md:text-6xl font-black mb-8 leading-tight tracking-tight">全国の獣医師とつながる、<br>ペットのための生涯健康カルテ。</h1>
-            <p class="text-lg md:text-xl text-gray-600 font-medium leading-relaxed max-w-2xl mx-auto">引っ越しや休日の救急。初めての動物病院で「過去の病歴」や「アレルギー」を正確に伝えるのは難しい。最悪の場合、手遅れになってしまうことも。すべての医療記録をスマートに一元管理しませんか？</p>
+    
+    <main class="pt-[140px] pb-24 px-6 md:px-12 max-w-7xl mx-auto">
+        <div class="text-center max-w-4xl mx-auto mb-20 relative">
+            <span class="bg-gray-100 text-amber-600 border border-gray-200 px-5 py-2 text-xs font-black rounded-full tracking-widest mb-8 inline-block shadow-sm uppercase">PET TECH / IoT</span>
+            <h1 class="text-4xl md:text-[54px] font-black mb-8 leading-[1.2] tracking-tight text-gray-900">声なき家族の「SOS」を、<br>データで翻訳する。</h1>
+            <p class="text-lg md:text-xl text-gray-600 font-medium leading-relaxed max-w-3xl mx-auto">犬や猫は、痛みを隠す天才です。PAW-SYNCは、首輪型の極小センサーでペットの心拍、呼吸、活動量を24時間モニタリングし、獣医学的AIが「見えない不調のサイン」を病発前に検知するスマート・カラー（首輪）システム。</p>
         </div>
 
-        <!-- Real UI Image Showcase -->
-        <div class="relative w-full aspect-[21/9] md:aspect-video rounded-3xl overflow-hidden shadow-2xl mb-24 border border-gray-200 shadow-xl group">
-            <img src="img/ui.png" alt="UI Dashboard" class="w-full h-full object-cover transition-transform duration-[2s] group-hover:scale-[1.02]">
-            <div class="absolute inset-0 bg-gradient-to-t from-white/30 to-transparent pointer-events-none"></div>
+        <div class="relative w-full aspect-[21/9] md:aspect-video rounded-[32px] overflow-hidden shadow-2xl mb-32 border border-gray-200/50 group bg-zinc-900">
+            <img src="img/ui.png" alt="UI Dashboard" class="w-full h-full object-cover transition-transform duration-[3s] group-hover:scale-[1.02]">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none blend-overlay"></div>
         </div>
 
-        <!-- Features -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24">
-            
-            <div class="bg-white border border-gray-200 p-8 rounded-2xl hover:shadow-lg transition">
-                <div class="w-12 h-12 rounded-full flex items-center justify-center mb-6 bg-orange-900/30 text-orange-500 border border-orange-500/50">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+        <div class="flex flex-col gap-32 mb-32">
+        
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-amber-600 font-bold tracking-widest text-sm uppercase">THE SILENT PAIN</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">「痛みを隠す」という野生の生存本能</h2>
+                        <div class="w-12 h-1 bg-amber-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">自然界において、弱みを見せることは死を意味します。そのため、犬や猫は病気になってもギリギリまで元気に振る舞い、飼い主が異変に気づいた時には既に重症化しているケースが後を絶ちません。「言葉を話せない」という最大の壁を、私たちはデータで突破します。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-amber-900/20 to-transparent"></div>
+                    </div>
                 </div>
-                <h3 class="text-xl font-bold mb-4 text-black">クラウド生涯カルテ</h3>
-                <p class="text-gray-600 text-sm leading-relaxed">ワクチン接種歴、血液検査、処方薬の履歴をアプリで一元管理。新しい病院でもQRコード一つで共有可能。</p>
-            </div>
-            
-            <div class="bg-white border border-gray-200 p-8 rounded-2xl hover:shadow-lg transition">
-                <div class="w-12 h-12 rounded-full flex items-center justify-center mb-6 bg-orange-900/30 text-orange-500 border border-orange-500/50">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                
+                <div class="mt-10">
+                    <div class="text-center mb-16">
+                        <span class="text-amber-600 font-bold tracking-widest text-sm uppercase">MICRO SENSING</span>
+                        <h2 class="text-3xl md:text-4xl font-black mt-4 text-gray-900">ミリ秒単位のバイタル・トラッキング</h2>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-amber-50 text-amber-600 border border-amber-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">睡眠時・安静時心拍の解析</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">ペットが寝ている間の微細な心拍数の変動を計測。心疾患の初期症状である「安静時心拍の微増」を数週間単位のトレンドから見つけ出します。</p>
+</div>
+
+
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-amber-50 text-amber-600 border border-amber-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">掻きむしり・身震い検知</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">皮膚炎や耳の感染症のサインとなる「特定の部位を掻く動作」や「頭を振る動作」の回数を、加速度センサーが正確にカウントし記録します。</p>
+</div>
+
+
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-amber-50 text-amber-600 border border-amber-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">温度・湿度環境アラート</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">留守番中の室内温度が熱中症リスクの閾値を超えた場合、即座に飼い主のスマホへ緊急通知を送信します。</p>
+</div>
+
+                    </div>
                 </div>
-                <h3 class="text-xl font-bold mb-4 text-black">獣医師ネットワーク</h3>
-                <p class="text-gray-600 text-sm leading-relaxed">提携する全国の動物病院間でシームレスにデータを連携。より正確で迅速な診断をサポートします。</p>
-            </div>
-            
-            <div class="bg-white border border-gray-200 p-8 rounded-2xl hover:shadow-lg transition">
-                <div class="w-12 h-12 rounded-full flex items-center justify-center mb-6 bg-orange-900/30 text-orange-500 border border-orange-500/50">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-amber-600 font-bold tracking-widest text-sm uppercase">VET-INTELLIGENCE</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">獣医学データベースと直結したAI診断</h2>
+                        <div class="w-12 h-1 bg-amber-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">収集されたデータは単なるグラフではありません。PAW-SYNCのAIは数百万件の電子カルテデータと連携しており、「過去3日間の活動量が20%低下し、飲水量が倍増している。慢性腎不全の疑いがあります」といった具体的な推論レポートを飼い主に提示します。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-amber-900/20 to-transparent"></div>
+                    </div>
                 </div>
-                <h3 class="text-xl font-bold mb-4 text-black">AI異変アラート</h3>
-                <p class="text-gray-600 text-sm leading-relaxed">毎日の食事量や排泄状況をメモするだけで、AIが小さな異変を検知し、早期受診を促します。</p>
-            </div>
-            
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-amber-600 font-bold tracking-widest text-sm uppercase">TELEMEDICINE READY</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">オンライン獣医とのシームレスな共有</h2>
+                        <div class="w-12 h-1 bg-amber-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">異変を検知した場合、アプリからワンタップで提携する獣医師とのオンライン診療に接続。過去数ヶ月分のバイタルデータが瞬時に獣医師側へ共有されるため、「いつから元気がないか」をデータに基づき正確に診断できます。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: bottom right;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-amber-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-amber-600 font-bold tracking-widest text-sm uppercase">LIFE SAVED</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">Case Study | 7歳のゴールデンレトリバー</h2>
+                        <div class="w-12 h-1 bg-amber-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">見た目は全く健康で食欲もあった犬。しかしPAW-SYNCが「睡眠時の呼吸数の異常な増加」を検知しアラートを発砲。病院でエコー検査を行ったところ、初期の脾臓腫瘍が発見され、破裂する前に安全に摘出することができました。「この首輪が命の恩人です」と飼い主は語ります。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-amber-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-amber-600 font-bold tracking-widest text-sm uppercase">OUR VISION</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">寿命を伸ばすのではなく、健康な時間を伸ばす</h2>
+                        <div class="w-12 h-1 bg-amber-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">ペットとの別れはいつか必ず訪れます。しかし、「もっと早く気づいていれば」という飼い主の後悔だけは、テクノロジーの力で絶対にゼロにできると私たちは信じています。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: bottom right;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-amber-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
         </div>
 
-        <!-- CTA -->
-        <div class="text-center bg-gray-100 border border-gray-200 rounded-3xl p-12 md:p-24">
-            <h2 class="text-3xl md:text-5xl font-black mb-6 text-black">次のステージへ。</h2>
-            <p class="text-gray-600 mb-10 max-w-lg mx-auto">最新のテクノロジーを活用して、あなたの生活とビジネスに革命を起こしましょう。</p>
-            <a href="#" class="bg-orange-500 hover:bg-orange-400 text-white px-10 py-5 rounded-full font-bold text-lg inline-flex items-center gap-2 transition transform hover:-translate-y-1 hover:shadow-xl text-white">
-                無料アプリをダウンロード
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-            </a>
+        <div class="text-center bg-gray-900 border border-gray-800 rounded-[3rem] p-16 md:p-32 relative overflow-hidden group shadow-2xl">
+            <div class="absolute inset-0 bg-gradient-to-br from-amber-900/40 to-transparent"></div>
+            <div class="relative z-10">
+                <h2 class="text-4xl md:text-5xl font-black mb-8 text-white">「なんとなく元気がない」を、科学する。</h2>
+                <p class="text-gray-300 mb-12 max-w-xl mx-auto text-lg leading-relaxed">症状が出てから病院へ行くのでは遅いのです。日常のデータこそが、最良の予防医療です。</p>
+                <a href="#" class="bg-amber-500 hover:bg-amber-400 text-white px-12 py-5 rounded-full font-bold text-lg inline-flex items-center gap-3 transition transform hover:-translate-y-1 shadow-lg shadow-amber-500/30">
+                    デバイスを予約する
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                </a>
+            </div>
         </div>
     </main>
+        
 
     <!-- Footer -->
     <footer class="py-8 text-center text-sm font-medium text-gray-400 border-t border-gray-200">

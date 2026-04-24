@@ -12,10 +12,10 @@
         body { font-family: 'Inter', 'Noto Sans JP', sans-serif; }
     </style>
 </head>
-<body class="bg-black border-l-8 border-green-500 text-zinc-300 min-h-screen">
+<body class="bg-gray-50 text-stone-800 min-h-screen font-sans antialiased overflow-x-hidden">
 
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 backdrop-blur-md bg-opacity-80 bg-black/50 border-b border-white/10 px-6 py-4 flex justify-between items-center transition-all">
+    <nav class="fixed w-full z-50 backdrop-blur-md bg-opacity-90 bg-white/90 border-b border-gray-200 px-8 py-4 flex justify-between items-center transition-all shadow-sm">
         <div class="font-black text-2xl tracking-tighter text-green-500">MUSCLE-CHAIN</div>
         <div class="hidden md:flex gap-8 text-sm font-bold text-gray-300">
             <a href="#" class="hover:text-green-500 transition">特徴</a>
@@ -26,60 +26,137 @@
     </nav>
 
     <!-- Hero Section -->
-    <main class="pt-32 pb-20 px-6 md:px-12 max-w-7xl mx-auto">
-        <div class="text-center max-w-4xl mx-auto mb-16">
-            <span class="bg-green-900/30 text-text-green-500 border border-green-500/50 px-3 py-1 text-xs font-bold rounded-full tracking-widest uppercase mb-6 inline-block shadow-sm">finance</span>
-            <h1 class="text-4xl md:text-6xl font-black mb-8 leading-tight tracking-tight">その汗は、裏切らない。<br>筋トレが「資産」に変わるWeb3。</h1>
-            <p class="text-lg md:text-xl text-gray-400 font-medium leading-relaxed max-w-2xl mx-auto">筋トレは辛い。ジムを契約しても幽霊部員になってしまう。もし、「ジムに行くこと」「バーベルを上げること」自体がクリプト（暗号資産）を生み出すなら？</p>
+    
+    <main class="pt-[140px] pb-24 px-6 md:px-12 max-w-7xl mx-auto">
+        <div class="text-center max-w-4xl mx-auto mb-20 relative">
+            <span class="bg-gray-100 text-amber-600 border border-gray-200 px-5 py-2 text-xs font-black rounded-full tracking-widest mb-8 inline-block shadow-sm uppercase">WEB3 / FITNESS TECH</span>
+            <h1 class="text-4xl md:text-[54px] font-black mb-8 leading-[1.2] tracking-tight text-gray-900">流した汗が、<br>そのまま「暗号資産」になる。</h1>
+            <p class="text-lg md:text-xl text-gray-600 font-medium leading-relaxed max-w-3xl mx-auto">ジムでのトレーニングや毎日のランニング。あなたの努力の結晶である運動データをブロックチェーン上に記録し、独自トークンに変換するMove-to-Earnプラットフォーム「MUSCLE-CHAIN」。健康になるほど、経済的にも豊かになる世界へ。</p>
         </div>
 
-        <!-- Real UI Image Showcase -->
-        <div class="relative w-full aspect-[21/9] md:aspect-video rounded-3xl overflow-hidden shadow-2xl mb-24 border border-white/10 shadow-black/80 group">
-            <img src="img/ui.png" alt="UI Dashboard" class="w-full h-full object-cover transition-transform duration-[3s] group-hover:scale-[1.03]">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none"></div>
+        <div class="relative w-full aspect-[21/9] md:aspect-video rounded-[32px] overflow-hidden shadow-2xl mb-32 border border-gray-200/50 group bg-zinc-900">
+            <img src="img/ui.png" alt="UI Dashboard" class="w-full h-full object-cover transition-transform duration-[3s] group-hover:scale-[1.02]">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none blend-overlay"></div>
         </div>
 
-        <!-- Features -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24">
-            
-            <div class="bg-white/5 border border-white/10 p-8 rounded-2xl hover:shadow-lg transition transform hover:-translate-y-1">
-                <div class="w-12 h-12 rounded-full flex items-center justify-center mb-6 bg-green-900/30 text-green-500 border border-green-500/50">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+        <div class="flex flex-col gap-32 mb-32">
+        
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-amber-600 font-bold tracking-widest text-sm uppercase">THE MOTIVATION GAP</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">「健康への投資」が回収できないジレンマ</h2>
+                        <div class="w-12 h-1 bg-amber-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">高い月会費を払ってジムに入会しても、半年後には幽霊部員。ダイエットの効果が出るまでの数ヶ月間、人間は「我慢」だけでモチベーションを維持することはできません。MUSCLE-CHAINは、この構造的な欠陥をトークン・エコノミーで解決します。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-amber-900/20 to-transparent"></div>
+                    </div>
                 </div>
-                <h3 class="text-xl font-bold mb-4 text-white">提携ジム・チェックイン報酬</h3>
-                <p class="text-gray-400 text-sm leading-relaxed">GPSで提携ジムへのチェックインを判定。ジムに滞在して心拍数を上げるごとにトークンをマイニング。</p>
-            </div>
-            
-            <div class="bg-white/5 border border-white/10 p-8 rounded-2xl hover:shadow-lg transition transform hover:-translate-y-1">
-                <div class="w-12 h-12 rounded-full flex items-center justify-center mb-6 bg-green-900/30 text-green-500 border border-green-500/50">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                
+                <div class="mt-10">
+                    <div class="text-center mb-16">
+                        <span class="text-amber-600 font-bold tracking-widest text-sm uppercase">PROOF OF WORKOUT</span>
+                        <h2 class="text-3xl md:text-4xl font-black mt-4 text-gray-900">あらゆる運動を「価値」に変換するメカニズム</h2>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-amber-50 text-amber-600 border border-amber-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">Apple Watch / Garmin 連携</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">普段使っているスマートウォッチと連動するだけ。消費カロリーや心拍数の上昇率を独自のアルゴリズムで計算し、公平なトークン報酬（$MUSCLE）を付与します。</p>
+</div>
+
+
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-amber-50 text-amber-600 border border-amber-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">チート防止AIシステム</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">スマホを振るだけの不正行為や、犬にデバイスを付けた散歩などを、加速度センサーの波形解析AIが瞬時に見破りブロック。真の努力だけが評価されます。</p>
+</div>
+
+
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-amber-50 text-amber-600 border border-amber-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">ダイナミックNFTアバター</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">あなたが現実世界で筋肉をつければつけるほど、メタバース上のあなたのアバターも筋肉質に成長。視覚的な成長が強力なゲーム的報酬となります。</p>
+</div>
+
+                    </div>
                 </div>
-                <h3 class="text-xl font-bold mb-4 text-white">ウェアラブル・連動マイニング</h3>
-                <p class="text-gray-400 text-sm leading-relaxed">Apple Watchなどと連携。デッドリフトの総重量や、有酸素のカロリー消費量がそのままリワードに直結。</p>
-            </div>
-            
-            <div class="bg-white/5 border border-white/10 p-8 rounded-2xl hover:shadow-lg transition transform hover:-translate-y-1">
-                <div class="w-12 h-12 rounded-full flex items-center justify-center mb-6 bg-green-900/30 text-green-500 border border-green-500/50">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-amber-600 font-bold tracking-widest text-sm uppercase">REAL-WORLD UTILITY</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">貯めたトークンで、プロテインからパーソナルまで</h2>
+                        <div class="w-12 h-1 bg-amber-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">稼いだトークンは投機目的の無意味なコインではありません。提携するスポーツブランドのウェア購入、高級プロテインの決済、さらには提携ジムの会費やパーソナルトレーニングの予約にそのまま使用できる強力なユーティリティを持っています。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-amber-900/20 to-transparent"></div>
+                    </div>
                 </div>
-                <h3 class="text-xl font-bold mb-4 text-white">NFTマッスル・アバター</h3>
-                <p class="text-gray-400 text-sm leading-relaxed">自分が鍛えるほど、アプリ内のアバターNFTもマッチョに進化。マーケットプレイスで高値で売却も可能。</p>
-            </div>
-            
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-amber-600 font-bold tracking-widest text-sm uppercase">FIT-FI (FITNESS FINANCE)</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">DeFi×Fitnessによる「筋肉の複利運用」</h2>
+                        <div class="w-12 h-1 bg-amber-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">獲得したトークンをステーキング（預け入れ）することで、利回りを獲得可能。また、サボり癖のあるユーザー同士で「週3回走れなかったらトークン没収」といったスマートコントラクトを組むP2Pのピアプレッシャー機能も搭載。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: bottom right;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-amber-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-amber-600 font-bold tracking-widest text-sm uppercase">CORPORATE WELLNESS</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">Case Study | 健康経営を目指すIT企業</h2>
+                        <div class="w-12 h-1 bg-amber-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">リモートワークによる社員の運動不足解消のため、企業版MUSCLE-CHAINを導入。社員の運動データをトークン化し、それを社内カフェのランチチケットや特別休暇と交換できる制度に。導入後、社内の平均歩数が2倍になり、健康保険料の削減に大きく寄与しました。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-amber-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-amber-600 font-bold tracking-widest text-sm uppercase">OUR VISION</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">「健康寿命」を資産として取引する</h2>
+                        <div class="w-12 h-1 bg-amber-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">これまで「健康」は個人的な財産にすぎませんでした。しかし私たちは、日々のトレーニングによる健康データの蓄積を価値化し、未来の医療費削減というマクロな経済効果に直接結びつけます。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: bottom right;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-amber-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
         </div>
 
-        <!-- CTA -->
-        <div class="text-center bg-white/5 border border-white/10 rounded-3xl p-12 md:p-24 relative overflow-hidden">
+        <div class="text-center bg-gray-900 border border-gray-800 rounded-[3rem] p-16 md:p-32 relative overflow-hidden group shadow-2xl">
+            <div class="absolute inset-0 bg-gradient-to-br from-amber-900/40 to-transparent"></div>
             <div class="relative z-10">
-                <h2 class="text-3xl md:text-5xl font-black mb-6 text-white">次のステージへ。</h2>
-                <p class="text-gray-400 mb-10 max-w-lg mx-auto">最先端のテクノロジーで、業界の常識を覆しましょう。</p>
-                <a href="#" class="bg-green-500 hover:bg-green-400 text-black shadow-[0_0_15px_rgba(34,197,94,0.5)] px-10 py-5 rounded-full font-bold text-lg inline-flex items-center gap-2 transition transform hover:-translate-y-1 hover:shadow-xl shadow-lg">
-                    ウォレットを接続して開始
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                <h2 class="text-4xl md:text-5xl font-black mb-8 text-white">筋肉は裏切らない。そして、稼げる。</h2>
+                <p class="text-gray-300 mb-12 max-w-xl mx-auto text-lg leading-relaxed">モチベーションが続かないのは、あなたの意志が弱いからではありません。「適切な報酬」がないからです。</p>
+                <a href="#" class="bg-amber-500 hover:bg-amber-400 text-white px-12 py-5 rounded-full font-bold text-lg inline-flex items-center gap-3 transition transform hover:-translate-y-1 shadow-lg shadow-amber-500/30">
+                    アプリをダウンロード
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
                 </a>
             </div>
         </div>
     </main>
+        
 
     <!-- Footer -->
     <footer class="py-8 text-center text-sm font-medium text-zinc-600 border-t border-white/10">

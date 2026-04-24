@@ -12,10 +12,10 @@
         body { font-family: 'Inter', 'Noto Sans JP', sans-serif; }
     </style>
 </head>
-<body class="bg-[#160624] text-pink-100 min-h-screen">
+<body class="bg-gray-50 text-stone-800 min-h-screen font-sans antialiased overflow-x-hidden">
 
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 backdrop-blur-md bg-opacity-80 bg-black/50 border-b border-white/10 px-6 py-4 flex justify-between items-center transition-all">
+    <nav class="fixed w-full z-50 backdrop-blur-md bg-opacity-90 bg-white/90 border-b border-gray-200 px-8 py-4 flex justify-between items-center transition-all shadow-sm">
         <div class="font-black text-2xl tracking-tighter text-pink-400">OSHI-SYNC</div>
         <div class="hidden md:flex gap-8 text-sm font-bold text-gray-300">
             <a href="#" class="hover:text-pink-400 transition">特徴</a>
@@ -26,60 +26,137 @@
     </nav>
 
     <!-- Hero Section -->
-    <main class="pt-32 pb-20 px-6 md:px-12 max-w-7xl mx-auto">
-        <div class="text-center max-w-4xl mx-auto mb-16">
-            <span class="bg-pink-900/30 text-text-pink-400 border border-pink-500/50 px-3 py-1 text-xs font-bold rounded-full tracking-widest uppercase mb-6 inline-block shadow-sm">experimental</span>
-            <h1 class="text-4xl md:text-6xl font-black mb-8 leading-tight tracking-tight">あなたの「推し」が専属秘書に。<br>最高のモチベーション管理。</h1>
-            <p class="text-lg md:text-xl text-gray-400 font-medium leading-relaxed max-w-2xl mx-auto">朝起きられない、家事が進まない、仕事のタスクが溜まる...。誰かに褒めてもらわないと動けないあなたに、究極の「推し活×タスク管理」アプリを届けます。</p>
+    
+    <main class="pt-[140px] pb-24 px-6 md:px-12 max-w-7xl mx-auto">
+        <div class="text-center max-w-4xl mx-auto mb-20 relative">
+            <span class="bg-gray-100 text-rose-600 border border-gray-200 px-5 py-2 text-xs font-black rounded-full tracking-widest mb-8 inline-block shadow-sm uppercase">ENTERTAINMENT / FAN ENGAGEMENT</span>
+            <h1 class="text-4xl md:text-[54px] font-black mb-8 leading-[1.2] tracking-tight text-gray-900">「推し」の心拍数を、<br>あなたの手首に。</h1>
+            <p class="text-lg md:text-xl text-gray-600 font-medium leading-relaxed max-w-3xl mx-auto">ライブ会場の熱狂を、世界中のどこにいても共有する。OSHI-SYNCは、アイドルのスマートウェアとファンのデバイスをリアルタイムで同期させ、バイタルデータから感情の起伏までをハプティック（触覚）で伝える次世代の推し活プラットフォーム。</p>
         </div>
 
-        <!-- Real UI Image Showcase -->
-        <div class="relative w-full aspect-[21/9] md:aspect-video rounded-3xl overflow-hidden shadow-2xl mb-24 border border-white/10 shadow-black/80 group">
-            <img src="img/ui.png" alt="UI Dashboard" class="w-full h-full object-cover transition-transform duration-[3s] group-hover:scale-[1.03]">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none"></div>
+        <div class="relative w-full aspect-[21/9] md:aspect-video rounded-[32px] overflow-hidden shadow-2xl mb-32 border border-gray-200/50 group bg-zinc-900">
+            <img src="img/ui.png" alt="UI Dashboard" class="w-full h-full object-cover transition-transform duration-[3s] group-hover:scale-[1.02]">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none blend-overlay"></div>
         </div>
 
-        <!-- Features -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24">
-            
-            <div class="bg-white/5 border border-white/10 p-8 rounded-2xl hover:shadow-lg transition transform hover:-translate-y-1">
-                <div class="w-12 h-12 rounded-full flex items-center justify-center mb-6 bg-pink-900/30 text-pink-400 border border-pink-500/50">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+        <div class="flex flex-col gap-32 mb-32">
+        
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-rose-600 font-bold tracking-widest text-sm uppercase">THE PAIN OF DISTANCE</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">「同じ空間にいる」という最強の錯覚</h2>
+                        <div class="w-12 h-1 bg-rose-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">チケットの落選、物理的な距離。オンラインライブは便利ですが、会場の「地鳴りのような歓声」や「推しと目が合った瞬間の息遣い」は決して伝わりません。私たちは、この越えられない次元の壁をIoTとバイタル同期技術で突破します。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-rose-900/20 to-transparent"></div>
+                    </div>
                 </div>
-                <h3 class="text-xl font-bold mb-4 text-white">推しボイス自動生成</h3>
-                <p class="text-gray-400 text-sm leading-relaxed">設定した「推し」の性格や声質（連携済み・許諾済みの提携Vチューバー等）で、「お疲れ様！えらい！」と読み上げてくれます。</p>
-            </div>
-            
-            <div class="bg-white/5 border border-white/10 p-8 rounded-2xl hover:shadow-lg transition transform hover:-translate-y-1">
-                <div class="w-12 h-12 rounded-full flex items-center justify-center mb-6 bg-pink-900/30 text-pink-400 border border-pink-500/50">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                
+                <div class="mt-10">
+                    <div class="text-center mb-16">
+                        <span class="text-rose-600 font-bold tracking-widest text-sm uppercase">HAPTIC SYNCHRONIZATION</span>
+                        <h2 class="text-3xl md:text-4xl font-black mt-4 text-gray-900">感情を物理的な「振動と温度」に変換する</h2>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-rose-50 text-rose-600 border border-rose-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">心拍数リアルタイムリンク</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">アイドルの衣装に仕込まれた極小センサーが、ステージ上での心拍数を取得。ファンのリストバンドに同じBPMの鼓動として振動を転送します。</p>
+</div>
+
+
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-rose-50 text-rose-600 border border-rose-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">サーマル（温度）フィードバック</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">バラード曲での静寂な冷たさや、激しいダンスナンバーでの体温の上昇。ライブの展開に合わせてデバイスの温度が変化し、臨場感を増幅します。</p>
+</div>
+
+
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-rose-50 text-rose-600 border border-rose-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">双方向のエナジー・ドロップ</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">ファンがアプリ上で「ギフト」を投げると、アイドルのイヤモニに微細なASMRサウンドが届いたり、衣装のLEDが連動して光るなど、物理的なリアクションを起こせます。</p>
+</div>
+
+                    </div>
                 </div>
-                <h3 class="text-xl font-bold mb-4 text-white">タスク達成ご褒美システム</h3>
-                <p class="text-gray-400 text-sm leading-relaxed">面倒な確定申告や大掃除をクリアすると、推しからの「特別なボイスメッセージ」や「描き下ろしイラスト」がアンロック。</p>
-            </div>
-            
-            <div class="bg-white/5 border border-white/10 p-8 rounded-2xl hover:shadow-lg transition transform hover:-translate-y-1">
-                <div class="w-12 h-12 rounded-full flex items-center justify-center mb-6 bg-pink-900/30 text-pink-400 border border-pink-500/50">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-rose-600 font-bold tracking-widest text-sm uppercase">PROOF OF FANDOM</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">ブロックチェーンによる「最古参」の証明</h2>
+                        <div class="w-12 h-1 bg-rose-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">「誰が一番古くから応援していたか」。ファン同士の終わらないマウント合戦に終止符を打ちます。ライブの参加履歴や購入したグッズのデータはすべてSBT（譲渡不可能なNFT）として刻まれ、真の熱量を持続的に証明する「推し活の履歴書」となります。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-rose-900/20 to-transparent"></div>
+                    </div>
                 </div>
-                <h3 class="text-xl font-bold mb-4 text-white">最強のアラーム機能</h3>
-                <p class="text-gray-400 text-sm leading-relaxed">推しに「まだ寝てるの？遅刻しちゃうよ」と急かされるモーニングコール。絶対に起きられます。</p>
-            </div>
-            
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-rose-600 font-bold tracking-widest text-sm uppercase">SAFE COMMUNITY</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">スキャンダルから推しを守る、AIモデレーション</h2>
+                        <div class="w-12 h-1 bg-rose-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">熱狂は時に暴走します。OSHI-SYNCの専用コミュニティでは、AIが24時間体制で誹謗中傷や悪質なリーク情報の拡散を検知・遮断。クリエイターが安心してファンと交流できる心理的安全性とクリーンな環境を徹底的に守ります。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: bottom right;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-rose-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-rose-600 font-bold tracking-widest text-sm uppercase">GLOBAL IMPACT</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">Case Study | ドームツアーを行うK-POPグループ</h2>
+                        <div class="w-12 h-1 bg-rose-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">全世界で同時配信されたオンラインライブにOSHI-SYNCを導入。アンコールでメンバーが涙を流した瞬間、世界中数十万人のファンのデバイスに「急上昇した心拍数」が同期。SNS上では「心臓の音が伝わってきて号泣した」という投稿が溢れ、トレンド世界1位を獲得しました。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-rose-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-rose-600 font-bold tracking-widest text-sm uppercase">OUR VISION</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">「応援」を、最も純粋なエンタメへ</h2>
+                        <div class="w-12 h-1 bg-rose-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">誰かを強烈に好きになること。それは人間の持つ最も美しいエネルギーの一つです。私たちはテクノロジーを駆使してファンとクリエイターの間に横たわるノイズを取り除き、純度100%の共鳴空間を創り出します。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: bottom right;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-rose-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
         </div>
 
-        <!-- CTA -->
-        <div class="text-center bg-white/5 border border-white/10 rounded-3xl p-12 md:p-24 relative overflow-hidden">
+        <div class="text-center bg-gray-900 border border-gray-800 rounded-[3rem] p-16 md:p-32 relative overflow-hidden group shadow-2xl">
+            <div class="absolute inset-0 bg-gradient-to-br from-rose-900/40 to-transparent"></div>
             <div class="relative z-10">
-                <h2 class="text-3xl md:text-5xl font-black mb-6 text-white">次のステージへ。</h2>
-                <p class="text-gray-400 mb-10 max-w-lg mx-auto">最先端のテクノロジーで、業界の常識を覆しましょう。</p>
-                <a href="#" class="bg-pink-500 hover:bg-pink-400 text-white px-10 py-5 rounded-full font-bold text-lg inline-flex items-center gap-2 transition transform hover:-translate-y-1 hover:shadow-xl shadow-lg">
-                    推し活タスク管理を始める
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                <h2 class="text-4xl md:text-5xl font-black mb-8 text-white">画面の向こう側へ、触れよう。</h2>
+                <p class="text-gray-300 mb-12 max-w-xl mx-auto text-lg leading-relaxed">視覚と聴覚だけのライブ配信は過去のものです。推しがステージで流す汗の熱量を、ダイレクトに感じてください。</p>
+                <a href="#" class="bg-rose-500 hover:bg-rose-400 text-white px-12 py-5 rounded-full font-bold text-lg inline-flex items-center gap-3 transition transform hover:-translate-y-1 shadow-lg shadow-rose-500/30">
+                    同期デバイスを購入する
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
                 </a>
             </div>
         </div>
     </main>
+        
 
     <!-- Footer -->
     <footer class="py-8 text-center text-sm font-medium text-zinc-600 border-t border-white/10">

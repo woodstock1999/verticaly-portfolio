@@ -12,10 +12,10 @@
         body { font-family: 'Inter', 'Noto Sans JP', sans-serif; }
     </style>
 </head>
-<body class="bg-[#f8f9fa] text-slate-600 min-h-screen">
+<body class="bg-gray-50 text-stone-800 min-h-screen font-sans antialiased overflow-x-hidden">
 
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 backdrop-blur-md bg-opacity-80 bg-white/80 border-b border-gray-200 px-6 py-4 flex justify-between items-center transition-all">
+    <nav class="fixed w-full z-50 backdrop-blur-md bg-opacity-90 bg-white/90 border-b border-gray-200 px-8 py-4 flex justify-between items-center transition-all shadow-sm">
         <div class="font-black text-2xl tracking-tighter text-slate-800">COLOR-PREDICT AI</div>
         <div class="hidden md:flex gap-8 text-sm font-bold text-gray-600">
             <a href="#" class="hover:text-slate-800 transition">特徴</a>
@@ -26,60 +26,137 @@
     </nav>
 
     <!-- Hero Section -->
-    <main class="pt-32 pb-20 px-6 md:px-12 max-w-7xl mx-auto">
-        <div class="text-center max-w-4xl mx-auto mb-16">
-            <span class="bg-gray-900/30 text-text-slate-800 border border-gray-500/50 px-3 py-1 text-xs font-bold rounded-full tracking-widest uppercase mb-6 inline-block shadow-sm">fashion</span>
-            <h1 class="text-4xl md:text-6xl font-black mb-8 leading-tight tracking-tight">染めたては綺麗。でも、<br>1ヶ月後の髪色、予測できていますか？</h1>
-            <p class="text-lg md:text-xl text-gray-600 font-medium leading-relaxed max-w-2xl mx-auto">美容室でブリーチしてアッシュに染めても、すぐ色落ちしてヤンキーみたいな金髪になってしまう。お客様の「色落ちの不安」を取り除き、リピート率を劇的に上げるARミラー。</p>
+    
+    <main class="pt-[140px] pb-24 px-6 md:px-12 max-w-7xl mx-auto">
+        <div class="text-center max-w-4xl mx-auto mb-20 relative">
+            <span class="bg-gray-100 text-fuchsia-600 border border-gray-200 px-5 py-2 text-xs font-black rounded-full tracking-widest mb-8 inline-block shadow-sm uppercase">FASHION TECH / TREND FORECASTING</span>
+            <h1 class="text-4xl md:text-[54px] font-black mb-8 leading-[1.2] tracking-tight text-gray-900">来年の「流行色」は、<br>街角のピクセルが知っている。</h1>
+            <p class="text-lg md:text-xl text-gray-600 font-medium leading-relaxed max-w-3xl mx-auto">アパレル業界の在庫ロスを根絶する。COLOR-PREDICT AIは、世界中のストリートスナップ、SNSの画像データ、さらには政治経済のセンチメントを解析し、半年後にバズるトレンドカラーとシルエットをミリ単位で予測する究極のファッションOS。</p>
         </div>
 
-        <!-- Real UI Image Showcase -->
-        <div class="relative w-full aspect-[21/9] md:aspect-video rounded-3xl overflow-hidden shadow-2xl mb-24 border border-gray-200 shadow-xl group">
-            <img src="img/ui.png" alt="UI Dashboard" class="w-full h-full object-cover transition-transform duration-[3s] group-hover:scale-[1.03]">
-            <div class="absolute inset-0 bg-gradient-to-t from-white/30 to-transparent pointer-events-none"></div>
+        <div class="relative w-full aspect-[21/9] md:aspect-video rounded-[32px] overflow-hidden shadow-2xl mb-32 border border-gray-200/50 group bg-zinc-900">
+            <img src="img/ui.png" alt="UI Dashboard" class="w-full h-full object-cover transition-transform duration-[3s] group-hover:scale-[1.02]">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none blend-overlay"></div>
         </div>
 
-        <!-- Features -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24">
-            
-            <div class="bg-white border border-gray-200 shadow-sm p-8 rounded-2xl hover:shadow-lg transition transform hover:-translate-y-1">
-                <div class="w-12 h-12 rounded-full flex items-center justify-center mb-6 bg-gray-900/30 text-slate-800 border border-gray-500/50">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+        <div class="flex flex-col gap-32 mb-32">
+        
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-fuchsia-600 font-bold tracking-widest text-sm uppercase">THE INDUSTRY WASTE</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">年間数十億着が捨てられる「勘」のビジネス</h2>
+                        <div class="w-12 h-1 bg-fuchsia-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">ファッション業界の企画は、未だに少数のトップデザイナーやバイヤーの「直感」に依存しています。その結果生み出される「外れたトレンド」は、膨大な売れ残りと大量廃棄という深刻な環境問題、そして企業の巨大な利益圧迫を引き起こしています。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-fuchsia-900/20 to-transparent"></div>
+                    </div>
                 </div>
-                <h3 class="text-xl font-bold mb-4 text-black">AI退色シミュレーション</h3>
-                <p class="text-gray-600 text-sm leading-relaxed">現在の髪質、過去の履歴、使用するカラー剤のメーカー名を入力するだけで、2週間後・1ヶ月後の色落ちを高精細ARで予測表示。</p>
-            </div>
-            
-            <div class="bg-white border border-gray-200 shadow-sm p-8 rounded-2xl hover:shadow-lg transition transform hover:-translate-y-1">
-                <div class="w-12 h-12 rounded-full flex items-center justify-center mb-6 bg-gray-900/30 text-slate-800 border border-gray-500/50">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                
+                <div class="mt-10">
+                    <div class="text-center mb-16">
+                        <span class="text-fuchsia-600 font-bold tracking-widest text-sm uppercase">COMPUTER VISION</span>
+                        <h2 class="text-3xl md:text-4xl font-black mt-4 text-gray-900">世界中の画像を喰い尽くすビジョンAI</h2>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-fuchsia-50 text-fuchsia-600 border border-fuchsia-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">ストリート・ディープラーニング</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">渋谷、NY、パリ、ソウル。世界主要都市の定点カメラやInstagramの数億枚の画像から、通行人の服の「色相」「彩度」「シルエット」をAIがリアルタイムに抽出・定量化。</p>
+</div>
+
+
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-fuchsia-50 text-fuchsia-600 border border-fuchsia-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">マクロ感情指数（Social Sentiment）</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">「不景気の時はスカートの丈が長くなり、暗い色が流行る」という経験則をデータ化。政治不安や経済指標のニューステキストを解析し、大衆の潜在的な心理状態をトレンド予測に組み込みます。</p>
+</div>
+
+
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-fuchsia-50 text-fuchsia-600 border border-fuchsia-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">生地・素材のマイクロトレンド検知</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">単なる色だけでなく、「ツヤのある素材（サテン）」か「マットな素材（リネン）」かといった質感（テクスチャ）の流行の兆しすら、画像の光の反射率から解析します。</p>
+</div>
+
+                    </div>
                 </div>
-                <h3 class="text-xl font-bold mb-4 text-black">カラシャ（カラーシャンプー）提案</h3>
-                <p class="text-gray-600 text-sm leading-relaxed">「この色落ちを防ぐには、この紫シャンプーを」と、店販商品の自動レコメンド機能。物販の売上を加速させます。</p>
-            </div>
-            
-            <div class="bg-white border border-gray-200 shadow-sm p-8 rounded-2xl hover:shadow-lg transition transform hover:-translate-y-1">
-                <div class="w-12 h-12 rounded-full flex items-center justify-center mb-6 bg-gray-900/30 text-slate-800 border border-gray-500/50">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-fuchsia-600 font-bold tracking-widest text-sm uppercase">ACTIONABLE INSIGHTS</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">「半年後のピンポイントなRGB値」を提示</h2>
+                        <div class="w-12 h-1 bg-fuchsia-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">「来年はピンクが流行る」といった曖昧な情報ではありません。COLOR-PREDICT AIは、「今年の秋、アジア市場のZ世代において、HEX:#FF69B4（ホットピンク）のアウターの需要が前年比で210%増加する」といった、生産ラインに直結する超具体的な数値を出力します。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-fuchsia-900/20 to-transparent"></div>
+                    </div>
                 </div>
-                <h3 class="text-xl font-bold mb-4 text-black">顧客カルテ完全連動</h3>
-                <p class="text-gray-600 text-sm leading-relaxed">次回来店時に「前回の退色予測と実際の状態」を比較分析し、より完璧なカラーレシピをAIがアシスト。</p>
-            </div>
-            
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-fuchsia-600 font-bold tracking-widest text-sm uppercase">SUPPLY CHAIN INTEGRATION</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">サプライチェーンとのシームレスな統合</h2>
+                        <div class="w-12 h-1 bg-fuchsia-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">予測されたトレンドは、そのまま提携する生地メーカーの在庫システムや、縫製工場の空きラインとAPI連携。企画から生地の調達、生産開始までのタイムラグを極限まで短縮し、「今、最も求められている服」を最速で市場に投下します。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: bottom right;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-fuchsia-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-fuchsia-600 font-bold tracking-widest text-sm uppercase">PROVEN ROI</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">Case Study | 大手ファストファッションブランド</h2>
+                        <div class="w-12 h-1 bg-fuchsia-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">常に大量の在庫処分に悩まされていたグローバルブランド。一部のウィメンズラインの企画をCOLOR-PREDICT AIに完全委譲。AIが予測した「アースカラーのフレアパンツ」を主力にした結果、プロパー消化率（定価での販売率）が劇的に改善し、廃棄コストを年間12億円削減しました。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-fuchsia-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-fuchsia-600 font-bold tracking-widest text-sm uppercase">OUR VISION</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">データが織りなす、サステナブルな美</h2>
+                        <div class="w-12 h-1 bg-fuchsia-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">私たちはクリエイティビティを否定しません。AIは「何を何枚作るべきか」という正解を出し、デザイナーはそのキャンバスの上で「どう美しく見せるか」に集中する。これが次世代のアパレル産業の最適解です。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: bottom right;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-fuchsia-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
         </div>
 
-        <!-- CTA -->
-        <div class="text-center bg-gray-100 border border-gray-200 focus-ring rounded-3xl p-12 md:p-24 relative overflow-hidden">
+        <div class="text-center bg-gray-900 border border-gray-800 rounded-[3rem] p-16 md:p-32 relative overflow-hidden group shadow-2xl">
+            <div class="absolute inset-0 bg-gradient-to-br from-fuchsia-900/40 to-transparent"></div>
             <div class="relative z-10">
-                <h2 class="text-3xl md:text-5xl font-black mb-6 text-black">次のステージへ。</h2>
-                <p class="text-gray-600 mb-10 max-w-lg mx-auto">最先端のテクノロジーで、業界の常識を覆しましょう。</p>
-                <a href="#" class="bg-slate-800 hover:bg-slate-700 text-white px-10 py-5 rounded-full font-bold text-lg inline-flex items-center gap-2 transition transform hover:-translate-y-1 hover:shadow-xl ">
-                    ARミラーをサロンに導入
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                <h2 class="text-4xl md:text-5xl font-black mb-8 text-white">「カリスマバイヤーの勘」は、もういらない。</h2>
+                <p class="text-gray-300 mb-12 max-w-xl mx-auto text-lg leading-relaxed">売れ残りの山（セール品）を作る時代は終わりました。データ駆動の圧倒的な需要予測を。</p>
+                <a href="#" class="bg-fuchsia-500 hover:bg-fuchsia-400 text-white px-12 py-5 rounded-full font-bold text-lg inline-flex items-center gap-3 transition transform hover:-translate-y-1 shadow-lg shadow-fuchsia-500/30">
+                    トレンドレポートを取得
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
                 </a>
             </div>
         </div>
     </main>
+        
 
     <!-- Footer -->
     <footer class="py-8 text-center text-sm font-medium text-gray-400 border-t border-gray-200">

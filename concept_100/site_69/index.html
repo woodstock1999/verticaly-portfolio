@@ -12,10 +12,10 @@
         body { font-family: 'Inter', 'Noto Sans JP', sans-serif; }
     </style>
 </head>
-<body class="bg-white text-gray-900 min-h-screen">
+<body class="bg-gray-50 text-stone-800 min-h-screen font-sans antialiased overflow-x-hidden">
 
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 backdrop-blur-md bg-opacity-80 bg-white/80 border-b border-gray-200 px-6 py-4 flex justify-between items-center transition-all">
+    <nav class="fixed w-full z-50 backdrop-blur-md bg-opacity-90 bg-white/90 border-b border-gray-200 px-8 py-4 flex justify-between items-center transition-all shadow-sm">
         <div class="font-black text-2xl tracking-tighter text-black">SILENT-STUDY</div>
         <div class="hidden md:flex gap-8 text-sm font-bold text-gray-600">
             <a href="#" class="hover:text-black transition">特徴</a>
@@ -26,60 +26,137 @@
     </nav>
 
     <!-- Hero Section -->
-    <main class="pt-32 pb-20 px-6 md:px-12 max-w-7xl mx-auto">
-        <div class="text-center max-w-4xl mx-auto mb-16">
-            <span class="bg-red-900/30 text-text-black border border-red-500/50 px-3 py-1 text-xs font-bold rounded-full tracking-widest uppercase mb-6 inline-block shadow-sm">experimental</span>
-            <h1 class="text-4xl md:text-6xl font-black mb-8 leading-tight tracking-tight">究極の集中。スマホを触れば、<br>自動で「100円」没収。</h1>
-            <p class="text-lg md:text-xl text-gray-600 font-medium leading-relaxed max-w-2xl mx-auto">試験勉強や締め切り前。ついついスマホを見てしまい、気づけば1時間が溶けている。「気合い」や「スクリーンタイム制限」ではもう自分を止められない、意志の弱いあなたへ。</p>
+    
+    <main class="pt-[140px] pb-24 px-6 md:px-12 max-w-7xl mx-auto">
+        <div class="text-center max-w-4xl mx-auto mb-20 relative">
+            <span class="bg-gray-100 text-gray-600 border border-gray-200 px-5 py-2 text-xs font-black rounded-full tracking-widest mb-8 inline-block shadow-sm uppercase">PRODUCTIVITY / IoT</span>
+            <h1 class="text-4xl md:text-[54px] font-black mb-8 leading-[1.2] tracking-tight text-gray-900">「深い集中」を、<br>スイッチ一つで召喚する。</h1>
+            <p class="text-lg md:text-xl text-gray-600 font-medium leading-relaxed max-w-3xl mx-auto">スマホの通知、家族の話し声、終わらないマルチタスク。SILENT-STUDYは、周囲のノイズを打ち消すIoTデバイスと、脳波をフォーカス状態へ導くバイノーラルビートを組み合わせた「絶対領域」構築システム。</p>
         </div>
 
-        <!-- Real UI Image Showcase -->
-        <div class="relative w-full aspect-[21/9] md:aspect-video rounded-3xl overflow-hidden shadow-2xl mb-24 border border-gray-200 shadow-xl group">
-            <img src="img/ui.png" alt="UI Dashboard" class="w-full h-full object-cover transition-transform duration-[3s] group-hover:scale-[1.03]">
-            <div class="absolute inset-0 bg-gradient-to-t from-white/30 to-transparent pointer-events-none"></div>
+        <div class="relative w-full aspect-[21/9] md:aspect-video rounded-[32px] overflow-hidden shadow-2xl mb-32 border border-gray-200/50 group bg-zinc-900">
+            <img src="img/ui.png" alt="UI Dashboard" class="w-full h-full object-cover transition-transform duration-[3s] group-hover:scale-[1.02]">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none blend-overlay"></div>
         </div>
 
-        <!-- Features -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24">
-            
-            <div class="bg-white border border-gray-200 shadow-sm p-8 rounded-2xl hover:shadow-lg transition transform hover:-translate-y-1">
-                <div class="w-12 h-12 rounded-full flex items-center justify-center mb-6 bg-red-900/30 text-black border border-red-500/50">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+        <div class="flex flex-col gap-32 mb-32">
+        
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-gray-600 font-bold tracking-widest text-sm uppercase">THE ATTENTION ECONOMY</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">「集中できない」は、あなたのせいではない</h2>
+                        <div class="w-12 h-1 bg-gray-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">現代は「注意力の奪い合い」の時代です。アプリの通知音、SNSのタイムライン、不規則な雑音。これらは人間の脳が本来持っている「フロー状態（深い集中）」への移行を、意図的かつ暴力的に阻害するように設計されています。気合いで抗うことは不可能です。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-gray-900/20 to-transparent"></div>
+                    </div>
                 </div>
-                <h3 class="text-xl font-bold mb-4 text-black">強制的な無音の規律</h3>
-                <p class="text-gray-600 text-sm leading-relaxed">ポモドーロ（25分）をセットしてスマホを裏返します。途中で持ち上げたり、他のアプリを開くと、即座にクレジットカードから100円が引き落とされます。</p>
-            </div>
-            
-            <div class="bg-white border border-gray-200 shadow-sm p-8 rounded-2xl hover:shadow-lg transition transform hover:-translate-y-1">
-                <div class="w-12 h-12 rounded-full flex items-center justify-center mb-6 bg-red-900/30 text-black border border-red-500/50">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                
+                <div class="mt-10">
+                    <div class="text-center mb-16">
+                        <span class="text-gray-600 font-bold tracking-widest text-sm uppercase">ACTIVE ACOUSTIC CONTROL</span>
+                        <h2 class="text-3xl md:text-4xl font-black mt-4 text-gray-900">空間そのものをノイズキャンセリング</h2>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-gray-50 text-gray-600 border border-gray-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">卓上型アクティブ・ノイズコントロール</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">デスクに置く小さなデバイスが、周囲の環境音（車の音、話し声）を内蔵マイクで解析。逆位相の音波をピンポイントで放射し、あなたの耳の周りだけに「完全な静寂」のドームを作り出します。</p>
+</div>
+
+
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-gray-50 text-gray-600 border border-gray-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">脳波誘導バイノーラル・ビート</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">静寂の中でも集中できない時。左右の耳にわずかに異なる周波数の音を流すことで、脳波を意図的に「深い集中に適したガンマ波」へとチューニングするサウンドトラックを自動再生。</p>
+</div>
+
+
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-gray-50 text-gray-600 border border-gray-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">スマート通知ブロック（Digital Detox）</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">デバイスをオンにすると同時に、スマホとPCが強制的に「機内モード（完全ブロック）」へ移行。事前に設定したVIP（家族からの緊急電話等）以外のあらゆる通知を遮断します。</p>
+</div>
+
+                    </div>
                 </div>
-                <h3 class="text-xl font-bold mb-4 text-black">没収金は全額寄付</h3>
-                <p class="text-gray-600 text-sm leading-relaxed">あなたが集中を乱して支払ったペナルティは、非営利の教育支援団体へ自動的に寄付されます。「無駄遣い」にはなりません。</p>
-            </div>
-            
-            <div class="bg-white border border-gray-200 shadow-sm p-8 rounded-2xl hover:shadow-lg transition transform hover:-translate-y-1">
-                <div class="w-12 h-12 rounded-full flex items-center justify-center mb-6 bg-red-900/30 text-black border border-red-500/50">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-gray-600 font-bold tracking-widest text-sm uppercase">BIOMETRIC POMODORO</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">「ポモドーロ」を超えた、生体リズム最適化</h2>
+                        <div class="w-12 h-1 bg-gray-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">「25分集中、5分休憩」といった固定のタイマーは万能ではありません。SILENT-STUDYはスマートウォッチと連携し、あなたの心拍数のゆらぎから「集中力の限界」をAIが検知。最適なタイミングで環境音を小鳥のさえずりに変え、自然な休憩へと誘導します。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-gray-900/20 to-transparent"></div>
+                    </div>
                 </div>
-                <h3 class="text-xl font-bold mb-4 text-black">ストイック・ダッシュボード</h3>
-                <p class="text-gray-600 text-sm leading-relaxed">「自分がどれだけ集中できたか」「どれだけスマホの誘惑に負けて寄付したか」を容赦なくグラフ化。</p>
-            </div>
-            
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-gray-600 font-bold tracking-widest text-sm uppercase">FOCUS ANALYTICS</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">「集中力の家計簿」による振り返り</h2>
+                        <div class="w-12 h-1 bg-gray-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">専用アプリには、毎日の「ディープワーク（深い集中状態）時間」がグラフとして記録されます。「午前10時が最も集中度が高い」「コーヒーを飲んだ日は午後まで集中が持続する」など、あなた独自の生産性パターンを可視化します。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: bottom right;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-gray-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-gray-600 font-bold tracking-widest text-sm uppercase">USER SUCCESS</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">Case Study | リモートワークのプログラマー</h2>
+                        <div class="w-12 h-1 bg-gray-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">自宅での作業中、隣室の家族の生活音やSNSの誘惑に負け、1日3時間しか実働できていなかったエンジニア。SILENT-STUDY導入後、スイッチを入れた瞬間に「仕事以外のことができない空間」が物理的に生成されるため、ディープワークの時間が1日平均6時間へ倍増。タスクの消化速度が劇的に上がりました。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-gray-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-gray-600 font-bold tracking-widest text-sm uppercase">OUR VISION</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">「気を散らすもの」からの完全なる解放</h2>
+                        <div class="w-12 h-1 bg-gray-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">最高のアイデアや、魂を込めた作品は、「途切れることのない深い思考」からしか生まれません。私たちはテクノロジーを駆使して、現代社会が奪った「静かなる没入空間」を人類に取り戻します。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: bottom right;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-gray-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
         </div>
 
-        <!-- CTA -->
-        <div class="text-center bg-gray-100 border border-gray-200 focus-ring rounded-3xl p-12 md:p-24 relative overflow-hidden">
+        <div class="text-center bg-gray-900 border border-gray-800 rounded-[3rem] p-16 md:p-32 relative overflow-hidden group shadow-2xl">
+            <div class="absolute inset-0 bg-gradient-to-br from-gray-900/40 to-transparent"></div>
             <div class="relative z-10">
-                <h2 class="text-3xl md:text-5xl font-black mb-6 text-black">次のステージへ。</h2>
-                <p class="text-gray-600 mb-10 max-w-lg mx-auto">最先端のテクノロジーで、業界の常識を覆しましょう。</p>
-                <a href="#" class="bg-red-700 hover:bg-red-600 text-white px-10 py-5 rounded-full font-bold text-lg inline-flex items-center gap-2 transition transform hover:-translate-y-1 hover:shadow-xl ">
-                    覚悟を決めてダウンロード
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                <h2 class="text-4xl md:text-5xl font-black mb-8 text-white">世界から、ノイズを消去せよ。</h2>
+                <p class="text-gray-300 mb-12 max-w-xl mx-auto text-lg leading-relaxed">あなたの集中力は、あなたが思っているより遥かに高い。ただ、環境がそれを妨げているだけです。</p>
+                <a href="#" class="bg-gray-500 hover:bg-gray-400 text-white px-12 py-5 rounded-full font-bold text-lg inline-flex items-center gap-3 transition transform hover:-translate-y-1 shadow-lg shadow-gray-500/30">
+                    集中空間をデザインする
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
                 </a>
             </div>
         </div>
     </main>
+        
 
     <!-- Footer -->
     <footer class="py-8 text-center text-sm font-medium text-gray-400 border-t border-gray-200">

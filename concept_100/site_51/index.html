@@ -12,10 +12,10 @@
         body { font-family: 'Inter', 'Noto Sans JP', sans-serif; }
     </style>
 </head>
-<body class="bg-[#09090b] text-white min-h-screen">
+<body class="bg-gray-50 text-stone-800 min-h-screen font-sans antialiased overflow-x-hidden">
 
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 backdrop-blur-md bg-opacity-80 bg-black/50 border-b border-white/10 px-6 py-4 flex justify-between items-center transition-all">
+    <nav class="fixed w-full z-50 backdrop-blur-md bg-opacity-90 bg-white/90 border-b border-gray-200 px-8 py-4 flex justify-between items-center transition-all shadow-sm">
         <div class="font-black text-2xl tracking-tighter text-fuchsia-400">MIDNIGHT DROP</div>
         <div class="hidden md:flex gap-8 text-sm font-bold text-gray-300">
             <a href="#" class="hover:text-fuchsia-400 transition">特徴</a>
@@ -26,61 +26,137 @@
     </nav>
 
     <!-- Hero Section -->
-    <main class="pt-32 pb-20 px-6 md:px-12 max-w-7xl mx-auto">
-        <div class="text-center max-w-4xl mx-auto mb-16">
-            <span class="bg-fuchsia-900/50 text-fuchsia-300 border-fuchsia-500 border px-3 py-1 text-xs font-bold rounded-full tracking-widest uppercase mb-6 inline-block">Niche Local Solution</span>
-            <h1 class="text-4xl md:text-6xl font-black mb-8 leading-tight tracking-tight">深夜の空席と余った酒を、<br>ゲリラ通知でお金に換える。</h1>
-            <p class="text-lg md:text-xl text-gray-400 font-medium leading-relaxed max-w-2xl mx-auto">深夜2時、客はいないが閉めるには早い。外にはまだ歩いている人がいるのにアプローチできない...。そんな深夜営業の悩みを解決するフラッシュオファーSaaS。半径1kmの「今飲みたい人」に直接通知を届けます。</p>
+    
+    <main class="pt-[140px] pb-24 px-6 md:px-12 max-w-7xl mx-auto">
+        <div class="text-center max-w-4xl mx-auto mb-20 relative">
+            <span class="bg-gray-100 text-fuchsia-600 border border-gray-200 px-5 py-2 text-xs font-black rounded-full tracking-widest mb-8 inline-block shadow-sm uppercase">E-COMMERCE / HYPE DROPS</span>
+            <h1 class="text-4xl md:text-[54px] font-black mb-8 leading-[1.2] tracking-tight text-gray-900">真夜中を熱狂させる、<br>シークレット・ドロップ。</h1>
+            <p class="text-lg md:text-xl text-gray-600 font-medium leading-relaxed max-w-3xl mx-auto">MIDNIGHT DROPは、ストリートブランドや限定スニーカーの「ゲリラ販売」に特化したEコマース・プラットフォーム。BOTを完全に排除し、本物の熱量を持つファンだけに商品と熱狂を届けます。</p>
         </div>
 
-                <!-- UI Showcase -->
-        <div class="relative w-full aspect-video rounded-2xl overflow-hidden shadow-2xl mb-24 border border-white/10 shadow-black/80 group">
-            <img src="img/ui.png" alt="UI Dashboard" class="w-full h-full object-cover transition-transform duration-[2s] group-hover:scale-105">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
-            <div class="absolute bottom-8 left-8">
-                <div class="px-4 py-2 bg-black/70 backdrop-blur text-white rounded-lg text-sm font-bold shadow-lg">⚡ AI-Powered Dashboard</div>
-            </div>
+        <div class="relative w-full aspect-[21/9] md:aspect-video rounded-[32px] overflow-hidden shadow-2xl mb-32 border border-gray-200/50 group bg-zinc-900">
+            <img src="img/ui.png" alt="UI Dashboard" class="w-full h-full object-cover transition-transform duration-[3s] group-hover:scale-[1.02]">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none blend-overlay"></div>
         </div>
 
-        <!-- Features -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24">
-            
-            <div class="bg-white/5 border border-white/10 p-8 rounded-2xl hover:shadow-lg transition">
-                <div class="w-12 h-12 rounded-full flex items-center justify-center mb-6 bg-fuchsia-900/50 text-fuchsia-300 border-fuchsia-500 border">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+        <div class="flex flex-col gap-32 mb-32">
+        
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-fuchsia-600 font-bold tracking-widest text-sm uppercase">THE DEATH OF HYPE</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">「予定調和の発売日」が奪うブランドの熱気</h2>
+                        <div class="w-12 h-1 bg-fuchsia-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">「〇月〇日12時発売」。この親切すぎる告知は、転売ヤーの準備を助け、ファンから「予期せぬ出会い」のスリルを奪っています。MIDNIGHT DROPは、時間という概念をハックし、最も熱量の高いユーザーだけを優遇するゲリラシステムです。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-fuchsia-900/20 to-transparent"></div>
+                    </div>
                 </div>
-                <h3 class="text-xl font-bold mb-4 text-white">リアルタイムMAP通知</h3>
-                <p class="text-gray-400 text-sm leading-relaxed">現在地周辺でアプリを開いているユーザーへ、「今から1杯半額！」などのプッシュ通知を即時配信。</p>
-            </div>
-            
-            <div class="bg-white/5 border border-white/10 p-8 rounded-2xl hover:shadow-lg transition">
-                <div class="w-12 h-12 rounded-full flex items-center justify-center mb-6 bg-fuchsia-900/50 text-fuchsia-300 border-fuchsia-500 border">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                
+                <div class="mt-10">
+                    <div class="text-center mb-16">
+                        <span class="text-fuchsia-600 font-bold tracking-widest text-sm uppercase">ANTI-BOT ECOSYSTEM</span>
+                        <h2 class="text-3xl md:text-4xl font-black mt-4 text-gray-900">転売ヤーを絶望させる、独自の販売プロトコル</h2>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-fuchsia-50 text-fuchsia-600 border border-fuchsia-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">ダイナミック・パスコード</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">販売開始数分前に、公式InstagramのストーリーズやDiscord上で暗号化されたパスコードを一瞬だけ公開。Botには決して突破できない人間だけの関門です。</p>
+</div>
+
+
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-fuchsia-50 text-fuchsia-600 border border-fuchsia-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">Proof of Fandom (ファン証明)</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">過去の購入履歴、SNSでのブランドへの言及頻度、ライブ配信の視聴時間をスコア化。熱量の高いファンほど、販売ページへのアクセス順位が優遇されます。</p>
+</div>
+
+
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-fuchsia-50 text-fuchsia-600 border border-fuchsia-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">ARスニーカー・フィッティング</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">購入前にカメラで自分の足をスキャンし、ARで限定スニーカーを試着。サイズ違いによる無駄な返品を防ぎ、即決を後押しします。</p>
+</div>
+
+                    </div>
                 </div>
-                <h3 class="text-xl font-bold mb-4 text-white">余剰在庫の解消</h3>
-                <p class="text-gray-400 text-sm leading-relaxed">賞味期限が近い、あるいは捌きたい食材・お酒をピンポイントで限定オファーにし、廃棄ロスを削減。</p>
-            </div>
-            
-            <div class="bg-white/5 border border-white/10 p-8 rounded-2xl hover:shadow-lg transition">
-                <div class="w-12 h-12 rounded-full flex items-center justify-center mb-6 bg-fuchsia-900/50 text-fuchsia-300 border-fuchsia-500 border">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-fuchsia-600 font-bold tracking-widest text-sm uppercase">GAMIFIED QUEUE</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">サーバーダウンをエンタメに変えるUI</h2>
+                        <div class="w-12 h-1 bg-fuchsia-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">何十万人が殺到する待機室（キュー）。MIDNIGHT DROPは単なるローディング画面を表示しません。待機中にブランドの未公開映像を流したり、クイズを出題して正解順にキューを早めたりと、待ち時間すらも熱狂のコンテンツに変えます。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-fuchsia-900/20 to-transparent"></div>
+                    </div>
                 </div>
-                <h3 class="text-xl font-bold mb-4 text-white">深夜のスマート決済</h3>
-                <p class="text-gray-400 text-sm leading-relaxed">決済はアプリ内で完結。深夜の面倒な現金トラブルや食い逃げリスクを完全にゼロにします。</p>
-            </div>
-            
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-fuchsia-600 font-bold tracking-widest text-sm uppercase">ZERO INVENTORY</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">在庫ゼロから始まる、オンデマンド生産連携</h2>
+                        <div class="w-12 h-1 bg-fuchsia-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">プレオーダー型のドロップにも対応。数分間で集まった注文データに基づき、提携する国内外の工場へ瞬時に生産データを送信。ブランドは一切の在庫リスクを抱えることなく、莫大なキャッシュフローを生み出します。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: bottom right;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-fuchsia-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-fuchsia-600 font-bold tracking-widest text-sm uppercase">BRAND SUCCESS</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">Case Study | 新鋭のテックウェアブランド</h2>
+                        <div class="w-12 h-1 bg-fuchsia-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">パリコレで話題となった新ブランドが、初のカプセルコレクションを深夜2時にゲリラドロップ。事前の告知は一切なし。しかし「熱量スコア」上位のファンへのプッシュ通知のみで、3,000着の在庫がわずか42秒で完売。SNSのトレンドをジャックしました。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-fuchsia-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-fuchsia-600 font-bold tracking-widest text-sm uppercase">OUR VISION</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">「買う」という行為を、カルチャーへ</h2>
+                        <div class="w-12 h-1 bg-fuchsia-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">ただクリックして決済するだけなら、Amazonで十分です。私たちは「手に入れるまでの過程」に熱狂とストーリーを付加し、Eコマースをエンターテインメントへと昇華させます。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: bottom right;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-fuchsia-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
         </div>
 
-        <!-- CTA -->
-        <div class="text-center bg-white/5 border border-white/10 rounded-3xl p-12 md:p-24">
-            <h2 class="text-3xl md:text-5xl font-black mb-6 text-white">次のステージへ。</h2>
-            <p class="text-gray-400 mb-10 max-w-lg mx-auto">最新のテクノロジーを活用して、あなたの生活とビジネスに革命を起こしましょう。</p>
-            <a href="#" class="bg-fuchsia-600 hover:bg-fuchsia-500 px-10 py-5 rounded-full font-bold text-lg inline-flex items-center gap-2 transition transform hover:-translate-y-1 hover:shadow-xl ">
-                店舗登録して今すぐ集客
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-            </a>
+        <div class="text-center bg-gray-900 border border-gray-800 rounded-[3rem] p-16 md:p-32 relative overflow-hidden group shadow-2xl">
+            <div class="absolute inset-0 bg-gradient-to-br from-fuchsia-900/40 to-transparent"></div>
+            <div class="relative z-10">
+                <h2 class="text-4xl md:text-5xl font-black mb-8 text-white">世界中が寝静まる時、ゲームは始まる。</h2>
+                <p class="text-gray-300 mb-12 max-w-xl mx-auto text-lg leading-relaxed">いつ来るかわからない通知。数秒で消える在庫。このスリルこそが、ブランドの価値を極限まで高めます。</p>
+                <a href="#" class="bg-fuchsia-500 hover:bg-fuchsia-400 text-white px-12 py-5 rounded-full font-bold text-lg inline-flex items-center gap-3 transition transform hover:-translate-y-1 shadow-lg shadow-fuchsia-500/30">
+                    次のドロップを待機する
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                </a>
+            </div>
         </div>
     </main>
+        
 
     <!-- Footer -->
     <footer class="py-8 text-center text-sm font-medium text-zinc-600 border-t border-white/10">

@@ -12,10 +12,10 @@
         body { font-family: 'Inter', 'Noto Sans JP', sans-serif; }
     </style>
 </head>
-<body class="bg-[#fdfbf7] text-gray-800 min-h-screen">
+<body class="bg-gray-50 text-stone-800 min-h-screen font-sans antialiased overflow-x-hidden">
 
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 backdrop-blur-md bg-opacity-80 bg-black/50 border-b border-white/10 px-6 py-4 flex justify-between items-center transition-all">
+    <nav class="fixed w-full z-50 backdrop-blur-md bg-opacity-90 bg-white/90 border-b border-gray-200 px-8 py-4 flex justify-between items-center transition-all shadow-sm">
         <div class="font-black text-2xl tracking-tighter text-amber-700">GENTLE-LAMP</div>
         <div class="hidden md:flex gap-8 text-sm font-bold text-gray-300">
             <a href="#" class="hover:text-amber-700 transition">特徴</a>
@@ -26,58 +26,137 @@
     </nav>
 
     <!-- Hero Section -->
-    <main class="pt-32 pb-20 px-6 md:px-12 max-w-7xl mx-auto">
-        <div class="text-center max-w-4xl mx-auto mb-16">
-            <span class="bg-amber-900/30 text-amber-500 border border-amber-500/50 px-3 py-1 text-xs font-bold rounded-full tracking-widest uppercase mb-6 inline-block">health</span>
-            <h1 class="text-4xl md:text-6xl font-black mb-8 leading-tight tracking-tight">見守られていることに、<br>気づかない安心感。</h1>
-            <p class="text-lg md:text-xl text-gray-400 font-medium leading-relaxed max-w-2xl mx-auto">離れて暮らす親が心配。でも室内にカメラを置いたり、毎日生存確認の電話をするのは「監視されているようだ」と嫌がられてしまう。プライバシーを完全に守る「そっとした見守り」の形。</p>
+    
+    <main class="pt-[140px] pb-24 px-6 md:px-12 max-w-7xl mx-auto">
+        <div class="text-center max-w-4xl mx-auto mb-20 relative">
+            <span class="bg-gray-100 text-blue-600 border border-gray-200 px-5 py-2 text-xs font-black rounded-full tracking-widest mb-8 inline-block shadow-sm uppercase">SMART HOME / SLEEP TECH</span>
+            <h1 class="text-4xl md:text-[54px] font-black mb-8 leading-[1.2] tracking-tight text-gray-900">太陽のリズムを、<br>あなたの寝室にインストールする。</h1>
+            <p class="text-lg md:text-xl text-gray-600 font-medium leading-relaxed max-w-3xl mx-auto">現代人が眠れないのは、夜も明るすぎるからです。GENTLE-LAMPは、概日リズム（サーカディアンリズム）と睡眠医学に基づき、時間帯に合わせて光の「色温度」と「波長」を全自動でコントロールする究極のスリープテック照明。</p>
         </div>
 
-        <!-- Real UI Image Showcase -->
-        <div class="relative w-full aspect-[21/9] md:aspect-video rounded-3xl overflow-hidden shadow-2xl mb-24 border border-white/10 shadow-black/80 group">
-            <img src="img/ui.png" alt="UI Dashboard" class="w-full h-full object-cover transition-transform duration-[2s] group-hover:scale-[1.02]">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none"></div>
+        <div class="relative w-full aspect-[21/9] md:aspect-video rounded-[32px] overflow-hidden shadow-2xl mb-32 border border-gray-200/50 group bg-zinc-900">
+            <img src="img/ui.png" alt="UI Dashboard" class="w-full h-full object-cover transition-transform duration-[3s] group-hover:scale-[1.02]">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none blend-overlay"></div>
         </div>
 
-        <!-- Features -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24">
-            
-            <div class="bg-white/5 border border-white/10 p-8 rounded-2xl hover:shadow-lg transition">
-                <div class="w-12 h-12 rounded-full flex items-center justify-center mb-6 bg-amber-900/30 text-amber-500 border border-amber-500/50">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+        <div class="flex flex-col gap-32 mb-32">
+        
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-blue-600 font-bold tracking-widest text-sm uppercase">THE LIGHT POLLUTION</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">ブルーライトという「人工の太陽」</h2>
+                        <div class="w-12 h-1 bg-blue-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">夜になっても煌々と照らされる白いLED照明やスマートフォンの光。これらに含まれる強烈なブルーライトは、脳に「今は昼間だ」と錯覚させ、睡眠ホルモン（メラトニン）の分泌を極端に阻害します。不眠症の最大の原因は、実はあなたの部屋の天井にあるのです。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-blue-900/20 to-transparent"></div>
+                    </div>
                 </div>
-                <h3 class="text-xl font-bold mb-4 text-white">電球を替えるだけ</h3>
-                <p class="text-gray-400 text-sm leading-relaxed">いつものリビングやトイレの電球をGENTLE-LAMPに替えるだけ。工事もWi-Fi設定も一切不要です。</p>
-            </div>
-            
-            <div class="bg-white/5 border border-white/10 p-8 rounded-2xl hover:shadow-lg transition">
-                <div class="w-12 h-12 rounded-full flex items-center justify-center mb-6 bg-amber-900/30 text-amber-500 border border-amber-500/50">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                
+                <div class="mt-10">
+                    <div class="text-center mb-16">
+                        <span class="text-blue-600 font-bold tracking-widest text-sm uppercase">BIOMETRIC LIGHTING</span>
+                        <h2 class="text-3xl md:text-4xl font-black mt-4 text-gray-900">脳を騙し、自然な眠りへ誘うアルゴリズム</h2>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-blue-50 text-blue-600 border border-blue-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">メラトニン・プロテクト発光</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">日没時刻を過ぎると、GENTLE-LAMPは自動的にブルーライトの波長を完全にカット。焚き火のような深い琥珀色（アンバー）へと変化し、脳の入眠準備を強力にサポートします。</p>
+</div>
+
+
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-blue-50 text-blue-600 border border-blue-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">フェードアウト入眠ガイド</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">ベッドに入ってから30分かけて、光が呼吸するようにゆっくりと暗くなっていきます。この「擬似的な日没」が副交感神経を優位にし、スムーズな眠りに導きます。</p>
+</div>
+
+
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-blue-50 text-blue-600 border border-blue-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">サンライズ・ウェイクアップ</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">けたたましいアラーム音で強制的に起こされるストレスは最悪です。起床時間の30分前から、朝日のような青白い光が徐々に部屋を照らし、自然でスッキリとした目覚めを実現します。</p>
+</div>
+
+                    </div>
                 </div>
-                <h3 class="text-xl font-bold mb-4 text-white">行動リズム解析AI</h3>
-                <p class="text-gray-400 text-sm leading-relaxed">「朝の点灯」「夜の消灯」のリズムをAIが学習。いつもと違う行動パターンが起きた時だけ静かにお知らせ。</p>
-            </div>
-            
-            <div class="bg-white/5 border border-white/10 p-8 rounded-2xl hover:shadow-lg transition">
-                <div class="w-12 h-12 rounded-full flex items-center justify-center mb-6 bg-amber-900/30 text-amber-500 border border-amber-500/50">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-blue-600 font-bold tracking-widest text-sm uppercase">IoT INTEGRATION</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">スマートウォッチの睡眠データと完全同期</h2>
+                        <div class="w-12 h-1 bg-blue-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">Apple WatchやOura Ringのデータと連動。「昨晩は深い睡眠（ノンレム睡眠）が少なかった」とAIが判定した場合、その日の夜は自動的に「よりリラックス効果の高い暖色系の光」の時間を長めに設定するダイナミック・アジャストメント機能を搭載。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-blue-900/20 to-transparent"></div>
+                    </div>
                 </div>
-                <h3 class="text-xl font-bold mb-4 text-white">カメラレス・マイクレス</h3>
-                <p class="text-gray-400 text-sm leading-relaxed">映像や音声は一切取得しません。だからこそ寝室や脱衣所など、本当に倒れるリスクが高い場所にも設置可能。</p>
-            </div>
-            
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-blue-600 font-bold tracking-widest text-sm uppercase">FOCUS OPTIMIZATION</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">読書やデスクワークに最適化された「集中モード」</h2>
+                        <div class="w-12 h-1 bg-blue-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">睡眠時だけではありません。日中のテレワーク時には、脳を覚醒させ集中力を高める「6000ケルビン」の昼光色を照射。体内時計をリセットし、昼夜のメリハリを空間全体でデザインします。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: bottom right;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-blue-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-blue-600 font-bold tracking-widest text-sm uppercase">LIFE CHANGED</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">Case Study | 慢性的な不眠に悩むビジネスマン</h2>
+                        <div class="w-12 h-1 bg-blue-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">睡眠導入剤を手放せなかった40代男性。寝室とリビングの照明をすべてGENTLE-LAMPに変更したところ、導入からわずか1週間で入眠までの時間が1時間以上短縮。朝もアラームが鳴る前に自然と目が覚めるようになり、「日中の頭のキレが20代の頃に戻った」と語ります。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-blue-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-blue-600 font-bold tracking-widest text-sm uppercase">OUR VISION</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">「暗闇の価値」を取り戻す</h2>
+                        <div class="w-12 h-1 bg-blue-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">人類は電気を発明して夜を征服しましたが、同時に「質の高い睡眠」を失いました。私たちは最先端の光学テクノロジーを用いて、現代の寝室に「最も自然で美しい夜」を取り戻します。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: bottom right;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-blue-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
         </div>
 
-        <!-- CTA -->
-        <div class="text-center bg-white/5 border border-white/10 rounded-3xl p-12 md:p-24">
-            <h2 class="text-3xl md:text-5xl font-black mb-6 text-white">次のステージへ。</h2>
-            <p class="text-gray-400 mb-10 max-w-lg mx-auto">最新のテクノロジーを活用して、あなたの生活とビジネスに革命を起こしましょう。</p>
-            <a href="#" class="bg-amber-600 hover:bg-amber-500 text-white px-10 py-5 rounded-full font-bold text-lg inline-flex items-center gap-2 transition transform hover:-translate-y-1 hover:shadow-xl ">
-                トライアル電球を申し込む
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-            </a>
+        <div class="text-center bg-gray-900 border border-gray-800 rounded-[3rem] p-16 md:p-32 relative overflow-hidden group shadow-2xl">
+            <div class="absolute inset-0 bg-gradient-to-br from-blue-900/40 to-transparent"></div>
+            <div class="relative z-10">
+                <h2 class="text-4xl md:text-5xl font-black mb-8 text-white">光で眠り、光で目覚める。</h2>
+                <p class="text-gray-300 mb-12 max-w-xl mx-auto text-lg leading-relaxed">睡眠薬に頼る前に、部屋の光を変えてください。極上の「入眠」と、奇跡のような「目覚め」を。</p>
+                <a href="#" class="bg-blue-500 hover:bg-blue-400 text-white px-12 py-5 rounded-full font-bold text-lg inline-flex items-center gap-3 transition transform hover:-translate-y-1 shadow-lg shadow-blue-500/30">
+                    睡眠スコアを診断する
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                </a>
+            </div>
         </div>
     </main>
+        
 
     <!-- Footer -->
     <footer class="py-8 text-center text-sm font-medium text-zinc-600 border-t border-white/10">

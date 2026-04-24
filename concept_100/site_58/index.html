@@ -12,10 +12,10 @@
         body { font-family: 'Inter', 'Noto Sans JP', sans-serif; }
     </style>
 </head>
-<body class="bg-[#1a1515] text-neutral-200 min-h-screen">
+<body class="bg-gray-50 text-stone-800 min-h-screen font-sans antialiased overflow-x-hidden">
 
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 backdrop-blur-md bg-opacity-80 bg-black/50 border-b border-white/10 px-6 py-4 flex justify-between items-center transition-all">
+    <nav class="fixed w-full z-50 backdrop-blur-md bg-opacity-90 bg-white/90 border-b border-gray-200 px-8 py-4 flex justify-between items-center transition-all shadow-sm">
         <div class="font-black text-2xl tracking-tighter text-red-500">JINJA-PAY</div>
         <div class="hidden md:flex gap-8 text-sm font-bold text-gray-300">
             <a href="#" class="hover:text-red-500 transition">特徴</a>
@@ -26,58 +26,137 @@
     </nav>
 
     <!-- Hero Section -->
-    <main class="pt-32 pb-20 px-6 md:px-12 max-w-7xl mx-auto">
-        <div class="text-center max-w-4xl mx-auto mb-16">
-            <span class="bg-red-900/30 text-red-500 border border-red-500/50 px-3 py-1 text-xs font-bold rounded-full tracking-widest uppercase mb-6 inline-block">local</span>
-            <h1 class="text-4xl md:text-6xl font-black mb-8 leading-tight tracking-tight">日本の美しき伝統を未来へ。<br>デジタルサイセン＆参拝プラットフォーム。</h1>
-            <p class="text-lg md:text-xl text-gray-400 font-medium leading-relaxed max-w-2xl mx-auto">過疎化で氏子が減少し、本殿の修復や維持費が捻出できない地方の歴史ある寺・神社。賽銭箱への小銭だけでは限界があります。テクノロジーの力で、全国から広く支援を集めませんか？</p>
+    
+    <main class="pt-[140px] pb-24 px-6 md:px-12 max-w-7xl mx-auto">
+        <div class="text-center max-w-4xl mx-auto mb-20 relative">
+            <span class="bg-gray-100 text-red-600 border border-gray-200 px-5 py-2 text-xs font-black rounded-full tracking-widest mb-8 inline-block shadow-sm uppercase">FINTECH / TRADITION</span>
+            <h1 class="text-4xl md:text-[54px] font-black mb-8 leading-[1.2] tracking-tight text-gray-900">神々への祈りに、<br>小銭はいらない。</h1>
+            <p class="text-lg md:text-xl text-gray-600 font-medium leading-relaxed max-w-3xl mx-auto">「お賽銭用に小銭を作らなきゃ」。そんな煩わしさは、もう過去のものです。JINJA-PAYは、全国の神社仏閣の景観を一切損なうことなく、QRコードとNFCでシームレスな電子浄財（お賽銭）を実現する、伝統×FinTechソリューション。</p>
         </div>
 
-        <!-- Real UI Image Showcase -->
-        <div class="relative w-full aspect-[21/9] md:aspect-video rounded-3xl overflow-hidden shadow-2xl mb-24 border border-white/10 shadow-black/80 group">
-            <img src="img/ui.png" alt="UI Dashboard" class="w-full h-full object-cover transition-transform duration-[2s] group-hover:scale-[1.02]">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none"></div>
+        <div class="relative w-full aspect-[21/9] md:aspect-video rounded-[32px] overflow-hidden shadow-2xl mb-32 border border-gray-200/50 group bg-zinc-900">
+            <img src="img/ui.png" alt="UI Dashboard" class="w-full h-full object-cover transition-transform duration-[3s] group-hover:scale-[1.02]">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none blend-overlay"></div>
         </div>
 
-        <!-- Features -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24">
-            
-            <div class="bg-white/5 border border-white/10 p-8 rounded-2xl hover:shadow-lg transition">
-                <div class="w-12 h-12 rounded-full flex items-center justify-center mb-6 bg-red-900/30 text-red-500 border border-red-500/50">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+        <div class="flex flex-col gap-32 mb-32">
+        
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-red-600 font-bold tracking-widest text-sm uppercase">THE COIN CRISIS</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">「硬貨の取扱手数料」が神社を圧迫する</h2>
+                        <div class="w-12 h-1 bg-red-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">近年、銀行における大量の硬貨の入金・両替手数料が大幅に引き上げられました。皆様から頂いた大切なお賽銭（1円玉や5円玉）を銀行へ預け入れるだけで、かえって神社側が「赤字」になってしまうという、笑えない事態が全国で起きています。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-red-900/20 to-transparent"></div>
+                    </div>
                 </div>
-                <h3 class="text-xl font-bold mb-4 text-white">オンラインお賽銭</h3>
-                <p class="text-gray-400 text-sm leading-relaxed">Apple Pay / Google Pay対応。遠方にお住まいの参拝者からも、手数料無料でダイレクトに祈り（寄付）を受け取れます。</p>
-            </div>
-            
-            <div class="bg-white/5 border border-white/10 p-8 rounded-2xl hover:shadow-lg transition">
-                <div class="w-12 h-12 rounded-full flex items-center justify-center mb-6 bg-red-900/30 text-red-500 border border-red-500/50">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                
+                <div class="mt-10">
+                    <div class="text-center mb-16">
+                        <span class="text-red-600 font-bold tracking-widest text-sm uppercase">INVISIBLE TECH</span>
+                        <h2 class="text-3xl md:text-4xl font-black mt-4 text-gray-900">景観に溶け込む、究極のミニマル決済</h2>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-red-50 text-red-600 border border-red-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">木彫りのQRコード＆NFCチップ</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">無機質な決済端末は置きません。神社の景観に合わせた特注の「木製プレート」にQRコードをレーザー刻印。スマホをかざすだけでApple Pay等で瞬時に決済完了。</p>
+</div>
+
+
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-red-50 text-red-600 border border-red-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">賽銭泥棒からの完全な解放</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">深夜の無人神社でも、現金が賽銭箱に存在しないため、盗難のリスクが物理的にゼロに。防犯カメラや見回りのコストを劇的に削減します。</p>
+</div>
+
+
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-red-50 text-red-600 border border-red-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">多言語対応インバウンド決済</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">日本の小銭の使い方がわからない外国人観光客も、自国のAlipayやWeChat Pay、クレジットカードでスムーズにお賽銭を奉納できます。</p>
+</div>
+
+                    </div>
                 </div>
-                <h3 class="text-xl font-bold mb-4 text-white">修繕クラウドファンディング</h3>
-                <p class="text-gray-400 text-sm leading-relaxed">「屋根の葺き替え代」など目的別の支援プロジェクトを簡単に立ち上げ、進捗を可視化。</p>
-            </div>
-            
-            <div class="bg-white/5 border border-white/10 p-8 rounded-2xl hover:shadow-lg transition">
-                <div class="w-12 h-12 rounded-full flex items-center justify-center mb-6 bg-red-900/30 text-red-500 border border-red-500/50">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-red-600 font-bold tracking-widest text-sm uppercase">DIGITAL SPIRITUALITY</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">「ご縁（5円）」をデジタルで表現するUI</h2>
+                        <div class="w-12 h-1 bg-red-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">決済画面は単なる数字の入力ではありません。「5円（ご縁がありますように）」「115円（いいご縁）」「88円（末広がり）」など、金額に込められた語呂合わせの意味を美しいアニメーションと共に表示し、祈りの体験を豊かにします。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-red-900/20 to-transparent"></div>
+                    </div>
                 </div>
-                <h3 class="text-xl font-bold mb-4 text-white">デジタル御朱印・お守り</h3>
-                <p class="text-gray-400 text-sm leading-relaxed">支援者にはNFT化された唯一無二のデジタル御朱印を発行。現代の新しいファンコミュニティを形成します。</p>
-            </div>
-            
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-red-600 font-bold tracking-widest text-sm uppercase">REMOTE WORSHIP</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">遠方からの「オンライン祈祷・お守り授与」</h2>
+                        <div class="w-12 h-1 bg-red-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">病気や遠方で直接参拝できない方のために、アプリ上からオンラインで祈祷の申し込みやお守りの郵送手続きが可能。お正月の混雑を避けた「分散参拝」のプラットフォームとしても機能します。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: bottom right;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-red-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-red-600 font-bold tracking-widest text-sm uppercase">SHRINE REVIVAL</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">Case Study | 京都の歴史ある中規模神社</h2>
+                        <div class="w-12 h-1 bg-red-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">インバウンド客は多いものの、小銭を持たないためお賽銭が集まらず、社殿の修繕費に悩んでいた神社。JINJA-PAY導入後、外国人からの奉納額が急増。さらに国内の若者層からも「小銭を探すストレスがない」と好評を得て、全体のお賽銭収益が前年比で140%増加しました。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-red-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-red-600 font-bold tracking-widest text-sm uppercase">OUR VISION</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">伝統を守るために、システムを変える</h2>
+                        <div class="w-12 h-1 bg-red-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">神様への感謝の気持ちは、現金（物質）である必要はありません。時代がキャッシュレスに移行する中、私たちは最も古い日本のインフラである神社仏閣を、デジタルの力で次の100年へと繋ぎます。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: bottom right;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-red-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
         </div>
 
-        <!-- CTA -->
-        <div class="text-center bg-white/5 border border-white/10 rounded-3xl p-12 md:p-24">
-            <h2 class="text-3xl md:text-5xl font-black mb-6 text-white">次のステージへ。</h2>
-            <p class="text-gray-400 mb-10 max-w-lg mx-auto">最新のテクノロジーを活用して、あなたの生活とビジネスに革命を起こしましょう。</p>
-            <a href="#" class="bg-red-700 hover:bg-red-600 text-white px-10 py-5 rounded-full font-bold text-lg inline-flex items-center gap-2 transition transform hover:-translate-y-1 hover:shadow-xl ">
-                寺社の登録相談をする
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-            </a>
+        <div class="text-center bg-gray-900 border border-gray-800 rounded-[3rem] p-16 md:p-32 relative overflow-hidden group shadow-2xl">
+            <div class="absolute inset-0 bg-gradient-to-br from-red-900/40 to-transparent"></div>
+            <div class="relative z-10">
+                <h2 class="text-4xl md:text-5xl font-black mb-8 text-white">キャッシュレス時代の、新しい参拝体験。</h2>
+                <p class="text-gray-300 mb-12 max-w-xl mx-auto text-lg leading-relaxed">賽銭泥棒のリスクゼロ、両替手数料ゼロ。神社を持続可能にするためのスマートな選択。</p>
+                <a href="#" class="bg-red-500 hover:bg-red-400 text-white px-12 py-5 rounded-full font-bold text-lg inline-flex items-center gap-3 transition transform hover:-translate-y-1 shadow-lg shadow-red-500/30">
+                    導入神社一覧を見る
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                </a>
+            </div>
         </div>
     </main>
+        
 
     <!-- Footer -->
     <footer class="py-8 text-center text-sm font-medium text-zinc-600 border-t border-white/10">
