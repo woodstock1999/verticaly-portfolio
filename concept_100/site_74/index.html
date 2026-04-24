@@ -12,10 +12,10 @@
         body { font-family: 'Inter', 'Noto Sans JP', sans-serif; }
     </style>
 </head>
-<body class="bg-[#f4f7fb] text-slate-700 min-h-screen">
+<body class="bg-gray-50 text-stone-800 min-h-screen font-sans antialiased overflow-x-hidden">
 
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 backdrop-blur-md bg-opacity-80 bg-white/70 border-b border-gray-200 px-8 py-5 flex justify-between items-center transition-all">
+    <nav class="fixed w-full z-50 backdrop-blur-md bg-opacity-90 bg-white/90 border-b border-gray-200 px-8 py-4 flex justify-between items-center transition-all shadow-sm">
         <div class="font-black text-2xl tracking-tighter text-slate-900">SMART-HANKO</div>
         <div class="hidden md:flex gap-10 text-sm font-bold text-gray-600">
             <a href="#" class="hover:text-slate-900 transition">機能</a>
@@ -26,61 +26,137 @@
     </nav>
 
     <!-- Hero Section -->
-    <main class="pt-36 pb-24 px-6 md:px-12 max-w-7xl mx-auto">
+    
+    <main class="pt-[140px] pb-24 px-6 md:px-12 max-w-7xl mx-auto">
         <div class="text-center max-w-4xl mx-auto mb-20 relative">
-            <span class="bg-blue-900/20 text-text-slate-900 border border-blue-500/30 px-4 py-1.5 text-xs font-bold rounded-full tracking-widest uppercase mb-6 inline-block shadow-sm backdrop-blur-sm">legal</span>
-            <h1 class="text-4xl md:text-6xl font-black mb-8 leading-tight tracking-tight">ハンコ文化を破壊せず、<br>ブロックチェーンで進化させる。</h1>
-            <p class="text-lg md:text-xl text-gray-600 font-medium leading-relaxed max-w-2xl mx-auto">完全なペーパーレス化が進まない日本企業。「電子契約は信用できない」「やはり印影がないと上司が納得しない」。そんな日本特有のガラパゴス課題を、最先端技術で解決します。</p>
+            <span class="bg-gray-100 text-red-600 border border-gray-200 px-5 py-2 text-xs font-black rounded-full tracking-widest mb-8 inline-block shadow-sm uppercase">LEGAL TECH / SMART CONTRACT</span>
+            <h1 class="text-4xl md:text-[54px] font-black mb-8 leading-[1.2] tracking-tight text-gray-900">ハンコの呪縛から、<br>日本のビジネスを解放する。</h1>
+            <p class="text-lg md:text-xl text-gray-600 font-medium leading-relaxed max-w-3xl mx-auto">「押印のためだけに出社する」時代は終わりました。SMART-HANKOは、日本の商慣習に深く根付いた「ハンコ文化」の直感的な使いやすさを残しつつ、ブロックチェーンによる絶対的な証拠能力を付与する電子契約プラットフォームです。</p>
         </div>
 
-        <!-- Real UI Image Showcase -->
-        <div class="relative w-full aspect-[21/9] md:aspect-video rounded-[2rem] overflow-hidden shadow-2xl mb-32 border border-gray-200/50 shadow-xl group ring-1 ring-white/10">
+        <div class="relative w-full aspect-[21/9] md:aspect-video rounded-[32px] overflow-hidden shadow-2xl mb-32 border border-gray-200/50 group bg-zinc-900">
             <img src="img/ui.png" alt="UI Dashboard" class="w-full h-full object-cover transition-transform duration-[3s] group-hover:scale-[1.02]">
-            <div class="absolute inset-0 bg-gradient-to-t from-white/40 to-transparent pointer-events-none mix-blend-overlay"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none blend-overlay"></div>
         </div>
 
-        <!-- Features -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-32">
-            
-            <div class="bg-white border border-gray-100 shadow-lg p-10 rounded-3xl hover:shadow-2xl transition transform hover:-translate-y-2 duration-300">
-                <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-8 bg-blue-500/10 text-slate-900 border border-blue-500/20">
-                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+        <div class="flex flex-col gap-32 mb-32">
+        
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-red-600 font-bold tracking-widest text-sm uppercase">THE LEGACY PROCESS</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">アナログな「朱肉」が奪う、膨大な時間</h2>
+                        <div class="w-12 h-1 bg-red-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">契約書を印刷し、製本テープを貼り、代表印を押し、切手を貼って郵送する。相手方が受け取り、再び印を押して返送されるまでに平均1週間。このアナログなプロトコルは、スピードが命の現代ビジネスにおいて致命的な足かせとなっています。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-red-900/20 to-transparent"></div>
+                    </div>
                 </div>
-                <h3 class="text-2xl font-bold mb-4 text-gray-900">生体認証付き3D電子印鑑</h3>
-                <p class="text-gray-600 text-base leading-relaxed break-words">スマホの指紋・顔認証を通した時のみ、画面上にあなたの「印影」が押印される仕組み。なりすましを100%防止します。</p>
-            </div>
-            
-            <div class="bg-white border border-gray-100 shadow-lg p-10 rounded-3xl hover:shadow-2xl transition transform hover:-translate-y-2 duration-300">
-                <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-8 bg-blue-500/10 text-slate-900 border border-blue-500/20">
-                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                
+                <div class="mt-10">
+                    <div class="text-center mb-16">
+                        <span class="text-red-600 font-bold tracking-widest text-sm uppercase">DIGITAL STAMPING</span>
+                        <h2 class="text-3xl md:text-4xl font-black mt-4 text-gray-900">直感的な「押印体験」と、強固なテクノロジー</h2>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-red-50 text-red-600 border border-red-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">1クリック電子署名</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">スマホの画面上でポンと「デジタルハンコ」を押すだけ。ITに不慣れな決裁者でも、マニュアルなしで直感的に承認が完了します。</p>
+</div>
+
+
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-red-50 text-red-600 border border-red-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">ブロックチェーン・タイムスタンプ</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">押印された瞬間の日時、IPアドレス、デバイス情報をブロックチェーン上にハッシュ化して記録。改ざんが物理的に不可能な証拠を残します。</p>
+</div>
+
+
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-red-50 text-red-600 border border-red-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">社内ワークフローの完全自動化</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">「担当者 → 課長承認 → 部長決裁」という複雑な承認ルートも、事前に設定するだけで自動的に書類が回覧されます。</p>
+</div>
+
+                    </div>
                 </div>
-                <h3 class="text-2xl font-bold mb-4 text-gray-900">ブロックチェーン証跡管理</h3>
-                <p class="text-gray-600 text-base leading-relaxed break-words">「いつ・誰が・どこで」押印したかのハッシュ値をパブリックチェーンに記録。改ざんが物理的に不可能な契約書を生成。</p>
-            </div>
-            
-            <div class="bg-white border border-gray-100 shadow-lg p-10 rounded-3xl hover:shadow-2xl transition transform hover:-translate-y-2 duration-300">
-                <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-8 bg-blue-500/10 text-slate-900 border border-blue-500/20">
-                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-red-600 font-bold tracking-widest text-sm uppercase">FRICTIONLESS</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">相手方にアカウント登録をさせない配慮</h2>
+                        <div class="w-12 h-1 bg-red-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">新しいシステムを導入した際、取引先にまでアカウント登録を強いるのは大きなハードルです。SMART-HANKOは、受信側はメールのリンクを開くだけで即座に内容の確認と押印が可能。相手の環境を一切選びません。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-red-900/20 to-transparent"></div>
+                    </div>
                 </div>
-                <h3 class="text-2xl font-bold mb-4 text-gray-900">既存ワークフロー完全互換</h3>
-                <p class="text-gray-600 text-base leading-relaxed break-words">「起案→課長承認→部長決裁」という日本古来の稟議フローをそのままデジタル化。導入の心理的ハードルを極限まで下げます。</p>
-            </div>
-            
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-red-600 font-bold tracking-widest text-sm uppercase">AI DOCUMENT OCR</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">紙の契約書も、AIで一元管理</h2>
+                        <div class="w-12 h-1 bg-red-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">過去に紙で結んだ膨大な契約書。スキャンしてアップロードするだけで、AIが「契約日」「企業名」「自動更新の有無」などの重要項目を自動で読み取り、検索可能なデータベースへと変換します。更新漏れのリスクを完全にゼロにします。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: bottom right;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-red-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-red-600 font-bold tracking-widest text-sm uppercase">PROVEN EFFICIENCY</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">Case Study | 中堅メーカーの法務部門</h2>
+                        <div class="w-12 h-1 bg-red-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">毎月500件以上の業務委託契約を郵送で行っていた法務部。SMART-HANKO導入後、契約締結までのリードタイムが平均8日から「即日」へと短縮。郵送代と印紙代の削減だけで、導入コストの10倍以上のROI（投資対効果）を達成しました。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-red-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-red-600 font-bold tracking-widest text-sm uppercase">OUR VISION</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">トラスト（信用）の新しいインフラ</h2>
+                        <div class="w-12 h-1 bg-red-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">ハンコという文化自体を否定するのではなく、その「信用を担保する」という本質をテクノロジーでアップデートする。私たちは日本の商慣習に最も寄り添ったリーガルテックを提供します。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: bottom right;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-red-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
         </div>
 
-        <!-- CTA -->
-        <div class="text-center bg-gray-50 border border-gray-200 rounded-[3rem] p-16 md:p-28 relative overflow-hidden group">
-            <div class="absolute inset-0 bg-blue-500/5 opacity-0 group-hover:opacity-100 transition duration-1000"></div>
+        <div class="text-center bg-gray-900 border border-gray-800 rounded-[3rem] p-16 md:p-32 relative overflow-hidden group shadow-2xl">
+            <div class="absolute inset-0 bg-gradient-to-br from-red-900/40 to-transparent"></div>
             <div class="relative z-10">
-                <h2 class="text-4xl md:text-6xl font-black mb-8 text-gray-900">イノベーションを体験する</h2>
-                <p class="text-gray-600 mb-12 max-w-xl mx-auto text-lg">ビジネスと日常を劇的に進化させるプロダクトへのファーストアクセス。</p>
-                <a href="#" class="bg-blue-800 hover:bg-blue-700 text-white px-12 py-5 rounded-full font-bold text-lg inline-flex items-center gap-3 transition transform hover:-translate-y-1 shadow-xl">
-                    セキュリティ資料をダウンロード
+                <h2 class="text-4xl md:text-5xl font-black mb-8 text-white">契約のスピードが、ビジネスのスピードに。</h2>
+                <p class="text-gray-300 mb-12 max-w-xl mx-auto text-lg leading-relaxed">製本、郵送、収入印紙。無駄なコストと時間を今すぐカットし、なめらかな取引を実現しましょう。</p>
+                <a href="#" class="bg-red-500 hover:bg-red-400 text-white px-12 py-5 rounded-full font-bold text-lg inline-flex items-center gap-3 transition transform hover:-translate-y-1 shadow-lg shadow-red-500/30">
+                    無料で契約書を送信する
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
                 </a>
             </div>
         </div>
     </main>
+        
 
     <!-- Footer -->
     <footer class="py-12 text-center text-sm font-medium text-gray-500 border-t border-gray-200 bg-black/20">

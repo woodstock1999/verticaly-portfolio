@@ -12,10 +12,10 @@
         body { font-family: 'Inter', 'Noto Sans JP', sans-serif; }
     </style>
 </head>
-<body class="bg-[#0c141c] border-t-8 border-[#d4ff00] text-blue-100 min-h-screen">
+<body class="bg-gray-50 text-stone-800 min-h-screen font-sans antialiased overflow-x-hidden">
 
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 backdrop-blur-md bg-opacity-80 bg-black/50 border-b border-white/10 px-6 py-4 flex justify-between items-center transition-all">
+    <nav class="fixed w-full z-50 backdrop-blur-md bg-opacity-90 bg-white/90 border-b border-gray-200 px-8 py-4 flex justify-between items-center transition-all shadow-sm">
         <div class="font-black text-2xl tracking-tighter text-[#d4ff00]">GHOST-FLEET</div>
         <div class="hidden md:flex gap-8 text-sm font-bold text-gray-300">
             <a href="#" class="hover:text-[#d4ff00] transition">特徴</a>
@@ -26,60 +26,137 @@
     </nav>
 
     <!-- Hero Section -->
-    <main class="pt-32 pb-20 px-6 md:px-12 max-w-7xl mx-auto">
-        <div class="text-center max-w-4xl mx-auto mb-16">
-            <span class="bg-yellow-900/30 text-text-[#d4ff00] border border-yellow-500/50 px-3 py-1 text-xs font-bold rounded-full tracking-widest uppercase mb-6 inline-block shadow-sm">saas</span>
-            <h1 class="text-4xl md:text-6xl font-black mb-8 leading-tight tracking-tight">2024年の物流危機を救う。<br>帰路の「空荷トラック」をゼロへ。</h1>
-            <p class="text-lg md:text-xl text-gray-400 font-medium leading-relaxed max-w-2xl mx-auto">荷物を降ろして帰るだけの「空のトラック」が高速道路を走っている。一方で、荷物を運んでほしい荷主はトラックが見つからない。この巨大な機会損失を、瞬時に解消します。</p>
+    
+    <main class="pt-[140px] pb-24 px-6 md:px-12 max-w-7xl mx-auto">
+        <div class="text-center max-w-4xl mx-auto mb-20 relative">
+            <span class="bg-gray-100 text-gray-600 border border-gray-200 px-5 py-2 text-xs font-black rounded-full tracking-widest mb-8 inline-block shadow-sm uppercase">LOGISTICS / GHOST KITCHEN</span>
+            <h1 class="text-4xl md:text-[54px] font-black mb-8 leading-[1.2] tracking-tight text-gray-900">見えない厨房を、<br>最強の艦隊にする。</h1>
+            <p class="text-lg md:text-xl text-gray-600 font-medium leading-relaxed max-w-3xl mx-auto">フードデリバリー特化のゴーストキッチン向け、調理から配送までの完全自動最適化OS「GHOST-FLEET」。複数のデリバリープラットフォームからの注文を一元管理し、キッチンの稼働限界を突破します。</p>
         </div>
 
-        <!-- Real UI Image Showcase -->
-        <div class="relative w-full aspect-[21/9] md:aspect-video rounded-3xl overflow-hidden shadow-2xl mb-24 border border-white/10 shadow-black/80 group">
-            <img src="img/ui.png" alt="UI Dashboard" class="w-full h-full object-cover transition-transform duration-[3s] group-hover:scale-[1.03]">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none"></div>
+        <div class="relative w-full aspect-[21/9] md:aspect-video rounded-[32px] overflow-hidden shadow-2xl mb-32 border border-gray-200/50 group bg-zinc-900">
+            <img src="img/ui.png" alt="UI Dashboard" class="w-full h-full object-cover transition-transform duration-[3s] group-hover:scale-[1.02]">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none blend-overlay"></div>
         </div>
 
-        <!-- Features -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24">
-            
-            <div class="bg-white/5 border border-white/10 p-8 rounded-2xl hover:shadow-lg transition transform hover:-translate-y-1">
-                <div class="w-12 h-12 rounded-full flex items-center justify-center mb-6 bg-yellow-900/30 text-[#d4ff00] border border-yellow-500/50">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+        <div class="flex flex-col gap-32 mb-32">
+        
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-gray-600 font-bold tracking-widest text-sm uppercase">THE CHAOS</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">「マルチタブレット」という厨房の悪夢</h2>
+                        <div class="w-12 h-1 bg-gray-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">Uber Eats、出前館、Wolt。売上を上げるためにプラットフォームを増やせば増やすほど、厨房にはタブレットが林立し、注文の入力漏れや調理の順番ミスが多発します。この「デジタルな手作業」が、ピーク時の機会損失を生んでいます。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-gray-900/20 to-transparent"></div>
+                    </div>
                 </div>
-                <h3 class="text-xl font-bold mb-4 text-white">GPS即時マッチング</h3>
-                <p class="text-gray-400 text-sm leading-relaxed">「今、空の状態で東名高速を上っているトラック」と、「静岡から東京へ送りたい荷主」をリアルタイムでアルゴリズムが結合。</p>
-            </div>
-            
-            <div class="bg-white/5 border border-white/10 p-8 rounded-2xl hover:shadow-lg transition transform hover:-translate-y-1">
-                <div class="w-12 h-12 rounded-full flex items-center justify-center mb-6 bg-yellow-900/30 text-[#d4ff00] border border-yellow-500/50">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                
+                <div class="mt-10">
+                    <div class="text-center mb-16">
+                        <span class="text-gray-600 font-bold tracking-widest text-sm uppercase">UNIFIED DASHBOARD</span>
+                        <h2 class="text-3xl md:text-4xl font-black mt-4 text-gray-900">すべての注文を、ひとつの画面に</h2>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-gray-50 text-gray-600 border border-gray-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">全プラットフォーム一元管理</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">すべてのデリバリーアプリからの注文を1つの画面で自動受信。プラットフォーム間の在庫（売り切れ）も瞬時に同期します。</p>
+</div>
+
+
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-gray-50 text-gray-600 border border-gray-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">調理ステーション別オートディスパッチ</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">「揚場」「焼き場」など、各調理担当者のモニターへ最適な順番でタスクを自動分配。厨房内の無駄な声掛けをなくします。</p>
+</div>
+
+
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-gray-50 text-gray-600 border border-gray-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">配達員到着予測・連動タイマー</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">配達員のGPS位置情報をAIが解析し、「あと3分で到着」のタイミングに合わせて調理完了のアラートを出します。</p>
+</div>
+
+                    </div>
                 </div>
-                <h3 class="text-xl font-bold mb-4 text-white">ダイレクト運賃交渉</h3>
-                <p class="text-gray-400 text-sm leading-relaxed">中抜き業者を排除し、荷主とドライバー間で直接チャット＆運賃決定。ドライバーの報酬アップを実現。</p>
-            </div>
-            
-            <div class="bg-white/5 border border-white/10 p-8 rounded-2xl hover:shadow-lg transition transform hover:-translate-y-1">
-                <div class="w-12 h-12 rounded-full flex items-center justify-center mb-6 bg-yellow-900/30 text-[#d4ff00] border border-yellow-500/50">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-gray-600 font-bold tracking-widest text-sm uppercase">DYNAMIC THROTTLING</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">ピークタイムの「バーチャル渋滞」を回避</h2>
+                        <div class="w-12 h-1 bg-gray-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">雨の日のランチタイム。厨房のキャパシティを超える注文が入る前に、GHOST-FLEETが自動で各アプリの「準備時間」を延長調整、あるいは一時停止モードに切り替えます。クレームによる低評価リスクをAIが未然に防ぎます。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-gray-900/20 to-transparent"></div>
+                    </div>
                 </div>
-                <h3 class="text-xl font-bold mb-4 text-white">コンプラ時間管理連動</h3>
-                <p class="text-gray-400 text-sm leading-relaxed">2024年問題の残業規制を考慮。「その荷物を積んで帰っても法令違反にならないか」をシステムが自動ストップ。</p>
-            </div>
-            
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-gray-600 font-bold tracking-widest text-sm uppercase">BRAND INCUBATOR</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">データが導く、次に当たるバーチャルブランド</h2>
+                        <div class="w-12 h-1 bg-gray-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">一つの厨房で複数のバーチャルブランドを展開するゴーストキッチンの強みを最大化。「現在、このエリアでヘルシー系ボウルの検索数が急増しています」といった地域トレンドを分析し、翌週から展開すべき新メニューのレシピ案まで提案します。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: bottom right;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-gray-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-gray-600 font-bold tracking-widest text-sm uppercase">PROVEN ROI</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">Case Study | 都内のクラウドキッチン施設</h2>
+                        <div class="w-12 h-1 bg-gray-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">10坪の厨房で4つのブランドを展開するオーナー。導入後、ピーク時の注文処理数が1.5倍に向上しつつ、タブレット操作にかかるスタッフ1名分の人件費を削減。また、配達員への受け渡し時間が平均4分短縮され、プラットフォーム内のアルゴリズム評価が劇的に上昇しました。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-gray-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-gray-600 font-bold tracking-widest text-sm uppercase">OUR VISION</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">飲食業を、テクノロジー産業へ</h2>
+                        <div class="w-12 h-1 bg-gray-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">美味しい料理を作るのは人間の仕事です。しかし、それ以外の複雑な情報処理はすべてシステムに任せるべきです。私たちは、料理人が料理だけに集中できる「静かな厨房」を実現します。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: bottom right;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-gray-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
         </div>
 
-        <!-- CTA -->
-        <div class="text-center bg-white/5 border border-white/10 rounded-3xl p-12 md:p-24 relative overflow-hidden">
+        <div class="text-center bg-gray-900 border border-gray-800 rounded-[3rem] p-16 md:p-32 relative overflow-hidden group shadow-2xl">
+            <div class="absolute inset-0 bg-gradient-to-br from-gray-900/40 to-transparent"></div>
             <div class="relative z-10">
-                <h2 class="text-3xl md:text-5xl font-black mb-6 text-white">次のステージへ。</h2>
-                <p class="text-gray-400 mb-10 max-w-lg mx-auto">最先端のテクノロジーで、業界の常識を覆しましょう。</p>
-                <a href="#" class="bg-[#d4ff00] hover:bg-[#bce600] text-black font-bold px-10 py-5 rounded-full font-bold text-lg inline-flex items-center gap-2 transition transform hover:-translate-y-1 hover:shadow-xl shadow-lg">
-                    荷主・ドライバー登録（無料）
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                <h2 class="text-4xl md:text-5xl font-black mb-8 text-white">厨房のパニックを、過去のものへ。</h2>
+                <p class="text-gray-300 mb-12 max-w-xl mx-auto text-lg leading-relaxed">鳴り止まないタブレットの通知音に追われる日々は終わりました。AIの指揮で、スマートな調理体験を。</p>
+                <a href="#" class="bg-gray-500 hover:bg-gray-400 text-white px-12 py-5 rounded-full font-bold text-lg inline-flex items-center gap-3 transition transform hover:-translate-y-1 shadow-lg shadow-gray-500/30">
+                    システムを導入する
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
                 </a>
             </div>
         </div>
     </main>
+        
 
     <!-- Footer -->
     <footer class="py-8 text-center text-sm font-medium text-zinc-600 border-t border-white/10">

@@ -12,10 +12,10 @@
         body { font-family: 'Inter', 'Noto Sans JP', sans-serif; }
     </style>
 </head>
-<body class="bg-[#fdfbf7] text-stone-800 min-h-screen">
+<body class="bg-gray-50 text-stone-800 min-h-screen font-sans antialiased overflow-x-hidden">
 
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 backdrop-blur-md bg-opacity-80 bg-white/70 border-b border-gray-200 px-8 py-5 flex justify-between items-center transition-all">
+    <nav class="fixed w-full z-50 backdrop-blur-md bg-opacity-90 bg-white/90 border-b border-gray-200 px-8 py-4 flex justify-between items-center transition-all shadow-sm">
         <div class="font-black text-2xl tracking-tighter text-[#aa8855]">VILLA-SYNC</div>
         <div class="hidden md:flex gap-10 text-sm font-bold text-gray-600">
             <a href="#" class="hover:text-[#aa8855] transition">機能</a>
@@ -26,61 +26,137 @@
     </nav>
 
     <!-- Hero Section -->
-    <main class="pt-36 pb-24 px-6 md:px-12 max-w-7xl mx-auto">
+    
+    <main class="pt-[140px] pb-24 px-6 md:px-12 max-w-7xl mx-auto">
         <div class="text-center max-w-4xl mx-auto mb-20 relative">
-            <span class="bg-amber-900/20 text-text-[#aa8855] border border-amber-500/30 px-4 py-1.5 text-xs font-bold rounded-full tracking-widest uppercase mb-6 inline-block shadow-sm backdrop-blur-sm">realestate</span>
-            <h1 class="text-4xl md:text-6xl font-black mb-8 leading-tight tracking-tight">数億円の絶景ヴィラを、<br>あなたの「週末の隠れ家」に。</h1>
-            <p class="text-lg md:text-xl text-gray-600 font-medium leading-relaxed max-w-2xl mx-auto">一流の建築家が手掛けたリゾート別荘。しかし、年に数回しか行かないのに数億円の購入費と高額な維持費を払うのは非合理的。所有の喜びと合理性を両立した、新しい富裕層向けインフラ。</p>
+            <span class="bg-gray-100 text-amber-600 border border-gray-200 px-5 py-2 text-xs font-black rounded-full tracking-widest mb-8 inline-block shadow-sm uppercase">PROPTECH / LUXURY STAY</span>
+            <h1 class="text-4xl md:text-[54px] font-black mb-8 leading-[1.2] tracking-tight text-gray-900">別荘の「空き時間」を、<br>プレミアムな収益へ。</h1>
+            <p class="text-lg md:text-xl text-gray-600 font-medium leading-relaxed max-w-3xl mx-auto">年間数十日しか使われないラグジュアリー・ヴィラ。VILLA-SYNCは、あなたの別荘をスマートロックとIoTで完全無人化ホテルへ転換し、世界中のエグゼクティブへ貸し出すハイエンド特化の運用プラットフォームです。</p>
         </div>
 
-        <!-- Real UI Image Showcase -->
-        <div class="relative w-full aspect-[21/9] md:aspect-video rounded-[2rem] overflow-hidden shadow-2xl mb-32 border border-gray-200/50 shadow-xl group ring-1 ring-white/10">
+        <div class="relative w-full aspect-[21/9] md:aspect-video rounded-[32px] overflow-hidden shadow-2xl mb-32 border border-gray-200/50 group bg-zinc-900">
             <img src="img/ui.png" alt="UI Dashboard" class="w-full h-full object-cover transition-transform duration-[3s] group-hover:scale-[1.02]">
-            <div class="absolute inset-0 bg-gradient-to-t from-white/40 to-transparent pointer-events-none mix-blend-overlay"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none blend-overlay"></div>
         </div>
 
-        <!-- Features -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-32">
-            
-            <div class="bg-white border border-gray-100 shadow-lg p-10 rounded-3xl hover:shadow-2xl transition transform hover:-translate-y-2 duration-300">
-                <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-8 bg-amber-500/10 text-[#aa8855] border border-amber-500/20">
-                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+        <div class="flex flex-col gap-32 mb-32">
+        
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-amber-600 font-bold tracking-widest text-sm uppercase">THE ASSET BURDEN</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">維持費だけを消費する、負債としての別荘</h2>
+                        <div class="w-12 h-1 bg-amber-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">海辺の絶景、山奥の静寂。素晴らしいロケーションの別荘も、オーナーが訪れるのは年に数回。残りの300日以上は空き家となり、湿気による劣化と高額な維持管理費だけが積み重なっていきます。この最高級の遊休資産を、流動化させる必要があります。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-amber-900/20 to-transparent"></div>
+                    </div>
                 </div>
-                <h3 class="text-2xl font-bold mb-4 text-gray-900">厳選された1/12所有権</h3>
-                <p class="text-gray-600 text-base leading-relaxed break-words">ニセコ、軽井沢、箱根など、審査を通過した最高級ヴィラのみを12口で分割所有。年間30日間の確約滞在権を付与します。</p>
-            </div>
-            
-            <div class="bg-white border border-gray-100 shadow-lg p-10 rounded-3xl hover:shadow-2xl transition transform hover:-translate-y-2 duration-300">
-                <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-8 bg-amber-500/10 text-[#aa8855] border border-amber-500/20">
-                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                
+                <div class="mt-10">
+                    <div class="text-center mb-16">
+                        <span class="text-amber-600 font-bold tracking-widest text-sm uppercase">INVISIBLE STAFF</span>
+                        <h2 class="text-3xl md:text-4xl font-black mt-4 text-gray-900">物理鍵をゼロにする、完全無人オペレーション</h2>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-amber-50 text-amber-600 border border-amber-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">時限式スマートパス</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">ゲストのスマホに、宿泊期間中だけ有効なデジタルキーを発行。チェックイン・アウトはタブレット端末の顔認証で非接触完結。</p>
+</div>
+
+
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-amber-50 text-amber-600 border border-amber-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">遠隔・環境コントロールAI</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">ゲストの到着1時間前に、AIが自動でエアコンと床暖房を起動。照明のシーン設定からBGMまで、空間を完璧にセットアップします。</p>
+</div>
+
+
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-amber-50 text-amber-600 border border-amber-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">ハイエンド特化のクリーニング網</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">ただの掃除ではありません。高級ホテルの清掃基準をクリアしたプロフェッショナル・チームを自動手配し、完璧な状態を維持します。</p>
+</div>
+
+                    </div>
                 </div>
-                <h3 class="text-2xl font-bold mb-4 text-gray-900">ホテルライクな管理維持</h3>
-                <p class="text-gray-600 text-base leading-relaxed break-words">清掃、設備のメンテナンス、アメニティの補充はすべて専用コンシェルジュが担当。あなたは手ぶらで訪れるだけです。</p>
-            </div>
-            
-            <div class="bg-white border border-gray-100 shadow-lg p-10 rounded-3xl hover:shadow-2xl transition transform hover:-translate-y-2 duration-300">
-                <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-8 bg-amber-500/10 text-[#aa8855] border border-amber-500/20">
-                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-amber-600 font-bold tracking-widest text-sm uppercase">GUEST SCREENING</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">「誰に貸すか」を厳格に審査するAI</h2>
+                        <div class="w-12 h-1 bg-amber-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">大切な別荘を荒らされるリスクを排除するため、VILLA-SYNCは一般的な民泊サイトとは一線を画します。招待制の会員ネットワークと、過去の宿泊データ・SNSの行動履歴を用いたAIスコアリングにより、身元の確かなエグゼクティブ層のみに限定して貸し出します。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-amber-900/20 to-transparent"></div>
+                    </div>
                 </div>
-                <h3 class="text-2xl font-bold mb-4 text-gray-900">セカンダリーマーケット</h3>
-                <p class="text-gray-600 text-base leading-relaxed break-words">ライフスタイルの変化に合わせて、所有権（NFT）をプラットフォーム内でシームレスに売却可能。流動性を担保します。</p>
-            </div>
-            
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-amber-600 font-bold tracking-widest text-sm uppercase">OWNER FIRST</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">オーナーの利用枠は、カレンダーをタップするだけ</h2>
+                        <div class="w-12 h-1 bg-amber-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">「来週末は自分たちで使いたい」。スマホアプリのカレンダーをブロックするだけで、その期間は貸し出しが停止されます。オーナーが訪れる際も、清掃が行き届き、完璧に温度管理された状態で到着を迎えることができます。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: bottom right;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-amber-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-amber-600 font-bold tracking-widest text-sm uppercase">PROVEN RETURNS</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">Case Study | 軽井沢の築浅デザインヴィラ</h2>
+                        <div class="w-12 h-1 bg-amber-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">年間20日しか使用されていなかった別荘。VILLA-SYNCに登録後、インバウンドの富裕層向けに1泊15万円で貸し出しを開始。オーナーの手を一切煩わせることなく、年間800万円の純収益を生み出し、維持費をカバーするどころか新たな投資資金となっています。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-amber-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-amber-600 font-bold tracking-widest text-sm uppercase">OUR VISION</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">所有の概念を、軽やかにアップデートする</h2>
+                        <div class="w-12 h-1 bg-amber-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">最高のものを作り、それを共有する。VILLA-SYNCは、別荘のオーナーシップを「重たい管理」から解放し、シェアリングエコノミーの最上位レイヤーを構築します。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: bottom right;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-amber-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
         </div>
 
-        <!-- CTA -->
-        <div class="text-center bg-gray-50 border border-gray-200 rounded-[3rem] p-16 md:p-28 relative overflow-hidden group">
-            <div class="absolute inset-0 bg-amber-500/5 opacity-0 group-hover:opacity-100 transition duration-1000"></div>
+        <div class="text-center bg-gray-900 border border-gray-800 rounded-[3rem] p-16 md:p-32 relative overflow-hidden group shadow-2xl">
+            <div class="absolute inset-0 bg-gradient-to-br from-amber-900/40 to-transparent"></div>
             <div class="relative z-10">
-                <h2 class="text-4xl md:text-6xl font-black mb-8 text-gray-900">イノベーションを体験する</h2>
-                <p class="text-gray-600 mb-12 max-w-xl mx-auto text-lg">ビジネスと日常を劇的に進化させるプロダクトへのファーストアクセス。</p>
-                <a href="#" class="bg-[#aa8855] hover:bg-[#886633] text-white px-12 py-5 rounded-full font-bold text-lg inline-flex items-center gap-3 transition transform hover:-translate-y-1 shadow-xl">
-                    物件ポートフォリオを見る
+                <h2 class="text-4xl md:text-5xl font-black mb-8 text-white">眠れる資産を、最高峰のリゾートへ。</h2>
+                <p class="text-gray-300 mb-12 max-w-xl mx-auto text-lg leading-relaxed">管理の手間も、ゲスト対応の煩わしさも不要。あなたの別荘が、何もしなくても価値を生み出し続けます。</p>
+                <a href="#" class="bg-amber-500 hover:bg-amber-400 text-white px-12 py-5 rounded-full font-bold text-lg inline-flex items-center gap-3 transition transform hover:-translate-y-1 shadow-lg shadow-amber-500/30">
+                    別荘の収益を査定する
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
                 </a>
             </div>
         </div>
     </main>
+        
 
     <!-- Footer -->
     <footer class="py-12 text-center text-sm font-medium text-gray-500 border-t border-gray-200 bg-black/20">

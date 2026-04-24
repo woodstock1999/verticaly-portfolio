@@ -12,10 +12,10 @@
         body { font-family: 'Inter', 'Noto Sans JP', sans-serif; }
     </style>
 </head>
-<body class="bg-stone-100 text-stone-600 min-h-screen">
+<body class="bg-gray-50 text-stone-800 min-h-screen font-sans antialiased overflow-x-hidden">
 
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 backdrop-blur-md bg-opacity-80 bg-black/50 border-b border-white/10 px-8 py-5 flex justify-between items-center transition-all">
+    <nav class="fixed w-full z-50 backdrop-blur-md bg-opacity-90 bg-white/90 border-b border-gray-200 px-8 py-4 flex justify-between items-center transition-all shadow-sm">
         <div class="font-black text-2xl tracking-tighter text-stone-800">SPACE-NUDGE</div>
         <div class="hidden md:flex gap-10 text-sm font-bold text-gray-300">
             <a href="#" class="hover:text-stone-800 transition">機能</a>
@@ -26,61 +26,137 @@
     </nav>
 
     <!-- Hero Section -->
-    <main class="pt-36 pb-24 px-6 md:px-12 max-w-7xl mx-auto">
+    
+    <main class="pt-[140px] pb-24 px-6 md:px-12 max-w-7xl mx-auto">
         <div class="text-center max-w-4xl mx-auto mb-20 relative">
-            <span class="bg-stone-900/20 text-text-stone-800 border border-stone-500/30 px-4 py-1.5 text-xs font-bold rounded-full tracking-widest uppercase mb-6 inline-block shadow-sm backdrop-blur-sm">lifestyle</span>
-            <h1 class="text-4xl md:text-6xl font-black mb-8 leading-tight tracking-tight">あなたの理想の空間を生成し、<br>本物の職人が作り上げる。</h1>
-            <p class="text-lg md:text-xl text-gray-400 font-medium leading-relaxed max-w-2xl mx-auto">Pinterestで見つけた最高にオシャレな部屋。でも「このソファーはどこで買えるの？」「私の部屋のサイズに合う？」という疑問から、結局妥協して量販店で買ってしまう。</p>
+            <span class="bg-gray-100 text-purple-600 border border-gray-200 px-5 py-2 text-xs font-black rounded-full tracking-widest mb-8 inline-block shadow-sm uppercase">HR TECH / BEHAVIORAL SCIENCE</span>
+            <h1 class="text-4xl md:text-[54px] font-black mb-8 leading-[1.2] tracking-tight text-gray-900">オフィス空間が、<br>社員の行動を「デザイン」する。</h1>
+            <p class="text-lg md:text-xl text-gray-600 font-medium leading-relaxed max-w-3xl mx-auto">「イノベーションを起こせ」と叫ぶより、コーヒーマシンの位置を変える方が効果的です。SPACE-NUDGEは、行動経済学と空間IoTを掛け合わせ、社員の自然なコミュニケーションや集中力を無意識に誘導する次世代ファシリティ・デザインツール。</p>
         </div>
 
-        <!-- Real UI Image Showcase -->
-        <div class="relative w-full aspect-[21/9] md:aspect-video rounded-[2rem] overflow-hidden shadow-2xl mb-32 border border-white/5 shadow-[0_20px_50px_rgba(0,0,0,0.5)] group ring-1 ring-white/10">
+        <div class="relative w-full aspect-[21/9] md:aspect-video rounded-[32px] overflow-hidden shadow-2xl mb-32 border border-gray-200/50 group bg-zinc-900">
             <img src="img/ui.png" alt="UI Dashboard" class="w-full h-full object-cover transition-transform duration-[3s] group-hover:scale-[1.02]">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none mix-blend-overlay"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none blend-overlay"></div>
         </div>
 
-        <!-- Features -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-32">
-            
-            <div class="bg-white/[0.02] border border-white/5 p-10 rounded-3xl hover:shadow-2xl transition transform hover:-translate-y-2 duration-300">
-                <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-8 bg-stone-500/10 text-stone-800 border border-stone-500/20">
-                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+        <div class="flex flex-col gap-32 mb-32">
+        
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-purple-600 font-bold tracking-widest text-sm uppercase">THE MISUNDERSTANDING</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">「コミュニケーション不足」への間違った処方箋</h2>
+                        <div class="w-12 h-1 bg-purple-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">部署間の連携が悪い時、多くの企業は「社内イベント」や「オンライン飲み会」を企画します。しかし、無理に作られた交流は疲労を生むだけです。本当に必要なのは、日常の導線上に仕組まれた「意図的な摩擦（セレンディピティ）」なのです。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-purple-900/20 to-transparent"></div>
+                    </div>
                 </div>
-                <h3 class="text-2xl font-bold mb-4 text-white tracking-wide">部屋写真からAIスタイリング</h3>
-                <p class="text-gray-400 text-base leading-relaxed break-words">あなたの何もない部屋の写真をアップするだけで、AIが指定したテイスト（北欧、和モダン等）でハイエンドな家具を配置したパースを生成。</p>
-            </div>
-            
-            <div class="bg-white/[0.02] border border-white/5 p-10 rounded-3xl hover:shadow-2xl transition transform hover:-translate-y-2 duration-300">
-                <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-8 bg-stone-500/10 text-stone-800 border border-stone-500/20">
-                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                
+                <div class="mt-10">
+                    <div class="text-center mb-16">
+                        <span class="text-purple-600 font-bold tracking-widest text-sm uppercase">SPATIAL ALGORITHMS</span>
+                        <h2 class="text-3xl md:text-4xl font-black mt-4 text-gray-900">行動を促す「ナッジ」の空間実装</h2>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-purple-50 text-purple-600 border border-purple-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">マグネット・スペースの最適配置</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">コピー機、ゴミ箱、ウォーターサーバー。社員が必ず立ち寄る「マグネット」の配置をAIがシミュレーションし、異なる部署の人間が偶然すれ違う確率を最大化します。</p>
+</div>
+
+
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-purple-50 text-purple-600 border border-purple-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">集中力をコントロールする環境制御</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">時間帯やエリアの用途に合わせて、照明の色温度（ケルビン）やBGMのBPMを自動変化。クリエイティブなブレストには暖色と環境音を、深い集中には寒色とホワイトノイズを提供。</p>
+</div>
+
+
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-purple-50 text-purple-600 border border-purple-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">経路依存性の破壊（ルート・ランダマイズ）</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">IoTセンサーで「特定の社員が毎日同じルートしか通っていない」ことを検知。アプリを通じて「今日はA階段を使うとコーヒーが無料」といった通知を出し、新しい出会いを誘発します。</p>
+</div>
+
+                    </div>
                 </div>
-                <h3 class="text-2xl font-bold mb-4 text-white tracking-wide">伝統工芸とのダイレクトリンク</h3>
-                <p class="text-gray-400 text-base leading-relaxed break-words">生成されたCG空間にある家具をクリックすると、それを制作可能な「飛騨高山」や「旭川」の家具職人へ直接オーダーメイド発注が飛ぶ仕組み。</p>
-            </div>
-            
-            <div class="bg-white/[0.02] border border-white/5 p-10 rounded-3xl hover:shadow-2xl transition transform hover:-translate-y-2 duration-300">
-                <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-8 bg-stone-500/10 text-stone-800 border border-stone-500/20">
-                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-purple-600 font-bold tracking-widest text-sm uppercase">ONA (Organizational Network Analysis)</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">「誰が誰と話しているか」の組織ネットワーク可視化</h2>
+                        <div class="w-12 h-1 bg-purple-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">社員証に内蔵されたビーコンやWi-Fiの接続ログから、実際の社内の人間関係（インフォーマル・ネットワーク）を可視化。「営業部と開発部の結節点になっているキーパーソン」や「孤立している新入社員」を特定し、人事評価やフォローアップに活かします。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-purple-900/20 to-transparent"></div>
+                    </div>
                 </div>
-                <h3 class="text-2xl font-bold mb-4 text-white tracking-wide">ARミリ単位プレビュー</h3>
-                <p class="text-gray-400 text-base leading-relaxed break-words">発注前に、iPhoneのLiDARセンサーを使って原寸大のAR家具を自室に配置。サイズ違いの失敗を100%防ぎます。</p>
-            </div>
-            
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-purple-600 font-bold tracking-widest text-sm uppercase">AGILE FACILITY</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">A/Bテストで進化し続けるオフィス</h2>
+                        <div class="w-12 h-1 bg-purple-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">オフィスは作って終わりではありません。「ソファを向かい合わせにした場合」と「窓に向けた場合」で、どちらが会話の発生率が高いか。SPACE-NUDGEは、WebサイトのUI改善のように、オフィスレイアウトのA/Bテストをデータ駆動で実行します。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: bottom right;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-purple-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-purple-600 font-bold tracking-widest text-sm uppercase">CLIENT SUCCESS</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">Case Study | 大手広告代理店</h2>
+                        <div class="w-12 h-1 bg-purple-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">部門間のサイロ化に悩んでいた企業。SPACE-NUDGEの分析により、1階のカフェスペースが特定の部署にしか使われていないことが判明。全フロアの郵便受けをカフェ横に集約し、導線を再設計した結果、他部署間の雑談が月間300%増加し、そこから3つの新規プロジェクトが誕生しました。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-purple-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-purple-600 font-bold tracking-widest text-sm uppercase">OUR VISION</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">空間は、無言のメッセージである</h2>
+                        <div class="w-12 h-1 bg-purple-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">企業文化は、壁に貼られたスローガンではなく、毎日の環境によって作られます。私たちは空間デザインを通じて、人間のクリエイティビティと幸福度を無意識のうちにハックします。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: bottom right;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-purple-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
         </div>
 
-        <!-- CTA -->
-        <div class="text-center bg-gradient-to-br from-white/5 to-transparent border border-white/10 rounded-[3rem] p-16 md:p-28 relative overflow-hidden group">
-            <div class="absolute inset-0 bg-stone-500/5 opacity-0 group-hover:opacity-100 transition duration-1000"></div>
+        <div class="text-center bg-gray-900 border border-gray-800 rounded-[3rem] p-16 md:p-32 relative overflow-hidden group shadow-2xl">
+            <div class="absolute inset-0 bg-gradient-to-br from-purple-900/40 to-transparent"></div>
             <div class="relative z-10">
-                <h2 class="text-4xl md:text-6xl font-black mb-8 text-white">イノベーションを体験する</h2>
-                <p class="text-gray-400 mb-12 max-w-xl mx-auto text-lg">ビジネスと日常を劇的に進化させるプロダクトへのファーストアクセス。</p>
-                <a href="#" class="bg-stone-800 hover:bg-stone-700 text-white px-12 py-5 rounded-full font-bold text-lg inline-flex items-center gap-3 transition transform hover:-translate-y-1 shadow-2xl shadow-stone-500/20">
-                    AIでお部屋をデザインする
+                <h2 class="text-4xl md:text-5xl font-black mb-8 text-white">オフィスは、最大の「人事施策」である。</h2>
+                <p class="text-gray-300 mb-12 max-w-xl mx-auto text-lg leading-relaxed">クリエイティビティは会議室では生まれません。偶然の出会いを生み出す、空間のアルゴリズムを導入しましょう。</p>
+                <a href="#" class="bg-purple-500 hover:bg-purple-400 text-white px-12 py-5 rounded-full font-bold text-lg inline-flex items-center gap-3 transition transform hover:-translate-y-1 shadow-lg shadow-purple-500/30">
+                    空間の行動診断を始める
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
                 </a>
             </div>
         </div>
     </main>
+        
 
     <!-- Footer -->
     <footer class="py-12 text-center text-sm font-medium text-gray-600 border-t border-white/10 bg-black/20">

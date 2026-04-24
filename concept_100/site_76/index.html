@@ -12,10 +12,10 @@
         body { font-family: 'Inter', 'Noto Sans JP', sans-serif; }
     </style>
 </head>
-<body class="bg-green-950 px-bg text-green-100 min-h-screen">
+<body class="bg-gray-50 text-stone-800 min-h-screen font-sans antialiased overflow-x-hidden">
 
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 backdrop-blur-md bg-opacity-80 bg-black/50 border-b border-white/10 px-8 py-5 flex justify-between items-center transition-all">
+    <nav class="fixed w-full z-50 backdrop-blur-md bg-opacity-90 bg-white/90 border-b border-gray-200 px-8 py-4 flex justify-between items-center transition-all shadow-sm">
         <div class="font-black text-2xl tracking-tighter text-green-500">SWING-METRICS</div>
         <div class="hidden md:flex gap-10 text-sm font-bold text-gray-300">
             <a href="#" class="hover:text-green-500 transition">機能</a>
@@ -26,61 +26,137 @@
     </nav>
 
     <!-- Hero Section -->
-    <main class="pt-36 pb-24 px-6 md:px-12 max-w-7xl mx-auto">
+    
+    <main class="pt-[140px] pb-24 px-6 md:px-12 max-w-7xl mx-auto">
         <div class="text-center max-w-4xl mx-auto mb-20 relative">
-            <span class="bg-green-900/20 text-text-green-500 border border-green-500/30 px-4 py-1.5 text-xs font-bold rounded-full tracking-widest uppercase mb-6 inline-block shadow-sm backdrop-blur-sm">sports</span>
-            <h1 class="text-4xl md:text-6xl font-black mb-8 leading-tight tracking-tight">感覚ではなく、数式で。<br>プロフェッショナルのスイング解析。</h1>
-            <p class="text-lg md:text-xl text-gray-400 font-medium leading-relaxed max-w-2xl mx-auto">「もっと腰を回して」という抽象的なコーチングはもう古い。自分のスイングの何が間違っているのか、骨格レベルで可視化しなければ、スコアの壁は越えられない。</p>
+            <span class="bg-gray-100 text-green-600 border border-gray-200 px-5 py-2 text-xs font-black rounded-full tracking-widest mb-8 inline-block shadow-sm uppercase">SPORTS TECH / GOLF</span>
+            <h1 class="text-4xl md:text-[54px] font-black mb-8 leading-[1.2] tracking-tight text-gray-900">あなたのスイングを、<br>1秒で「数学」にする。</h1>
+            <p class="text-lg md:text-xl text-gray-600 font-medium leading-relaxed max-w-3xl mx-auto">高価なセンサー機器はもう不要です。スマホのカメラで撮影するだけで、AIが骨格の動き、クラブ軌道、ヘッドスピードをミリ単位で3D解析。SWING-METRICSは、すべてのゴルファーにプロレベルのバイオメカニクスを提供する究極のコーチング・プラットフォーム。</p>
         </div>
 
-        <!-- Real UI Image Showcase -->
-        <div class="relative w-full aspect-[21/9] md:aspect-video rounded-[2rem] overflow-hidden shadow-2xl mb-32 border border-white/5 shadow-[0_20px_50px_rgba(0,0,0,0.5)] group ring-1 ring-white/10">
+        <div class="relative w-full aspect-[21/9] md:aspect-video rounded-[32px] overflow-hidden shadow-2xl mb-32 border border-gray-200/50 group bg-zinc-900">
             <img src="img/ui.png" alt="UI Dashboard" class="w-full h-full object-cover transition-transform duration-[3s] group-hover:scale-[1.02]">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none mix-blend-overlay"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none blend-overlay"></div>
         </div>
 
-        <!-- Features -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-32">
-            
-            <div class="bg-white/[0.02] border border-white/5 p-10 rounded-3xl hover:shadow-2xl transition transform hover:-translate-y-2 duration-300">
-                <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-8 bg-green-500/10 text-green-500 border border-green-500/20">
-                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+        <div class="flex flex-col gap-32 mb-32">
+        
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-green-600 font-bold tracking-widest text-sm uppercase">THE PROBLEM</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">「レッスンプロの勘」への過度な依存</h2>
+                        <div class="w-12 h-1 bg-green-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">ゴルフの上達を妨げている最大の原因は、「言語の曖昧さ」です。「タメを作る」「もっと粘る」といった感覚的な指導は、人によって解釈が分かれます。真の上達には、客観的で定量的なフィードバックが不可欠です。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-green-900/20 to-transparent"></div>
+                    </div>
                 </div>
-                <h3 class="text-2xl font-bold mb-4 text-white tracking-wide">マーカーレス骨格推定</h3>
-                <p class="text-gray-400 text-base leading-relaxed break-words">スマホやiPadのカメラで撮影するだけ。特殊なスーツを着なくても、AIが24個の関節ポイントをミリ単位でトラッキングします。</p>
-            </div>
-            
-            <div class="bg-white/[0.02] border border-white/5 p-10 rounded-3xl hover:shadow-2xl transition transform hover:-translate-y-2 duration-300">
-                <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-8 bg-green-500/10 text-green-500 border border-green-500/20">
-                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                
+                <div class="mt-10">
+                    <div class="text-center mb-16">
+                        <span class="text-green-600 font-bold tracking-widest text-sm uppercase">COMPUTER VISION AI</span>
+                        <h2 class="text-3xl md:text-4xl font-black mt-4 text-gray-900">スマホ1台で完結する、弾道と骨格の同時解析</h2>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-green-50 text-green-600 border border-green-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">マーカーレス3Dモーションキャプチャ</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">専用のスーツや体に貼るマーカーは不要。背後からスマホで撮影するだけで、AIが関節の動きを24のポイントでトラッキングし、3Dモデル化します。</p>
+</div>
+
+
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-green-50 text-green-600 border border-green-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">キネマティック・シーケンス分析</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">骨盤、胸郭、腕、クラブヘッド。それぞれの動く順番とスピードのピーク（運動連鎖）をグラフ化し、プロのデータと重ね合わせて「力のロス」を視覚的に特定します。</p>
+</div>
+
+
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-green-50 text-green-600 border border-green-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">インパクトの瞬間を予測するディープラーニング</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">高速度カメラを使わなくても、スイングの軌道からインパクト時のフェースアングルと打出角を推論し、正確な飛距離とスピン量を計算します。</p>
+</div>
+
+                    </div>
                 </div>
-                <h3 class="text-2xl font-bold mb-4 text-white tracking-wide">PGAプロとのデータ比較</h3>
-                <p class="text-gray-400 text-base leading-relaxed break-words">トッププロのスイング軌道データとあなたを重ね合わせ、「インパクト時の骨盤の角度が5度足りない」など具体的に指摘。</p>
-            </div>
-            
-            <div class="bg-white/[0.02] border border-white/5 p-10 rounded-3xl hover:shadow-2xl transition transform hover:-translate-y-2 duration-300">
-                <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-8 bg-green-500/10 text-green-500 border border-green-500/20">
-                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-green-600 font-bold tracking-widest text-sm uppercase">INSTANT FEEDBACK</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">「なぜスライスするのか」をAIが即座に回答</h2>
+                        <div class="w-12 h-1 bg-green-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">解析結果は単なる数字の羅列ではありません。「ダウンスイングで右肩が3センチ突っ込んでいるため、アウトサイドイン軌道になっています。このドリルを試してください」と、具体的な原因と修正アクションを動画付きで即座に提示します。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-green-900/20 to-transparent"></div>
+                    </div>
                 </div>
-                <h3 class="text-2xl font-bold mb-4 text-white tracking-wide">クラブパス3D解析</h3>
-                <p class="text-gray-400 text-base leading-relaxed break-words">ボールの初速、スピン量だけでなく「クラブヘッドがどういう軌道で降りてきたか」をAIが画像から逆算。スライスの根本原因を特定します。</p>
-            </div>
-            
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-green-600 font-bold tracking-widest text-sm uppercase">PROGRESS TRACKING</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">過去の自分との「ゴースト対戦」</h2>
+                        <div class="w-12 h-1 bg-green-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">1ヶ月前のスイングと、今日のスイング。2つの3Dモデルを重ね合わせて再生（ゴースト再生）することで、フォームの改善度合いが一目瞭然になります。「直っているつもり」という錯覚を完全に排除します。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: bottom right;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-green-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-green-600 font-bold tracking-widest text-sm uppercase">USER STORY</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">Case Study | 万年100切りのアマチュアゴルファー</h2>
+                        <div class="w-12 h-1 bg-green-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">5年間スクールに通ってもスコア100の壁を越えられなかったユーザー。SWING-METRICSで解析した結果、「切り返しでの骨盤の回転不足」が根本原因だと発覚。AIが提案したストレッチと専用ドリルを2週間実践したところ、次回のラウンドで一気に80台を記録しました。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-green-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-green-600 font-bold tracking-widest text-sm uppercase">OUR VISION</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">誰もが、自分の「専属コーチ」を持つ世界</h2>
+                        <div class="w-12 h-1 bg-green-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">スポーツにおける「才能」の正体は、効率的な体の動かし方を知っているかどうかです。私たちはAIの力でその暗黙知を解読し、すべての人が最高のパフォーマンスを発揮できる世界を目指します。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: bottom right;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-green-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
         </div>
 
-        <!-- CTA -->
-        <div class="text-center bg-gradient-to-br from-white/5 to-transparent border border-white/10 rounded-[3rem] p-16 md:p-28 relative overflow-hidden group">
-            <div class="absolute inset-0 bg-green-500/5 opacity-0 group-hover:opacity-100 transition duration-1000"></div>
+        <div class="text-center bg-gray-900 border border-gray-800 rounded-[3rem] p-16 md:p-32 relative overflow-hidden group shadow-2xl">
+            <div class="absolute inset-0 bg-gradient-to-br from-green-900/40 to-transparent"></div>
             <div class="relative z-10">
-                <h2 class="text-4xl md:text-6xl font-black mb-8 text-white">イノベーションを体験する</h2>
-                <p class="text-gray-400 mb-12 max-w-xl mx-auto text-lg">ビジネスと日常を劇的に進化させるプロダクトへのファーストアクセス。</p>
-                <a href="#" class="bg-green-500 hover:bg-green-400 text-black px-12 py-5 rounded-full font-bold text-lg inline-flex items-center gap-3 transition transform hover:-translate-y-1 shadow-2xl shadow-green-500/20">
-                    AI解析を無料で試す
+                <h2 class="text-4xl md:text-5xl font-black mb-8 text-white">感覚から、確信へ。</h2>
+                <p class="text-gray-300 mb-12 max-w-xl mx-auto text-lg leading-relaxed">「もっと腰を回して」という曖昧なアドバイスは終わりです。データに基づいた、最短距離の上達を。</p>
+                <a href="#" class="bg-green-500 hover:bg-green-400 text-white px-12 py-5 rounded-full font-bold text-lg inline-flex items-center gap-3 transition transform hover:-translate-y-1 shadow-lg shadow-green-500/30">
+                    スイングを解析する
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
                 </a>
             </div>
         </div>
     </main>
+        
 
     <!-- Footer -->
     <footer class="py-12 text-center text-sm font-medium text-gray-600 border-t border-white/10 bg-black/20">

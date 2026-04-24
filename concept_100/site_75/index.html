@@ -12,10 +12,10 @@
         body { font-family: 'Inter', 'Noto Sans JP', sans-serif; }
     </style>
 </head>
-<body class="bg-[#161616] text-neutral-400 min-h-screen">
+<body class="bg-gray-50 text-stone-800 min-h-screen font-sans antialiased overflow-x-hidden">
 
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 backdrop-blur-md bg-opacity-80 bg-black/50 border-b border-white/10 px-8 py-5 flex justify-between items-center transition-all">
+    <nav class="fixed w-full z-50 backdrop-blur-md bg-opacity-90 bg-white/90 border-b border-gray-200 px-8 py-4 flex justify-between items-center transition-all shadow-sm">
         <div class="font-black text-2xl tracking-tighter text-amber-100">OMAKASE-AI</div>
         <div class="hidden md:flex gap-10 text-sm font-bold text-gray-300">
             <a href="#" class="hover:text-amber-100 transition">機能</a>
@@ -26,61 +26,137 @@
     </nav>
 
     <!-- Hero Section -->
-    <main class="pt-36 pb-24 px-6 md:px-12 max-w-7xl mx-auto">
+    
+    <main class="pt-[140px] pb-24 px-6 md:px-12 max-w-7xl mx-auto">
         <div class="text-center max-w-4xl mx-auto mb-20 relative">
-            <span class="bg-gray-900/20 text-text-amber-100 border border-gray-500/30 px-4 py-1.5 text-xs font-bold rounded-full tracking-widest uppercase mb-6 inline-block shadow-sm backdrop-blur-sm">food</span>
-            <h1 class="text-4xl md:text-6xl font-black mb-8 leading-tight tracking-tight">データが握る、<br>最高峰の「おまかせコース」。</h1>
-            <p class="text-lg md:text-xl text-gray-400 font-medium leading-relaxed max-w-2xl mx-auto">毎日の豊洲市場での仕入れ。経験と勘だけに頼っていては、原価率の悪化やフードロスは避けられません。「旬の食材」と「利益率」の完璧なバランス、AIがその答えを出します。</p>
+            <span class="bg-gray-100 text-amber-600 border border-gray-200 px-5 py-2 text-xs font-black rounded-full tracking-widest mb-8 inline-block shadow-sm uppercase">FOODTECH / LUXURY DINING</span>
+            <h1 class="text-4xl md:text-[54px] font-black mb-8 leading-[1.2] tracking-tight text-gray-900">「大将のおまかせ」を、<br>AIが完全再現する。</h1>
+            <p class="text-lg md:text-xl text-gray-600 font-medium leading-relaxed max-w-3xl mx-auto">ミシュラン星付きレストランのシェフが持つ「顧客の好みの記憶」と「旬の食材の組み合わせ」をデータ化。OMAKASE-AIは、常連客への究極のパーソナライズ体験を初見のゲストにも提供する、最高峰のガストロノミーOSです。</p>
         </div>
 
-        <!-- Real UI Image Showcase -->
-        <div class="relative w-full aspect-[21/9] md:aspect-video rounded-[2rem] overflow-hidden shadow-2xl mb-32 border border-white/5 shadow-[0_20px_50px_rgba(0,0,0,0.5)] group ring-1 ring-white/10">
+        <div class="relative w-full aspect-[21/9] md:aspect-video rounded-[32px] overflow-hidden shadow-2xl mb-32 border border-gray-200/50 group bg-zinc-900">
             <img src="img/ui.png" alt="UI Dashboard" class="w-full h-full object-cover transition-transform duration-[3s] group-hover:scale-[1.02]">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none mix-blend-overlay"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none blend-overlay"></div>
         </div>
 
-        <!-- Features -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-32">
-            
-            <div class="bg-white/[0.02] border border-white/5 p-10 rounded-3xl hover:shadow-2xl transition transform hover:-translate-y-2 duration-300">
-                <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-8 bg-gray-500/10 text-amber-100 border border-gray-500/20">
-                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+        <div class="flex flex-col gap-32 mb-32">
+        
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-amber-600 font-bold tracking-widest text-sm uppercase">THE BOTTLENECK</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">「常連客エコシステム」の限界</h2>
+                        <div class="w-12 h-1 bg-amber-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">名店の「おまかせ」は、大将が常連客の過去の来店履歴、アレルギー、前回のメインディッシュ、ワインの好みをすべて記憶しているからこそ成立する魔法です。しかし、この属人的なスキルはスケールしません。OMAKASE-AIは、この暗黙知をシステム化します。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-amber-900/20 to-transparent"></div>
+                    </div>
                 </div>
-                <h3 class="text-2xl font-bold mb-4 text-white tracking-wide">本日のAIおまかせ構成</h3>
-                <p class="text-gray-400 text-base leading-relaxed break-words">市場の卸売価格データ、天候予測、昨日の在庫状況から、粗利率を最大化しつつ顧客満足度を下げることのない「今日のおまかせ全15品」を自動提案。</p>
-            </div>
-            
-            <div class="bg-white/[0.02] border border-white/5 p-10 rounded-3xl hover:shadow-2xl transition transform hover:-translate-y-2 duration-300">
-                <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-8 bg-gray-500/10 text-amber-100 border border-gray-500/20">
-                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                
+                <div class="mt-10">
+                    <div class="text-center mb-16">
+                        <span class="text-amber-600 font-bold tracking-widest text-sm uppercase">TASTE INTELLIGENCE</span>
+                        <h2 class="text-3xl md:text-4xl font-black mt-4 text-gray-900">味覚プロファイルの構築と予測アルゴリズム</h2>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-amber-50 text-amber-600 border border-amber-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">ダイナミック・メニュー生成</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">顧客のSNSデータ（公開情報）や予約時のアンケートから「酸味が苦手」「ジビエを好む」といった隠れた好みをAIが抽出し、その日の仕入れ状況と掛け合わせて個別のメニューを自動生成します。</p>
+</div>
+
+
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-amber-50 text-amber-600 border border-amber-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">ペアリング最適化エンジン</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">料理の温度、塩分濃度、油分を数値化し、セラーにある数千本のワインの中から「最もマリアージュする一杯」をソムリエの代わりに提案。グラスワインの売上を劇的に向上させます。</p>
+</div>
+
+
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-amber-50 text-amber-600 border border-amber-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">リアルタイム・フィードバックループ</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">食後、お皿の「残し具合」や「食べるスピード」をホールスタッフがタブレットに入力。次回の来店時には、ポーション（量）や塩加減が自動的に微調整されます。</p>
+</div>
+
+                    </div>
                 </div>
-                <h3 class="text-2xl font-bold mb-4 text-white tracking-wide">顧客データ完全記憶</h3>
-                <p class="text-gray-400 text-base leading-relaxed break-words">「このお客様はウニが苦手」「前回は赤身を多めに出した」など、常連客の好みを瞬時に呼び出し、コース内容をパーソナライズ。</p>
-            </div>
-            
-            <div class="bg-white/[0.02] border border-white/5 p-10 rounded-3xl hover:shadow-2xl transition transform hover:-translate-y-2 duration-300">
-                <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-8 bg-gray-500/10 text-amber-100 border border-gray-500/20">
-                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-amber-600 font-bold tracking-widest text-sm uppercase">SUSTAINABLE SOURCING</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">市場の「未利用魚」を高級食材へ変える</h2>
+                        <div class="w-12 h-1 bg-amber-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">その日、市場で安く大量に出回っている不揃いな野菜や、名前の知られていない未利用魚。OMAKASE-AIはそれらの食材情報をスキャンし、過去のレシピデータと照合。「この魚は低温調理と柑橘系のソースで化ける」というクリエイティブな調理アプローチをシェフに提示し、原価率を下げつつ顧客満足度を上げます。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-amber-900/20 to-transparent"></div>
+                    </div>
                 </div>
-                <h3 class="text-2xl font-bold mb-4 text-white tracking-wide">スマート在庫連携</h3>
-                <p class="text-gray-400 text-base leading-relaxed break-words">冷蔵庫内の特殊タグと連動し「消費期限が迫っているネタ」をコース前半の『つまみ』に組み込むようAIが指示。ロスをゼロに。</p>
-            </div>
-            
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-amber-600 font-bold tracking-widest text-sm uppercase">GLOBAL ACCESSIBILITY</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">言語の壁を越える、ホスピタリティの民主化</h2>
+                        <div class="w-12 h-1 bg-amber-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">インバウンド客に対して、英語やフランス語で「今日の魚の産地と調理法のこだわり」を完璧に説明できるスタッフは希少です。AIが料理のサーブと同時に、顧客のスマホへ美しい多言語のデジタル・ストーリーテリングを送信し、体験価値を底上げします。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: bottom right;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-amber-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-amber-600 font-bold tracking-widest text-sm uppercase">CLIENT SUCCESS</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">Case Study | 銀座のイノベーティブ・フュージョン</h2>
+                        <div class="w-12 h-1 bg-amber-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">開店からわずか1年で二つ星を獲得したレストラン。OMAKASE-AIをベースにメニューを構築し、初回来店のゲストに対しても「まるで10年来の常連のように」好みを突いた料理を提供。リピート率が業界平均の3倍という驚異的な数値を叩き出しました。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-amber-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-amber-600 font-bold tracking-widest text-sm uppercase">OUR VISION</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">料理人のクリエイティビティを解放する</h2>
+                        <div class="w-12 h-1 bg-amber-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">AIは料理をしません。AIがするのは「考えること」の補助です。私たちは、シェフが「何を作るべきか」悩む時間をゼロにし、「どうやって驚かせるか」という純粋なアートに集中できる環境を提供します。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: bottom right;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-amber-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
         </div>
 
-        <!-- CTA -->
-        <div class="text-center bg-gradient-to-br from-white/5 to-transparent border border-white/10 rounded-[3rem] p-16 md:p-28 relative overflow-hidden group">
-            <div class="absolute inset-0 bg-gray-500/5 opacity-0 group-hover:opacity-100 transition duration-1000"></div>
+        <div class="text-center bg-gray-900 border border-gray-800 rounded-[3rem] p-16 md:p-32 relative overflow-hidden group shadow-2xl">
+            <div class="absolute inset-0 bg-gradient-to-br from-amber-900/40 to-transparent"></div>
             <div class="relative z-10">
-                <h2 class="text-4xl md:text-6xl font-black mb-8 text-white">イノベーションを体験する</h2>
-                <p class="text-gray-400 mb-12 max-w-xl mx-auto text-lg">ビジネスと日常を劇的に進化させるプロダクトへのファーストアクセス。</p>
-                <a href="#" class="bg-[#aa8855] hover:bg-[#886633] text-white px-12 py-5 rounded-full font-bold text-lg inline-flex items-center gap-3 transition transform hover:-translate-y-1 shadow-2xl shadow-gray-500/20">
-                    職人専用デモを予約
+                <h2 class="text-4xl md:text-5xl font-black mb-8 text-white">味覚をデータ化し、感動を最大化する。</h2>
+                <p class="text-gray-300 mb-12 max-w-xl mx-auto text-lg leading-relaxed">ただ美味しい料理を出すだけでは、星は獲れません。AIが導き出す「予測不可能な驚き」をあなたのレストランに。</p>
+                <a href="#" class="bg-amber-500 hover:bg-amber-400 text-white px-12 py-5 rounded-full font-bold text-lg inline-flex items-center gap-3 transition transform hover:-translate-y-1 shadow-lg shadow-amber-500/30">
+                    システムを導入する
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
                 </a>
             </div>
         </div>
     </main>
+        
 
     <!-- Footer -->
     <footer class="py-12 text-center text-sm font-medium text-gray-600 border-t border-white/10 bg-black/20">
