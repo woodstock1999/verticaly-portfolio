@@ -12,10 +12,10 @@
         body { font-family: 'Inter', 'Noto Sans JP', sans-serif; }
     </style>
 </head>
-<body class="bg-stone-900 text-white min-h-screen">
+<body class="bg-gray-50 text-stone-800 min-h-screen font-sans antialiased overflow-x-hidden">
 
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 backdrop-blur-md bg-opacity-80 bg-black/50 border-b border-white/10 px-6 py-4 flex justify-between items-center transition-all">
+    <nav class="fixed w-full z-50 backdrop-blur-md bg-opacity-90 bg-white/90 border-b border-gray-200 px-8 py-4 flex justify-between items-center transition-all shadow-sm">
         <div class="font-black text-2xl tracking-tighter text-amber-500">GROOM & GRIND</div>
         <div class="hidden md:flex gap-8 text-sm font-bold text-gray-300">
             <a href="#" class="hover:text-amber-500 transition">特徴</a>
@@ -26,61 +26,137 @@
     </nav>
 
     <!-- Hero Section -->
-    <main class="pt-32 pb-20 px-6 md:px-12 max-w-7xl mx-auto">
-        <div class="text-center max-w-4xl mx-auto mb-16">
-            <span class="bg-amber-900/50 text-amber-300 border-amber-500 border px-3 py-1 text-xs font-bold rounded-full tracking-widest uppercase mb-6 inline-block">Niche Local Solution</span>
-            <h1 class="text-4xl md:text-6xl font-black mb-8 leading-tight tracking-tight">飛び込み客を逃さない。<br>理容室専用・チェア稼働最大化SaaS</h1>
-            <p class="text-lg md:text-xl text-gray-400 font-medium leading-relaxed max-w-2xl mx-auto">週末は満席で断るのに、平日はスタッフが余っている。予約なしの飛び込み客をうまく捌ききれない...そんな地域理容室の課題をAIが解決します。</p>
+    
+    <main class="pt-[140px] pb-24 px-6 md:px-12 max-w-7xl mx-auto">
+        <div class="text-center max-w-4xl mx-auto mb-20 relative">
+            <span class="bg-gray-100 text-gray-600 border border-gray-200 px-5 py-2 text-xs font-black rounded-full tracking-widest mb-8 inline-block shadow-sm uppercase">VERTICAL SAAS / BEAUTY</span>
+            <h1 class="text-4xl md:text-[54px] font-black mb-8 leading-[1.2] tracking-tight text-gray-900">「男の隠れ家」を、<br>データでブーストする。</h1>
+            <p class="text-lg md:text-xl text-gray-600 font-medium leading-relaxed max-w-3xl mx-auto">美容室向けの汎用システムでは、バーバー（理容室）の熱狂は作れません。GROOM & GRINDは、短い来店周期、フェードカットの細かい履歴、そして「ポマードのボトルキープ」までを管理する、バーバーカルチャーに完全特化した予約＆CRMシステムです。</p>
         </div>
 
-        <!-- UI Showcase -->
-        <div class="relative w-full aspect-video rounded-2xl overflow-hidden shadow-2xl mb-24 border border-white/10 shadow-black/80 group">
-            <img src="img/ui.png" alt="UI Dashboard" class="w-full h-full object-cover transition-transform duration-[2s] group-hover:scale-105">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
-            <div class="absolute bottom-8 left-8">
-                <div class="px-4 py-2 bg-black/70 backdrop-blur text-white rounded-lg text-sm font-bold shadow-lg">⚡ AI-Powered Dashboard</div>
-            </div>
+        <div class="relative w-full aspect-[21/9] md:aspect-video rounded-[32px] overflow-hidden shadow-2xl mb-32 border border-gray-200/50 group bg-zinc-900">
+            <img src="img/ui.png" alt="UI Dashboard" class="w-full h-full object-cover transition-transform duration-[3s] group-hover:scale-[1.02]">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none blend-overlay"></div>
         </div>
 
-        <!-- Features -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24">
-            
-            <div class="bg-white/5 border border-white/10 p-8 rounded-2xl hover:shadow-lg transition">
-                <div class="w-12 h-12 rounded-full flex items-center justify-center mb-6 bg-amber-900/50 text-amber-300 border-amber-500 border">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+        <div class="flex flex-col gap-32 mb-32">
+        
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-gray-600 font-bold tracking-widest text-sm uppercase">THE MISFIT</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">バーバーの文化に合わない「美容室のシステム」</h2>
+                        <div class="w-12 h-1 bg-gray-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">美容室は「数ヶ月に一度の非日常」、バーバーは「2週間に一度の身だしなみ」。来店頻度も、求めるコミュニケーションも全く異なります。しかし、世の中のサロンシステムのほとんどは美容室向けに作られており、バーバーオーナーは使いにくい機能に高い月額を払い続けています。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-gray-900/20 to-transparent"></div>
+                    </div>
                 </div>
-                <h3 class="text-xl font-bold mb-4 text-white">予約状況マップ</h3>
-                <p class="text-gray-400 text-sm leading-relaxed">視覚的に空きチェア・稼働中チェアを把握。ドラッグ＆ドロップでアサイン完了。</p>
-            </div>
-            
-            <div class="bg-white/5 border border-white/10 p-8 rounded-2xl hover:shadow-lg transition">
-                <div class="w-12 h-12 rounded-full flex items-center justify-center mb-6 bg-amber-900/50 text-amber-300 border-amber-500 border">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                
+                <div class="mt-10">
+                    <div class="text-center mb-16">
+                        <span class="text-gray-600 font-bold tracking-widest text-sm uppercase">RETENTION ENGINE</span>
+                        <h2 class="text-3xl md:text-4xl font-black mt-4 text-gray-900">「2週間に1回」を自動化する仕組み</h2>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-gray-50 text-gray-600 border border-gray-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">フェードカット特化型・電子カルテ</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">「サイドは何ミリのバリカンか」「トップの分け目はどちらか」。バーバー特有の細かいオーダーを画像とタグで瞬時に記録。次回来店時に「前回と同じで」の一言で完璧に再現します。</p>
+</div>
+
+
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-gray-50 text-gray-600 border border-gray-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">サブスクリプション（定額制）管理</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">「月額1万円で切り放題（メンテナンスフリー）」。近年増えているバーバーのサブスクモデルの自動決済と、来店予約の制限管理を完全にシステム化します。</p>
+</div>
+
+
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-gray-50 text-gray-600 border border-gray-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">ポマード＆葉巻の「マイボトル」機能</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">店で購入した整髪料やリカー（お酒）のキープ状況を顧客のアプリで確認可能。「次回来店時に新しいポマードを開封する」といった提案を自動で行い、物販の売上を跳ね上げます。</p>
+</div>
+
+                    </div>
                 </div>
-                <h3 class="text-xl font-bold mb-4 text-white">飛び込み客・予測AI</h3>
-                <p class="text-gray-400 text-sm leading-relaxed">過去データと天候から、本日の飛び込み客数を予測し、スタッフ人員を最適化。</p>
-            </div>
-            
-            <div class="bg-white/5 border border-white/10 p-8 rounded-2xl hover:shadow-lg transition">
-                <div class="w-12 h-12 rounded-full flex items-center justify-center mb-6 bg-amber-900/50 text-amber-300 border-amber-500 border">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-gray-600 font-bold tracking-widest text-sm uppercase">SOCIAL BOOKING</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">電話を鳴らさせない、Instagram完全連動予約</h2>
+                        <div class="w-12 h-1 bg-gray-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">バーバーの集客の主戦場であるInstagram。投稿された「最高にキマったフェードの動画」を見たユーザーが、アプリを離脱することなく、そのまま2タップで空き時間を指定して予約できるシームレスな導線を構築します。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-gray-900/20 to-transparent"></div>
+                    </div>
                 </div>
-                <h3 class="text-xl font-bold mb-4 text-white">自動LINEフォロー</h3>
-                <p class="text-gray-400 text-sm leading-relaxed">「フェードのメンテナンス時期です」とお客様のスマホへ自動で次回予約を促します。</p>
-            </div>
-            
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-gray-600 font-bold tracking-widest text-sm uppercase">NO-SHOW PREVENTION</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">「無断キャンセル」を許さないキャンセルポリシー設定</h2>
+                        <div class="w-12 h-1 bg-gray-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">短い時間で枠を回すバーバーにとって、1回の無断キャンセルは致命傷です。初回客からの予約時には自動でクレジットカードの一時枠を確保し、ドタキャンの場合にはキャンセル料を自動徴収する「防衛機能」を標準搭載しています。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: bottom right;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-gray-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-gray-600 font-bold tracking-widest text-sm uppercase">SHOP SUCCESS</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">Case Study | 渋谷の気鋭バーバーショップ</h2>
+                        <div class="w-12 h-1 bg-gray-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">スタッフ3名で月商300万を売り上げていたが、電話予約の対応と紙のカルテ探しで疲弊していた店舗。GROOM & GRIND導入により電話を完全廃止。スタッフは接客と施術にフルコミットできるようになり、回転率が向上。さらにサブスクモデルの導入により、月商が500万を突破しました。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-gray-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-gray-600 font-bold tracking-widest text-sm uppercase">OUR VISION</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">カルチャーをシステムで支える</h2>
+                        <div class="w-12 h-1 bg-gray-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">バーバーは単に髪を切る場所ではなく、男たちが集うコミュニティであり、カルチャーの発信地です。私たちはその熱量を一切冷ますことなく、裏側のオペレーションを完璧にスマート化します。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: bottom right;">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-gray-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
         </div>
 
-        <!-- CTA -->
-        <div class="text-center bg-white/5 border border-white/10 rounded-3xl p-12 md:p-24">
-            <h2 class="text-3xl md:text-5xl font-black mb-6 text-white">さあ、ビジネスを加速させましょう。</h2>
-            <p class="text-gray-400 mb-10 max-w-lg mx-auto">地域で選ばれる圧倒的なNo.1になるために、最新のAIアシスタントを導入しませんか？</p>
-            <a href="#" class="bg-amber-600 hover:bg-amber-500 px-10 py-5 rounded-full font-bold text-lg inline-flex items-center gap-2 transition transform hover:-translate-y-1 hover:shadow-xl ">
-                14日間の無料トライアルを開始
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-            </a>
+        <div class="text-center bg-gray-900 border border-gray-800 rounded-[3rem] p-16 md:p-32 relative overflow-hidden group shadow-2xl">
+            <div class="absolute inset-0 bg-gradient-to-br from-gray-900/40 to-transparent"></div>
+            <div class="relative z-10">
+                <h2 class="text-4xl md:text-5xl font-black mb-8 text-white">ハサミを持つ以外のすべてを、自動化せよ。</h2>
+                <p class="text-gray-300 mb-12 max-w-xl mx-auto text-lg leading-relaxed">予約の電話対応で、目の前のカットの手を止めるのは終わりです。顧客のロイヤルティを、システムで極限まで高めましょう。</p>
+                <a href="#" class="bg-gray-500 hover:bg-gray-400 text-white px-12 py-5 rounded-full font-bold text-lg inline-flex items-center gap-3 transition transform hover:-translate-y-1 shadow-lg shadow-gray-500/30">
+                    デモをリクエストする
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                </a>
+            </div>
         </div>
     </main>
+        
 
     <!-- Footer -->
     <footer class="py-8 text-center text-sm font-medium text-zinc-600 border-t border-white/10">
