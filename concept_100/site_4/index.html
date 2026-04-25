@@ -10,9 +10,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Inter', 'Noto Sans JP', sans-serif; }
+        .bento-1 { grid-column: span 2; grid-row: span 2; }
+        .bento-2 { grid-column: span 1; grid-row: span 1; }
+        .bento-3 { grid-column: span 1; grid-row: span 1; }
     </style>
 </head>
-<body class="bg-[#050505] text-gray-400 min-h-screen font-sans antialiased overflow-x-hidden">
+<body class="bg-[#050505] text-gray-400 min-h-screen font-sans antialiased overflow-x-hidden selection:bg-blue-500/30">
 
     <!-- Navigation -->
     <nav class="fixed w-full z-50 backdrop-blur-xl bg-[#050505]/80 border-b border-white/5 px-8 py-5 flex justify-between items-center transition-all">
@@ -31,137 +34,130 @@
         </div>
     </nav>
 
-    <main class="pt-[160px] pb-24 px-6 md:px-12 max-w-7xl mx-auto">
-        <!-- Hero Section -->
-        <div class="text-center max-w-5xl mx-auto mb-24 relative">
-            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-600/20 rounded-full blur-[120px] pointer-events-none"></div>
-            <span class="relative z-10 bg-white/5 text-blue-400 border border-white/10 px-6 py-2 text-xs font-black rounded-full tracking-widest uppercase mb-8 inline-block shadow-sm">CYBER SECURITY / QUANTUM</span>
-            <h1 class="relative z-10 text-5xl md:text-[64px] font-black mb-8 leading-[1.1] tracking-tight text-white">量子コンピューターが、<br>世界のパスワードを破る日に備えよ。</h1>
-            <p class="relative z-10 text-lg md:text-xl text-gray-400 font-medium leading-relaxed max-w-3xl mx-auto">「Y2Q（量子コンピューターの脅威）」。現在の暗号技術が数秒で解読される未来は、すぐそこまで来ています。QUANTUM-SECUREは、物理法則に基づいた「絶対に傍受不可能な」量子暗号通信（QKD）ネットワークを企業に提供する究極の防衛インフラです。</p>
-        </div>
-
-        <!-- UI Showcase -->
-        <div class="relative w-full aspect-[21/9] md:aspect-video rounded-[32px] overflow-hidden shadow-2xl mb-32 border border-white/10 group bg-zinc-900">
-            <img src="img/ui.png" alt="UI Dashboard" class="w-full h-full object-cover transition-transform duration-[5s] group-hover:scale-[1.03]" onerror="this.src='https://picsum.photos/seed/placeholder/1600/900'">
-            <div class="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/20 to-transparent pointer-events-none"></div>
-        </div>
-
-        <div class="flex flex-col gap-32 mb-32">
+    <main class="pt-[160px] pb-24">
     
-            <div class="flex flex-col md:flex-row items-center gap-16  relative z-10">
-                <div class="flex-1 space-y-6">
-                    <span class="text-blue-500 font-bold tracking-widest text-sm uppercase">THE TICKING BOMB</span>
-                    <h2 class="text-3xl md:text-4xl font-black text-white leading-tight">「今盗んで、後で解読する」</h2>
-                    <div class="w-16 h-1 bg-blue-600 rounded"></div>
-                    <p class="text-lg text-gray-400 leading-relaxed font-light">国家機密、企業のM&amp;A情報、顧客のクレジットカードデータ。ハッカーたちは今、解読不可能な暗号化データをとりあえず「大量に盗んで保存」しています。数年後に強力な量子コンピューターが実用化された瞬間、過去のすべての機密情報が一斉に丸裸にされるという時限爆弾が起動しているのです。</p>
-                </div>
-                <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-zinc-900 border border-white/10 group">
-                    <img src="img/ui.png" class="w-full h-full object-cover opacity-40 grayscale sepia-[.2] transition-all duration-700 group-hover:grayscale-0 group-hover:opacity-80 group-hover:scale-105" style="object-position: top left;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
-                    <div class="absolute inset-0 bg-gradient-to-tr from-blue-900/40 to-transparent"></div>
-                </div>
+        <div class="relative w-full min-h-[80vh] flex items-center justify-center mb-32 -mt-[160px] pt-[160px] border-b border-white/10 overflow-hidden group">
+            <div class="absolute inset-0 bg-zinc-900">
+                <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia-[.2] transition-transform duration-[10s] group-hover:scale-[1.05]" onerror="this.src='https://picsum.photos/seed/hero_4/1600/900'">
             </div>
-            
-            <div class="mt-10 relative z-10">
-                <div class="text-center mb-16">
-                    <span class="text-blue-500 font-bold tracking-widest text-sm uppercase">QUANTUM KEY DISTRIBUTION</span>
-                    <h2 class="text-3xl md:text-4xl font-black mt-4 text-white">光子（フォトン）の振る舞いを利用した究極の暗号</h2>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    
-    <div class="bg-white/[0.02] border border-white/5 shadow-2xl p-10 rounded-3xl transition transform hover:-translate-y-2 duration-300 group">
-        <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-8 bg-blue-500/10 text-blue-400 border border-blue-500/20 group-hover:bg-blue-500/20 transition-colors">
-            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/80 to-transparent"></div>
+            <div class="relative z-10 text-center max-w-5xl px-6 md:px-12 mx-auto">
+                <span class="bg-white/5 text-blue-400 border border-white/10 px-6 py-2 text-xs font-black rounded-full tracking-widest uppercase mb-8 inline-block shadow-sm backdrop-blur-md">CYBER SECURITY / QUANTUM</span>
+                <h1 class="text-5xl md:text-[72px] font-black mb-8 leading-[1.1] tracking-tight text-white drop-shadow-2xl">量子コンピューターが、<br>世界のパスワードを破る日に備えよ。</h1>
+                <p class="text-lg md:text-xl text-gray-300 font-medium leading-relaxed max-w-3xl mx-auto drop-shadow-md">「Y2Q（量子コンピューターの脅威）」。現在の暗号技術が数秒で解読される未来は、すぐそこまで来ています。QUANTUM-SECUREは、物理法則に基づいた「絶対に傍受不可能な」量子暗号通信（QKD）ネットワークを企業に提供する究極の防衛インフラです。</p>
+            </div>
         </div>
-        <h4 class="text-xl font-bold mb-4 text-white tracking-wide">${f.t}</h4>
-        <p class="text-gray-400 text-base leading-relaxed">${f.d}</p>
-    </div>
-    
+        <div class="px-6 md:px-12 max-w-7xl mx-auto flex flex-col gap-32 mb-32">
+                <div class="flex flex-col md:flex-row items-center gap-16  relative z-10">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-blue-500 font-bold tracking-widest text-sm uppercase">THE TICKING BOMB</span>
+                        <h2 class="text-3xl md:text-5xl font-black text-white leading-tight">「今盗んで、後で解読する」</h2>
+                        <div class="w-16 h-1 bg-blue-600 rounded"></div>
+                        <p class="text-lg text-gray-400 leading-relaxed font-light">国家機密、企業のM&amp;A情報、顧客のクレジットカードデータ。ハッカーたちは今、解読不可能な暗号化データをとりあえず「大量に盗んで保存」しています。数年後に強力な量子コンピューターが実用化された瞬間、過去のすべての機密情報が一斉に丸裸にされるという時限爆弾が起動しているのです。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-zinc-900 border border-white/10 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-50 grayscale sepia-[.2] transition-all duration-700 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;" onerror="this.src='https://picsum.photos/seed/block_4_0/800/600'">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-blue-900/40 to-transparent"></div>
+                    </div>
+                </div>
+                
+                <div class="relative z-10">
+                    <div class="mb-16">
+                        <span class="text-blue-500 font-bold tracking-widest text-sm uppercase">QUANTUM KEY DISTRIBUTION</span>
+                        <h2 class="text-3xl md:text-5xl font-black mt-4 text-white">光子（フォトン）の振る舞いを利用した究極の暗号</h2>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 md:grid-rows-2 gap-6 h-auto md:h-[500px]">
+                        
+                        <div class="bg-white/[0.02] border border-white/5 p-10 rounded-[32px] transition transform hover:-translate-y-1 duration-300 group relative overflow-hidden bento-1">
+                            <div class="absolute top-0 right-0 w-32 h-32 bg-blue-600/10 rounded-bl-full pointer-events-none group-hover:bg-blue-600/20 transition-colors"></div>
+                            <h4 class="text-2xl font-bold mb-4 text-white relative z-10">${f.t}</h4>
+                            <p class="text-gray-400 text-base leading-relaxed relative z-10">${f.d}</p>
+                        </div>
+                        
 
-    <div class="bg-white/[0.02] border border-white/5 shadow-2xl p-10 rounded-3xl transition transform hover:-translate-y-2 duration-300 group">
-        <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-8 bg-blue-500/10 text-blue-400 border border-blue-500/20 group-hover:bg-blue-500/20 transition-colors">
-            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-        </div>
-        <h4 class="text-xl font-bold mb-4 text-white tracking-wide">${f.t}</h4>
-        <p class="text-gray-400 text-base leading-relaxed">${f.d}</p>
-    </div>
-    
+                        <div class="bg-white/[0.02] border border-white/5 p-10 rounded-[32px] transition transform hover:-translate-y-1 duration-300 group relative overflow-hidden bento-2">
+                            <div class="absolute top-0 right-0 w-32 h-32 bg-blue-600/10 rounded-bl-full pointer-events-none group-hover:bg-blue-600/20 transition-colors"></div>
+                            <h4 class="text-2xl font-bold mb-4 text-white relative z-10">${f.t}</h4>
+                            <p class="text-gray-400 text-base leading-relaxed relative z-10">${f.d}</p>
+                        </div>
+                        
 
-    <div class="bg-white/[0.02] border border-white/5 shadow-2xl p-10 rounded-3xl transition transform hover:-translate-y-2 duration-300 group">
-        <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-8 bg-blue-500/10 text-blue-400 border border-blue-500/20 group-hover:bg-blue-500/20 transition-colors">
-            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-        </div>
-        <h4 class="text-xl font-bold mb-4 text-white tracking-wide">${f.t}</h4>
-        <p class="text-gray-400 text-base leading-relaxed">${f.d}</p>
-    </div>
-    
+                        <div class="bg-white/[0.02] border border-white/5 p-10 rounded-[32px] transition transform hover:-translate-y-1 duration-300 group relative overflow-hidden bento-3">
+                            <div class="absolute top-0 right-0 w-32 h-32 bg-blue-600/10 rounded-bl-full pointer-events-none group-hover:bg-blue-600/20 transition-colors"></div>
+                            <h4 class="text-2xl font-bold mb-4 text-white relative z-10">${f.t}</h4>
+                            <p class="text-gray-400 text-base leading-relaxed relative z-10">${f.d}</p>
+                        </div>
+                        
+                    </div>
                 </div>
-            </div>
-            
-            <div class="flex flex-col md:flex-row items-center gap-16  relative z-10">
-                <div class="flex-1 space-y-6">
-                    <span class="text-blue-500 font-bold tracking-widest text-sm uppercase">POST-QUANTUM CRYPTO</span>
-                    <h2 class="text-3xl md:text-4xl font-black text-white leading-tight">ブロックチェーンの「次の次元」のセキュリティ</h2>
-                    <div class="w-16 h-1 bg-blue-600 rounded"></div>
-                    <p class="text-lg text-gray-400 leading-relaxed font-light">仮想通貨を支える公開鍵暗号方式も、量子コンピューターの登場により崩壊の危機にあります。私たちは、ブロックチェーンのネットワークを「耐量子計算機暗号（PQC）」へとアップグレードし、Web3エコシステムの基盤を保護します。</p>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16  relative z-10">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-blue-500 font-bold tracking-widest text-sm uppercase">POST-QUANTUM CRYPTO</span>
+                        <h2 class="text-3xl md:text-5xl font-black text-white leading-tight">ブロックチェーンの「次の次元」のセキュリティ</h2>
+                        <div class="w-16 h-1 bg-blue-600 rounded"></div>
+                        <p class="text-lg text-gray-400 leading-relaxed font-light">仮想通貨を支える公開鍵暗号方式も、量子コンピューターの登場により崩壊の危機にあります。私たちは、ブロックチェーンのネットワークを「耐量子計算機暗号（PQC）」へとアップグレードし、Web3エコシステムの基盤を保護します。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-zinc-900 border border-white/10 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-50 grayscale sepia-[.2] transition-all duration-700 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;" onerror="this.src='https://picsum.photos/seed/block_4_2/800/600'">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-blue-900/40 to-transparent"></div>
+                    </div>
                 </div>
-                <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-zinc-900 border border-white/10 group">
-                    <img src="img/ui.png" class="w-full h-full object-cover opacity-40 grayscale sepia-[.2] transition-all duration-700 group-hover:grayscale-0 group-hover:opacity-80 group-hover:scale-105" style="object-position: top left;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
-                    <div class="absolute inset-0 bg-gradient-to-tr from-blue-900/40 to-transparent"></div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse relative z-10">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-blue-500 font-bold tracking-widest text-sm uppercase">LIFETIME SECRECY</span>
+                        <h2 class="text-3xl md:text-5xl font-black text-white leading-tight">医療データとゲノム情報の「永遠の保護」</h2>
+                        <div class="w-16 h-1 bg-blue-600 rounded"></div>
+                        <p class="text-lg text-gray-400 leading-relaxed font-light">一度漏洩すれば一生取り返しがつかない個人のDNA情報や、国家レベルの安全保障データ。「50年後も絶対に解読されてはならないデータ」を、量子技術によって未来のあらゆる脅威から遮断します。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-zinc-900 border border-white/10 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-50 grayscale sepia-[.2] transition-all duration-700 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: bottom right;" onerror="this.src='https://picsum.photos/seed/block_4_3/800/600'">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-blue-900/40 to-transparent"></div>
+                    </div>
                 </div>
-            </div>
-            
-            <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse relative z-10">
-                <div class="flex-1 space-y-6">
-                    <span class="text-blue-500 font-bold tracking-widest text-sm uppercase">LIFETIME SECRECY</span>
-                    <h2 class="text-3xl md:text-4xl font-black text-white leading-tight">医療データとゲノム情報の「永遠の保護」</h2>
-                    <div class="w-16 h-1 bg-blue-600 rounded"></div>
-                    <p class="text-lg text-gray-400 leading-relaxed font-light">一度漏洩すれば一生取り返しがつかない個人のDNA情報や、国家レベルの安全保障データ。「50年後も絶対に解読されてはならないデータ」を、量子技術によって未来のあらゆる脅威から遮断します。</p>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16  relative z-10">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-blue-500 font-bold tracking-widest text-sm uppercase">FINANCIAL SHIELD</span>
+                        <h2 class="text-3xl md:text-5xl font-black text-white leading-tight">Case Study | グローバルメガバンク間の資金決済</h2>
+                        <div class="w-16 h-1 bg-blue-600 rounded"></div>
+                        <p class="text-lg text-gray-400 leading-relaxed font-light">毎日数兆円の資金移動が行われるメガバンクのデータセンター間通信。QUANTUM-SECUREのネットワークを導入し、「絶対に傍受・改ざん不可能な」決済インフラを構築。将来的な量子ハッキングによる天文学的な金融リスクを完全に排除し、株主と顧客への最強の信頼を担保しました。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-zinc-900 border border-white/10 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-50 grayscale sepia-[.2] transition-all duration-700 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;" onerror="this.src='https://picsum.photos/seed/block_4_4/800/600'">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-blue-900/40 to-transparent"></div>
+                    </div>
                 </div>
-                <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-zinc-900 border border-white/10 group">
-                    <img src="img/ui.png" class="w-full h-full object-cover opacity-40 grayscale sepia-[.2] transition-all duration-700 group-hover:grayscale-0 group-hover:opacity-80 group-hover:scale-105" style="object-position: bottom right;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
-                    <div class="absolute inset-0 bg-gradient-to-tr from-blue-900/40 to-transparent"></div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse relative z-10">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-blue-500 font-bold tracking-widest text-sm uppercase">OUR VISION</span>
+                        <h2 class="text-3xl md:text-5xl font-black text-white leading-tight">情報の「絶対的不可侵」を約束する</h2>
+                        <div class="w-16 h-1 bg-blue-600 rounded"></div>
+                        <p class="text-lg text-gray-400 leading-relaxed font-light">デジタル社会において、秘密を守る権利は基本的人権です。私たちは、どれほどテクノロジーが進化しようとも破られることのない、究極の盾（シールド）を人類に提供します。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-zinc-900 border border-white/10 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-50 grayscale sepia-[.2] transition-all duration-700 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: bottom right;" onerror="this.src='https://picsum.photos/seed/block_4_5/800/600'">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-blue-900/40 to-transparent"></div>
+                    </div>
                 </div>
-            </div>
-            
-            <div class="flex flex-col md:flex-row items-center gap-16  relative z-10">
-                <div class="flex-1 space-y-6">
-                    <span class="text-blue-500 font-bold tracking-widest text-sm uppercase">FINANCIAL SHIELD</span>
-                    <h2 class="text-3xl md:text-4xl font-black text-white leading-tight">Case Study | グローバルメガバンク間の資金決済</h2>
-                    <div class="w-16 h-1 bg-blue-600 rounded"></div>
-                    <p class="text-lg text-gray-400 leading-relaxed font-light">毎日数兆円の資金移動が行われるメガバンクのデータセンター間通信。QUANTUM-SECUREのネットワークを導入し、「絶対に傍受・改ざん不可能な」決済インフラを構築。将来的な量子ハッキングによる天文学的な金融リスクを完全に排除し、株主と顧客への最強の信頼を担保しました。</p>
-                </div>
-                <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-zinc-900 border border-white/10 group">
-                    <img src="img/ui.png" class="w-full h-full object-cover opacity-40 grayscale sepia-[.2] transition-all duration-700 group-hover:grayscale-0 group-hover:opacity-80 group-hover:scale-105" style="object-position: top left;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
-                    <div class="absolute inset-0 bg-gradient-to-tr from-blue-900/40 to-transparent"></div>
-                </div>
-            </div>
-            
-            <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse relative z-10">
-                <div class="flex-1 space-y-6">
-                    <span class="text-blue-500 font-bold tracking-widest text-sm uppercase">OUR VISION</span>
-                    <h2 class="text-3xl md:text-4xl font-black text-white leading-tight">情報の「絶対的不可侵」を約束する</h2>
-                    <div class="w-16 h-1 bg-blue-600 rounded"></div>
-                    <p class="text-lg text-gray-400 leading-relaxed font-light">デジタル社会において、秘密を守る権利は基本的人権です。私たちは、どれほどテクノロジーが進化しようとも破られることのない、究極の盾（シールド）を人類に提供します。</p>
-                </div>
-                <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-zinc-900 border border-white/10 group">
-                    <img src="img/ui.png" class="w-full h-full object-cover opacity-40 grayscale sepia-[.2] transition-all duration-700 group-hover:grayscale-0 group-hover:opacity-80 group-hover:scale-105" style="object-position: bottom right;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
-                    <div class="absolute inset-0 bg-gradient-to-tr from-blue-900/40 to-transparent"></div>
-                </div>
-            </div>
-            
+                
         </div>
 
         <!-- CTA Section -->
-        <div class="text-center bg-zinc-900 border border-white/10 rounded-[3rem] p-16 md:p-32 relative overflow-hidden group shadow-2xl">
-            <div class="absolute inset-0 bg-gradient-to-br from-blue-900/40 via-transparent to-transparent"></div>
-            <div class="absolute -top-24 -right-24 w-96 h-96 bg-blue-600/20 rounded-full blur-[100px]"></div>
-            <div class="relative z-10">
-                <h2 class="text-4xl md:text-5xl font-black mb-8 text-white">数学的な暗号は、いつか破られる。</h2>
-                <p class="text-gray-400 mb-12 max-w-xl mx-auto text-lg leading-relaxed">計算の複雑さに依存する時代は終わりました。「光の粒」が持つ物理法則だけが、機密情報を永久に守り抜きます。</p>
-                <a href="#" class="bg-blue-500 hover:bg-blue-400 text-white px-12 py-5 rounded-full font-bold text-lg inline-flex items-center gap-3 transition transform hover:-translate-y-1 shadow-[0_0_30px_rgba(var(--tw-colors-blue-500),0.3)] shadow-blue-500/50">
-                    START CYBER SECURITY
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                </a>
+        <div class="px-6 md:px-12 max-w-7xl mx-auto">
+            <div class="text-center bg-zinc-900 border border-white/10 rounded-[3rem] p-16 md:p-32 relative overflow-hidden group shadow-2xl">
+                <div class="absolute inset-0 bg-gradient-to-br from-blue-900/40 via-transparent to-transparent"></div>
+                <div class="absolute -top-24 -right-24 w-96 h-96 bg-blue-600/20 rounded-full blur-[100px]"></div>
+                <div class="relative z-10">
+                    <h2 class="text-4xl md:text-5xl font-black mb-8 text-white">数学的な暗号は、いつか破られる。</h2>
+                    <p class="text-gray-400 mb-12 max-w-xl mx-auto text-lg leading-relaxed">計算の複雑さに依存する時代は終わりました。「光の粒」が持つ物理法則だけが、機密情報を永久に守り抜きます。</p>
+                    <a href="#" class="bg-blue-500 hover:bg-blue-400 text-white px-12 py-5 rounded-full font-bold text-lg inline-flex items-center gap-3 transition transform hover:-translate-y-1 shadow-[0_0_30px_rgba(var(--tw-colors-blue-500),0.3)] shadow-blue-500/50">
+                        START CYBER SECURITY
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                    </a>
+                </div>
             </div>
         </div>
     </main>

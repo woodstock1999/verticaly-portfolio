@@ -10,9 +10,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Inter', 'Noto Sans JP', sans-serif; }
+        .bento-1 { grid-column: span 2; grid-row: span 2; }
+        .bento-2 { grid-column: span 1; grid-row: span 1; }
+        .bento-3 { grid-column: span 1; grid-row: span 1; }
     </style>
 </head>
-<body class="bg-[#050505] text-gray-400 min-h-screen font-sans antialiased overflow-x-hidden">
+<body class="bg-[#050505] text-gray-400 min-h-screen font-sans antialiased overflow-x-hidden selection:bg-rose-500/30">
 
     <!-- Navigation -->
     <nav class="fixed w-full z-50 backdrop-blur-xl bg-[#050505]/80 border-b border-white/5 px-8 py-5 flex justify-between items-center transition-all">
@@ -31,137 +34,146 @@
         </div>
     </nav>
 
-    <main class="pt-[160px] pb-24 px-6 md:px-12 max-w-7xl mx-auto">
-        <!-- Hero Section -->
-        <div class="text-center max-w-5xl mx-auto mb-24 relative">
-            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-rose-600/20 rounded-full blur-[120px] pointer-events-none"></div>
-            <span class="relative z-10 bg-white/5 text-rose-400 border border-white/10 px-6 py-2 text-xs font-black rounded-full tracking-widest uppercase mb-8 inline-block shadow-sm">FOOD TECH / CELLULAR BIO</span>
-            <h1 class="relative z-10 text-5xl md:text-[64px] font-black mb-8 leading-[1.1] tracking-tight text-white">牛を殺さずに、<br>「究極の和牛」を培養する。</h1>
-            <p class="relative z-10 text-lg md:text-xl text-gray-400 font-medium leading-relaxed max-w-3xl mx-auto">環境破壊も、倫理的なジレンマも存在しない肉。SYNTHETIC-MEATは、牛の細胞を数グラム採取し、バイオリアクターの中で栄養分を与えて「肉そのもの」を育てる、培養肉のリーディングカンパニーです。</p>
-        </div>
-
-        <!-- UI Showcase -->
-        <div class="relative w-full aspect-[21/9] md:aspect-video rounded-[32px] overflow-hidden shadow-2xl mb-32 border border-white/10 group bg-zinc-900">
-            <img src="img/ui.png" alt="UI Dashboard" class="w-full h-full object-cover transition-transform duration-[5s] group-hover:scale-[1.03]" onerror="this.src='https://picsum.photos/seed/placeholder/1600/900'">
-            <div class="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/20 to-transparent pointer-events-none"></div>
-        </div>
-
-        <div class="flex flex-col gap-32 mb-32">
+    <main class="pt-[160px] pb-24">
     
-            <div class="flex flex-col md:flex-row items-center gap-16  relative z-10">
-                <div class="flex-1 space-y-6">
-                    <span class="text-rose-500 font-bold tracking-widest text-sm uppercase">THE LIVESTOCK CRISIS</span>
-                    <h2 class="text-3xl md:text-4xl font-black text-white leading-tight">「肉を食べる」という行為が地球を破壊する</h2>
-                    <div class="w-16 h-1 bg-rose-600 rounded"></div>
-                    <p class="text-lg text-gray-400 leading-relaxed font-light">牛を育てるために広大な森が焼かれ、膨大な水と穀物が消費され、大量のメタンガスが排出されています。人類のタンパク質需要が爆発する中、現在のシステムは地球の限界を完全に超えています。</p>
-                </div>
-                <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-zinc-900 border border-white/10 group">
-                    <img src="img/ui.png" class="w-full h-full object-cover opacity-40 grayscale sepia-[.2] transition-all duration-700 group-hover:grayscale-0 group-hover:opacity-80 group-hover:scale-105" style="object-position: top left;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
-                    <div class="absolute inset-0 bg-gradient-to-tr from-rose-900/40 to-transparent"></div>
-                </div>
+        <div class="relative w-full min-h-[80vh] flex items-center justify-center mb-32 -mt-[160px] pt-[160px] border-b border-white/10 overflow-hidden group">
+            <div class="absolute inset-0 bg-zinc-900">
+                <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia-[.2] transition-transform duration-[10s] group-hover:scale-[1.05]" onerror="this.src='https://picsum.photos/seed/hero_7/1600/900'">
             </div>
-            
-            <div class="mt-10 relative z-10">
-                <div class="text-center mb-16">
-                    <span class="text-rose-500 font-bold tracking-widest text-sm uppercase">TISSUE ENGINEERING</span>
-                    <h2 class="text-3xl md:text-4xl font-black mt-4 text-white">「細胞」から「ステーキ肉」をデザインする技術</h2>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    
-    <div class="bg-white/[0.02] border border-white/5 shadow-2xl p-10 rounded-3xl transition transform hover:-translate-y-2 duration-300 group">
-        <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-8 bg-rose-500/10 text-rose-400 border border-rose-500/20 group-hover:bg-rose-500/20 transition-colors">
-            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/80 to-transparent"></div>
+            <div class="relative z-10 text-center max-w-5xl px-6 md:px-12 mx-auto">
+                <span class="bg-white/5 text-rose-400 border border-white/10 px-6 py-2 text-xs font-black rounded-full tracking-widest uppercase mb-8 inline-block shadow-sm backdrop-blur-md">FOOD TECH / CELLULAR BIO</span>
+                <h1 class="text-5xl md:text-[72px] font-black mb-8 leading-[1.1] tracking-tight text-white drop-shadow-2xl">牛を殺さずに、<br>「究極の和牛」を培養する。</h1>
+                <p class="text-lg md:text-xl text-gray-300 font-medium leading-relaxed max-w-3xl mx-auto drop-shadow-md">環境破壊も、倫理的なジレンマも存在しない肉。SYNTHETIC-MEATは、牛の細胞を数グラム採取し、バイオリアクターの中で栄養分を与えて「肉そのもの」を育てる、培養肉のリーディングカンパニーです。</p>
+            </div>
         </div>
-        <h4 class="text-xl font-bold mb-4 text-white tracking-wide">${f.t}</h4>
-        <p class="text-gray-400 text-base leading-relaxed">${f.d}</p>
-    </div>
-    
+        <div class="px-6 md:px-12 max-w-7xl mx-auto flex flex-col gap-32 mb-32">
+                <div class="relative z-10 py-12">
+                    <div class="absolute left-0 md:w-2/3 top-0 bottom-0 rounded-[32px] overflow-hidden bg-zinc-900 border border-white/10 group hidden md:block">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-40 transition-all duration-1000 group-hover:opacity-70 group-hover:scale-105" onerror="this.src='https://picsum.photos/seed/block_7_0/1000/600'">
+                        <div class="absolute inset-0 bg-black/50 mix-blend-multiply"></div>
+                    </div>
+                    <div class="relative z-10 flex flex-col md:flex-row items-center justify-end">
+                        <div class="md:w-1/2 bg-[#0a0a0a] border border-white/10 shadow-2xl rounded-[32px] p-12 md:p-16 relative overflow-hidden group">
+                            <div class="absolute top-0 right-0 w-64 h-64 bg-rose-600/10 rounded-full blur-[60px]"></div>
+                            <span class="relative z-10 text-rose-500 font-bold tracking-widest text-sm uppercase block mb-4">THE LIVESTOCK CRISIS</span>
+                            <h2 class="relative z-10 text-3xl md:text-4xl font-black text-white leading-tight mb-8">「肉を食べる」という行為が地球を破壊する</h2>
+                            <p class="relative z-10 text-lg text-gray-400 leading-relaxed">牛を育てるために広大な森が焼かれ、膨大な水と穀物が消費され、大量のメタンガスが排出されています。人類のタンパク質需要が爆発する中、現在のシステムは地球の限界を完全に超えています。</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative z-10">
+                    <div class="text-center mb-16">
+                        <span class="text-rose-500 font-bold tracking-widest text-sm uppercase">TISSUE ENGINEERING</span>
+                        <h2 class="text-3xl md:text-4xl font-black mt-4 text-white">「細胞」から「ステーキ肉」をデザインする技術</h2>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        
+                        <div class="bg-white/[0.02] border border-white/5 shadow-2xl p-10 rounded-3xl transition transform hover:-translate-y-2 duration-300 group">
+                            <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-8 bg-rose-500/10 text-rose-400 border border-rose-500/20 group-hover:bg-rose-500/20 transition-colors">
+                                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                            </div>
+                            <h4 class="text-xl font-bold mb-4 text-white tracking-wide">${f.t}</h4>
+                            <p class="text-gray-400 text-base leading-relaxed">${f.d}</p>
+                        </div>
+                        
 
-    <div class="bg-white/[0.02] border border-white/5 shadow-2xl p-10 rounded-3xl transition transform hover:-translate-y-2 duration-300 group">
-        <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-8 bg-rose-500/10 text-rose-400 border border-rose-500/20 group-hover:bg-rose-500/20 transition-colors">
-            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-        </div>
-        <h4 class="text-xl font-bold mb-4 text-white tracking-wide">${f.t}</h4>
-        <p class="text-gray-400 text-base leading-relaxed">${f.d}</p>
-    </div>
-    
+                        <div class="bg-white/[0.02] border border-white/5 shadow-2xl p-10 rounded-3xl transition transform hover:-translate-y-2 duration-300 group">
+                            <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-8 bg-rose-500/10 text-rose-400 border border-rose-500/20 group-hover:bg-rose-500/20 transition-colors">
+                                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                            </div>
+                            <h4 class="text-xl font-bold mb-4 text-white tracking-wide">${f.t}</h4>
+                            <p class="text-gray-400 text-base leading-relaxed">${f.d}</p>
+                        </div>
+                        
 
-    <div class="bg-white/[0.02] border border-white/5 shadow-2xl p-10 rounded-3xl transition transform hover:-translate-y-2 duration-300 group">
-        <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-8 bg-rose-500/10 text-rose-400 border border-rose-500/20 group-hover:bg-rose-500/20 transition-colors">
-            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-        </div>
-        <h4 class="text-xl font-bold mb-4 text-white tracking-wide">${f.t}</h4>
-        <p class="text-gray-400 text-base leading-relaxed">${f.d}</p>
-    </div>
-    
+                        <div class="bg-white/[0.02] border border-white/5 shadow-2xl p-10 rounded-3xl transition transform hover:-translate-y-2 duration-300 group">
+                            <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-8 bg-rose-500/10 text-rose-400 border border-rose-500/20 group-hover:bg-rose-500/20 transition-colors">
+                                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                            </div>
+                            <h4 class="text-xl font-bold mb-4 text-white tracking-wide">${f.t}</h4>
+                            <p class="text-gray-400 text-base leading-relaxed">${f.d}</p>
+                        </div>
+                        
+                    </div>
                 </div>
-            </div>
-            
-            <div class="flex flex-col md:flex-row items-center gap-16  relative z-10">
-                <div class="flex-1 space-y-6">
-                    <span class="text-rose-500 font-bold tracking-widest text-sm uppercase">NUTRITIONAL HACK</span>
-                    <h2 class="text-3xl md:text-4xl font-black text-white leading-tight">栄養価の「ハッキング（強化）」</h2>
-                    <div class="w-16 h-1 bg-rose-600 rounded"></div>
-                    <p class="text-lg text-gray-400 leading-relaxed font-light">ただ本物の肉を再現するだけではありません。培養の過程でオメガ3脂肪酸やビタミンを付与し、「サーモンのように血液をサラサラにする、極上のステーキ」といった、超健康的な機能性ミートを作り出します。</p>
+                
+                <div class="relative z-10 py-12">
+                    <div class="absolute left-0 md:w-2/3 top-0 bottom-0 rounded-[32px] overflow-hidden bg-zinc-900 border border-white/10 group hidden md:block">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-40 transition-all duration-1000 group-hover:opacity-70 group-hover:scale-105" onerror="this.src='https://picsum.photos/seed/block_7_2/1000/600'">
+                        <div class="absolute inset-0 bg-black/50 mix-blend-multiply"></div>
+                    </div>
+                    <div class="relative z-10 flex flex-col md:flex-row items-center justify-end">
+                        <div class="md:w-1/2 bg-[#0a0a0a] border border-white/10 shadow-2xl rounded-[32px] p-12 md:p-16 relative overflow-hidden group">
+                            <div class="absolute top-0 right-0 w-64 h-64 bg-rose-600/10 rounded-full blur-[60px]"></div>
+                            <span class="relative z-10 text-rose-500 font-bold tracking-widest text-sm uppercase block mb-4">NUTRITIONAL HACK</span>
+                            <h2 class="relative z-10 text-3xl md:text-4xl font-black text-white leading-tight mb-8">栄養価の「ハッキング（強化）」</h2>
+                            <p class="relative z-10 text-lg text-gray-400 leading-relaxed">ただ本物の肉を再現するだけではありません。培養の過程でオメガ3脂肪酸やビタミンを付与し、「サーモンのように血液をサラサラにする、極上のステーキ」といった、超健康的な機能性ミートを作り出します。</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-zinc-900 border border-white/10 group">
-                    <img src="img/ui.png" class="w-full h-full object-cover opacity-40 grayscale sepia-[.2] transition-all duration-700 group-hover:grayscale-0 group-hover:opacity-80 group-hover:scale-105" style="object-position: top left;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
-                    <div class="absolute inset-0 bg-gradient-to-tr from-rose-900/40 to-transparent"></div>
+                
+                <div class="relative z-10 py-12">
+                    <div class="absolute left-0 right-0 md:left-auto md:w-2/3 top-0 bottom-0 rounded-[32px] overflow-hidden bg-zinc-900 border border-white/10 group hidden md:block">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-40 transition-all duration-1000 group-hover:opacity-70 group-hover:scale-105" onerror="this.src='https://picsum.photos/seed/block_7_3/1000/600'">
+                        <div class="absolute inset-0 bg-black/50 mix-blend-multiply"></div>
+                    </div>
+                    <div class="relative z-10 flex flex-col md:flex-row items-center ">
+                        <div class="md:w-1/2 bg-[#0a0a0a] border border-white/10 shadow-2xl rounded-[32px] p-12 md:p-16 relative overflow-hidden group">
+                            <div class="absolute top-0 right-0 w-64 h-64 bg-rose-600/10 rounded-full blur-[60px]"></div>
+                            <span class="relative z-10 text-rose-500 font-bold tracking-widest text-sm uppercase block mb-4">ANYWHERE FARMING</span>
+                            <h2 class="relative z-10 text-3xl md:text-4xl font-black text-white leading-tight mb-8">宇宙ステーションや砂漠での「地産地消」</h2>
+                            <p class="relative z-10 text-lg text-gray-400 leading-relaxed">広大な牧草地は不要です。ビルの1フロアサイズの培養肉ブルワリーがあれば、中東の砂漠の真ん中でも、将来の月面基地でも、数週間で新鮮な肉を大量に生産することができます。</p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            
-            <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse relative z-10">
-                <div class="flex-1 space-y-6">
-                    <span class="text-rose-500 font-bold tracking-widest text-sm uppercase">ANYWHERE FARMING</span>
-                    <h2 class="text-3xl md:text-4xl font-black text-white leading-tight">宇宙ステーションや砂漠での「地産地消」</h2>
-                    <div class="w-16 h-1 bg-rose-600 rounded"></div>
-                    <p class="text-lg text-gray-400 leading-relaxed font-light">広大な牧草地は不要です。ビルの1フロアサイズの培養肉ブルワリーがあれば、中東の砂漠の真ん中でも、将来の月面基地でも、数週間で新鮮な肉を大量に生産することができます。</p>
+                
+                <div class="relative z-10 py-12">
+                    <div class="absolute left-0 md:w-2/3 top-0 bottom-0 rounded-[32px] overflow-hidden bg-zinc-900 border border-white/10 group hidden md:block">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-40 transition-all duration-1000 group-hover:opacity-70 group-hover:scale-105" onerror="this.src='https://picsum.photos/seed/block_7_4/1000/600'">
+                        <div class="absolute inset-0 bg-black/50 mix-blend-multiply"></div>
+                    </div>
+                    <div class="relative z-10 flex flex-col md:flex-row items-center justify-end">
+                        <div class="md:w-1/2 bg-[#0a0a0a] border border-white/10 shadow-2xl rounded-[32px] p-12 md:p-16 relative overflow-hidden group">
+                            <div class="absolute top-0 right-0 w-64 h-64 bg-rose-600/10 rounded-full blur-[60px]"></div>
+                            <span class="relative z-10 text-rose-500 font-bold tracking-widest text-sm uppercase block mb-4">CULINARY ACCEPTANCE</span>
+                            <h2 class="relative z-10 text-3xl md:text-4xl font-black text-white leading-tight mb-8">Case Study | ミシュラン三ツ星レストランへの提供</h2>
+                            <p class="relative z-10 text-lg text-gray-400 leading-relaxed">「環境には良いが、味が劣る」と代替肉を敬遠していたトップシェフたち。当社の3D培養リブロースをブラインドテストで提供した結果、全員が「最高級の黒毛和牛」と誤認し、レギュラーメニューへの採用が決定しました。</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-zinc-900 border border-white/10 group">
-                    <img src="img/ui.png" class="w-full h-full object-cover opacity-40 grayscale sepia-[.2] transition-all duration-700 group-hover:grayscale-0 group-hover:opacity-80 group-hover:scale-105" style="object-position: bottom right;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
-                    <div class="absolute inset-0 bg-gradient-to-tr from-rose-900/40 to-transparent"></div>
+                
+                <div class="relative z-10 py-12">
+                    <div class="absolute left-0 right-0 md:left-auto md:w-2/3 top-0 bottom-0 rounded-[32px] overflow-hidden bg-zinc-900 border border-white/10 group hidden md:block">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-40 transition-all duration-1000 group-hover:opacity-70 group-hover:scale-105" onerror="this.src='https://picsum.photos/seed/block_7_5/1000/600'">
+                        <div class="absolute inset-0 bg-black/50 mix-blend-multiply"></div>
+                    </div>
+                    <div class="relative z-10 flex flex-col md:flex-row items-center ">
+                        <div class="md:w-1/2 bg-[#0a0a0a] border border-white/10 shadow-2xl rounded-[32px] p-12 md:p-16 relative overflow-hidden group">
+                            <div class="absolute top-0 right-0 w-64 h-64 bg-rose-600/10 rounded-full blur-[60px]"></div>
+                            <span class="relative z-10 text-rose-500 font-bold tracking-widest text-sm uppercase block mb-4">OUR VISION</span>
+                            <h2 class="relative z-10 text-3xl md:text-4xl font-black text-white leading-tight mb-8">「おいしい」という幸せを持続可能に</h2>
+                            <p class="relative z-10 text-lg text-gray-400 leading-relaxed">私たちはヴィーガンを強制したいわけではありません。「肉を食べる喜び」と「地球への優しさ」が矛盾なく両立する未来。食卓の平和を科学で守り抜きます。</p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            
-            <div class="flex flex-col md:flex-row items-center gap-16  relative z-10">
-                <div class="flex-1 space-y-6">
-                    <span class="text-rose-500 font-bold tracking-widest text-sm uppercase">CULINARY ACCEPTANCE</span>
-                    <h2 class="text-3xl md:text-4xl font-black text-white leading-tight">Case Study | ミシュラン三ツ星レストランへの提供</h2>
-                    <div class="w-16 h-1 bg-rose-600 rounded"></div>
-                    <p class="text-lg text-gray-400 leading-relaxed font-light">「環境には良いが、味が劣る」と代替肉を敬遠していたトップシェフたち。当社の3D培養リブロースをブラインドテストで提供した結果、全員が「最高級の黒毛和牛」と誤認し、レギュラーメニューへの採用が決定しました。</p>
-                </div>
-                <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-zinc-900 border border-white/10 group">
-                    <img src="img/ui.png" class="w-full h-full object-cover opacity-40 grayscale sepia-[.2] transition-all duration-700 group-hover:grayscale-0 group-hover:opacity-80 group-hover:scale-105" style="object-position: top left;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
-                    <div class="absolute inset-0 bg-gradient-to-tr from-rose-900/40 to-transparent"></div>
-                </div>
-            </div>
-            
-            <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse relative z-10">
-                <div class="flex-1 space-y-6">
-                    <span class="text-rose-500 font-bold tracking-widest text-sm uppercase">OUR VISION</span>
-                    <h2 class="text-3xl md:text-4xl font-black text-white leading-tight">「おいしい」という幸せを持続可能に</h2>
-                    <div class="w-16 h-1 bg-rose-600 rounded"></div>
-                    <p class="text-lg text-gray-400 leading-relaxed font-light">私たちはヴィーガンを強制したいわけではありません。「肉を食べる喜び」と「地球への優しさ」が矛盾なく両立する未来。食卓の平和を科学で守り抜きます。</p>
-                </div>
-                <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-zinc-900 border border-white/10 group">
-                    <img src="img/ui.png" class="w-full h-full object-cover opacity-40 grayscale sepia-[.2] transition-all duration-700 group-hover:grayscale-0 group-hover:opacity-80 group-hover:scale-105" style="object-position: bottom right;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
-                    <div class="absolute inset-0 bg-gradient-to-tr from-rose-900/40 to-transparent"></div>
-                </div>
-            </div>
-            
+                
         </div>
 
         <!-- CTA Section -->
-        <div class="text-center bg-zinc-900 border border-white/10 rounded-[3rem] p-16 md:p-32 relative overflow-hidden group shadow-2xl">
-            <div class="absolute inset-0 bg-gradient-to-br from-rose-900/40 via-transparent to-transparent"></div>
-            <div class="absolute -top-24 -right-24 w-96 h-96 bg-rose-600/20 rounded-full blur-[100px]"></div>
-            <div class="relative z-10">
-                <h2 class="text-4xl md:text-5xl font-black mb-8 text-white">妥協の代替肉は、もういらない。</h2>
-                <p class="text-gray-400 mb-12 max-w-xl mx-auto text-lg leading-relaxed">植物から作った肉もどきではなく、分子レベルで完全に同一の「本物の肉」。ステーキの概念が、今日変わります。</p>
-                <a href="#" class="bg-rose-500 hover:bg-rose-400 text-white px-12 py-5 rounded-full font-bold text-lg inline-flex items-center gap-3 transition transform hover:-translate-y-1 shadow-[0_0_30px_rgba(var(--tw-colors-rose-500),0.3)] shadow-rose-500/50">
-                    START FOOD TECH
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                </a>
+        <div class="px-6 md:px-12 max-w-7xl mx-auto">
+            <div class="text-center bg-zinc-900 border border-white/10 rounded-[3rem] p-16 md:p-32 relative overflow-hidden group shadow-2xl">
+                <div class="absolute inset-0 bg-gradient-to-br from-rose-900/40 via-transparent to-transparent"></div>
+                <div class="absolute -top-24 -right-24 w-96 h-96 bg-rose-600/20 rounded-full blur-[100px]"></div>
+                <div class="relative z-10">
+                    <h2 class="text-4xl md:text-5xl font-black mb-8 text-white">妥協の代替肉は、もういらない。</h2>
+                    <p class="text-gray-400 mb-12 max-w-xl mx-auto text-lg leading-relaxed">植物から作った肉もどきではなく、分子レベルで完全に同一の「本物の肉」。ステーキの概念が、今日変わります。</p>
+                    <a href="#" class="bg-rose-500 hover:bg-rose-400 text-white px-12 py-5 rounded-full font-bold text-lg inline-flex items-center gap-3 transition transform hover:-translate-y-1 shadow-[0_0_30px_rgba(var(--tw-colors-rose-500),0.3)] shadow-rose-500/50">
+                        START FOOD TECH
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                    </a>
+                </div>
             </div>
         </div>
     </main>
