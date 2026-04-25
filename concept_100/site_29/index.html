@@ -40,189 +40,135 @@
 </head>
 <body class="bg-gray-50 text-stone-800 min-h-screen font-sans antialiased overflow-x-hidden">
 
-    <!-- FV (First View) : 直接的でありながら洗練されたコピー -->
-    <section class="w-full relative bg-luxDark overflow-hidden">
-        <!-- 背景画像 (建築的で洗練された画像を使用) -->
-        <div class="absolute inset-0 z-0 opacity-60">
-            <img src="img/ui.png" alt="洗練された和の空間にある美術品" class="w-full h-full object-cover grayscale-[30%]">
+    <main class="pt-[140px] pb-24 px-6 md:px-12 max-w-7xl mx-auto">
+        <div class="text-center max-w-4xl mx-auto mb-20 relative">
+            <span class="bg-gray-100 text-amber-600 border border-gray-200 px-5 py-2 text-xs font-black rounded-full tracking-widest mb-8 inline-block shadow-sm uppercase">GOV TECH / SMART CITY</span>
+            <h1 class="text-4xl md:text-[54px] font-black mb-8 leading-[1.2] tracking-tight text-gray-900">「役所の窓口」を、<br>あなたのスマホの中に。</h1>
+            <p class="text-lg md:text-xl text-gray-600 font-medium leading-relaxed max-w-3xl mx-auto">LOCAL-GOV DXは、縦割りの行政システムをクラウドで統合し、あらゆる行政手続きを24時間・数タップで完結させる「スマート自治体OS」です。</p>
         </div>
+
+        <div class="relative w-full aspect-[21/9] md:aspect-video rounded-[32px] overflow-hidden shadow-2xl mb-32 border border-gray-200/50 group bg-zinc-900">
+            <img src="img/ui.png" alt="UI Dashboard" class="w-full h-full object-cover transition-transform duration-[3s] group-hover:scale-[1.02]" onerror="this.src='https://picsum.photos/seed/placeholder/1600/900'">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none blend-overlay"></div>
+        </div>
+
+        <div class="flex flex-col gap-32 mb-32">
         
-        <div class="relative z-10 max-w-5xl mx-auto px-6 py-16 md:py-24 grid grid-cols-1 md:grid-cols-2 gap-12">
-            <!-- コピーエリア -->
-            <div class="text-white flex flex-col justify-center">
-                <div class="border border-luxGold text-luxGold px-4 py-2 inline-block w-fit text-sm tracking-widest mb-6">
-                    出張費・鑑定費 完全無料
-                </div>
-                <h1 class="text-3xl md:text-5xl font-extrabold leading-[1.4] mb-8">
-                    遺された「価値」を、<br>
-                    正当な価格で<br>
-                    次世代へ継承する。
-                </h1>
-                <p class="text-lg md:text-xl font-medium mb-10 text-gray-300 leading-relaxed">
-                    生前整理・遺品整理・蔵の整理。<br>
-                    「ただの古い物」に見える品々には、グローバルな美術市場で高く評価される価値が眠っています。<br>
-                    確かな目利きによるプレミアムな出張買取り。
-                </p>
-                <div class="hidden md:block">
-                    <p class="text-luxGold font-bold mb-2">▼ 無料鑑定のご依頼はこちら ▼</p>
-                    <a href="tel:0120000000" class="w-full flex items-center justify-center gap-4 bg-transparent border-2 border-luxGold text-luxGold py-4 rounded hover:bg-luxGold hover:text-white transition group">
-                        <span class="text-sm">通話無料 (9:00-20:00)</span>
-                        <span class="text-3xl font-bold tracking-wider">0120-000-000</span>
-                    </a>
-                </div>
-            </div>
-
-            <!-- ファーストビュー直下の即時入力フォーム (コンバージョン最適化) -->
-            <div class="bg-luxLight p-8 rounded shadow-2xl relative">
-                <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-luxGold text-white px-6 py-1 text-sm font-bold tracking-widest">
-                    WEBでカンタン出張予約
-                </div>
-                <form class="space-y-6 mt-4">
-                    <div>
-                        <label class="block text-luxDark font-bold mb-2 text-sm">御名前</label>
-                        <input type="text" class="w-full border-b border-gray-400 bg-transparent py-2 focus:outline-none focus:border-luxGold" placeholder="山田 太郎">
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-amber-600 font-bold tracking-widest text-sm uppercase">THE PAPER MAZE</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">紙とハンコが支配するガラパゴス</h2>
+                        <div class="w-12 h-1 bg-amber-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">同じ名前を何枚もの紙に書かされ数時間待たされる。このフラストレーションと公務員の膨大な残業代は社会システムの限界を示しています。</p>
                     </div>
-                    <div>
-                        <label class="block text-luxDark font-bold mb-2 text-sm">電話番号</label>
-                        <input type="tel" class="w-full border-b border-gray-400 bg-transparent py-2 focus:outline-none focus:border-luxGold" placeholder="090-1234-5678">
-                    </div>
-                    <div>
-                        <label class="block text-luxDark font-bold mb-2 text-sm">御住まいの地域</label>
-                        <input type="text" class="w-full border-b border-gray-400 bg-transparent py-2 focus:outline-none focus:border-luxGold" placeholder="東京都港区">
-                    </div>
-                    <button type="submit" class="w-full btn-gold text-white font-bold text-lg py-5 mt-4 rounded">
-                        専門鑑定士を予約する
-                    </button>
-                    <p class="text-xs text-center text-gray-500 mt-4">24時間以内に担当者より折り返しご連絡いたします。</p>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- なぜ私たちなのか（強みへのDR的アプローチ） -->
-    <section class="py-20 bg-white">
-        <div class="max-w-4xl mx-auto px-6">
-            <h2 class="title-line text-3xl md:text-4xl font-bold text-luxDark mb-16 text-center">万福丸が選ばれる理由</h2>
-            
-            <div class="space-y-16">
-                <!-- 理由1 -->
-                <div class="flex flex-col md:flex-row gap-10 items-center">
-                    <div class="md:w-1/3">
-                        <div class="text-luxGold font-bold text-xl mb-2">REASON 01</div>
-                        <h3 class="text-2xl font-bold text-luxDark mb-4 leading-tight">世界基準の<br>オークション相場</h3>
-                    </div>
-                    <div class="md:w-2/3">
-                        <p class="text-lg text-gray-700 leading-loose font-medium">
-                            国内の相場だけでなく、欧米やアジアの美術品オークションの最新データ（落札履歴）とリアルタイムで連携。一部の国内業者だけが知る閉鎖的な相場ではなく、最も高く売れる「グローバルな適正価格」でお買取りいたします。
-                        </p>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-amber-900/20 to-transparent"></div>
                     </div>
                 </div>
                 
-                <hr class="border-gray-200">
-
-                <!-- 理由2 -->
-                <div class="flex flex-col md:flex-row gap-10 items-center">
-                    <div class="md:w-1/3">
-                        <div class="text-luxGold font-bold text-xl mb-2">REASON 02</div>
-                        <h3 class="text-2xl font-bold text-luxDark mb-4 leading-tight">「ゴミ」に見えるものに<br>価値を見出す審美眼</h3>
+                <div class="mt-10">
+                    <div class="text-center mb-16">
+                        <span class="text-amber-600 font-bold tracking-widest text-sm uppercase">CITIZEN EXPERIENCE</span>
+                        <h2 class="text-3xl md:text-4xl font-black mt-4 text-gray-900">住民体験を根本から変える</h2>
                     </div>
-                    <div class="md:w-2/3">
-                        <p class="text-lg text-gray-700 leading-loose font-medium">
-                            茶器の箱がない、シミがある掛け軸、動かないアンティーク時計。一般的には「処分費用がかかる」と言われるものでも、作家の文脈や素材の希少性を読み解き、数十万円の価値を付与してきた実績が多数ございます。ご自身でゴミ袋に入れる前に、我々にお見せください。
-                        </p>
-                    </div>
-                </div>
-
-                <hr class="border-gray-200">
-
-                <!-- 理由3 -->
-                <div class="flex flex-col md:flex-row gap-10 items-center">
-                    <div class="md:w-1/3">
-                        <div class="text-luxGold font-bold text-xl mb-2">REASON 03</div>
-                        <h3 class="text-2xl font-bold text-luxDark mb-4 leading-tight">ご自宅を汚さない<br>一流の振る舞い</h3>
-                    </div>
-                    <div class="md:w-2/3">
-                        <p class="text-lg text-gray-700 leading-loose font-medium">
-                            鑑定士は全員スーツ着用で、真新しい白手袋を使用します。ホコリや汚れのある蔵の整理であっても、お客様の私有財産への最大限の敬意を払い、決して空間を乱すことなく、迅速かつ静かに査定・搬出を行います。
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 高額買取実績（シズル・実利の証明） -->
-    <section class="py-20 bg-luxLight border-y border-gray-200">
-        <div class="max-w-5xl mx-auto px-6">
-            <h2 class="title-line text-3xl md:text-4xl font-bold text-luxDark mb-6 text-center">実際の買取り実績</h2>
-            <p class="text-center text-gray-600 mb-16 font-medium">他社で「価値ゼロ」と言われた品が、高額で取引された事例です。</p>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- 実績1 -->
-                <div class="bg-white p-6 shadow-lg border border-gray-100 flex flex-col items-center text-center">
-                    <div class="text-5xl mb-4">🏺</div>
-                    <h4 class="text-xl font-bold mb-2">作者不明の陶磁器</h4>
-                    <p class="text-sm text-gray-500 mb-6 font-medium">共箱（木の箱）なし。蔵の隅でホコリを被っていたもの。時代考証により李朝の作と判明。</p>
-                    <div class="w-full bg-luxDark text-luxGold py-3 font-bold text-lg tracking-widest mt-auto">
-                        買取代金 ¥1,250,000
-                    </div>
-                </div>
-                <!-- 実績2 -->
-                <div class="bg-white p-6 shadow-lg border border-gray-100 flex flex-col items-center text-center">
-                    <div class="text-5xl mb-4">⌚️</div>
-                    <h4 class="text-xl font-bold mb-2">不動のアンティーク時計</h4>
-                    <p class="text-sm text-gray-500 mb-6 font-medium">祖父の遺品。針は動かずサビも浮いていたが、内部のムーブメントの希少性が極めて高く評価。</p>
-                    <div class="w-full bg-luxDark text-luxGold py-3 font-bold text-lg tracking-widest mt-auto">
-                        買取代金 ¥850,000
-                    </div>
-                </div>
-                <!-- 実績3 -->
-                <div class="bg-white p-6 shadow-lg border border-gray-100 flex flex-col items-center text-center">
-                    <div class="text-5xl mb-4">👘</div>
-                    <h4 class="text-xl font-bold mb-2">古い着物・帯（数十着）</h4>
-                    <p class="text-sm text-gray-500 mb-6 font-medium">タンスに眠っていた大量の着物。一部シミありだったが、重要無形文化財保持者の作品を発見。</p>
-                    <div class="w-full bg-luxDark text-luxGold py-3 font-bold text-lg tracking-widest mt-auto">
-                        買取代金 ¥480,000
-                    </div>
-                </div>
-            </div>
-            
-            <div class="text-center mt-12">
-                <p class="text-xl font-bold text-luxDark px-4 py-2 border border-luxDark inline-block">22ジャンル（骨董、時計、カメラ、切手、貴金属など）何でもお見せください。</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- 中間フリーコール（静かで上品なCTA） -->
-    <section class="py-20 bg-luxDark text-white text-center">
-        <div class="max-w-3xl mx-auto px-6">
-            <h2 class="text-3xl font-bold mb-8">価値を知るだけの「無料鑑定」も承ります。</h2>
-            <p class="mb-10 text-gray-400 font-medium leading-loose">
-                出張費用・鑑定に関する費用はいかなる場合も頂戴いたしません。<br>
-                「売るかどうかは金額を聞いてから決めたい」というご要望に、誠心誠意お応えします。
-            </p>
-            <a href="tel:0120000000" class="inline-block w-full max-w-md btn-gold py-6 rounded text-xl">
-                <span class="block text-sm mb-1 tracking-widest font-normal">通話無料 / 9:00 - 20:00</span>
-                <span class="text-4xl font-extrabold tracking-widest">0120-000-000</span>
-            </a>
-        </div>
-    </section>
-
-    <footer class="bg-[#111] text-gray-500 text-center py-12 text-sm font-medium">
-        <p>プレミアム買取り 万福丸アプレイザル &copy; 2026</p>
-    </footer>
-
-    <!-- スマホ・タブレット向け追従CTA (Sticky) -->
-    <div class="sticky-bottom md:hidden border-t border-luxGold/30">
-        <div class="flex items-center px-4 py-3 gap-4">
-            <a href="tel:0120000000" class="flex-1 bg-transparent border border-luxGold text-luxGold py-3 text-center rounded font-bold text-sm">
-                お電話で相談する
-            </a>
-            <a href="#book" class="flex-1 btn-gold py-3 text-center rounded font-bold text-sm tracking-widest" onclick="window.scrollTo(0,0);">
-                WEBから予約する
-            </a>
-        </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-amber-50 text-amber-600 border border-amber-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
     </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">${f.t}</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">${f.d}</p>
+</div>
 
+
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-amber-50 text-amber-600 border border-amber-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">${f.t}</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">${f.d}</p>
+</div>
+
+
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-amber-50 text-amber-600 border border-amber-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">${f.t}</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">${f.d}</p>
+</div>
+
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-amber-600 font-bold tracking-widest text-sm uppercase">BACKOFFICE AUTOMATION</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">公務員をクリエイティブな仕事へ解放</h2>
+                        <div class="w-12 h-1 bg-amber-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">データ入力から解放され、対面での福祉相談など人間にしかできない業務に時間を割けるようになります。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-amber-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-amber-600 font-bold tracking-widest text-sm uppercase">EMERGENCY RESPONSE</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">災害時の命を救うデータ連携</h2>
+                        <div class="w-12 h-1 bg-amber-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">要支援者のリストと位置を可視化し救助隊へ的確な指示を出す防災インフラとして機能します。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: bottom right;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-amber-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-amber-600 font-bold tracking-widest text-sm uppercase">GOV TRANSFORMATION</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">Case Study | 地方中核都市</h2>
+                        <div class="w-12 h-1 bg-amber-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">オンライン申請率が80%を突破。ペーパーレス化により年間1億円の事務コスト削減を実現しました。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-amber-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-amber-600 font-bold tracking-widest text-sm uppercase">OUR VISION</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">誰一人取り残さないデジタル社会へ</h2>
+                        <div class="w-12 h-1 bg-amber-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">高齢者でも直感的に使えるデザインで最もパブリックで優しいデジタルの基盤を創り出します。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: bottom right;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-amber-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+        </div>
+
+        <div class="text-center bg-gray-900 border border-gray-800 rounded-[3rem] p-16 md:p-32 relative overflow-hidden group shadow-2xl">
+            <div class="absolute inset-0 bg-gradient-to-br from-amber-900/40 to-transparent"></div>
+            <div class="relative z-10">
+                <h2 class="text-4xl md:text-5xl font-black mb-8 text-white">${data.ctaTitle}</h2>
+                <p class="text-gray-300 mb-12 max-w-xl mx-auto text-lg leading-relaxed">${data.ctaDesc}</p>
+                <a href="../index.html" class="bg-amber-500 hover:bg-amber-400 text-white px-12 py-5 rounded-full font-bold text-lg inline-flex items-center gap-3 transition transform hover:-translate-y-1 shadow-lg shadow-amber-500/30">
+                    PORTFOLIOに戻る
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                </a>
+            </div>
+        </div>
+    </main>
+        
 </body>
 </html>

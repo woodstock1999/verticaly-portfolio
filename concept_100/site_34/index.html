@@ -35,251 +35,135 @@
 </head>
 <body class="bg-gray-50 text-stone-800 min-h-screen font-sans antialiased overflow-x-hidden">
 
-    <!-- Header -->
-    <header class="fixed w-full top-0 z-50 bg-woodDark/90 backdrop-blur-md border-b border-white/5 px-6 py-4 flex justify-between items-center transition-all">
-        <div class="font-en font-extrabold text-2xl tracking-widest text-white flex items-center gap-2">
-            <span class="w-2 h-2 bg-neonAmber rounded-full"></span> NOMARK
-        </div>
-        <nav class="hidden md:flex gap-8 text-sm font-en text-white/70 font-bold">
-            <a href="#features" class="hover:text-neonAmber transition">Features</a>
-            <a href="#how" class="hover:text-neonAmber transition">How it works</a>
-            <a href="#cases" class="hover:text-neonAmber transition">Case Studies</a>
-            <a href="#faq" class="hover:text-neonAmber transition">FAQ</a>
-            <a href="#contact" class="px-5 py-2 bg-neonAmber text-woodDark font-bold rounded hover:bg-white transition ml-4">無料トライアル</a>
-        </nav>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="min-h-screen w-full relative flex items-center justify-center pt-20">
-        <div class="absolute inset-0 z-0">
-            <img src="img/ui.png" alt="田舎の居酒屋でインバウンドアプリを使う外国人" class="w-full h-full object-cover opacity-50 filter contrast-125">
-            <div class="absolute inset-0 bg-gradient-to-t from-woodDark via-woodDark/80 to-transparent"></div>
-            <div class="absolute inset-0 bg-gradient-to-r from-woodDark via-transparent to-woodDark hidden md:block"></div>
+    <main class="pt-[140px] pb-24 px-6 md:px-12 max-w-7xl mx-auto">
+        <div class="text-center max-w-4xl mx-auto mb-20 relative">
+            <span class="bg-gray-100 text-rose-600 border border-gray-200 px-5 py-2 text-xs font-black rounded-full tracking-widest mb-8 inline-block shadow-sm uppercase">INBOUND / MARKETING</span>
+            <h1 class="text-4xl md:text-[54px] font-black mb-8 leading-[1.2] tracking-tight text-gray-900">「外国人観光客」のスマホに、<br>あなたのお店を直接届ける。</h1>
+            <p class="text-lg md:text-xl text-gray-600 font-medium leading-relaxed max-w-3xl mx-auto">インバウンドMEOは、Googleマップや海外のローカル検索エンジンに対して、多言語での店舗情報最適化を全自動で行う集客SaaSです。</p>
         </div>
 
-        <div class="relative z-10 text-center px-4 max-w-5xl mx-auto mt-10">
-            <div class="inline-flex items-center gap-2 border border-neonAmber/50 bg-neonAmber/10 text-neonAmber font-en text-xs tracking-widest px-4 py-2 rounded-full mb-8 backdrop-blur-sm">
-                <span class="w-2 h-2 rounded-full bg-neonAmber animate-pulse"></span>
-                インバウンド特化型 テーブルオーダー&決済SaaS
-            </div>
-            
-            <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold leading-[1.2] mb-8">
-                <span class="ib">言葉の壁を越え、</span><br>
-                <span class="gradient-text ib">地方の「銘店」を世界へ。</span>
-            </h1>
-            
-            <p class="text-lg md:text-xl font-medium text-white/80 leading-loose mb-12 max-w-3xl mx-auto">
-                <span class="ib border-b border-neonAmber/30 pb-1">手書きのメニュー、独特のなまり、現金のみの会計。</span><br>
-                大将のこだわりが詰まった最高のお店に、インバウンドの波を取り込む。<br>
-                「翻訳」「注文」「決済」のすべてをスマホ一台で完結させる、<br class="hidden md:block">地方飲食店のためのローカライズSaaS。
-            </p>
-            
-            <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
-                <a href="#demo" class="w-full sm:w-auto px-10 py-5 bg-neonAmber text-woodDark font-extrabold text-lg rounded-xl shadow-[0_0_30px_rgba(255,184,0,0.3)] hover:scale-105 transition-transform">
-                    無料でアプリを試す ＞
-                </a>
-                <a href="#features" class="w-full sm:w-auto px-10 py-5 border-2 border-white/20 text-white font-bold text-lg rounded-xl hover:bg-white/10 transition">
-                    機能と料金を見る
-                </a>
-            </div>
-            
-            <div class="mt-16 flex flex-wrap justify-center gap-8 text-white/50 text-sm font-en font-bold">
-                <div class="flex items-center gap-2"><svg class="w-5 h-5 text-neonAmber/80" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg> 初期費用無料</div>
-                <div class="flex items-center gap-2"><svg class="w-5 h-5 text-neonAmber/80" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg> 12カ国語対応</div>
-                <div class="flex items-center gap-2"><svg class="w-5 h-5 text-neonAmber/80" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg> 決済端末不要</div>
-            </div>
+        <div class="relative w-full aspect-[21/9] md:aspect-video rounded-[32px] overflow-hidden shadow-2xl mb-32 border border-gray-200/50 group bg-zinc-900">
+            <img src="img/ui.png" alt="UI Dashboard" class="w-full h-full object-cover transition-transform duration-[3s] group-hover:scale-[1.02]" onerror="this.src='https://picsum.photos/seed/placeholder/1600/900'">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none blend-overlay"></div>
         </div>
-    </section>
 
-    <!-- The Problem & Solution -->
-    <section class="py-24 bg-[#231711] relative overflow-hidden">
-        <!-- background texture -->
-        <div class="absolute inset-0 opacity-[0.03]" style="background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'1\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+        <div class="flex flex-col gap-32 mb-32">
         
-        <div class="max-w-6xl mx-auto px-6 relative z-10">
-            <h2 class="text-center text-3xl md:text-5xl font-bold mb-20 leading-tight">
-                「外国人お断り」から、<br>
-                <span class="text-neonAmber">「インバウンドで過去最高の売上」</span>へ。
-            </h2>
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-rose-600 font-bold tracking-widest text-sm uppercase">THE VISIBILITY GAP</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">「見つからない」日本の名店</h2>
+                        <div class="w-12 h-1 bg-rose-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">どれだけ美味しい料理を提供していても、英語や中国語で検索した時に地図に出なければ、外国人には存在しないのと同じです。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-rose-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+                <div class="mt-10">
+                    <div class="text-center mb-16">
+                        <span class="text-rose-600 font-bold tracking-widest text-sm uppercase">GLOBAL MEO</span>
+                        <h2 class="text-3xl md:text-4xl font-black mt-4 text-gray-900">多言語でのMEOを完全自動化</h2>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-rose-50 text-rose-600 border border-rose-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">一括多言語翻訳</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">店舗情報やメニューをAIが自然な多言語に翻訳し、各国の主要マップアプリに一括配信します。</p>
+</div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-                <!-- Before -->
-                <div class="p-8 rounded-2xl border border-red-900/50 bg-red-900/5">
-                    <div class="text-red-500 font-en font-black text-2xl mb-6">BEFORE</div>
-                    <ul class="space-y-4">
-                        <li class="flex items-start gap-4">
-                            <span class="text-2xl mt-[-4px]">🥵</span>
-                            <p class="text-white/80 leading-relaxed font-bold">メニューが手書きの日本語しかなく、身振手振りの説明に毎回5分以上も時間を奪われる。</p>
-                        </li>
-                        <li class="flex items-start gap-4">
-                            <span class="text-2xl mt-[-4px]">💸</span>
-                            <p class="text-white/80 leading-relaxed font-bold">注文の行き違いが頻発し、料理を残されたり、会計時にトラブルになりかけて疲弊する。</p>
-                        </li>
-                        <li class="flex items-start gap-4">
-                            <span class="text-2xl mt-[-4px]">💳</span>
-                            <p class="text-white/80 leading-relaxed font-bold">「現金のみ」と伝えると、外国人が帰ってしまう（機会損失が1日平均3組発生）。</p>
-                        </li>
-                    </ul>
+
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-rose-50 text-rose-600 border border-rose-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">口コミの自動翻訳と分析</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">外国語で書かれたレビューを日本語に翻訳し、ネガティブな意見にはAIが返信案を作成します。</p>
+</div>
+
+
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-rose-50 text-rose-600 border border-rose-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">インバウンド需要予測</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">周辺のホテルの予約状況から、「来週どの国からの観光客が増えるか」を予測します。</p>
+</div>
+
+                    </div>
                 </div>
-                <!-- After -->
-                <div class="p-8 rounded-2xl border border-neonAmber/30 bg-neonAmber/5 shadow-[0_0_30px_rgba(255,184,0,0.05)]">
-                    <div class="text-neonAmber font-en font-black text-2xl mb-6">WITH NOMARK</div>
-                    <ul class="space-y-4">
-                        <li class="flex items-start gap-4">
-                            <span class="text-2xl mt-[-4px]">📱</span>
-                            <p class="text-white/90 leading-relaxed font-bold"><span class="text-neonAmber">お客さまのスマホをかざすだけ。</span>自国語に翻訳されたメニューから勝手に注文が入る。</p>
-                        </li>
-                        <li class="flex items-start gap-4">
-                            <span class="text-2xl mt-[-4px]">🖨️</span>
-                            <p class="text-white/90 leading-relaxed font-bold">注文内容は<span class="text-neonAmber">自動で日本語に変換</span>され、厨房のプリンターに直接伝票として出力される。</p>
-                        </li>
-                        <li class="flex items-start gap-4">
-                            <span class="text-2xl mt-[-4px]">✨</span>
-                            <p class="text-white/90 leading-relaxed font-bold">Apple Pay/WeChat Pay等で<span class="text-neonAmber">テーブルで事前決済。</span>食い逃げリスクゼロ、レジ締め作業ゼロ。</p>
-                        </li>
-                    </ul>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-rose-600 font-bold tracking-widest text-sm uppercase">VISUAL MARKETING</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">写真と動画で視覚的に訴求</h2>
+                        <div class="w-12 h-1 bg-rose-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">外国人が好むシズル感のある写真や、店内ツアー動画を最適化して配置します。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-rose-900/20 to-transparent"></div>
+                    </div>
                 </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-rose-600 font-bold tracking-widest text-sm uppercase">TAX FREE SUPPORT</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">免税手続きの案内を自動化</h2>
+                        <div class="w-12 h-1 bg-rose-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">店舗の免税対応状況を明確に表示し、来店動機を強力に後押しします。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: bottom right;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-rose-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-rose-600 font-bold tracking-widest text-sm uppercase">CLIENT SUCCESS</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">Case Study | 京都の伝統工芸店</h2>
+                        <div class="w-12 h-1 bg-rose-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">多言語でのMEO対策を実施した結果、外国人観光客の来店数が前年比で300%増加しました。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-rose-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-rose-600 font-bold tracking-widest text-sm uppercase">OUR VISION</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">日本の魅力を、世界へ正しく</h2>
+                        <div class="w-12 h-1 bg-rose-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">言葉とデジタルの壁を取り払い、日本の素晴らしい体験を世界中の人々に届けます。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: bottom right;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-rose-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+        </div>
+
+        <div class="text-center bg-gray-900 border border-gray-800 rounded-[3rem] p-16 md:p-32 relative overflow-hidden group shadow-2xl">
+            <div class="absolute inset-0 bg-gradient-to-br from-rose-900/40 to-transparent"></div>
+            <div class="relative z-10">
+                <h2 class="text-4xl md:text-5xl font-black mb-8 text-white">国境を越える、集客の自動化。</h2>
+                <p class="text-gray-300 mb-12 max-w-xl mx-auto text-lg leading-relaxed">メニューを英語にするだけでは不十分です。彼らが「検索」した時に、一番上に表示されなければ。</p>
+                <a href="../index.html" class="bg-rose-500 hover:bg-rose-400 text-white px-12 py-5 rounded-full font-bold text-lg inline-flex items-center gap-3 transition transform hover:-translate-y-1 shadow-lg shadow-rose-500/30">
+                    PORTFOLIOに戻る
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                </a>
             </div>
         </div>
-    </section>
-
-    <!-- Bento Features Section -->
-    <section id="features" class="py-24 bg-woodDark">
-        <div class="max-w-6xl mx-auto px-6">
-            <div class="mb-16">
-                <h2 class="font-en text-4xl text-neonAmber font-bold tracking-widest mb-4">CORE FEATURES</h2>
-                <p class="text-xl font-bold">地方特有の「あの悩み」を全て吸収する機能群。</p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <!-- Bento 1 -->
-                <div class="bento-card p-10 rounded-2xl md:col-span-2 relative overflow-hidden group">
-                    <div class="absolute right-0 bottom-0 opacity-5 group-hover:opacity-10 transition-opacity">
-                        <svg class="w-64 h-64 text-neonAmber" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm1 16h-2v-2h2v2zm0-4h-2V7h2v7z"></path></svg>
-                    </div>
-                    <div class="text-neonAmber mb-6"><svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"></path></svg></div>
-                    <h3 class="text-3xl font-bold mb-4">方言・隠語対応 AI「超・意訳」メニュー</h3>
-                    <p class="text-white/80 leading-loose text-lg font-medium">
-                        「お通し」「もつ煮込み」「本日のおすすめ（黒板）」。海外には概念がない日本特有の食文化や独自のメニュー名を、AIが文脈を理解して適切に意訳。<br>
-                        スマホで手書きの黒板を撮影するだけで、一瞬で12カ国語のデジタルメニューが生成されます。
-                    </p>
-                </div>
-
-                <!-- Bento 2 -->
-                <div class="bento-card p-8 rounded-2xl flex flex-col justify-between">
-                    <div>
-                        <div class="text-neonAmber mb-4"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg></div>
-                        <h3 class="text-xl font-bold mb-3">1タップ・テーブル決済</h3>
-                        <p class="text-white/70 text-sm leading-relaxed font-medium">
-                            スタッフがレジに立つ必要はありません。Apple Pay, Google Pay, WeChat, Alipayなど、外国人観光客が普段使っている決済手段でテーブルから直接支払い完了。
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Bento 3 -->
-                <div class="bento-card p-8 rounded-2xl flex flex-col justify-between">
-                    <div>
-                        <div class="text-neonAmber mb-4"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg></div>
-                        <h3 class="text-xl font-bold mb-3">アレルギー・宗教判定</h3>
-                        <p class="text-white/70 text-sm leading-relaxed font-medium">
-                            豚肉やアルコール、そば等のアレルギー物質を自動検知してメニューに警告アイコンを表示。重大なトラブルを未然に防ぎます。
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Bento 4 -->
-                <div class="bento-card p-10 rounded-2xl md:col-span-2 flex flex-col md:flex-row items-center gap-10">
-                    <div class="flex-1">
-                        <h3 class="text-2xl font-bold mb-4">客単価を平均35%引き上げる「AIおすすめ」</h3>
-                        <p class="text-white/70 leading-relaxed font-medium">
-                            言葉が通じないことで発生する「追加注文ロス」をゼロへ。「この焼き鳥には、地元の冷酒が合いますよ」「最後の〆にうどんはいかがですか？」という気の利いたサジェストを、お客様の母国語で自動でポップアップさせます。
-                        </p>
-                    </div>
-                    <div class="w-40 h-40 bg-neonAmber/10 rounded-full flex flex-col items-center justify-center border-4 border-neonAmber/30 shadow-[0_0_20px_rgba(255,184,0,0.2)]">
-                        <span class="text-sm font-bold text-neonAmber mb-1">客単価向上</span>
-                        <span class="text-5xl font-en font-black text-neonAmber">+35<span class="text-2xl">%</span></span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Case Studies -->
-    <section id="cases" class="py-24 bg-[#231711] border-y border-white/5">
-        <div class="max-w-6xl mx-auto px-6">
-            <h2 class="text-center text-3xl font-bold mb-16">導入店舗の声</h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- Case 1 -->
-                <div class="bg-woodDark p-8 rounded-xl border border-white/10">
-                    <div class="flex justify-between items-start mb-6">
-                        <div>
-                            <h3 class="text-xl font-bold">飛騨高山 郷土料理居酒屋</h3>
-                            <p class="text-white/50 text-sm mt-1">店主：山本様（62歳）</p>
-                        </div>
-                        <div class="text-neonAmber font-en font-black text-2xl">売上 1.8倍</div>
-                    </div>
-                    <p class="text-white/80 leading-loose text-sm font-medium">
-                        「以前は外国人が来ると『英語話せないから』と断ってしまっていました。NOMARKを入れてからは、テーブルのQRコードを指差すだけ。注文は日本語でキッチンのプリンターから出てくるので、我々は料理を作るだけで済むようになりました。本当に救われています。」
-                    </p>
-                </div>
-                <!-- Case 2 -->
-                <div class="bg-woodDark p-8 rounded-xl border border-white/10">
-                    <div class="flex justify-between items-start mb-6">
-                        <div>
-                            <h3 class="text-xl font-bold">金沢 海鮮立ち飲み屋</h3>
-                            <p class="text-white/50 text-sm mt-1">店主：佐藤様（45歳）</p>
-                        </div>
-                        <div class="text-neonAmber font-en font-black text-2xl">注文ミス 0件</div>
-                    </div>
-                    <p class="text-white/80 leading-loose text-sm font-medium">
-                        「手書きの黒板メニューが日替わりなので、アプリへの登録が面倒だと思っていました。でもこれはスマホで黒板の写真を撮るだけでAIが勝手に翻訳メニューを作ってくれる。凄すぎます。会計も終わった状態でテーブルを立つので、レジ業務が消滅しました。」
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ -->
-    <section id="faq" class="py-24 bg-woodDark">
-        <div class="max-w-3xl mx-auto px-6">
-            <h2 class="text-center text-3xl font-bold mb-12">よくあるご質問</h2>
-            
-            <div class="space-y-4">
-                <div class="border border-white/10 p-6 rounded-lg bg-white/5">
-                    <h3 class="font-bold text-lg mb-2 flex items-center gap-3"><span class="text-neonAmber font-en">Q.</span> お店のスタッフがスマホやPCに弱くても使えますか？</h3>
-                    <p class="text-white/70 text-sm leading-relaxed">はい、完全にお使いいただけます。スタッフ様側で行う操作は「お客様にQRコードを見せること」と、「厨房のプリンターから出てきた日本語の注文伝票を見て料理を作ること」の2つだけです。複雑なIT操作は一切不要です。</p>
-                </div>
-                <div class="border border-white/10 p-6 rounded-lg bg-white/5">
-                    <h3 class="font-bold text-lg mb-2 flex items-center gap-3"><span class="text-neonAmber font-en">Q.</span> 導入費用や専用のレジ端末は必要ですか？</h3>
-                    <p class="text-white/70 text-sm leading-relaxed">専用の端末購入は不要です。初期費用は0円で、月額9,800円のシステム利用料のみで全機能がご利用いただけます。キッチンに注文を飛ばすための小型プリンターのみ、こちらから無料レンタルで手配いたします。</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer CTA -->
-    <section class="py-32 bg-neonAmber text-woodDark text-center" id="contact">
-        <div class="max-w-4xl mx-auto px-6">
-            <h2 class="text-4xl md:text-5xl font-black mb-8 leading-tight">
-                機会損失は、今日で終わりにしよう。
-            </h2>
-            <p class="text-xl font-bold mb-12 opacity-80">
-                初期費用0円。いますぐ14日間の無料トライアルをお試しください。
-            </p>
-            <form class="max-w-lg mx-auto flex flex-col md:flex-row gap-4">
-                <input type="email" placeholder="メールアドレスを入力" class="flex-1 bg-white border-2 border-transparent rounded-xl px-6 py-5 text-woodDark font-bold focus:outline-none focus:border-woodDark/50 transition">
-                <button type="submit" class="bg-woodDark text-white font-black px-10 py-5 rounded-xl hover:bg-[#1A110D] transition shadow-xl hover:translate-y-1">
-                    無料で始める ＞
-                </button>
-            </form>
-            <p class="mt-8 font-bold text-sm opacity-60">※クレジットカードの登録は不要です</p>
-        </div>
-    </section>
-    
-    <footer class="bg-woodDark border-t border-white/5 py-8 text-center text-white/30 text-sm font-en">
-        &copy; 2026 NOMARK Inbound Solutions Inc.
-    </footer>
-
+    </main>
+        
 </body>
 </html>

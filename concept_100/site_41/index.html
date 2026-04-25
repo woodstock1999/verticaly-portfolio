@@ -1,17 +1,134 @@
 <!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>AIパーソナルスタイリスト (AI Fashion)</title><script src="https://cdn.tailwindcss.com"></script></head>
 <body class="bg-gray-50 text-stone-800 min-h-screen font-sans antialiased overflow-x-hidden">
-    <header class="mb-12 flex justify-between items-end max-w-6xl mx-auto border-b border-slate-200 pb-8">
-        <div><div class="text-sm font-medium text-blue-600 mb-2">5. Retail & E-commerce (小売・EC) / Prototype 41</div><h1 class="text-4xl md:text-5xl font-bold tracking-tight">AIパーソナルスタイリスト (AI Fashion)</h1></div>
-        <a href="../index.html" class="text-sm font-bold tracking-widest text-slate-400 hover:text-black uppercase">Close</a>
-    </header>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-        <div class="md:col-span-2 bg-white rounded-[24px] overflow-hidden shadow-lg border border-slate-100 flex flex-col justify-between">
-            <div class="h-64 object-cover relative"><img src="https://picsum.photos/seed/aethel41/1600/900" class="w-full h-full object-cover"></div>
-            <div class="p-10"><div class="text-2xl font-light leading-relaxed text-slate-600 mb-8">全身スキャンに基づいて服を合成表示する「AR試着室」UI。</div></div>
+
+    <main class="pt-[140px] pb-24 px-6 md:px-12 max-w-7xl mx-auto">
+        <div class="text-center max-w-4xl mx-auto mb-20 relative">
+            <span class="bg-gray-100 text-fuchsia-600 border border-gray-200 px-5 py-2 text-xs font-black rounded-full tracking-widest mb-8 inline-block shadow-sm uppercase">FASHION TECH / AR</span>
+            <h1 class="text-4xl md:text-[54px] font-black mb-8 leading-[1.2] tracking-tight text-gray-900">スマホのカメラが、<br>世界最強の「試着室」になる。</h1>
+            <p class="text-lg md:text-xl text-gray-600 font-medium leading-relaxed max-w-3xl mx-auto">VIRTUAL-FITTINGは、AIによる高精度なボディスキャンと物理演算を用いた衣服のARシミュレーションにより、「試着せずに服を買う不安」を完全に解消するアパレル向けプラグインです。</p>
         </div>
-        <div class="bg-indigo-600 text-white rounded-[24px] p-10 shadow-lg flex flex-col justify-center items-center text-center">
-             <div class="w-24 h-24 rounded-full border-4 border-indigo-400/30 mb-6 flex items-center justify-center text-4xl">41</div>
-             <h3 class="text-xl font-bold mb-2">Live Demo Ready</h3>
+
+        <div class="relative w-full aspect-[21/9] md:aspect-video rounded-[32px] overflow-hidden shadow-2xl mb-32 border border-gray-200/50 group bg-zinc-900">
+            <img src="img/ui.png" alt="UI Dashboard" class="w-full h-full object-cover transition-transform duration-[3s] group-hover:scale-[1.02]" onerror="this.src='https://picsum.photos/seed/placeholder/1600/900'">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none blend-overlay"></div>
         </div>
+
+        <div class="flex flex-col gap-32 mb-32">
+        
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-fuchsia-600 font-bold tracking-widest text-sm uppercase">THE RETURN RATE</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">ECアパレル最大の壁「サイズ不安と返品」</h2>
+                        <div class="w-12 h-1 bg-fuchsia-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">「ネットで服を買うと、届いた時にイメージと違う」。この不安が購入率（コンバージョン）を下げ、また大量の返品処理がアパレル企業の利益を激しく圧迫しています。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-fuchsia-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+                <div class="mt-10">
+                    <div class="text-center mb-16">
+                        <span class="text-fuchsia-600 font-bold tracking-widest text-sm uppercase">PHYSICS ENGINE</span>
+                        <h2 class="text-3xl md:text-4xl font-black mt-4 text-gray-900">布の「揺れ」や「シワ」まで計算するAI</h2>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-fuchsia-50 text-fuchsia-600 border border-fuchsia-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
     </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">ミリ単位の3Dボディスキャン</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">スマホのカメラで全身をぐるりと撮影するだけで、AIが身長、肩幅、ウエストなどを正確に計測し、あなたのデジタルツインを作成します。</p>
+</div>
+
+
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-fuchsia-50 text-fuchsia-600 border border-fuchsia-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">布の物理演算（クロスシミュレーション）</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">シルクの柔らかさや、デニムの硬さ。素材ごとの重力や摩擦を計算し、「歩いた時にどうシワが寄るか」までをリアルタイムでシミュレーションします。</p>
+</div>
+
+
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-fuchsia-50 text-fuchsia-600 border border-fuchsia-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">既存のECサイトへの簡単組み込み</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">ブランド側は服のパターン（型紙）データをアップロードするだけ。既存のShopifyなどのサイトに1行のコードで「AR試着ボタン」を追加できます。</p>
+</div>
+
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-fuchsia-600 font-bold tracking-widest text-sm uppercase">VIRTUAL CLOSET</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">手持ちの服との「バーチャル着回し」</h2>
+                        <div class="w-12 h-1 bg-fuchsia-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">過去に買った服のデータを保存。新しく買おうとしているジャケットが、手持ちのパンツと合うかどうかを画面上で組み合わせて確認できます。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-fuchsia-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-fuchsia-600 font-bold tracking-widest text-sm uppercase">ON-DEMAND SHIFT</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">環境に優しい「受注生産」へのシフト</h2>
+                        <div class="w-12 h-1 bg-fuchsia-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">ユーザーがバーチャルで試着し、本当に欲しいものだけを生産する。大量生産・大量廃棄のアパレル業界の構造を根本から変革します。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: bottom right;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-fuchsia-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-fuchsia-600 font-bold tracking-widest text-sm uppercase">CLIENT SUCCESS</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">Case Study | D2Cファッションブランド</h2>
+                        <div class="w-12 h-1 bg-fuchsia-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">VIRTUAL-FITTING導入後、サイズ違いによる返品率が40%低下。同時に「試着の楽しさ」が話題を呼び、SNS経由の売上が2倍に跳ね上がりました。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-fuchsia-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-fuchsia-600 font-bold tracking-widest text-sm uppercase">OUR VISION</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">ファッションの自由を、すべての体型に</h2>
+                        <div class="w-12 h-1 bg-fuchsia-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">「自分に似合う服がわからない」という悩みをテクノロジーで解決し、誰もが自信を持ってファッションを楽しめる世界を創ります。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: bottom right;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-fuchsia-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+        </div>
+
+        <div class="text-center bg-gray-900 border border-gray-800 rounded-[3rem] p-16 md:p-32 relative overflow-hidden group shadow-2xl">
+            <div class="absolute inset-0 bg-gradient-to-br from-fuchsia-900/40 to-transparent"></div>
+            <div class="relative z-10">
+                <h2 class="text-4xl md:text-5xl font-black mb-8 text-white">「サイズが合わない」という返品を、過去のものに。</h2>
+                <p class="text-gray-300 mb-12 max-w-xl mx-auto text-lg leading-relaxed">あなたの体型を正確に学習したアバターが、画面の向こうで何百着でも着替えてくれます。</p>
+                <a href="../index.html" class="bg-fuchsia-500 hover:bg-fuchsia-400 text-white px-12 py-5 rounded-full font-bold text-lg inline-flex items-center gap-3 transition transform hover:-translate-y-1 shadow-lg shadow-fuchsia-500/30">
+                    PORTFOLIOに戻る
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                </a>
+            </div>
+        </div>
+    </main>
+        
 </body></html>

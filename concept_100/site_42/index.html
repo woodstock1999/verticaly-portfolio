@@ -1,12 +1,134 @@
 <!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>ドローン配送スーパー (Drone Grocery)</title><script src="https://cdn.tailwindcss.com"></script><link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet"></head>
 <body class="bg-gray-50 text-stone-800 min-h-screen font-sans antialiased overflow-x-hidden">
-    <a href="../index.html" class="absolute top-8 right-8 text-xs tracking-[0.2em] uppercase text-white/50 hover:text-white">Return</a>
-    <div class="relative w-full max-w-6xl aspect-[21/9] rounded-xl overflow-hidden shadow-2xl">
-        <img src="https://picsum.photos/seed/aethel42/1600/900" class="absolute inset-0 w-full h-full object-cover opacity-30 grayscale sepia-[.3]" />
-        <div class="absolute inset-0 p-16 flex flex-col justify-end bg-gradient-to-t from-black via-black/40 to-transparent">
-            <div class="text-[#d4af37] text-sm tracking-[0.3em] uppercase mb-4 font-bold border-l-2 border-[#d4af37] pl-4">5. Retail & E-commerce (小売・EC) - 0042</div>
-            <h1 class="text-5xl md:text-7xl font-bold tracking-wide mb-6" style="font-family: 'Playfair Display', serif;">ドローン配送スーパー (Drone Grocery)</h1>
-            <p class="text-xl font-light max-w-3xl text-white/60 leading-loose">注文後、ドローンがどこを飛んでいるか追跡するアニメーション。</p>
+
+    <main class="pt-[140px] pb-24 px-6 md:px-12 max-w-7xl mx-auto">
+        <div class="text-center max-w-4xl mx-auto mb-20 relative">
+            <span class="bg-gray-100 text-indigo-600 border border-gray-200 px-5 py-2 text-xs font-black rounded-full tracking-widest mb-8 inline-block shadow-sm uppercase">MOBILITY / DRONE LOGISTICS</span>
+            <h1 class="text-4xl md:text-[54px] font-black mb-8 leading-[1.2] tracking-tight text-gray-900">「空」という名の、<br>渋滞のないハイウェイ。</h1>
+            <p class="text-lg md:text-xl text-gray-600 font-medium leading-relaxed max-w-3xl mx-auto">DRONE-MARTは、過疎地から都市部まで、AIによる完全自律飛行のドローンを活用し、ラストワンマイルの配送を劇的に高速化・低コスト化する空の物流プラットフォームです。</p>
         </div>
+
+        <div class="relative w-full aspect-[21/9] md:aspect-video rounded-[32px] overflow-hidden shadow-2xl mb-32 border border-gray-200/50 group bg-zinc-900">
+            <img src="img/ui.png" alt="UI Dashboard" class="w-full h-full object-cover transition-transform duration-[3s] group-hover:scale-[1.02]" onerror="this.src='https://picsum.photos/seed/placeholder/1600/900'">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none blend-overlay"></div>
+        </div>
+
+        <div class="flex flex-col gap-32 mb-32">
+        
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-indigo-600 font-bold tracking-widest text-sm uppercase">THE DELIVERY CRISIS</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">崩壊寸前の「ラストワンマイル」</h2>
+                        <div class="w-12 h-1 bg-indigo-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">ネット通販の爆発的な増加に対し、配達する人間の数は圧倒的に足りていません。特に山間部や離島への配送は、採算が合わず物流網の維持が限界を迎えています。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-indigo-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+                <div class="mt-10">
+                    <div class="text-center mb-16">
+                        <span class="text-indigo-600 font-bold tracking-widest text-sm uppercase">AUTONOMOUS FLIGHT</span>
+                        <h2 class="text-3xl md:text-4xl font-black mt-4 text-gray-900">安全を絶対的に担保する自律飛行システム</h2>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-indigo-50 text-indigo-600 border border-indigo-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
     </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">AI障害物回避機能</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">電線や鳥、突然の突風。飛行中に遭遇するあらゆる障害物をカメラとLiDARセンサーで瞬時に検知し、自律的にルートを変更して衝突を回避します。</p>
+</div>
+
+
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-indigo-50 text-indigo-600 border border-indigo-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">耐候性ヘビー・ドローン</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">雨や風速15mの強風下でも安定して飛行し、最大5kgの荷物を数十キロ先まで運ぶことができる産業用の強靭な機体設計。</p>
+</div>
+
+
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-indigo-50 text-indigo-600 border border-indigo-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">センチメートル単位の精密着陸</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">GPSだけでなく画像認識を組み合わせることで、指定された庭先のターゲットマークの上に、荷物を傷つけることなくミリ単位の精度でそっと降ろします。</p>
+</div>
+
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-indigo-600 font-bold tracking-widest text-sm uppercase">UTM SYSTEM</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">空の交通整理「クラウド管制塔」</h2>
+                        <div class="w-12 h-1 bg-indigo-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">空を飛ぶ何千機ものドローン同士がぶつからないよう、クラウド上の管制システム（UTM）が一元管理し、最適な高度とルートをリアルタイムで割り当てます。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-indigo-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-indigo-600 font-bold tracking-widest text-sm uppercase">EMERGENCY DELIVERY</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">薬や血液の「命を救う」緊急輸送</h2>
+                        <div class="w-12 h-1 bg-indigo-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">山間部で急病人が出た際、救急車が到着するよりも早く、AEDや緊急用の医薬品をドローンで直送。1分1秒が命を分ける現場で真価を発揮します。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: bottom right;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-indigo-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-indigo-600 font-bold tracking-widest text-sm uppercase">CLIENT SUCCESS</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">Case Study | 離島の医療ネットワーク</h2>
+                        <div class="w-12 h-1 bg-indigo-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">本土から船でしか薬を運べなかった離島。DRONE-MARTの導入により、発注からわずか30分で必要な処方薬が患者の家まで直接届くようになり、医療格差が劇的に改善されました。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-indigo-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-indigo-600 font-bold tracking-widest text-sm uppercase">OUR VISION</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">空を、日常のインフラへ</h2>
+                        <div class="w-12 h-1 bg-indigo-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">SF映画の中で描かれた「空飛ぶ車」や「ドローン配達」は、すでに私たちの技術によって現実のものとなっています。物流の限界を空から突破します。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: bottom right;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-indigo-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+        </div>
+
+        <div class="text-center bg-gray-900 border border-gray-800 rounded-[3rem] p-16 md:p-32 relative overflow-hidden group shadow-2xl">
+            <div class="absolute inset-0 bg-gradient-to-br from-indigo-900/40 to-transparent"></div>
+            <div class="relative z-10">
+                <h2 class="text-4xl md:text-5xl font-black mb-8 text-white">荷物はもう、道を走らない。</h2>
+                <p class="text-gray-300 mb-12 max-w-xl mx-auto text-lg leading-relaxed">ドライバー不足も、山の険しさも関係ない。空を直線で結べば、世界はもっと小さくなる。</p>
+                <a href="../index.html" class="bg-indigo-500 hover:bg-indigo-400 text-white px-12 py-5 rounded-full font-bold text-lg inline-flex items-center gap-3 transition transform hover:-translate-y-1 shadow-lg shadow-indigo-500/30">
+                    PORTFOLIOに戻る
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                </a>
+            </div>
+        </div>
+    </main>
+        
 </body></html>

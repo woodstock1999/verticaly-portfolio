@@ -1,12 +1,134 @@
 <!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>別荘のタイムシェアリング (Resort Share)</title><script src="https://cdn.tailwindcss.com"></script><link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet"></head>
 <body class="bg-gray-50 text-stone-800 min-h-screen font-sans antialiased overflow-x-hidden">
-    <a href="../index.html" class="absolute top-8 right-8 text-xs tracking-[0.2em] uppercase text-white/50 hover:text-white">Return</a>
-    <div class="relative w-full max-w-6xl aspect-[21/9] rounded-xl overflow-hidden shadow-2xl">
-        <img src="https://picsum.photos/seed/aethel39/1600/900" class="absolute inset-0 w-full h-full object-cover opacity-30 grayscale sepia-[.3]" />
-        <div class="absolute inset-0 p-16 flex flex-col justify-end bg-gradient-to-t from-black via-black/40 to-transparent">
-            <div class="text-[#d4af37] text-sm tracking-[0.3em] uppercase mb-4 font-bold border-l-2 border-[#d4af37] pl-4">4. Real Estate & Architecture (不動産・建築) - 0039</div>
-            <h1 class="text-5xl md:text-7xl font-bold tracking-wide mb-6" style="font-family: 'Playfair Display', serif;">別荘のタイムシェアリング (Resort Share)</h1>
-            <p class="text-xl font-light max-w-3xl text-white/60 leading-loose">暖かい日差しと海、極限までシンプルな「今すぐ予約」ボタン。</p>
+
+    <main class="pt-[140px] pb-24 px-6 md:px-12 max-w-7xl mx-auto">
+        <div class="text-center max-w-4xl mx-auto mb-20 relative">
+            <span class="bg-gray-100 text-amber-600 border border-gray-200 px-5 py-2 text-xs font-black rounded-full tracking-widest mb-8 inline-block shadow-sm uppercase">LUXURY / HOSPITALITY</span>
+            <h1 class="text-4xl md:text-[54px] font-black mb-8 leading-[1.2] tracking-tight text-gray-900">「無人島」を、<br>あなただけの五つ星ホテルへ。</h1>
+            <p class="text-lg md:text-xl text-gray-600 font-medium leading-relaxed max-w-3xl mx-auto">ISLAND-STAYは、日本全国の無人島やプライベートビーチに、環境負荷ゼロのモバイル型ラグジュアリーヴィラを配置し、究極の非日常を提供するエクスクルーシブな宿泊プラットフォームです。</p>
         </div>
+
+        <div class="relative w-full aspect-[21/9] md:aspect-video rounded-[32px] overflow-hidden shadow-2xl mb-32 border border-gray-200/50 group bg-zinc-900">
+            <img src="img/ui.png" alt="UI Dashboard" class="w-full h-full object-cover transition-transform duration-[3s] group-hover:scale-[1.02]" onerror="this.src='https://picsum.photos/seed/placeholder/1600/900'">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none blend-overlay"></div>
+        </div>
+
+        <div class="flex flex-col gap-32 mb-32">
+        
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-amber-600 font-bold tracking-widest text-sm uppercase">THE ULTIMATE ESCAPE</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">「観光地」という喧騒からの逃避</h2>
+                        <div class="w-12 h-1 bg-amber-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">富裕層が真に求めているのは、豪華なシャンデリアではなく「完全なプライバシー」と「手付かずの自然」です。しかし、日本の美しい自然環境の多くは宿泊施設が存在せず、滞在が不可能です。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-amber-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+                <div class="mt-10">
+                    <div class="text-center mb-16">
+                        <span class="text-amber-600 font-bold tracking-widest text-sm uppercase">OFF-GRID ARCHITECTURE</span>
+                        <h2 class="text-3xl md:text-4xl font-black mt-4 text-gray-900">自然を傷つけない「モバイルヴィラ」</h2>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-amber-50 text-amber-600 border border-amber-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
     </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">100%オフグリッド</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">太陽光発電、独自の浄水システム、バイオトイレを完備。外部からのインフラ接続なしで数週間のラグジュアリーな滞在を可能にします。</p>
+</div>
+
+
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-amber-50 text-amber-600 border border-amber-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">設置と撤去が数日で完了</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">基礎工事を行わないため、国立公園などの厳しい規制がある場所でも、自然を一切破壊せずに「ポンと置く」だけで極上の空間が完成します。</p>
+</div>
+
+
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-amber-50 text-amber-600 border border-amber-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">AIによる環境制御</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">室内の気温、湿度、そして星空を眺めるための天窓の開閉まで、すべてAIが自動制御し最高の快適性を保ちます。</p>
+</div>
+
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-amber-600 font-bold tracking-widest text-sm uppercase">PRIVATE TRANSFER</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">ヘリコプターでのシームレスな送迎</h2>
+                        <div class="w-12 h-1 bg-amber-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">東京のヘリポートから無人島まで直行。移動時間すらも極上のエンターテインメントへと昇華させます。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-amber-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-amber-600 font-bold tracking-widest text-sm uppercase">LOCAL GASTRONOMY</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">地元の一流シェフによる出張料理</h2>
+                        <div class="w-12 h-1 bg-amber-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">その土地でその日に採れた最高の海鮮や食材を、専属のシェフがヴィラのキッチンで調理。究極の地産地消を提供します。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: bottom right;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-amber-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-amber-600 font-bold tracking-widest text-sm uppercase">CLIENT SUCCESS</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">Case Study | 瀬戸内海の無人島</h2>
+                        <div class="w-12 h-1 bg-amber-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">1泊100万円という価格設定にも関わらず、国内外のエグゼクティブから予約が殺到。地域には環境保全の資金が還元される仕組みを構築しました。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-amber-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-amber-600 font-bold tracking-widest text-sm uppercase">OUR VISION</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">地球の美しさを、独り占めする</h2>
+                        <div class="w-12 h-1 bg-amber-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">私たちは自然を消費するのではなく、自然の価値を再定義し、最も持続可能で美しい形で人々に提供します。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: bottom right;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-amber-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+        </div>
+
+        <div class="text-center bg-gray-900 border border-gray-800 rounded-[3rem] p-16 md:p-32 relative overflow-hidden group shadow-2xl">
+            <div class="absolute inset-0 bg-gradient-to-br from-amber-900/40 to-transparent"></div>
+            <div class="relative z-10">
+                <h2 class="text-4xl md:text-5xl font-black mb-8 text-white">誰にも邪魔されない、圧倒的な静寂。</h2>
+                <p class="text-gray-300 mb-12 max-w-xl mx-auto text-lg leading-relaxed">既存の高級ホテルでは味わえない、自然と完全に一体化する体験を。</p>
+                <a href="../index.html" class="bg-amber-500 hover:bg-amber-400 text-white px-12 py-5 rounded-full font-bold text-lg inline-flex items-center gap-3 transition transform hover:-translate-y-1 shadow-lg shadow-amber-500/30">
+                    PORTFOLIOに戻る
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                </a>
+            </div>
+        </div>
+    </main>
+        
 </body></html>

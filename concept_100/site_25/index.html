@@ -40,141 +40,135 @@
 </head>
 <body class="bg-gray-50 text-stone-800 min-h-screen font-sans antialiased overflow-x-hidden">
 
-    <header class="w-full px-4 py-4 flex justify-between items-center bg-white shadow-sm sticky top-0 z-50">
-        <div class="font-bold text-2xl text-brandAccent">万福丸</div>
-        <div class="text-right">
-            <div class="text-xs font-bold text-gray-500">お電話でのご相談はこちら</div>
-            <div class="text-xl md:text-3xl font-black text-brandText tracking-widest">0120-000-000</div>
+    <main class="pt-[140px] pb-24 px-6 md:px-12 max-w-7xl mx-auto">
+        <div class="text-center max-w-4xl mx-auto mb-20 relative">
+            <span class="bg-gray-100 text-indigo-600 border border-gray-200 px-5 py-2 text-xs font-black rounded-full tracking-widest mb-8 inline-block shadow-sm uppercase">EVENT TECH / HYBRID</span>
+            <h1 class="text-4xl md:text-[54px] font-black mb-8 leading-[1.2] tracking-tight text-gray-900">「オンライン参加」を、<br>最前列のVIP席へ変える。</h1>
+            <p class="text-lg md:text-xl text-gray-600 font-medium leading-relaxed max-w-3xl mx-auto">EVENT-SYNCは、オフライン会場の臨場感とオンラインの拡張性を完全に融合させる次世代のハイブリッド・カンファレンス・プラットフォームです。</p>
         </div>
-    </header>
 
-    <!-- 1. 共感とビジュアルのファーストビュー -->
-    <section class="max-w-5xl mx-auto px-4 py-16 md:py-24 text-center fade-in-slow">
-        <h1 class="text-huge mb-8 text-brandText">
-            「あれもこれも、<br><span class="text-brandAccent border-b-4 border-brandAccent">どう処分していいか分からない。</span>」
-        </h1>
-        <p class="text-xl md:text-2xl font-medium mb-12 text-gray-600 leading-relaxed">
-            そのままの状態で、私たちをお呼びください。<br>
-            仕分けも、箱詰めも、重い荷物運びも、一切不要です。<br>
-            長年眠っていたお品物が、スッキリとした空間と「現金」に変わります。
-        </p>
-
-        <!-- インタラクティブなBefore/Afterフック -->
-        <div class="reveal-container w-full aspect-video md:aspect-[21/9] bg-gray-100 relative group mb-8">
-            <!-- After (綺麗な部屋の画像) -->
-            <img src="img/ui.png" alt="スッキリと片付いた和室" class="w-full h-full object-cover">
-            <!-- Before (テキストと暗いカバー) -->
-            <div class="reveal-top">
-                <div class="text-white text-center px-4">
-                    <p class="text-sm md:text-xl md:mb-4 tracking-widest border border-white/30 px-6 py-2 rounded-full inline-block backdrop-blur-sm">← 写真に触れてみてください →</p>
-                    <h2 class="text-3xl md:text-6xl font-black mt-4">足の踏み場もない和室が…</h2>
-                </div>
-            </div>
+        <div class="relative w-full aspect-[21/9] md:aspect-video rounded-[32px] overflow-hidden shadow-2xl mb-32 border border-gray-200/50 group bg-zinc-900">
+            <img src="img/ui.png" alt="UI Dashboard" class="w-full h-full object-cover transition-transform duration-[3s] group-hover:scale-[1.02]" onerror="this.src='https://picsum.photos/seed/placeholder/1600/900'">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none blend-overlay"></div>
         </div>
-        <p class="text-gray-500 font-bold mb-16">※出張査定により、見違えるようにきれいになった空間のイメージ</p>
-    </section>
 
-    <!-- 2. シニア向けの徹底的な不安払拭（The Relief） -->
-    <section class="bg-white py-20 border-y border-gray-200">
-        <div class="max-w-4xl mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-black text-center mb-16 text-brandText">お客様は「ただ見ているだけ」で大丈夫です。</h2>
-            
-            <div class="space-y-8">
-                <div class="flex flex-col md:flex-row gap-6 p-8 bg-brandBase rounded-2xl border border-gray-200 shadow-sm relative">
-                    <div class="absolute -top-4 -left-4 w-12 h-12 bg-brandAccent text-white font-black text-2xl rounded-full flex items-center justify-center shadow-md">1</div>
-                    <div class="md:w-1/3">
-                        <img src="https://images.unsplash.com/photo-1581577665798-75b22b07e99b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="箱詰め不要" class="w-full h-48 object-cover rounded-xl grayscale-[20%]">
+        <div class="flex flex-col gap-32 mb-32">
+        
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-indigo-600 font-bold tracking-widest text-sm uppercase">THE HYBRID DIVIDE</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">「置いてけぼり」にされるオンライン</h2>
+                        <div class="w-12 h-1 bg-indigo-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">会場では拍手が起きているのにオンラインでは白けた空気が漂う。この温度差がイベントの満足度を低下させています。</p>
                     </div>
-                    <div class="md:w-2/3 flex flex-col justify-center">
-                        <h3 class="text-2xl font-bold mb-4 text-brandText">箱詰め・袋詰めは一切不要です。</h3>
-                        <p class="text-lg text-gray-700">押入れの中に何が入っているか分からなくても構いません。泥棒が入った後のように散らかっていても、査定員がひとつひとつ丁寧に拝見し、仕分けをご一緒に進めます。</p>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-indigo-900/20 to-transparent"></div>
                     </div>
                 </div>
-
-                <div class="flex flex-col md:flex-row gap-6 p-8 bg-brandBase rounded-2xl border border-gray-200 shadow-sm relative">
-                    <div class="absolute -top-4 -left-4 w-12 h-12 bg-brandSub text-white font-black text-2xl rounded-full flex items-center justify-center shadow-md">2</div>
-                    <div class="md:w-1/3">
-                        <img src="https://images.unsplash.com/photo-1518600868884-25b746c10eb3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="重いもの" class="w-full h-48 object-cover rounded-xl grayscale-[20%]">
+                
+                <div class="mt-10">
+                    <div class="text-center mb-16">
+                        <span class="text-indigo-600 font-bold tracking-widest text-sm uppercase">HYPE SYNCHRONIZATION</span>
+                        <h2 class="text-3xl md:text-4xl font-black mt-4 text-gray-900">会場の熱量を同期する双方向システム</h2>
                     </div>
-                    <div class="md:w-2/3 flex flex-col justify-center">
-                        <h3 class="text-2xl font-bold mb-4 text-brandText">重い荷物も私たちが運び出しします。</h3>
-                        <p class="text-lg text-gray-700">重い壺、大量の古い本、使わなくなったゴルフクラブや着物類。「腰が痛くて運べない」というお悩みをすべて引き受けます。玄関に出しておく必要もありません。</p>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-indigo-50 text-indigo-600 border border-indigo-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">${f.t}</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">${f.d}</p>
+</div>
+
+
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-indigo-50 text-indigo-600 border border-indigo-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">${f.t}</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">${f.d}</p>
+</div>
+
+
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-indigo-50 text-indigo-600 border border-indigo-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">${f.t}</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">${f.d}</p>
+</div>
+
                     </div>
                 </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-indigo-600 font-bold tracking-widest text-sm uppercase">SMART NETWORKING</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">名刺交換の可視化</h2>
+                        <div class="w-12 h-1 bg-indigo-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">参加者同士のデジタル名刺交換のログをヒートマップ化し、スポンサーへの強力なリードデータとして提供します。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-indigo-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-indigo-600 font-bold tracking-widest text-sm uppercase">ROCK-SOLID INFRASTRUCTURE</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">絶対落ちないストリーミングインフラ</h2>
+                        <div class="w-12 h-1 bg-indigo-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">最高水準のCDNを使用し同時接続10万人でも遅延のない安定した超高画質配信を保証します。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: bottom right;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-indigo-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-indigo-600 font-bold tracking-widest text-sm uppercase">MAXIMIZED ENGAGEMENT</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">Case Study | グローバルIT企業</h2>
+                        <div class="w-12 h-1 bg-indigo-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">オンライン参加者の平均滞在時間が3倍になり、スポンサー企業へのリード獲得数も過去最高を記録しました。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-indigo-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-indigo-600 font-bold tracking-widest text-sm uppercase">OUR VISION</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">「集まる」意味をアップデートする</h2>
+                        <div class="w-12 h-1 bg-indigo-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">両者の良いとこ取りをし、参加するすべての人の人生の転機となるような体験空間をデザインします。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: bottom right;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-indigo-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+        </div>
+
+        <div class="text-center bg-gray-900 border border-gray-800 rounded-[3rem] p-16 md:p-32 relative overflow-hidden group shadow-2xl">
+            <div class="absolute inset-0 bg-gradient-to-br from-indigo-900/40 to-transparent"></div>
+            <div class="relative z-10">
+                <h2 class="text-4xl md:text-5xl font-black mb-8 text-white">${data.ctaTitle}</h2>
+                <p class="text-gray-300 mb-12 max-w-xl mx-auto text-lg leading-relaxed">${data.ctaDesc}</p>
+                <a href="../index.html" class="bg-indigo-500 hover:bg-indigo-400 text-white px-12 py-5 rounded-full font-bold text-lg inline-flex items-center gap-3 transition transform hover:-translate-y-1 shadow-lg shadow-indigo-500/30">
+                    PORTFOLIOに戻る
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                </a>
             </div>
         </div>
-    </section>
-
-    <!-- 3. 広範な買取ジャンル（22ジャンルを大きく） -->
-    <section class="py-24 bg-brandText text-white">
-        <div class="max-w-6xl mx-auto px-4 text-center">
-            <h2 class="text-3xl md:text-5xl font-black mb-6">「えっ、これも買い取れるの？」</h2>
-            <p class="text-xl mb-16 text-gray-300">万福丸は22種類のジャンルをまとめて査定。あちこちの業者を呼ぶ必要はありません。</p>
-            
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
-                <!-- カテゴリカード -->
-                <div class="bg-white/10 p-6 rounded-xl border border-white/20 hover:bg-brandAccent transition">
-                    <div class="text-4xl mb-4">👘</div>
-                    <h3 class="text-xl font-bold">古い着物・帯</h3>
-                </div>
-                <div class="bg-white/10 p-6 rounded-xl border border-white/20 hover:bg-brandAccent transition">
-                    <div class="text-4xl mb-4">💍</div>
-                    <h3 class="text-xl font-bold">切れたネックレス</h3>
-                </div>
-                <div class="bg-white/10 p-6 rounded-xl border border-white/20 hover:bg-brandAccent transition">
-                    <div class="text-4xl mb-4">⌚️</div>
-                    <h3 class="text-xl font-bold">動かない時計</h3>
-                </div>
-                <div class="bg-white/10 p-6 rounded-xl border border-white/20 hover:bg-brandAccent transition">
-                    <div class="text-4xl mb-4">🏺</div>
-                    <h3 class="text-xl font-bold">価値の分からない骨董</h3>
-                </div>
-                <div class="bg-white/10 p-6 rounded-xl border border-white/20 hover:bg-brandSub transition">
-                    <div class="text-4xl mb-4">📷</div>
-                    <h3 class="text-xl font-bold">昔のフィルムカメラ</h3>
-                </div>
-                <div class="bg-white/10 p-6 rounded-xl border border-white/20 hover:bg-brandSub transition">
-                    <div class="text-4xl mb-4">🎵</div>
-                    <h3 class="text-xl font-bold">カセット・レコード</h3>
-                </div>
-                <div class="bg-white/10 p-6 rounded-xl border border-white/20 hover:bg-brandSub transition">
-                    <div class="text-4xl mb-4">📚</div>
-                    <h3 class="text-xl font-bold">大量の古本</h3>
-                </div>
-                <div class="bg-white/10 p-6 rounded-xl border border-white/20 hover:bg-brandSub transition flex items-center justify-center">
-                    <h3 class="text-xl font-bold">その他なんでも...</h3>
-                </div>
-            </div>
-            
-            <div class="mt-16 bg-white text-brandText p-8 rounded-2xl max-w-3xl mx-auto font-bold text-xl border-[6px] border-brandAccent">
-                出張費・査定費・キャンセル料は【すべて無料】です。
-            </div>
-        </div>
-    </section>
-
-    <!-- 4. 超巨大コンバージョンボタン -->
-    <section class="py-32 bg-brandBase">
-        <div class="max-w-3xl mx-auto px-4 text-center">
-            <h2 class="text-4xl md:text-5xl font-black text-brandText mb-12">まずは一度、見させてください。</h2>
-            <p class="text-xl text-gray-600 mb-12">ご相談だけでも大歓迎です。<br>優しく丁寧なオペレーターがお話を伺います。</p>
-            
-            <a href="tel:0120000000" class="block w-full bg-brandAccent text-white p-8 rounded-3xl shadow-[0_15px_30px_rgba(224,122,95,0.3)] hover:scale-105 transition transform text-left flex flex-col md:flex-row items-center justify-center gap-6 mb-8 group border-4 border-transparent hover:border-white">
-                <div class="w-20 h-20 bg-white text-brandAccent rounded-full flex items-center justify-center text-4xl group-hover:animate-bounce">📞</div>
-                <div>
-                    <div class="text-xl font-bold mb-2">通話無料・年中無休 (9:00〜21:00)</div>
-                    <div class="text-4xl md:text-6xl font-black tracking-wider">0120-000-000</div>
-                </div>
-            </a>
-            
-            <a href="#form" class="block w-full bg-brandSub text-white py-6 rounded-2xl shadow-md hover:bg-emerald-700 transition text-2xl font-bold">
-                📱 スマートフォンからWEBで予約する
-            </a>
-        </div>
-    </section>
-
-    <footer class="bg-brandText text-white text-center py-12">
-        <p>総合買取 万福丸 &copy; 2026. 古物商許可番号 第0000000000号</p>
-    </footer>
-
+    </main>
+        
 </body>
 </html>

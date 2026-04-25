@@ -20,171 +20,135 @@
 </head>
 <body class="bg-gray-50 text-stone-800 min-h-screen font-sans antialiased overflow-x-hidden">
 
-    <!-- Navigation -->
-    <nav class="fixed w-full z-50 backdrop-blur-md bg-opacity-90 bg-white/90 border-b border-gray-200 px-8 py-4 flex justify-between items-center transition-all shadow-sm">
-        <a href="../../index.html" class="text-xs tracking-[0.2em] hover:opacity-60 transition font-mincho">← 目次</a>
-        <div class="font-mincho text-xl tracking-[0.5em]">星霜</div>
-        <div class="hidden md:flex gap-10 text-[11px] tracking-[0.2em] font-mincho">
-            <a href="#rooms" class="hover:opacity-60 transition">客室</a>
-            <a href="#onsen" class="hover:opacity-60 transition">温泉</a>
-            <a href="#reserve" class="hover:opacity-60 transition">予約</a>
-        </div>
-    </nav>
-
-    <!-- Hero -->
-    <header class="relative h-screen flex items-center justify-center overflow-hidden">
-        <div class="absolute inset-0">
-            <img src="img/hero.png" alt="Ryokan" class="w-full h-full object-cover">
-            <div class="absolute inset-0 bg-gradient-to-t from-[#080808] via-black/30 to-transparent"></div>
-        </div>
-        <div class="relative z-10 text-center">
-            <div class="text-[11px] tracking-[0.8em] text-[#c6a87c] font-mincho mb-10">箱根・芦ノ湖畔</div>
-            <h1 class="text-5xl md:text-[7rem] font-mincho tracking-[0.4em] mb-8 ml-[0.3em]">星霜</h1>
-            <p class="text-[15px] text-white/50 tracking-[0.2em] font-mincho">
-                <span class="inline-block">時が止まる、</span><span class="inline-block">もうひとつの住処。</span>
-            </p>
-        </div>
-        <div class="absolute bottom-12 flex flex-col items-center gap-4 z-10">
-            <div class="h-16 w-[1px] bg-gradient-to-b from-white/40 to-transparent"></div>
-        </div>
-    </header>
-
-    <!-- Rooms: Alternating Image-Text -->
-    <section class="py-32" id="rooms">
-        <div class="px-8 md:px-20 mb-20">
-            <div class="text-[10px] tracking-[0.5em] text-[#c6a87c] font-mincho mb-4">ROOMS</div>
-            <h2 class="text-3xl md:text-4xl font-mincho tracking-[0.15em]">
-                <span class="inline-block">五つの離れ、</span><span class="inline-block">五つの景色。</span>
-            </h2>
+    <main class="pt-[140px] pb-24 px-6 md:px-12 max-w-7xl mx-auto">
+        <div class="text-center max-w-4xl mx-auto mb-20 relative">
+            <span class="bg-gray-100 text-green-600 border border-gray-200 px-5 py-2 text-xs font-black rounded-full tracking-widest mb-8 inline-block shadow-sm uppercase">DEEP TECH / SYNTHETIC BIOLOGY</span>
+            <h1 class="text-4xl md:text-[54px] font-black mb-8 leading-[1.2] tracking-tight text-gray-900">「植物」をプログラミングする時代。</h1>
+            <p class="text-lg md:text-xl text-gray-600 font-medium leading-relaxed max-w-3xl mx-auto">気候変動と食糧危機の最終解決策。BIO-CROPは、植物のDNAをソフトウェアのように「設計（デザイン）」し、干ばつに耐え、病気に強く、そして従来の3倍の収量をもたらす「オーダーメイドの種子」を開発する合成生物学プラットフォームです。</p>
         </div>
 
-        <!-- Room 1 -->
-        <div class="fade-section max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-0 mb-1 px-4 md:px-0">
-            <div class="md:col-span-7 aspect-[4/3] overflow-hidden">
-                <img src="img/hero.png" class="w-full h-full object-cover hover:scale-105 transition duration-[2s]">
-            </div>
-            <div class="md:col-span-5 bg-white/[0.02] border border-white/5 p-10 md:p-16 flex flex-col justify-center">
-                <div class="text-[10px] tracking-[0.4em] text-[#c6a87c] font-mincho mb-4">ROOM 01</div>
-                <h3 class="text-2xl font-mincho tracking-wider mb-4">月見</h3>
-                <p class="text-sm text-white/50 leading-[2] mb-6">
-                    <span class="inline-block">芦ノ湖を一望する</span><span class="inline-block">最上階の特別室。</span><span class="inline-block">露天風呂付き。</span><span class="inline-block">130㎡の贅沢な空間で、</span><span class="inline-block">月と湖の対話を</span><span class="inline-block">お楽しみください。</span>
-                </p>
-                <div class="flex gap-8 text-xs text-white/40">
-                    <span>130㎡</span><span>露天風呂付</span><span>¥180,000〜</span>
+        <div class="relative w-full aspect-[21/9] md:aspect-video rounded-[32px] overflow-hidden shadow-2xl mb-32 border border-gray-200/50 group bg-zinc-900">
+            <img src="img/ui.png" alt="UI Dashboard" class="w-full h-full object-cover transition-transform duration-[3s] group-hover:scale-[1.02]" onerror="this.src='https://picsum.photos/seed/placeholder/1600/900'">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none blend-overlay"></div>
+        </div>
+
+        <div class="flex flex-col gap-32 mb-32">
+        
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-green-600 font-bold tracking-widest text-sm uppercase">THE CLIMATE CRISIS</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">気候変動に取り残される「伝統的な農業」</h2>
+                        <div class="w-12 h-1 bg-green-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">記録的な熱波、予測不能な干ばつ、そして新たな病害虫。地球の環境激変スピードに対し、何世代もかけて交配を繰り返す従来の「品種改良」は完全に追いつけなくなっています。このままでは、世界の食糧生産システムは崩壊します。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-green-900/20 to-transparent"></div>
+                    </div>
                 </div>
-            </div>
-        </div>
+                
+                <div class="mt-10">
+                    <div class="text-center mb-16">
+                        <span class="text-green-600 font-bold tracking-widest text-sm uppercase">GENOMIC SOFTWARE</span>
+                        <h2 class="text-3xl md:text-4xl font-black mt-4 text-gray-900">DNA配列をクラウド上で「コンパイル」する</h2>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-green-50 text-green-600 border border-green-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">${f.t}</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">${f.d}</p>
+</div>
 
-        <!-- Room 2 -->
-        <div class="fade-section max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-0 mb-1 px-4 md:px-0">
-            <div class="md:col-span-5 bg-white/[0.02] border border-white/5 p-10 md:p-16 flex flex-col justify-center order-2 md:order-1">
-                <div class="text-[10px] tracking-[0.4em] text-[#c6a87c] font-mincho mb-4">ROOM 02</div>
-                <h3 class="text-2xl font-mincho tracking-wider mb-4">花筏</h3>
-                <p class="text-sm text-white/50 leading-[2] mb-6">
-                    <span class="inline-block">中庭の桜を臨む</span><span class="inline-block">一階の和洋室。</span><span class="inline-block">春には花びらが</span><span class="inline-block">水面を彩る</span><span class="inline-block">特別な景色を</span><span class="inline-block">独り占めできます。</span>
-                </p>
-                <div class="flex gap-8 text-xs text-white/40">
-                    <span>95㎡</span><span>庭園ビュー</span><span>¥120,000〜</span>
+
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-green-50 text-green-600 border border-green-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">${f.t}</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">${f.d}</p>
+</div>
+
+
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-green-50 text-green-600 border border-green-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">${f.t}</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">${f.d}</p>
+</div>
+
+                    </div>
                 </div>
-            </div>
-            <div class="md:col-span-7 aspect-[4/3] overflow-hidden order-1 md:order-2">
-                <img src="img/onsen.png" class="w-full h-full object-cover hover:scale-105 transition duration-[2s]">
-            </div>
-        </div>
-    </section>
-
-    <!-- Onsen: Full-bleed with overlay -->
-    <section class="relative min-h-[80vh] flex items-center overflow-hidden" id="onsen">
-        <div class="absolute inset-0">
-            <img src="img/onsen.png" class="w-full h-full object-cover">
-            <div class="absolute inset-0 bg-black/50"></div>
-        </div>
-        <div class="relative z-10 px-8 md:px-20 max-w-2xl">
-            <div class="text-[10px] tracking-[0.5em] text-[#c6a87c] font-mincho mb-6">ONSEN</div>
-            <h2 class="text-4xl md:text-5xl font-mincho tracking-[0.15em] leading-relaxed mb-10">
-                <span class="inline-block">湯けむりの向こうに、</span><span class="inline-block">忘れていた自分がいる。</span>
-            </h2>
-            <p class="text-[14px] text-white/60 leading-[2.2]">
-                <span class="inline-block">箱根十七湯のひとつ、</span><span class="inline-block">姥子温泉から引く</span><span class="inline-block">自家源泉。</span><span class="inline-block">pH8.5の弱アルカリ性で、</span><span class="inline-block">美肌の湯として</span><span class="inline-block">名高い名湯です。</span>
-            </p>
-            <div class="mt-10 flex gap-12">
-                <div class="border-t border-[#c6a87c]/30 pt-4">
-                    <div class="text-[10px] text-[#c6a87c] tracking-[0.3em] font-mincho mb-2">泉質</div>
-                    <div class="text-sm font-mincho">単純硫黄泉</div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-green-600 font-bold tracking-widest text-sm uppercase">FERTILIZER-FREE</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">「肥料がいらない」窒素固定作物の開発</h2>
+                        <div class="w-12 h-1 bg-green-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">農業における最大の環境負荷（CO2排出と水質汚染）の原因である「化学肥料」。私たちは、マメ科の植物のように「空気中の窒素を自分で栄養に変える（窒素固定）」能力を、トウモロコシや小麦に付与する研究を最前線で進めています。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-green-900/20 to-transparent"></div>
+                    </div>
                 </div>
-                <div class="border-t border-[#c6a87c]/30 pt-4">
-                    <div class="text-[10px] text-[#c6a87c] tracking-[0.3em] font-mincho mb-2">源泉温度</div>
-                    <div class="text-sm font-mincho">68.2℃</div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-green-600 font-bold tracking-widest text-sm uppercase">CARBON CAPTURE ROOT</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">大気中のCO2を大量に「固定化（吸収）」する根</h2>
+                        <div class="w-12 h-1 bg-green-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">通常よりも深く、太い根を張るようにプログラミングされた作物。大気中の二酸化炭素を光合成で吸収し、土中深くの根に「炭素」として永遠に閉じ込める。農業そのものを最強のカーボン・ネガティブ産業へと変革します。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: bottom right;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-green-900/20 to-transparent"></div>
+                    </div>
                 </div>
-                <div class="border-t border-[#c6a87c]/30 pt-4">
-                    <div class="text-[10px] text-[#c6a87c] tracking-[0.3em] font-mincho mb-2">pH</div>
-                    <div class="text-sm font-mincho">8.5</div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-green-600 font-bold tracking-widest text-sm uppercase">GLOBAL IMPACT</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">Case Study | アフリカの乾燥地帯での実証実験</h2>
+                        <div class="w-12 h-1 bg-green-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">雨が極端に少ない地域でも育つよう設計された「干ばつ耐性トウモロコシ」。従来品種が枯死してしまう過酷な環境下において、通常の60%の水分量で完全に成熟し、現地の農村の食糧自給率を劇的に引き上げることに成功しました。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-green-900/20 to-transparent"></div>
+                    </div>
                 </div>
-            </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-green-600 font-bold tracking-widest text-sm uppercase">OUR VISION</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">生命（コード）への畏敬と革新</h2>
+                        <div class="w-12 h-1 bg-green-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">私たちは自然を支配するのではなく、自然が本来持っている「生き抜くためのアルゴリズム」を解読し、人類の存続のために最適化（リファクタリング）しているのです。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: bottom right;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-green-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
         </div>
-    </section>
 
-    <!-- Cuisine: Bento Grid -->
-    <section class="py-32 px-8 md:px-20">
-        <div class="mb-16">
-            <div class="text-[10px] tracking-[0.5em] text-[#c6a87c] font-mincho mb-4">CUISINE</div>
-            <h2 class="text-3xl font-mincho tracking-[0.15em]">
-                <span class="inline-block">旬を纏う、</span><span class="inline-block">一皿。</span>
-            </h2>
-        </div>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl">
-            <div class="col-span-2 row-span-2 aspect-square overflow-hidden bg-white/[0.03] border border-white/5">
-                <img src="img/hero.png" class="w-full h-full object-cover hover:scale-105 transition duration-[2s]" style="object-position: center 30%;">
-            </div>
-            <div class="aspect-square bg-[#c6a87c]/10 border border-[#c6a87c]/20 p-6 flex flex-col justify-end">
-                <div class="font-mincho text-3xl text-[#c6a87c] mb-2">朝</div>
-                <div class="text-[11px] text-white/50">小田原の干物と土鍋ご飯</div>
-            </div>
-            <div class="aspect-square bg-white/[0.03] border border-white/5 p-6 flex flex-col justify-end">
-                <div class="font-mincho text-3xl text-white/80 mb-2">夕</div>
-                <div class="text-[11px] text-white/50">季節の懐石 全十二品</div>
-            </div>
-            <div class="aspect-square bg-white/[0.03] border border-white/5 p-6 flex flex-col justify-end">
-                <div class="font-mincho text-3xl text-white/80 mb-2">酒</div>
-                <div class="text-[11px] text-white/50">厳選 地酒コレクション</div>
-            </div>
-            <div class="aspect-square bg-[#c6a87c]/10 border border-[#c6a87c]/20 p-6 flex flex-col justify-end">
-                <div class="font-mincho text-3xl text-[#c6a87c] mb-2">甘</div>
-                <div class="text-[11px] text-white/50">自家製 季節の和菓子</div>
+        <div class="text-center bg-gray-900 border border-gray-800 rounded-[3rem] p-16 md:p-32 relative overflow-hidden group shadow-2xl">
+            <div class="absolute inset-0 bg-gradient-to-br from-green-900/40 to-transparent"></div>
+            <div class="relative z-10">
+                <h2 class="text-4xl md:text-5xl font-black mb-8 text-white">自然淘汰を待つ時間は、もうない。</h2>
+                <p class="text-gray-300 mb-12 max-w-xl mx-auto text-lg leading-relaxed">100年かかる品種改良を、数ヶ月のコンピューター・シミュレーションへ。地球規模の課題を、ミクロの遺伝子から解決します。</p>
+                <a href="../index.html" class="bg-green-500 hover:bg-green-400 text-white px-12 py-5 rounded-full font-bold text-lg inline-flex items-center gap-3 transition transform hover:-translate-y-1 shadow-lg shadow-green-500/30">
+                    PORTFOLIOに戻る
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                </a>
             </div>
         </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="py-40 border-t border-white/5 text-center" id="reserve">
-        <div class="text-[10px] tracking-[0.5em] text-[#c6a87c] font-mincho mb-8">RESERVATION</div>
-        <h2 class="text-4xl md:text-5xl font-mincho tracking-[0.3em] mb-8 ml-[0.2em]">
-            <span class="inline-block">ご予約は、</span><span class="inline-block">こちらから。</span>
-        </h2>
-        <p class="text-[14px] text-white/40 mb-12 font-mincho tracking-wider">
-            <span class="inline-block">お電話でのご予約も</span><span class="inline-block">承っております。</span>
-        </p>
-        <div class="flex flex-col md:flex-row gap-6 justify-center items-center">
-            <a href="#" class="border border-[#c6a87c]/50 text-[#c6a87c] font-mincho text-sm tracking-[0.3em] px-12 py-4 hover:bg-[#c6a87c] hover:text-[#080808] transition-all duration-500">
-                オンライン予約
-            </a>
-            <div class="text-white/30 text-sm tracking-widest font-mincho">TEL 0460-XX-XXXX</div>
-        </div>
-        <div class="mt-32 text-[10px] text-white/20 tracking-wider font-mincho">
-            © 2026 星霜旅館 箱根芦ノ湖
-        </div>
-    </footer>
-
-    <script>
-        gsap.registerPlugin(ScrollTrigger);
-        gsap.from('header h1', { y: 30, opacity: 0, duration: 1.5, ease: 'power3.out', delay: 0.3 });
-        gsap.from('header p', { y: 20, opacity: 0, duration: 1.2, ease: 'power3.out', delay: 0.6 });
-
-        // Scroll fade-in
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
-        }, { threshold: 0.15 });
-        document.querySelectorAll('.fade-section').forEach(el => observer.observe(el));
-    </script>
+    </main>
+        
 </body>
 </html>

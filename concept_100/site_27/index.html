@@ -42,161 +42,135 @@
 </head>
 <body class="bg-gray-50 text-stone-800 min-h-screen font-sans antialiased overflow-x-hidden">
 
-    <header class="w-full px-6 py-4 flex justify-between items-center bg-white shadow-sm sticky top-0 z-50">
-        <div class="font-extrabold text-2xl text-appGreen flex items-center gap-2">
-            <span class="text-3xl">🏠</span> 万福丸の買取
+    <main class="pt-[140px] pb-24 px-6 md:px-12 max-w-7xl mx-auto">
+        <div class="text-center max-w-4xl mx-auto mb-20 relative">
+            <span class="bg-gray-100 text-blue-600 border border-gray-200 px-5 py-2 text-xs font-black rounded-full tracking-widest mb-8 inline-block shadow-sm uppercase">WEB3 / DAO GOVERNANCE</span>
+            <h1 class="text-4xl md:text-[54px] font-black mb-8 leading-[1.2] tracking-tight text-gray-900">「会社」という組織形態を、<br>コードへと置き換える。</h1>
+            <p class="text-lg md:text-xl text-gray-600 font-medium leading-relaxed max-w-3xl mx-auto">DAO-GOVは、世界中の人々がブロックチェーン上のスマートコントラクトによって透明かつ自律的に意思決定を行う「次世代の株式会社」を運用するためのOSです。</p>
         </div>
-        <div class="bg-appLight text-appGreen px-4 py-2 rounded-full font-bold text-sm hidden md:block">
-            かんたんWEB診断受付中
+
+        <div class="relative w-full aspect-[21/9] md:aspect-video rounded-[32px] overflow-hidden shadow-2xl mb-32 border border-gray-200/50 group bg-zinc-900">
+            <img src="img/ui.png" alt="UI Dashboard" class="w-full h-full object-cover transition-transform duration-[3s] group-hover:scale-[1.02]" onerror="this.src='https://picsum.photos/seed/placeholder/1600/900'">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none blend-overlay"></div>
         </div>
-    </header>
 
-    <!-- 1. Interactive Diagnostic Hero -->
-    <section class="pt-12 pb-24 px-4 bg-gradient-to-b from-white to-appLight">
-        <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            
-            <div class="text-center lg:text-left">
-                <div class="inline-block bg-appAction text-white font-bold px-4 py-1 rounded-full text-sm mb-6 animate-bounce">
-                    お電話不要！まずはスマホでポチポチするだけ
-                </div>
-                <h1 class="text-4xl md:text-5xl lg:text-6xl font-black mb-6 leading-tight">
-                    おうちにあるモノ、<br>
-                    <span class="text-appGreen">どれくらい売れるか</span><br>
-                    分かりますか？
-                </h1>
-                <p class="text-lg md:text-xl font-medium text-gray-600 mb-10 leading-relaxed">
-                    「こんな古いもの売れるの？」「家に来られるのはまだ早い…」<br>
-                    そんな方は、まずは下記の３つの質問に答えるだけ。<br>
-                    AIシステムが過去の買取データから、おおよその目安を即座に計算します。
-                </p>
-            </div>
-
-            <!-- VISUAL REALIZATION: Tablet UI Mockup representing the Diagnostic Tool -->
-            <div class="relative w-full aspect-square md:aspect-[4/3] bg-white rounded-[40px] shadow-2xl p-4 md:p-8 border-8 border-gray-100 flex flex-col justify-center items-center">
-                <!-- Status Bar -->
-                <div class="w-full flex justify-between text-xs text-gray-400 font-bold mb-6">
-                    <div>Step 1 of 3</div>
-                    <div class="flex gap-1">
-                        <div class="w-8 h-2 bg-appGreen rounded-full"></div>
-                        <div class="w-8 h-2 bg-gray-200 rounded-full"></div>
-                        <div class="w-8 h-2 bg-gray-200 rounded-full"></div>
+        <div class="flex flex-col gap-32 mb-32">
+        
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-blue-600 font-bold tracking-widest text-sm uppercase">THE CORPORATE BOTTLENECK</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">「中央集権」がもたらす腐敗と遅延</h2>
+                        <div class="w-12 h-1 bg-blue-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">従来の株式会社は意思決定が不透明になりがちであり、国境を越えたプロジェクト立ち上げには摩擦が多すぎました。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-blue-900/20 to-transparent"></div>
                     </div>
                 </div>
-
-                <h3 class="text-xl md:text-2xl font-black mb-8 text-appDark">いま一番、おうちで<br class="md:hidden">「スペースを取っている」ものは？</h3>
                 
-                <div class="grid grid-cols-2 md:grid-cols-3 gap-4 w-full mb-8">
-                    <!-- Interactive Cards (Visual Only for Demo) -->
-                    <div class="diag-card group">
-                        <div class="text-5xl mb-4 group-hover:scale-110 transition">📚</div>
-                        <div class="font-bold">大量の<br>本・レコード</div>
+                <div class="mt-10">
+                    <div class="text-center mb-16">
+                        <span class="text-blue-600 font-bold tracking-widest text-sm uppercase">DAO CREATION SUITE</span>
+                        <h2 class="text-3xl md:text-4xl font-black mt-4 text-gray-900">10分で構築する自律分散型組織</h2>
                     </div>
-                    <div class="diag-card group">
-                        <div class="text-5xl mb-4 group-hover:scale-110 transition">👗</div>
-                        <div class="font-bold">昔の<br>着物・洋服</div>
-                    </div>
-                    <div class="diag-card group">
-                        <div class="text-5xl mb-4 group-hover:scale-110 transition">🏺</div>
-                        <div class="font-bold">骨董・<br>コレクション</div>
-                    </div>
-                    <div class="diag-card group">
-                        <div class="text-5xl mb-4 group-hover:scale-110 transition">💍</div>
-                        <div class="font-bold">使わない<br>アクセサリー</div>
-                    </div>
-                    <div class="diag-card group hidden md:block">
-                        <div class="text-5xl mb-4 group-hover:scale-110 transition">📷</div>
-                        <div class="font-bold">カメラ<br>家電類</div>
-                    </div>
-                    <div class="diag-card group hidden md:block">
-                        <div class="text-5xl mb-4 group-hover:scale-110 transition">📦</div>
-                        <div class="font-bold">なんだか<br>分からない</div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-blue-50 text-blue-600 border border-blue-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">${f.t}</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">${f.d}</p>
+</div>
+
+
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-blue-50 text-blue-600 border border-blue-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">${f.t}</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">${f.d}</p>
+</div>
+
+
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-blue-50 text-blue-600 border border-blue-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">${f.t}</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">${f.d}</p>
+</div>
+
                     </div>
                 </div>
-
-                <button class="w-full bg-appDark text-white font-black text-xl py-4 rounded-2xl hover:bg-appGreen transition">
-                    これを選んで次へ進む
-                </button>
-            </div>
-
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-blue-600 font-bold tracking-widest text-sm uppercase">PROOF OF CONTRIBUTION</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">貢献度をAIがスコアリング</h2>
+                        <div class="w-12 h-1 bg-blue-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">コードのコミット数などをAIがトラッキングし自動で報酬を分配するバウンティシステム。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-blue-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-blue-600 font-bold tracking-widest text-sm uppercase">LEGAL WRAPPER</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">複雑な規制との法的ブリッジ</h2>
+                        <div class="w-12 h-1 bg-blue-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">DAOを法人として認める地域のリーガルラッパーを提供し現実世界での契約をサポートします。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: bottom right;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-blue-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-blue-600 font-bold tracking-widest text-sm uppercase">GLOBAL SYNERGY</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">Case Study | グローバルDeFiプロジェクト</h2>
+                        <div class="w-12 h-1 bg-blue-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">20カ国100名のエンジニアがDAOを立ち上げ1週間で資金調達を完了しプロダクトをリリースしました。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-blue-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-blue-600 font-bold tracking-widest text-sm uppercase">OUR VISION</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">人類の協調をアップデートする</h2>
+                        <div class="w-12 h-1 bg-blue-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">人類が共通の目的のために最も効率よく協力し合える新しい社会システムを構築しています。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: bottom right;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-blue-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
         </div>
-    </section>
 
-    <!-- 2. Reassurance / Benefits (List style for seniors) -->
-    <section class="py-24 bg-white">
-        <div class="max-w-5xl mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-black text-center mb-4 text-appDark">診断結果を見てから決めてOK！</h2>
-            <p class="text-center font-bold text-gray-500 mb-16">万福丸が選ばれる３つの理由</p>
-            
-            <div class="space-y-6 max-w-3xl mx-auto">
-                <div class="flex items-center gap-6 p-6 md:p-8 bg-gray-50 rounded-3xl border border-gray-200">
-                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center text-3xl shadow-sm flex-shrink-0">📱</div>
-                    <div>
-                        <h3 class="text-xl font-black mb-2 text-appDark">スマホで完結、電話不要</h3>
-                        <p class="text-gray-600 font-medium">「いきなり電話するのは怖い…」という方でも大丈夫。LINEやこちらの画面から、数回タップするだけで申し込みが完了します。</p>
-                    </div>
-                </div>
-
-                <div class="flex items-center gap-6 p-6 md:p-8 bg-appLight rounded-3xl border border-appGreen/30">
-                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center text-3xl shadow-sm text-appGreen font-bold flex-shrink-0">📦</div>
-                    <div>
-                        <h3 class="text-xl font-black mb-2 text-appDark">ゴミ袋に入ったままでも査定します</h3>
-                        <p class="text-gray-600 font-medium">整理や仕分けは一切不要！「とりあえずこの部屋にあるもの全部見て！」というご依頼が一番多いので、恥ずかしがる必要はありません。</p>
-                    </div>
-                </div>
-
-                <div class="flex items-center gap-6 p-6 md:p-8 bg-gray-50 rounded-3xl border border-gray-200">
-                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center text-3xl shadow-sm flex-shrink-0">💰</div>
-                    <div>
-                        <h3 class="text-xl font-black mb-2 text-appDark">その場で「現金」お渡し</h3>
-                        <p class="text-gray-600 font-medium">査定金額にご納得いただければ、その場で現金にてお支払いします。もちろん、金額に納得いかなければキャンセル無料です。</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 3. AI Generated Senior UI integration -->
-    <section class="py-24 bg-appDark text-white overflow-hidden">
-        <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div class="order-2 md:order-1 relative">
-                <!-- AI Generated Tablet image -->
-                <div class="relative w-full max-w-md mx-auto transform -rotate-3 hover:rotate-0 transition-transform duration-500">
-                    <div class="absolute inset-0 bg-appGreen rounded-3xl blur-2xl opacity-40"></div>
-                    <img src="img/ui.png" alt="シニア向けタブレット診断UI" class="w-full h-auto rounded-3xl shadow-2xl relative border-4 border-white/10">
-                </div>
-            </div>
-            <div class="order-1 md:order-2 text-center md:text-left">
-                <div class="text-appGreen font-black text-6xl mb-4">50<span class="text-3xl">代からの</span></div>
-                <h2 class="text-3xl md:text-5xl font-black mb-8 leading-tight">画面の大きなタブレットで<br>ラクラク診断。</h2>
-                <p class="text-lg font-medium text-gray-300 leading-relaxed mb-8">
-                    私たちは、シニアの方でも迷わずに使える専用のシステムを独自開発しました。<br>
-                    難しい文字を入力する必要はありません。指でポンポンと選んでいくだけで、ご自宅にある「資産」の価値が分かります。
-                </p>
-                <div class="bg-white/10 p-4 rounded-xl border border-white/20 inline-block font-bold">
-                    👥 月間利用者数: 10,000人突破！
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 4. Final CTA Button -->
-    <section class="py-32 bg-white text-center">
-        <div class="max-w-2xl mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-black mb-6 text-appDark">今すぐ、診断を始めてみませんか？</h2>
-            <p class="text-gray-500 font-bold mb-10">※個人情報の入力なしで、すぐに概算結果が分かります。</p>
-            
-            <button class="w-full text-2xl md:text-3xl bg-appGreen text-white font-black py-8 rounded-[40px] pulse-btn hover:bg-emerald-600 transition transform hover:-translate-y-2 shadow-2xl">
-                👆 今すぐ無料診断スタート
-            </button>
-            <div class="mt-6 text-appDark font-bold">
-                お電話でのご相談は <span class="text-2xl">0120-000-000</span> (年中無休)
+        <div class="text-center bg-gray-900 border border-gray-800 rounded-[3rem] p-16 md:p-32 relative overflow-hidden group shadow-2xl">
+            <div class="absolute inset-0 bg-gradient-to-br from-blue-900/40 to-transparent"></div>
+            <div class="relative z-10">
+                <h2 class="text-4xl md:text-5xl font-black mb-8 text-white">${data.ctaTitle}</h2>
+                <p class="text-gray-300 mb-12 max-w-xl mx-auto text-lg leading-relaxed">${data.ctaDesc}</p>
+                <a href="../index.html" class="bg-blue-500 hover:bg-blue-400 text-white px-12 py-5 rounded-full font-bold text-lg inline-flex items-center gap-3 transition transform hover:-translate-y-1 shadow-lg shadow-blue-500/30">
+                    PORTFOLIOに戻る
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                </a>
             </div>
         </div>
-    </section>
-
-    <footer class="bg-gray-100 py-12 text-center text-gray-500 font-bold text-sm">
-        &copy; 2026 万福丸 スマホ査定サービス
-    </footer>
-
+    </main>
+        
 </body>
 </html>

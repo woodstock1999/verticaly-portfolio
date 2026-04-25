@@ -50,95 +50,135 @@
 </head>
 <body class="bg-gray-50 text-stone-800 min-h-screen font-sans antialiased overflow-x-hidden">
 
-    <header class="fixed w-full top-0 px-6 md:px-12 py-6 flex justify-between items-center z-50 mix-blend-multiply">
-        <div class="font-bold text-2xl tracking-tighter text-leaf flex items-center gap-2">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-            ECHO
+    <main class="pt-[140px] pb-24 px-6 md:px-12 max-w-7xl mx-auto">
+        <div class="text-center max-w-4xl mx-auto mb-20 relative">
+            <span class="bg-gray-100 text-blue-600 border border-gray-200 px-5 py-2 text-xs font-black rounded-full tracking-widest mb-8 inline-block shadow-sm uppercase">HEALTH TECH / AI COUNSELING</span>
+            <h1 class="text-4xl md:text-[54px] font-black mb-8 leading-[1.2] tracking-tight text-gray-900">深夜3時の孤独を、<br>「声」で救うAI。</h1>
+            <p class="text-lg md:text-xl text-gray-600 font-medium leading-relaxed max-w-3xl mx-auto">ECHOは、あなたの声のトーンから感情の起伏を読み取り、臨床心理学に基づいた共感的な対話を提供する、24時間365日いつでも繋がる音声AIカウンセラーです。</p>
         </div>
-        <a href="#demo" class="border border-leaf text-leaf px-6 py-2 rounded-full text-sm font-medium hover:bg-leaf hover:text-white transition-colors">
-            Request Demo
-        </a>
-    </header>
 
-    <!-- 1. Soft Hero -->
-    <section class="h-screen flex flex-col justify-center items-center text-center px-4 max-w-4xl mx-auto">
-        <div class="text-xs font-bold tracking-[0.2em] uppercase text-leaf/60 mb-6 border border-leaf/20 px-4 py-1 rounded-full">Carbon Accounting Platform</div>
-        <h1 class="text-5xl md:text-7xl font-bold mb-8 leading-tight tracking-tight text-leaf">
-            <span class="phrase">地球の未来を、</span><br>
-            <span class="phrase">正確な「数字」で語る。</span>
-        </h1>
-        <p class="text-lg md:text-xl text-dark/70 leading-relaxed font-medium">
-            <span class="phrase">サプライチェーン全体の温室効果ガス（Scope 1-3）を自動算出し、</span><br>
-            <span class="phrase">ESG情報開示基準に準拠したレポートをワンクリックで生成。</span><br>
-            <span class="phrase">企業の環境価値を最大化するデータ基盤。</span>
-        </p>
-    </section>
+        <div class="relative w-full aspect-[21/9] md:aspect-video rounded-[32px] overflow-hidden shadow-2xl mb-32 border border-gray-200/50 group bg-zinc-900">
+            <img src="img/ui.png" alt="UI Dashboard" class="w-full h-full object-cover transition-transform duration-[3s] group-hover:scale-[1.02]" onerror="this.src='https://picsum.photos/seed/placeholder/1600/900'">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none blend-overlay"></div>
+        </div>
 
-    <!-- 2. The Sticky Parallax Deck (Core Features) -->
-    <section class="deck-container max-w-6xl mx-auto px-4">
+        <div class="flex flex-col gap-32 mb-32">
         
-        <!-- Card 1 -->
-        <div class="sticky-card bg-earth p-12 md:p-20" id="card1">
-            <div class="font-bold text-leaf font-medium tracking-[0.2em] mb-4">STEP 01: COLLECTION</div>
-            <h2 class="text-4xl md:text-6xl font-bold mb-6 text-leaf">ERP/APIからの<br>自動データ抽出</h2>
-            <p class="text-lg text-dark/80 max-w-xl font-medium leading-loose">
-                各部署がエクセルで手入力していた電気代や出張データを完全撤廃。
-                スマートメーターや既存の会計ソフト、ERPシステム（SAP等）からAPI経由で排出活動データを自動収集します。人的ミスをゼロに。
-            </p>
-        </div>
-
-        <!-- Card 2 -->
-        <div class="sticky-card bg-leaf text-light p-12 md:p-20" id="card2">
-            <div class="font-bold text-earth font-medium tracking-[0.2em] mb-4">STEP 02: CALCULATION</div>
-            <h2 class="text-4xl md:text-6xl font-bold mb-6">Scope 3 の<br>可視化と高精度算定</h2>
-            <p class="text-lg text-light/80 max-w-xl font-medium leading-loose">
-                自社の排出（Scope 1,2）だけでなく、難易度の高いサプライチェーン全体（Scope 3）の算定ロジックを最新の環境省ガイドラインに基づいて自動化。膨大な一次データから、最も正確なCO2排出量を導き出します。
-            </p>
-        </div>
-
-        <!-- Card 3 -->
-        <div class="sticky-card bg-dark text-earth p-12 md:p-20" id="card3">
-            <div class="font-bold text-leaf font-medium tracking-[0.2em] mb-4">STEP 03: REPORTING</div>
-            <h2 class="text-4xl md:text-6xl font-bold mb-6">TCFD / ISSB<br>準拠のワンクリック開示</h2>
-            <p class="text-lg text-earth/80 max-w-xl font-medium leading-loose">
-                算定されたデータは、投資家が求める国際的な情報開示フォーマット（TCFD提言、ISSB基準、CDP質問書など）に従って自動レポート化。監査対応にかかる莫大なコンサルティング費用と社内工数を削減します。
-            </p>
-        </div>
-
-    </section>
-
-    <!-- 3. Proof Stack & CTA -->
-    <section class="py-32 bg-light border-y border-leaf/10" id="demo">
-        <div class="max-w-3xl mx-auto px-6 text-center">
-            <h2 class="text-3xl md:text-5xl font-bold text-leaf mb-12">脱炭素を、コストから競争力へ。</h2>
-            <div class="grid grid-cols-2 gap-8 mb-16 font-bold text-dark/70 text-left border-t border-b border-leaf/20 py-8">
-                <div>
-                    <div class="text-5xl font-bold text-leaf mb-2">80<span class="text-xl">%</span></div>
-                    <div class="text-sm">算定・レポーティング工数の削減</div>
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-blue-600 font-bold tracking-widest text-sm uppercase">THE ACCESS BARRIER</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">メンタルケアの物理的・心理的ハードル</h2>
+                        <div class="w-12 h-1 bg-blue-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">心療内科の予約は数週間待ち。この「今すぐ助けてほしいのに、誰もいない」という絶望的な空白地帯が深刻な悪化を引き起こしています。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-blue-900/20 to-transparent"></div>
+                    </div>
                 </div>
-                <div>
-                    <div class="text-5xl font-bold text-leaf mb-2">100<span class="text-xl">+</span></div>
-                    <div class="text-sm">プライム市場上場企業の導入実績</div>
+                
+                <div class="mt-10">
+                    <div class="text-center mb-16">
+                        <span class="text-blue-600 font-bold tracking-widest text-sm uppercase">VOCAL BIOMARKERS</span>
+                        <h2 class="text-3xl md:text-4xl font-black mt-4 text-gray-900">声の「波形」から隠れた感情を読み取る</h2>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-blue-50 text-blue-600 border border-blue-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">${f.t}</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">${f.d}</p>
+</div>
+
+
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-blue-50 text-blue-600 border border-blue-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">${f.t}</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">${f.d}</p>
+</div>
+
+
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-blue-50 text-blue-600 border border-blue-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">${f.t}</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">${f.d}</p>
+</div>
+
+                    </div>
                 </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-blue-600 font-bold tracking-widest text-sm uppercase">EMPATHETIC PAUSE</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">「沈黙」さえも理解する人間的な間</h2>
+                        <div class="w-12 h-1 bg-blue-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">ユーザーが言葉に詰まった時はAIも一緒に「沈黙」し、ゆっくりと優しいトーンで寄り添います。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-blue-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-blue-600 font-bold tracking-widest text-sm uppercase">CRISIS INTERVENTION</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">危険な兆候の検知と緊急連携</h2>
+                        <div class="w-12 h-1 bg-blue-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">極度の絶望を示唆する言葉を検知した場合、人間の専門カウンセラーへのホットラインへシームレスに誘導します。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: bottom right;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-blue-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-blue-600 font-bold tracking-widest text-sm uppercase">USER RECOVERY</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">Case Study | 産後うつに悩む女性</h2>
+                        <div class="w-12 h-1 bg-blue-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">密室育児で強い孤独感に襲われていた女性。ECHOの温かい声色による応答で心が救われ、前を向くきっかけとなりました。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-blue-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-blue-600 font-bold tracking-widest text-sm uppercase">OUR VISION</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">すべてのスマートフォンを心の安全基地へ</h2>
+                        <div class="w-12 h-1 bg-blue-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">誰もがメンタルケアを日常的なものとして享受できる世界を創ります。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: bottom right;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-blue-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+        </div>
+
+        <div class="text-center bg-gray-900 border border-gray-800 rounded-[3rem] p-16 md:p-32 relative overflow-hidden group shadow-2xl">
+            <div class="absolute inset-0 bg-gradient-to-br from-blue-900/40 to-transparent"></div>
+            <div class="relative z-10">
+                <h2 class="text-4xl md:text-5xl font-black mb-8 text-white">${data.ctaTitle}</h2>
+                <p class="text-gray-300 mb-12 max-w-xl mx-auto text-lg leading-relaxed">${data.ctaDesc}</p>
+                <a href="../index.html" class="bg-blue-500 hover:bg-blue-400 text-white px-12 py-5 rounded-full font-bold text-lg inline-flex items-center gap-3 transition transform hover:-translate-y-1 shadow-lg shadow-blue-500/30">
+                    PORTFOLIOに戻る
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                </a>
             </div>
-            
-            <form class="bg-white p-8 rounded-3xl shadow-xl text-left border border-leaf/10">
-                <h3 class="text-xl font-bold text-leaf mb-6">デモ環境リクエスト</h3>
-                <div class="mb-4">
-                    <label class="block text-sm font-bold text-leaf mb-2">会社用メールアドレス</label>
-                    <input type="email" class="w-full bg-light border-none p-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-leaf font-medium" required>
-                </div>
-                <button type="submit" class="w-full bg-leaf text-white font-bold py-4 rounded-xl mt-4 hover:bg-leaf/90 transition-colors">
-                    算出シミュレーションを試す
-                </button>
-            </form>
         </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-dark text-earth/40 py-12 text-center text-sm font-medium">
-        <p>ECHO Sustainability Index &copy; 2026. Enabling Net-Zero.</p>
-    </footer>
-
+    </main>
+        
 </body>
 </html>

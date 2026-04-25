@@ -34,386 +34,135 @@
 </head>
 <body class="bg-gray-50 text-stone-800 min-h-screen font-sans antialiased overflow-x-hidden">
 
-    <!-- Header -->
-    <header class="fixed w-full top-0 z-50 bg-cream/90 backdrop-blur-lg border-b border-charcoal/5">
-        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="../../index.html" class="text-xs text-bark/60 hover:text-bark transition">← Portfolio</a>
-            <div class="font-serif text-xl tracking-wider text-charcoal">木ごころ工務店</div>
-            <div class="hidden md:flex items-center gap-8 text-[12px] text-bark/70">
-                <a href="#concept" class="hover:text-charcoal transition">家づくりの想い</a>
-                <a href="#works" class="hover:text-charcoal transition">施工事例</a>
-                <a href="#flow" class="hover:text-charcoal transition">家づくりの流れ</a>
-                <a href="#contact" class="bg-charcoal text-cream px-5 py-2.5 rounded-full text-[11px] hover:bg-bark transition-colors">見学予約</a>
-            </div>
+    <main class="pt-[140px] pb-24 px-6 md:px-12 max-w-7xl mx-auto">
+        <div class="text-center max-w-4xl mx-auto mb-20 relative">
+            <span class="bg-gray-100 text-amber-600 border border-gray-200 px-5 py-2 text-xs font-black rounded-full tracking-widest mb-8 inline-block shadow-sm uppercase">HR TECH / RETAIL AI</span>
+            <h1 class="text-4xl md:text-[54px] font-black mb-8 leading-[1.2] tracking-tight text-gray-900">「誰を、いつ休ませるか」<br>AIが完璧なパズルを組む。</h1>
+            <p class="text-lg md:text-xl text-gray-600 font-medium leading-relaxed max-w-3xl mx-auto">毎月、店長を苦しめるシフト作成のパズル。SHIFT-SYNCは、従業員の希望、スキルの偏り、そして天候データに基づく来店予測を統合し、「絶対に回る」最適なシフト表を1クリックで自動生成するスマートシフト管理SaaSです。</p>
         </div>
-    </header>
 
-    <!-- 1. Hero -->
-    <section class="pt-20">
-        <div class="relative h-[90vh] overflow-hidden">
-            <img src="img/exterior.png" alt="木ごころ工務店 施工事例" class="w-full h-full object-cover">
-            <div class="absolute inset-0 bg-gradient-to-t from-charcoal/70 via-charcoal/20 to-transparent"></div>
-            <div class="absolute bottom-0 left-0 right-0 p-8 md:p-16 pb-16 md:pb-24">
-                <div class="max-w-3xl">
-                    <div class="text-[11px] tracking-[0.4em] text-cream/60 mb-6 font-serif">世田谷・杉並の注文住宅</div>
-                    <h1 class="text-4xl md:text-[3.5rem] font-serif leading-[1.5] mb-6 text-cream">
-                        <span class="inline-block">木と暮らす、</span><br>
-                        <span class="inline-block">ということ。</span>
-                    </h1>
-                    <p class="text-[15px] text-cream/70 leading-[2] max-w-lg mb-10">
-                        <span class="inline-block">床に寝転がったとき、</span><span class="inline-block">足の裏に触れる木の温もり。</span><span class="inline-block">窓から差し込む光が</span><span class="inline-block">つくる影の美しさ。</span><span class="inline-block">そんな日常の豊かさを、</span><span class="inline-block">一棟一棟に込めています。</span>
-                    </p>
-                    <div class="flex gap-4">
-                        <a href="#contact" class="bg-cream text-charcoal px-8 py-4 rounded-full text-sm hover:bg-white transition">モデルハウスを見学する</a>
-                        <a href="#works" class="border border-cream/40 text-cream px-8 py-4 rounded-full text-sm hover:bg-cream/10 transition">施工事例を見る</a>
-                    </div>
-                </div>
-            </div>
+        <div class="relative w-full aspect-[21/9] md:aspect-video rounded-[32px] overflow-hidden shadow-2xl mb-32 border border-gray-200/50 group bg-zinc-900">
+            <img src="img/ui.png" alt="UI Dashboard" class="w-full h-full object-cover transition-transform duration-[3s] group-hover:scale-[1.02]" onerror="this.src='https://picsum.photos/seed/placeholder/1600/900'">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none blend-overlay"></div>
         </div>
-    </section>
 
-    <!-- 2. 実績 -->
-    <section class="py-16 px-6 bg-charcoal text-cream">
-        <div class="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            <div class="fade-in">
-                <div class="text-3xl font-serif">1,200+</div>
-                <div class="text-[11px] text-cream/50 mt-2">累計施工棟数</div>
-            </div>
-            <div class="fade-in">
-                <div class="text-3xl font-serif">42<span class="text-lg">年</span></div>
-                <div class="text-[11px] text-cream/50 mt-2">創業からの歴史</div>
-            </div>
-            <div class="fade-in">
-                <div class="text-3xl font-serif">96<span class="text-lg">%</span></div>
-                <div class="text-[11px] text-cream/50 mt-2">紹介率</div>
-            </div>
-            <div class="fade-in">
-                <div class="text-3xl font-serif">国産材<span class="text-lg">100</span>%</div>
-                <div class="text-[11px] text-cream/50 mt-2">構造材すべて</div>
-            </div>
+        <div class="flex flex-col gap-32 mb-32">
+        
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-amber-600 font-bold tracking-widest text-sm uppercase">THE SCHEDULING NIGHTMARE</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">「店長のカン」に依存したシフト作成の限界</h2>
+                        <div class="w-12 h-1 bg-amber-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">「AさんはBさんと仲が悪い」「土曜の昼はベテランがいないと回らない」。アルバイトの人間関係やスキルのバランスを考慮しながら、数十人分の希望シフトを組む作業は、毎月数十時間もの膨大な時間を店長から奪い続けています。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-amber-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+                <div class="mt-10">
+                    <div class="text-center mb-16">
+                        <span class="text-amber-600 font-bold tracking-widest text-sm uppercase">AI OPTIMIZATION</span>
+                        <h2 class="text-3xl md:text-4xl font-black mt-4 text-gray-900">すべての制約をクリアする「数理最適化」</h2>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-amber-50 text-amber-600 border border-amber-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">${f.t}</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">${f.d}</p>
+</div>
+
+
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-amber-50 text-amber-600 border border-amber-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">${f.t}</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">${f.d}</p>
+</div>
+
+
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-amber-50 text-amber-600 border border-amber-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">${f.t}</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">${f.d}</p>
+</div>
+
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-amber-600 font-bold tracking-widest text-sm uppercase">URGENT RECOVERY</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">「急な欠勤」を埋めるダイナミック・ヘルプ</h2>
+                        <div class="w-12 h-1 bg-amber-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">当日の朝の突然の欠勤連絡。SHIFT-SYNCは即座に近隣店舗で今日休みのスタッフや、シフトに入っていない自店舗のスタッフへインセンティブ付きでヘルプ要請のプッシュ通知を一斉送信します。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-amber-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-amber-600 font-bold tracking-widest text-sm uppercase">EMPLOYEE EXPERIENCE</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">スマホ完結のシームレスなUI</h2>
+                        <div class="w-12 h-1 bg-amber-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">スタッフは専用アプリから希望シフトを提出。確定したシフトもスマホに直接届き、Googleカレンダーと自動同期します。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: bottom right;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-amber-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-amber-600 font-bold tracking-widest text-sm uppercase">CLIENT SUCCESS</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">Case Study | 全国300店舗の居酒屋チェーン</h2>
+                        <div class="w-12 h-1 bg-amber-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">シフト作成業務の時間が店舗あたり月間平均20時間削減。さらに、AIの需要予測により「無駄な人員配置」がなくなり、全社で年間1.2億円の人件費最適化に成功しました。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-amber-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-amber-600 font-bold tracking-widest text-sm uppercase">OUR VISION</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">「働く」をもっと、滑らかに</h2>
+                        <div class="w-12 h-1 bg-amber-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">私たちは単にカレンダーをデジタル化するだけではありません。働く人の生活リズムと、企業の利益を最も美しいバランスで調和させる、次世代の労働インフラを構築します。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: bottom right;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-amber-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
         </div>
-    </section>
 
-    <!-- 3. コンセプト -->
-    <section class="py-24 px-6" id="concept">
-        <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-            <div class="fade-in">
-                <div class="text-[11px] tracking-[0.4em] text-wood mb-4 font-serif">OUR PHILOSOPHY</div>
-                <h2 class="text-2xl md:text-3xl font-serif leading-relaxed mb-8">
-                    <span class="inline-block">「建てて終わり」</span><span class="inline-block">ではなく、</span><br>
-                    <span class="inline-block">「住んでから」</span><span class="inline-block">が、はじまり。</span>
-                </h2>
-                <p class="text-[14px] text-bark/70 leading-[2.2] mb-6">
-                    <span class="inline-block">私たちが大切にしているのは、</span><span class="inline-block">30年後も</span><span class="inline-block">「この家にしてよかった」と</span><span class="inline-block">思っていただける家づくりです。</span>
-                </p>
-                <p class="text-[14px] text-bark/70 leading-[2.2] mb-6">
-                    <span class="inline-block">国産の無垢材は</span><span class="inline-block">年月とともに色が深まり、</span><span class="inline-block">艶が増していきます。</span><span class="inline-block">新築のときが最高ではなく、</span><span class="inline-block">住むほどに美しくなる。</span><span class="inline-block">それが木の家の魅力です。</span>
-                </p>
-                <p class="text-[14px] text-bark/70 leading-[2.2]">
-                    <span class="inline-block">だからこそ、</span><span class="inline-block">構造材はすべて</span><span class="inline-block">国産の杉・檜を使用。</span><span class="inline-block">壁には珪藻土、</span><span class="inline-block">床には無垢のフローリング。</span><span class="inline-block">化学物質を極力排した</span><span class="inline-block">自然素材の家を</span><span class="inline-block">お届けしています。</span>
-                </p>
-            </div>
-            <div class="fade-in rounded-2xl overflow-hidden">
-                <img src="img/interior.png" alt="リビング" class="w-full">
-            </div>
-        </div>
-    </section>
-
-    <!-- 4. こだわりポイント -->
-    <section class="py-24 px-6 bg-stone/40">
-        <div class="max-w-5xl mx-auto">
-            <div class="text-center mb-16 fade-in">
-                <div class="text-[11px] tracking-[0.4em] text-wood mb-4 font-serif">COMMITMENT</div>
-                <h2 class="text-2xl md:text-3xl font-serif leading-relaxed">
-                    <span class="inline-block">譲れない、</span><span class="inline-block">4つのこだわり。</span>
-                </h2>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="fade-in bg-cream rounded-2xl p-8">
-                    <div class="flex items-start gap-5">
-                        <div class="w-12 h-12 bg-wood/10 rounded-full flex items-center justify-center flex-shrink-0">
-                            <span class="text-wood font-serif">01</span>
-                        </div>
-                        <div>
-                            <h3 class="font-serif text-lg mb-3">国産無垢材 100%</h3>
-                            <p class="text-sm text-bark/70 leading-relaxed">
-                                <span class="inline-block">構造材から仕上げ材まで、</span><span class="inline-block">すべて国産材を使用。</span><span class="inline-block">産地の製材所と直接取引し、</span><span class="inline-block">木の個性を活かした</span><span class="inline-block">適材適所の木組みで</span><span class="inline-block">家を建てています。</span>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="fade-in bg-cream rounded-2xl p-8">
-                    <div class="flex items-start gap-5">
-                        <div class="w-12 h-12 bg-wood/10 rounded-full flex items-center justify-center flex-shrink-0">
-                            <span class="text-wood font-serif">02</span>
-                        </div>
-                        <div>
-                            <h3 class="font-serif text-lg mb-3">職人の手仕事</h3>
-                            <p class="text-sm text-bark/70 leading-relaxed">
-                                <span class="inline-block">自社大工が</span><span class="inline-block">棟上げから仕上げまで</span><span class="inline-block">一貫して担当。</span><span class="inline-block">機械では出せない</span><span class="inline-block">手鉋（てがんな）の</span><span class="inline-block">滑らかな肌触りを</span><span class="inline-block">大切にしています。</span>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="fade-in bg-cream rounded-2xl p-8">
-                    <div class="flex items-start gap-5">
-                        <div class="w-12 h-12 bg-wood/10 rounded-full flex items-center justify-center flex-shrink-0">
-                            <span class="text-wood font-serif">03</span>
-                        </div>
-                        <div>
-                            <h3 class="font-serif text-lg mb-3">パッシブデザイン</h3>
-                            <p class="text-sm text-bark/70 leading-relaxed">
-                                <span class="inline-block">太陽の光と風の通り道を</span><span class="inline-block">計算した設計で、</span><span class="inline-block">エアコンに頼りすぎない</span><span class="inline-block">心地よい暮らしを実現。</span><span class="inline-block">年間冷暖房費を</span><span class="inline-block">平均40%削減しています。</span>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="fade-in bg-cream rounded-2xl p-8">
-                    <div class="flex items-start gap-5">
-                        <div class="w-12 h-12 bg-wood/10 rounded-full flex items-center justify-center flex-shrink-0">
-                            <span class="text-wood font-serif">04</span>
-                        </div>
-                        <div>
-                            <h3 class="font-serif text-lg mb-3">30年保証 & アフターメンテナンス</h3>
-                            <p class="text-sm text-bark/70 leading-relaxed">
-                                <span class="inline-block">引き渡し後も、</span><span class="inline-block">1年・3年・5年・10年の</span><span class="inline-block">定期点検を実施。</span><span class="inline-block">構造躯体は30年保証。</span><span class="inline-block">住んでからの安心を、</span><span class="inline-block">ずっとお届けします。</span>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 5. 施工事例 -->
-    <section class="py-24 px-6" id="works">
-        <div class="max-w-5xl mx-auto">
-            <div class="text-center mb-16 fade-in">
-                <div class="text-[11px] tracking-[0.4em] text-wood mb-4 font-serif">WORKS</div>
-                <h2 class="text-2xl md:text-3xl font-serif leading-relaxed">
-                    <span class="inline-block">家族の数だけ、</span><span class="inline-block">家のかたちがある。</span>
-                </h2>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="fade-in group cursor-pointer">
-                    <div class="rounded-2xl overflow-hidden mb-4 aspect-[4/3]">
-                        <img src="img/exterior.png" alt="施工事例1" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
-                    </div>
-                    <h3 class="font-serif text-lg mb-1">光をまとう平屋</h3>
-                    <p class="text-xs text-bark/60">世田谷区 / 35坪 / 2LDK+書斎 / ご夫婦+猫2匹</p>
-                    <p class="text-sm text-bark/70 leading-relaxed mt-3">
-                        <span class="inline-block">「老後まで心地よく」を</span><span class="inline-block">テーマに計画した平屋。</span><span class="inline-block">中庭を囲むL字型で、</span><span class="inline-block">どの部屋からも</span><span class="inline-block">緑が見える間取りに。</span>
-                    </p>
-                </div>
-                <div class="fade-in group cursor-pointer">
-                    <div class="rounded-2xl overflow-hidden mb-4 aspect-[4/3]">
-                        <img src="img/interior.png" alt="施工事例2" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
-                    </div>
-                    <h3 class="font-serif text-lg mb-1">大きな窓の家</h3>
-                    <p class="text-xs text-bark/60">杉並区 / 32坪 / 4LDK / ご家族4人</p>
-                    <p class="text-sm text-bark/70 leading-relaxed mt-3">
-                        <span class="inline-block">「子どもが走り回れる</span><span class="inline-block">リビングがほしい」。</span><span class="inline-block">吹き抜けと大開口で</span><span class="inline-block">明るく開放的な</span><span class="inline-block">LDKを実現しました。</span>
-                    </p>
-                </div>
-            </div>
-            <div class="text-center mt-12">
-                <a href="#" class="text-sm text-wood hover:underline font-serif">すべての施工事例を見る →</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- 6. お客様の声 -->
-    <section class="py-24 px-6 bg-stone/30">
-        <div class="max-w-5xl mx-auto">
-            <div class="text-center mb-16 fade-in">
-                <div class="text-[11px] tracking-[0.4em] text-wood mb-4 font-serif">OWNER'S VOICE</div>
-                <h2 class="text-2xl md:text-3xl font-serif leading-relaxed">
-                    <span class="inline-block">住み始めて分かった、</span><span class="inline-block">木の家のこと。</span>
-                </h2>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="fade-in bg-cream rounded-2xl p-8">
-                    <p class="text-sm text-bark/70 leading-[2] mb-6">
-                        <span class="inline-block">「最初は正直、</span><span class="inline-block">無垢材の傷が心配でした。</span><span class="inline-block">でも2年経って、</span><span class="inline-block">子どもがつけた傷も</span><span class="inline-block">飴色に馴染んでいくのを見て、</span><span class="inline-block">この素材を選んで</span><span class="inline-block">本当によかったと</span><span class="inline-block">思っています。</span><span class="inline-block">家族の歴史が</span><span class="inline-block">床に刻まれていく感じです。」</span>
-                    </p>
-                    <div class="flex items-center gap-3">
-                        <div class="w-8 h-8 bg-wood/20 rounded-full flex items-center justify-center text-xs text-wood">S</div>
-                        <div>
-                            <div class="text-sm font-medium">S邸</div>
-                            <div class="text-[10px] text-bark/50">世田谷区 / 築2年 / ご夫婦+お子さま2人</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="fade-in bg-cream rounded-2xl p-8">
-                    <p class="text-sm text-bark/70 leading-[2] mb-6">
-                        <span class="inline-block">「珪藻土の壁のおかげか、</span><span class="inline-block">梅雨時でも家の中が</span><span class="inline-block">サラッとしていて驚きました。</span><span class="inline-block">以前のマンションでは</span><span class="inline-block">結露がひどかったのに、</span><span class="inline-block">今はまったくありません。</span><span class="inline-block">冷暖房費が</span><span class="inline-block">半分以下になったのも</span><span class="inline-block">嬉しい誤算です。」</span>
-                    </p>
-                    <div class="flex items-center gap-3">
-                        <div class="w-8 h-8 bg-wood/20 rounded-full flex items-center justify-center text-xs text-wood">M</div>
-                        <div>
-                            <div class="text-sm font-medium">M邸</div>
-                            <div class="text-[10px] text-bark/50">杉並区 / 築3年 / ご夫婦+お子さま1人</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 7. 家づくりの流れ -->
-    <section class="py-24 px-6" id="flow">
-        <div class="max-w-5xl mx-auto">
-            <div class="text-center mb-16 fade-in">
-                <div class="text-[11px] tracking-[0.4em] text-wood mb-4 font-serif">PROCESS</div>
-                <h2 class="text-2xl md:text-3xl font-serif leading-relaxed">
-                    <span class="inline-block">出会いから入居まで、</span><span class="inline-block">約12ヶ月。</span>
-                </h2>
-                <p class="text-sm text-bark/60 mt-4">
-                    <span class="inline-block">最初のご相談から</span><span class="inline-block">お引渡しまで、</span><span class="inline-block">一人の担当者が</span><span class="inline-block">ずっと寄り添います。</span>
-                </p>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="fade-in border-t-2 border-wood/30 pt-6">
-                    <div class="text-wood font-serif text-sm mb-3">STEP 01 — 1〜2ヶ月目</div>
-                    <h3 class="font-serif text-lg mb-2">相談 & 土地探し</h3>
-                    <p class="text-sm text-bark/60 leading-relaxed">
-                        <span class="inline-block">暮らし方のヒアリングから</span><span class="inline-block">スタート。</span><span class="inline-block">土地探しの段階から</span><span class="inline-block">日当たり・地盤・</span><span class="inline-block">建築条件を一緒に</span><span class="inline-block">確認します。</span>
-                    </p>
-                </div>
-                <div class="fade-in border-t-2 border-wood/30 pt-6">
-                    <div class="text-wood font-serif text-sm mb-3">STEP 02 — 3〜5ヶ月目</div>
-                    <h3 class="font-serif text-lg mb-2">設計 & プランニング</h3>
-                    <p class="text-sm text-bark/60 leading-relaxed">
-                        <span class="inline-block">間取り・素材・</span><span class="inline-block">設備を一つずつ決定。</span><span class="inline-block">3Dパースで完成イメージを</span><span class="inline-block">共有しながら、</span><span class="inline-block">納得いくまで</span><span class="inline-block">何度でも修正します。</span>
-                    </p>
-                </div>
-                <div class="fade-in border-t-2 border-wood/30 pt-6">
-                    <div class="text-wood font-serif text-sm mb-3">STEP 03 — 6〜12ヶ月目</div>
-                    <h3 class="font-serif text-lg mb-2">着工 & お引渡し</h3>
-                    <p class="text-sm text-bark/60 leading-relaxed">
-                        <span class="inline-block">自社大工による施工。</span><span class="inline-block">建築中はいつでも</span><span class="inline-block">現場見学OK。</span><span class="inline-block">完成後の検査を経て、</span><span class="inline-block">新生活のスタートを</span><span class="inline-block">お祝いします。</span>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 8. 価格の目安 -->
-    <section class="py-24 px-6 bg-charcoal text-cream">
-        <div class="max-w-4xl mx-auto">
-            <div class="text-center mb-16 fade-in">
-                <div class="text-[11px] tracking-[0.4em] text-wood mb-4 font-serif">PRICE</div>
-                <h2 class="text-2xl md:text-3xl font-serif leading-relaxed">
-                    <span class="inline-block">価格の目安。</span>
-                </h2>
-                <p class="text-sm text-cream/50 mt-4">
-                    <span class="inline-block">建物本体価格の目安です。</span><span class="inline-block">土地代・外構工事は</span><span class="inline-block">含みません。</span>
-                </p>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="fade-in border border-cream/10 rounded-2xl p-8 text-center">
-                    <div class="text-xs text-cream/40 tracking-wider mb-4">25〜30坪</div>
-                    <div class="text-3xl font-serif mb-2">2,200<span class="text-lg">万円</span>〜</div>
-                    <div class="text-xs text-cream/40">坪単価 約73〜88万円</div>
-                </div>
-                <div class="fade-in border border-wood/40 rounded-2xl p-8 text-center bg-wood/10">
-                    <div class="text-xs text-wood tracking-wider mb-4">30〜35坪（人気）</div>
-                    <div class="text-3xl font-serif mb-2">2,800<span class="text-lg">万円</span>〜</div>
-                    <div class="text-xs text-cream/40">坪単価 約80〜93万円</div>
-                </div>
-                <div class="fade-in border border-cream/10 rounded-2xl p-8 text-center">
-                    <div class="text-xs text-cream/40 tracking-wider mb-4">35坪以上</div>
-                    <div class="text-3xl font-serif mb-2">3,500<span class="text-lg">万円</span>〜</div>
-                    <div class="text-xs text-cream/40">坪単価 約85〜100万円</div>
-                </div>
-            </div>
-            <p class="text-center text-xs text-cream/30 mt-8">
-                ※ すべて税込。設計費・確認申請費用を含みます。
-            </p>
-        </div>
-    </section>
-
-    <!-- 9. FAQ -->
-    <section class="py-24 px-6">
-        <div class="max-w-3xl mx-auto">
-            <div class="text-center mb-16 fade-in">
-                <div class="text-[11px] tracking-[0.4em] text-wood mb-4 font-serif">FAQ</div>
-                <h2 class="text-2xl md:text-3xl font-serif">よくある質問</h2>
-            </div>
-            <div class="space-y-4">
-                <details class="fade-in group border border-charcoal/10 rounded-xl overflow-hidden">
-                    <summary class="flex justify-between items-center p-6 cursor-pointer hover:bg-stone/20 transition text-sm font-medium">
-                        土地がまだ決まっていないのですが、相談できますか？
-                        <span class="text-bark/30 group-open:rotate-45 transition-transform text-lg">+</span>
-                    </summary>
-                    <div class="px-6 pb-6 text-sm text-bark/60 leading-relaxed">
-                        <span class="inline-block">もちろんです。</span><span class="inline-block">むしろ土地が決まる前の</span><span class="inline-block">ご相談を推奨しています。</span><span class="inline-block">建築のプロの視点で</span><span class="inline-block">土地の良し悪しを</span><span class="inline-block">一緒に見極めることで、</span><span class="inline-block">後悔のない家づくりに</span><span class="inline-block">つながります。</span>
-                    </div>
-                </details>
-                <details class="fade-in group border border-charcoal/10 rounded-xl overflow-hidden">
-                    <summary class="flex justify-between items-center p-6 cursor-pointer hover:bg-stone/20 transition text-sm font-medium">
-                        無垢材の床は手入れが大変ですか？
-                        <span class="text-bark/30 group-open:rotate-45 transition-transform text-lg">+</span>
-                    </summary>
-                    <div class="px-6 pb-6 text-sm text-bark/60 leading-relaxed">
-                        <span class="inline-block">特別な手入れは</span><span class="inline-block">必要ありません。</span><span class="inline-block">普段の掃除機と</span><span class="inline-block">乾拭きでOKです。</span><span class="inline-block">年に1-2回の</span><span class="inline-block">オイル塗布をおすすめしますが、</span><span class="inline-block">お引渡し時に</span><span class="inline-block">メンテナンス方法を</span><span class="inline-block">丁寧にお伝えします。</span>
-                    </div>
-                </details>
-                <details class="fade-in group border border-charcoal/10 rounded-xl overflow-hidden">
-                    <summary class="flex justify-between items-center p-6 cursor-pointer hover:bg-stone/20 transition text-sm font-medium">
-                        住宅ローンの相談にも乗ってもらえますか？
-                        <span class="text-bark/30 group-open:rotate-45 transition-transform text-lg">+</span>
-                    </summary>
-                    <div class="px-6 pb-6 text-sm text-bark/60 leading-relaxed">
-                        <span class="inline-block">提携ファイナンシャル</span><span class="inline-block">プランナーによる</span><span class="inline-block">無料相談をご用意しています。</span><span class="inline-block">住宅ローンの選び方から</span><span class="inline-block">返済シミュレーションまで、</span><span class="inline-block">家計に合った</span><span class="inline-block">資金計画を</span><span class="inline-block">サポートします。</span>
-                    </div>
-                </details>
-            </div>
-        </div>
-    </section>
-
-    <!-- 10. CTA -->
-    <section class="py-24 px-6 bg-stone/40" id="contact">
-        <div class="max-w-3xl mx-auto text-center fade-in">
-            <div class="text-[11px] tracking-[0.4em] text-wood mb-6 font-serif">MODEL HOUSE</div>
-            <h2 class="text-3xl md:text-4xl font-serif leading-relaxed mb-6">
-                <span class="inline-block">まずは、</span><span class="inline-block">木の香りを</span><span class="inline-block">感じに来てください。</span>
-            </h2>
-            <p class="text-sm text-bark/60 leading-relaxed mb-10">
-                <span class="inline-block">世田谷にある</span><span class="inline-block">モデルハウスで、</span><span class="inline-block">無垢材の肌触りや</span><span class="inline-block">自然素材の空気感を</span><span class="inline-block">体感いただけます。</span><span class="inline-block">ご予約は2分で完了。</span>
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="#" class="bg-charcoal text-cream px-10 py-4 rounded-full text-sm hover:bg-bark transition-colors">
-                    モデルハウス見学を予約する
-                </a>
-                <a href="#" class="border border-charcoal/20 text-charcoal px-10 py-4 rounded-full text-sm hover:bg-charcoal/5 transition-colors">
-                    資料請求（無料）
+        <div class="text-center bg-gray-900 border border-gray-800 rounded-[3rem] p-16 md:p-32 relative overflow-hidden group shadow-2xl">
+            <div class="absolute inset-0 bg-gradient-to-br from-amber-900/40 to-transparent"></div>
+            <div class="relative z-10">
+                <h2 class="text-4xl md:text-5xl font-black mb-8 text-white">店長の仕事を、マネジメントに戻す。</h2>
+                <p class="text-gray-300 mb-12 max-w-xl mx-auto text-lg leading-relaxed">シフトのパズル合わせは人間の仕事ではありません。余った時間で、スタッフの笑顔と店舗の売上を作りましょう。</p>
+                <a href="../index.html" class="bg-amber-500 hover:bg-amber-400 text-white px-12 py-5 rounded-full font-bold text-lg inline-flex items-center gap-3 transition transform hover:-translate-y-1 shadow-lg shadow-amber-500/30">
+                    PORTFOLIOに戻る
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
                 </a>
             </div>
-            <div class="mt-8 text-xs text-bark/40">
-                見学は完全予約制 · 所要時間 約60分 · お子さま連れ大歓迎
-            </div>
         </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="py-12 px-6 border-t border-charcoal/5">
-        <div class="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
-            <div class="font-serif text-lg">木ごころ工務店</div>
-            <div class="flex gap-6 text-[11px] text-bark/40">
-                <a href="#" class="hover:text-charcoal transition">会社概要</a>
-                <a href="#" class="hover:text-charcoal transition">プライバシーポリシー</a>
-                <a href="#" class="hover:text-charcoal transition">Instagram</a>
-            </div>
-            <div class="text-[10px] text-bark/30">© 2026 木ごころ工務店 All Rights Reserved.</div>
-        </div>
-    </footer>
-
-    <script>
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
-        }, { threshold: 0.1 });
-        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-    </script>
+    </main>
+        
 </body>
 </html>

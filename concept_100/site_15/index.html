@@ -56,381 +56,135 @@
 </head>
 <body class="bg-gray-50 text-stone-800 min-h-screen font-sans antialiased overflow-x-hidden">
 
-    <!-- Header -->
-    <header class="fixed w-full top-0 z-50 glass border-b-0 transition-transform duration-300" id="header">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="font-en font-black text-xl tracking-widest text-white flex items-center gap-2">
-                <span class="w-2 h-2 bg-secondary rounded-full animate-pulse"></span> LEAD ARCHITECT
-            </div>
-            <div class="hidden md:flex items-center gap-8">
-                <a href="#philosophy" class="text-[12px] font-bold tracking-widest hover:text-secondary transition uppercase">Philosophy</a>
-                <a href="#methodology" class="text-[12px] font-bold tracking-widest hover:text-secondary transition uppercase">Methodology</a>
-                <a href="#contact" class="bg-white text-primary px-6 py-2.5 rounded-sm text-sm font-bold hover:bg-secondary transition-all">
-                    経営課題を相談する
+    <main class="pt-[140px] pb-24 px-6 md:px-12 max-w-7xl mx-auto">
+        <div class="text-center max-w-4xl mx-auto mb-20 relative">
+            <span class="bg-gray-100 text-amber-600 border border-gray-200 px-5 py-2 text-xs font-black rounded-full tracking-widest mb-8 inline-block shadow-sm uppercase">CUSTOMER SUCCESS / CHURN AI</span>
+            <h1 class="text-4xl md:text-[54px] font-black mb-8 leading-[1.2] tracking-tight text-gray-900">「解約したい」と言われる前に、<br>その兆候をデータで掴む。</h1>
+            <p class="text-lg md:text-xl text-gray-600 font-medium leading-relaxed max-w-3xl mx-auto">CHURN-PREDICTは、ユーザーのログイン頻度やサポートへの問い合わせを解析し、退会リスク（チャーン）を数ヶ月前から予知するカスタマーサクセス特化型AIです。</p>
+        </div>
+
+        <div class="relative w-full aspect-[21/9] md:aspect-video rounded-[32px] overflow-hidden shadow-2xl mb-32 border border-gray-200/50 group bg-zinc-900">
+            <img src="img/ui.png" alt="UI Dashboard" class="w-full h-full object-cover transition-transform duration-[3s] group-hover:scale-[1.02]" onerror="this.src='https://picsum.photos/seed/placeholder/1600/900'">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none blend-overlay"></div>
+        </div>
+
+        <div class="flex flex-col gap-32 mb-32">
+        
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-amber-600 font-bold tracking-widest text-sm uppercase">THE LEAKY BUCKET</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">「解約率」がすべてを破壊するSaaSの現実</h2>
+                        <div class="w-12 h-1 bg-amber-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">既存顧客が流出していてはSaaSビジネスは成長しません。穴の空いたバケツを塞ぐことこそがLTVを最大化する絶対条件です。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-amber-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+                <div class="mt-10">
+                    <div class="text-center mb-16">
+                        <span class="text-amber-600 font-bold tracking-widest text-sm uppercase">CHURN PREDICTION</span>
+                        <h2 class="text-3xl md:text-4xl font-black mt-4 text-gray-900">解約の「予兆」を捉える予測モデリング</h2>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-amber-50 text-amber-600 border border-amber-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">${f.t}</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">${f.d}</p>
+</div>
+
+
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-amber-50 text-amber-600 border border-amber-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">${f.t}</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">${f.d}</p>
+</div>
+
+
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-amber-50 text-amber-600 border border-amber-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">${f.t}</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">${f.d}</p>
+</div>
+
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-amber-600 font-bold tracking-widest text-sm uppercase">ACTIONABLE INSIGHTS</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">「誰に、今すぐアプローチすべきか」</h2>
+                        <div class="w-12 h-1 bg-amber-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">「A社はオンボーディングでつまずいています」と、カスタマーサクセス担当者が今すぐ取るべき具体的なアクションをAIが生成します。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-amber-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-amber-600 font-bold tracking-widest text-sm uppercase">UPSELL OPPORTUNITY</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">アップセルの「黄金のタイミング」</h2>
+                        <div class="w-12 h-1 bg-amber-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">ヘルススコアが高い顧客に対しては上位プランへの移行を提案する最適なタイミングを通知します。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: bottom right;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-amber-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-amber-600 font-bold tracking-widest text-sm uppercase">REVENUE SAVED</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">Case Study | クラウド会計ソフト</h2>
+                        <div class="w-12 h-1 bg-amber-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">解約リスクの高い顧客リストを毎日自動生成し優先順位を明確化。半年間で解約率が劇的に低下しました。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-amber-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-amber-600 font-bold tracking-widest text-sm uppercase">OUR VISION</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">すべての顧客を成功へと導く</h2>
+                        <div class="w-12 h-1 bg-amber-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">カスタマーサクセスは顧客のビジネス課題に伴走し、プロダクトを通じて彼らを真の成功へと導くプロフェッショナル集団です。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: bottom right;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-amber-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+        </div>
+
+        <div class="text-center bg-gray-900 border border-gray-800 rounded-[3rem] p-16 md:p-32 relative overflow-hidden group shadow-2xl">
+            <div class="absolute inset-0 bg-gradient-to-br from-amber-900/40 to-transparent"></div>
+            <div class="relative z-10">
+                <h2 class="text-4xl md:text-5xl font-black mb-8 text-white">去っていく背中を見送る時代は終わった。</h2>
+                <p class="text-gray-300 mb-12 max-w-xl mx-auto text-lg leading-relaxed">解約の理由は突然ではありません。データに隠されたSOSにいち早く気づきましょう。</p>
+                <a href="../index.html" class="bg-amber-500 hover:bg-amber-400 text-white px-12 py-5 rounded-full font-bold text-lg inline-flex items-center gap-3 transition transform hover:-translate-y-1 shadow-lg shadow-amber-500/30">
+                    PORTFOLIOに戻る
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
                 </a>
             </div>
         </div>
-    </header>
-
-    <!-- 1. Cinematic Hero (Asymmetrical) -->
-    <section class="relative h-screen min-h-[800px] flex items-center overflow-hidden">
-        <!-- Background Image layer with Parallax effect -->
-        <div class="absolute inset-0 z-0">
-            <img src="img/hero.png" alt="Executive" class="w-full h-full object-cover opacity-50" id="hero-img">
-            <div class="absolute inset-0 bg-gradient-to-r from-primary via-primary/80 to-transparent"></div>
-            <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-primary"></div>
-        </div>
-
-        <div class="max-w-7xl mx-auto px-6 w-full relative z-10 grid grid-cols-1 md:grid-cols-12">
-            <div class="md:col-span-8 lg:col-span-7">
-                <div class="overflow-hidden mb-6">
-                    <div class="font-en text-secondary font-bold tracking-[0.3em] text-sm hero-text">REDEFINE YOUR LEADERSHIP</div>
-                </div>
-                <div class="overflow-hidden mb-8">
-                    <h1 class="text-4xl md:text-6xl lg:text-7xl font-black leading-[1.1] hero-text text-white">
-                        <span class="phrase">孤独な決断を、</span><br>
-                        <span class="phrase text-gradient">確信に変わる</span><br>
-                        <span class="phrase text-gradient">戦略へ。</span>
-                    </h1>
-                </div>
-                <div class="overflow-hidden mb-12">
-                    <p class="text-[16px] md:text-[18px] text-gray-400 font-medium leading-relaxed hero-text border-l-2 border-secondary pl-6">
-                        <span class="phrase">正解のない時代を率いるトップマネジメント層へ。</span><br>
-                        <span class="phrase">経営者特有のメンタルブロックを解除し、</span><span class="phrase">組織を飛躍させる次世代エグゼクティブ・コーチング。</span>
-                    </p>
-                </div>
-                <!-- Dual CTA -->
-                <div class="flex flex-col sm:flex-row gap-6 hero-text opacity-0">
-                    <a href="#contact" class="bg-secondary text-primary px-10 py-5 rounded-sm font-bold text-lg hover:bg-white transition flex items-center justify-center gap-3 group">
-                        無料セッション予約 <span class="font-en transform group-hover:translate-x-1 transition">→</span>
-                    </a>
-                    <a href="#contact" class="glass px-10 py-5 rounded-sm font-bold text-lg text-white hover:bg-white/10 transition flex items-center justify-center text-center">
-                        法人導入プログラム資料
-                    </a>
-                </div>
-            </div>
-            <!-- Empty column for asymmetrical balance and image showcase -->
-            <div class="hidden md:block md:col-span-4 lg:col-span-5 relative">
-                <div class="absolute bottom-0 right-0 glass-gold p-6 rounded-tl-3xl hero-text opacity-0">
-                    <div class="text-[10px] font-en tracking-widest text-secondary mb-1">PROVEN IMPACT</div>
-                    <div class="font-en text-5xl font-black text-white">180<span class="text-xl">+</span></div>
-                    <div class="text-[12px] text-gray-300">東証プライム企業 導入実績</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 2. The Philosophy (Sticky Scroll / Split Layout) -->
-    <section class="py-32 relative z-20 bg-primary" id="philosophy">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-20">
-                <!-- Sticky Left -->
-                <div class="lg:sticky top-32 h-fit">
-                    <div class="font-en text-accent font-bold tracking-[0.2em] text-[11px] mb-4">THE DILEMMA</div>
-                    <h2 class="text-3xl md:text-5xl font-black leading-tight mb-8 section-title">
-                        <span class="phrase">トップに立つ者だけが知る、</span><br>
-                        <span class="phrase">見えない「ガラスの天井」</span>
-                    </h2>
-                    <div class="w-20 h-1 bg-secondary mb-8"></div>
-                </div>
-                
-                <!-- Scrolling Right (Content depth) -->
-                <div class="space-y-16">
-                    <div class="glass p-10 rounded-2xl p-card">
-                        <h3 class="text-xl font-bold mb-4 text-white">「自分の限界が、組織の限界」という重圧</h3>
-                        <p class="text-gray-400 text-[15px]">
-                            <span class="phrase">事業規模が拡大し、社員数が増えるほど</span><span class="phrase">トップダウンの指示系統は機能不全を起こします。</span><span class="phrase">経営者自身が「これまでの成功体験」という殻を破らなければ、</span><span class="phrase">企業の成長曲線は必ず鈍化します。</span>
-                        </p>
-                    </div>
-                    <div class="glass p-10 rounded-2xl p-card">
-                        <h3 class="text-xl font-bold mb-4 text-white">誰も「本当のこと」を言わなくなる孤独</h3>
-                        <p class="text-gray-400 text-[15px]">
-                            <span class="phrase">役職が上がるにつれ、周囲からの率直なフィードバックは激減します。</span><span class="phrase">意思決定の精度が狂い始めていることに、</span><span class="phrase">自分自身では気づくことができません。</span><span class="phrase">圧倒的な「客観の鏡」が必要です。</span>
-                        </p>
-                    </div>
-                    <div class="glass p-10 rounded-2xl border-l-4 border-l-secondary p-card">
-                        <h3 class="text-xl font-bold mb-4 text-white">ティーチングではなく、トランスフォーメーションを</h3>
-                        <p class="text-gray-400 text-[15px]">
-                            <span class="phrase">私たちは、単なるビジネススキルの指導は行いません。</span><span class="phrase">リーダー自身の無意識の思考の癖を可視化し、</span><span class="phrase">根本的な自己変容（Transformation）を促すことで、</span><span class="phrase">組織全体を牽引する新たな器を作り上げます。</span>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 3. Methodology Bento Grid -->
-    <section class="py-32 bg-[#02050A]" id="methodology">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center mb-20 section-title">
-                <div class="font-en text-secondary font-bold tracking-[0.2em] text-[11px] mb-4">OUR PROPRIETARY METHOD</div>
-                <h2 class="text-3xl md:text-5xl font-black">
-                    <span class="phrase">精神論を排除した、</span><br>
-                    <span class="phrase">脳科学に基づく4つのアプローチ</span>
-                </h2>
-            </div>
-
-            <!-- Bento Grid Layout -->
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-6 auto-rows-[250px]">
-                
-                <!-- Main Graphic Panel (Col span 2, Row span 2) -->
-                <div class="md:col-span-2 md:row-span-2 rounded-3xl overflow-hidden relative group bento-item">
-                    <img src="img/framework.png" alt="Framework" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-                    <div class="absolute inset-0 bg-gradient-to-t from-primary via-primary/50 to-transparent"></div>
-                    <div class="absolute bottom-0 left-0 p-8 w-full z-10">
-                        <div class="w-12 h-12 bg-accent/20 rounded-lg flex items-center justify-center mb-6 backdrop-blur-md">
-                            <span class="font-en font-bold text-accent">01</span>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-3">Cognitive Mapping</h3>
-                        <p class="text-[14px] text-gray-300 font-medium">経営判断を鈍らせる「無意識のバイアス」を立体的に可視化。独自のサーベイツールを用い、思考の現在地を特定します。</p>
-                    </div>
-                </div>
-
-                <!-- Panel 2 (Col span 2, Row span 1) -->
-                <div class="md:col-span-2 bg-surfaceLight rounded-3xl p-8 border border-white/5 relative overflow-hidden bento-item">
-                    <div class="absolute top-0 right-0 w-32 h-32 bg-secondary/10 blur-[50px] rounded-full"></div>
-                    <div class="flex flex-col h-full justify-between">
-                        <div class="w-10 h-10 bg-white/5 rounded-lg flex items-center justify-center border border-white/10">
-                            <span class="font-en font-bold text-gray-300 text-sm">02</span>
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-bold mb-2">Shadow Integration</h3>
-                            <p class="text-[13px] text-gray-400 leading-relaxed">これまでの成功を支えてきた「強み」が、次のステージでは「弱み」となる構造を紐解き、恐れや葛藤（シャドウ）と統合します。</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Panel 3 (Col span 1, Row span 1) -->
-                <div class="bg-surfaceLight rounded-3xl p-8 border border-white/5 flex flex-col justify-between bento-item">
-                    <div class="w-10 h-10 bg-white/5 rounded-lg flex items-center justify-center border border-white/10">
-                        <span class="font-en font-bold text-gray-300 text-sm">03</span>
-                    </div>
-                    <div>
-                        <h3 class="text-lg font-bold mb-2 text-secondary">Systemic View</h3>
-                        <p class="text-[12px] text-gray-400">事象を「点」ではなく、関係性の「システム」として捉える俯瞰力を鍛えます。</p>
-                    </div>
-                </div>
-
-                <!-- Panel 4 (Col span 1, Row span 1) -->
-                <div class="bg-surfaceLight rounded-3xl p-8 border border-white/5 flex flex-col justify-between bento-item relative overflow-hidden">
-                    <!-- Tech pattern background -->
-                    <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#D4AF37 1px, transparent 1px); background-size: 15px 15px;"></div>
-                    <div class="w-10 h-10 bg-white/5 rounded-lg flex items-center justify-center border border-white/10 relative z-10">
-                        <span class="font-en font-bold text-gray-300 text-sm">04</span>
-                    </div>
-                    <div class="relative z-10">
-                        <h3 class="text-lg font-bold mb-2 text-accent">Value Embodiment</h3>
-                        <p class="text-[12px] text-gray-400">個人の揺るぎないパーパスと、企業ビジョンを同期させ、真の原動力を解放します。</p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- 4. The Experience (Horizontal feel image split) -->
-    <section class="py-32 bg-primary relative border-y border-white/10">
-        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div class="session-img-wrapper overflow-hidden rounded-3xl">
-                <img src="img/session.png" alt="Coaching Session" class="w-full h-full object-cover scale-110" id="session-img">
-            </div>
-            <div class="session-text">
-                <h2 class="text-3xl md:text-5xl font-black mb-8 leading-tight">
-                    <span class="phrase text-gradient">「心理的安全性」と</span><br>
-                    <span class="phrase text-gradient">「厳しい問い」の共存</span>
-                </h2>
-                <div class="space-y-6">
-                    <div class="flex items-start gap-4">
-                        <div class="mt-1 w-6 h-6 rounded-full bg-secondary/20 flex items-center justify-center text-secondary font-bold text-xs">✓</div>
-                        <p class="text-[15px] text-gray-400"><strong class="text-white">ICF認定マスターコーチ陣</strong><br>全コーチが国際コーチング連盟（ICF）の最高峰資格を保有。単なる傾聴ではなく、核心を突く鋭いフィードバックを提供します。</p>
-                    </div>
-                    <div class="flex items-start gap-4">
-                        <div class="mt-1 w-6 h-6 rounded-full bg-secondary/20 flex items-center justify-center text-secondary font-bold text-xs">✓</div>
-                        <p class="text-[15px] text-gray-400"><strong class="text-white">完全な守秘義務空間</strong><br>経営戦略の相談、ボードメンバーとの軋轢など、社内の誰にも言えない内容も、絶対的な秘密保持のもと安心して吐き出せます。</p>
-                    </div>
-                    <div class="flex items-start gap-4">
-                        <div class="mt-1 w-6 h-6 rounded-full bg-secondary/20 flex items-center justify-center text-secondary font-bold text-xs">✓</div>
-                        <p class="text-[15px] text-gray-400"><strong class="text-white">月2回・6ヶ月の伴走プログラム</strong><br>一時的なモチベーション向上ではなく、脳の回路が書き換わるまでの最低6ヶ月間、集中的に伴走します。</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 5. Proof Stack Architecture (Data counters) -->
-    <section class="py-24 bg-[#02050A]">
-        <div class="max-w-6xl mx-auto px-6">
-            <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 text-center divide-x divide-white/5">
-                <div class="counter-box">
-                    <div class="font-en text-5xl md:text-6xl font-black gold-gradient mb-2 counter" data-target="98">0</div><span class="text-xl gold-gradient font-black">%</span>
-                    <div class="text-[11px] font-bold tracking-widest text-gray-500 mt-2">目標達成率・満足度</div>
-                </div>
-                <div class="counter-box">
-                    <div class="font-en text-5xl md:text-6xl font-black text-white mb-2 counter" data-target="500">0</div><span class="text-xl text-white font-black">+</span>
-                    <div class="text-[11px] font-bold tracking-widest text-gray-500 mt-2">支援した経営層の数</div>
-                </div>
-                <div class="counter-box">
-                    <div class="font-en text-5xl md:text-6xl font-black text-white mb-2 counter" data-target="3">0</div><span class="text-xl text-white font-black">倍</span>
-                    <div class="text-[11px] font-bold tracking-widest text-gray-500 mt-2">受講前後の組織エンゲージメント</div>
-                </div>
-                <div class="counter-box">
-                    <div class="font-en text-5xl md:text-6xl font-black text-white mb-2 counter" data-target="100">0</div><span class="text-xl text-white font-black">%</span>
-                    <div class="text-[11px] font-bold tracking-widest text-gray-500 mt-2">守秘義務遵守率</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 6. Dark CTA (Dual Commitment) -->
-    <section class="py-32 relative overflow-hidden" id="contact">
-        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-surfaceLight via-primary to-primary z-0"></div>
+    </main>
         
-        <div class="max-w-4xl mx-auto px-6 relative z-10 text-center">
-            <div class="w-20 h-20 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-8 border border-secondary/30 glow-shadow">
-                <span class="text-secondary text-3xl">❖</span>
-            </div>
-            <h2 class="text-3xl md:text-5xl font-black mb-6 leading-tight">
-                <span class="phrase">経営が変われば、</span><span class="phrase">すべてが変わる。</span>
-            </h2>
-            <p class="text-gray-400 text-lg mb-12">
-                まずは60分の無料エグゼクティブ・セッションで、<br class="hidden md:block">
-                現在の課題の「真因」を発見しませんか。
-            </p>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 bg-glass p-4 rounded-2xl glass">
-                <!-- High Commitment -->
-                <div class="bg-gradient-to-br from-gray-800 to-gray-900 border border-secondary/50 p-8 rounded-xl text-center hover:border-secondary transition duration-300">
-                    <div class="text-[11px] font-en tracking-widest text-secondary font-bold mb-4">RECOMMENDED</div>
-                    <h3 class="text-xl font-bold mb-4">プロによる無料壁打ち</h3>
-                    <p class="text-[12px] text-gray-400 mb-8 leading-relaxed">経営課題をご自身で抱えている方へ。秘密厳守の1on1で、思考の整理をお手伝いします。</p>
-                    <button class="w-full bg-secondary text-primary font-bold py-4 rounded hover:bg-white transition">
-                        セッション日程を見る
-                    </button>
-                    <div class="text-[10px] text-gray-500 mt-4 leading-tight">※枠に限りがあるため、経営層・役員の方限定とさせていただきます。</div>
-                </div>
-
-                <!-- Low Commitment -->
-                <div class="bg-gray-900 border border-white/10 p-8 rounded-xl text-center hover:bg-gray-800 transition duration-300">
-                    <div class="text-[11px] font-en tracking-widest text-gray-400 font-bold mb-4">FOR HR & BOARD</div>
-                    <h3 class="text-xl font-bold mb-4">法人向け 導入プログラム</h3>
-                    <p class="text-[12px] text-gray-400 mb-8 leading-relaxed">人事責任者様へ。次世代リーダー育成に向けた、カリキュラム詳細や料金体系がわかる資料です。</p>
-                    
-                    <form class="space-y-4">
-                        <input type="email" placeholder="会社用メールアドレス" class="w-full bg-white/5 border border-white/10 px-4 py-3 rounded text-sm focus:outline-none focus:border-accent text-white" required>
-                        <button type="submit" class="w-full bg-white text-primary font-bold py-3.5 rounded hover:bg-gray-200 transition">
-                            今すぐ資料をダウンロード
-                        </button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-[#02050A] py-12 border-t border-white/5">
-        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
-            <div class="font-en font-black text-lg tracking-widest text-white/50">
-                LEAD ARCHITECT
-            </div>
-            <div class="flex gap-6 text-[12px] text-gray-500">
-                <a href="#" class="hover:text-white transition">運営会社</a>
-                <a href="#" class="hover:text-white transition">コンプライアンス規程</a>
-                <a href="#" class="hover:text-white transition">プライバシーポリシー</a>
-            </div>
-            <div class="text-[11px] text-gray-600">
-                &copy; 2026 LEAD ARCHITECT Co., Ltd.
-            </div>
-        </div>
-    </footer>
-
-    <!-- GSAP Animation Logic -->
-    <script>
-        gsap.registerPlugin(ScrollTrigger);
-
-        // Hero Animations
-        const tl = gsap.timeline();
-        tl.to('.hero-text', { y: 0, opacity: 1, duration: 1, stagger: 0.2, ease: "power4.out", delay: 0.2 });
-        
-        // Header background change on scroll
-        window.addEventListener('scroll', () => {
-            const header = document.getElementById('header');
-            if (window.scrollY > 50) {
-                header.classList.add('bg-primary/95');
-                header.classList.remove('border-b-0');
-            } else {
-                header.classList.remove('bg-primary/95');
-                header.classList.add('border-b-0');
-            }
-        });
-
-        // Parallax Hero Image
-        gsap.to("#hero-img", {
-            yPercent: 30,
-            ease: "none",
-            scrollTrigger: {
-                trigger: "body",
-                start: "top top",
-                end: "bottom top",
-                scrub: true
-            }
-        });
-
-        // Philosophy Cards Stagger
-        gsap.utils.toArray('.p-card').forEach((card, i) => {
-            gsap.from(card, {
-                scrollTrigger: {
-                    trigger: card,
-                    start: "top 85%",
-                },
-                y: 50,
-                opacity: 0,
-                duration: 0.8,
-                ease: "power3.out"
-            });
-        });
-
-        // Bento Grid Stagger
-        gsap.from('.bento-item', {
-            scrollTrigger: {
-                trigger: '#methodology',
-                start: "top 70%",
-            },
-            y: 100,
-            opacity: 0,
-            duration: 1,
-            stagger: 0.15,
-            ease: "power4.out"
-        });
-
-        // Session Image Reveal Effect
-        gsap.to("#session-img", {
-            scale: 1,
-            scrollTrigger: {
-                trigger: ".session-img-wrapper",
-                start: "top 80%",
-                end: "bottom top",
-                scrub: 1
-            }
-        });
-
-        // Number Counter Animation
-        const counters = document.querySelectorAll('.counter');
-        counters.forEach(counter => {
-            ScrollTrigger.create({
-                trigger: ".counter-box",
-                start: "top 90%",
-                onEnter: () => {
-                    let target = parseInt(counter.getAttribute('data-target'));
-                    gsap.to(counter, {
-                        innerHTML: target,
-                        duration: 2,
-                        snap: { innerHTML: 1 },
-                        ease: "power2.out"
-                    });
-                },
-                once: true
-            });
-        });
-    </script>
 </body>
 </html>

@@ -38,252 +38,135 @@
 </head>
 <body class="bg-gray-50 text-stone-800 min-h-screen font-sans antialiased overflow-x-hidden">
 
-    <!-- 帯（Offer Banner） -->
-    <div class="bg-red-600 text-white text-center py-2 font-bold text-sm md:text-base tracking-widest px-4">
-        ＼出張費・査定費・キャンセル料 すべて【完全無料】／
+    <main class="pt-[140px] pb-24 px-6 md:px-12 max-w-7xl mx-auto">
+        <div class="text-center max-w-4xl mx-auto mb-20 relative">
+            <span class="bg-gray-100 text-green-600 border border-gray-200 px-5 py-2 text-xs font-black rounded-full tracking-widest mb-8 inline-block shadow-sm uppercase">CLIMATE TECH / ESG</span>
+            <h1 class="text-4xl md:text-[54px] font-black mb-8 leading-[1.2] tracking-tight text-gray-900">企業の「見えない二酸化炭素」を、<br>1グラム単位で追跡する。</h1>
+            <p class="text-lg md:text-xl text-gray-600 font-medium leading-relaxed max-w-3xl mx-auto">CARBON-TRACKは、サプライチェーン全体（Scope 1-3）の温室効果ガス排出量をAIが自動算出し、国際基準のESGレポートをワンクリックで生成する脱炭素クラウドです。</p>
+        </div>
+
+        <div class="relative w-full aspect-[21/9] md:aspect-video rounded-[32px] overflow-hidden shadow-2xl mb-32 border border-gray-200/50 group bg-zinc-900">
+            <img src="img/ui.png" alt="UI Dashboard" class="w-full h-full object-cover transition-transform duration-[3s] group-hover:scale-[1.02]" onerror="this.src='https://picsum.photos/seed/placeholder/1600/900'">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none blend-overlay"></div>
+        </div>
+
+        <div class="flex flex-col gap-32 mb-32">
+        
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-green-600 font-bold tracking-widest text-sm uppercase">THE REPORTING NIGHTMARE</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">エクセルでの手入力という非効率</h2>
+                        <div class="w-12 h-1 bg-green-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">領収書をエクセルに入力し計算する作業は実務担当者の心を折る苦行です。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-green-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+                <div class="mt-10">
+                    <div class="text-center mb-16">
+                        <span class="text-green-600 font-bold tracking-widest text-sm uppercase">AUTO-DATA INGESTION</span>
+                        <h2 class="text-3xl md:text-4xl font-black mt-4 text-gray-900">あらゆるデータを吸い上げる連携エンジン</h2>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-green-50 text-green-600 border border-green-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
     </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">${f.t}</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">${f.d}</p>
+</div>
 
-    <!-- ファーストビュー（FV） - 最重要のコンバージョンエリア -->
-    <section class="max-w-4xl mx-auto bg-white shadow-xl relative overflow-hidden pb-12 w-full">
-        <!-- AI画像配置 -->
-        <div class="relative w-full aspect-[4/3] md:aspect-[21/9]">
-            <img src="img/ui.png" alt="笑顔で丁寧な査定員" class="w-full h-full object-cover">
-            <!-- テキストオーバーレイ（LP的な強いコピー） -->
-            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-6 md:p-10">
-                <div class="cv-badge text-lg md:text-2xl shadow-lg">顧客満足度98.7%！</div>
-                <h1 class="text-white font-black text-3xl md:text-5xl leading-tight mb-4 drop-shadow-md">
-                    重い荷物もそのまま。<br>
-                    <span class="text-yellow-300">「まごころ出張買取」</span>で<br>
-                    お家がスッキリ片付く！
-                </h1>
-                <p class="text-white font-bold text-lg md:text-xl drop-shadow-md">
-                    22ジャンル対応・箱詰め一切不要・女性査定員も指定OK
-                </p>
-            </div>
-        </div>
 
-        <!-- FV直下の強烈なCTA -->
-        <div class="px-6 md:px-12 mt-8 text-center">
-            <p class="text-red-600 font-bold mb-2">▼ まずはお気軽にご相談ください ▼</p>
-            <a href="tel:0120000000" class="block w-full bg-accent text-white py-6 rounded-2xl shadow-[0_10px_0_#BC4F38] hover:translate-y-[5px] hover:shadow-[0_5px_0_#BC4F38] transition-all flex flex-col items-center justify-center group mb-4">
-                <span class="text-sm font-bold bg-white text-accent px-4 py-1 rounded-full mb-2">通話無料・365日受付(9:00~21:00)</span>
-                <div class="flex items-center gap-4">
-                    <span class="text-4xl md:text-5xl font-black tracking-widest group-hover:scale-105 transition-transform">0120-000-000</span>
-                </div>
-            </a>
-            <a href="#form" class="block w-full py-4 bg-gray-100 text-gray-700 font-bold rounded-xl border border-gray-300 hover:bg-gray-200 transition">
-                📱 スマホで簡単！WEBからのご予約はこちら ＞
-            </a>
-        </div>
-    </section>
-
-    <!-- 共感セクション（こんなお悩みありませんか？） -->
-    <section class="py-16 bg-bgLight">
-        <div class="max-w-4xl mx-auto px-6">
-            <h2 class="text-center font-black text-2xl md:text-4xl text-brand mb-10 border-b-4 border-brand inline-block pb-2 w-full">こんなお悩み、抱えていませんか？</h2>
-            
-            <div class="bg-white p-8 rounded-xl shadow-md border-t-8 border-brand">
-                <ul class="space-y-6">
-                    <li class="flex items-start gap-4">
-                        <span class="text-3xl text-red-500">☑</span>
-                        <p class="text-lg md:text-xl font-bold">モノが多すぎて、<span class="hl-yellow">どこから手をつければいいか分からない…</span></p>
-                    </li>
-                    <li class="flex items-start gap-4">
-                        <span class="text-3xl text-red-500">☑</span>
-                        <p class="text-lg md:text-xl font-bold">足腰が悪くて、<span class="hl-yellow">重い物を玄関まで運ぶ</span>のがツライ…</p>
-                    </li>
-                    <li class="flex items-start gap-4">
-                        <span class="text-3xl text-red-500">☑</span>
-                        <p class="text-lg md:text-xl font-bold">知らない業者を<span class="hl-yellow">家に上げるのは正直怖い・不安</span>…</p>
-                    </li>
-                    <li class="flex items-start gap-4">
-                        <span class="text-3xl text-red-500">☑</span>
-                        <p class="text-lg md:text-xl font-bold">価値があるのか分からないけど、<span class="hl-yellow">ただ捨てるのはもったいない</span>…</p>
-                    </li>
-                </ul>
-            </div>
-            
-            <div class="text-center mt-12">
-                <div class="text-red-600 font-black text-2xl md:text-3xl mb-4">＼ そのお悩み、<span class="text-brand text-4xl md:text-5xl">万福丸</span>にすべてお任せ！ ／</div>
-                <div class="text-0 text-center">
-                    <svg class="mx-auto w-12 h-12 text-brand animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 解決策・強み（選ばれる理由） -->
-    <section class="py-16 bg-white">
-        <div class="max-w-4xl mx-auto px-6">
-            <h2 class="text-center font-black text-3xl md:text-4xl mb-12"><span class="text-brand">万福丸</span>がシニア層に圧倒的に<br>選ばれている「3つの安心」</h2>
-            
-            <div class="space-y-12">
-                <!-- 理由1 -->
-                <div class="flex flex-col md:flex-row gap-8 items-center">
-                    <div class="md:w-1/2 relative">
-                        <div class="absolute -top-4 -left-4 bg-accent text-white font-black text-xl w-16 h-16 rounded-full flex items-center justify-center border-4 border-white shadow-lg z-10">理由1</div>
-                        <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="笑顔の接客" class="w-full rounded-2xl shadow-md grayscale-[20%]">
-                    </div>
-                    <div class="md:w-1/2">
-                        <h3 class="text-2xl font-black mb-4 text-brand">百貨店クラスの「おもてなし」接客</h3>
-                        <p class="font-medium text-gray-700 leading-loose">
-                            「買取業者は怖そう」というイメージを覆します。弊社の査定員は厳しいマナー研修を突破した「コンシェルジュ」です。ご自宅に上がる際は必ず<span class="hl-yellow font-bold text-red-600">真新しい白手袋を着用</span>し、お客様の大切な思い出の品を丁重に拝見いたします。
-                        </p>
-                    </div>
-                </div>
-
-                <!-- 理由2 -->
-                <div class="flex flex-col md:flex-row-reverse gap-8 items-center bg-bgLight p-6 rounded-2xl">
-                    <div class="md:w-1/2 relative">
-                        <div class="absolute -top-4 -left-4 bg-accent text-white font-black text-xl w-16 h-16 rounded-full flex items-center justify-center border-4 border-white shadow-lg z-10">理由2</div>
-                        <img src="https://images.unsplash.com/photo-1518600868884-25b746c10eb3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="荷物運び" class="w-full rounded-2xl shadow-md">
-                    </div>
-                    <div class="md:w-1/2">
-                        <h3 class="text-2xl font-black mb-4 text-brand">仕分けも運び出しも「丸投げ」でOK</h3>
-                        <p class="font-medium text-gray-700 leading-loose">
-                            押入れに入ったまま、ホコリまみれのままで構いません。お客様ご自身で段ボールに詰めたり、玄関に運んだりする作業は<span class="hl-yellow font-bold text-red-600">一切不要</span>です。当社のスタッフがすべて丁寧に運び出します。
-                        </p>
-                    </div>
-                </div>
-
-                <!-- 理由3 -->
-                <div class="flex flex-col md:flex-row gap-8 items-center">
-                    <div class="md:w-1/2 relative">
-                        <div class="absolute -top-4 -left-4 bg-accent text-white font-black text-xl w-16 h-16 rounded-full flex items-center justify-center border-4 border-white shadow-lg z-10">理由3</div>
-                        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="キャンセル無流" class="w-full rounded-2xl shadow-md">
-                    </div>
-                    <div class="md:w-1/2">
-                        <h3 class="text-2xl font-black mb-4 text-brand">無理な買取（押し買い）は絶対にしません</h3>
-                        <p class="font-medium text-gray-700 leading-loose">
-                            お約束していないお品物を無理やり買い取ったり、安値で買い叩くような行為は弊社の方針として固く禁じています。ご提示した金額に<span class="hl-yellow font-bold text-red-600">少しでもご納得いかなければ、その場でお断りいただいて大丈夫</span>です。キャンセル料も完全無料です。
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 中間CTA（長いLPの途中で再度ボタンを設置） -->
-    <section class="py-12 bg-red-50 border-y-2 border-red-200">
-        <div class="max-w-4xl mx-auto px-6 text-center">
-            <h2 class="font-black text-2xl md:text-3xl text-red-600 mb-6">＼ 査定だけでも大歓迎！ 今すぐお電話ください ／</h2>
-            <a href="tel:0120000000" class="block w-full max-w-2xl mx-auto bg-accent text-white py-6 rounded-2xl shadow-[0_8px_0_#BC4F38] hover:translate-y-[4px] hover:shadow-[0_4px_0_#BC4F38] transition-all flex flex-col items-center justify-center group">
-                <span class="text-4xl md:text-5xl font-black tracking-widest">0120-000-000</span>
-                <span class="font-bold mt-2">通話無料・365日受付(9:00~21:00)</span>
-            </a>
-        </div>
-    </section>
-
-    <!-- 買取ジャンル（網羅性のアピール） -->
-    <section class="py-16 bg-white">
-        <div class="max-w-4xl mx-auto px-6 text-center">
-            <h2 class="font-black text-2xl md:text-4xl mb-4 border-b-4 border-brand inline-block pb-2">傷汚れがあっても、何でも買い取ります！</h2>
-            <p class="font-bold text-gray-600 mb-10">あちこちの業者を呼ぶ必要はありません。万福丸がまとめて見ます。</p>
-            
-            <div class="grid grid-cols-3 md:grid-cols-4 gap-3 md:gap-4 font-bold text-sm md:text-base">
-                <div class="border-2 border-gray-200 py-4 rounded-lg bg-gray-50 flex flex-col items-center gap-2">
-                    <span class="text-3xl">👘</span> 着物・帯
-                </div>
-                <div class="border-2 border-gray-200 py-4 rounded-lg bg-gray-50 flex flex-col items-center gap-2">
-                    <span class="text-3xl">💍</span> 切れた貴金属
-                </div>
-                <div class="border-2 border-gray-200 py-4 rounded-lg bg-gray-50 flex flex-col items-center gap-2">
-                    <span class="text-3xl">⌚️</span> 動かない時計
-                </div>
-                <div class="border-2 border-gray-200 py-4 rounded-lg bg-gray-50 flex flex-col items-center gap-2">
-                    <span class="text-3xl">🏺</span> 骨董品・茶道具
-                </div>
-                <div class="border-2 border-gray-200 py-4 rounded-lg bg-gray-50 flex flex-col items-center gap-2">
-                    <span class="text-3xl">📷</span> 古いカメラ
-                </div>
-                <div class="border-2 border-gray-200 py-4 rounded-lg bg-gray-50 flex flex-col items-center gap-2">
-                    <span class="text-3xl">🎴</span> 切手・古銭
-                </div>
-                <div class="border-2 border-gray-200 py-4 rounded-lg bg-gray-50 flex flex-col items-center gap-2">
-                    <span class="text-3xl">📚</span> 本・DVD
-                </div>
-                <div class="border-2 border-gray-200 py-4 rounded-lg bg-gray-50 flex flex-col items-center gap-2">
-                    <span class="text-3xl">👜</span> ブランド品
-                </div>
-            </div>
-            <p class="mt-8 font-black text-red-600 text-lg">※記載のないものでも「これ売れるかな？」と思ったらお気軽にご相談を！</p>
-        </div>
-    </section>
-
-    <!-- 買取の流れ -->
-    <section class="py-16 bg-bgLight">
-        <div class="max-w-3xl mx-auto px-6">
-            <h2 class="text-center font-black text-2xl md:text-4xl mb-12 border-b-4 border-brand inline-block pb-2 w-full">カンタン！出張買取の流れ</h2>
-            
-            <div class="space-y-6">
-                <div class="bg-white p-6 border-l-8 border-brand shadow-sm flex items-center gap-6">
-                    <div class="text-brand font-black text-4xl">1</div>
-                    <div>
-                        <h4 class="font-black text-xl mb-1">お電話またはWEBでご予約</h4>
-                        <p class="text-sm font-medium text-gray-600">無料査定の日時を決定します。ご希望があれば「女性査定員」の指定も可能です。</p>
-                    </div>
-                </div>
-                <div class="text-center font-black text-brand text-2xl">▼</div>
-                <div class="bg-white p-6 border-l-8 border-brand shadow-sm flex items-center gap-6">
-                    <div class="text-brand font-black text-4xl">2</div>
-                    <div>
-                        <h4 class="font-black text-xl mb-1">ご自宅でスピーディに査定</h4>
-                        <p class="text-sm font-medium text-gray-600">玄関先での査定もOK！仕分けや箱詰めは不要です。査定員が一点一点丁寧に価値を算出します。</p>
-                    </div>
-                </div>
-                <div class="text-center font-black text-brand text-2xl">▼</div>
-                <div class="bg-white p-6 border-l-8 border-accent shadow-sm flex items-center gap-6">
-                    <div class="text-accent font-black text-4xl">3</div>
-                    <div>
-                        <h4 class="font-black text-xl mb-1 text-red-600">その場で即・現金お渡し！</h4>
-                        <p class="text-sm font-medium text-gray-600">査定金額にご納得いただければ、その場で現金でお支払いし、お品物を運び出します。</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- お問い合わせフォーム -->
-    <section class="py-16 bg-brand text-white" id="form">
-        <div class="max-w-2xl mx-auto px-6 text-center">
-            <h2 class="text-3xl font-black mb-6">WEB出張査定予約 (24時間受付)</h2>
-            <p class="font-bold mb-10">たった1分で入力完了！折り返し担当者からご連絡いたします。</p>
-            
-            <form class="bg-white p-8 rounded-xl text-left shadow-2xl">
-                <div class="mb-6">
-                    <label class="block text-brand font-black mb-2">お名前 <span class="text-red-500 text-sm">必須</span></label>
-                    <input type="text" class="w-full border-2 border-gray-300 rounded p-3 text-gray-800 font-bold focus:border-brand focus:outline-none" placeholder="山田 太郎">
-                </div>
-                <div class="mb-6">
-                    <label class="block text-brand font-black mb-2">お電話番号 <span class="text-red-500 text-sm">必須</span></label>
-                    <input type="tel" class="w-full border-2 border-gray-300 rounded p-3 text-gray-800 font-bold focus:border-brand focus:outline-none" placeholder="090-0000-0000">
-                </div>
-                <div class="mb-8">
-                    <label class="block text-brand font-black mb-2">主な品物（ざっくりでOK）</label>
-                    <input type="text" class="w-full border-2 border-gray-300 rounded p-3 text-gray-800 font-bold focus:border-brand focus:outline-none" placeholder="着物、古い本、茶道具など">
-                </div>
-                <button type="submit" class="w-full bg-accent text-white font-black text-2xl py-6 rounded-lg shadow-[0_6px_0_#BC4F38] hover:translate-y-[3px] hover:shadow-[0_3px_0_#BC4F38] transition-all">
-                    無料で査定を依頼する ＞
-                </button>
-            </form>
-        </div>
-    </section>
-
-    <footer class="bg-gray-800 text-white text-center py-12 pb-32 md:pb-12 text-sm font-bold">
-        <p>買取専門店 万福丸 &copy; 2026</p>
-        <p class="mt-2 text-gray-400">古物商許可番号 第0000000000号</p>
-    </footer>
-
-    <!-- モバイル向けフローティング最下部固定CTA -->
-    <div class="sticky-cta md:hidden">
-        <a href="tel:0120000000" class="block w-full bg-accent text-white py-3 rounded-xl shadow-lg flex items-center justify-center gap-2">
-            <span class="text-2xl animate-pulse">📞</span>
-            <div class="text-left leading-tight">
-                <span class="block text-[10px] font-bold">無料査定・ご相談はこちら</span>
-                <span class="block text-2xl font-black tracking-wider">0120-000-000</span>
-            </div>
-        </a>
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-green-50 text-green-600 border border-green-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
     </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">${f.t}</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">${f.d}</p>
+</div>
 
+
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-green-50 text-green-600 border border-green-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">${f.t}</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">${f.d}</p>
+</div>
+
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-green-600 font-bold tracking-widest text-sm uppercase">DECARBONIZATION PATHWAY</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">どこを減らすべきかをAIが提案</h2>
+                        <div class="w-12 h-1 bg-green-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">「空調設備を更新すれば3年で投資回収できる」といった具体的な削減アクションを提示します。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-green-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-green-600 font-bold tracking-widest text-sm uppercase">OFFSET MARKETPLACE</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">カーボンクレジットの購入</h2>
+                        <div class="w-12 h-1 bg-green-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">削減しきれない排出量については信頼性の高いオフセットクレジットを購入し相殺できます。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: bottom right;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-green-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-green-600 font-bold tracking-widest text-sm uppercase">SUPPLY CHAIN SURVIVAL</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">Case Study | 自動車部品メーカー</h2>
+                        <div class="w-12 h-1 bg-green-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">わずか2週間で国際基準のレポートを提出し、環境意識の高さを評価され新規の受注枠まで獲得しました。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-green-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-green-600 font-bold tracking-widest text-sm uppercase">OUR VISION</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">地球の帳簿を合わせる</h2>
+                        <div class="w-12 h-1 bg-green-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">持続可能な資本主義のインフラとなります。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: bottom right;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-green-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+        </div>
+
+        <div class="text-center bg-gray-900 border border-gray-800 rounded-[3rem] p-16 md:p-32 relative overflow-hidden group shadow-2xl">
+            <div class="absolute inset-0 bg-gradient-to-br from-green-900/40 to-transparent"></div>
+            <div class="relative z-10">
+                <h2 class="text-4xl md:text-5xl font-black mb-8 text-white">${data.ctaTitle}</h2>
+                <p class="text-gray-300 mb-12 max-w-xl mx-auto text-lg leading-relaxed">${data.ctaDesc}</p>
+                <a href="../index.html" class="bg-green-500 hover:bg-green-400 text-white px-12 py-5 rounded-full font-bold text-lg inline-flex items-center gap-3 transition transform hover:-translate-y-1 shadow-lg shadow-green-500/30">
+                    PORTFOLIOに戻る
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                </a>
+            </div>
+        </div>
+    </main>
+        
 </body>
 </html>

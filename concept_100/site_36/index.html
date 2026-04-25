@@ -36,202 +36,135 @@
 </head>
 <body class="bg-gray-50 text-stone-800 min-h-screen font-sans antialiased overflow-x-hidden">
 
-    <!-- Header -->
-    <header class="w-full flex justify-between items-center p-6 bg-toxicDark/95 backdrop-blur border-b border-toxicBlue/20 fixed top-0 z-50">
-        <div class="font-en text-2xl font-bold tracking-widest text-toxicBlue text-neon flex items-center gap-2">
-            <svg class="w-6 h-6 text-toxicGreen" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
-            BIO-CLEAN NET
-        </div>
-        <nav class="hidden md:flex gap-8 text-sm font-en font-bold text-gray-400">
-            <a href="#chemicals" class="hover:text-toxicBlue transition">CHEMICALS</a>
-            <a href="#sponsor" class="hover:text-toxicBlue transition">SPONSOR MATCHING</a>
-            <a href="#creators" class="hover:text-toxicBlue transition">SUCCESS STORIES</a>
-        </nav>
-        <div class="font-bold text-sm tracking-wider bg-toxicBlue text-toxicDark px-6 py-2 hover:bg-white transition cursor-pointer font-en">
-            APPLY NOW
-        </div>
-    </header>
-
-    <!-- FV -->
-    <section class="min-h-screen relative flex items-center justify-center pt-20 clip-path-slant pb-20">
-        <div class="absolute inset-0 z-0">
-            <!-- Sizzle: Macro mold cleaning action -->
-            <img src="img/ui.png" alt="ネオンブルーの特殊洗剤で激しいカビを清掃し動画撮影する様子" class="w-full h-full object-cover opacity-50 filter contrast-125 saturate-150">
-            <div class="absolute inset-0 bg-gradient-to-t from-toxicDark via-toxicDark/60 to-transparent"></div>
+    <main class="pt-[140px] pb-24 px-6 md:px-12 max-w-7xl mx-auto">
+        <div class="text-center max-w-4xl mx-auto mb-20 relative">
+            <span class="bg-gray-100 text-blue-600 border border-gray-200 px-5 py-2 text-xs font-black rounded-full tracking-widest mb-8 inline-block shadow-sm uppercase">B2B PLATFORM / CLEANING</span>
+            <h1 class="text-4xl md:text-[54px] font-black mb-8 leading-[1.2] tracking-tight text-gray-900">「最高の清掃業者」が、<br>必ず見つかる。</h1>
+            <p class="text-lg md:text-xl text-gray-600 font-medium leading-relaxed max-w-3xl mx-auto">BIO-CLEAN NETWORKは、オフィスビルや工場の特殊清掃など、高度な技術を持つ清掃業者と企業を直接繋ぐ、B2B特化型の清掃マッチングプラットフォームです。</p>
         </div>
 
-        <div class="relative z-10 max-w-6xl mx-auto px-6 w-full mt-10">
-            <div class="flex flex-col gap-8 justify-center items-center text-center">
-                <div class="inline-block border-2 border-toxicBlue text-toxicBlue font-black px-6 py-1 mb-2 uppercase tracking-widest text-sm transform -skew-x-12 bg-toxicDark/50 backdrop-blur">
-                    完全クローズド・清掃系クリエイター専用B2Bプラットフォーム
+        <div class="relative w-full aspect-[21/9] md:aspect-video rounded-[32px] overflow-hidden shadow-2xl mb-32 border border-gray-200/50 group bg-zinc-900">
+            <img src="img/ui.png" alt="UI Dashboard" class="w-full h-full object-cover transition-transform duration-[3s] group-hover:scale-[1.02]" onerror="this.src='https://picsum.photos/seed/placeholder/1600/900'">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none blend-overlay"></div>
+        </div>
+
+        <div class="flex flex-col gap-32 mb-32">
+        
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-blue-600 font-bold tracking-widest text-sm uppercase">THE QUALITY PROBLEM</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">「安かろう悪かろう」の清掃業界</h2>
+                        <div class="w-12 h-1 bg-blue-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">清掃業者の選定は価格だけで決まりがちであり、結果として雑な清掃やトラブルが多発しています。技術力のある業者が適正に評価されていません。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-blue-900/20 to-transparent"></div>
+                    </div>
                 </div>
                 
-                <h1 class="text-4xl md:text-6xl lg:text-7xl font-black mb-6 leading-[1.2]">
-                    絶望的な汚れを、<br>
-                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-toxicBlue to-toxicGreen text-neon">「最高のエンタメ」へ変える力。</span>
-                </h1>
+                <div class="mt-10">
+                    <div class="text-center mb-16">
+                        <span class="text-blue-600 font-bold tracking-widest text-sm uppercase">SKILL VERIFICATION</span>
+                        <h2 class="text-3xl md:text-4xl font-black mt-4 text-gray-900">スキルと実績による透明なマッチング</h2>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-blue-50 text-blue-600 border border-blue-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">詳細なスキルタグ</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">「大理石の研磨」「クリーンルーム対応」など、業者の専門スキルを可視化します。</p>
+</div>
+
+
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-blue-50 text-blue-600 border border-blue-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">相互レビューシステム</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">実際の清掃クオリティを企業側が評価し、スコアの高い業者が優遇される仕組みです。</p>
+</div>
+
+
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-blue-50 text-blue-600 border border-blue-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">見積もりの標準化</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">面積や汚れの度合いを入力するだけでAIが適正価格を提示し、ボッタクリを防ぎます。</p>
+</div>
+
+                    </div>
+                </div>
                 
-                <p class="text-lg md:text-xl font-bold text-gray-300 mb-10 leading-relaxed max-w-3xl backdrop-blur-sm bg-toxicDark/30 p-6 border-l-4 border-toxicBlue">
-                    ゴミ屋敷、孤独死現場、蓄積したドロバチの巣、真っ黒なカビ。<br>
-                    過激な現場で戦うYouTuber向けに、市販審査を通らない「劇薬指定レベルの業務用特殊洗剤」を提供し、高単価な案件スポンサーとのマッチングまでを一気通貫でサポートします。
-                </p>
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-blue-600 font-bold tracking-widest text-sm uppercase">DIRECT CHAT</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">チャットでの直接コミュニケーション</h2>
+                        <div class="w-12 h-1 bg-blue-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">仲介業者を通さず、現場の写真を送って直接やり取りが可能。細かい要望のズレを無くします。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-blue-900/20 to-transparent"></div>
+                    </div>
+                </div>
                 
-                <div class="flex flex-col sm:flex-row gap-6 w-full max-w-xl">
-                    <a href="#apply" class="flex-1 bg-toxicBlue text-toxicDark font-black text-xl px-10 py-5 hover:bg-white transition duration-300 border-4 border-toxicBlue hover:border-white text-center shadow-[0_0_30px_rgba(0,229,255,0.4)]">
-                        ネットワーク審査に申し込む
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Chemical Catalog -->
-    <section id="chemicals" class="py-24 bg-toxicDark border-b border-white/5">
-        <div class="max-w-6xl mx-auto px-6">
-            <div class="mb-16">
-                <div class="flex items-center gap-4 mb-2">
-                    <h2 class="font-en text-5xl text-toxicBlue font-bold tracking-widest text-neon">PROFESSIONAL CHEMICALS</h2>
-                    <span class="bg-alertOrange text-white text-xs font-black px-2 py-1 uppercase">取扱注意</span>
-                </div>
-                <p class="text-gray-400 font-bold text-lg text-left">視聴者の度肝を抜く「Before/After」を作り出す、当ネットワーク専売の化学プラント直送品。</p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Product 1 -->
-                <div class="bg-toxicGray p-8 border border-gray-800 hover:border-toxicBlue transition-colors relative overflow-hidden group">
-                    <div class="absolute -right-10 -top-10 text-9xl opacity-5 group-hover:opacity-20 transition text-toxicBlue font-en">01</div>
-                    <h3 class="text-2xl font-black mb-2 text-white">BIO-MELT X9</h3>
-                    <p class="text-toxicBlue font-bold text-sm mb-6 border-b border-gray-700 pb-2">極重度・黒カビ溶解液</p>
-                    <p class="text-gray-400 font-bold leading-relaxed text-sm mb-6">
-                        お風呂場のパッキンに10年沈着した黒カビを、こすらずに数十秒で溶かして白戻しする強力な塩素系特殊洗剤。「吹きかけた瞬間から色が消える」ため、ショート動画のサムネや冒頭のツカミとして最高の撮れ高を約束します。
-                    </p>
-                    <div class="font-en text-xl font-bold text-white">¥4,800 <span class="text-xs text-gray-500">/ 4Lタンク</span></div>
-                </div>
-
-                <!-- Product 2 -->
-                <div class="bg-toxicGray p-8 border border-gray-800 hover:border-toxicGreen transition-colors relative overflow-hidden group">
-                    <div class="absolute -right-10 -top-10 text-9xl opacity-5 group-hover:opacity-20 transition text-toxicGreen font-en">02</div>
-                    <h3 class="text-2xl font-black mb-2 text-white">RUST-EATER PRO</h3>
-                    <p class="text-toxicGreen font-bold text-sm mb-6 border-b border-gray-700 pb-2">尿石・サビ・炭化層 分解除去</p>
-                    <p class="text-gray-400 font-bold leading-relaxed text-sm mb-6">
-                        ゴミ屋敷で必ず遭遇する便器の塊状結石や、焦げ付きが石化したIHコンロ向け。強酸性でありながら金属を腐食させない特殊インヒビター配合。「削る」のではなく「泡にして浮かせる」映像が撮れます。
-                    </p>
-                    <div class="font-en text-xl font-bold text-white">¥6,200 <span class="text-xs text-gray-500">/ 4Lタンク</span></div>
-                </div>
-
-                <!-- Product 3 -->
-                <div class="bg-toxicGray p-8 border border-gray-800 hover:border-alertOrange transition-colors relative overflow-hidden group">
-                    <div class="absolute -right-10 -top-10 text-9xl opacity-5 group-hover:opacity-20 transition text-alertOrange font-en">03</div>
-                    <h3 class="text-2xl font-black mb-2 text-white">DEATH-ODOR ZERO</h3>
-                    <p class="text-alertOrange font-bold text-sm mb-6 border-b border-gray-700 pb-2">特殊清掃用・完全消臭バイオ</p>
-                    <p class="text-gray-400 font-bold leading-relaxed text-sm mb-6">
-                        孤独死現場などの腐敗臭、ペットの多頭飼い崩壊現場に特化。臭いを香りでごまかすのではなく、においの原因となるバクテリアそのものをバイオの力で死滅させます。視聴者には伝わらない部分ですが、クリエイター本人の健康を守る必須アイテム。
-                    </p>
-                    <div class="font-en text-xl font-bold text-white">¥12,000 <span class="text-xs text-gray-500">/ 1L原液</span></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Sponsor Matching Ecosystem -->
-    <section id="sponsor" class="py-24 bg-[#05080A] relative">
-        <!-- Decoration -->
-        <div class="absolute left-0 top-1/2 -translate-y-1/2 w-32 h-32 bg-toxicBlue/20 blur-[100px] pointer-events-none"></div>
-
-        <div class="max-w-6xl mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="font-en text-5xl text-white font-bold tracking-widest mb-4">SPONSOR MATCHING</h2>
-                <p class="text-gray-400 font-bold text-lg">広告収益（AdSense）の限界を突破する、クローズドな案件ネットワーク。</p>
-            </div>
-
-            <div class="bg-toxicGray border border-toxicBlue/30 p-10 md:p-16 rounded-xl flex flex-col md:flex-row items-center gap-12 relative overflow-hidden">
-                <!-- Ecosystem Graphic -->
-                <div class="md:w-1/2 flex flex-col items-center gap-4 w-full">
-                    <div class="w-full bg-toxicDark border border-gray-800 p-4 text-center font-bold text-toxicBlue rounded relative">
-                        <span class="block text-white text-xl mb-1">洗剤メーカー / ハウスクリーニング業者</span>
-                        <span class="text-xs">（清掃のプロとしての認知を取りたい企業）</span>
-                        <div class="absolute -bottom-8 left-1/2 -translate-x-1/2 text-toxicBlue font-black text-2xl">↓ 案件依頼（数十万〜数百万円/本）</div>
+                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-blue-600 font-bold tracking-widest text-sm uppercase">SUBSCRIPTION</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">定期清掃の自動スケジュール化</h2>
+                        <div class="w-12 h-1 bg-blue-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">一度良い業者が見つかれば、サブスクリプションとして毎月の清掃を自動で発注・決済できます。</p>
                     </div>
-                    <div class="h-12 border-l-4 border-dashed border-toxicBlue"></div>
-                    <div class="w-full bg-toxicBlue/20 border border-toxicBlue p-6 text-center font-bold text-white rounded shadow-[0_0_20px_rgba(0,229,255,0.2)]">
-                        <span class="block text-2xl font-black tracking-widest mb-2 font-en text-neon">BIO-CLEAN NETWORK</span>
-                        <span class="text-sm">案件のディレクション・炎上リスク管理を代行</span>
-                    </div>
-                    <div class="h-12 border-l-4 border-dashed border-toxicBlue"></div>
-                    <div class="w-full bg-toxicDark border border-gray-800 p-4 text-center font-bold text-toxicGreen rounded">
-                        <span class="block text-white text-xl mb-1">提携クリエイター（あなた）</span>
-                        <span class="text-xs">（圧倒的な「汚れのBefore/After」に製品をインサート）</span>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: bottom right;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-blue-900/20 to-transparent"></div>
                     </div>
                 </div>
-
-                <div class="md:w-1/2">
-                    <h3 class="text-3xl font-black mb-6">あなたの「掃除の腕」に<br>企業が直接スポンサーにつく。</h3>
-                    <p class="text-gray-300 font-bold leading-loose mb-6">
-                        清掃系YouTubeは「物を綺麗にする」という性質上、非常にブランドセーフティが高く、清掃用品メーカーからの広告出稿ニーズが極めて高いジャンルです。<br><br>
-                        当ネットワークに加入することで、クリエイターは面倒な営業や契約書周りを一切することなく、月間再生数に応じた高単価なタイアップ案件を安定して獲得できるようになります。
-                    </p>
-                    <ul class="space-y-3 font-bold text-sm text-gray-400">
-                        <li class="flex items-center gap-2"><span class="text-toxicBlue">✔</span> 案件単価相場：1動画 30万円 〜 150万円</li>
-                        <li class="flex items-center gap-2"><span class="text-toxicBlue">✔</span> NGワードや薬機法チェッカーも専属サポート</li>
-                        <li class="flex items-center gap-2"><span class="text-toxicBlue">✔</span> スポンサー製品の無料サンプル無制限提供</li>
-                    </ul>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-blue-600 font-bold tracking-widest text-sm uppercase">CLIENT SUCCESS</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">Case Study | 大規模コワーキングスペース</h2>
+                        <div class="w-12 h-1 bg-blue-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">従来の業者からプラットフォーム経由で選定した業者に変更。清掃の質が劇的に向上し、利用者からのクレームがゼロになりました。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-blue-900/20 to-transparent"></div>
+                    </div>
                 </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-blue-600 font-bold tracking-widest text-sm uppercase">OUR VISION</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">「綺麗」を支えるプロフェッショナルへ</h2>
+                        <div class="w-12 h-1 bg-blue-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">清掃というエッセンシャルな仕事の価値を正しく引き上げ、働くすべての人に快適な空間を提供します。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: bottom right;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-blue-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+        </div>
+
+        <div class="text-center bg-gray-900 border border-gray-800 rounded-[3rem] p-16 md:p-32 relative overflow-hidden group shadow-2xl">
+            <div class="absolute inset-0 bg-gradient-to-br from-blue-900/40 to-transparent"></div>
+            <div class="relative z-10">
+                <h2 class="text-4xl md:text-5xl font-black mb-8 text-white">清潔さは、最強の企業ブランドである。</h2>
+                <p class="text-gray-300 mb-12 max-w-xl mx-auto text-lg leading-relaxed">ただゴミを捨てるだけではありません。プロの技術が、オフィスの空気と社員の士気を変えます。</p>
+                <a href="../index.html" class="bg-blue-500 hover:bg-blue-400 text-white px-12 py-5 rounded-full font-bold text-lg inline-flex items-center gap-3 transition transform hover:-translate-y-1 shadow-lg shadow-blue-500/30">
+                    PORTFOLIOに戻る
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                </a>
             </div>
         </div>
-    </section>
-
-    <!-- Success Stories -->
-    <section id="creators" class="py-24 bg-toxicDark border-y border-white/5">
-        <div class="max-w-6xl mx-auto px-6">
-            <h2 class="text-center font-en text-4xl font-bold tracking-widest text-white mb-16">SUCCESS STORIES</h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- Case 1 -->
-                <div class="bg-gradient-to-br from-[#1C2329] to-[#0A0F12] p-8 border border-white/10 hover:border-toxicBlue transition relative">
-                    <div class="absolute right-6 top-6 text-2xl">👑</div>
-                    <div class="mb-4">
-                        <h3 class="font-black text-2xl text-white mb-1">ゴミ屋敷清掃業・YouTuber A社</h3>
-                        <p class="text-toxicBlue font-bold text-sm tracking-widest">チャンネル登録者: 8万人 → 50万人</p>
-                    </div>
-                    <p class="text-gray-400 leading-loose font-bold text-sm mb-6">
-                        「以前はホームセンターの洗剤を必死に擦って落としており、撮影だけで2日かかっていました。ここの『BIO-MELT X9』を使い始めてから、分厚い尿石やカビが動画映えする形で瞬時に溶けるようになり、"魔法みたい"とショート動画で大バズり。海外からの視聴者も増え、案件収入だけで本業の清掃売上を大きく超えました。」
-                    </p>
-                </div>
-                <!-- Case 2 -->
-                <div class="bg-gradient-to-br from-[#1C2329] to-[#0A0F12] p-8 border border-white/10 hover:border-toxicBlue transition relative">
-                    <div class="mb-4">
-                        <h3 class="font-black text-2xl text-white mb-1">DIY・空き家リノベ系 配信者 M様</h3>
-                        <p class="text-toxicBlue font-bold text-sm tracking-widest">タイアップ案件成約数: 月間3本安定</p>
-                    </div>
-                    <p class="text-gray-400 leading-loose font-bold text-sm mb-6">
-                        「登録者は3万人ほどですが、コアなDIYファンがついていることを評価いただき、ネットワーク経由で大手高圧洗浄機メーカー様の年間アンバサダー案件を獲得できました。また、現場での孤独死跡など、普通の動画では出せない汚物の処理も自動モザイクAIのおかげでBanリスクなく投稿できています。」
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer CTA -->
-    <section class="py-32 bg-[#05080A] text-center" id="apply">
-        <div class="max-w-3xl mx-auto px-6">
-            <h2 class="font-black text-4xl md:text-5xl mb-8 leading-tight">最強のクリエイターには、<br>最強のケミカル（武器）を。</h2>
-            <p class="text-gray-400 font-bold mb-12 text-lg">※薬局で買える洗剤で満足している方は、登録をご遠慮ください。</p>
-            <form class="flex flex-col gap-6 max-w-md mx-auto bg-toxicGray p-8 border border-gray-800 shadow-2xl">
-                <div>
-                    <label class="block text-left text-sm font-bold text-toxicBlue mb-2 font-en uppercase tracking-widest">YouTube Channel URL</label>
-                    <input type="url" placeholder="https://youtube.com/..." class="w-full bg-toxicDark border border-gray-600 p-4 text-white font-bold focus:outline-none focus:border-toxicBlue transition">
-                </div>
-                <div>
-                    <label class="block text-left text-sm font-bold text-toxicBlue mb-2 font-en uppercase tracking-widest">Email Address</label>
-                    <input type="email" placeholder="メールアドレス" class="w-full bg-toxicDark border border-gray-600 p-4 text-white font-bold focus:outline-none focus:border-toxicBlue transition">
-                </div>
-                <button type="submit" class="w-full bg-toxicBlue text-toxicDark font-black text-2xl py-5 hover:bg-white transition cursor-pointer mt-2 shadow-[0_0_20px_rgba(0,229,255,0.4)]">
-                    審査へ進む ＞
-                </button>
-                <p class="text-xs text-gray-500 font-bold">※審査通過者のみ、特別価格でのケミカル購入・案件マッチング画面をお渡しします。</p>
-            </form>
-        </div>
-    </section>
-
+    </main>
+        
 </body>
 </html>

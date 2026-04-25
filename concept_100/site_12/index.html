@@ -39,246 +39,135 @@
 </head>
 <body class="bg-gray-50 text-stone-800 min-h-screen font-sans antialiased overflow-x-hidden">
 
-    <!-- Header -->
-    <header class="fixed w-full top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200">
-        <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
-            <div class="flex items-center gap-6">
-                <a href="../../index.html" class="text-[12px] text-ink/40 hover:text-ink transition font-bold">← Portfolio</a>
-                <div class="font-black text-2xl text-primary tracking-tighter flex items-center gap-2">
-                    <span class="text-secondary text-3xl">⬢</span> ANDWORK
+    <main class="pt-[140px] pb-24 px-6 md:px-12 max-w-7xl mx-auto">
+        <div class="text-center max-w-4xl mx-auto mb-20 relative">
+            <span class="bg-gray-100 text-blue-600 border border-gray-200 px-5 py-2 text-xs font-black rounded-full tracking-widest mb-8 inline-block shadow-sm uppercase">LEGAL TECH / AI REVIEW</span>
+            <h1 class="text-4xl md:text-[54px] font-black mb-8 leading-[1.2] tracking-tight text-gray-900">契約書の「見落とし」が、<br>会社を殺す前に。</h1>
+            <p class="text-lg md:text-xl text-gray-600 font-medium leading-relaxed max-w-3xl mx-auto">数十ページに及ぶ難解な契約書に潜む「自社に圧倒的に不利な条項」を、AIが数秒で検知。LEGAL-RADARは、過去の判例と自社の法務基準を学習し、リスクをハイライトする究極のリーガル・コパイロットです。</p>
+        </div>
+
+        <div class="relative w-full aspect-[21/9] md:aspect-video rounded-[32px] overflow-hidden shadow-2xl mb-32 border border-gray-200/50 group bg-zinc-900">
+            <img src="img/ui.png" alt="UI Dashboard" class="w-full h-full object-cover transition-transform duration-[3s] group-hover:scale-[1.02]" onerror="this.src='https://picsum.photos/seed/placeholder/1600/900'">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none blend-overlay"></div>
+        </div>
+
+        <div class="flex flex-col gap-32 mb-32">
+        
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-blue-600 font-bold tracking-widest text-sm uppercase">THE HIDDEN RISK</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">「とりあえずハンコを押す」リスク</h2>
+                        <div class="w-12 h-1 bg-blue-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">営業部が持ってくる大量の契約書を法務部がすべて完璧にチェックすることは不可能です。結果として、毒入りの契約書に気づかずにハンコを押してしまうリスクが常に潜んでいます。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-blue-900/20 to-transparent"></div>
+                    </div>
                 </div>
-            </div>
-            <div class="hidden md:flex items-center gap-4">
-                <a href="#contact" class="text-primary font-bold hover:opacity-70 transition border border-primary px-4 py-2 rounded-lg text-sm">
-                    資料ダウンロード
+                
+                <div class="mt-10">
+                    <div class="text-center mb-16">
+                        <span class="text-blue-600 font-bold tracking-widest text-sm uppercase">INSTANT REVIEW</span>
+                        <h2 class="text-3xl md:text-4xl font-black mt-4 text-gray-900">AIが数秒で「落とし穴」をハイライト</h2>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-blue-50 text-blue-600 border border-blue-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">${f.t}</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">${f.d}</p>
+</div>
+
+
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-blue-50 text-blue-600 border border-blue-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">${f.t}</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">${f.d}</p>
+</div>
+
+
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-blue-50 text-blue-600 border border-blue-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">${f.t}</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">${f.d}</p>
+</div>
+
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-blue-600 font-bold tracking-widest text-sm uppercase">CROSS-BORDER READY</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">英文契約書も完璧な精度で翻訳</h2>
+                        <div class="w-12 h-1 bg-blue-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">法務特化の翻訳エンジンを搭載しており、英米法特有の言い回しや条項の抜け漏れを、日本語と同じ精度で正確にチェックします。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-blue-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-blue-600 font-bold tracking-widest text-sm uppercase">KNOWLEDGE DATABASE</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">過去の契約書を「検索可能な資産」にする</h2>
+                        <div class="w-12 h-1 bg-blue-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">キャビネットに眠っている紙の契約書をAIがOCRで読み取り、条項単位で検索可能なデータベースに変換します。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: bottom right;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-blue-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-blue-600 font-bold tracking-widest text-sm uppercase">CLIENT SUCCESS</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">Case Study | 急成長SaaSスタートアップ</h2>
+                        <div class="w-12 h-1 bg-blue-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">専任の法務担当者が1名しかおらず契約書のレビュー待ちで営業が遅延していた企業。定型的なNDAの一次チェックをAIが代替し、レビュー時間が平均12時間から10分へと短縮されました。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-blue-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-blue-600 font-bold tracking-widest text-sm uppercase">OUR VISION</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">「法律」をビジネスのアクセルへ</h2>
+                        <div class="w-12 h-1 bg-blue-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">法務部はリスクを恐れてビジネスを止める部署ではありません。AIの力でリーガルリスクを可視化し、企業が自信を持って攻めの決断ができる環境を提供します。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: bottom right;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-blue-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+        </div>
+
+        <div class="text-center bg-gray-900 border border-gray-800 rounded-[3rem] p-16 md:p-32 relative overflow-hidden group shadow-2xl">
+            <div class="absolute inset-0 bg-gradient-to-br from-blue-900/40 to-transparent"></div>
+            <div class="relative z-10">
+                <h2 class="text-4xl md:text-5xl font-black mb-8 text-white">法務の仕事を、創造的なものへ。</h2>
+                <p class="text-gray-300 mb-12 max-w-xl mx-auto text-lg leading-relaxed">一字一句を読み込む文字校正は、もはや人間の仕事ではありません。交渉の戦略に、時間を使いましょう。</p>
+                <a href="../index.html" class="bg-blue-500 hover:bg-blue-400 text-white px-12 py-5 rounded-full font-bold text-lg inline-flex items-center gap-3 transition transform hover:-translate-y-1 shadow-lg shadow-blue-500/30">
+                    PORTFOLIOに戻る
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
                 </a>
-                <a href="#contact" class="bg-accent text-white px-6 py-2.5 rounded-lg text-sm font-bold shadow-md hover:scale-105 transition-all">
-                    無料で試してみる
-                </a>
             </div>
         </div>
-    </header>
-
-    <!-- Section 1: Hero -->
-    <section class="relative pt-24 md:pt-32 pb-12 bg-base overflow-hidden">
-        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-            <div class="relative z-10 text-center lg:text-left">
-                <div class="inline-block bg-white text-primary border border-primary text-[12px] font-bold px-4 py-1.5 rounded-full mb-6">
-                    IT導入補助金2026 対象ツール
-                </div>
-                <h1 class="text-3xl md:text-5xl lg:text-[3.5rem] font-black mb-6 leading-[1.2] tracking-tight">
-                    <span class="phrase">現場の笑顔も、</span><span class="phrase">家族との時間も、</span><br>
-                    <span class="phrase text-primary border-b-4 border-secondary pb-1">ANDWORKが取り戻す。</span>
-                </h1>
-                <p class="text-[16px] md:text-[18px] text-ink/70 font-medium mb-10">
-                    <span class="phrase">スマホで撮った写真を</span><span class="phrase">アップするだけ。</span><br>
-                    <span class="phrase">工程表作成・写真台帳・協力業者との連絡を、</span><span class="phrase">ひとつのアプリで完結。</span>
-                </p>
-                
-                <!-- Dual Commitment CTA (B2B SaaS Pattern) -->
-                <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                    <a href="#contact" class="bg-accent text-white py-4 px-8 rounded-xl font-bold text-lg cta-shadow hover:-translate-y-1 transition-all flex flex-col items-center">
-                        無料で試してみる
-                        <span class="text-[10px] font-normal opacity-80 uppercase tracking-widest mt-0.5">Start Free Trial</span>
-                    </a>
-                    <a href="#contact" class="bg-white text-primary border-2 border-primary/20 py-4 px-8 rounded-xl font-bold text-lg cta-sub-shadow hover:border-primary transition-all flex flex-col items-center">
-                        3分でわかる資料DL
-                        <span class="text-[10px] font-normal opacity-60 uppercase tracking-widest mt-0.5">Download PDF</span>
-                    </a>
-                </div>
-                <p class="text-[11px] text-ink/50 mt-4">※ クレジットカード登録不要。1分で利用開始できます。</p>
-            </div>
-            
-            <div class="relative mt-8 lg:mt-0">
-                <div class="absolute inset-0 bg-primary/10 rounded-[3rem] transform rotate-3 scale-105"></div>
-                <!-- iPad UI Mockup embedded in Hero image -->
-                <img src="img/hero.png" alt="笑顔の現場監督" class="relative z-10 w-full h-auto rounded-[2rem] shadow-2xl border-4 border-white object-cover aspect-[4/3] md:aspect-auto">
-                <img src="img/dashboard.png" alt="ダッシュボード" class="absolute -bottom-10 -left-10 md:-left-16 w-2/3 md:w-3/4 z-20 rounded-2xl shadow-2xl border-4 border-white transform -rotate-2 hover:rotate-0 transition-all duration-500">
-            </div>
-        </div>
-    </section>
-
-    <!-- Section 2: Proof Stack Architecture (KB Pattern) -->
-    <section class="py-8 bg-white border-b border-gray-200">
-        <div class="max-w-7xl mx-auto px-4">
-            <p class="text-center text-[11px] font-bold tracking-[0.2em] text-ink/40 mb-6 uppercase">Trusted by 12,000+ construction companies</p>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center divide-x divide-gray-100">
-                <div>
-                    <div class="text-3xl md:text-4xl font-black text-primary drop-shadow-sm">12,000<span class="text-lg">社</span></div>
-                    <div class="text-[12px] font-bold text-ink/60 mt-1">導入企業数</div>
-                </div>
-                <div>
-                    <div class="text-3xl md:text-4xl font-black text-primary drop-shadow-sm">99.2<span class="text-lg">%</span></div>
-                    <div class="text-[12px] font-bold text-ink/60 mt-1">利用継続率</div>
-                </div>
-                <div>
-                    <div class="text-3xl md:text-4xl font-black text-primary drop-shadow-sm">-45<span class="text-lg">h</span></div>
-                    <div class="text-[12px] font-bold text-ink/60 mt-1">月間平均残業削減</div>
-                </div>
-                <div>
-                    <div class="text-3xl md:text-4xl font-black text-secondary drop-shadow-sm">No.1</div>
-                    <div class="text-[12px] font-bold text-ink/60 mt-1">ITトレンド 施工管理部門</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Section 3: Industry Preemptive Objection (KB Pattern) -->
-    <section class="py-20 bg-primary text-white overflow-hidden relative">
-        <div class="absolute inset-0 opacity-10 background-noise"></div>
-        <div class="max-w-6xl mx-auto px-4 relative z-10 grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
-            <div class="md:col-span-5 text-center md:text-left">
-                <img src="img/craftsman.png" alt="笑顔の職人さん" class="w-48 h-48 md:w-full md:h-auto object-cover rounded-full md:rounded-3xl border-4 border-white/20 mx-auto shadow-xl">
-            </div>
-            <div class="md:col-span-7">
-                <div class="inline-block bg-secondary text-primary font-black text-sm px-4 py-1 rounded mb-6">
-                    よくあるご不安
-                </div>
-                <h2 class="text-2xl md:text-4xl font-black mb-8 leading-tight">
-                    <span class="phrase">「ウチの職人はスマホが苦手だから、</span><br class="hidden md:block">
-                    <span class="phrase">新しいITツールは定着しない」</span>
-                </h2>
-                <div class="w-16 h-1 bg-white/30 mb-8 mx-auto md:mx-0"></div>
-                <h3 class="text-xl font-bold text-secondary mb-4">そのお悩み、私たちが解決します。</h3>
-                <p class="text-[16px] leading-[1.8] text-white/80 mb-6">
-                    <span class="phrase">ANDWORKは、ITの知識ゼロでも使えるよう</span><span class="phrase">極限までシンプルな画面設計にこだわりました。</span><span class="phrase">「LINEで写真を送る」感覚で、</span><span class="phrase">60代のベテラン職人さんでも</span><span class="phrase">その日からサクサク使いこなせます。</span>
-                </p>
-                <div class="flex items-center gap-3 bg-white/10 p-4 rounded-xl border border-white/20">
-                    <span class="text-secondary text-2xl">✓</span>
-                    <span class="font-bold">大きな文字とタップしやすいボタン（50代以上のスマホ操作に最適化）</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Section 4: Features (Pain & Solution) -->
-    <section class="py-24 bg-base">
-        <div class="max-w-5xl mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-black mb-4">
-                    <span class="phrase">現場の「面倒くさい」を</span><span class="phrase text-primary">すべてアプリに。</span>
-                </h2>
-                <p class="text-ink/60 font-medium">これ一つで、事務所に戻ってからの事務作業が劇的に減ります。</p>
-            </div>
-            
-            <div class="space-y-8">
-                <!-- Feature 1 -->
-                <div class="bg-white p-8 md:p-12 rounded-[2rem] shadow-sm flex flex-col md:flex-row gap-8 items-center border border-gray-100">
-                    <div class="w-full md:w-1/3 flex justify-center">
-                        <div class="w-24 h-24 bg-blue-50 rounded-full flex items-center justify-center text-4xl">📸</div>
-                    </div>
-                    <div class="w-full md:w-2/3">
-                        <div class="text-secondary font-black text-sm mb-2">もうデジカメとPCを繋がない</div>
-                        <h3 class="text-2xl font-bold mb-4">写真台帳を1クリックで自動作成</h3>
-                        <p class="text-ink/70 text-[16px]">
-                            <span class="phrase">スマホで撮った現場写真は、アプリ内に自動で整理されます。</span><span class="phrase">事務所のPCを開き、ワンクリックするだけでExcel形式の写真台帳が完成。</span><span class="phrase">毎晩の台帳作りから解放されます。</span>
-                        </p>
-                    </div>
-                </div>
-                
-                <!-- Feature 2 -->
-                <div class="bg-white p-8 md:p-12 rounded-[2rem] shadow-sm flex flex-col md:flex-row-reverse gap-8 items-center border border-gray-100">
-                    <div class="w-full md:w-1/3 flex justify-center">
-                        <div class="w-24 h-24 bg-red-50 rounded-full flex items-center justify-center text-4xl">🗓️</div>
-                    </div>
-                    <div class="w-full md:w-2/3">
-                        <div class="text-secondary font-black text-sm mb-2">ホワイトボードはもう不要</div>
-                        <h3 class="text-2xl font-bold mb-4">最新の工程表を全員のスマホに共有</h3>
-                        <p class="text-ink/70 text-[16px]">
-                            <span class="phrase">突然のスケジュール変更も、アプリの工程表を直すだけ。</span><span class="phrase">協力業者にはプッシュ通知が飛ぶため、「言った・言わない」の電話確認トラブルや、手配ミスを完全に防ぎます。</span>
-                        </p>
-                    </div>
-                </div>
-                
-                <!-- Feature 3 -->
-                <div class="bg-white p-8 md:p-12 rounded-[2rem] shadow-sm flex flex-col md:flex-row gap-8 items-center border border-gray-100">
-                    <div class="w-full md:w-1/3 flex justify-center">
-                        <div class="w-24 h-24 bg-green-50 rounded-full flex items-center justify-center text-4xl">💬</div>
-                    </div>
-                    <div class="w-full md:w-2/3">
-                        <div class="text-secondary font-black text-sm mb-2">電話も個人のLINEも使わない</div>
-                        <h3 class="text-2xl font-bold mb-4">現場ごとのチャットで情報伝達を一本化</h3>
-                        <p class="text-ink/70 text-[16px]">
-                            <span class="phrase">図面の最新版や、現場の注意事項をチャットで一斉送信。</span><span class="phrase">「既読」が一目でわかるため、情報共有の漏れがなくなります。個人の連絡先を交換する必要もありません。</span>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Section 5: Inline Form (B2B SaaS Dual CTA closing) -->
-    <section class="py-24 bg-white" id="contact">
-        <div class="max-w-4xl mx-auto px-4">
-            <div class="text-center mb-12">
-                <div class="stripe-bg w-full h-2 mb-8 mx-auto opacity-50 rounded"></div>
-                <h2 class="text-3xl md:text-5xl font-black mb-6">
-                    <span class="phrase text-primary">現場を変える第一歩を、</span><br>
-                    <span class="phrase text-primary">今日から始めませんか。</span>
-                </h2>
-                <p class="text-ink/60 font-medium">
-                    <span class="phrase">まずは1件のプロジェクトから、無料で使い勝手をお試しいただけます。</span>
-                </p>
-            </div>
-
-            <!-- Side-by-side Action Buttons -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-                <!-- Data DL -->
-                <div class="bg-base border-2 border-primary/10 p-8 rounded-3xl text-center hover:border-primary/30 transition-all">
-                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center text-primary text-2xl mx-auto mb-4 shadow-sm">📄</div>
-                    <h3 class="font-black text-xl mb-2">まずは資料でじっくり検討したい</h3>
-                    <p class="text-[13px] text-ink/60 mb-6">機能詳細や他社との比較、料金プランがわかる総合パンフレットです。</p>
-                    <a href="#" class="block w-full bg-white text-primary border-2 border-primary py-4 rounded-xl font-bold hover:bg-primary/5 transition-all">
-                        3分でわかる資料をダウンロード
-                    </a>
-                </div>
-
-                <!-- Free Trial (Inline Form Style) -->
-                <div class="bg-primary p-8 rounded-3xl text-center relative overflow-hidden cta-sub-shadow transform md:scale-105">
-                    <div class="absolute top-0 right-0 bg-secondary text-primary font-black text-[10px] px-4 py-1 rounded-bl-xl tracking-widest uppercase">Popular</div>
-                    <div class="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center text-white text-2xl mx-auto mb-4 backdrop-blur-sm">🚀</div>
-                    <h3 class="font-black text-xl text-white mb-2">実際の画面を触ってみたい</h3>
-                    <p class="text-[13px] text-white/70 mb-6">全機能が使える無料トライアル。クレジットカードの登録は不要です。</p>
-                    
-                    <!-- Fiedl Optimization (fv-inline-form concept applied to closing) -->
-                    <form class="space-y-4 text-left">
-                        <div>
-                            <label class="block text-white text-[11px] font-bold mb-1">会社用メールアドレス</label>
-                            <input type="email" placeholder="example@company.com" class="w-full px-4 py-3 rounded-xl border-none focus:ring-2 focus:ring-secondary text-ink placeholder-ink/30" required>
-                        </div>
-                        <button type="submit" class="w-full bg-accent text-white py-4 rounded-xl font-bold text-lg hover:brightness-110 transition-all cta-shadow flex justify-center items-center gap-2">
-                            無料でアカウントを作成 <span>→</span>
-                        </button>
-                        <div class="text-center pt-2">
-                            <span class="text-[10px] text-white/50">※ 1分で登録完了。すぐに実際の画面をご覧いただけます。</span>
-                        </div>
-                    </form>
-                </div>
-            </div>
-            <div class="text-center border-t border-gray-100 pt-8">
-                <p class="text-sm font-bold text-ink/70">お電話でのご相談・デモ依頼はこちら</p>
-                <a href="tel:0300000000" class="inline-block text-2xl font-black text-primary mt-2 hover:opacity-70 transition-opacity">03-0000-0000</a>
-                <p class="text-[11px] text-ink/40 mt-1">平日 9:00〜18:00</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-ink text-white/40 py-12 px-4 border-t border-white/10">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
-            <div class="flex items-center gap-2">
-                <span class="text-secondary text-xl">⬢</span>
-                <span class="font-black text-xl text-white tracking-tighter">ANDWORK</span>
-            </div>
-            <div class="flex gap-6 text-[12px]">
-                <a href="#" class="hover:text-white transition">運営会社</a>
-                <a href="#" class="hover:text-white transition">利用規約</a>
-                <a href="#" class="hover:text-white transition">プライバシーポリシー</a>
-                <a href="#" class="hover:text-white transition">お問い合わせ</a>
-            </div>
-            <div class="text-[11px]">© 2026 ANDWORK Inc.</div>
-        </div>
-    </footer>
-
+    </main>
+        
 </body>
 </html>

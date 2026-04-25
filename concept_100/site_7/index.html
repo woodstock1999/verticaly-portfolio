@@ -20,133 +20,135 @@
 </head>
 <body class="bg-gray-50 text-stone-800 min-h-screen font-sans antialiased overflow-x-hidden">
 
-    <nav class="fixed w-full z-50 backdrop-blur-md bg-opacity-90 bg-white/90 border-b border-gray-200 px-8 py-4 flex justify-between items-center transition-all shadow-sm">
-        <a href="../../index.html" class="text-xs tracking-[0.2em] hover:opacity-60 transition font-mincho">← 目次</a>
-        <div class="font-mincho text-xl tracking-[0.5em]">玄鍛</div>
-        <div class="hidden md:flex gap-10 text-[11px] tracking-[0.2em] font-mincho">
-            <a href="#craft" class="hover:opacity-60 transition">鍛造</a>
-            <a href="#lineup" class="hover:opacity-60 transition">製品</a>
-            <a href="#order" class="hover:opacity-60 transition">注文</a>
+    <main class="pt-[140px] pb-24 px-6 md:px-12 max-w-7xl mx-auto">
+        <div class="text-center max-w-4xl mx-auto mb-20 relative">
+            <span class="bg-gray-100 text-rose-600 border border-gray-200 px-5 py-2 text-xs font-black rounded-full tracking-widest mb-8 inline-block shadow-sm uppercase">FOOD TECH / CELLULAR BIO</span>
+            <h1 class="text-4xl md:text-[54px] font-black mb-8 leading-[1.2] tracking-tight text-gray-900">牛を殺さずに、<br>「究極の和牛」を培養する。</h1>
+            <p class="text-lg md:text-xl text-gray-600 font-medium leading-relaxed max-w-3xl mx-auto">環境破壊も、倫理的なジレンマも存在しない肉。SYNTHETIC-MEATは、牛の細胞を数グラム採取し、バイオリアクターの中で栄養分を与えて「肉そのもの」を育てる、培養肉のリーディングカンパニーです。</p>
         </div>
-    </nav>
 
-    <!-- Hero: Dramatic Product Shot -->
-    <header class="relative h-screen flex items-center overflow-hidden">
-        <div class="absolute inset-0">
-            <img src="img/hero.png" alt="Japanese Knife" class="w-full h-full object-cover">
-            <div class="absolute inset-0 bg-gradient-to-r from-[#0e0e0e] via-[#0e0e0e]/60 to-transparent"></div>
+        <div class="relative w-full aspect-[21/9] md:aspect-video rounded-[32px] overflow-hidden shadow-2xl mb-32 border border-gray-200/50 group bg-zinc-900">
+            <img src="img/ui.png" alt="UI Dashboard" class="w-full h-full object-cover transition-transform duration-[3s] group-hover:scale-[1.02]" onerror="this.src='https://picsum.photos/seed/placeholder/1600/900'">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none blend-overlay"></div>
         </div>
-        <div class="relative z-10 px-8 md:px-20 max-w-xl">
-            <div class="text-[11px] tracking-[0.6em] text-white/40 font-mincho mb-8">
-                <span class="inline-block">堺 · 鍛冶職人</span><span class="inline-block ml-4">四代目</span>
-            </div>
-            <h1 class="text-5xl md:text-7xl font-mincho tracking-[0.2em] mb-8 leading-tight">
-                <span class="inline-block">鉄は、</span><span class="inline-block">嘘をつかない。</span>
-            </h1>
-            <p class="text-[15px] text-white/45 leading-[2]">
-                <span class="inline-block">堺の地で四代にわたり</span><span class="inline-block">受け継がれてきた</span><span class="inline-block">鍛造の技術。</span><span class="inline-block">一丁一丁、</span><span class="inline-block">手打ちで仕上げる</span><span class="inline-block">本焼き包丁。</span>
-            </p>
-        </div>
-    </header>
 
-    <!-- Craft Process: Timeline -->
-    <section class="py-32 px-8 md:px-20" id="craft">
-        <div class="max-w-5xl mx-auto">
-            <div class="text-[10px] tracking-[0.5em] text-white/40 font-mincho mb-4">FORGING PROCESS</div>
-            <h2 class="text-3xl md:text-4xl font-mincho tracking-[0.15em] leading-relaxed mb-20">
-                <span class="inline-block">火花の中から、</span><span class="inline-block">切れ味が生まれる。</span>
-            </h2>
-
-            <div class="space-y-0">
-                <div class="fade-in grid grid-cols-1 md:grid-cols-[80px_1fr] gap-8 border-l border-white/10 ml-0 md:ml-10 pl-8 py-12">
-                    <div class="text-3xl font-mincho text-white/20">01</div>
-                    <div>
-                        <h3 class="font-mincho text-xl mb-3">火造り</h3>
-                        <p class="text-sm text-white/50 leading-[2] max-w-lg">
-                            <span class="inline-block">玉鋼と軟鉄を重ね、</span><span class="inline-block">約1000度の炉で加熱。</span><span class="inline-block">ハンマーで打ち延ばし</span><span class="inline-block">包丁の原型を作る。</span>
-                        </p>
+        <div class="flex flex-col gap-32 mb-32">
+        
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-rose-600 font-bold tracking-widest text-sm uppercase">THE LIVESTOCK CRISIS</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">「肉を食べる」という行為が地球を破壊する</h2>
+                        <div class="w-12 h-1 bg-rose-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">牛を育てるために広大な森が焼かれ、膨大な水と穀物が消費され、大量のメタンガスが排出されています。人類のタンパク質需要が爆発する中、現在のシステムは地球の限界を完全に超えています。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-rose-900/20 to-transparent"></div>
                     </div>
                 </div>
-                <div class="fade-in grid grid-cols-1 md:grid-cols-[80px_1fr] gap-8 border-l border-white/10 ml-0 md:ml-10 pl-8 py-12">
-                    <div class="text-3xl font-mincho text-white/20">02</div>
-                    <div>
-                        <h3 class="font-mincho text-xl mb-3">焼入れ</h3>
-                        <p class="text-sm text-white/50 leading-[2] max-w-lg">
-                            <span class="inline-block">約800度に加熱した</span><span class="inline-block">刃体を一気に水冷。</span><span class="inline-block">この瞬間が</span><span class="inline-block">切れ味の8割を決める。</span>
-                        </p>
+                
+                <div class="mt-10">
+                    <div class="text-center mb-16">
+                        <span class="text-rose-600 font-bold tracking-widest text-sm uppercase">TISSUE ENGINEERING</span>
+                        <h2 class="text-3xl md:text-4xl font-black mt-4 text-gray-900">「細胞」から「ステーキ肉」をデザインする技術</h2>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-rose-50 text-rose-600 border border-rose-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">${f.t}</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">${f.d}</p>
+</div>
+
+
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-rose-50 text-rose-600 border border-rose-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">${f.t}</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">${f.d}</p>
+</div>
+
+
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-rose-50 text-rose-600 border border-rose-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">${f.t}</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">${f.d}</p>
+</div>
+
                     </div>
                 </div>
-                <div class="fade-in grid grid-cols-1 md:grid-cols-[80px_1fr] gap-8 border-l border-white/10 ml-0 md:ml-10 pl-8 py-12">
-                    <div class="text-3xl font-mincho text-white/20">03</div>
-                    <div>
-                        <h3 class="font-mincho text-xl mb-3">研ぎ</h3>
-                        <p class="text-sm text-white/50 leading-[2] max-w-lg">
-                            <span class="inline-block">天然砥石で</span><span class="inline-block">刃先を研ぎ出す。</span><span class="inline-block">最終の本刃付けまで、</span><span class="inline-block">八段階の工程を経る。</span>
-                        </p>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-rose-600 font-bold tracking-widest text-sm uppercase">NUTRITIONAL HACK</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">栄養価の「ハッキング（強化）」</h2>
+                        <div class="w-12 h-1 bg-rose-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">ただ本物の肉を再現するだけではありません。培養の過程でオメガ3脂肪酸やビタミンを付与し、「サーモンのように血液をサラサラにする、極上のステーキ」といった、超健康的な機能性ミートを作り出します。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-rose-900/20 to-transparent"></div>
                     </div>
                 </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-rose-600 font-bold tracking-widest text-sm uppercase">ANYWHERE FARMING</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">宇宙ステーションや砂漠での「地産地消」</h2>
+                        <div class="w-12 h-1 bg-rose-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">広大な牧草地は不要です。ビルの1フロアサイズの培養肉ブルワリーがあれば、中東の砂漠の真ん中でも、将来の月面基地でも、数週間で新鮮な肉を大量に生産することができます。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: bottom right;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-rose-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-rose-600 font-bold tracking-widest text-sm uppercase">CULINARY ACCEPTANCE</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">Case Study | ミシュラン三ツ星レストランへの提供</h2>
+                        <div class="w-12 h-1 bg-rose-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">「環境には良いが、味が劣る」と代替肉を敬遠していたトップシェフたち。当社の3D培養リブロースをブラインドテストで提供した結果、全員が「最高級の黒毛和牛」と誤認し、レギュラーメニューへの採用が決定しました。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-rose-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-rose-600 font-bold tracking-widest text-sm uppercase">OUR VISION</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">「おいしい」という幸せを持続可能に</h2>
+                        <div class="w-12 h-1 bg-rose-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">私たちはヴィーガンを強制したいわけではありません。「肉を食べる喜び」と「地球への優しさ」が矛盾なく両立する未来。食卓の平和を科学で守り抜きます。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: bottom right;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-rose-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+        </div>
+
+        <div class="text-center bg-gray-900 border border-gray-800 rounded-[3rem] p-16 md:p-32 relative overflow-hidden group shadow-2xl">
+            <div class="absolute inset-0 bg-gradient-to-br from-rose-900/40 to-transparent"></div>
+            <div class="relative z-10">
+                <h2 class="text-4xl md:text-5xl font-black mb-8 text-white">妥協の代替肉は、もういらない。</h2>
+                <p class="text-gray-300 mb-12 max-w-xl mx-auto text-lg leading-relaxed">植物から作った肉もどきではなく、分子レベルで完全に同一の「本物の肉」。ステーキの概念が、今日変わります。</p>
+                <a href="../index.html" class="bg-rose-500 hover:bg-rose-400 text-white px-12 py-5 rounded-full font-bold text-lg inline-flex items-center gap-3 transition transform hover:-translate-y-1 shadow-lg shadow-rose-500/30">
+                    PORTFOLIOに戻る
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                </a>
             </div>
         </div>
-    </section>
-
-    <!-- Lineup: Minimal Product Grid -->
-    <section class="py-32 px-8 md:px-20 bg-white/[0.02] border-y border-white/5" id="lineup">
-        <div class="max-w-5xl mx-auto">
-            <div class="text-[10px] tracking-[0.5em] text-white/40 font-mincho mb-4">LINEUP</div>
-            <h2 class="text-3xl font-mincho tracking-[0.15em] mb-16">製品一覧</h2>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-1">
-                <div class="fade-in border border-white/5 p-8 hover:border-white/20 transition-colors duration-500 cursor-pointer">
-                    <div class="text-[10px] text-white/30 tracking-widest mb-6">GYUTO</div>
-                    <h3 class="font-mincho text-xl mb-2">牛刀 240mm</h3>
-                    <p class="text-xs text-white/40 leading-relaxed mb-6">
-                        <span class="inline-block">万能型の洋包丁。</span><span class="inline-block">プロの料理人にも</span><span class="inline-block">愛用者多数。</span>
-                    </p>
-                    <div class="text-xl font-mincho">¥38,500</div>
-                </div>
-                <div class="fade-in border border-white/5 p-8 hover:border-white/20 transition-colors duration-500 cursor-pointer">
-                    <div class="text-[10px] text-white/30 tracking-widest mb-6">YANAGIBA</div>
-                    <h3 class="font-mincho text-xl mb-2">柳刃 300mm</h3>
-                    <p class="text-xs text-white/40 leading-relaxed mb-6">
-                        <span class="inline-block">刺身包丁の最高峰。</span><span class="inline-block">一引きで</span><span class="inline-block">断面が輝く切れ味。</span>
-                    </p>
-                    <div class="text-xl font-mincho">¥55,000</div>
-                </div>
-                <div class="fade-in border border-white/5 p-8 hover:border-white/20 transition-colors duration-500 cursor-pointer">
-                    <div class="text-[10px] text-white/30 tracking-widest mb-6">DEBA</div>
-                    <h3 class="font-mincho text-xl mb-2">出刃 180mm</h3>
-                    <p class="text-xs text-white/40 leading-relaxed mb-6">
-                        <span class="inline-block">魚を捌くための</span><span class="inline-block">重厚な一本。</span><span class="inline-block">骨も断つ力強さ。</span>
-                    </p>
-                    <div class="text-xl font-mincho">¥44,000</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="py-40 text-center" id="order">
-        <h2 class="text-4xl md:text-5xl font-mincho tracking-[0.2em] mb-8">
-            <span class="inline-block">一生の相棒を、</span><span class="inline-block">手に。</span>
-        </h2>
-        <p class="text-sm text-white/40 mb-12 font-mincho">
-            <span class="inline-block">名入れ・特注も</span><span class="inline-block">承ります。</span>
-        </p>
-        <a href="#" class="inline-block border border-white/30 text-white font-mincho text-sm tracking-[0.3em] px-12 py-4 hover:bg-white hover:text-[#0e0e0e] transition-all duration-500">
-            ご注文・お問い合わせ
-        </a>
-        <div class="mt-24 text-[10px] text-white/20 tracking-wider font-mincho">© 2026 玄鍛刃物製作所 堺</div>
-    </footer>
-
-    <script>
-        gsap.registerPlugin(ScrollTrigger);
-        gsap.from('header h1', { y: 30, opacity: 0, duration: 1.5, ease: 'power3.out', delay: 0.3 });
-        gsap.from('header p', { y: 20, opacity: 0, duration: 1.2, ease: 'power3.out', delay: 0.6 });
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
-        }, { threshold: 0.15 });
-        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-    </script>
+    </main>
+        
 </body>
 </html>

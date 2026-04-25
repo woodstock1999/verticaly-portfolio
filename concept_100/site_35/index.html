@@ -46,244 +46,135 @@
 </head>
 <body class="bg-gray-50 text-stone-800 min-h-screen font-sans antialiased overflow-x-hidden">
 
-    <!-- Navbar -->
-    <nav class="fixed w-full z-50 backdrop-blur-md bg-opacity-90 bg-white/90 border-b border-gray-200 px-8 py-4 flex justify-between items-center transition-all shadow-sm">
-        <div class="font-en text-4xl font-bold text-white tracking-widest text-glitch" data-text="CLIPSTORM">CLIPSTORM<span class="text-neonCyan">.AI</span></div>
-        <div class="hidden md:flex gap-8 font-bold text-sm tracking-widest text-gray-400">
-            <a href="#how" class="hover:text-neonCyan transition">HOW IT WORKS</a>
-            <a href="#features" class="hover:text-neonCyan transition">FEATURES</a>
-            <a href="#testimonials" class="hover:text-neonCyan transition">CREATORS</a>
-            <a href="#pricing" class="hover:text-neonCyan transition">PRICING</a>
-        </div>
-        <div>
-            <a href="#start" class="px-8 py-3 bg-white text-cyberBlack font-black rounded-sm shadow-[0_0_15px_rgba(255,255,255,0.2)] hover:bg-neonCyan transition">TRY FOR FREE</a>
-        </div>
-    </nav>
-
-    <!-- Hero -->
-    <section class="min-h-screen relative flex items-center justify-center pt-24 px-4 overflow-hidden border-b border-neonPurple/20">
-        <!-- Background AI Image -->
-        <div class="absolute inset-0 z-0">
-            <img src="img/ui.png" alt="ゲーム配信者が叫んでいる背景にAI波形" class="w-full h-full object-cover opacity-30 filter saturate-150">
-            <div class="absolute inset-0 bg-gradient-to-b from-cyberBlack/70 via-cyberBlack/80 to-cyberBlack"></div>
+    <main class="pt-[140px] pb-24 px-6 md:px-12 max-w-7xl mx-auto">
+        <div class="text-center max-w-4xl mx-auto mb-20 relative">
+            <span class="bg-gray-100 text-amber-600 border border-gray-200 px-5 py-2 text-xs font-black rounded-full tracking-widest mb-8 inline-block shadow-sm uppercase">AI VIDEO / CONTENT</span>
+            <h1 class="text-4xl md:text-[54px] font-black mb-8 leading-[1.2] tracking-tight text-gray-900">1時間の動画を、<br>「15秒のバイラル動画」へ錬成する。</h1>
+            <p class="text-lg md:text-xl text-gray-600 font-medium leading-relaxed max-w-3xl mx-auto">POD-SHORTSは、YouTubeやポッドキャストの長尺動画から、最も「バズる」瞬間をAIが自動で切り抜き、テロップとエフェクトを付けてショート動画を量産する次世代エディターです。</p>
         </div>
 
-        <div class="relative z-10 text-center max-w-5xl mx-auto">
-            <div class="inline-flex items-center gap-3 border border-neonPurple/50 bg-neonPurple/10 text-neonPurple px-5 py-2 rounded-full text-xs font-bold tracking-widest mb-8">
-                <span class="w-2 h-2 bg-neonPurple rounded-full animate-pulse"></span>
-                VTUBER & STREAMER AUTOMATION TOOL
-            </div>
-            
-            <h1 class="text-4xl md:text-6xl lg:text-[5.5rem] font-black leading-tight mb-8">
-                <span class="text-white">8時間のアーカイブ配信を、</span><br>
-                <span class="bg-gradient-to-r from-neonCyan via-white to-neonPurple text-transparent bg-clip-text">1秒で「神切り抜き」へ。</span>
-            </h1>
-            
-            <p class="text-gray-300 font-bold text-lg md:text-xl mb-12 max-w-3xl mx-auto leading-relaxed">
-                あなたの「絶叫」「台パン」「爆笑」「神エイム」をAIが音声波形と映像パターンから自動検知。<br>TikTok / Shorts 向けの縦型動画（自動テロップ付き）をワンクリックで大量に生成し、SNS運用を完全に自動化します。
-            </p>
-            
-            <div class="flex flex-col md:flex-row items-center justify-center gap-6">
-                <button class="w-full md:w-auto bg-neonCyan text-cyberBlack font-black text-xl px-12 py-5 rounded-sm hover:-translate-y-1 transition-transform shadow-[0_0_30px_rgba(0,240,255,0.4)] relative group overflow-hidden">
-                    <span class="relative z-10">Twitch連携して無料で始める</span>
-                    <div class="absolute inset-0 h-full w-full bg-white/20 transform -skew-x-12 -translate-x-full group-hover:animate-[shimmer_1s_forwards] z-0"></div>
-                </button>
-                <button class="w-full md:w-auto bg-transparent border-2 border-white/20 text-white font-bold text-xl px-12 py-5 rounded-sm hover:bg-white/5 transition">
-                    デモ動画を見る (0:30)
-                </button>
-            </div>
+        <div class="relative w-full aspect-[21/9] md:aspect-video rounded-[32px] overflow-hidden shadow-2xl mb-32 border border-gray-200/50 group bg-zinc-900">
+            <img src="img/ui.png" alt="UI Dashboard" class="w-full h-full object-cover transition-transform duration-[3s] group-hover:scale-[1.02]" onerror="this.src='https://picsum.photos/seed/placeholder/1600/900'">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none blend-overlay"></div>
         </div>
-    </section>
 
-    <!-- How it works -->
-    <section id="how" class="py-24 bg-cyberBlack relative">
-        <div class="max-w-6xl mx-auto px-6">
-            <div class="text-center mb-20">
-                <h2 class="font-en text-5xl font-bold tracking-widest text-neonCyan mb-2 glow-text">WORKFLOW</h2>
-                <p class="text-xl font-bold text-gray-400">クリエイターは、配信して寝るだけ。</p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <div class="text-center relative">
-                    <div class="w-20 h-20 mx-auto border-2 border-neonCyan/30 rounded-full flex items-center justify-center text-3xl font-en font-black text-neonCyan mb-6 bg-neonCyan/5">01</div>
-                    <h3 class="font-bold text-xl mb-3">URLをペースト</h3>
-                    <p class="text-sm text-gray-400 font-medium leading-relaxed">TwitchやYouTubeのアーカイブURLを貼るか、アカウント連携するだけ。ローカルDLは不要。</p>
-                    <div class="hidden md:block absolute top-10 w-full left-1/2 h-[2px] bg-gradient-to-r from-neonCyan/30 to-transparent"></div>
-                </div>
-                <div class="text-center relative">
-                    <div class="w-20 h-20 mx-auto border-2 border-neonPurple/30 rounded-full flex items-center justify-center text-3xl font-en font-black text-neonPurple mb-6 bg-neonPurple/5">02</div>
-                    <h3 class="font-bold text-xl mb-3">AI 感情解析</h3>
-                    <p class="text-sm text-gray-400 font-medium leading-relaxed">音声のピッチや音圧、チャット欄の「草」「ｗｗ」の流速を学習し、ハイライトを抽出。</p>
-                    <div class="hidden md:block absolute top-10 w-full left-1/2 h-[2px] bg-gradient-to-r from-neonPurple/30 to-transparent"></div>
-                </div>
-                <div class="text-center relative">
-                    <div class="w-20 h-20 mx-auto border-2 border-neonPink/30 rounded-full flex items-center justify-center text-3xl font-en font-black text-neonPink mb-6 bg-neonPink/5">03</div>
-                    <h3 class="font-bold text-xl mb-3">縦型＆自動テロップ</h3>
-                    <p class="text-sm text-gray-400 font-medium leading-relaxed">顔（ワイプ）とゲーム画面を自動認識して9:16に配置。フルテロップを文字起こし生成。</p>
-                    <div class="hidden md:block absolute top-10 w-full left-1/2 h-[2px] bg-gradient-to-r from-neonPink/30 to-transparent"></div>
-                </div>
-                <div class="text-center">
-                    <div class="w-20 h-20 mx-auto bg-neonCyan text-cyberBlack rounded-full flex items-center justify-center text-3xl font-en font-black mb-6 shadow-[0_0_20px_rgba(0,240,255,0.5)]">04</div>
-                    <h3 class="font-bold text-xl mb-3">スマホへ通知＆投稿</h3>
-                    <p class="text-sm text-gray-400 font-medium leading-relaxed">数十個生成された切り抜きから好きなものを選び、TikTokやShortsへワンタップで予約投稿。</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Deep Tech Features Bento -->
-    <section id="features" class="py-24 bg-cyberDark">
-        <div class="max-w-6xl mx-auto px-6">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <!-- Bento 1 (Large) -->
-                <div class="tech-border p-10 rounded-2xl md:col-span-2 relative overflow-hidden group">
-                    <div class="absolute right-0 bottom-0 opacity-10 blur-sm transform group-hover:scale-110 transition duration-700">
-                        <svg class="w-72 h-72 text-neonCyan" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8z"></path><path d="M11 7h2v6h-2zm0 8h2v2h-2z"></path></svg>
+        <div class="flex flex-col gap-32 mb-32">
+        
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-amber-600 font-bold tracking-widest text-sm uppercase">THE EDITING BURDEN</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">ショート動画を作る圧倒的な手間</h2>
+                        <div class="w-12 h-1 bg-amber-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">1時間の動画を全部見直して面白い部分を探し、縦型にトリミングし、テロップを手作業で付ける。この絶望的な作業量がクリエイターを疲弊させています。</p>
                     </div>
-                    <div class="relative z-10">
-                        <h3 class="text-4xl font-black mb-4">YouTuber風・神テロップ生成</h3>
-                        <p class="text-gray-300 font-medium leading-loose text-lg max-w-xl mb-8">
-                            地味な自動文字起こしとは違います。Whisper-V3ベースの超高精度AIが文脈を理解し、強調すべき単語の色を変え、叫んだ時には<span class="text-neonPink font-black text-2xl italic">文字が震えるエフェクト</span>まで自動で付与。編集者のような「ツッコミテロップ」もAIが勝手に入れます。
-                        </p>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-amber-900/20 to-transparent"></div>
                     </div>
-                </div>
-
-                <!-- Bento 2 -->
-                <div class="tech-border p-10 rounded-2xl flex flex-col justify-center">
-                    <h3 class="text-2xl font-black mb-4">Live2D / Face Tracking</h3>
-                    <p class="text-gray-400 font-medium leading-relaxed text-sm">
-                        顔認識AIがゲーム画面の端にあるVTuberの立ち絵や配信者のワイプを的確にトラッキング。スマホ向けの縦画面レイアウトに合わせて、常に顔を中心にトリミングし続けます。
-                    </p>
-                </div>
-
-                <!-- Bento 3 -->
-                <div class="tech-border p-10 rounded-2xl flex flex-col justify-center">
-                    <h3 class="text-2xl font-black mb-4">マルチオーディオ解析</h3>
-                    <p class="text-gray-400 font-medium leading-relaxed text-sm">
-                        「FPSの銃声」と「Discordの仲間との会話」をAIが分離して解析。ゲーム音がうるさくても、会話のオチや盛り上がりを正確にフックします。
-                    </p>
-                </div>
-
-                <!-- Bento 4 (Large) -->
-                <div class="tech-border p-10 rounded-2xl md:col-span-2 flex items-center justify-between">
-                    <div>
-                        <h3 class="text-3xl font-black mb-4">クラウドレンダリング</h3>
-                        <p class="text-gray-300 font-medium leading-relaxed max-w-lg text-lg">
-                            あなたのPCに負荷は一切かけません。クリップの抽出、テロップ合成、エンコードの全てはCLIPSTORMの強力なクラウドGPU上で完了します。
-                        </p>
-                    </div>
-                    <div class="hidden sm:block text-neonPurple opacity-30">
-                        <svg class="w-32 h-32" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"></path></svg>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials -->
-    <section id="testimonials" class="py-24 bg-cyberBlack border-y border-white/5">
-        <div class="max-w-6xl mx-auto px-6">
-            <h2 class="text-center font-en text-5xl font-bold tracking-widest text-white mb-16">CREATORS VOICES</h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- Voice 1 -->
-                <div class="bg-gradient-to-br from-white/5 to-transparent p-8 rounded-xl border border-white/10">
-                    <div class="flex items-center gap-4 mb-6">
-                        <div class="w-12 h-12 bg-neonCyan rounded-full"></div>
-                        <div>
-                            <h3 class="font-bold text-lg">APEX系 VTuber (登録者15万人)</h3>
-                            <div class="text-neonCyan text-xs tracking-widest font-black uppercase">Clipstorm PRO user</div>
-                        </div>
-                    </div>
-                    <p class="text-gray-300 leading-loose font-medium italic">
-                        「今まで8時間のアーカイブから面白い部分を探すのに3時間、テロップ入れにさらに2時間かかっていました。これを導入してからは配信が終わって寝て起きると、TikTokが10本完成しています。マジで魔法です。Shortsの再生経由でYoutube登録者も爆増しました」
-                    </p>
-                </div>
-                <!-- Voice 2 -->
-                <div class="bg-gradient-to-br from-white/5 to-transparent p-8 rounded-xl border border-white/10">
-                    <div class="flex items-center gap-4 mb-6">
-                        <div class="w-12 h-12 bg-neonPurple rounded-full"></div>
-                        <div>
-                            <h3 class="font-bold text-lg">格ゲー配信者 (登録者30万人)</h3>
-                            <div class="text-neonPurple text-xs tracking-widest font-black uppercase">Clipstorm Pro user</div>
-                        </div>
-                    </div>
-                    <p class="text-gray-300 leading-loose font-medium italic">
-                        「台パンした瞬間の感情認識がヤバいです。一番発狂してる瞬間をAIが120%拾ってくれます（泣）。テロップもただの文字起こしじゃなくて、デカ文字や色付きでバラエティ番組みたいになるので、編集マンに申し訳ないレベルで助かってます」
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Pricing -->
-    <section id="pricing" class="py-24 bg-cyberDark">
-        <div class="max-w-5xl mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="font-en text-5xl font-bold tracking-widest text-neonCyan mb-2 glow-text">PRICING</h2>
-                <p class="text-gray-400 font-bold">あなたに合ったプランで、自動化を始めましょう。</p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <!-- Free -->
-                <div class="tech-border p-8 py-12 rounded-xl text-center">
-                    <h3 class="text-xl font-bold mb-2">FREE</h3>
-                    <div class="text-5xl font-black mb-6">¥0 <span class="text-sm text-gray-500 font-normal">/mo</span></div>
-                    <ul class="text-gray-400 text-sm space-y-4 mb-10 text-left font-medium">
-                        <li>✔️ 月間生成時間: 10時間まで</li>
-                        <li>✔️ ベーシック字幕機能</li>
-                        <li>✔️ 縦型オートフレーミング</li>
-                        <li class="opacity-30 line-through">透かし（ウォーターマーク）削除</li>
-                    </ul>
-                    <button class="w-full py-3 bg-white/10 hover:bg-white/20 rounded font-bold transition">Get Started</button>
                 </div>
                 
-                <!-- Pro -->
-                <div class="tech-border p-8 py-12 rounded-xl text-center border-neonCyan shadow-[0_0_20px_rgba(0,240,255,0.1)] relative transform scale-105 z-10 bg-cyberBlack">
-                    <div class="absolute top-0 left-1/2 -translate-x-1/2 bg-neonCyan text-cyberBlack text-xs font-black tracking-widest px-4 py-1 rounded-b-lg">MOST POPULAR</div>
-                    <h3 class="text-xl font-bold mb-2 text-neonCyan">PRO</h3>
-                    <div class="text-5xl font-black mb-6">¥2,980 <span class="text-sm text-gray-500 font-normal">/mo</span></div>
-                    <ul class="text-gray-300 text-sm space-y-4 mb-10 text-left font-bold">
-                        <li>✔️ 月間生成時間: 100時間まで</li>
-                        <li>✔️ エフェクト付きYoutuber字幕</li>
-                        <li>✔️ 顔追従（トラッキング）エンジン</li>
-                        <li>✔️ AI「台パン・絶叫」検知モード</li>
-                        <li>✔️ ウォーターマーク完全削除</li>
-                    </ul>
-                    <button class="w-full py-4 bg-neonCyan text-cyberBlack rounded font-black transition hover:shadow-[0_0_15px_#00F0FF]">Start 14-days Free Trial</button>
-                </div>
+                <div class="mt-10">
+                    <div class="text-center mb-16">
+                        <span class="text-amber-600 font-bold tracking-widest text-sm uppercase">VIRAL ENGINE</span>
+                        <h2 class="text-3xl md:text-4xl font-black mt-4 text-gray-900">「バズの法則」を学習したAI</h2>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-amber-50 text-amber-600 border border-amber-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">ハイライト自動抽出</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">音声のトーンや笑い声、キーワードから、視聴維持率が高くなる「最高の瞬間」をAIが見つけ出します。</p>
+</div>
 
-                <!-- Agency -->
-                <div class="tech-border p-8 py-12 rounded-xl text-center">
-                    <h3 class="text-xl font-bold mb-2">AGENCY</h3>
-                    <div class="text-5xl font-black mb-6">¥14,800 <span class="text-sm text-gray-500 font-normal">/mo</span></div>
-                    <ul class="text-gray-400 text-sm space-y-4 mb-10 text-left font-medium">
-                        <li>✔️ 無制限の生成時間</li>
-                        <li>✔️ カスタムフォント・ロゴ設定</li>
-                        <li>✔️ 複数SNSアカウントの一括管理</li>
-                        <li>✔️ 優先クラウドレンダリング(4K)</li>
-                    </ul>
-                    <button class="w-full py-3 bg-white/10 hover:bg-white/20 rounded font-bold transition">Contact Sales</button>
+
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-amber-50 text-amber-600 border border-amber-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">顔追従オートフレーミング</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">横長動画から人物の顔を自動で追いかけ、縦型（9:16）のフレームに常に収まるよう自動調整します。</p>
+</div>
+
+
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-amber-50 text-amber-600 border border-amber-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">高精度ダイナミックテロップ</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">話者の言葉を瞬時に文字起こしし、TikTok風のポップで視認性の高いテロップを自動で付与します。</p>
+</div>
+
+                    </div>
                 </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-amber-600 font-bold tracking-widest text-sm uppercase">AUTO PUBLISHING</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">SNSへの全自動スケジュール投稿</h2>
+                        <div class="w-12 h-1 bg-amber-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">生成された数十本のショート動画を、最適な時間帯に各SNSへ自動で投稿予約。運用を完全に手放せます。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-amber-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-amber-600 font-bold tracking-widest text-sm uppercase">BRAND KITS</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">ブランドに合わせたカスタマイズ</h2>
+                        <div class="w-12 h-1 bg-amber-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">自社のブランドカラーやロゴ、独自のフォントをあらかじめ設定し、一貫した世界観を保ちます。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: bottom right;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-amber-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-amber-600 font-bold tracking-widest text-sm uppercase">CLIENT SUCCESS</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">Case Study | ビジネス系YouTuber</h2>
+                        <div class="w-12 h-1 bg-amber-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">過去の対談動画をPOD-SHORTSに読み込ませただけで月に100本のショート動画が完成。チャンネル登録者数が1ヶ月で5万人増加しました。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-amber-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-amber-600 font-bold tracking-widest text-sm uppercase">OUR VISION</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">すべての言葉を、チャンスに変える</h2>
+                        <div class="w-12 h-1 bg-amber-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">価値ある情報が「長すぎる」という理由で埋もれるのを防ぎ、最も伝わりやすい形に変換して世界へ拡散します。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: bottom right;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-amber-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+        </div>
+
+        <div class="text-center bg-gray-900 border border-gray-800 rounded-[3rem] p-16 md:p-32 relative overflow-hidden group shadow-2xl">
+            <div class="absolute inset-0 bg-gradient-to-br from-amber-900/40 to-transparent"></div>
+            <div class="relative z-10">
+                <h2 class="text-4xl md:text-5xl font-black mb-8 text-white">コンテンツの「寿命」を最大化する。</h2>
+                <p class="text-gray-300 mb-12 max-w-xl mx-auto text-lg leading-relaxed">眠っている過去の動画資産が、TikTokとYouTube Shortsで数百万再生を叩き出します。</p>
+                <a href="../index.html" class="bg-amber-500 hover:bg-amber-400 text-white px-12 py-5 rounded-full font-bold text-lg inline-flex items-center gap-3 transition transform hover:-translate-y-1 shadow-lg shadow-amber-500/30">
+                    PORTFOLIOに戻る
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                </a>
             </div>
         </div>
-    </section>
-
-    <!-- Footer CTA -->
-    <section class="py-32 bg-cyberBlack text-center border-t border-neonCyan/20 relative overflow-hidden" id="start">
-        <div class="max-w-3xl mx-auto px-6 relative z-10">
-            <h2 class="font-black text-4xl md:text-5xl mb-8 leading-tight">編集はAIに任せて、<br>あなたはもっとゲームを楽しもう。</h2>
-            <button class="bg-white text-cyberBlack font-black text-2xl px-16 py-6 rounded-sm shadow-[0_0_40px_rgba(255,255,255,0.4)] hover:scale-105 transition-transform flex items-center justify-center gap-4 mx-auto">
-                <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714Z"/></svg>
-                Twitchで無料登録
-            </button>
-            <p class="mt-6 text-gray-500 font-bold text-sm">Youtubeでのログイン機能も近日公開予定</p>
-        </div>
-    </section>
-
-    <footer class="bg-cyberDark border-t border-white/5 py-10 text-center text-gray-600 text-sm font-en">
-        &copy; 2026 CLIPSTORM.AI Inc. All Streaming Rights Reserved.
-    </footer>
-
+    </main>
+        
 </body>
 </html>

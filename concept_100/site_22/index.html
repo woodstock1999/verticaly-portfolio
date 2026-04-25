@@ -39,261 +39,135 @@
 </head>
 <body class="bg-gray-50 text-stone-800 min-h-screen font-sans antialiased overflow-x-hidden">
 
-    <div class="medical-bg"></div>
-
-    <header class="w-full px-6 md:px-12 py-6 flex justify-between items-center z-50 bg-white/80 backdrop-blur-md fixed top-0 border-b border-slate-100">
-        <div class="font-extrabold text-xl tracking-tight text-primary flex items-center gap-2">
-            <div class="w-4 h-4 bg-primary rounded-full animate-pulse"></div> MEDICORE
+    <main class="pt-[140px] pb-24 px-6 md:px-12 max-w-7xl mx-auto">
+        <div class="text-center max-w-4xl mx-auto mb-20 relative">
+            <span class="bg-gray-100 text-amber-600 border border-gray-200 px-5 py-2 text-xs font-black rounded-full tracking-widest mb-8 inline-block shadow-sm uppercase">HEALTHCARE / AI SCRIBE</span>
+            <h1 class="text-4xl md:text-[54px] font-black mb-8 leading-[1.2] tracking-tight text-gray-900">医師の目を、<br>「パソコン」から「患者」へ戻す。</h1>
+            <p class="text-lg md:text-xl text-gray-600 font-medium leading-relaxed max-w-3xl mx-auto">MEDICOREは、診察室での会話をAIが自動で聴取し、電子カルテのフォーマット（SOAP形式）に自動要約・入力する医療向け音声認識AIスクライブです。</p>
         </div>
-        <div class="hidden md:flex gap-8 font-bold text-sm text-slate-600">
-            <a href="#problem" class="hover:text-primary transition-colors">The Crisis</a>
-            <a href="#features" class="hover:text-primary transition-colors">Platform</a>
-            <a href="#proof" class="hover:text-primary transition-colors">Outcomes</a>
-            <a href="#security" class="hover:text-primary transition-colors">Security</a>
+
+        <div class="relative w-full aspect-[21/9] md:aspect-video rounded-[32px] overflow-hidden shadow-2xl mb-32 border border-gray-200/50 group bg-zinc-900">
+            <img src="img/ui.png" alt="UI Dashboard" class="w-full h-full object-cover transition-transform duration-[3s] group-hover:scale-[1.02]" onerror="this.src='https://picsum.photos/seed/placeholder/1600/900'">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none blend-overlay"></div>
         </div>
-        <a href="#demo" class="bg-primary text-white px-6 py-2 rounded-full text-sm font-bold hover:bg-dark transition-colors shadow-lg shadow-primary/30">
-            システムの導入相談
-        </a>
-    </header>
 
-    <!-- 1. Clean Hero -->
-    <section class="min-h-screen flex flex-col justify-center items-center text-center px-4 max-w-5xl mx-auto pt-32 pb-20">
-        <div class="text-xs font-bold tracking-[0.2em] uppercase text-primary mb-8 bg-blue-50 px-4 py-2 rounded-full border border-blue-100 mt-10">
-            Next-Gen Electronic Health Record & ERP
-        </div>
-        <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold mb-8 leading-tight tracking-tight">
-            <span class="phrase">医療の質は、</span><br>
-            <span class="phrase text-primary">「データへの到達時間」で決まる。</span>
-        </h1>
-        <p class="text-lg md:text-xl text-slate-600 leading-relaxed font-semibold max-w-2xl mx-auto mb-16">
-            <span class="phrase">紙と分断されたシステムに奪われる「医師の1時間」を取り戻す。</span>
-            <span class="phrase">問診からAI診断予測、会計プロセスまでを単一のUIに統合した、</span>
-            <span class="phrase">次世代のクラウドネイティブ医療基盤。</span>
-        </p>
-
-        <!-- VISUAL REALIZATION HOOK -->
-        <div class="w-full max-w-4xl rounded-2xl overflow-hidden border-2 border-slate-200 shadow-[0_30px_60px_rgba(10,88,202,0.15)] relative">
-            <img src="img/ui.png" alt="Medicore AI Diagnosis Dashboard" class="w-full h-auto object-cover relative z-0">
-            <div class="absolute bottom-4 right-4 bg-white/90 backdrop-blur text-primary text-xs font-bold px-4 py-2 rounded-full shadow-lg border border-primary/20 flex items-center gap-2">
-                <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
-                AI Triage Active
-            </div>
-        </div>
-    </section>
-
-    <!-- 2. Problem Awareness (The Crisis) -->
-    <section class="py-24 bg-dark text-white relative overflow-hidden" id="problem">
-        <div class="absolute top-0 right-0 w-96 h-96 bg-primary/20 rounded-full blur-[100px] -translate-y-1/2"></div>
-        <div class="max-w-7xl mx-auto px-6 relative z-10">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-                <div>
-                    <h2 class="text-3xl md:text-5xl font-extrabold mb-8 leading-tight">
-                        <span class="phrase">「システムのために働く」医療現場。</span><br>
-                        <span class="phrase text-blue-400">限界は既に来ています。</span>
-                    </h2>
-                    <p class="text-slate-300 font-medium leading-loose mb-8">
-                        電子カルテ（EHR）、PACS（医用画像管理）、検体検査システム、そして医療事会計。すべてが分断されたベンダーによって構築されているため、医師は1人の患者の「全体像」を把握するために、1日平均500回以上の無駄なクリックを強いられています。<br><br>
-                        これは単なる「不便」ではありません。診療時間の圧迫による、重大な見落としリスクの温床です。
-                    </p>
-                </div>
-                <div class="grid grid-cols-1 gap-6">
-                    <div class="bg-white/5 border border-white/10 p-8 rounded-2xl backdrop-blur-sm">
-                        <div class="text-blue-400 font-extrabold text-4xl mb-2">43<span class="text-xl">%</span></div>
-                        <div class="font-bold text-lg mb-2">医師の業務時間の割合</div>
-                        <p class="text-sm text-slate-400">診察ではなく「データ入力と探索」に費やされる膨大な時間。</p>
-                    </div>
-                    <div class="bg-white/5 border border-white/10 p-8 rounded-2xl backdrop-blur-sm">
-                        <div class="text-blue-400 font-extrabold text-4xl mb-2">2.5<span class="text-xl">倍</span></div>
-                        <div class="font-bold text-lg mb-2">燃え尽き症候群（バーンアウト）率</div>
-                        <p class="text-sm text-slate-400">レガシーなシステムによるUIの不備が、医療従事者のストレスの最大の要因に。</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 3. Core Features / Platform (Bento Expanded) -->
-    <section class="py-32 bg-surface" id="features">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center mb-20">
-                <span class="text-primary font-extrabold tracking-widest text-sm bg-blue-50 px-4 py-1 rounded-full">CORE CAPABILITIES</span>
-                <h2 class="text-4xl md:text-5xl font-extrabold text-dark mt-6 mb-4">複雑な医療を、最速のUIで。</h2>
-                <p class="text-slate-500 font-semibold text-lg max-w-2xl mx-auto">分断を取り払い、臨床推論をアシストする。これこそが次世代のERPです。</p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
-                <!-- Data Aggregation -->
-                <div class="md:col-span-8 bg-white p-10 rounded-3xl float-card border border-slate-100 flex flex-col justify-center">
-                    <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center text-primary mb-6">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
-                    </div>
-                    <h3 class="text-3xl font-extrabold mb-4">分断されたシステムの即時統合</h3>
-                    <p class="text-slate-600 font-medium leading-loose max-w-xl">
-                        レガシーな電子カルテと部門システム（PACS・RIS・LIS等）をネイティブAPIで統合。1つのタイムライン上で、血液検査の推移、CT画像、過去の紹介状がシームレスに俯瞰できます。情報を探す時間はゼロになります。
-                    </p>
-                </div>
-
-                <!-- Dictation -->
-                <div class="md:col-span-4 bg-dark text-white p-10 rounded-3xl float-card border border-slate-800">
-                    <div class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center text-white mb-6">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" y1="19" x2="12" y2="22"></line></svg>
-                    </div>
-                    <h3 class="text-2xl font-extrabold mb-4">医療特化型<br>Voice Dictation</h3>
-                    <p class="text-slate-400 font-medium leading-loose text-sm">
-                        カルテのキーボード入力は過去のものに。医療用語・医薬品名を精緻に学習したAI音声入力により、患者の目を見たまま対話するだけでSOAP形式のカルテが自動で書き起こされます。
-                    </p>
-                </div>
-
-                <!-- AI Predictive Insight -->
-                <div class="md:col-span-6 bg-primary text-white p-10 rounded-3xl float-card shadow-xl shadow-primary/20 relative overflow-hidden">
-                    <div class="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent pointer-events-none"></div>
-                    <h3 class="text-3xl font-extrabold text-blue-50 mb-4">疾患の早期発見を促す<br>AI Predictive Triage</h3>
-                    <p class="text-blue-100 font-medium leading-loose mb-8">
-                        電子カルテに入力される症状ベクトルと過去の何百万もの症例データをリアルタイムに照合。見落としがちな微細な検査数値の変動から、重大な隠れ疾患のリスクを「予測的アラート」としてダッシュボードに掲出します。
-                    </p>
-                    <div class="bg-dark/40 backdrop-blur border border-white/20 p-4 rounded-xl flex items-center gap-4">
-                        <div class="w-10 h-10 rounded-full bg-red-500/20 flex items-center justify-center text-red-300">!</div>
-                        <div>
-                            <div class="font-bold text-sm text-red-100">Sepsis Risk Elevated: 85%</div>
-                            <div class="text-xs text-white/50">Based on recent vitals & lab results</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Billing & Operations -->
-                <div class="md:col-span-6 bg-white p-10 rounded-3xl float-card border border-slate-100 flex flex-col justify-center">
-                    <h3 class="text-3xl font-extrabold mb-4">レセプト自動算定 & 経営可視化</h3>
-                    <p class="text-slate-600 font-medium leading-loose mb-6">
-                        医師のカルテ記載内容から、算定可能な診療報酬項目（レセプト）をAIが自動抽出し、医事課へ提案。返戻リスクを最小化しながら、病院経営のキャッシュフローと病床稼働率をリアルタイムモニタリングします。
-                    </p>
-                    <div class="flex gap-2">
-                        <span class="px-3 py-1 bg-slate-100 text-slate-600 text-xs font-bold rounded-full">自動請求API</span>
-                        <span class="px-3 py-1 bg-slate-100 text-slate-600 text-xs font-bold rounded-full">病床管理パネル</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 4. Security & Compliance (Crucial) -->
-    <section class="py-32 bg-white border-y border-slate-100" id="security">
-        <div class="max-w-5xl mx-auto px-6 text-center">
-            <h2 class="text-3xl md:text-5xl font-extrabold text-dark mb-8">国家基準を超えるセキュリティ</h2>
-            <p class="text-slate-600 font-semibold mb-16 max-w-2xl mx-auto leading-loose">
-                患者の「命」と「究極のプライバシー」を預かるシステムとして、いかなる妥協も許しません。最新のゼロトラスト・アーキテクチャで構築されています。
-            </p>
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-                <!-- Logos/Badges representing tech -->
-                <div class="p-6 border border-slate-200 rounded-2xl flex flex-col items-center">
-                    <div class="w-12 h-12 bg-blue-50 rounded-full mb-4 flex items-center justify-center text-primary font-black text-xl">3</div>
-                    <div class="font-bold text-sm">3省2ガイドライン準拠</div>
-                </div>
-                <div class="p-6 border border-slate-200 rounded-2xl flex flex-col items-center">
-                    <div class="w-12 h-12 bg-blue-50 rounded-full mb-4 flex items-center justify-center text-primary font-black text-xl">I</div>
-                    <div class="font-bold text-sm">ISO/IEC 27001 ISMS</div>
-                </div>
-                <div class="p-6 border border-slate-200 rounded-2xl flex flex-col items-center">
-                    <div class="w-12 h-12 bg-blue-50 rounded-full mb-4 flex items-center justify-center text-primary font-black text-xl">F</div>
-                    <div class="font-bold text-sm">HL7 FHIR API対応</div>
-                </div>
-                <div class="p-6 border border-slate-200 rounded-2xl flex flex-col items-center">
-                    <div class="w-12 h-12 bg-blue-50 rounded-full mb-4 flex items-center justify-center text-primary font-black text-xl">E</div>
-                    <div class="font-bold text-sm">256-bit E2E 暗号化</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 5. FAQ Section -->
-    <section class="py-32 bg-surface">
-        <div class="max-w-4xl mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-extrabold">導入に関するよくあるご質問</h2>
-            </div>
-            
-            <div class="space-y-6">
-                <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm">
-                    <h3 class="text-lg font-extrabold mb-4 flex items-center text-dark">
-                        <span class="text-primary mr-4 text-2xl">Q.</span>
-                        既存のオンプレミス型電子カルテからのデータ移行は可能ですか？
-                    </h3>
-                    <p class="text-slate-600 font-medium border-t border-slate-100 pt-4 leading-loose">
-                        はい、可能です。当社のデータエンジニアリングチームが、既存ベンダー（富士通、PHC等）の独自DBから標準的なSS-MIX2形式等へマッピングし、過去の紙カルテのスキャンデータも含めて安全にマイグレーションを実行します。
-                    </p>
-                </div>
-                <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm">
-                    <h3 class="text-lg font-extrabold mb-4 flex items-center text-dark">
-                        <span class="text-primary mr-4 text-2xl">Q.</span>
-                        クラウド型（SaaS）のため、ネットワーク障害時が心配です。
-                    </h3>
-                    <p class="text-slate-600 font-medium border-t border-slate-100 pt-4 leading-loose">
-                        MEDICOREはハイブリッドクラウド構成を採用しています。院内へのエッジサーバー設置により、ローカル環境でもオフラインで最低限のカルテ参照・入力が可能です。ネットワーク復旧時に自動でクラウドと同期されます。
-                    </p>
-                </div>
-                <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm">
-                    <h3 class="text-lg font-extrabold mb-4 flex items-center text-dark">
-                        <span class="text-primary mr-4 text-2xl">Q.</span>
-                        クリニック（無床）でも導入できますか？
-                    </h3>
-                    <p class="text-slate-600 font-medium border-t border-slate-100 pt-4 leading-loose">
-                        もちろん可能です。総合病院向けのフルスイート版だけでなく、無床クリニック特化型の軽量版（MEDICORE Lite）を提供しています。料金もサブスクリプションで最適化されています。
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 6. Ultimate CTA -->
-    <section class="py-32 bg-dark relative overflow-hidden" id="demo">
-        <!-- Abstract UI lines -->
-        <div class="absolute inset-0 opacity-20" style="background-image: linear-gradient(#0A58CA 1px, transparent 1px), linear-gradient(90deg, #0A58CA 1px, transparent 1px); background-size: 100px 100px;"></div>
+        <div class="flex flex-col gap-32 mb-32">
         
-        <div class="max-w-3xl mx-auto px-6 text-center relative z-10">
-            <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-8">
-                次世代のカルテ体験を、<br><span class="text-blue-400">貴院の手に。</span>
-            </h2>
-            <p class="text-slate-400 font-semibold mb-12 text-lg">
-                実際のデモ画面を操作しながら、圧倒的なレスポンス速度とAIのインサイトをご体感ください。専任の医療DXコンサルタントが無料でご案内します。
-            </p>
-            
-            <form class="bg-white/10 backdrop-blur-xl p-10 rounded-3xl border border-white/20 shadow-2xl text-left">
-                <div class="mb-6">
-                    <label class="block text-sm font-bold text-slate-300 mb-2">医療機関名・法人名 <span class="text-red-400">*</span></label>
-                    <input type="text" class="w-full bg-dark/50 border border-slate-600 p-4 rounded-xl focus:outline-none focus:border-blue-500 font-semibold text-white transition-colors" required>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                    <div>
-                        <label class="block text-sm font-bold text-slate-300 mb-2">ご担当者名 <span class="text-red-400">*</span></label>
-                        <input type="text" class="w-full bg-dark/50 border border-slate-600 p-4 rounded-xl focus:outline-none focus:border-blue-500 font-semibold text-white transition-colors" required>
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-amber-600 font-bold tracking-widest text-sm uppercase">THE CLERICAL BURDEN</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">医師の労働時間の半分を奪うカルテ入力</h2>
+                        <div class="w-12 h-1 bg-amber-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">電子カルテのタイピング作業が医師を疲弊させ、患者とのアイコンタクトを奪い、診察の質を低下させています。</p>
                     </div>
-                    <div>
-                        <label class="block text-sm font-bold text-slate-300 mb-2">施設規模</label>
-                        <select class="w-full bg-dark/50 border border-slate-600 p-4 rounded-xl focus:outline-none focus:border-blue-500 font-semibold text-slate-300 transition-colors">
-                            <option>クリニック（無床）</option>
-                            <option>病院（199床以下）</option>
-                            <option>総合・大学病院（200床以上）</option>
-                        </select>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-amber-900/20 to-transparent"></div>
                     </div>
                 </div>
-                <div class="mb-10">
-                    <label class="block text-sm font-bold text-slate-300 mb-2">ご連絡先メールアドレス <span class="text-red-400">*</span></label>
-                    <input type="email" class="w-full bg-dark/50 border border-slate-600 p-4 rounded-xl focus:outline-none focus:border-blue-500 font-semibold text-white transition-colors" required>
+                
+                <div class="mt-10">
+                    <div class="text-center mb-16">
+                        <span class="text-amber-600 font-bold tracking-widest text-sm uppercase">MEDICAL NLP</span>
+                        <h2 class="text-3xl md:text-4xl font-black mt-4 text-gray-900">日常会話から医学用語を抽出する</h2>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-amber-50 text-amber-600 border border-amber-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">${f.t}</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">${f.d}</p>
+</div>
+
+
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-amber-50 text-amber-600 border border-amber-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">${f.t}</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">${f.d}</p>
+</div>
+
+
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-amber-50 text-amber-600 border border-amber-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">${f.t}</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">${f.d}</p>
+</div>
+
+                    </div>
                 </div>
-                <button type="submit" class="w-full bg-primary text-white font-extrabold text-lg py-5 rounded-xl hover:bg-blue-600 transition-colors shadow-[0_0_20px_rgba(10,88,202,0.5)]">
-                    無料オンラインデモを予約する
-                </button>
-            </form>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-amber-600 font-bold tracking-widest text-sm uppercase">PERSONALIZED STYLE</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">専門医ごとの「書き方のクセ」を学習</h2>
+                        <div class="w-12 h-1 bg-amber-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">各医師の過去のカルテデータを学習し、その医師が自分で打ったかのような好みのフォーマットと文体で出力します。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-amber-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-amber-600 font-bold tracking-widest text-sm uppercase">DOCUMENT AUTOMATION</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">紹介状や診断書のワンクリック生成</h2>
+                        <div class="w-12 h-1 bg-amber-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">カルテデータをもとに他院への紹介状や診断書の下書きを生成。医師は最終確認をするだけになります。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: bottom right;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-amber-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-amber-600 font-bold tracking-widest text-sm uppercase">TIME SAVED</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">Case Study | 総合病院・内科外来</h2>
+                        <div class="w-12 h-1 bg-amber-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">昼休みも返上でカルテ入力を行っていた内科医。導入後1日平均1.5時間の事務作業が削減され、対話する余裕が生まれました。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-amber-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-amber-600 font-bold tracking-widest text-sm uppercase">OUR VISION</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">医療の温もりをテクノロジーで守る</h2>
+                        <div class="w-12 h-1 bg-amber-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">名医の診る力と聴く力を最大限に引き出すための最高の助手となります。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: bottom right;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-amber-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
         </div>
-    </section>
 
-    <footer class="bg-[#050B14] py-12 text-center text-slate-500 text-sm font-bold">
-        <div class="flex justify-center gap-8 mb-6">
-            <a href="#" class="hover:text-white transition-colors">製品情報</a>
-            <a href="#" class="hover:text-white transition-colors">セキュリティポリシー</a>
-            <a href="#" class="hover:text-white transition-colors">企業情報</a>
+        <div class="text-center bg-gray-900 border border-gray-800 rounded-[3rem] p-16 md:p-32 relative overflow-hidden group shadow-2xl">
+            <div class="absolute inset-0 bg-gradient-to-br from-amber-900/40 to-transparent"></div>
+            <div class="relative z-10">
+                <h2 class="text-4xl md:text-5xl font-black mb-8 text-white">${data.ctaTitle}</h2>
+                <p class="text-gray-300 mb-12 max-w-xl mx-auto text-lg leading-relaxed">${data.ctaDesc}</p>
+                <a href="../index.html" class="bg-amber-500 hover:bg-amber-400 text-white px-12 py-5 rounded-full font-bold text-lg inline-flex items-center gap-3 transition transform hover:-translate-y-1 shadow-lg shadow-amber-500/30">
+                    PORTFOLIOに戻る
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                </a>
+            </div>
         </div>
-        &copy; 2026 MEDICORE ERP Technologies. 
-    </footer>
-
+    </main>
+        
 </body>
 </html>

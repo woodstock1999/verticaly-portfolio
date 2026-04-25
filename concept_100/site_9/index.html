@@ -47,325 +47,135 @@
 </head>
 <body class="bg-gray-50 text-stone-800 min-h-screen font-sans antialiased overflow-x-hidden">
 
-    <!-- Background Glows -->
-    <div class="glow w-[600px] h-[600px] bg-brand-600 top-[-200px] right-[-200px]"></div>
-    <div class="glow w-[500px] h-[500px] bg-indigo-500 bottom-[-100px] left-[-100px]"></div>
-
-    <!-- Header -->
-    <header class="fixed w-full top-0 z-50 border-b border-white/5 bg-dark/60 backdrop-blur-xl">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="flex items-center gap-10">
-                <a href="../../index.html" class="text-[10px] tracking-widest text-white/40 hover:text-white transition uppercase">← Portfolio</a>
-                <div class="flex items-center gap-2.5">
-                    <div class="w-8 h-8 rounded-lg gradient-brand flex items-center justify-center shadow-lg shadow-brand-500/20">
-                        <span class="text-white font-bold text-sm italic">J</span>
-                    </div>
-                    <span class="font-bold text-lg tracking-tight">JOINPAD</span>
-                </div>
-            </div>
-            <nav class="hidden md:flex items-center gap-8 text-[13px] font-medium text-white/60">
-                <a href="#features" class="hover:text-white transition">Features</a>
-                <a href="#impact" class="hover:text-white transition">Impact</a>
-                <a href="#pricing" class="hover:text-white transition">Pricing</a>
-                <a href="#" class="bg-white/5 hover:bg-white/10 px-6 py-2.5 rounded-full border border-white/10 transition">Login</a>
-                <a href="#cta" class="gradient-brand text-white px-6 py-2.5 rounded-full shadow-lg shadow-brand-500/20 hover:scale-105 transition-all active:scale-95">Get Started</a>
-            </nav>
+    <main class="pt-[140px] pb-24 px-6 md:px-12 max-w-7xl mx-auto">
+        <div class="text-center max-w-4xl mx-auto mb-20 relative">
+            <span class="bg-gray-100 text-green-600 border border-gray-200 px-5 py-2 text-xs font-black rounded-full tracking-widest mb-8 inline-block shadow-sm uppercase">DEEP TECH / DATA STORAGE</span>
+            <h1 class="text-4xl md:text-[54px] font-black mb-8 leading-[1.2] tracking-tight text-gray-900">人類のすべてのデータを、<br>「スプーン1杯のDNA」に保存する。</h1>
+            <p class="text-lg md:text-xl text-gray-600 font-medium leading-relaxed max-w-3xl mx-auto">ハードディスクは数年で壊れ、巨大なデータセンターは地球の電力を食い尽くす。IMMORTAL-DATAは、生命の設計図である「DNA配列」をデータストレージとして利用し、情報を数千年間にわたって常温で保存する究極のアーカイビング・テクノロジーです。</p>
         </div>
-    </header>
 
-    <!-- 1. Hero Section -->
-    <section class="relative pt-40 pb-24 px-6 overflow-hidden">
-        <div class="max-w-7xl mx-auto flex flex-col items-center">
-            <div class="gsap-reveal-hero inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass mb-8">
-                <span class="relative flex h-2 w-2">
-                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-400 opacity-75"></span>
-                    <span class="relative inline-flex rounded-full h-2 w-2 bg-brand-500"></span>
-                </span>
-                <span class="text-[11px] font-semibold tracking-wider text-brand-300">NEW: エンゲージメントAI分析機能をリリース</span>
-            </div>
-            
-            <h1 class="gsap-reveal-hero text-center text-5xl md:text-[5.5rem] font-bold leading-[1.05] tracking-tight mb-8">
-                <span class="gradient-text">人事業務のすべてを、</span><br>
-                <span class="text-white/40">ひとつの体験に。</span>
-            </h1>
-            
-            <p class="gsap-reveal-hero text-center text-white/60 text-lg md:text-xl leading-relaxed max-w-2xl mb-12">
-                <span class="bunsetsu">採用管理、</span><span class="bunsetsu">入社手続き、</span><span class="bunsetsu">人材データベースまで。</span><span class="bunsetsu">バラバラだったツールをJOINPADが統合し、</span><span class="bunsetsu">組織のパフォーマンスを最大化します。</span>
-            </p>
-
-            <div class="gsap-reveal-hero flex flex-col sm:flex-row gap-5 mb-24">
-                <a href="#cta" class="gradient-brand px-10 py-5 rounded-2xl text-[15px] font-bold shadow-2xl shadow-brand-500/40 hover:scale-105 transition-all">
-                    無料で試してみる
-                </a>
-                <a href="#" class="glass px-10 py-5 rounded-2xl text-[15px] font-bold hover:bg-white/5 transition-all">
-                    デモを予約する
-                </a>
-            </div>
-
-            <!-- Dashboard Mockup -->
-            <div class="gsap-reveal-hero relative w-full max-w-6xl mx-auto group">
-                <div class="absolute -inset-4 bg-brand-500/20 rounded-[40px] blur-3xl opacity-0 group-hover:opacity-100 transition duration-700"></div>
-                <div class="relative bg-[#0F111A] rounded-[32px] p-2 border border-white/10 shadow-3xl overflow-hidden">
-                    <div class="flex items-center gap-1.5 px-6 py-4 border-b border-white/5 bg-white/[0.02]">
-                        <div class="w-3 h-3 rounded-full bg-[#FF5F57]"></div>
-                        <div class="w-3 h-3 rounded-full bg-[#FFBD2E]"></div>
-                        <div class="w-3 h-3 rounded-full bg-[#28C840]"></div>
-                        <div class="flex-1 text-center text-[11px] text-white/20 font-medium tracking-wider">joinpad.app/dashboard</div>
-                    </div>
-                    <img src="img/dashboard.png" alt="JOINPAD Dashboard" class="w-full h-auto rounded-b-[24px]">
-                </div>
-            </div>
+        <div class="relative w-full aspect-[21/9] md:aspect-video rounded-[32px] overflow-hidden shadow-2xl mb-32 border border-gray-200/50 group bg-zinc-900">
+            <img src="img/ui.png" alt="UI Dashboard" class="w-full h-full object-cover transition-transform duration-[3s] group-hover:scale-[1.02]" onerror="this.src='https://picsum.photos/seed/placeholder/1600/900'">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none blend-overlay"></div>
         </div>
-    </section>
 
-    <!-- 2. Trusted By -->
-    <section class="py-20 border-y border-white/5 overflow-hidden">
-        <div class="max-w-7xl mx-auto px-6">
-            <p class="text-center text-[11px] font-bold tracking-[0.3em] text-white/30 uppercase mb-12">Empowering the world's most innovative teams</p>
-            <div class="flex flex-wrap justify-center items-center gap-12 md:gap-20 opacity-30 grayscale hover:grayscale-0 transition-all duration-700">
-                <img src="https://logodix.com/logo/184428.png" class="h-6 md:h-8" alt="Partner">
-                <img src="https://logodix.com/logo/184419.png" class="h-6 md:h-8" alt="Partner">
-                <img src="https://logodix.com/logo/184411.png" class="h-7 md:h-9" alt="Partner">
-                <img src="https://logodix.com/logo/184435.png" class="h-6 md:h-8" alt="Partner">
-                <img src="https://logodix.com/logo/184425.png" class="h-6 md:h-8" alt="Partner">
-            </div>
+        <div class="flex flex-col gap-32 mb-32">
+        
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-green-600 font-bold tracking-widest text-sm uppercase">THE STORAGE APOCALYPSE</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">「データ爆発」とストレージの物理的限界</h2>
+                        <div class="w-12 h-1 bg-green-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">世界中で生成されるデータ量は爆発的に増加していますが、それを保存するHDDの容量向上は限界に達しつつあります。このままでは、「データを保存する場所がなくなり捨てるしかない」未来が訪れます。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-green-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+                <div class="mt-10">
+                    <div class="text-center mb-16">
+                        <span class="text-green-600 font-bold tracking-widest text-sm uppercase">MOLECULAR ARCHIVE</span>
+                        <h2 class="text-3xl md:text-4xl font-black mt-4 text-gray-900">1グラムで10億テラバイトの超高密度</h2>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-green-50 text-green-600 border border-green-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">${f.t}</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">${f.d}</p>
+</div>
+
+
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-green-50 text-green-600 border border-green-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">${f.t}</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">${f.d}</p>
+</div>
+
+
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-green-50 text-green-600 border border-green-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">${f.t}</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">${f.d}</p>
+</div>
+
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-green-600 font-bold tracking-widest text-sm uppercase">ETERNAL LIFESPAN</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">「電気代ゼロ」で数千年保存できる耐久性</h2>
+                        <div class="w-12 h-1 bg-green-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">データセンターのサーバーを冷やす莫大な電力は不要。DNAストレージは一度カプセルに封入すれば電気も空調も一切不要。常温のまま数千年以上データが劣化せずに生き残り続けます。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-green-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-green-600 font-bold tracking-widest text-sm uppercase">FUTURE PROOF</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">フォーマットの陳腐化が起きない</h2>
+                        <div class="w-12 h-1 bg-green-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">フロッピーディスクのように「読み込む機械が世界から消滅している」という規格の陳腐化がありません。人類が生物学を研究し続ける限り、DNAを読み取る機械は数百年後も確実に存在し続けます。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: bottom right;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-green-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-green-600 font-bold tracking-widest text-sm uppercase">HERITAGE PRESERVATION</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">Case Study | 国立公文書館のコールドアーカイブ</h2>
+                        <div class="w-12 h-1 bg-green-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">絶対に失われてはならない文化遺産のデータ。これまでは新しいHDDへデータ移行する莫大なコストがかかっていました。当社の技術により、これらの全データを小瓶一つに収め、永遠に安全保管する体制が整いました。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-green-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-green-600 font-bold tracking-widest text-sm uppercase">OUR VISION</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">情報の「不老不死」を実現する</h2>
+                        <div class="w-12 h-1 bg-green-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">私たちが残した知識や芸術。人類の営みの証であるデータを、地球が滅びるその日まで確実に残し、未来の世代へバトンを繋ぎます。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: bottom right;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-green-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
         </div>
-    </section>
 
-    <!-- 3. Features (Bento Grid) -->
-    <section class="py-32 px-6" id="features">
-        <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-24 gsap-reveal">
-                <h2 class="text-3xl md:text-5xl font-bold mb-6">
-                    <span class="gradient-text">人事のすべてを、</span><br>
-                    <span class="text-white/40">劇的にシンプルへ。</span>
-                </h2>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-12 gap-6 auto-rows-[450px]">
-                <!-- ATS -->
-                <div class="md:col-span-8 glass rounded-[40px] p-10 overflow-hidden relative group gsap-reveal">
-                    <div class="relative z-10 max-w-sm">
-                        <div class="w-12 h-12 rounded-2xl glass flex items-center justify-center mb-6">
-                            <span class="text-2xl">📋</span>
-                        </div>
-                        <h3 class="text-3xl font-bold mb-4">採用管理 (ATS)</h3>
-                        <p class="text-white/50 leading-relaxed mb-8">
-                            <span class="bunsetsu">求人票の自動生成から、</span><span class="bunsetsu">各媒体の応募者管理まで一元化。</span><span class="bunsetsu">パイプラインを止めることなく、</span><span class="bunsetsu">最高の人材との出会いを最大化します。</span>
-                        </p>
-                    </div>
-                    <div class="absolute right-[-20%] bottom-[-10%] w-[70%] transform group-hover:-translate-y-5 transition duration-700">
-                        <img src="img/ats.png" alt="ATS UI" class="rounded-2xl shadow-2xl border border-white/10">
-                    </div>
-                </div>
-
-                <!-- Digital Signing -->
-                <div class="md:col-span-4 glass rounded-[40px] p-10 flex flex-col group gsap-reveal">
-                    <div class="w-12 h-12 rounded-2xl glass flex items-center justify-center mb-6">
-                        <span class="text-2xl">📝</span>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4">入社手続き電子化</h3>
-                    <p class="text-white/50 text-sm leading-relaxed mb-10 flex-1">
-                        <span class="bunsetsu">煩雑な契約締結を</span><span class="bunsetsu">わずか数分で完了。</span><span class="bunsetsu">スマホで完結する</span><span class="bunsetsu">次世代の入社体験を。</span>
-                    </p>
-                    <div class="relative rounded-2xl overflow-hidden shadow-2xl border border-white/10">
-                        <img src="img/onboarding.png" alt="Onboarding UI" class="w-full group-hover:scale-105 transition duration-700">
-                    </div>
-                </div>
-
-                <!-- Analytics -->
-                <div class="md:col-span-12 glass rounded-[40px] p-10 grid grid-cols-1 md:grid-cols-2 gap-12 items-center group gsap-reveal">
-                    <div class="order-2 md:order-1 relative">
-                        <div class="absolute inset-0 bg-brand-500/20 blur-[100px] opacity-0 group-hover:opacity-100 transition duration-700"></div>
-                        <img src="img/analytics.png" alt="Analytics UI" class="relative rounded-2xl shadow-2xl border border-white/10 w-full group-hover:-translate-y-2 transition duration-700">
-                    </div>
-                    <div class="order-1 md:order-2">
-                        <div class="w-12 h-12 rounded-2xl glass flex items-center justify-center mb-6">
-                            <span class="text-2xl">📊</span>
-                        </div>
-                        <h3 class="text-3xl font-bold mb-4">組織エンゲージメント分析</h3>
-                        <p class="text-white/50 leading-relaxed">
-                            <span class="bunsetsu">単なるデータの蓄積ではありません。</span><span class="bunsetsu">AIが従業員のアクションを多角的に分析し、</span><span class="bunsetsu">離職リスクの早期検知や</span><span class="bunsetsu">最適な配置をレコメンドします。</span><span class="bunsetsu">「なんとなく」の組織運営に</span><span class="bunsetsu">終止符を打ちましょう。</span>
-                        </p>
-                        <div class="mt-10 flex gap-6">
-                            <div>
-                                <div class="text-[10px] uppercase tracking-widest text-white/30 mb-1">Impact</div>
-                                <div class="text-2xl font-bold text-brand-300">41%<span class="text-xs text-brand-300/40 ml-1">Churn Reduction</span></div>
-                            </div>
-                            <div class="w-[1px] h-full bg-white/10"></div>
-                            <div>
-                                <div class="text-[10px] uppercase tracking-widest text-white/30 mb-1">Reliability</div>
-                                <div class="text-2xl font-bold text-brand-300">92%<span class="text-xs text-brand-300/40 ml-1">Prediction Rate</span></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 4. Impact Numbers -->
-    <section class="py-32 bg-brand-600/5" id="impact">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
-                <div class="gsap-counter">
-                    <div class="text-5xl md:text-7xl font-bold mb-4 tracking-tighter tabular-nums">72<span class="text-brand-500">%</span></div>
-                    <div class="text-[11px] font-bold tracking-[0.2em] text-white/40 uppercase">業務時間の削減</div>
-                </div>
-                <div class="gsap-counter">
-                    <div class="text-5xl md:text-7xl font-bold mb-4 tracking-tighter tabular-nums">3.2<span class="text-brand-500">x</span></div>
-                    <div class="text-[11px] font-bold tracking-[0.2em] text-white/40 uppercase">採用スピードの向上</div>
-                </div>
-                <div class="gsap-counter">
-                    <div class="text-5xl md:text-7xl font-bold mb-4 tracking-tighter tabular-nums">0<span class="text-brand-500">h</span></div>
-                    <div class="text-[11px] font-bold tracking-[0.2em] text-white/40 uppercase">ペーパーレス化の実現</div>
-                </div>
-                <div class="gsap-counter">
-                    <div class="text-5xl md:text-7xl font-bold mb-4 tracking-tighter tabular-nums">2,400<span class="text-brand-500">+</span></div>
-                    <div class="text-[11px] font-bold tracking-[0.2em] text-white/40 uppercase">導入企業の成功</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 5. Interactive Pricing -->
-    <section class="py-32 px-6" id="pricing">
-        <div class="max-w-5xl mx-auto">
-            <div class="text-center mb-20 gsap-reveal">
-                <h2 class="text-3xl md:text-5xl font-bold mb-6">すべての成長に、<br>最適なプランを。</h2>
-                <div class="flex items-center justify-center gap-4 mt-10">
-                    <span class="text-sm text-white/40">月払い</span>
-                    <button class="w-12 h-6 rounded-full bg-brand-600 relative p-1 shadow-inner shadow-black/20" id="pricing-toggle">
-                        <div class="w-4 h-4 bg-white rounded-full transition-transform translate-x-6"></div>
-                    </button>
-                    <span class="text-sm font-bold">年払い <span class="text-[10px] text-brand-300 bg-brand-500/20 px-2 py-0.5 rounded ml-1">20% OFF</span></span>
-                </div>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Starter -->
-                <div class="glass border-white/5 rounded-[40px] p-10 flex flex-col h-full gsap-reveal">
-                    <div class="text-brand-400 font-bold tracking-widest text-[11px] mb-2 uppercase">Starter</div>
-                    <h3 class="text-3xl font-bold mb-2">スタートアップ</h3>
-                    <div class="text-4xl font-bold mb-8">¥29,800<span class="text-sm text-white/30 font-normal">/月</span></div>
-                    <ul class="space-y-4 mb-12 flex-1">
-                        <li class="text-sm text-white/60 flex items-center gap-3"><span class="text-brand-400">✓</span> <span>採用管理ツール (ATS)</span></li>
-                        <li class="text-sm text-white/60 flex items-center gap-3"><span class="text-brand-400">✓</span> <span>入社手続き電子化</span></li>
-                        <li class="text-sm text-white/60 flex items-center gap-3"><span class="text-brand-400">✓</span> <span>基本人材データベース</span></li>
-                    </ul>
-                    <a href="#" class="w-full glass py-4 rounded-2xl text-[13px] font-bold text-center hover:bg-white/5 transition">14日間無料で試す</a>
-                </div>
-
-                <!-- Growth -->
-                <div class="gradient-brand rounded-[40px] p-1 w-full scale-105 shadow-2xl shadow-brand-500/40 gsap-reveal">
-                    <div class="bg-surface rounded-[38px] p-10 flex flex-col h-full h-full relative overflow-hidden">
-                        <div class="absolute top-0 right-0 py-1.5 px-6 gradient-brand text-[10px] font-bold uppercase tracking-widest transform rotate-45 translate-x-10 translate-y-3">Popular</div>
-                        <div class="text-brand-400 font-bold tracking-widest text-[11px] mb-2 uppercase">Pro</div>
-                        <h3 class="text-3xl font-bold mb-2">グロース</h3>
-                        <div class="text-4xl font-bold mb-8">¥79,800<span class="text-sm text-white/30 font-normal">/月</span></div>
-                        <ul class="space-y-4 mb-12 flex-1">
-                            <li class="text-sm text-white/60 flex items-center gap-3"><span class="text-brand-400">✓</span> <span>Starterの全機能</span></li>
-                            <li class="text-sm text-white/60 flex items-center gap-3"><span class="text-brand-400">✓</span> <span>エンゲージメント分析AI</span></li>
-                            <li class="text-sm text-white/60 flex items-center gap-3"><span class="text-brand-400">✓</span> <span>外部ツール連携 (API)</span></li>
-                            <li class="text-sm text-white/60 flex items-center gap-3"><span class="text-brand-400">✓</span> <span>専任サポート担当</span></li>
-                        </ul>
-                        <a href="#" class="w-full gradient-brand py-4 rounded-2xl text-[13px] font-bold text-center shadow-lg shadow-brand-500/20 hover:scale-105 transition">まずは資料請求する</a>
-                    </div>
-                </div>
-
-                <!-- Enterprise -->
-                <div class="glass border-white/5 rounded-[40px] p-10 flex flex-col h-full gsap-reveal">
-                    <div class="text-white/30 font-bold tracking-widest text-[11px] mb-2 uppercase">Enterprise</div>
-                    <h3 class="text-3xl font-bold mb-2">エンタープライズ</h3>
-                    <div class="text-4xl font-bold mb-8">要相談</div>
-                    <ul class="space-y-4 mb-12 flex-1">
-                        <li class="text-sm text-white/60 flex items-center gap-3"><span class="text-brand-400">✓</span> <span>全機能への無制限アクセス</span></li>
-                        <li class="text-sm text-white/60 flex items-center gap-3"><span class="text-brand-400">✓</span> <span>カスタム権限管理</span></li>
-                        <li class="text-sm text-white/60 flex items-center gap-3"><span class="text-brand-400">✓</span> <span>監査ログ & 高度なセキュリティ</span></li>
-                        <li class="text-sm text-white/60 flex items-center gap-3"><span class="text-brand-400">✓</span> <span>SLA 99.9% 保証</span></li>
-                    </ul>
-                    <a href="#" class="w-full glass py-4 rounded-2xl text-[13px] font-bold text-center hover:bg-white/5 transition">専門チームに相談</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer / Last CTA -->
-    <footer class="py-24 border-t border-white/5 relative bg-dark" id="cta">
-        <div class="max-w-4xl mx-auto px-6 text-center">
-            <h2 class="text-4xl md:text-6xl font-bold mb-8">組織の未来を、<br>今、アップデートしよう。</h2>
-            <div class="flex flex-col sm:flex-row gap-5 justify-center mb-16">
-                <a href="#" class="gradient-brand px-12 py-5 rounded-2xl text-base font-bold shadow-2xl shadow-brand-500/40 hover:scale-105 transition-all">
-                    14日間のフリートライアルを開始
+        <div class="text-center bg-gray-900 border border-gray-800 rounded-[3rem] p-16 md:p-32 relative overflow-hidden group shadow-2xl">
+            <div class="absolute inset-0 bg-gradient-to-br from-green-900/40 to-transparent"></div>
+            <div class="relative z-10">
+                <h2 class="text-4xl md:text-5xl font-black mb-8 text-white">記憶を、永遠のものへ。</h2>
+                <p class="text-gray-300 mb-12 max-w-xl mx-auto text-lg leading-relaxed">電子の波ではなく、生命の分子へ。地球上で最も古く、最も高密度な情報メディアが、データ爆発の危機を救います。</p>
+                <a href="../index.html" class="bg-green-500 hover:bg-green-400 text-white px-12 py-5 rounded-full font-bold text-lg inline-flex items-center gap-3 transition transform hover:-translate-y-1 shadow-lg shadow-green-500/30">
+                    PORTFOLIOに戻る
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
                 </a>
             </div>
-            
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-left mb-24 border-t border-white/5 pt-16">
-                <div>
-                    <h4 class="text-xs font-bold tracking-widest text-white/20 uppercase mb-6">Product</h4>
-                    <ul class="space-y-3 text-[13px] text-white/50">
-                        <li><a href="#" class="hover:text-white transition">Features</a></li>
-                        <li><a href="#" class="hover:text-white transition">Integrations</a></li>
-                        <li><a href="#" class="hover:text-white transition">Security</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-xs font-bold tracking-widest text-white/20 uppercase mb-6">Company</h4>
-                    <ul class="space-y-3 text-[13px] text-white/50">
-                        <li><a href="#" class="hover:text-white transition">About us</a></li>
-                        <li><a href="#" class="hover:text-white transition">Careers</a></li>
-                        <li><a href="#" class="hover:text-white transition">Terms</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-xs font-bold tracking-widest text-white/20 uppercase mb-6">Resources</h4>
-                    <ul class="space-y-3 text-[13px] text-white/50">
-                        <li><a href="#" class="hover:text-white transition">Blog</a></li>
-                        <li><a href="#" class="hover:text-white transition">Status</a></li>
-                        <li><a href="#" class="hover:text-white transition">Docs</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <div class="flex items-center gap-2 mb-6">
-                        <div class="w-6 h-6 rounded bg-brand-600 flex items-center justify-center font-bold text-[10px] italic">J</div>
-                        <span class="font-bold text-sm tracking-tight text-white/80">JOINPAD</span>
-                    </div>
-                    <p class="text-[11px] text-white/30 leading-relaxed">© 2026 JOINPAD Inc.<br>Omotesando Hills B1F, Jingumae, Shibuya-ku, Tokyo</p>
-                </div>
-            </div>
         </div>
-    </footer>
-
-    <script>
-        gsap.registerPlugin(ScrollTrigger);
-
-        // Hero Stagger
-        gsap.from(".gsap-reveal-hero", {
-            y: 30, opacity: 0, duration: 1, stagger: 0.15, ease: "power4.out", delay: 0.2
-        });
-
-        // Content Scroll Reveal
-        document.querySelectorAll('.gsap-reveal').forEach((el) => {
-            gsap.from(el, {
-                scrollTrigger: { trigger: el, start: "top 85%", toggleActions: "play none none none" },
-                y: 40, opacity: 0, duration: 1, ease: "power3.out"
-            });
-        });
-
-        // Counter Animation
-        document.querySelectorAll('.gsap-counter').forEach((el) => {
-            const numEl = el.querySelector('.font-bold');
-            const target = parseFloat(numEl.innerText);
-            gsap.fromTo(numEl, { innerText: 0 }, {
-                innerText: target, duration: 2, ease: "power2.out",
-                scrollTrigger: { trigger: el, start: "top 90%" },
-                snap: { innerText: target % 1 === 0 ? 1 : 0.1 },
-                onUpdate: function() {
-                    const current = parseFloat(this.targets()[0].innerText);
-                    numEl.innerHTML = (current % 1 === 0 ? current : current.toFixed(1)) + numEl.innerHTML.replace(/[0-9.]/g, '');
-                }
-            });
-        });
-    </script>
+    </main>
+        
 </body>
 </html>

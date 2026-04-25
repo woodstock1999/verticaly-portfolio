@@ -17,84 +17,135 @@
 </head>
 <body class="bg-gray-50 text-stone-800 min-h-screen font-sans antialiased overflow-x-hidden">
 
-    <nav class="fixed w-full z-50 backdrop-blur-md bg-opacity-90 bg-white/90 border-b border-gray-200 px-8 py-4 flex justify-between items-center transition-all shadow-sm">
-        <a href="../../index.html" class="text-xs tracking-[0.2em] hover:opacity-60 transition font-mincho">← 目次</a>
-        <div class="font-mincho text-xl tracking-[0.5em]">一期庵</div>
-        <div class="hidden md:flex gap-10 text-[11px] tracking-[0.2em] font-mincho">
-            <a href="#about" class="hover:opacity-60 transition">茶の心</a>
-            <a href="#experience" class="hover:opacity-60 transition">体験</a>
-            <a href="#reserve" class="hover:opacity-60 transition">ご予約</a>
+    <main class="pt-[140px] pb-24 px-6 md:px-12 max-w-7xl mx-auto">
+        <div class="text-center max-w-4xl mx-auto mb-20 relative">
+            <span class="bg-gray-100 text-amber-600 border border-gray-200 px-5 py-2 text-xs font-black rounded-full tracking-widest mb-8 inline-block shadow-sm uppercase">DEEP TECH / NEURO TECHNOLOGY</span>
+            <h1 class="text-4xl md:text-[54px] font-black mb-8 leading-[1.2] tracking-tight text-gray-900">あなたの「脳」を、<br>クラウドに直接接続する。</h1>
+            <p class="text-lg md:text-xl text-gray-600 font-medium leading-relaxed max-w-3xl mx-auto">タイピングの遅さが、思考のスピードを制限している。NEURAL-WORKは、頭にかぶるだけの非侵襲型・脳波読み取りデバイスを用い、「考えるだけ」で文章を入力し、AIに指示を出すことができる究極の思考拡張インターフェースです。</p>
         </div>
-    </nav>
 
-    <!-- Hero -->
-    <header class="relative h-screen flex items-end overflow-hidden">
-        <div class="absolute inset-0">
-            <img src="img/hero.png" alt="Tea Ceremony" class="w-full h-full object-cover">
-            <div class="absolute inset-0 bg-gradient-to-t from-[#1a1a14] via-[#1a1a14]/30 to-transparent"></div>
+        <div class="relative w-full aspect-[21/9] md:aspect-video rounded-[32px] overflow-hidden shadow-2xl mb-32 border border-gray-200/50 group bg-zinc-900">
+            <img src="img/ui.png" alt="UI Dashboard" class="w-full h-full object-cover transition-transform duration-[3s] group-hover:scale-[1.02]" onerror="this.src='https://picsum.photos/seed/placeholder/1600/900'">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none blend-overlay"></div>
         </div>
-        <div class="relative z-10 p-8 md:p-20 pb-20 md:pb-32 max-w-2xl">
-            <div class="text-[11px] tracking-[0.6em] text-[#8aad6e] font-mincho mb-6">
-                <span class="inline-block">京都 北山</span><span class="inline-block ml-4">完全予約制</span>
-            </div>
-            <h1 class="text-5xl md:text-7xl font-mincho tracking-[0.2em] mb-8 leading-tight">
-                <span class="inline-block">一碗の、</span><span class="inline-block">宇宙。</span>
-            </h1>
-            <p class="text-[15px] text-white/50 leading-[2]">
-                <span class="inline-block">四百年の作法を、</span><span class="inline-block">現代に開く。</span><span class="inline-block">茶道未経験の方も、</span><span class="inline-block">心からくつろげる</span><span class="inline-block">茶の湯体験を。</span>
-            </p>
-        </div>
-    </header>
 
-    <!-- About -->
-    <section class="py-32 px-8 md:px-20" id="about">
-        <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-20 items-start">
-            <div>
-                <div class="text-[10px] tracking-[0.5em] text-[#8aad6e] font-mincho mb-8">PHILOSOPHY</div>
-                <h2 class="text-3xl md:text-4xl font-mincho tracking-[0.15em] leading-relaxed mb-10">
-                    <span class="inline-block">不完全さの中に、</span><span class="inline-block">美を見出す。</span>
-                </h2>
-                <p class="text-[14px] text-white/55 leading-[2.2] mb-6">
-                    <span class="inline-block">一期庵では、</span><span class="inline-block">利休が追い求めた</span><span class="inline-block">「侘び」の精神を</span><span class="inline-block">大切にしています。</span>
-                </p>
-                <p class="text-[14px] text-white/55 leading-[2.2]">
-                    <span class="inline-block">完璧を目指すのではなく、</span><span class="inline-block">その瞬間にしかない</span><span class="inline-block">一回性の出会いを</span><span class="inline-block">味わう。</span><span class="inline-block">それが茶の湯の</span><span class="inline-block">本質です。</span>
-                </p>
-            </div>
-            <div class="grid grid-cols-1 gap-8">
-                <div class="border-l-2 border-[#8aad6e]/40 pl-8 py-4">
-                    <div class="font-mincho text-lg mb-2 text-[#8aad6e]">薄茶体験</div>
-                    <p class="text-sm text-white/50"><span class="inline-block">季節の主菓子と</span><span class="inline-block">薄茶一服。</span><span class="inline-block">90分 / ¥8,800</span></p>
+        <div class="flex flex-col gap-32 mb-32">
+        
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-amber-600 font-bold tracking-widest text-sm uppercase">THE OUTPUT LIMIT</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">「出力（アウトプット）」という人間のボトルネック</h2>
+                        <div class="w-12 h-1 bg-amber-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">人間の脳は1秒間に膨大な情報を処理できますが、それを指先のタイピングや音声という「極めて遅い手段」でしかコンピューターに伝えられません。この「思考」と「出力」の速度の圧倒的なギャップが、人類のクリエイティビティの限界を決めてしまっています。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-amber-900/20 to-transparent"></div>
+                    </div>
                 </div>
-                <div class="border-l-2 border-[#8aad6e]/40 pl-8 py-4">
-                    <div class="font-mincho text-lg mb-2 text-[#8aad6e]">濃茶と懐石</div>
-                    <p class="text-sm text-white/50"><span class="inline-block">正式な茶事体験。</span><span class="inline-block">懐石料理付き。</span><span class="inline-block">3時間 / ¥38,500</span></p>
+                
+                <div class="mt-10">
+                    <div class="text-center mb-16">
+                        <span class="text-amber-600 font-bold tracking-widest text-sm uppercase">THOUGHT-TO-TEXT</span>
+                        <h2 class="text-3xl md:text-4xl font-black mt-4 text-gray-900">思考を「文字」と「コマンド」へ翻訳する</h2>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-amber-50 text-amber-600 border border-amber-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">${f.t}</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">${f.d}</p>
+</div>
+
+
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-amber-50 text-amber-600 border border-amber-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">${f.t}</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">${f.d}</p>
+</div>
+
+
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-amber-50 text-amber-600 border border-amber-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">${f.t}</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">${f.d}</p>
+</div>
+
+                    </div>
                 </div>
-                <div class="border-l-2 border-[#8aad6e]/40 pl-8 py-4">
-                    <div class="font-mincho text-lg mb-2 text-[#8aad6e]">貸切茶会</div>
-                    <p class="text-sm text-white/50"><span class="inline-block">企業・団体向け。</span><span class="inline-block">最大8名様。</span><span class="inline-block">要ご相談</span></p>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-amber-600 font-bold tracking-widest text-sm uppercase">ACCESSIBILITY</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">重度身体障害者の「働く自由」を取り戻す</h2>
+                        <div class="w-12 h-1 bg-amber-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">ALS（筋萎縮性側索硬化症）などで体を動かしたり声を出したりすることが困難な方でも、NEURAL-WORKを使えば「思考」だけで高速にチャットを打ち、プログラミングを行い、オンラインで健常者と全く同じように働くことが可能になります。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-amber-900/20 to-transparent"></div>
+                    </div>
                 </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-amber-600 font-bold tracking-widest text-sm uppercase">DIRECT CREATION</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">デザインや3Dモデリングを「頭の中の映像」で作る</h2>
+                        <div class="w-12 h-1 bg-amber-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">クリエイター向けの高度な機能。頭の中で「こんな形の椅子」とイメージした空間的な立体情報を読み取り、画面上の3Dモデリングソフトに直接反映。手を動かすことなく、思考のスピードでプロトタイプが完成します。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: bottom right;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-amber-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-amber-600 font-bold tracking-widest text-sm uppercase">HYPER PRODUCTIVITY</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">Case Study | シリコンバレーのトップエンジニア集団</h2>
+                        <div class="w-12 h-1 bg-amber-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">タイピングによる腱鞘炎と、キーボードへの視線移動による集中の途切れに悩んでいたプログラマーチーム。NEURAL-WORKのβ版を導入し、「頭で考えた変数名やコードのロジック」を直接エディタに入力するスタイルへと移行。コーディングの速度が平均して3.5倍に跳ね上がり、1日のタスクを午前中で終えられるようになりました。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-amber-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-amber-600 font-bold tracking-widest text-sm uppercase">OUR VISION</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">人類の知性を、次のステージへ</h2>
+                        <div class="w-12 h-1 bg-amber-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">コンピューターは単なる「道具」から、脳の一部（拡張臓器）へと進化します。私たちは思考とデジタルの間の摩擦をゼロにし、人間の想像力が持つ真のポテンシャルを解放します。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: bottom right;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-amber-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+        </div>
+
+        <div class="text-center bg-gray-900 border border-gray-800 rounded-[3rem] p-16 md:p-32 relative overflow-hidden group shadow-2xl">
+            <div class="absolute inset-0 bg-gradient-to-br from-amber-900/40 to-transparent"></div>
+            <div class="relative z-10">
+                <h2 class="text-4xl md:text-5xl font-black mb-8 text-white">キーボードとマウスからの解放。</h2>
+                <p class="text-gray-300 mb-12 max-w-xl mx-auto text-lg leading-relaxed">頭の中で描いたイメージが、そのまま画面に現れる。SF映画の魔法は、いま現実のビジネスツールになります。</p>
+                <a href="../index.html" class="bg-amber-500 hover:bg-amber-400 text-white px-12 py-5 rounded-full font-bold text-lg inline-flex items-center gap-3 transition transform hover:-translate-y-1 shadow-lg shadow-amber-500/30">
+                    PORTFOLIOに戻る
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                </a>
             </div>
         </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="py-40 border-t border-white/5 text-center" id="reserve">
-        <h2 class="text-4xl font-mincho tracking-[0.3em] mb-8 ml-[0.2em]">
-            <span class="inline-block">一期一会の、</span><span class="inline-block">席へ。</span>
-        </h2>
-        <p class="text-sm text-white/40 mb-12 font-mincho">
-            <span class="inline-block">完全予約制にて</span><span class="inline-block">承っております。</span>
-        </p>
-        <a href="#" class="inline-block border border-[#8aad6e]/50 text-[#8aad6e] font-mincho text-sm tracking-[0.3em] px-12 py-4 hover:bg-[#8aad6e] hover:text-[#1a1a14] transition-all duration-500">
-            予約する
-        </a>
-        <div class="mt-24 text-[10px] text-white/20 tracking-wider font-mincho">© 2026 一期庵</div>
-    </footer>
-
-    <script>
-        gsap.from('header h1', { y: 30, opacity: 0, duration: 1.5, ease: 'power3.out', delay: 0.3 });
-        gsap.from('header p', { y: 20, opacity: 0, duration: 1.2, ease: 'power3.out', delay: 0.6 });
-    </script>
+    </main>
+        
 </body>
 </html>

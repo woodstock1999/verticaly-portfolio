@@ -40,235 +40,135 @@
 </head>
 <body class="bg-gray-50 text-stone-800 min-h-screen font-sans antialiased overflow-x-hidden">
 
-    <!-- Sticky Header -->
-    <header class="fixed w-full top-0 z-50 bg-white/90 backdrop-blur-md border-b border-primary/10">
-        <div class="max-w-5xl mx-auto px-4 py-2 flex justify-between items-center">
-            <div class="serif text-xl tracking-widest text-primary font-bold">
-                CELL LUMINA
-            </div>
-            <a href="#offer" class="cta-gradient text-white px-6 py-2.5 rounded-full text-[13px] font-bold cta-shadow hover:scale-105 transition-transform flex items-center gap-1">
-                <span class="text-[10px] hidden md:inline">初回限定</span>1,980<span class="text-[10px]">円</span>でお試し
-            </a>
+    <main class="pt-[140px] pb-24 px-6 md:px-12 max-w-7xl mx-auto">
+        <div class="text-center max-w-4xl mx-auto mb-20 relative">
+            <span class="bg-gray-100 text-green-600 border border-gray-200 px-5 py-2 text-xs font-black rounded-full tracking-widest mb-8 inline-block shadow-sm uppercase">FINTECH / EXPENSE</span>
+            <h1 class="text-4xl md:text-[54px] font-black mb-8 leading-[1.2] tracking-tight text-gray-900">「領収書の糊付け」を、<br>歴史の教科書へ送る。</h1>
+            <p class="text-lg md:text-xl text-gray-600 font-medium leading-relaxed max-w-3xl mx-auto">EXPENSE-ZEROは、法人カードとスマホアプリを完全に統合し、決済した瞬間にAIが明細と領収書を突合し、自動で仕訳まで完了させる「入力ゼロ」の経費管理プラットフォームです。</p>
         </div>
-    </header>
 
-    <!-- 1. Hero / Proof Stack Architecture -->
-    <section class="relative pt-20 pb-16 md:pt-28 md:pb-24 bg-white overflow-hidden">
-        <div class="max-w-5xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8 items-center relative z-10">
-            <div class="order-2 md:order-1 text-center md:text-left">
-                <!-- Proof Stack (実績の積層) -->
-                <div class="flex flex-wrap justify-center md:justify-start gap-2 mb-6">
-                    <span class="bg-secondary text-white text-[10px] font-bold px-3 py-1 rounded-sm tracking-widest">美容家大賞2025 受賞</span>
-                    <span class="border border-secondary text-secondary text-[10px] font-bold px-3 py-1 rounded-sm tracking-widest">累計販売 300万本突破</span>
-                    <span class="border border-secondary text-secondary text-[10px] font-bold px-3 py-1 rounded-sm tracking-widest">リピート率 95.8%</span>
+        <div class="relative w-full aspect-[21/9] md:aspect-video rounded-[32px] overflow-hidden shadow-2xl mb-32 border border-gray-200/50 group bg-zinc-900">
+            <img src="img/ui.png" alt="UI Dashboard" class="w-full h-full object-cover transition-transform duration-[3s] group-hover:scale-[1.02]" onerror="this.src='https://picsum.photos/seed/placeholder/1600/900'">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none blend-overlay"></div>
+        </div>
+
+        <div class="flex flex-col gap-32 mb-32">
+        
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-green-600 font-bold tracking-widest text-sm uppercase">THE MONTH-END PAIN</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">誰も得をしない「月末の経費精算マラソン」</h2>
+                        <div class="w-12 h-1 bg-green-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">シワシワの領収書をエクセルに入力し糊で貼り付ける前時代的な儀式により、日本全体で年間数千億円規模の生産性の喪失が発生しています。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-green-900/20 to-transparent"></div>
+                    </div>
                 </div>
                 
-                <h1 class="serif text-3xl md:text-5xl font-bold text-primary mb-6 leading-tight">
-                    <span class="phrase">目覚めるたび、</span><br>
-                    <span class="phrase">鏡を見るのが</span><span class="phrase mb-2">待ち遠しくなる。</span>
-                </h1>
+                <div class="mt-10">
+                    <div class="text-center mb-16">
+                        <span class="text-green-600 font-bold tracking-widest text-sm uppercase">ZERO-CLICK EXPENSE</span>
+                        <h2 class="text-3xl md:text-4xl font-black mt-4 text-gray-900">決済した瞬間に経費精算が終わる</h2>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-green-50 text-green-600 border border-green-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">${f.t}</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">${f.d}</p>
+</div>
+
+
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-green-50 text-green-600 border border-green-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">${f.t}</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">${f.d}</p>
+</div>
+
+
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-green-50 text-green-600 border border-green-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">${f.t}</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">${f.d}</p>
+</div>
+
+                    </div>
+                </div>
                 
-                <p class="text-[15px] text-ink/80 mb-8 leading-[2.2]">
-                    <span class="phrase">年齢とともに失われるハリ・ツヤの根本原因に</span><span class="phrase">独自の高浸透ナノカプセルでアプローチ。</span><span class="phrase">つけた瞬間に実感する、</span><span class="phrase">最高峰のエイジングケア美容液。</span>
-                </p>
-
-                <!-- CTA -->
-                <div class="bg-base p-6 rounded-2xl border border-primary/10 text-center relative">
-                    <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-accent text-white text-[11px] font-bold px-4 py-1 rounded-full shadow-md">
-                        WEB限定 キャンペーン
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-green-600 font-bold tracking-widest text-sm uppercase">DYNAMIC BUDGETING</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">部門ごとの動的予算コントロール</h2>
+                        <div class="w-12 h-1 bg-green-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">部署ごとにリアルタイムで予算上限を設定可能。予算を超えそうになると自動でカードの利用が制限されます。</p>
                     </div>
-                    <div class="text-[12px] text-ink/60 mb-2">通常価格 11,000円(税込)のところ</div>
-                    <div class="text-primary font-black text-4xl mb-4 flex justify-center items-end gap-1">
-                        <span class="text-sm pb-1">初回限定</span> 1,980<span class="text-lg pb-1">円</span>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-green-900/20 to-transparent"></div>
                     </div>
-                    <!-- Time-quantified microcopy -->
-                    <div class="text-[11px] text-accent font-bold mb-3">＼ 30秒で入力完了・いつでも解約OK ／</div>
-                    <a href="#offer" class="block w-full cta-gradient text-white py-4 rounded-full font-bold text-lg cta-shadow border border-yellow-300/50 hover:brightness-110 transition-all">
-                        お得に試してみる ＞
-                    </a>
                 </div>
-            </div>
-            <div class="order-1 md:order-2">
-                <img src="img/hero.png" alt="CELL LUMINA 美容液" class="w-full h-auto rounded-full md:rounded-l-[100px] md:rounded-r-xl shadow-2xl scale-100 hover:scale-105 transition duration-1000">
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-green-600 font-bold tracking-widest text-sm uppercase">FRAUD DETECTION</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">不正利用を検知するフラウド・アラート</h2>
+                        <div class="w-12 h-1 bg-green-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">深夜のタクシー利用や同一店舗での連続決済など、社内規定に違反している可能性が高い決済パターンを検知し、自動でアラートを送信します。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: bottom right;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-green-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-green-600 font-bold tracking-widest text-sm uppercase">COMPANY SUCCESS</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">Case Study | 従業員300名の広告代理店</h2>
+                        <div class="w-12 h-1 bg-green-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">精算業務にかかる時間が全社で90%削減。経理部は単純作業から解放され、戦略的な財務分析に時間を割けるようになりました。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-green-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-green-600 font-bold tracking-widest text-sm uppercase">OUR VISION</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">お金の流れを水のように滑らかに</h2>
+                        <div class="w-12 h-1 bg-green-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">企業間のお金の移動をインターネットの通信と同じくらい摩擦のないものへと変革します。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: bottom right;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-green-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+        </div>
+
+        <div class="text-center bg-gray-900 border border-gray-800 rounded-[3rem] p-16 md:p-32 relative overflow-hidden group shadow-2xl">
+            <div class="absolute inset-0 bg-gradient-to-br from-green-900/40 to-transparent"></div>
+            <div class="relative z-10">
+                <h2 class="text-4xl md:text-5xl font-black mb-8 text-white">経費精算という「仕事」を、消滅させる。</h2>
+                <p class="text-gray-300 mb-12 max-w-xl mx-auto text-lg leading-relaxed">1枚の領収書を精算するために企業は数千円の人件費を払っています。無駄な作業を今すぐ根絶しましょう。</p>
+                <a href="../index.html" class="bg-green-500 hover:bg-green-400 text-white px-12 py-5 rounded-full font-bold text-lg inline-flex items-center gap-3 transition transform hover:-translate-y-1 shadow-lg shadow-green-500/30">
+                    PORTFOLIOに戻る
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                </a>
             </div>
         </div>
-    </section>
-
-    <!-- 2. Pain Empathy Arc (TESA Arc - Empathy) -->
-    <section class="py-20 bg-primary/5">
-        <div class="max-w-3xl mx-auto px-4 text-center">
-            <h2 class="serif text-2xl md:text-3xl font-bold text-primary mb-12">
-                <span class="phrase">最近、ふとした瞬間に</span><br class="br-sp">
-                <span class="phrase">年齢を感じませんか？</span>
-            </h2>
-            <div class="bg-white rounded-3xl p-8 md:p-12 shadow-lg mb-12">
-                <div class="text-left space-y-6">
-                    <p class="flex items-start gap-4 text-ink/80 border-b border-gray-100 pb-4">
-                        <span class="text-primary font-serif italic text-xl">01.</span>
-                        <span class="phrase mt-1">朝、鏡に映る自分の顔がどんより疲れて見える</span>
-                    </p>
-                    <p class="flex items-start gap-4 text-ink/80 border-b border-gray-100 pb-4">
-                        <span class="text-primary font-serif italic text-xl">02.</span>
-                        <span class="phrase mt-1">今まで使っていたスキンケアが急に物足りなくなった</span>
-                    </p>
-                    <p class="flex items-start gap-4 text-ink/80 border-b border-gray-100 pb-4">
-                        <span class="text-primary font-serif italic text-xl">03.</span>
-                        <span class="phrase mt-1">ファンデーションが小じわに入り込んで目立つ</span>
-                    </p>
-                    <p class="flex items-start gap-4 text-ink/80">
-                        <span class="text-primary font-serif italic text-xl">04.</span>
-                        <span class="phrase mt-1">実年齢より上に見られることが増えた</span>
-                    </p>
-                </div>
-            </div>
-            <h3 class="serif text-xl md:text-2xl font-bold text-primary mb-4 leading-relaxed">
-                <span class="phrase">それは「保湿不足」ではなく、</span><br>
-                <span class="phrase">「細胞の活力低下」のサインかもしれません。</span>
-            </h3>
-            <p class="text-[14px] text-ink/70">だからこそ、表面を潤すだけではない「根本ケア」が必要なのです。</p>
-        </div>
-    </section>
-
-    <!-- 3. Unique Mechanism (Texture & Efficacy) -->
-    <section class="py-24 bg-white overflow-hidden">
-        <div class="max-w-5xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div>
-                <img src="img/texture.png" alt="濃密な美容液のテクスチャー" class="w-full h-auto rounded-[30px] shadow-xl border border-primary/5">
-            </div>
-            <div>
-                <div class="text-secondary font-bold text-sm tracking-widest mb-4">TECHNOLOGY</div>
-                <h2 class="serif text-2xl md:text-3xl font-bold text-primary mb-6 leading-relaxed">
-                    <span class="phrase">1滴に凝縮された、</span><br>
-                    <span class="phrase">かつてない濃密なテクスチャー</span>
-                </h2>
-                <p class="text-[15px] text-ink/80 leading-[2.2] mb-6">
-                    <span class="phrase">肌にのせた瞬間、とろけるように馴染む極上のテクスチャー。</span><span class="phrase">独自開発の「ナノセル・カプセル」が、美容成分を角質層の奥深くまで届けます。</span>
-                </p>
-                <div class="bg-base p-6 rounded-2xl border border-secondary/20">
-                    <div class="flex items-center gap-4 mb-4">
-                        <div class="w-10 h-10 bg-gradient-to-br from-primary to-[#8A2B3C] rounded-full text-white flex items-center justify-center font-serif flex-shrink-0">高</div>
-                        <div class="font-bold text-primary text-[15px]">次世代レチノール（バクチオール）高配合</div>
-                    </div>
-                    <p class="text-[13px] text-ink/70">
-                        肌への刺激を抑えながら、コラーゲンの働きをサポート。敏感肌の方でも毎日お使いいただける、植物由来のエイジングケア成分です。
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 4. Testimonials (Named-Persona Testimonials) -->
-    <section class="py-24 bg-primary text-white">
-        <div class="max-w-5xl mx-auto px-4">
-            <h2 class="serif text-center text-3xl md:text-4xl font-bold mb-16">
-                <span class="phrase">「もっと早く使えばよかった」</span><br>
-                <span class="phrase text-secondary">喜びの声が続々</span>
-            </h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- Persona 1 -->
-                <div class="bg-transparent border border-white/20 p-8 rounded-[40px] relative">
-                    <div class="text-secondary text-5xl font-serif absolute -top-4 -left-2 opacity-50">“</div>
-                    <img src="img/portrait.png" alt="50代のお客様" class="w-24 h-24 rounded-full object-cover border-2 border-secondary mb-6 shadow-xl">
-                    <h3 class="serif text-xl font-bold mb-4">鏡を見るのが毎日楽しいんです。</h3>
-                    <p class="text-[14px] text-white/80 leading-[2] mb-6">
-                        <span class="phrase">50代に入ってから、どんな高いクリームを使っても手ごたえがなく諦めかけていました。</span><span class="phrase">でも、CELL LUMINAは違いました。スーッと肌に入っていく感覚が心地よくて、翌朝の肌を触るのが劇的に楽しくなりました。</span><span class="phrase">同窓会でも「綺麗だね」と言われて大満足です！</span>
-                    </p>
-                    <div class="flex items-center gap-3">
-                        <div class="text-[13px] font-bold">佐藤 麻美 様</div>
-                        <span class="text-[11px] opacity-60">|</span>
-                        <div class="text-[11px] opacity-60">東京都 / 52歳 / 愛用歴6ヶ月</div>
-                    </div>
-                </div>
-
-                <!-- Persona 2 -->
-                <div class="bg-transparent border border-white/20 p-8 rounded-[40px] relative mt-8 md:mt-16">
-                    <div class="text-secondary text-5xl font-serif absolute -top-4 -left-2 opacity-50">“</div>
-                    <h3 class="serif text-xl font-bold mb-4">この1本で、スキンケアが完了。</h3>
-                    <p class="text-[14px] text-white/80 leading-[2] mb-6">
-                        <span class="phrase">今まで化粧水・乳液・クリームと何種類も塗り重ねていましたが、今はこれだけで十分もっちりします。</span><span class="phrase">とろみがあるのにベタつかず、メイクのノリも格段にアップしました。</span><span class="phrase">「本当にこれ1本でいいの？」と最初は半信半疑でしたが、今はもう手放せません。</span>
-                    </p>
-                    <div class="flex items-center gap-3">
-                        <div class="text-[13px] font-bold">高橋 恵子 様</div>
-                        <span class="text-[11px] opacity-60">|</span>
-                        <div class="text-[11px] opacity-60">神奈川県 / 48歳 / 愛用歴3ヶ月</div>
-                    </div>
-                </div>
-            </div>
-            <div class="text-center mt-12 text-[10px] opacity-40">※個人の感想であり、効果・効能を保証するものではありません。</div>
-        </div>
-    </section>
-
-    <!-- 5. FV Inline Form / Closing Offer -->
-    <section class="py-24 bg-base" id="offer">
-        <div class="max-w-3xl mx-auto px-4">
-            <div class="bg-white rounded-[40px] p-8 md:p-12 shadow-2xl border-4 border-secondary/20 relative">
-                <!-- Ribbons -->
-                <div class="absolute -top-4 left-1/2 -translate-x-1/2 flex gap-4 w-[110%] justify-center px-4">
-                    <div class="bg-primary text-white text-[11px] font-bold px-6 py-2 rounded-full shadow-lg whitespace-nowrap">送料無料</div>
-                    <div class="bg-primary text-white text-[11px] font-bold px-6 py-2 rounded-full shadow-lg whitespace-nowrap">定期回数の縛りなし</div>
-                    <div class="bg-primary text-white text-[11px] font-bold px-6 py-2 rounded-full shadow-lg whitespace-nowrap">30日間全額返金保証</div>
-                </div>
-
-                <div class="text-center mt-8 mb-10">
-                    <h2 class="serif text-3xl font-black text-primary mb-4">WEB限定 初回お試しコース</h2>
-                    <p class="text-[13px] text-ink/60">まずは1ヶ月、ご自身の肌で違いを実感してください。</p>
-                </div>
-
-                <div class="flex items-end justify-center gap-3 mb-10 pb-10 border-b border-gray-100">
-                    <div class="text-center">
-                        <div class="text-[12px] text-ink/50 line-through">通常価格 11,000円</div>
-                        <div class="text-accent font-black text-[50px] leading-none tracking-tighter my-2 text-shadow-sm"><span class="text-2xl mr-1">初回</span>1,980<span class="text-xl ml-1">円</span></div>
-                        <div class="text-[11px] font-bold text-ink/70">税込・特別価格（82%OFF）</div>
-                    </div>
-                </div>
-
-                <!-- Step Form Concept -->
-                <div class="space-y-6">
-                    <h3 class="font-bold text-center text-ink flex items-center justify-center gap-2">
-                        <span class="bg-secondary text-white w-6 h-6 rounded-full flex items-center justify-center text-xs">1</span> 
-                        お届け先をご入力ください
-                    </h3>
-                    
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <div>
-                            <label class="block text-[11px] font-bold text-ink/70 mb-1">お名前 <span class="bg-accent text-white text-[9px] px-2 py-0.5 rounded ml-1">必須</span></label>
-                            <input type="text" placeholder="山田 花子" class="w-full bg-base border border-gray-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-secondary transition-colors">
-                        </div>
-                        <div>
-                            <label class="block text-[11px] font-bold text-ink/70 mb-1">お電話番号 <span class="bg-accent text-white text-[9px] px-2 py-0.5 rounded ml-1">必須</span></label>
-                            <input type="tel" placeholder="090-0000-0000" class="w-full bg-base border border-gray-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-secondary transition-colors">
-                        </div>
-                    </div>
-                    
-                    <div>
-                        <label class="block text-[11px] font-bold text-ink/70 mb-1">メールアドレス <span class="bg-accent text-white text-[9px] px-2 py-0.5 rounded ml-1">必須</span></label>
-                        <input type="email" placeholder="email@example.com" class="w-full bg-base border border-gray-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-secondary transition-colors">
-                    </div>
-
-                    <div class="pt-6">
-                        <div class="text-center text-[12px] font-bold text-accent mb-3 animate-pulse">＼ 入力はこれだけ！ 30秒で終わります ／</div>
-                        <button class="w-full cta-gradient text-white py-5 rounded-full font-bold text-xl cta-shadow hover:brightness-110 transition-all flex justify-center items-center gap-2">
-                            1,980円でお得に始める ＞
-                        </button>
-                    </div>
-                    
-                    <div class="text-center mt-4">
-                        <a href="#" class="text-[12px] text-ink/40 underline hover:text-ink transition-colors">※Amazon Payでお支払いの方はこちら</a>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Trust / Law Elements -->
-            <div class="text-center mt-12 space-x-4 text-[11px] text-ink/40">
-                <a href="#" class="hover:text-ink underline">特定商取引法に基づく表記</a>
-                <span>|</span>
-                <a href="#" class="hover:text-ink underline">プライバシーポリシー</a>
-                <span>|</span>
-                <a href="#" class="hover:text-ink underline">運営会社</a>
-            </div>
-        </div>
-    </section>
-
+    </main>
+        
 </body>
 </html>

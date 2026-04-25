@@ -45,236 +45,135 @@
 </head>
 <body class="bg-gray-50 text-stone-800 min-h-screen font-sans antialiased overflow-x-hidden">
 
-    <!-- Fixed Header -->
-    <header class="fixed w-full top-0 px-6 md:px-12 py-8 flex items-center justify-between z-50 mix-blend-difference text-[#EBEAE5]">
-        <div class="font-serif text-2xl tracking-[0.2em] uppercase">Terra Firma</div>
-        <div class="hidden md:flex gap-8 text-[10px] tracking-[0.2em] uppercase">
-            <a href="#philosophy" class="hover:text-accent transition">Philosophy</a>
-            <a href="#portfolio" class="hover:text-accent transition">Portfolio</a>
-            <a href="#network" class="hover:text-accent transition">Network</a>
-            <a href="#contact" class="hover:text-accent transition">Membership</a>
+    <main class="pt-[140px] pb-24 px-6 md:px-12 max-w-7xl mx-auto">
+        <div class="text-center max-w-4xl mx-auto mb-20 relative">
+            <span class="bg-gray-100 text-indigo-600 border border-gray-200 px-5 py-2 text-xs font-black rounded-full tracking-widest mb-8 inline-block shadow-sm uppercase">MANUFACTURING / QA AI</span>
+            <h1 class="text-4xl md:text-[54px] font-black mb-8 leading-[1.2] tracking-tight text-gray-900">「不良品ゼロ」を、<br>人間の目の限界を超えて実現する。</h1>
+            <p class="text-lg md:text-xl text-gray-600 font-medium leading-relaxed max-w-3xl mx-auto">QUALITY-INSPECTは、熟練の検査員の「目」をディープラーニングで再現した、製造業向けのAI外観検査システムです。ミリ単位の傷や異物を、24時間休むことなく完璧に検知します。</p>
         </div>
-    </header>
 
-    <!-- 1. Hero (Vertical) -->
-    <section class="min-h-screen flex items-center px-6 md:px-12 relative pt-20">
-        <div class="max-w-5xl">
-            <div class="font-serif text-accent text-sm tracking-[0.3em] uppercase mb-8 italic">The Unlisted Assets.</div>
-            <h1 class="text-4xl md:text-6xl lg:text-7xl font-light leading-relaxed mb-16">
-                <span class="phrase">真に価値ある資産は、</span><br>
-                <span class="phrase text-accent font-serif italic">Never Appears on the Market.</span>
-            </h1>
-            <p class="text-textPrimary/80 leading-[2.5] max-w-2xl text-border text-lg md:text-xl">
-                <span class="phrase">当社は、一般市場には絶対に出回らない「完全非公開の超優良アセット」</span><br>
-                <span class="phrase">（都心最高級レジデンス、一棟リテール、非公開M&A）のみを、</span><br>
-                <span class="phrase">厳格な審査を通過したプライベートメンバーへご提供する、</span><br>
-                <span class="phrase">完全招待制のアセットマネジメント・ファームです。</span>
-            </p>
+        <div class="relative w-full aspect-[21/9] md:aspect-video rounded-[32px] overflow-hidden shadow-2xl mb-32 border border-gray-200/50 group bg-zinc-900">
+            <img src="img/ui.png" alt="UI Dashboard" class="w-full h-full object-cover transition-transform duration-[3s] group-hover:scale-[1.02]" onerror="this.src='https://picsum.photos/seed/placeholder/1600/900'">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none blend-overlay"></div>
         </div>
+
+        <div class="flex flex-col gap-32 mb-32">
         
-        <div class="absolute bottom-12 left-12 flex items-center gap-4 text-xs tracking-widest text-accent uppercase">
-            <span>Scroll</span>
-            <div class="w-12 h-[1px] bg-accent"></div>
-        </div>
-    </section>
-
-    <!-- 2. Methodology (Vertical) -->
-    <section class="py-32 px-6 md:px-12 bg-white" id="philosophy">
-        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
-            <div class="order-2 md:order-1">
-                <img src="img/hero.png" alt="Architecture Details" class="w-full h-auto grayscale-[40%] object-cover max-h-[70vh]">
-            </div>
-            <div class="order-1 md:order-2">
-                <h2 class="text-3xl md:text-4xl font-light leading-loose mb-10">
-                    <span class="phrase">情報の非対称性を、</span><br>
-                    <span class="phrase">極限までコントロールする。</span>
-                </h2>
-                <div class="space-y-8 text-textPrimary/80 leading-[2.2]">
-                    <p>
-                        事業承継に伴う非公開売却、著名人の完全プライベートな不動産取引において、情報漏洩は致命傷となります。そのため、真のエクスクルーシブ案件は、インターネットや一般的な仲介業者のシステムに登録されることはありません。
-                    </p>
-                    <p>
-                        私たちは、富裕層ファミリーオフィスや非公開プライベートバンクとの強固なアライアンスにより、この「クローズドな水面下市場」にのみアクセスし、真摯に投資を検討されるVIPメンバーにダイレクトに接続します。
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 3. GSAP Horizontal Scroll Section (Portfolio Showcase) -->
-    <section class="horizontal-scroll-wrapper" id="portfolio">
-        <div class="horizontal-container" id="horizontalContainer">
-            
-            <!-- Panel 1: Intro to horizontal -->
-            <div class="panel w-screen flex-shrink-0">
-                <div class="max-w-3xl pl-12 md:pl-24">
-                    <div class="font-serif text-accent text-sm tracking-[0.3em] uppercase mb-6 italic">Selected Portfolio</div>
-                    <h2 class="text-4xl md:text-6xl font-light leading-relaxed mb-8">
-                        <span class="phrase">私たちが扱うのは、</span><br>
-                        <span class="phrase">「唯一無二」のみ。</span>
-                    </h2>
-                    <p class="text-bg/60 text-lg">Swipe / Scroll Right ➝</p>
-                </div>
-            </div>
-
-            <!-- Panel 2: Image Case -->
-            <div class="panel w-screen flex-shrink-0 px-12 md:px-24">
-                <div class="w-full h-[70vh] relative max-w-5xl mx-auto">
-                    <img src="img/hero.png" alt="Minato-ku Residence" class="w-full h-full object-cover grayscale-[20%]">
-                    <div class="absolute -bottom-10 md:bottom-10 -left-6 md:-left-12 bg-dark p-8 md:p-12 w-[90%] md:w-auto border border-accent/20">
-                        <div class="font-serif text-xs tracking-[0.3em] mb-4 text-accent uppercase">Case .01 / Real Estate</div>
-                        <h3 class="text-2xl font-light tracking-widest mb-6 leading-relaxed">Minato-ku, Azabu<br>Exclusive Penthouse</h3>
-                        <div class="flex gap-8 text-[11px] text-bg/60 tracking-widest border-t border-accent/20 pt-4">
-                            <div>OFF MARKET</div>
-                            <div>PRICE: UNDISCLOSED</div>
-                        </div>
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-indigo-600 font-bold tracking-widest text-sm uppercase">THE LIMITS OF HUMAN EYES</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">過酷な「目視検査」とヒューマンエラー</h2>
+                        <div class="w-12 h-1 bg-indigo-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">高速で流れてくる製品を8時間睨み続ける。この過酷な作業は作業員の視力と集中力を奪い、どうしても見逃し（ヒューマンエラー）が発生します。それが大規模なリコールへと繋がるリスクとなっています。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-indigo-900/20 to-transparent"></div>
                     </div>
                 </div>
-            </div>
+                
+                <div class="mt-10">
+                    <div class="text-center mb-16">
+                        <span class="text-indigo-600 font-bold tracking-widest text-sm uppercase">AI VISION INSPECTION</span>
+                        <h2 class="text-3xl md:text-4xl font-black mt-4 text-gray-900">熟練工の「暗黙知」をAI化する</h2>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-indigo-50 text-indigo-600 border border-indigo-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">${f.t}</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">${f.d}</p>
+</div>
 
-            <!-- Panel 3: Stats/Proof -->
-            <div class="panel w-screen flex-shrink-0 px-12 md:px-24">
-                <div class="max-w-4xl mx-auto">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-32">
-                        <div>
-                            <div class="font-serif text-5xl md:text-7xl font-light text-bg mb-2">0<span class="text-2xl ml-2">件</span></div>
-                            <div class="text-[10px] tracking-[0.3em] uppercase text-accent mb-6 border-b border-accent/30 pb-4">Public Listings</div>
-                            <p class="text-sm leading-relaxed text-bg/70">Terra Firmaが一般公開市場（レインズ等）へ掲載している物件数は常にゼロです。すべてのマッチングは「相対取引」で成立します。</p>
-                        </div>
-                        <div>
-                            <div class="font-serif text-5xl md:text-7xl font-light text-bg mb-2">94<span class="text-2xl ml-2">%</span></div>
-                            <div class="text-[10px] tracking-[0.3em] uppercase text-accent mb-6 border-b border-accent/30 pb-4">Off-Market Success Rate</div>
-                            <p class="text-sm leading-relaxed text-bg/70">売却側からの厳格なオーダーに応え、情報公開前にダイレクトマッチングを成立させる確率です。</p>
-                        </div>
+
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-indigo-50 text-indigo-600 border border-indigo-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">${f.t}</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">${f.d}</p>
+</div>
+
+
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-indigo-50 text-indigo-600 border border-indigo-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">${f.t}</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">${f.d}</p>
+</div>
+
                     </div>
                 </div>
-            </div>
-
-            <!-- Panel 4: M&A / Corporate -->
-            <div class="panel w-screen flex-shrink-0 px-12 md:px-24">
-                <div class="max-w-4xl mx-auto border border-accent/30 p-12 md:p-24 relative overflow-hidden">
-                    <div class="absolute top-0 left-0 w-1 h-full bg-accent"></div>
-                    <div class="font-serif text-xs tracking-[0.3em] mb-4 text-accent uppercase">Case .02 / Corporate M&A</div>
-                    <h3 class="text-3xl font-light tracking-widest mb-8 leading-relaxed">Quiet Succession.<br>老舗企業の静かなる承継。</h3>
-                    <p class="text-bg/70 leading-[2.2] mb-8">
-                        不動産だけでなく、歴史ある非公開企業のM&A（事業承継）も手がけます。従業員や取引先に一切の不安を与えない「完全なる静寂」の中で、最適なスポンサー企業との融合をコーディネートします。
-                    </p>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- 4. Network & Security (Vertical) -->
-    <section class="py-32 px-6 md:px-12" id="network">
-        <div class="max-w-4xl mx-auto text-center fade-up observer-target">
-            <h2 class="text-3xl md:text-4xl font-light leading-loose mb-12">
-                <span class="phrase">情報網の核となる、</span><br>
-                <span class="phrase">3つの強固なアライアンス。</span>
-            </h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left mt-20">
-                <div class="bg-white p-10 border-t-2 border-accent">
-                    <h4 class="font-serif text-xl italic mb-4 text-accent">Private Banks</h4>
-                    <p class="text-sm leading-[2.2] text-textPrimary/80">国内・外資系のプライベートベンカーと密に連携。彼らの顧客である超富裕層のもつ資産入替の初期フェーズ情報を取得します。</p>
-                </div>
-                <div class="bg-white p-10 border-t-2 border-accent">
-                    <h4 class="font-serif text-xl italic mb-4 text-accent">Family Offices</h4>
-                    <p class="text-sm leading-[2.2] text-textPrimary/80">一族の資産を管理するファミリーオフィス専属のコンサルタントとして、不動産ポートフォリオの再編を水面下で主導します。</p>
-                </div>
-                <div class="bg-white p-10 border-t-2 border-accent">
-                    <h4 class="font-serif text-xl italic mb-4 text-accent">Top Law Firms</h4>
-                    <p class="text-sm leading-[2.2] text-textPrimary/80">大手法律事務所や税理士法人と連携し、相続発生や事業再編に伴う急を要する非公開売却案件に対し、迅速な現金化ソリューションを提供します。</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 5. CTA (Membership form) -->
-    <section class="py-32 bg-dark text-bg px-6 md:px-12 relative" id="contact">
-        <div class="max-w-3xl mx-auto text-center">
-            <h2 class="font-serif text-4xl md:text-5xl mb-8 italic text-accent">Strictly Invitation Only.</h2>
-            <p class="text-[13px] tracking-widest leading-[2.5] mb-16 opacity-70">
-                <span class="phrase">Terra Firmaの新規会員登録は、クオリティ維持と情報漏洩防止のため、</span><span class="phrase">既存クライアント様、または弊社提携金融機関からの「ご紹介のみ」とさせていただいております。</span>
-            </p>
-            
-            <div class="border border-accent/20 p-12 max-w-xl mx-auto bg-dark/50">
-                <form class="space-y-8 text-left">
-                    <div>
-                        <label class="block text-[10px] tracking-[0.2em] uppercase text-accent mb-3">Invitation Code (紹介コード)</label>
-                        <input type="text" class="w-full bg-transparent border-b border-accent/30 py-3 text-bg focus:outline-none focus:border-accent transition-colors font-serif tracking-widest text-center" placeholder="XXXX-XXXX" required>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-indigo-600 font-bold tracking-widest text-sm uppercase">FULL TRACEABILITY</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">良品・不良品の完全なトレーサビリティ</h2>
+                        <div class="w-12 h-1 bg-indigo-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">すべての検査画像を製造番号と紐付けてクラウドに永久保存。万が一市場で不良品が見つかっても、「出荷時はどうだったか」を即座に証明できます。</p>
                     </div>
-                    <div>
-                        <label class="block text-[10px] tracking-[0.2em] uppercase text-accent mb-3">Email Address (ご紹介先メールアドレス)</label>
-                        <input type="email" class="w-full bg-transparent border-b border-accent/30 py-3 text-bg focus:outline-none focus:border-accent transition-colors" required>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-indigo-900/20 to-transparent"></div>
                     </div>
-                    <div class="pt-8 text-center">
-                        <button type="submit" class="inline-block bg-accent text-dark px-12 py-4 text-xs tracking-[0.2em] uppercase font-bold hover:bg-bg transition duration-500">
-                            Verify Identity
-                        </button>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-indigo-600 font-bold tracking-widest text-sm uppercase">EASY INTEGRATION</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">既存の生産ラインに後付け可能</h2>
+                        <div class="w-12 h-1 bg-indigo-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">大規模な設備の入れ替えは不要。既存のコンベアにカメラとエッジPCを設置するだけで、その日からAI検査が稼働します。</p>
                     </div>
-                </form>
-            </div>
-            
-            <div class="mt-20">
-                <p class="text-[11px] text-accent/60 tracking-widest">ご紹介のない法人・個人投資家様は、お待ちいただいてもご登録できません。<br>あらかじめご了承ください。</p>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: bottom right;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-indigo-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-indigo-600 font-bold tracking-widest text-sm uppercase">CLIENT SUCCESS</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">Case Study | 自動車部品メーカー</h2>
+                        <div class="w-12 h-1 bg-indigo-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">目視検査の限界により、月に数件の流出不良が発生していた工場。AI導入後、流出不良は完全にゼロになり、検査員の人件費も年間5000万円削減されました。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-indigo-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-indigo-600 font-bold tracking-widest text-sm uppercase">OUR VISION</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">メイド・イン・ジャパンの品質を守る</h2>
+                        <div class="w-12 h-1 bg-indigo-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">世界が信頼する日本の製造品質。それをテクノロジーの力で次世代へと継承し、さらに高い次元へと引き上げます。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: bottom right;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-indigo-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+        </div>
+
+        <div class="text-center bg-gray-900 border border-gray-800 rounded-[3rem] p-16 md:p-32 relative overflow-hidden group shadow-2xl">
+            <div class="absolute inset-0 bg-gradient-to-br from-indigo-900/40 to-transparent"></div>
+            <div class="relative z-10">
+                <h2 class="text-4xl md:text-5xl font-black mb-8 text-white">${data.ctaTitle}</h2>
+                <p class="text-gray-300 mb-12 max-w-xl mx-auto text-lg leading-relaxed">${data.ctaDesc}</p>
+                <a href="../index.html" class="bg-indigo-500 hover:bg-indigo-400 text-white px-12 py-5 rounded-full font-bold text-lg inline-flex items-center gap-3 transition transform hover:-translate-y-1 shadow-lg shadow-indigo-500/30">
+                    PORTFOLIOに戻る
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                </a>
             </div>
         </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-[#111110] text-[#EBEAE5]/40 py-16 px-6 md:px-12 font-serif text-[11px] tracking-widest uppercase">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
-            <div class="text-xl text-[#EBEAE5]/80">TERRA FIRMA</div>
-            <div class="flex gap-8">
-                <a href="#" class="hover:text-accent transition">Terms of Service</a>
-                <a href="#" class="hover:text-accent transition">Privacy Policy</a>
-                <a href="#" class="hover:text-accent transition">Anti-Money Laundering</a>
-            </div>
-        </div>
-        <div class="max-w-7xl mx-auto mt-12 text-center md:text-left opacity-60">
-            &copy; 2026 Terra Firma Asset Management.
-        </div>
-    </footer>
-
-    <!-- GSAP & Intersection Observer Logic -->
-    <script>
-        // Horizontal Scroll
-        gsap.registerPlugin(ScrollTrigger);
-
-        // Ensures the horizontal container width matches the number of panels
-        let container = document.getElementById("horizontalContainer");
+    </main>
         
-        let horizontalScroll = gsap.to(container, {
-            x: () => -(container.scrollWidth - window.innerWidth) + "px",
-            ease: "none",
-            scrollTrigger: {
-                trigger: "#portfolio",
-                pin: true,
-                scrub: 1,
-                end: () => "+=" + container.scrollWidth
-            }
-        });
-
-        // Vertical Fade Up using Vanilla JS Observer
-        const observerOptions = {
-            root: null,
-            rootMargin: '0px',
-            threshold: 0.1
-        };
-
-        const observer = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.observer-target').forEach(el => {
-            observer.observe(el);
-        });
-    </script>
 </body>
 </html>

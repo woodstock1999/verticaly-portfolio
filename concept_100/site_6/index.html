@@ -17,144 +17,135 @@
 </head>
 <body class="bg-gray-50 text-stone-800 min-h-screen font-sans antialiased overflow-x-hidden">
 
-    <nav class="fixed w-full z-50 backdrop-blur-md bg-opacity-90 bg-white/90 border-b border-gray-200 px-8 py-4 flex justify-between items-center transition-all shadow-sm">
-        <a href="../../index.html" class="text-xs tracking-[0.2em] hover:opacity-60 transition font-mincho text-[#2c2418]/60">← 目次</a>
-        <div class="font-mincho text-xl tracking-[0.5em] text-[#2c2418]">土と火</div>
-        <div class="hidden md:flex gap-10 text-[11px] tracking-[0.2em] font-mincho text-[#2c2418]/60">
-            <a href="#works" class="hover:text-[#2c2418] transition">作品</a>
-            <a href="#process" class="hover:text-[#2c2418] transition">制作</a>
-            <a href="#order" class="hover:text-[#2c2418] transition">注文</a>
+    <main class="pt-[140px] pb-24 px-6 md:px-12 max-w-7xl mx-auto">
+        <div class="text-center max-w-4xl mx-auto mb-20 relative">
+            <span class="bg-gray-100 text-indigo-600 border border-gray-200 px-5 py-2 text-xs font-black rounded-full tracking-widest mb-8 inline-block shadow-sm uppercase">AEROSPACE / ORBITAL CLEAING</span>
+            <h1 class="text-4xl md:text-[54px] font-black mb-8 leading-[1.2] tracking-tight text-gray-900">宇宙の「ゴミ拾い」が、<br>人類の未来を左右する。</h1>
+            <p class="text-lg md:text-xl text-gray-600 font-medium leading-relaxed max-w-3xl mx-auto">地球の軌道上を弾丸の10倍の速度で飛び交う、何億個ものスペース・デブリ（宇宙ゴミ）。ORBIT-CLEANは、AI搭載の自律型捕獲衛星を用いて、この致死的なゴミを回収・焼却する軌道上の環境インフラ企業です。</p>
         </div>
-    </nav>
 
-    <!-- Hero -->
-    <header class="relative h-screen flex items-center overflow-hidden pt-20">
-        <div class="absolute inset-0">
-            <img src="img/hero.png" alt="Pottery" class="w-full h-full object-cover">
-            <div class="absolute inset-0 bg-gradient-to-r from-[#f5f0e8] via-[#f5f0e8]/60 to-transparent"></div>
+        <div class="relative w-full aspect-[21/9] md:aspect-video rounded-[32px] overflow-hidden shadow-2xl mb-32 border border-gray-200/50 group bg-zinc-900">
+            <img src="img/ui.png" alt="UI Dashboard" class="w-full h-full object-cover transition-transform duration-[3s] group-hover:scale-[1.02]" onerror="this.src='https://picsum.photos/seed/placeholder/1600/900'">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none blend-overlay"></div>
         </div>
-        <div class="relative z-10 px-8 md:px-20 max-w-xl">
-            <div class="text-[11px] tracking-[0.6em] text-[#8b6b45] font-mincho mb-8">信楽 · 三代目窯元</div>
-            <h1 class="text-4xl md:text-6xl font-mincho tracking-[0.15em] leading-relaxed mb-8 text-[#2c2418]">
-                <span class="inline-block">土に還り、</span><span class="inline-block">火に問う。</span>
-            </h1>
-            <p class="text-[14px] text-[#2c2418]/60 leading-[2.2]">
-                <span class="inline-block">信楽の土と</span><span class="inline-block">登り窯の炎が生み出す、</span><span class="inline-block">唯一無二の景色。</span><span class="inline-block">日常に寄り添う</span><span class="inline-block">器をお届けします。</span>
-            </p>
-        </div>
-    </header>
 
-    <!-- Works Grid -->
-    <section class="py-32 px-8 md:px-20" id="works">
-        <div class="mb-16">
-            <div class="text-[10px] tracking-[0.5em] text-[#8b6b45] font-mincho mb-4">COLLECTION</div>
-            <h2 class="text-3xl font-mincho tracking-[0.15em] text-[#2c2418]">
-                <span class="inline-block">日々の器</span>
-            </h2>
-        </div>
-        <div class="grid grid-cols-2 md:grid-cols-3 gap-6 max-w-5xl">
-            <div class="group cursor-pointer">
-                <div class="aspect-square bg-[#e8dfd0] border border-[#2c2418]/10 overflow-hidden mb-4 flex items-center justify-center">
-                    <div class="text-5xl font-mincho text-[#8b6b45]/60 group-hover:scale-110 transition duration-500">碗</div>
+        <div class="flex flex-col gap-32 mb-32">
+        
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-indigo-600 font-bold tracking-widest text-sm uppercase">THE KESSLER SYNDROME</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">「ケスラー・シンドローム」という宇宙の鎖国</h2>
+                        <div class="w-12 h-1 bg-indigo-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">デブリが人工衛星に衝突し、粉砕されて新たな数万個のデブリを生み出す。この連鎖的な爆発が起きれば、地球の周囲は弾丸の嵐に包まれ、人類は今後数百年にわたって宇宙へロケットを打ち上げることが物理的に不可能になります。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-indigo-900/20 to-transparent"></div>
+                    </div>
                 </div>
-                <h3 class="font-mincho tracking-wider mb-1">飯碗</h3>
-                <p class="text-xs text-[#2c2418]/50">¥4,400〜</p>
-            </div>
-            <div class="group cursor-pointer">
-                <div class="aspect-square bg-[#e0dcd2] border border-[#2c2418]/10 overflow-hidden mb-4 flex items-center justify-center">
-                    <div class="text-5xl font-mincho text-[#8b6b45]/60 group-hover:scale-110 transition duration-500">皿</div>
-                </div>
-                <h3 class="font-mincho tracking-wider mb-1">銘々皿</h3>
-                <p class="text-xs text-[#2c2418]/50">¥3,300〜</p>
-            </div>
-            <div class="group cursor-pointer">
-                <div class="aspect-square bg-[#ddd8cc] border border-[#2c2418]/10 overflow-hidden mb-4 flex items-center justify-center">
-                    <div class="text-5xl font-mincho text-[#8b6b45]/60 group-hover:scale-110 transition duration-500">杯</div>
-                </div>
-                <h3 class="font-mincho tracking-wider mb-1">ぐい呑</h3>
-                <p class="text-xs text-[#2c2418]/50">¥5,500〜</p>
-            </div>
-            <div class="group cursor-pointer">
-                <div class="aspect-square bg-[#d8d3c8] border border-[#2c2418]/10 overflow-hidden mb-4 flex items-center justify-center">
-                    <div class="text-5xl font-mincho text-[#8b6b45]/60 group-hover:scale-110 transition duration-500">壺</div>
-                </div>
-                <h3 class="font-mincho tracking-wider mb-1">花入</h3>
-                <p class="text-xs text-[#2c2418]/50">¥16,500〜</p>
-            </div>
-            <div class="group cursor-pointer">
-                <div class="aspect-square bg-[#d4cfc2] border border-[#2c2418]/10 overflow-hidden mb-4 flex items-center justify-center">
-                    <div class="text-5xl font-mincho text-[#8b6b45]/60 group-hover:scale-110 transition duration-500">鉢</div>
-                </div>
-                <h3 class="font-mincho tracking-wider mb-1">盛鉢</h3>
-                <p class="text-xs text-[#2c2418]/50">¥8,800〜</p>
-            </div>
-            <div class="group cursor-pointer">
-                <div class="aspect-square bg-[#cfc9bc] border border-[#2c2418]/10 overflow-hidden mb-4 flex items-center justify-center">
-                    <div class="text-5xl font-mincho text-[#8b6b45]/60 group-hover:scale-110 transition duration-500">急</div>
-                </div>
-                <h3 class="font-mincho tracking-wider mb-1">急須</h3>
-                <p class="text-xs text-[#2c2418]/50">¥12,100〜</p>
-            </div>
-        </div>
-    </section>
+                
+                <div class="mt-10">
+                    <div class="text-center mb-16">
+                        <span class="text-indigo-600 font-bold tracking-widest text-sm uppercase">ORBITAL ROBOTICS</span>
+                        <h2 class="text-3xl md:text-4xl font-black mt-4 text-gray-900">弾丸の速度で動くゴミを「捕まえる」技術</h2>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-indigo-50 text-indigo-600 border border-indigo-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">${f.t}</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">${f.d}</p>
+</div>
 
-    <!-- Process -->
-    <section class="py-32 bg-[#2c2418] text-[#e8e0d0]" id="process">
-        <div class="max-w-5xl mx-auto px-8 md:px-20">
-            <div class="text-[10px] tracking-[0.5em] text-[#c8a882] font-mincho mb-4">PROCESS</div>
-            <h2 class="text-3xl md:text-4xl font-mincho tracking-[0.15em] leading-relaxed mb-16">
-                <span class="inline-block">土から器へ、</span><span class="inline-block">七十二時間。</span>
-            </h2>
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
-                <div class="border-t border-[#c8a882]/30 pt-6">
-                    <div class="text-3xl font-mincho text-[#c8a882] mb-4">01</div>
-                    <h3 class="font-mincho text-lg mb-2">土練り</h3>
-                    <p class="text-sm text-white/50 leading-relaxed">
-                        <span class="inline-block">信楽の原土を</span><span class="inline-block">丹念に練り上げ、</span><span class="inline-block">気泡を抜く。</span>
-                    </p>
+
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-indigo-50 text-indigo-600 border border-indigo-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">${f.t}</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">${f.d}</p>
+</div>
+
+
+<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-indigo-50 text-indigo-600 border border-indigo-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    </div>
+    <h4 class="text-xl font-bold mb-3 text-gray-900">${f.t}</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">${f.d}</p>
+</div>
+
+                    </div>
                 </div>
-                <div class="border-t border-[#c8a882]/30 pt-6">
-                    <div class="text-3xl font-mincho text-[#c8a882] mb-4">02</div>
-                    <h3 class="font-mincho text-lg mb-2">成形</h3>
-                    <p class="text-sm text-white/50 leading-relaxed">
-                        <span class="inline-block">轆轤（ろくろ）で</span><span class="inline-block">一つひとつ</span><span class="inline-block">手挽きで成形。</span>
-                    </p>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-indigo-600 font-bold tracking-widest text-sm uppercase">LIFE EXTENSION</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">衛星の「寿命を延ばす」出張給油サービス</h2>
+                        <div class="w-12 h-1 bg-indigo-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">ゴミを拾うだけではありません。燃料が尽きかけている数億円の通信衛星に対し、軌道上でドッキングして燃料を補充したり、軌道のズレを修正してあげる「宇宙のロードサービス」も展開しています。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-indigo-900/20 to-transparent"></div>
+                    </div>
                 </div>
-                <div class="border-t border-[#c8a882]/30 pt-6">
-                    <div class="text-3xl font-mincho text-[#c8a882] mb-4">03</div>
-                    <h3 class="font-mincho text-lg mb-2">釉掛け</h3>
-                    <p class="text-sm text-white/50 leading-relaxed">
-                        <span class="inline-block">自家調合の</span><span class="inline-block">灰釉・長石釉を</span><span class="inline-block">掛け分ける。</span>
-                    </p>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-indigo-600 font-bold tracking-widest text-sm uppercase">SPACE ESG</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">「宇宙環境税」とESG投資の新たなスタンダード</h2>
+                        <div class="w-12 h-1 bg-indigo-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">数千機の衛星群を打ち上げる巨大IT企業に対し、「打ち上げた分だけ、過去のゴミを掃除する」という宇宙版のカーボン・オフセットを販売。持続可能な宇宙開発のルールをビジネス化します。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: bottom right;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-indigo-900/20 to-transparent"></div>
+                    </div>
                 </div>
-                <div class="border-t border-[#c8a882]/30 pt-6">
-                    <div class="text-3xl font-mincho text-[#c8a882] mb-4">04</div>
-                    <h3 class="font-mincho text-lg mb-2">焼成</h3>
-                    <p class="text-sm text-white/50 leading-relaxed">
-                        <span class="inline-block">登り窯にて</span><span class="inline-block">72時間、</span><span class="inline-block">1300度の炎で焼き締める。</span>
-                    </p>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-indigo-600 font-bold tracking-widest text-sm uppercase">MISSION SUCCESS</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">Case Study | 国際宇宙ステーションの軌道防衛</h2>
+                        <div class="w-12 h-1 bg-indigo-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">ISSの軌道上に、数トンの古いロケットのデブリが数年後に衝突する軌道を描いていることが判明。ORBIT-CLEANの捕獲衛星を緊急打ち上げ。デブリにドッキングして微小な推進力を与え、ISSの軌道から安全に逸らすことに成功しました。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-indigo-900/20 to-transparent"></div>
+                    </div>
                 </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
+                    <div class="flex-1 space-y-6">
+                        <span class="text-indigo-600 font-bold tracking-widest text-sm uppercase">OUR VISION</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">道（軌道）を切り拓く</h2>
+                        <div class="w-12 h-1 bg-indigo-500 rounded"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">人類が火星へ行き、宇宙に住む未来。その大前提として、地球の玄関口を安全でクリーンに保つ「清掃員」が絶対に必要です。私たちは、持続可能な宇宙へのアクセスを保証します。</p>
+                    </div>
+                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
+                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: bottom right;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-indigo-900/20 to-transparent"></div>
+                    </div>
+                </div>
+                
+        </div>
+
+        <div class="text-center bg-gray-900 border border-gray-800 rounded-[3rem] p-16 md:p-32 relative overflow-hidden group shadow-2xl">
+            <div class="absolute inset-0 bg-gradient-to-br from-indigo-900/40 to-transparent"></div>
+            <div class="relative z-10">
+                <h2 class="text-4xl md:text-5xl font-black mb-8 text-white">美しい星空には、見えない危機がある。</h2>
+                <p class="text-gray-300 mb-12 max-w-xl mx-auto text-lg leading-relaxed">GPSも、天気予報も、インターネットも。一つの小さなゴミが人工衛星に衝突すれば、私たちの生活は明日、終わるかもしれません。</p>
+                <a href="../index.html" class="bg-indigo-500 hover:bg-indigo-400 text-white px-12 py-5 rounded-full font-bold text-lg inline-flex items-center gap-3 transition transform hover:-translate-y-1 shadow-lg shadow-indigo-500/30">
+                    PORTFOLIOに戻る
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                </a>
             </div>
         </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="py-40 text-center" id="order">
-        <h2 class="text-4xl font-mincho tracking-[0.2em] mb-8 text-[#2c2418]">
-            <span class="inline-block">あなただけの</span><span class="inline-block">一器を。</span>
-        </h2>
-        <p class="text-sm text-[#2c2418]/50 mb-12 font-mincho">
-            <span class="inline-block">特注も承ります。</span><span class="inline-block">お気軽にご相談ください。</span>
-        </p>
-        <a href="#" class="inline-block border border-[#2c2418]/30 text-[#2c2418] font-mincho text-sm tracking-[0.3em] px-12 py-4 hover:bg-[#2c2418] hover:text-[#f5f0e8] transition-all duration-500">
-            お問い合わせ
-        </a>
-        <div class="mt-24 text-[10px] text-[#2c2418]/30 tracking-wider font-mincho">© 2026 窯元 土と火</div>
-    </footer>
-
-    <script>
-        gsap.from('header h1', { y: 30, opacity: 0, duration: 1.5, ease: 'power3.out', delay: 0.3 });
-        gsap.from('header p', { y: 20, opacity: 0, duration: 1.2, ease: 'power3.out', delay: 0.6 });
-    </script>
+    </main>
+        
 </body>
 </html>
