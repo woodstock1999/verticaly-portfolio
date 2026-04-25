@@ -1,196 +1,175 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PAYFLOW CREATOR | 翌月末払いをぶっ壊す、クリエイター特化型即時決済</title>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&family=Noto+Sans+JP:wght@500;700;900&display=swap" rel="stylesheet">
+    <title>「黒字倒産」という悲劇を、システムで防衛する。 | B2B FINTECH</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        bg: '#F2F0EC', /* Cream base */
-                        dark: '#111111', 
-                        hotpink: '#FF007F',
-                        electricblue: '#00F0FF',
-                        canary: '#FDFF00',
-                    },
-                    fontFamily: {
-                        sans: ['Noto Sans JP', 'sans-serif'],
-                        display: ['Outfit', 'sans-serif'],
-                    },
-                    boxShadow: {
-                        'brutal': '8px 8px 0px 0px rgba(17,17,17,1)',
-                        'brutal-sm': '4px 4px 0px 0px rgba(17,17,17,1)',
-                        'brutal-hover': '2px 2px 0px 0px rgba(17,17,17,1)',
-                    }
-                }
-            }
-        }
-    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
-        body { background-color: #F2F0EC; color: #111111; font-family: 'Noto Sans JP', sans-serif; overflow-x: hidden; line-height: 1.6; }
-        
-        .brutal-border { border: 4px solid #111111; border-radius: 24px; }
-        .brutal-btn {
-            border: 4px solid #111111; border-radius: 999px;
-            box-shadow: 6px 6px 0px 0px rgba(17,17,17,1); transition: all 0.1s ease;
-        }
-        .brutal-btn:hover { transform: translate(4px, 4px); box-shadow: 2px 2px 0px 0px rgba(17,17,17,1); }
-        .brutal-card {
-            border: 4px solid #111111; border-radius: 24px;
-            box-shadow: 8px 8px 0px 0px rgba(17,17,17,1); transition: all 0.2s ease;
-        }
-        .brutal-card:hover { transform: translate(-4px, -4px); box-shadow: 12px 12px 0px 0px rgba(17,17,17,1); }
-
-        .phrase { display: inline-block; }
-
-        /* Marquee background */
-        .marquee { position: absolute; white-space: nowrap; font-family: 'Outfit', sans-serif; font-weight: 900; font-size: 15rem; color: #111; opacity: 0.03; line-height: 0.8; z-index: -1; }
-        .m1 { top: 10%; animation: scroll 30s linear infinite; }
-        .m2 { top: 30%; animation: scroll 40s linear infinite reverse; }
-        .m3 { top: 60%; animation: scroll 25s linear infinite; }
-        @keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
-
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar { width: 12px; }
-        ::-webkit-scrollbar-track { border-left: 2px solid #111; background: #F2F0EC; }
-        ::-webkit-scrollbar-thumb { background: #FF007F; border: 2px solid #111; }
+        body { font-family: 'Inter', 'Noto Sans JP', sans-serif; }
     </style>
 </head>
-<body class="bg-gray-50 text-stone-800 min-h-screen font-sans antialiased overflow-x-hidden">
+<body class="bg-[#050505] text-gray-400 min-h-screen font-sans antialiased overflow-x-hidden">
 
-    <main class="pt-[140px] pb-24 px-6 md:px-12 max-w-7xl mx-auto">
-        <div class="text-center max-w-4xl mx-auto mb-20 relative">
-            <span class="bg-gray-100 text-blue-600 border border-gray-200 px-5 py-2 text-xs font-black rounded-full tracking-widest mb-8 inline-block shadow-sm uppercase">B2B FINTECH / CASHFLOW</span>
-            <h1 class="text-4xl md:text-[54px] font-black mb-8 leading-[1.2] tracking-tight text-gray-900">「黒字倒産」という悲劇を、<br>システムで防衛する。</h1>
-            <p class="text-lg md:text-xl text-gray-600 font-medium leading-relaxed max-w-3xl mx-auto">PAYFLOWは、請求書の発行から入金確認、そして売掛金の「早期資金化（ファクタリング）」までを統合したキャッシュフロー管理プラットフォームです。</p>
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 backdrop-blur-xl bg-[#050505]/80 border-b border-white/5 px-8 py-5 flex justify-between items-center transition-all">
+        <div class="font-black text-2xl tracking-tighter text-white flex items-center gap-3">
+            <div class="w-3 h-3 rounded-full bg-blue-500 shadow-[0_0_15px_rgba(255,255,255,0.2)] shadow-blue-500/50"></div>
+            B2B FINTECH
+        </div>
+        <div class="hidden md:flex gap-10 text-sm font-bold text-gray-400">
+            <a href="#" class="hover:text-white transition">FEATURES</a>
+            <a href="#" class="hover:text-white transition">SOLUTIONS</a>
+            <a href="#" class="hover:text-white transition">PRICING</a>
+        </div>
+        <div class="flex items-center gap-4">
+            <a href="../index.html" class="text-xs font-bold text-gray-500 hover:text-white transition uppercase tracking-widest">HUB</a>
+            <a href="#" class="bg-blue-600 hover:bg-blue-500 text-white px-6 py-2.5 rounded-full font-bold text-sm transition transform hover:scale-105">START B2B FINTECH</a>
+        </div>
+    </nav>
+
+    <main class="pt-[160px] pb-24 px-6 md:px-12 max-w-7xl mx-auto">
+        <!-- Hero Section -->
+        <div class="text-center max-w-5xl mx-auto mb-24 relative">
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-600/20 rounded-full blur-[120px] pointer-events-none"></div>
+            <span class="relative z-10 bg-white/5 text-blue-400 border border-white/10 px-6 py-2 text-xs font-black rounded-full tracking-widest uppercase mb-8 inline-block shadow-sm">B2B FINTECH / CASHFLOW</span>
+            <h1 class="relative z-10 text-5xl md:text-[64px] font-black mb-8 leading-[1.1] tracking-tight text-white">「黒字倒産」という悲劇を、<br>システムで防衛する。</h1>
+            <p class="relative z-10 text-lg md:text-xl text-gray-400 font-medium leading-relaxed max-w-3xl mx-auto">PAYFLOWは、請求書の発行から入金確認、そして売掛金の「早期資金化（ファクタリング）」までを統合したキャッシュフロー管理プラットフォームです。</p>
         </div>
 
-        <div class="relative w-full aspect-[21/9] md:aspect-video rounded-[32px] overflow-hidden shadow-2xl mb-32 border border-gray-200/50 group bg-zinc-900">
-            <img src="img/ui.png" alt="UI Dashboard" class="w-full h-full object-cover transition-transform duration-[3s] group-hover:scale-[1.02]" onerror="this.src='https://picsum.photos/seed/placeholder/1600/900'">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none blend-overlay"></div>
+        <!-- UI Showcase -->
+        <div class="relative w-full aspect-[21/9] md:aspect-video rounded-[32px] overflow-hidden shadow-2xl mb-32 border border-white/10 group bg-zinc-900">
+            <img src="img/ui.png" alt="UI Dashboard" class="w-full h-full object-cover transition-transform duration-[5s] group-hover:scale-[1.03]" onerror="this.src='https://picsum.photos/seed/placeholder/1600/900'">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/20 to-transparent pointer-events-none"></div>
         </div>
 
         <div class="flex flex-col gap-32 mb-32">
-        
-                <div class="flex flex-col md:flex-row items-center gap-16 ">
-                    <div class="flex-1 space-y-6">
-                        <span class="text-blue-600 font-bold tracking-widest text-sm uppercase">THE CASHFLOW TRAP</span>
-                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">「末締め・翌月末払い」という罰</h2>
-                        <div class="w-12 h-1 bg-blue-500 rounded"></div>
-                        <p class="text-lg text-gray-600 leading-relaxed font-light">納品を終えても現金が入ってくるのは最長2ヶ月後。長い支払いサイトが優良な企業の成長を阻害しています。</p>
-                    </div>
-                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
-                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
-                        <div class="absolute inset-0 bg-gradient-to-tr from-blue-900/20 to-transparent"></div>
-                    </div>
+    
+            <div class="flex flex-col md:flex-row items-center gap-16  relative z-10">
+                <div class="flex-1 space-y-6">
+                    <span class="text-blue-500 font-bold tracking-widest text-sm uppercase">THE CASHFLOW TRAP</span>
+                    <h2 class="text-3xl md:text-4xl font-black text-white leading-tight">「末締め・翌月末払い」という罰</h2>
+                    <div class="w-16 h-1 bg-blue-600 rounded"></div>
+                    <p class="text-lg text-gray-400 leading-relaxed font-light">納品を終えても現金が入ってくるのは最長2ヶ月後。長い支払いサイトが優良な企業の成長を阻害しています。</p>
                 </div>
-                
-                <div class="mt-10">
-                    <div class="text-center mb-16">
-                        <span class="text-blue-600 font-bold tracking-widest text-sm uppercase">AUTO-BILLING ENGINE</span>
-                        <h2 class="text-3xl md:text-4xl font-black mt-4 text-gray-900">請求から入金までを完全自動化</h2>
-                    </div>
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        
-<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
-    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-blue-50 text-blue-600 border border-blue-200">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-zinc-900 border border-white/10 group">
+                    <img src="img/ui.png" class="w-full h-full object-cover opacity-40 grayscale sepia-[.2] transition-all duration-700 group-hover:grayscale-0 group-hover:opacity-80 group-hover:scale-105" style="object-position: top left;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
+                    <div class="absolute inset-0 bg-gradient-to-tr from-blue-900/40 to-transparent"></div>
+                </div>
+            </div>
+            
+            <div class="mt-10 relative z-10">
+                <div class="text-center mb-16">
+                    <span class="text-blue-500 font-bold tracking-widest text-sm uppercase">AUTO-BILLING ENGINE</span>
+                    <h2 class="text-3xl md:text-4xl font-black mt-4 text-white">請求から入金までを完全自動化</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    
+    <div class="bg-white/[0.02] border border-white/5 shadow-2xl p-10 rounded-3xl transition transform hover:-translate-y-2 duration-300 group">
+        <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-8 bg-blue-500/10 text-blue-400 border border-blue-500/20 group-hover:bg-blue-500/20 transition-colors">
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+        </div>
+        <h4 class="text-xl font-bold mb-4 text-white tracking-wide">${f.t}</h4>
+        <p class="text-gray-400 text-base leading-relaxed">${f.d}</p>
     </div>
-    <h4 class="text-xl font-bold mb-3 text-gray-900">${f.t}</h4>
-    <p class="text-gray-600 text-sm leading-relaxed">${f.d}</p>
-</div>
+    
 
-
-<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
-    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-blue-50 text-blue-600 border border-blue-200">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    <div class="bg-white/[0.02] border border-white/5 shadow-2xl p-10 rounded-3xl transition transform hover:-translate-y-2 duration-300 group">
+        <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-8 bg-blue-500/10 text-blue-400 border border-blue-500/20 group-hover:bg-blue-500/20 transition-colors">
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+        </div>
+        <h4 class="text-xl font-bold mb-4 text-white tracking-wide">${f.t}</h4>
+        <p class="text-gray-400 text-base leading-relaxed">${f.d}</p>
     </div>
-    <h4 class="text-xl font-bold mb-3 text-gray-900">${f.t}</h4>
-    <p class="text-gray-600 text-sm leading-relaxed">${f.d}</p>
-</div>
+    
 
-
-<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
-    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-blue-50 text-blue-600 border border-blue-200">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+    <div class="bg-white/[0.02] border border-white/5 shadow-2xl p-10 rounded-3xl transition transform hover:-translate-y-2 duration-300 group">
+        <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-8 bg-blue-500/10 text-blue-400 border border-blue-500/20 group-hover:bg-blue-500/20 transition-colors">
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+        </div>
+        <h4 class="text-xl font-bold mb-4 text-white tracking-wide">${f.t}</h4>
+        <p class="text-gray-400 text-base leading-relaxed">${f.d}</p>
     </div>
-    <h4 class="text-xl font-bold mb-3 text-gray-900">${f.t}</h4>
-    <p class="text-gray-600 text-sm leading-relaxed">${f.d}</p>
-</div>
-
-                    </div>
+    
                 </div>
-                
-                <div class="flex flex-col md:flex-row items-center gap-16 ">
-                    <div class="flex-1 space-y-6">
-                        <span class="text-blue-600 font-bold tracking-widest text-sm uppercase">INSTANT LIQUIDITY</span>
-                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">売掛金を明日の現金に変える</h2>
-                        <div class="w-12 h-1 bg-blue-500 rounded"></div>
-                        <p class="text-lg text-gray-600 leading-relaxed font-light">早期資金化ボタンを押すだけでAIが審査し最短即日で現金を振り込みます。借入ではないため決算書も傷つきません。</p>
-                    </div>
-                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
-                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
-                        <div class="absolute inset-0 bg-gradient-to-tr from-blue-900/20 to-transparent"></div>
-                    </div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row items-center gap-16  relative z-10">
+                <div class="flex-1 space-y-6">
+                    <span class="text-blue-500 font-bold tracking-widest text-sm uppercase">INSTANT LIQUIDITY</span>
+                    <h2 class="text-3xl md:text-4xl font-black text-white leading-tight">売掛金を明日の現金に変える</h2>
+                    <div class="w-16 h-1 bg-blue-600 rounded"></div>
+                    <p class="text-lg text-gray-400 leading-relaxed font-light">早期資金化ボタンを押すだけでAIが審査し最短即日で現金を振り込みます。借入ではないため決算書も傷つきません。</p>
                 </div>
-                
-                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
-                    <div class="flex-1 space-y-6">
-                        <span class="text-blue-600 font-bold tracking-widest text-sm uppercase">FORECASTING</span>
-                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">3ヶ月先の資金繰りカレンダー</h2>
-                        <div class="w-12 h-1 bg-blue-500 rounded"></div>
-                        <p class="text-lg text-gray-600 leading-relaxed font-light">過去の入出金データからAIが「現金残高がマイナスになる危険性」を事前にアラートします。</p>
-                    </div>
-                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
-                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: bottom right;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
-                        <div class="absolute inset-0 bg-gradient-to-tr from-blue-900/20 to-transparent"></div>
-                    </div>
+                <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-zinc-900 border border-white/10 group">
+                    <img src="img/ui.png" class="w-full h-full object-cover opacity-40 grayscale sepia-[.2] transition-all duration-700 group-hover:grayscale-0 group-hover:opacity-80 group-hover:scale-105" style="object-position: top left;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
+                    <div class="absolute inset-0 bg-gradient-to-tr from-blue-900/40 to-transparent"></div>
                 </div>
-                
-                <div class="flex flex-col md:flex-row items-center gap-16 ">
-                    <div class="flex-1 space-y-6">
-                        <span class="text-blue-600 font-bold tracking-widest text-sm uppercase">GROWTH UNLOCKED</span>
-                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">Case Study | Web制作会社</h2>
-                        <div class="w-12 h-1 bg-blue-500 rounded"></div>
-                        <p class="text-lg text-gray-600 leading-relaxed font-light">外注費の先払いで資金ショート寸前だった企業が、請求書を即日現金化しプロジェクトを完遂しました。</p>
-                    </div>
-                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
-                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
-                        <div class="absolute inset-0 bg-gradient-to-tr from-blue-900/20 to-transparent"></div>
-                    </div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse relative z-10">
+                <div class="flex-1 space-y-6">
+                    <span class="text-blue-500 font-bold tracking-widest text-sm uppercase">FORECASTING</span>
+                    <h2 class="text-3xl md:text-4xl font-black text-white leading-tight">3ヶ月先の資金繰りカレンダー</h2>
+                    <div class="w-16 h-1 bg-blue-600 rounded"></div>
+                    <p class="text-lg text-gray-400 leading-relaxed font-light">過去の入出金データからAIが「現金残高がマイナスになる危険性」を事前にアラートします。</p>
                 </div>
-                
-                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
-                    <div class="flex-1 space-y-6">
-                        <span class="text-blue-600 font-bold tracking-widest text-sm uppercase">OUR VISION</span>
-                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">「信用」を資産へ</h2>
-                        <div class="w-12 h-1 bg-blue-500 rounded"></div>
-                        <p class="text-lg text-gray-600 leading-relaxed font-light">日本のB2B取引の血液を最速で循環させます。</p>
-                    </div>
-                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
-                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: bottom right;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
-                        <div class="absolute inset-0 bg-gradient-to-tr from-blue-900/20 to-transparent"></div>
-                    </div>
+                <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-zinc-900 border border-white/10 group">
+                    <img src="img/ui.png" class="w-full h-full object-cover opacity-40 grayscale sepia-[.2] transition-all duration-700 group-hover:grayscale-0 group-hover:opacity-80 group-hover:scale-105" style="object-position: bottom right;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
+                    <div class="absolute inset-0 bg-gradient-to-tr from-blue-900/40 to-transparent"></div>
                 </div>
-                
+            </div>
+            
+            <div class="flex flex-col md:flex-row items-center gap-16  relative z-10">
+                <div class="flex-1 space-y-6">
+                    <span class="text-blue-500 font-bold tracking-widest text-sm uppercase">GROWTH UNLOCKED</span>
+                    <h2 class="text-3xl md:text-4xl font-black text-white leading-tight">Case Study | Web制作会社</h2>
+                    <div class="w-16 h-1 bg-blue-600 rounded"></div>
+                    <p class="text-lg text-gray-400 leading-relaxed font-light">外注費の先払いで資金ショート寸前だった企業が、請求書を即日現金化しプロジェクトを完遂しました。</p>
+                </div>
+                <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-zinc-900 border border-white/10 group">
+                    <img src="img/ui.png" class="w-full h-full object-cover opacity-40 grayscale sepia-[.2] transition-all duration-700 group-hover:grayscale-0 group-hover:opacity-80 group-hover:scale-105" style="object-position: top left;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
+                    <div class="absolute inset-0 bg-gradient-to-tr from-blue-900/40 to-transparent"></div>
+                </div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse relative z-10">
+                <div class="flex-1 space-y-6">
+                    <span class="text-blue-500 font-bold tracking-widest text-sm uppercase">OUR VISION</span>
+                    <h2 class="text-3xl md:text-4xl font-black text-white leading-tight">「信用」を資産へ</h2>
+                    <div class="w-16 h-1 bg-blue-600 rounded"></div>
+                    <p class="text-lg text-gray-400 leading-relaxed font-light">日本のB2B取引の血液を最速で循環させます。</p>
+                </div>
+                <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-zinc-900 border border-white/10 group">
+                    <img src="img/ui.png" class="w-full h-full object-cover opacity-40 grayscale sepia-[.2] transition-all duration-700 group-hover:grayscale-0 group-hover:opacity-80 group-hover:scale-105" style="object-position: bottom right;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
+                    <div class="absolute inset-0 bg-gradient-to-tr from-blue-900/40 to-transparent"></div>
+                </div>
+            </div>
+            
         </div>
 
-        <div class="text-center bg-gray-900 border border-gray-800 rounded-[3rem] p-16 md:p-32 relative overflow-hidden group shadow-2xl">
-            <div class="absolute inset-0 bg-gradient-to-br from-blue-900/40 to-transparent"></div>
+        <!-- CTA Section -->
+        <div class="text-center bg-zinc-900 border border-white/10 rounded-[3rem] p-16 md:p-32 relative overflow-hidden group shadow-2xl">
+            <div class="absolute inset-0 bg-gradient-to-br from-blue-900/40 via-transparent to-transparent"></div>
+            <div class="absolute -top-24 -right-24 w-96 h-96 bg-blue-600/20 rounded-full blur-[100px]"></div>
             <div class="relative z-10">
                 <h2 class="text-4xl md:text-5xl font-black mb-8 text-white">${data.ctaTitle}</h2>
-                <p class="text-gray-300 mb-12 max-w-xl mx-auto text-lg leading-relaxed">${data.ctaDesc}</p>
-                <a href="../index.html" class="bg-blue-500 hover:bg-blue-400 text-white px-12 py-5 rounded-full font-bold text-lg inline-flex items-center gap-3 transition transform hover:-translate-y-1 shadow-lg shadow-blue-500/30">
-                    PORTFOLIOに戻る
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                <p class="text-gray-400 mb-12 max-w-xl mx-auto text-lg leading-relaxed">${data.ctaDesc}</p>
+                <a href="#" class="bg-blue-500 hover:bg-blue-400 text-white px-12 py-5 rounded-full font-bold text-lg inline-flex items-center gap-3 transition transform hover:-translate-y-1 shadow-[0_0_30px_rgba(var(--tw-colors-blue-500),0.3)] shadow-blue-500/50">
+                    START B2B FINTECH
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
                 </a>
             </div>
         </div>
     </main>
-        
+
+    <!-- Footer -->
+    <footer class="py-12 text-center text-sm font-medium text-gray-600 border-t border-white/5 bg-[#050505]">
+        <p>&copy; 2026 B2B FINTECH. ALL RIGHTS RESERVED.</p>
+    </footer>
+
 </body>
 </html>

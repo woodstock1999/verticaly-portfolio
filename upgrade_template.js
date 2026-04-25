@@ -1,0 +1,132 @@
+const fs = require('fs');
+
+function upgradeSite(id, data) {
+    const file = `/Users/naokiazuma/.gemini/antigravity/scratch/verticaly-portfolio/concept_100/site_${id}/index.html`;
+    
+    // Determine title from first feature or fallback
+    const siteTitle = data.tag.split('/')[0].trim() || `SITE-${id}`;
+
+    const buildH3Feature = (f, colorTheme) => `
+    <div class="bg-white/[0.02] border border-white/5 shadow-2xl p-10 rounded-3xl transition transform hover:-translate-y-2 duration-300 group">
+        <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-8 bg-${colorTheme}-500/10 text-${colorTheme}-400 border border-${colorTheme}-500/20 group-hover:bg-${colorTheme}-500/20 transition-colors">
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+        </div>
+        <h4 class="text-xl font-bold mb-4 text-white tracking-wide">${f.t}</h4>
+        <p class="text-gray-400 text-base leading-relaxed">${f.d}</p>
+    </div>
+    `;
+
+    let html = `<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>${data.headline.replace(/<[^>]+>/g, '')} | ${siteTitle}</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', 'Noto Sans JP', sans-serif; }
+    </style>
+</head>
+<body class="bg-[#050505] text-gray-400 min-h-screen font-sans antialiased overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 backdrop-blur-xl bg-[#050505]/80 border-b border-white/5 px-8 py-5 flex justify-between items-center transition-all">
+        <div class="font-black text-2xl tracking-tighter text-white flex items-center gap-3">
+            <div class="w-3 h-3 rounded-full bg-${data.colorTheme}-500 shadow-[0_0_15px_rgba(255,255,255,0.2)] shadow-${data.colorTheme}-500/50"></div>
+            ${siteTitle}
+        </div>
+        <div class="hidden md:flex gap-10 text-sm font-bold text-gray-400">
+            <a href="#" class="hover:text-white transition">FEATURES</a>
+            <a href="#" class="hover:text-white transition">SOLUTIONS</a>
+            <a href="#" class="hover:text-white transition">PRICING</a>
+        </div>
+        <div class="flex items-center gap-4">
+            <a href="../index.html" class="text-xs font-bold text-gray-500 hover:text-white transition uppercase tracking-widest">HUB</a>
+            <a href="#" class="bg-${data.colorTheme}-600 hover:bg-${data.colorTheme}-500 text-white px-6 py-2.5 rounded-full font-bold text-sm transition transform hover:scale-105">${data.btnText}</a>
+        </div>
+    </nav>
+
+    <main class="pt-[160px] pb-24 px-6 md:px-12 max-w-7xl mx-auto">
+        <!-- Hero Section -->
+        <div class="text-center max-w-5xl mx-auto mb-24 relative">
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-${data.colorTheme}-600/20 rounded-full blur-[120px] pointer-events-none"></div>
+            <span class="relative z-10 bg-white/5 text-${data.colorTheme}-400 border border-white/10 px-6 py-2 text-xs font-black rounded-full tracking-widest uppercase mb-8 inline-block shadow-sm">${data.tag}</span>
+            <h1 class="relative z-10 text-5xl md:text-[64px] font-black mb-8 leading-[1.1] tracking-tight text-white">${data.headline}</h1>
+            <p class="relative z-10 text-lg md:text-xl text-gray-400 font-medium leading-relaxed max-w-3xl mx-auto">${data.subheadline}</p>
+        </div>
+
+        <!-- UI Showcase -->
+        <div class="relative w-full aspect-[21/9] md:aspect-video rounded-[32px] overflow-hidden shadow-2xl mb-32 border border-white/10 group bg-zinc-900">
+            <img src="img/ui.png" alt="UI Dashboard" class="w-full h-full object-cover transition-transform duration-[5s] group-hover:scale-[1.03]" onerror="this.src='https://picsum.photos/seed/placeholder/1600/900'">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/20 to-transparent pointer-events-none"></div>
+        </div>
+
+        <div class="flex flex-col gap-32 mb-32">
+    `;
+
+    data.blocks.forEach((blk, idx) => {
+        const isReverse = idx % 2 === 1;
+        if (blk.features) {
+            html += `
+            <div class="mt-10 relative z-10">
+                <div class="text-center mb-16">
+                    <span class="text-${data.colorTheme}-500 font-bold tracking-widest text-sm uppercase">${blk.subtitle}</span>
+                    <h2 class="text-3xl md:text-4xl font-black mt-4 text-white">${blk.title}</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    ${blk.features.map(f => buildH3Feature(f, data.colorTheme)).join('\n')}
+                </div>
+            </div>
+            `;
+        } else {
+            html += `
+            <div class="flex flex-col md:flex-row items-center gap-16 ${isReverse ? 'md:flex-row-reverse' : ''} relative z-10">
+                <div class="flex-1 space-y-6">
+                    <span class="text-${data.colorTheme}-500 font-bold tracking-widest text-sm uppercase">${blk.subtitle}</span>
+                    <h2 class="text-3xl md:text-4xl font-black text-white leading-tight">${blk.title}</h2>
+                    <div class="w-16 h-1 bg-${data.colorTheme}-600 rounded"></div>
+                    <p class="text-lg text-gray-400 leading-relaxed font-light">${blk.content}</p>
+                </div>
+                <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-zinc-900 border border-white/10 group">
+                    <img src="img/ui.png" class="w-full h-full object-cover opacity-40 grayscale sepia-[.2] transition-all duration-700 group-hover:grayscale-0 group-hover:opacity-80 group-hover:scale-105" style="object-position: ${isReverse ? 'bottom right' : 'top left'};" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
+                    <div class="absolute inset-0 bg-gradient-to-tr from-${data.colorTheme}-900/40 to-transparent"></div>
+                </div>
+            </div>
+            `;
+        }
+    });
+
+    html += `
+        </div>
+
+        <!-- CTA Section -->
+        <div class="text-center bg-zinc-900 border border-white/10 rounded-[3rem] p-16 md:p-32 relative overflow-hidden group shadow-2xl">
+            <div class="absolute inset-0 bg-gradient-to-br from-${data.colorTheme}-900/40 via-transparent to-transparent"></div>
+            <div class="absolute -top-24 -right-24 w-96 h-96 bg-${data.colorTheme}-600/20 rounded-full blur-[100px]"></div>
+            <div class="relative z-10">
+                <h2 class="text-4xl md:text-5xl font-black mb-8 text-white">${data.ctaTitle}</h2>
+                <p class="text-gray-400 mb-12 max-w-xl mx-auto text-lg leading-relaxed">${data.ctaDesc}</p>
+                <a href="#" class="bg-${data.colorTheme}-500 hover:bg-${data.colorTheme}-400 text-white px-12 py-5 rounded-full font-bold text-lg inline-flex items-center gap-3 transition transform hover:-translate-y-1 shadow-[0_0_30px_rgba(var(--tw-colors-${data.colorTheme}-500),0.3)] shadow-${data.colorTheme}-500/50">
+                    ${data.btnText}
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-12 text-center text-sm font-medium text-gray-600 border-t border-white/5 bg-[#050505]">
+        <p>&copy; 2026 ${siteTitle}. ALL RIGHTS RESERVED.</p>
+    </footer>
+
+</body>
+</html>
+`;
+    fs.writeFileSync(file, html);
+    console.log(`Upgraded site_${id} to premium cyberpunk layout`);
+}
+
+module.exports = upgradeSite;
