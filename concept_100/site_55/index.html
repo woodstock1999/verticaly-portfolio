@@ -3,23 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>スマホに奪われた「意志」を、強制的に取り戻す。 | WELLNESS</title>
+    <title>スマホに奪われた「意志」を、強制的に取り戻す。 | SITE-55</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Outfit:wght@400;700;900&display=swap');
         body {
             font-family: 'Outfit', 'Dela Gothic One', sans-serif;
-            background-color: #000;
+            background-color: #050505;
         }
         .brutal-card {
             border: 3px solid #000000;
             box-shadow: 6px 6px 0px 0px #000000;
-            background-color: #0c0c0c;
+            background-color: #0d0d0d;
         }
         .brutal-card-color {
             border: 3px solid #000000;
             box-shadow: 6px 6px 0px 0px #000000;
-            background-color: #ff007f;
+            background-color: #ffde00;
         }
         .brutal-button {
             border: 2px solid #000000;
@@ -29,155 +32,91 @@
             transform: translate(-1px, -1px);
             box-shadow: 4px 4px 0px 0px #000000;
         }
-        .acid-glow {
-            text-shadow: 0 0 15px #ff007f70;
+        .marquee-wrapper {
+            overflow: hidden;
+            white-space: nowrap;
+            display: flex;
+            background-color: #ffde00;
+            border-top: 3px solid #000;
+            border-bottom: 3px solid #000;
         }
+        .marquee-content {
+            display: inline-block;
+            animation: marquee 20s linear infinite;
+            padding: 10px 0;
+            font-weight: 900;
+            color: #000;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+        @keyframes marquee {
+            0% { transform: translate3d(0, 0, 0); }
+            100% { transform: translate3d(-50%, 0, 0); }
+        }
+        .reveal-item { opacity: 0; transform: scale(0.95) translateY(20px); }
     </style>
 </head>
-<body class="text-zinc-400 min-h-screen antialiased overflow-x-hidden selection:bg-rose-500 selection:text-black">
+<body class="text-zinc-400 min-h-screen antialiased overflow-x-hidden selection:bg-yellow-500 selection:text-black">
+
+    <!-- Grid background -->
+    <div class="fixed inset-0 pointer-events-none z-0 opacity-[0.08]" style="background-image: radial-gradient(rgba(255,255,255,0.1) 1px, transparent 0); background-size: 20px 20px;"></div>
 
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 bg-black border-b-2 border-black px-6 md:px-12 py-5 flex justify-between items-center">
+    <nav class="fixed w-full z-50 bg-black border-b-3 border-black px-6 md:px-12 py-5 flex justify-between items-center shadow-[0_4px_0_#000]">
         <div class="font-extrabold text-xl tracking-tight text-white flex items-center gap-2">
-            <span class="w-4 h-4 bg-rose-500 rounded-full border border-black shadow-[0_0_10px_#ff007f]"></span>
-            <span class="tracking-wide uppercase text-sm font-black text-white">WELLNESS</span>
+            <span class="w-4 h-4 bg-yellow-500 rounded-full border border-black shadow-[0_0_10px_#ffde00] animate-pulse"></span>
+            <span class="tracking-wide uppercase text-sm font-black text-white">SITE-55</span>
         </div>
-        <div class="hidden md:flex gap-8 text-[10px] font-black tracking-widest uppercase text-white/50">
-            <a href="#" class="hover:text-white transition">Concept</a>
+        <div class="hidden md:flex gap-8 text-[10px] font-black tracking-widest uppercase text-white/40">
             <a href="#" class="hover:text-white transition">Prototype</a>
-            <a href="#" class="hover:text-white transition">Terminal</a>
+            <a href="#" class="hover:text-white transition">Lab_Mode</a>
         </div>
         <div class="flex items-center gap-4">
-            <a href="../index.html" class="text-[9px] font-black text-white/40 hover:text-white transition uppercase tracking-widest">HUB</a>
-            <a href="#" class="bg-rose-500 hover:bg-rose-400 text-black border-2 border-black px-5 py-2 rounded font-black text-xs tracking-wide uppercase transition brutal-button">START WELLNESS</a>
+            <a href="../index.html" class="text-[9px] font-black text-white/30 hover:text-white transition uppercase tracking-widest">HUB</a>
+            <a href="#" class="bg-yellow-500 hover:bg-yellow-400 text-black border-2 border-black px-5 py-2 rounded font-black text-xs tracking-wide uppercase transition brutal-button">START WELLNESS</a>
         </div>
     </nav>
 
+    <!-- Main -->
     <main class="pt-[140px] pb-24 relative z-10">
         <div class="px-6 md:px-12 max-w-7xl mx-auto">
+            <!-- Hero -->
             <div class="text-center max-w-4xl mx-auto mb-20">
-                <span class="bg-rose-500 text-black border-2 border-black px-5 py-1.5 text-[9px] font-black tracking-widest uppercase rounded-full inline-block shadow-[2px_2px_0px_#000] mb-8">WELLNESS / DIGITAL DETOX</span>
-                <h1 class="text-4xl md:text-7xl font-black mb-8 leading-[1.1] text-white uppercase italic tracking-tight acid-glow">スマホに奪われた「意志」を、<br>強制的に取り戻す。</h1>
-                <p class="text-base md:text-lg text-zinc-400 font-medium leading-relaxed max-w-3xl mx-auto">TikTok、YouTube、Instagram。無限スクロールがもたらすドーパミン中毒からあなたの脳を解放する。DOPAMINE-BRAKEは、脳波とスクリーンタイムを監視し、依存の兆候を検知した瞬間にデバイスを「物理的に沈黙」させるデジタル・デトックスAIです。</p>
+                <span class="bg-yellow-500 text-black border-2 border-black px-5 py-1.5 text-[9px] font-black tracking-widest uppercase rounded-full inline-block shadow-[2px_2px_0px_#000] mb-8"></span>
+                <h1 class="text-4xl md:text-7xl font-black mb-8 leading-[1.15] text-white uppercase italic tracking-tight reveal-item" style="transform: none; opacity: 1;">スマホに奪われた「意志」を、<br>強制的に取り戻す。</h1>
+                <p class="text-base md:text-lg text-zinc-400 font-medium leading-relaxed max-w-3xl mx-auto reveal-item" style="transform: none; opacity: 1;">TikTok、YouTube、Instagram。無限スクロールがもたらすドーパミン中毒からあなたの脳を解放する。DOPAMINE-BRAKEは、脳波とスクリーンタイムを監視し、依存の兆候を検知した瞬間にデバイスを「物理的に沈黙」させるデジタル・デトックスAIです。</p>
             </div>
             
-            <div class="relative w-full aspect-[21/10] md:aspect-video rounded-lg overflow-hidden border-4 border-black shadow-[10px_10px_0px_0px_#ff007f] bg-zinc-900 group mb-32">
+            <!-- Hero UI/Mockup -->
+            <div class="relative w-full aspect-[21/10] md:aspect-video rounded-lg overflow-hidden border-4 border-black shadow-[8px_8px_0px_0px_#ffde00] bg-zinc-950 group mb-32 reveal-item">
                 <div class="w-full h-full">
-                    
-            <div class="relative w-full h-full bg-black overflow-hidden border-2 border-black">
-                <img src="img/ui.png" class="w-full h-full object-cover transition-transform duration-[5s] group-hover:scale-[1.03]">
-                <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent pointer-events-none"></div>
-            </div>
+                    <img src="img/ui.png" class="w-full h-full object-cover rounded-xl border border-white/10 shadow-2xl">
                 </div>
             </div>
-        </div><div class="px-6 md:px-12 max-w-7xl mx-auto flex flex-col gap-32 mb-32">
-                <div class="flex flex-col md:flex-row items-center gap-16 ">
-                    <div class="flex-1 space-y-6">
-                        <span class="text-rose-400 font-black tracking-widest text-xs uppercase block">THE ATTENTION THEFT</span>
-                        <h2 class="text-3xl md:text-4xl font-black text-white leading-tight uppercase italic">「Attention Economy」という合法的な搾取</h2>
-                        <div class="w-16 h-1 bg-rose-500 border-2 border-black"></div>
-                        <p class="text-sm leading-relaxed text-zinc-400 font-light">シリコンバレーの天才たちが何十億ドルも投じて開発しているのは、「いかにあなたを画面に釘付けにするか」というアルゴリズムです。SNSの無限スクロールはスロットマシンと同じように脳の報酬系（ドーパミン）を刺激し、あなたの最も貴重な資産である「時間と集中力」を搾取し続けています。</p>
-                    </div>
-                    <div class="flex-1 w-full aspect-video rounded-lg overflow-hidden border-3 border-black shadow-[6px_6px_0px_#000] bg-zinc-900 p-1">
-                        <div class="w-full h-full rounded-sm bg-zinc-950 overflow-hidden flex items-center justify-center p-6 relative">
-                            <img src="img/ui.png" class="w-full h-full object-cover transition-transform duration-[5s] group-hover:scale-[1.03]">
-                        </div>
-                    </div>
-                </div>
-                <div class="relative">
-                    <div class="text-center mb-16 max-w-2xl mx-auto">
-                        <span class="text-rose-400 font-black tracking-widest text-xs uppercase block">ADDICTION DETECTION</span>
-                        <h2 class="text-3xl md:text-5xl font-black mt-4 text-white uppercase italic">依存を検知する「行動パターン解析」</h2>
-                    </div>
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        
-                        <div class="brutal-card p-8 rounded-lg hover:translate-y-[-4px] transition duration-200">
-                            <div class="w-12 h-12 rounded-full flex items-center justify-center mb-6 bg-rose-500 text-black border-2 border-black">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-                            </div>
-                            <h4 class="text-lg font-black mb-3 text-white uppercase">スクロール速度の異常検知</h4>
-                            <p class="text-xs leading-relaxed text-zinc-500">「目的なくただ画面をスワイプし続けている」時の特有の指の速度とリズムをAIが検知。この状態（ゾンビ・スクロール）が3分続くとアラートを発動します。</p>
-                        </div>
-                        
+        </div>
 
-                        <div class="brutal-card p-8 rounded-lg hover:translate-y-[-4px] transition duration-200">
-                            <div class="w-12 h-12 rounded-full flex items-center justify-center mb-6 bg-rose-500 text-black border-2 border-black">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-                            </div>
-                            <h4 class="text-lg font-black mb-3 text-white uppercase">アプリ間反復のトラッキング</h4>
-                            <p class="text-xs leading-relaxed text-zinc-500">Instagramを開き、何も見ずにXを開き、またInstagramに戻る。この「無意識のループ行動」を検知した瞬間に、両方のアプリに強制的な遅延（5秒間のローディング）を発生させ、我に返らせます。</p>
-                        </div>
-                        
+        <!-- Marquee Banner -->
+        <div class="marquee-wrapper mb-32">
+            <div class="marquee-content">
+                &nbsp;&nbsp;●&nbsp;&nbsp;SITE-55&nbsp;&nbsp;●&nbsp;&nbsp;KINETIC_FLOW_ESTABLISHED&nbsp;&nbsp;●&nbsp;&nbsp;SYSTEM_ONLINE&nbsp;&nbsp;●&nbsp;&nbsp;PROTOTYPE_STABLE&nbsp;&nbsp;●&nbsp;&nbsp;SITE-55&nbsp;&nbsp;●&nbsp;&nbsp;KINETIC_FLOW_ESTABLISHED&nbsp;&nbsp;●&nbsp;&nbsp;SYSTEM_ONLINE&nbsp;&nbsp;●&nbsp;&nbsp;PROTOTYPE_STABLE
+            </div>
+            <div class="marquee-content">
+                &nbsp;&nbsp;●&nbsp;&nbsp;SITE-55&nbsp;&nbsp;●&nbsp;&nbsp;KINETIC_FLOW_ESTABLISHED&nbsp;&nbsp;●&nbsp;&nbsp;SYSTEM_ONLINE&nbsp;&nbsp;●&nbsp;&nbsp;PROTOTYPE_STABLE&nbsp;&nbsp;●&nbsp;&nbsp;SITE-55&nbsp;&nbsp;●&nbsp;&nbsp;KINETIC_FLOW_ESTABLISHED&nbsp;&nbsp;●&nbsp;&nbsp;SYSTEM_ONLINE&nbsp;&nbsp;●&nbsp;&nbsp;PROTOTYPE_STABLE
+            </div>
+        </div>
 
-                        <div class="brutal-card p-8 rounded-lg hover:translate-y-[-4px] transition duration-200">
-                            <div class="w-12 h-12 rounded-full flex items-center justify-center mb-6 bg-rose-500 text-black border-2 border-black">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-                            </div>
-                            <h4 class="text-lg font-black mb-3 text-white uppercase">バイオメトリクス連動</h4>
-                            <p class="text-xs leading-relaxed text-zinc-500">スマートウォッチの心拍変動（HRV）から「脳の疲労状態」を推測。疲れている時ほどSNSに依存しやすいため、その時間帯の利用制限を自動で厳しくします。</p>
-                        </div>
-                        
-                    </div>
-                </div>
-                <div class="flex flex-col md:flex-row items-center gap-16 ">
-                    <div class="flex-1 space-y-6">
-                        <span class="text-rose-400 font-black tracking-widest text-xs uppercase block">GRAYSCALE HACK</span>
-                        <h2 class="text-3xl md:text-4xl font-black text-white leading-tight uppercase italic">「見れない」のではなく「見えなくなる」魔法</h2>
-                        <div class="w-16 h-1 bg-rose-500 border-2 border-black"></div>
-                        <p class="text-sm leading-relaxed text-zinc-400 font-light">単にアプリをロックするだけでは、イライラして解除してしまいます。DOPAMINE-BRAKEは制限時間を超えると、画面全体を鮮やかなフルカラーから「完全なモノクロ（白黒）」へと徐々にフェードアウトさせます。脳への視覚的刺激が激減し、自然とスマホを置きたくなる心理的なハックです。</p>
-                    </div>
-                    <div class="flex-1 w-full aspect-video rounded-lg overflow-hidden border-3 border-black shadow-[6px_6px_0px_#000] bg-zinc-900 p-1">
-                        <div class="w-full h-full rounded-sm bg-zinc-950 overflow-hidden flex items-center justify-center p-6 relative">
-                            <img src="img/ui.png" class="w-full h-full object-cover transition-transform duration-[5s] group-hover:scale-[1.03]">
-                        </div>
-                    </div>
-                </div>
-                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
-                    <div class="flex-1 space-y-6">
-                        <span class="text-rose-400 font-black tracking-widest text-xs uppercase block">LIFE RECLAIMED</span>
-                        <h2 class="text-3xl md:text-4xl font-black text-white leading-tight uppercase italic">取り戻した時間を可視化するダッシュボード</h2>
-                        <div class="w-16 h-1 bg-rose-500 border-2 border-black"></div>
-                        <p class="text-sm leading-relaxed text-zinc-400 font-light">「今週、スマホを見なかったことで読書できた時間：4時間」「睡眠時間の増加：1.5時間」。制限によって『失ったもの』ではなく、現実世界で『得たもの』を美しく可視化し、デジタルデトックスのモチベーションを維持します。</p>
-                    </div>
-                    <div class="flex-1 w-full aspect-video rounded-lg overflow-hidden border-3 border-black shadow-[6px_6px_0px_#000] bg-zinc-900 p-1">
-                        <div class="w-full h-full rounded-sm bg-zinc-950 overflow-hidden flex items-center justify-center p-6 relative">
-                            <img src="img/ui.png" class="w-full h-full object-cover transition-transform duration-[5s] group-hover:scale-[1.03]">
-                        </div>
-                    </div>
-                </div>
-                <div class="flex flex-col md:flex-row items-center gap-16 ">
-                    <div class="flex-1 space-y-6">
-                        <span class="text-rose-400 font-black tracking-widest text-xs uppercase block">USER SUCCESS</span>
-                        <h2 class="text-3xl md:text-4xl font-black text-white leading-tight uppercase italic">Case Study | 慢性的な不眠に悩む20代</h2>
-                        <div class="w-16 h-1 bg-rose-500 border-2 border-black"></div>
-                        <p class="text-sm leading-relaxed text-zinc-400 font-light">ベッドに入ってから2時間以上ショート動画を見てしまい、日中のパフォーマンスが著しく低下していたユーザー。就寝1時間前に「ドーパミン・ブレーキ」が作動するよう設定したところ、モノクロ化された画面に興味を失い、入眠までの時間が平均15分へと劇的に改善しました。</p>
-                    </div>
-                    <div class="flex-1 w-full aspect-video rounded-lg overflow-hidden border-3 border-black shadow-[6px_6px_0px_#000] bg-zinc-900 p-1">
-                        <div class="w-full h-full rounded-sm bg-zinc-950 overflow-hidden flex items-center justify-center p-6 relative">
-                            <img src="img/ui.png" class="w-full h-full object-cover transition-transform duration-[5s] group-hover:scale-[1.03]">
-                        </div>
-                    </div>
-                </div>
-                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
-                    <div class="flex-1 space-y-6">
-                        <span class="text-rose-400 font-black tracking-widest text-xs uppercase block">OUR VISION</span>
-                        <h2 class="text-3xl md:text-4xl font-black text-white leading-tight uppercase italic">テクノロジーを、人間の「道具」に戻す</h2>
-                        <div class="w-16 h-1 bg-rose-500 border-2 border-black"></div>
-                        <p class="text-sm leading-relaxed text-zinc-400 font-light">私たちはスマートフォンを否定しているわけではありません。ただ、デバイスの「奴隷」から「主人」へと主従関係を逆転させるだけです。取り戻した時間で、あなたが本当に愛することをしてください。</p>
-                    </div>
-                    <div class="flex-1 w-full aspect-video rounded-lg overflow-hidden border-3 border-black shadow-[6px_6px_0px_#000] bg-zinc-900 p-1">
-                        <div class="w-full h-full rounded-sm bg-zinc-950 overflow-hidden flex items-center justify-center p-6 relative">
-                            <img src="img/ui.png" class="w-full h-full object-cover transition-transform duration-[5s] group-hover:scale-[1.03]">
-                        </div>
-                    </div>
-                </div></div>
-        <div class="px-6 md:px-12 max-w-7xl mx-auto">
+        <div class="px-6 md:px-12 max-w-7xl mx-auto flex flex-col gap-32 mb-32">
+            
+        </div>
+
+        <!-- CTA -->
+        <div class="px-6 md:px-12 max-w-7xl mx-auto reveal-item">
             <div class="brutal-card-color rounded-lg p-12 md:p-24 relative overflow-hidden border-4 border-black text-black">
                 <div class="relative z-10 text-center max-w-3xl mx-auto space-y-8">
                     <h2 class="text-3xl md:text-5xl font-black uppercase italic tracking-tight">1日2時間の「空白」が、人生を変える。</h2>
                     <p class="text-sm text-black/70 font-bold leading-relaxed max-w-xl mx-auto">気合いでスマホは手放せません。最強のアルゴリズムには、より強力なアルゴリズムで対抗しましょう。</p>
                     <div>
-                        <a href="#" class="bg-black hover:bg-zinc-900 text-rose-500 px-10 py-4 rounded font-black text-xs tracking-wider uppercase inline-flex items-center gap-3 transition brutal-button">
+                        <a href="#" class="bg-black hover:bg-zinc-900 text-yellow-500 px-10 py-4 rounded font-black text-xs tracking-wider uppercase inline-flex items-center gap-3 transition brutal-button">
                             START WELLNESS
                         </a>
                     </div>
@@ -187,9 +126,35 @@
     </main>
 
     <!-- Footer -->
-    <footer class="py-12 text-center text-[10px] font-black tracking-widest text-zinc-500 border-t-2 border-black bg-black">
-        <p>&copy; 2026 WELLNESS &mdash; PROTOCOL // 0x29C5A.</p>
+    <footer class="py-12 text-center text-[10px] font-black tracking-widest text-zinc-600 border-t-3 border-black bg-black">
+        <p>&copy; 2026 SITE-55 &mdash; PROTOCOL // 0x2A9C.</p>
     </footer>
 
+    <script>
+        // Lenis Smooth Scroll
+        const lenis = new Lenis();
+        function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+        requestAnimationFrame(raf);
+
+        // GSAP ScrollTrigger Scale/Fade-ins
+        gsap.registerPlugin(ScrollTrigger);
+        gsap.utils.toArray('.reveal-item').forEach(item => {
+            gsap.to(item, {
+                opacity: 1,
+                scale: 1,
+                y: 0,
+                duration: 0.8,
+                ease: 'back.out(1.4)',
+                scrollTrigger: {
+                    trigger: item,
+                    start: 'top 85%',
+                    toggleActions: 'play none none none'
+                }
+            });
+        });
+    </script>
 </body>
 </html>

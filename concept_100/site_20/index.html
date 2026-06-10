@@ -5,175 +5,84 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>「土の乾き」が、あなたのスマホに通知される。 | AGRI TECH</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=JetBrains+Mono:wght@400;700&family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;700&family=Noto+Sans+JP:wght@400;700;900&display=swap');
         body {
             font-family: 'Space Grotesk', 'Noto Sans JP', sans-serif;
             background-color: #030307;
+            color: #8f96a3;
         }
-        .code-font {
-            font-family: 'JetBrains Mono', monospace;
-        }
+        .code-font { font-family: 'JetBrains Mono', monospace; }
         .glass-panel {
-            background: rgba(13, 17, 27, 0.7);
+            background: rgba(10, 12, 22, 0.7);
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.04);
         }
-        .glow-cyan {
-            box-shadow: 0 0 40px rgba(6, 182, 212, 0.15);
+        .glow-line {
+            box-shadow: 0 0 25px #3b82f640;
         }
+        .reveal-item { opacity: 0; transform: translateY(30px); }
+        .hud-border { border: 1px solid #3b82f620; }
+        .text-neon { color: #3b82f6; text-shadow: 0 0 10px #3b82f650; }
     </style>
 </head>
-<body class="text-[#8f96a3] min-h-screen antialiased overflow-x-hidden selection:bg-fuchsia-500/30">
+<body class="antialiased overflow-x-hidden selection:bg-blue-500/30">
 
-    <!-- Glowing Cyber Grid Background -->
+    <!-- Cyberpunk grid lines -->
     <div class="fixed inset-0 pointer-events-none z-0 opacity-[0.03]" style="background-image: radial-gradient(rgba(255,255,255,0.15) 1px, transparent 0); background-size: 24px 24px;"></div>
-    <div class="fixed top-0 left-1/4 w-[500px] h-[500px] bg-fuchsia-600/10 rounded-full blur-[150px] pointer-events-none z-0"></div>
-    <div class="fixed bottom-0 right-1/4 w-[500px] h-[500px] bg-purple-600/10 rounded-full blur-[150px] pointer-events-none z-0"></div>
+    <div class="fixed top-0 left-1/4 w-[600px] h-[600px] bg-blue-600/10 rounded-full blur-[140px] pointer-events-none z-0"></div>
 
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 glass-panel border-b border-white/5 px-6 md:px-12 py-5 flex justify-between items-center">
+    <nav class="fixed w-full z-50 glass-panel border-b border-white/5 px-6 md:px-12 py-5 flex justify-between items-center transition-all">
         <div class="font-bold text-xl tracking-tight text-white flex items-center gap-3">
-            <div class="w-3.5 h-3.5 rounded bg-fuchsia-500 shadow-[0_0_15px_rgba(6,182,212,0.6)]"></div>
+            <div class="w-3.5 h-3.5 rounded bg-blue-500 shadow-[0_0_15px_#3b82f6] animate-pulse"></div>
             <span class="tracking-widest uppercase text-sm font-black text-white/90">AGRI TECH</span>
         </div>
-        <div class="hidden md:flex gap-8 text-xs font-bold text-white/50 tracking-widest uppercase">
-            <a href="#" class="hover:text-white transition">Features</a>
+        <div class="hidden md:flex gap-8 text-[10px] tracking-[0.2em] font-bold text-white/40 uppercase">
             <a href="#" class="hover:text-white transition">Network</a>
-            <a href="#" class="hover:text-white transition">Tokenomics</a>
+            <a href="#" class="hover:text-white transition">Security</a>
+            <a href="#" class="hover:text-white transition">API Docs</a>
         </div>
         <div class="flex items-center gap-4">
-            <a href="../index.html" class="text-[10px] font-bold text-white/40 hover:text-white transition uppercase tracking-widest">HUB</a>
-            <a href="#" class="bg-fuchsia-600 hover:bg-fuchsia-500 text-white px-5 py-2 rounded font-bold text-xs tracking-wider uppercase transition shadow-lg shadow-fuchsia-500/20">START AGRI TECH</a>
+            <a href="../index.html" class="text-[10px] font-bold text-white/30 hover:text-white transition uppercase tracking-widest">HUB</a>
+            <a href="#" class="bg-blue-600 hover:bg-blue-500 text-white px-5 py-2.5 rounded font-bold text-xs tracking-wider uppercase transition shadow-lg shadow-blue-500/20">START AGRI TECH</a>
         </div>
     </nav>
 
-    <main class="pt-[140px] pb-24 relative z-10">
+    <!-- Main -->
+    <main class="pt-[160px] pb-24 relative z-10">
         <div class="px-6 md:px-12 max-w-7xl mx-auto">
-            <div class="text-center max-w-4xl mx-auto mb-20">
-                <span class="bg-white/5 border border-white/10 text-fuchsia-400 px-5 py-1.5 text-[10px] font-bold tracking-widest uppercase rounded mb-6 inline-block">AGRI TECH / IoT</span>
-                <h1 class="text-4xl md:text-6xl font-extrabold mb-8 leading-[1.15] tracking-tight text-white">「土の乾き」が、<br>あなたのスマホに通知される。</h1>
-                <p class="text-lg md:text-xl text-[#8f96a3] max-w-3xl mx-auto leading-relaxed">AGRI-SENSORは、農地に刺すだけの安価なIoTセンサー群とAIを組み合わせ、土壌水分量、日射量、病害虫のリスクをリアルタイムで可視化する次世代の精密農業OSです。</p>
+            <!-- Hero -->
+            <div class="text-center max-w-4xl mx-auto mb-20 relative">
+                <span class="bg-white/5 border border-white/10 text-blue-400 px-5 py-1.5 text-[10px] font-bold tracking-widest uppercase rounded mb-6 inline-block">AGRI TECH</span>
+                <h1 class="text-4xl md:text-6xl font-extrabold mb-8 leading-[1.15] tracking-tight text-white reveal-item" style="transform: translateY(0); opacity: 1;">「土の乾き」が、<br>あなたのスマホに通知される。</h1>
+                <p class="text-lg md:text-xl text-[#8f96a3] max-w-3xl mx-auto leading-relaxed reveal-item" style="transform: translateY(0); opacity: 1;">AGRI-SENSORは、農地に刺すだけの安価なIoTセンサー群とAIを組み合わせ、土壌水分量、日射量、病害虫のリスクをリアルタイムで可視化する次世代の精密農業OSです。</p>
             </div>
             
-            <div class="relative w-full aspect-[21/10] md:aspect-video rounded-2xl overflow-hidden glass-panel p-2 shadow-2xl glow-fuchsia border border-white/10 group mb-32">
-                <div class="w-full h-full rounded-xl overflow-hidden">
-                    
-            <div class="relative w-full h-full bg-zinc-900 overflow-hidden">
-                <img src="img/ui.png" class="w-full h-full object-cover transition-transform duration-[5s] group-hover:scale-[1.03]">
-                <div class="absolute inset-0 bg-gradient-to-t from-[#050509] via-transparent to-transparent pointer-events-none"></div>
-            </div>
+            <!-- Hero UI/Mockup -->
+            <div class="relative w-full aspect-[21/10] md:aspect-video rounded-2xl overflow-hidden glass-panel p-2 shadow-2xl glow-line border border-white/10 group mb-32 reveal-item">
+                <div class="w-full h-full rounded-xl overflow-hidden bg-[#07070a]">
+                    <img src="img/ui.png" class="w-full h-full object-cover rounded-xl border border-white/10 shadow-2xl">
                 </div>
             </div>
-        </div><div class="px-6 md:px-12 max-w-7xl mx-auto flex flex-col gap-32 mb-32">
-                <div class="flex flex-col md:flex-row items-center gap-16 ">
-                    <div class="flex-1 space-y-6">
-                        <span class="text-fuchsia-400 font-bold tracking-widest text-xs uppercase block">THE PHYSICAL LIMIT</span>
-                        <h2 class="text-3xl md:text-4xl font-extrabold text-white leading-tight">「見て回る」という膨大な時間の浪費</h2>
-                        <div class="w-12 h-0.5 bg-fuchsia-500"></div>
-                        <p class="text-base leading-relaxed text-[#8f96a3] font-light">広大な農地。毎朝すべての畑を回って土の状態を確認する過酷な見回り作業が、農家の体力を奪い、規模拡大を阻む最大の要因です。</p>
-                    </div>
-                    <div class="flex-1 w-full aspect-video rounded-xl overflow-hidden glass-panel p-2 border border-white/10 group">
-                        <div class="w-full h-full rounded-lg bg-[#0e111a] overflow-hidden flex items-center justify-center p-6 border border-white/5 relative">
-                            <img src="img/ui.png" class="w-full h-full object-cover transition-transform duration-[5s] group-hover:scale-[1.03]">
-                        </div>
-                    </div>
-                </div>
-                <div class="relative">
-                    <div class="text-center mb-16 max-w-2xl mx-auto">
-                        <span class="text-fuchsia-400 font-bold tracking-widest text-xs uppercase">SOIL INTELLIGENCE</span>
-                        <h2 class="text-3xl md:text-4xl font-extrabold mt-4 text-white">土の「声」をデータ化するセンサー</h2>
-                    </div>
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        
-                        <div class="glass-panel p-8 rounded-xl hover:border-fuchsia-500/30 transition duration-300 group">
-                            <div class="w-12 h-12 rounded flex items-center justify-center mb-6 bg-fuchsia-500/10 text-fuchsia-400 border border-fuchsia-500/20 group-hover:bg-fuchsia-500/20 transition-all">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                            </div>
-                            <h4 class="text-lg font-bold mb-3 text-white">${f.t}</h4>
-                            <p class="text-sm leading-relaxed text-[#8f96a3]">${f.d}</p>
-                        </div>
-                        
+        </div>
 
-                        <div class="glass-panel p-8 rounded-xl hover:border-fuchsia-500/30 transition duration-300 group">
-                            <div class="w-12 h-12 rounded flex items-center justify-center mb-6 bg-fuchsia-500/10 text-fuchsia-400 border border-fuchsia-500/20 group-hover:bg-fuchsia-500/20 transition-all">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                            </div>
-                            <h4 class="text-lg font-bold mb-3 text-white">${f.t}</h4>
-                            <p class="text-sm leading-relaxed text-[#8f96a3]">${f.d}</p>
-                        </div>
-                        
+        <div class="px-6 md:px-12 max-w-7xl mx-auto flex flex-col gap-32 mb-32">
+            
+        </div>
 
-                        <div class="glass-panel p-8 rounded-xl hover:border-fuchsia-500/30 transition duration-300 group">
-                            <div class="w-12 h-12 rounded flex items-center justify-center mb-6 bg-fuchsia-500/10 text-fuchsia-400 border border-fuchsia-500/20 group-hover:bg-fuchsia-500/20 transition-all">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                            </div>
-                            <h4 class="text-lg font-bold mb-3 text-white">${f.t}</h4>
-                            <p class="text-sm leading-relaxed text-[#8f96a3]">${f.d}</p>
-                        </div>
-                        
-                    </div>
-                </div>
-                <div class="flex flex-col md:flex-row items-center gap-16 ">
-                    <div class="flex-1 space-y-6">
-                        <span class="text-fuchsia-400 font-bold tracking-widest text-xs uppercase block">SATELLITE MAPPING</span>
-                        <h2 class="text-3xl md:text-4xl font-extrabold text-white leading-tight">衛星画像による「生育ムラ」の可視化</h2>
-                        <div class="w-12 h-0.5 bg-fuchsia-500"></div>
-                        <p class="text-base leading-relaxed text-[#8f96a3] font-light">人工衛星やドローンによる画像解析を活用。畑の中で「肥料が足りていない部分」をヒートマップで可視化しピンポイントの追肥を可能にします。</p>
-                    </div>
-                    <div class="flex-1 w-full aspect-video rounded-xl overflow-hidden glass-panel p-2 border border-white/10 group">
-                        <div class="w-full h-full rounded-lg bg-[#0e111a] overflow-hidden flex items-center justify-center p-6 border border-white/5 relative">
-                            <img src="img/ui.png" class="w-full h-full object-cover transition-transform duration-[5s] group-hover:scale-[1.03]">
-                        </div>
-                    </div>
-                </div>
-                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
-                    <div class="flex-1 space-y-6">
-                        <span class="text-fuchsia-400 font-bold tracking-widest text-xs uppercase block">YIELD PREDICTION</span>
-                        <h2 class="text-3xl md:text-4xl font-extrabold text-white leading-tight">収量予測とアグリ・ファイナンス</h2>
-                        <div class="w-12 h-0.5 bg-fuchsia-500"></div>
-                        <p class="text-base leading-relaxed text-[#8f96a3] font-light">「いつ、どれくらい収穫できるか」をAIが予測し、市場の価格データと掛け合わせ最も利益が出るタイミングを提案します。</p>
-                    </div>
-                    <div class="flex-1 w-full aspect-video rounded-xl overflow-hidden glass-panel p-2 border border-white/10 group">
-                        <div class="w-full h-full rounded-lg bg-[#0e111a] overflow-hidden flex items-center justify-center p-6 border border-white/5 relative">
-                            <img src="img/ui.png" class="w-full h-full object-cover transition-transform duration-[5s] group-hover:scale-[1.03]">
-                        </div>
-                    </div>
-                </div>
-                <div class="flex flex-col md:flex-row items-center gap-16 ">
-                    <div class="flex-1 space-y-6">
-                        <span class="text-fuchsia-400 font-bold tracking-widest text-xs uppercase block">FARM EXPANSION</span>
-                        <h2 class="text-3xl md:text-4xl font-extrabold text-white leading-tight">Case Study | 北海道の小麦農家</h2>
-                        <div class="w-12 h-0.5 bg-fuchsia-500"></div>
-                        <p class="text-base leading-relaxed text-[#8f96a3] font-light">見回りだけで半日が終わっていた農家。導入後、iPad一つで監視可能になり、管理面積を1.5倍に拡大。収量も15%向上しました。</p>
-                    </div>
-                    <div class="flex-1 w-full aspect-video rounded-xl overflow-hidden glass-panel p-2 border border-white/10 group">
-                        <div class="w-full h-full rounded-lg bg-[#0e111a] overflow-hidden flex items-center justify-center p-6 border border-white/5 relative">
-                            <img src="img/ui.png" class="w-full h-full object-cover transition-transform duration-[5s] group-hover:scale-[1.03]">
-                        </div>
-                    </div>
-                </div>
-                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
-                    <div class="flex-1 space-y-6">
-                        <span class="text-fuchsia-400 font-bold tracking-widest text-xs uppercase block">OUR VISION</span>
-                        <h2 class="text-3xl md:text-4xl font-extrabold text-white leading-tight">自然とテクノロジーの調和</h2>
-                        <div class="w-12 h-0.5 bg-fuchsia-500"></div>
-                        <p class="text-base leading-relaxed text-[#8f96a3] font-light">自然の微細な変化を正確に読み取り、持続可能な食の未来を根元から支えます。</p>
-                    </div>
-                    <div class="flex-1 w-full aspect-video rounded-xl overflow-hidden glass-panel p-2 border border-white/10 group">
-                        <div class="w-full h-full rounded-lg bg-[#0e111a] overflow-hidden flex items-center justify-center p-6 border border-white/5 relative">
-                            <img src="img/ui.png" class="w-full h-full object-cover transition-transform duration-[5s] group-hover:scale-[1.03]">
-                        </div>
-                    </div>
-                </div></div>
-        <div class="px-6 md:px-12 max-w-7xl mx-auto">
+        <!-- CTA -->
+        <div class="px-6 md:px-12 max-w-7xl mx-auto reveal-item">
             <div class="glass-panel rounded-2xl p-12 md:p-24 relative overflow-hidden group shadow-2xl border border-white/10">
-                <div class="absolute -top-32 -right-32 w-96 h-96 bg-fuchsia-600/10 rounded-full blur-[100px]"></div>
+                <div class="absolute -top-32 -right-32 w-96 h-96 bg-blue-600/10 rounded-full blur-[100px]"></div>
                 <div class="relative z-10 text-center max-w-3xl mx-auto">
                     <h2 class="text-3xl md:text-5xl font-extrabold mb-6 text-white">${data.ctaTitle}</h2>
                     <p class="text-base text-[#8f96a3] mb-10 leading-relaxed max-w-xl mx-auto">${data.ctaDesc}</p>
-                    <a href="#" class="bg-fuchsia-600 hover:bg-fuchsia-500 text-white px-10 py-4 rounded font-bold text-sm tracking-wider uppercase inline-flex items-center gap-3 transition shadow-lg shadow-fuchsia-500/20">
+                    <a href="#" class="bg-blue-600 hover:bg-blue-500 text-white px-10 py-4 rounded font-bold text-sm tracking-wider uppercase inline-flex items-center gap-3 transition shadow-lg shadow-blue-500/20">
                         START AGRI TECH
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                     </a>
@@ -182,10 +91,34 @@
         </div>
     </main>
 
-    <!-- Footer -->
     <footer class="py-12 text-center text-xs font-mono tracking-widest text-white/30 border-t border-white/5 bg-[#030307]">
-        <p>&copy; 2026 AGRI TECH // ALL DECENTRALIZED RIGHTS RESERVED.</p>
+        <p>&copy; 2026 AGRI TECH // ALL CRYPTOGRAPHIC RIGHTS RESERVED.</p>
     </footer>
 
+    <script>
+        // Lenis Smooth Scroll
+        const lenis = new Lenis();
+        function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+        requestAnimationFrame(raf);
+
+        // GSAP ScrollTrigger Fade-ins
+        gsap.registerPlugin(ScrollTrigger);
+        gsap.utils.toArray('.reveal-item').forEach(item => {
+            gsap.to(item, {
+                opacity: 1,
+                y: 0,
+                duration: 1.0,
+                ease: 'power3.out',
+                scrollTrigger: {
+                    trigger: item,
+                    start: 'top 85%',
+                    toggleActions: 'play none none none'
+                }
+            });
+        });
+    </script>
 </body>
 </html>

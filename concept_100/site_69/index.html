@@ -3,18 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>「深い集中」を、スイッチ一つで召喚する。 | PRODUCTIVITY</title>
+    <title>「深い集中」を、スイッチ一つで召喚する。 | SITE-69</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Outfit:wght@400;700;900&display=swap');
         body {
             font-family: 'Outfit', 'Dela Gothic One', sans-serif;
-            background-color: #000;
+            background-color: #050505;
         }
         .brutal-card {
             border: 3px solid #000000;
             box-shadow: 6px 6px 0px 0px #000000;
-            background-color: #0c0c0c;
+            background-color: #0d0d0d;
         }
         .brutal-card-color {
             border: 3px solid #000000;
@@ -29,149 +32,85 @@
             transform: translate(-1px, -1px);
             box-shadow: 4px 4px 0px 0px #000000;
         }
-        .acid-glow {
-            text-shadow: 0 0 15px #ffde0070;
+        .marquee-wrapper {
+            overflow: hidden;
+            white-space: nowrap;
+            display: flex;
+            background-color: #ffde00;
+            border-top: 3px solid #000;
+            border-bottom: 3px solid #000;
         }
+        .marquee-content {
+            display: inline-block;
+            animation: marquee 20s linear infinite;
+            padding: 10px 0;
+            font-weight: 900;
+            color: #000;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+        @keyframes marquee {
+            0% { transform: translate3d(0, 0, 0); }
+            100% { transform: translate3d(-50%, 0, 0); }
+        }
+        .reveal-item { opacity: 0; transform: scale(0.95) translateY(20px); }
     </style>
 </head>
 <body class="text-zinc-400 min-h-screen antialiased overflow-x-hidden selection:bg-yellow-500 selection:text-black">
 
+    <!-- Grid background -->
+    <div class="fixed inset-0 pointer-events-none z-0 opacity-[0.08]" style="background-image: radial-gradient(rgba(255,255,255,0.1) 1px, transparent 0); background-size: 20px 20px;"></div>
+
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 bg-black border-b-2 border-black px-6 md:px-12 py-5 flex justify-between items-center">
+    <nav class="fixed w-full z-50 bg-black border-b-3 border-black px-6 md:px-12 py-5 flex justify-between items-center shadow-[0_4px_0_#000]">
         <div class="font-extrabold text-xl tracking-tight text-white flex items-center gap-2">
-            <span class="w-4 h-4 bg-yellow-500 rounded-full border border-black shadow-[0_0_10px_#ffde00]"></span>
-            <span class="tracking-wide uppercase text-sm font-black text-white">PRODUCTIVITY</span>
+            <span class="w-4 h-4 bg-yellow-500 rounded-full border border-black shadow-[0_0_10px_#ffde00] animate-pulse"></span>
+            <span class="tracking-wide uppercase text-sm font-black text-white">SITE-69</span>
         </div>
-        <div class="hidden md:flex gap-8 text-[10px] font-black tracking-widest uppercase text-white/50">
-            <a href="#" class="hover:text-white transition">Concept</a>
+        <div class="hidden md:flex gap-8 text-[10px] font-black tracking-widest uppercase text-white/40">
             <a href="#" class="hover:text-white transition">Prototype</a>
-            <a href="#" class="hover:text-white transition">Terminal</a>
+            <a href="#" class="hover:text-white transition">Lab_Mode</a>
         </div>
         <div class="flex items-center gap-4">
-            <a href="../index.html" class="text-[9px] font-black text-white/40 hover:text-white transition uppercase tracking-widest">HUB</a>
+            <a href="../index.html" class="text-[9px] font-black text-white/30 hover:text-white transition uppercase tracking-widest">HUB</a>
             <a href="#" class="bg-yellow-500 hover:bg-yellow-400 text-black border-2 border-black px-5 py-2 rounded font-black text-xs tracking-wide uppercase transition brutal-button">START PRODUCTIVITY</a>
         </div>
     </nav>
 
+    <!-- Main -->
     <main class="pt-[140px] pb-24 relative z-10">
         <div class="px-6 md:px-12 max-w-7xl mx-auto">
+            <!-- Hero -->
             <div class="text-center max-w-4xl mx-auto mb-20">
-                <span class="bg-yellow-500 text-black border-2 border-black px-5 py-1.5 text-[9px] font-black tracking-widest uppercase rounded-full inline-block shadow-[2px_2px_0px_#000] mb-8">PRODUCTIVITY / IoT</span>
-                <h1 class="text-4xl md:text-7xl font-black mb-8 leading-[1.1] text-white uppercase italic tracking-tight acid-glow">「深い集中」を、<br>スイッチ一つで召喚する。</h1>
-                <p class="text-base md:text-lg text-zinc-400 font-medium leading-relaxed max-w-3xl mx-auto">スマホの通知、家族の話し声、終わらないマルチタスク。SILENT-STUDYは、周囲のノイズを打ち消すIoTデバイスと、脳波をフォーカス状態へ導くバイノーラルビートを組み合わせた「絶対領域」構築システム。</p>
+                <span class="bg-yellow-500 text-black border-2 border-black px-5 py-1.5 text-[9px] font-black tracking-widest uppercase rounded-full inline-block shadow-[2px_2px_0px_#000] mb-8"></span>
+                <h1 class="text-4xl md:text-7xl font-black mb-8 leading-[1.15] text-white uppercase italic tracking-tight reveal-item" style="transform: none; opacity: 1;">「深い集中」を、<br>スイッチ一つで召喚する。</h1>
+                <p class="text-base md:text-lg text-zinc-400 font-medium leading-relaxed max-w-3xl mx-auto reveal-item" style="transform: none; opacity: 1;">スマホの通知、家族の話し声、終わらないマルチタスク。SILENT-STUDYは、周囲のノイズを打ち消すIoTデバイスと、脳波をフォーカス状態へ導くバイノーラルビートを組み合わせた「絶対領域」構築システム。</p>
             </div>
             
-            <div class="relative w-full aspect-[21/10] md:aspect-video rounded-lg overflow-hidden border-4 border-black shadow-[10px_10px_0px_0px_#ffde00] bg-zinc-900 group mb-32">
+            <!-- Hero UI/Mockup -->
+            <div class="relative w-full aspect-[21/10] md:aspect-video rounded-lg overflow-hidden border-4 border-black shadow-[8px_8px_0px_0px_#ffde00] bg-zinc-950 group mb-32 reveal-item">
                 <div class="w-full h-full">
-                    
-            <div class="relative w-full h-full bg-black overflow-hidden border-2 border-black">
-                <img src="img/ui.png" class="w-full h-full object-cover transition-transform duration-[5s] group-hover:scale-[1.03]">
-                <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent pointer-events-none"></div>
-            </div>
+                    <img src="img/ui.png" class="w-full h-full object-cover rounded-xl border border-white/10 shadow-2xl">
                 </div>
             </div>
-        </div><div class="px-6 md:px-12 max-w-7xl mx-auto flex flex-col gap-32 mb-32">
-                <div class="flex flex-col md:flex-row items-center gap-16 ">
-                    <div class="flex-1 space-y-6">
-                        <span class="text-yellow-400 font-black tracking-widest text-xs uppercase block">THE ATTENTION ECONOMY</span>
-                        <h2 class="text-3xl md:text-4xl font-black text-white leading-tight uppercase italic">「集中できない」は、あなたのせいではない</h2>
-                        <div class="w-16 h-1 bg-yellow-500 border-2 border-black"></div>
-                        <p class="text-sm leading-relaxed text-zinc-400 font-light">現代は「注意力の奪い合い」の時代です。アプリの通知音、SNSのタイムライン、不規則な雑音。これらは人間の脳が本来持っている「フロー状態（深い集中）」への移行を、意図的かつ暴力的に阻害するように設計されています。気合いで抗うことは不可能です。</p>
-                    </div>
-                    <div class="flex-1 w-full aspect-video rounded-lg overflow-hidden border-3 border-black shadow-[6px_6px_0px_#000] bg-zinc-900 p-1">
-                        <div class="w-full h-full rounded-sm bg-zinc-950 overflow-hidden flex items-center justify-center p-6 relative">
-                            <img src="img/ui.png" class="w-full h-full object-cover transition-transform duration-[5s] group-hover:scale-[1.03]">
-                        </div>
-                    </div>
-                </div>
-                <div class="relative">
-                    <div class="text-center mb-16 max-w-2xl mx-auto">
-                        <span class="text-yellow-400 font-black tracking-widest text-xs uppercase block">ACTIVE ACOUSTIC CONTROL</span>
-                        <h2 class="text-3xl md:text-5xl font-black mt-4 text-white uppercase italic">空間そのものをノイズキャンセリング</h2>
-                    </div>
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        
-                        <div class="brutal-card p-8 rounded-lg hover:translate-y-[-4px] transition duration-200">
-                            <div class="w-12 h-12 rounded-full flex items-center justify-center mb-6 bg-yellow-500 text-black border-2 border-black">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-                            </div>
-                            <h4 class="text-lg font-black mb-3 text-white uppercase">卓上型アクティブ・ノイズコントロール</h4>
-                            <p class="text-xs leading-relaxed text-zinc-500">デスクに置く小さなデバイスが、周囲の環境音（車の音、話し声）を内蔵マイクで解析。逆位相の音波をピンポイントで放射し、あなたの耳の周りだけに「完全な静寂」のドームを作り出します。</p>
-                        </div>
-                        
+        </div>
 
-                        <div class="brutal-card p-8 rounded-lg hover:translate-y-[-4px] transition duration-200">
-                            <div class="w-12 h-12 rounded-full flex items-center justify-center mb-6 bg-yellow-500 text-black border-2 border-black">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-                            </div>
-                            <h4 class="text-lg font-black mb-3 text-white uppercase">脳波誘導バイノーラル・ビート</h4>
-                            <p class="text-xs leading-relaxed text-zinc-500">静寂の中でも集中できない時。左右の耳にわずかに異なる周波数の音を流すことで、脳波を意図的に「深い集中に適したガンマ波」へとチューニングするサウンドトラックを自動再生。</p>
-                        </div>
-                        
+        <!-- Marquee Banner -->
+        <div class="marquee-wrapper mb-32">
+            <div class="marquee-content">
+                &nbsp;&nbsp;●&nbsp;&nbsp;SITE-69&nbsp;&nbsp;●&nbsp;&nbsp;KINETIC_FLOW_ESTABLISHED&nbsp;&nbsp;●&nbsp;&nbsp;SYSTEM_ONLINE&nbsp;&nbsp;●&nbsp;&nbsp;PROTOTYPE_STABLE&nbsp;&nbsp;●&nbsp;&nbsp;SITE-69&nbsp;&nbsp;●&nbsp;&nbsp;KINETIC_FLOW_ESTABLISHED&nbsp;&nbsp;●&nbsp;&nbsp;SYSTEM_ONLINE&nbsp;&nbsp;●&nbsp;&nbsp;PROTOTYPE_STABLE
+            </div>
+            <div class="marquee-content">
+                &nbsp;&nbsp;●&nbsp;&nbsp;SITE-69&nbsp;&nbsp;●&nbsp;&nbsp;KINETIC_FLOW_ESTABLISHED&nbsp;&nbsp;●&nbsp;&nbsp;SYSTEM_ONLINE&nbsp;&nbsp;●&nbsp;&nbsp;PROTOTYPE_STABLE&nbsp;&nbsp;●&nbsp;&nbsp;SITE-69&nbsp;&nbsp;●&nbsp;&nbsp;KINETIC_FLOW_ESTABLISHED&nbsp;&nbsp;●&nbsp;&nbsp;SYSTEM_ONLINE&nbsp;&nbsp;●&nbsp;&nbsp;PROTOTYPE_STABLE
+            </div>
+        </div>
 
-                        <div class="brutal-card p-8 rounded-lg hover:translate-y-[-4px] transition duration-200">
-                            <div class="w-12 h-12 rounded-full flex items-center justify-center mb-6 bg-yellow-500 text-black border-2 border-black">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-                            </div>
-                            <h4 class="text-lg font-black mb-3 text-white uppercase">スマート通知ブロック（Digital Detox）</h4>
-                            <p class="text-xs leading-relaxed text-zinc-500">デバイスをオンにすると同時に、スマホとPCが強制的に「機内モード（完全ブロック）」へ移行。事前に設定したVIP（家族からの緊急電話等）以外のあらゆる通知を遮断します。</p>
-                        </div>
-                        
-                    </div>
-                </div>
-                <div class="flex flex-col md:flex-row items-center gap-16 ">
-                    <div class="flex-1 space-y-6">
-                        <span class="text-yellow-400 font-black tracking-widest text-xs uppercase block">BIOMETRIC POMODORO</span>
-                        <h2 class="text-3xl md:text-4xl font-black text-white leading-tight uppercase italic">「ポモドーロ」を超えた、生体リズム最適化</h2>
-                        <div class="w-16 h-1 bg-yellow-500 border-2 border-black"></div>
-                        <p class="text-sm leading-relaxed text-zinc-400 font-light">「25分集中、5分休憩」といった固定のタイマーは万能ではありません。SILENT-STUDYはスマートウォッチと連携し、あなたの心拍数のゆらぎから「集中力の限界」をAIが検知。最適なタイミングで環境音を小鳥のさえずりに変え、自然な休憩へと誘導します。</p>
-                    </div>
-                    <div class="flex-1 w-full aspect-video rounded-lg overflow-hidden border-3 border-black shadow-[6px_6px_0px_#000] bg-zinc-900 p-1">
-                        <div class="w-full h-full rounded-sm bg-zinc-950 overflow-hidden flex items-center justify-center p-6 relative">
-                            <img src="img/ui.png" class="w-full h-full object-cover transition-transform duration-[5s] group-hover:scale-[1.03]">
-                        </div>
-                    </div>
-                </div>
-                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
-                    <div class="flex-1 space-y-6">
-                        <span class="text-yellow-400 font-black tracking-widest text-xs uppercase block">FOCUS ANALYTICS</span>
-                        <h2 class="text-3xl md:text-4xl font-black text-white leading-tight uppercase italic">「集中力の家計簿」による振り返り</h2>
-                        <div class="w-16 h-1 bg-yellow-500 border-2 border-black"></div>
-                        <p class="text-sm leading-relaxed text-zinc-400 font-light">専用アプリには、毎日の「ディープワーク（深い集中状態）時間」がグラフとして記録されます。「午前10時が最も集中度が高い」「コーヒーを飲んだ日は午後まで集中が持続する」など、あなた独自の生産性パターンを可視化します。</p>
-                    </div>
-                    <div class="flex-1 w-full aspect-video rounded-lg overflow-hidden border-3 border-black shadow-[6px_6px_0px_#000] bg-zinc-900 p-1">
-                        <div class="w-full h-full rounded-sm bg-zinc-950 overflow-hidden flex items-center justify-center p-6 relative">
-                            <img src="img/ui.png" class="w-full h-full object-cover transition-transform duration-[5s] group-hover:scale-[1.03]">
-                        </div>
-                    </div>
-                </div>
-                <div class="flex flex-col md:flex-row items-center gap-16 ">
-                    <div class="flex-1 space-y-6">
-                        <span class="text-yellow-400 font-black tracking-widest text-xs uppercase block">USER SUCCESS</span>
-                        <h2 class="text-3xl md:text-4xl font-black text-white leading-tight uppercase italic">Case Study | リモートワークのプログラマー</h2>
-                        <div class="w-16 h-1 bg-yellow-500 border-2 border-black"></div>
-                        <p class="text-sm leading-relaxed text-zinc-400 font-light">自宅での作業中、隣室の家族の生活音やSNSの誘惑に負け、1日3時間しか実働できていなかったエンジニア。SILENT-STUDY導入後、スイッチを入れた瞬間に「仕事以外のことができない空間」が物理的に生成されるため、ディープワークの時間が1日平均6時間へ倍増。タスクの消化速度が劇的に上がりました。</p>
-                    </div>
-                    <div class="flex-1 w-full aspect-video rounded-lg overflow-hidden border-3 border-black shadow-[6px_6px_0px_#000] bg-zinc-900 p-1">
-                        <div class="w-full h-full rounded-sm bg-zinc-950 overflow-hidden flex items-center justify-center p-6 relative">
-                            <img src="img/ui.png" class="w-full h-full object-cover transition-transform duration-[5s] group-hover:scale-[1.03]">
-                        </div>
-                    </div>
-                </div>
-                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
-                    <div class="flex-1 space-y-6">
-                        <span class="text-yellow-400 font-black tracking-widest text-xs uppercase block">OUR VISION</span>
-                        <h2 class="text-3xl md:text-4xl font-black text-white leading-tight uppercase italic">「気を散らすもの」からの完全なる解放</h2>
-                        <div class="w-16 h-1 bg-yellow-500 border-2 border-black"></div>
-                        <p class="text-sm leading-relaxed text-zinc-400 font-light">最高のアイデアや、魂を込めた作品は、「途切れることのない深い思考」からしか生まれません。私たちはテクノロジーを駆使して、現代社会が奪った「静かなる没入空間」を人類に取り戻します。</p>
-                    </div>
-                    <div class="flex-1 w-full aspect-video rounded-lg overflow-hidden border-3 border-black shadow-[6px_6px_0px_#000] bg-zinc-900 p-1">
-                        <div class="w-full h-full rounded-sm bg-zinc-950 overflow-hidden flex items-center justify-center p-6 relative">
-                            <img src="img/ui.png" class="w-full h-full object-cover transition-transform duration-[5s] group-hover:scale-[1.03]">
-                        </div>
-                    </div>
-                </div></div>
-        <div class="px-6 md:px-12 max-w-7xl mx-auto">
+        <div class="px-6 md:px-12 max-w-7xl mx-auto flex flex-col gap-32 mb-32">
+            
+        </div>
+
+        <!-- CTA -->
+        <div class="px-6 md:px-12 max-w-7xl mx-auto reveal-item">
             <div class="brutal-card-color rounded-lg p-12 md:p-24 relative overflow-hidden border-4 border-black text-black">
                 <div class="relative z-10 text-center max-w-3xl mx-auto space-y-8">
                     <h2 class="text-3xl md:text-5xl font-black uppercase italic tracking-tight">世界から、ノイズを消去せよ。</h2>
@@ -187,9 +126,35 @@
     </main>
 
     <!-- Footer -->
-    <footer class="py-12 text-center text-[10px] font-black tracking-widest text-zinc-500 border-t-2 border-black bg-black">
-        <p>&copy; 2026 PRODUCTIVITY &mdash; PROTOCOL // 0x29C5A.</p>
+    <footer class="py-12 text-center text-[10px] font-black tracking-widest text-zinc-600 border-t-3 border-black bg-black">
+        <p>&copy; 2026 SITE-69 &mdash; PROTOCOL // 0x2A9C.</p>
     </footer>
 
+    <script>
+        // Lenis Smooth Scroll
+        const lenis = new Lenis();
+        function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+        requestAnimationFrame(raf);
+
+        // GSAP ScrollTrigger Scale/Fade-ins
+        gsap.registerPlugin(ScrollTrigger);
+        gsap.utils.toArray('.reveal-item').forEach(item => {
+            gsap.to(item, {
+                opacity: 1,
+                scale: 1,
+                y: 0,
+                duration: 0.8,
+                ease: 'back.out(1.4)',
+                scrollTrigger: {
+                    trigger: item,
+                    start: 'top 85%',
+                    toggleActions: 'play none none none'
+                }
+            });
+        });
+    </script>
 </body>
 </html>

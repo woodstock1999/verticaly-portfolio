@@ -3,23 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>現場の「カン」を、視界にオーバーレイする。 | HARDWARE</title>
+    <title>現場の「カン」を、視界にオーバーレイする。 | SITE-2</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Outfit:wght@400;700;900&display=swap');
         body {
             font-family: 'Outfit', 'Dela Gothic One', sans-serif;
-            background-color: #000;
+            background-color: #050505;
         }
         .brutal-card {
             border: 3px solid #000000;
             box-shadow: 6px 6px 0px 0px #000000;
-            background-color: #0c0c0c;
+            background-color: #0d0d0d;
         }
         .brutal-card-color {
             border: 3px solid #000000;
             box-shadow: 6px 6px 0px 0px #000000;
-            background-color: #e800ff;
+            background-color: #ffde00;
         }
         .brutal-button {
             border: 2px solid #000000;
@@ -29,133 +32,91 @@
             transform: translate(-1px, -1px);
             box-shadow: 4px 4px 0px 0px #000000;
         }
-        .acid-glow {
-            text-shadow: 0 0 15px #e800ff70;
+        .marquee-wrapper {
+            overflow: hidden;
+            white-space: nowrap;
+            display: flex;
+            background-color: #ffde00;
+            border-top: 3px solid #000;
+            border-bottom: 3px solid #000;
         }
+        .marquee-content {
+            display: inline-block;
+            animation: marquee 20s linear infinite;
+            padding: 10px 0;
+            font-weight: 900;
+            color: #000;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+        @keyframes marquee {
+            0% { transform: translate3d(0, 0, 0); }
+            100% { transform: translate3d(-50%, 0, 0); }
+        }
+        .reveal-item { opacity: 0; transform: scale(0.95) translateY(20px); }
     </style>
 </head>
-<body class="text-zinc-400 min-h-screen antialiased overflow-x-hidden selection:bg-fuchsia-500 selection:text-black">
+<body class="text-zinc-400 min-h-screen antialiased overflow-x-hidden selection:bg-yellow-500 selection:text-black">
+
+    <!-- Grid background -->
+    <div class="fixed inset-0 pointer-events-none z-0 opacity-[0.08]" style="background-image: radial-gradient(rgba(255,255,255,0.1) 1px, transparent 0); background-size: 20px 20px;"></div>
 
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 bg-black border-b-2 border-black px-6 md:px-12 py-5 flex justify-between items-center">
+    <nav class="fixed w-full z-50 bg-black border-b-3 border-black px-6 md:px-12 py-5 flex justify-between items-center shadow-[0_4px_0_#000]">
         <div class="font-extrabold text-xl tracking-tight text-white flex items-center gap-2">
-            <span class="w-4 h-4 bg-fuchsia-500 rounded-full border border-black shadow-[0_0_10px_#e800ff]"></span>
-            <span class="tracking-wide uppercase text-sm font-black text-white">HARDWARE</span>
+            <span class="w-4 h-4 bg-yellow-500 rounded-full border border-black shadow-[0_0_10px_#ffde00] animate-pulse"></span>
+            <span class="tracking-wide uppercase text-sm font-black text-white">SITE-2</span>
         </div>
-        <div class="hidden md:flex gap-8 text-[10px] font-black tracking-widest uppercase text-white/50">
-            <a href="#" class="hover:text-white transition">Concept</a>
+        <div class="hidden md:flex gap-8 text-[10px] font-black tracking-widest uppercase text-white/40">
             <a href="#" class="hover:text-white transition">Prototype</a>
-            <a href="#" class="hover:text-white transition">Terminal</a>
+            <a href="#" class="hover:text-white transition">Lab_Mode</a>
         </div>
         <div class="flex items-center gap-4">
-            <a href="../index.html" class="text-[9px] font-black text-white/40 hover:text-white transition uppercase tracking-widest">HUB</a>
-            <a href="#" class="bg-fuchsia-500 hover:bg-fuchsia-400 text-black border-2 border-black px-5 py-2 rounded font-black text-xs tracking-wide uppercase transition brutal-button">START HARDWARE</a>
+            <a href="../index.html" class="text-[9px] font-black text-white/30 hover:text-white transition uppercase tracking-widest">HUB</a>
+            <a href="#" class="bg-yellow-500 hover:bg-yellow-400 text-black border-2 border-black px-5 py-2 rounded font-black text-xs tracking-wide uppercase transition brutal-button">START HARDWARE</a>
         </div>
     </nav>
 
+    <!-- Main -->
     <main class="pt-[140px] pb-24 relative z-10">
         <div class="px-6 md:px-12 max-w-7xl mx-auto">
+            <!-- Hero -->
             <div class="text-center max-w-4xl mx-auto mb-20">
-                <span class="bg-fuchsia-500 text-black border-2 border-black px-5 py-1.5 text-[9px] font-black tracking-widest uppercase rounded-full inline-block shadow-[2px_2px_0px_#000] mb-8">HARDWARE / AR GLASSES</span>
-                <h1 class="text-4xl md:text-7xl font-black mb-8 leading-[1.1] text-white uppercase italic tracking-tight acid-glow">現場の「カン」を、<br>視界にオーバーレイする。</h1>
-                <p class="text-base md:text-lg text-zinc-400 font-medium leading-relaxed max-w-3xl mx-auto">マニュアルをめくる時代は終わりました。LUMINA-ARは、工場、医療現場、そして物流倉庫の最前線で働く人々の視界に、AIからのリアルタイムな作業指示と3Dホログラムを投影する、究極の産業用スマートグラスです。</p>
+                <span class="bg-yellow-500 text-black border-2 border-black px-5 py-1.5 text-[9px] font-black tracking-widest uppercase rounded-full inline-block shadow-[2px_2px_0px_#000] mb-8"></span>
+                <h1 class="text-4xl md:text-7xl font-black mb-8 leading-[1.15] text-white uppercase italic tracking-tight reveal-item" style="transform: none; opacity: 1;">現場の「カン」を、<br>視界にオーバーレイする。</h1>
+                <p class="text-base md:text-lg text-zinc-400 font-medium leading-relaxed max-w-3xl mx-auto reveal-item" style="transform: none; opacity: 1;">マニュアルをめくる時代は終わりました。LUMINA-ARは、工場、医療現場、そして物流倉庫の最前線で働く人々の視界に、AIからのリアルタイムな作業指示と3Dホログラムを投影する、究極の産業用スマートグラスです。</p>
             </div>
             
-            <div class="relative w-full aspect-[21/10] md:aspect-video rounded-lg overflow-hidden border-4 border-black shadow-[10px_10px_0px_0px_#e800ff] bg-zinc-900 group mb-32">
+            <!-- Hero UI/Mockup -->
+            <div class="relative w-full aspect-[21/10] md:aspect-video rounded-lg overflow-hidden border-4 border-black shadow-[8px_8px_0px_0px_#ffde00] bg-zinc-950 group mb-32 reveal-item">
                 <div class="w-full h-full">
-                    
-            <div class="relative w-full h-full bg-black overflow-hidden border-2 border-black">
-                <img src="img/hero.png" class="w-full h-full object-cover transition-transform duration-[5s] group-hover:scale-[1.03]">
-                <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent pointer-events-none"></div>
-            </div>
+                    <img src="img/hero.png" class="w-full h-full object-cover rounded-xl border border-white/10 shadow-2xl">
                 </div>
             </div>
-        </div><div class="px-6 md:px-12 max-w-7xl mx-auto flex flex-col gap-32 mb-32">
-                <div class="flex flex-col md:flex-row items-center gap-16 ">
-                    <div class="flex-1 space-y-6">
-                        <span class="text-fuchsia-400 font-black tracking-widest text-xs uppercase block">THE HANDS-FREE PROBLEM</span>
-                        <h2 class="text-3xl md:text-4xl font-black text-white leading-tight uppercase italic">「両手が塞がる」というハードウェアの致命傷</h2>
-                        <div class="w-16 h-1 bg-fuchsia-500 border-2 border-black"></div>
-                        <p class="text-sm leading-relaxed text-zinc-400 font-light">タブレットやスマートフォンを使ったDXは、「作業中にデバイスを持つ必要がある」という物理的な欠陥を抱えています。油まみれの手で画面をスワイプし、工具を持ち直す。その数秒のロスが、現場のストレスと生産性の低下を生み出しています。</p>
-                    </div>
-                    <div class="flex-1 w-full aspect-video rounded-lg overflow-hidden border-3 border-black shadow-[6px_6px_0px_#000] bg-zinc-900 p-1">
-                        <div class="w-full h-full rounded-sm bg-zinc-950 overflow-hidden flex items-center justify-center p-6 relative">
-                            <img src="img/hero.png" class="w-full h-full object-cover transition-transform duration-[5s] group-hover:scale-[1.03]">
-                        </div>
-                    </div>
-                </div>
-                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
-                    <div class="flex-1 space-y-6">
-                        <span class="text-fuchsia-400 font-black tracking-widest text-xs uppercase block">SPATIAL COMPUTING</span>
-                        <h2 class="text-3xl md:text-4xl font-black text-white leading-tight uppercase italic">空間コンピューティングによる直感的な作業</h2>
-                        <div class="w-16 h-1 bg-fuchsia-500 border-2 border-black"></div>
-                        <p class="text-sm leading-relaxed text-zinc-400 font-light"></p>
-                    </div>
-                    <div class="flex-1 w-full aspect-video rounded-lg overflow-hidden border-3 border-black shadow-[6px_6px_0px_#000] bg-zinc-900 p-1">
-                        <div class="w-full h-full rounded-sm bg-zinc-950 overflow-hidden flex items-center justify-center p-6 relative">
-                            <img src="img/hero.png" class="w-full h-full object-cover transition-transform duration-[5s] group-hover:scale-[1.03]">
-                        </div>
-                    </div>
-                </div>
-                <div class="flex flex-col md:flex-row items-center gap-16 ">
-                    <div class="flex-1 space-y-6">
-                        <span class="text-fuchsia-400 font-black tracking-widest text-xs uppercase block">ERGONOMIC DESIGN</span>
-                        <h2 class="text-3xl md:text-4xl font-black text-white leading-tight uppercase italic">1日中かけても疲れない、わずか60gの設計</h2>
-                        <div class="w-16 h-1 bg-fuchsia-500 border-2 border-black"></div>
-                        <p class="text-sm leading-relaxed text-zinc-400 font-light">従来のARゴーグルのような「重くて首が痛くなる」デバイスは現場では使われません。LUMINA-ARはバッテリーを腰のベルトに分離し、通常の保護メガネと変わらない60gという圧倒的な軽量化を実現。8時間のシフト中、ずっと着け続けられます。</p>
-                    </div>
-                    <div class="flex-1 w-full aspect-video rounded-lg overflow-hidden border-3 border-black shadow-[6px_6px_0px_#000] bg-zinc-900 p-1">
-                        <div class="w-full h-full rounded-sm bg-zinc-950 overflow-hidden flex items-center justify-center p-6 relative">
-                            <img src="img/hero.png" class="w-full h-full object-cover transition-transform duration-[5s] group-hover:scale-[1.03]">
-                        </div>
-                    </div>
-                </div>
-                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
-                    <div class="flex-1 space-y-6">
-                        <span class="text-fuchsia-400 font-black tracking-widest text-xs uppercase block">SAFETY VISION</span>
-                        <h2 class="text-3xl md:text-4xl font-black text-white leading-tight uppercase italic">現場の「危険」を察知するアラート機能</h2>
-                        <div class="w-16 h-1 bg-fuchsia-500 border-2 border-black"></div>
-                        <p class="text-sm leading-relaxed text-zinc-400 font-light">フォークリフトが死角から近づいてきた時や、高温の配管に手を近づけそうになった時。グラス内蔵のセンサーが危険を検知し、視界の端を赤く点滅させて作業員に直感的な警告を行います。</p>
-                    </div>
-                    <div class="flex-1 w-full aspect-video rounded-lg overflow-hidden border-3 border-black shadow-[6px_6px_0px_#000] bg-zinc-900 p-1">
-                        <div class="w-full h-full rounded-sm bg-zinc-950 overflow-hidden flex items-center justify-center p-6 relative">
-                            <img src="img/hero.png" class="w-full h-full object-cover transition-transform duration-[5s] group-hover:scale-[1.03]">
-                        </div>
-                    </div>
-                </div>
-                <div class="flex flex-col md:flex-row items-center gap-16 ">
-                    <div class="flex-1 space-y-6">
-                        <span class="text-fuchsia-400 font-black tracking-widest text-xs uppercase block">MAINTENANCE REVOLUTION</span>
-                        <h2 class="text-3xl md:text-4xl font-black text-white leading-tight uppercase italic">Case Study | 大手航空会社の整備部門</h2>
-                        <div class="w-16 h-1 bg-fuchsia-500 border-2 border-black"></div>
-                        <p class="text-sm leading-relaxed text-zinc-400 font-light">数万点の部品からなる航空機のエンジン整備。これまでは分厚いマニュアルと現物を何度も見比べて作業していましたが、LUMINA-ARの導入により、視界にトルク（締め付け強度）の数値や次の手順が直接浮かび上がるように。作業時間が30%短縮され、人為的なヒューマンエラーが完全にゼロになりました。</p>
-                    </div>
-                    <div class="flex-1 w-full aspect-video rounded-lg overflow-hidden border-3 border-black shadow-[6px_6px_0px_#000] bg-zinc-900 p-1">
-                        <div class="w-full h-full rounded-sm bg-zinc-950 overflow-hidden flex items-center justify-center p-6 relative">
-                            <img src="img/hero.png" class="w-full h-full object-cover transition-transform duration-[5s] group-hover:scale-[1.03]">
-                        </div>
-                    </div>
-                </div>
-                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
-                    <div class="flex-1 space-y-6">
-                        <span class="text-fuchsia-400 font-black tracking-widest text-xs uppercase block">OUR VISION</span>
-                        <h2 class="text-3xl md:text-4xl font-black text-white leading-tight uppercase italic">人間の「眼」を拡張する</h2>
-                        <div class="w-16 h-1 bg-fuchsia-500 border-2 border-black"></div>
-                        <p class="text-sm leading-relaxed text-zinc-400 font-light">物理世界とデジタル世界の境界線を無くすこと。私たちは空間そのものをインターフェースに変え、最前線で汗を流すエッセンシャルワーカーの能力を極限まで引き出します。</p>
-                    </div>
-                    <div class="flex-1 w-full aspect-video rounded-lg overflow-hidden border-3 border-black shadow-[6px_6px_0px_#000] bg-zinc-900 p-1">
-                        <div class="w-full h-full rounded-sm bg-zinc-950 overflow-hidden flex items-center justify-center p-6 relative">
-                            <img src="img/hero.png" class="w-full h-full object-cover transition-transform duration-[5s] group-hover:scale-[1.03]">
-                        </div>
-                    </div>
-                </div></div>
-        <div class="px-6 md:px-12 max-w-7xl mx-auto">
+        </div>
+
+        <!-- Marquee Banner -->
+        <div class="marquee-wrapper mb-32">
+            <div class="marquee-content">
+                &nbsp;&nbsp;●&nbsp;&nbsp;SITE-2&nbsp;&nbsp;●&nbsp;&nbsp;KINETIC_FLOW_ESTABLISHED&nbsp;&nbsp;●&nbsp;&nbsp;SYSTEM_ONLINE&nbsp;&nbsp;●&nbsp;&nbsp;PROTOTYPE_STABLE&nbsp;&nbsp;●&nbsp;&nbsp;SITE-2&nbsp;&nbsp;●&nbsp;&nbsp;KINETIC_FLOW_ESTABLISHED&nbsp;&nbsp;●&nbsp;&nbsp;SYSTEM_ONLINE&nbsp;&nbsp;●&nbsp;&nbsp;PROTOTYPE_STABLE
+            </div>
+            <div class="marquee-content">
+                &nbsp;&nbsp;●&nbsp;&nbsp;SITE-2&nbsp;&nbsp;●&nbsp;&nbsp;KINETIC_FLOW_ESTABLISHED&nbsp;&nbsp;●&nbsp;&nbsp;SYSTEM_ONLINE&nbsp;&nbsp;●&nbsp;&nbsp;PROTOTYPE_STABLE&nbsp;&nbsp;●&nbsp;&nbsp;SITE-2&nbsp;&nbsp;●&nbsp;&nbsp;KINETIC_FLOW_ESTABLISHED&nbsp;&nbsp;●&nbsp;&nbsp;SYSTEM_ONLINE&nbsp;&nbsp;●&nbsp;&nbsp;PROTOTYPE_STABLE
+            </div>
+        </div>
+
+        <div class="px-6 md:px-12 max-w-7xl mx-auto flex flex-col gap-32 mb-32">
+            
+        </div>
+
+        <!-- CTA -->
+        <div class="px-6 md:px-12 max-w-7xl mx-auto reveal-item">
             <div class="brutal-card-color rounded-lg p-12 md:p-24 relative overflow-hidden border-4 border-black text-black">
                 <div class="relative z-10 text-center max-w-3xl mx-auto space-y-8">
                     <h2 class="text-3xl md:text-5xl font-black uppercase italic tracking-tight">全員が、初日から「熟練工」になる。</h2>
                     <p class="text-sm text-black/70 font-bold leading-relaxed max-w-xl mx-auto">あなたの視界が、そのままマニュアルになります。両手を完全に自由にしたまま、次の次元の作業効率へ。</p>
                     <div>
-                        <a href="#" class="bg-black hover:bg-zinc-900 text-fuchsia-500 px-10 py-4 rounded font-black text-xs tracking-wider uppercase inline-flex items-center gap-3 transition brutal-button">
+                        <a href="#" class="bg-black hover:bg-zinc-900 text-yellow-500 px-10 py-4 rounded font-black text-xs tracking-wider uppercase inline-flex items-center gap-3 transition brutal-button">
                             START HARDWARE
                         </a>
                     </div>
@@ -165,9 +126,35 @@
     </main>
 
     <!-- Footer -->
-    <footer class="py-12 text-center text-[10px] font-black tracking-widest text-zinc-500 border-t-2 border-black bg-black">
-        <p>&copy; 2026 HARDWARE &mdash; PROTOCOL // 0x29C5A.</p>
+    <footer class="py-12 text-center text-[10px] font-black tracking-widest text-zinc-600 border-t-3 border-black bg-black">
+        <p>&copy; 2026 SITE-2 &mdash; PROTOCOL // 0x2A9C.</p>
     </footer>
 
+    <script>
+        // Lenis Smooth Scroll
+        const lenis = new Lenis();
+        function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+        requestAnimationFrame(raf);
+
+        // GSAP ScrollTrigger Scale/Fade-ins
+        gsap.registerPlugin(ScrollTrigger);
+        gsap.utils.toArray('.reveal-item').forEach(item => {
+            gsap.to(item, {
+                opacity: 1,
+                scale: 1,
+                y: 0,
+                duration: 0.8,
+                ease: 'back.out(1.4)',
+                scrollTrigger: {
+                    trigger: item,
+                    start: 'top 85%',
+                    toggleActions: 'play none none none'
+                }
+            });
+        });
+    </script>
 </body>
 </html>

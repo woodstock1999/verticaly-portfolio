@@ -5,197 +5,225 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>「無人島」を、あなただけの五つ星ホテルへ。 | LUXURY</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=Zen+Old+Mincho:wght@400;500;700&display=swap');
         body {
             font-family: 'Cormorant Garamond', 'Zen Old Mincho', serif;
-            background-color: #0c0c0c;
+            background-color: #fbfaf8;
         }
-        .sans-font {
-            font-family: 'Inter', sans-serif;
+        .vertical-text {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
         }
-        .serif-font {
-            font-family: 'Cormorant Garamond', serif;
+        .scroll-container {
+            display: flex;
+            flex-wrap: nowrap;
+            width: 300vw;
+            height: 100vh;
+        }
+        .panel {
+            width: 100vw;
+            height: 100vh;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 8%;
+            position: relative;
+        }
+        .tategaki-content {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+            display: inline-block;
         }
         .text-justify-custom {
             text-align: justify;
             text-justify: inter-character;
         }
+        @media (max-width: 768px) {
+            .scroll-container {
+                display: block;
+                width: 100vw;
+                height: auto;
+            }
+            .panel {
+                width: 100vw;
+                height: auto;
+                min-height: 80vh;
+                padding: 80px 24px;
+            }
+        }
     </style>
 </head>
-<body class="text-stone-400 min-h-screen antialiased overflow-x-hidden selection:bg-stone-500/10">
+<body class="text-stone-600 antialiased selection:bg-stone-500/10 overflow-x-hidden">
+
+    <!-- Ambient Canvas Particle Dust -->
+    <canvas id="gold-dust-canvas" class="fixed inset-0 w-full h-full pointer-events-none z-0 opacity-[0.35]"></canvas>
 
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 bg-[#0c0c0c]/80 backdrop-blur-md border-b border-white/5 px-8 md:px-16 py-6 flex justify-between items-center">
-        <div class="text-lg tracking-[0.25em] font-light text-white uppercase">
+    <nav class="fixed top-0 left-0 w-full z-50 bg-[#fbfaf8]/90 border-b border-stone-200/60 px-8 md:px-16 py-6 flex justify-between items-center backdrop-blur-md">
+        <div class="text-base tracking-[0.25em] font-light text-stone-900 uppercase">
             LUXURY
         </div>
-        <div class="hidden md:flex gap-12 text-[10px] font-bold tracking-[0.3em] uppercase text-stone-400">
-            <a href="#" class="hover:text-stone-900 transition">Collection</a>
-            <a href="#" class="hover:text-stone-900 transition">Editorial</a>
-            <a href="#" class="hover:text-stone-900 transition">About</a>
+        <div class="hidden md:flex gap-10 text-[9px] font-bold tracking-[0.3em] uppercase text-stone-400">
+            <a href="#intro" class="hover:text-stone-900 transition">序 // INTRO</a>
+            <a href="#philosophy" class="hover:text-stone-900 transition">理 // VISION</a>
+            <a href="#works" class="hover:text-stone-900 transition">作 // SPEC</a>
         </div>
         <div class="flex items-center gap-6">
-            <a href="../index.html" class="text-[9px] sans-font tracking-widest text-stone-400 hover:text-stone-900 transition uppercase">HUB</a>
-            <a href="#" class="bg-white text-black hover:bg-stone-200 px-6 py-2 text-[10px] sans-font tracking-[0.2em] uppercase transition rounded">START LUXURY</a>
+            <a href="../index.html" class="text-[9px] tracking-widest text-stone-400 hover:text-stone-900 transition uppercase">HUB</a>
+            <a href="#" class="bg-stone-900 text-white hover:bg-stone-800 px-6 py-2.5 text-[9px] tracking-[0.25em] uppercase transition rounded-sm">START LUXURY</a>
         </div>
     </nav>
 
-    <main class="pt-[160px] pb-32 relative z-10">
-        <div class="px-6 md:px-16 max-w-7xl mx-auto">
-            <div class="flex flex-col lg:flex-row items-center gap-16 mb-32">
-                <div class="flex-1 space-y-8">
-                    <span class="text-[10px] sans-font tracking-[0.3em] text-stone-400 uppercase block">LUXURY / HOSPITALITY</span>
-                    <h1 class="text-4xl md:text-6xl font-light text-white leading-[1.2]">「無人島」を、<br>あなただけの五つ星ホテルへ。</h1>
-                    <p class="text-lg font-light leading-relaxed max-w-xl text-justify-custom">ISLAND-STAYは、日本全国の無人島やプライベートビーチに、環境負荷ゼロのモバイル型ラグジュアリーヴィラを配置し、究極の非日常を提供するエクスクルーシブな宿泊プラットフォームです。</p>
+    <!-- Horizontal Scroll Wrapper -->
+    <div class="scroll-container z-10 relative">
+
+        <!-- Panel 1: Intro (Split Hero) -->
+        <section class="panel border-r border-stone-200/60" id="intro">
+            <div class="flex flex-col md:flex-row items-center gap-16 w-full pt-[60px]">
+                <div class="flex-1 space-y-6">
+                    <span class="text-[9px] tracking-[0.3em] text-stone-400 uppercase block">LUXURY / HOSPITALITY</span>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-light text-stone-900 leading-[1.2]">「無人島」を、<br>あなただけの五つ星ホテルへ。</h1>
+                    <p class="text-base font-light leading-relaxed max-w-lg text-justify-custom">ISLAND-STAYは、日本全国の無人島やプライベートビーチに、環境負荷ゼロのモバイル型ラグジュアリーヴィラを配置し、究極の非日常を提供するエクスクルーシブな宿泊プラットフォームです。</p>
                 </div>
-                <div class="flex-1 w-full relative">
-                    <div class="aspect-[4/3] rounded-sm overflow-hidden shadow-sm border border-white/5 p-1.5">
-                        <div class="w-full h-full rounded-sm overflow-hidden">
-                            
-            <div class="w-full h-full flex items-center justify-center p-8 relative overflow-hidden bg-stone-100" style="background-color: #141414;">
-                <!-- Abstract minimalist line art -->
-                <div class="absolute inset-0 flex items-center justify-center opacity-30">
-                    <div class="w-[300px] h-[300px] rounded-full border border-stone-400/30 flex items-center justify-center">
-                        <div class="w-[200px] h-[200px] rounded-full border border-stone-400/40"></div>
+                <div class="flex-grow w-full md:w-[45%]">
+                    <div class="aspect-[4/3] rounded-sm overflow-hidden p-1 bg-stone-100 border border-stone-200/60">
+                        
+            <div class="w-full h-full flex items-center justify-center p-8 relative overflow-hidden rounded-sm" style="background-color: #f5f2eb;">
+                <div class="absolute inset-0 flex items-center justify-center opacity-20">
+                    <div class="w-[260px] h-[260px] rounded-full border border-stone-400/40 flex items-center justify-center">
+                        <div class="w-[180px] h-[180px] rounded-full border border-stone-400/30"></div>
                     </div>
-                    <div class="absolute w-[500px] h-[1px] bg-stone-400/20 rotate-45"></div>
-                    <div class="absolute w-[500px] h-[1px] bg-stone-400/20 -rotate-45"></div>
+                    <div class="absolute w-[400px] h-[1px] bg-stone-400/10 rotate-45"></div>
+                    <div class="absolute w-[400px] h-[1px] bg-stone-400/10 -rotate-45"></div>
+                </div>
+                <div class="relative z-10 text-center tracking-[0.25em]">
+                    <span class="block text-[8px] text-stone-400 uppercase mb-2">SPRING / SUMMER CONCEPT</span>
+                    <h2 class="text-2xl md:text-4xl font-light italic font-serif" style="color: #1c1917;">LUXURY</h2>
+                    <div class="w-10 h-[1px] bg-stone-400/20 mx-auto my-3"></div>
+                    <span class="block text-[8px] text-stone-500 font-sans">01 // ZEN AESTHETIC</span>
+                </div>
+            </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Panel 2: Philosophy (Tategaki Japanese Text) -->
+        <section class="panel border-r border-stone-200/60 bg-[#111111]/[0.02]" id="philosophy">
+            <div class="flex flex-col md:flex-row items-center justify-between w-full">
+                <div class="tategaki-content py-12">
+                    <h2 class="text-3xl md:text-4xl lg:text-5xl font-light leading-loose text-stone-900">
+                        極上の余白と伝統の融合。
+                    </h2>
+                    <p class="text-sm md:text-base leading-loose mt-8 font-light text-stone-400">
+                        沈黙の中に宿る美学を、コードで記述する。
+                    </p>
+                </div>
+                <div class="hidden md:block w-72 h-[60vh] bg-stone-100 border border-stone-200/60 rounded-sm overflow-hidden relative p-1">
+                    <div class="w-full h-full bg-cover bg-center rounded-sm" style="background-image: url('img/hero.png'); background-color: #eee;"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Panel 3: Works & CTA -->
+        <section class="panel" id="works">
+            <div class="flex flex-col justify-between w-full h-full py-24">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+                    
                 </div>
                 
-                <div class="relative z-10 text-center tracking-[0.2em] select-none">
-                    <span class="block text-[10px] text-stone-400 uppercase mb-2">SPRING / SUMMER COLLECTION</span>
-                    <h2 class="text-3xl md:text-5xl font-light text-stone-800 italic font-serif" style="color: #fff;">LUXURY</h2>
-                    <div class="w-12 h-[1px] bg-stone-400/40 mx-auto my-4"></div>
-                    <span class="block text-[9px] text-stone-500 font-sans">01 // ESSENTIALS</span>
+                <div class="border-t border-stone-200/60 pt-12 flex flex-col md:flex-row justify-between items-center gap-8">
+                    <div class="text-left">
+                        <h4 class="text-2xl font-light text-stone-900 mb-2">誰にも邪魔されない、圧倒的な静寂。</h4>
+                        <p class="text-xs font-light text-stone-400 max-w-md">既存の高級ホテルでは味わえない、自然と完全に一体化する体験を。</p>
+                    </div>
+                    <a href="#" class="bg-stone-900 text-white hover:bg-stone-800 px-8 py-3.5 text-[9px] tracking-[0.2em] uppercase transition rounded-sm">
+                        START LUXURY
+                    </a>
                 </div>
             </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div><div class="px-6 md:px-16 max-w-7xl mx-auto flex flex-col gap-40 mb-32">
-                <div class="flex flex-col md:flex-row gap-20 items-center ">
-                    <div class="flex-1 space-y-8">
-                        <span class="text-[10px] sans-font tracking-[0.3em] text-stone-400 uppercase block">THE ULTIMATE ESCAPE</span>
-                        <h2 class="text-3xl md:text-5xl font-light text-white leading-tight">「観光地」という喧騒からの逃避</h2>
-                        <p class="text-base leading-relaxed font-light text-justify-custom">富裕層が真に求めているのは、豪華なシャンデリアではなく「完全なプライバシー」と「手付かずの自然」です。しかし、日本の美しい自然環境の多くは宿泊施設が存在せず、滞在が不可能です。</p>
-                    </div>
-                    <div class="flex-1 w-full aspect-[4/5] overflow-hidden bg-stone-100 border border-white/5 p-1.5 rounded-sm">
-                        <div class="w-full h-full rounded-sm bg-stone-200 overflow-hidden flex items-center justify-center p-8 relative" style="background-color: #141414;">
-                            
-                            <div class="text-center tracking-widest text-[9px] text-stone-400 uppercase font-light">
-                                <div class="text-4xl font-serif font-light mb-4" style="color: #555;">1</div>
-                                <div class="border-t border-b py-2 border-white/5">[ EDITORIAL SHOT // 01 ]</div>
-                            </div>
-                            
-                        </div>
-                    </div>
-                </div>
-                <div class="flex flex-col md:flex-row gap-20 items-center md:flex-row-reverse">
-                    <div class="flex-1 space-y-8">
-                        <span class="text-[10px] sans-font tracking-[0.3em] text-stone-400 uppercase block">OFF-GRID ARCHITECTURE</span>
-                        <h2 class="text-3xl md:text-5xl font-light text-white leading-tight">自然を傷つけない「モバイルヴィラ」</h2>
-                        <p class="text-base leading-relaxed font-light text-justify-custom"></p>
-                    </div>
-                    <div class="flex-1 w-full aspect-[4/5] overflow-hidden bg-stone-100 border border-white/5 p-1.5 rounded-sm">
-                        <div class="w-full h-full rounded-sm bg-stone-200 overflow-hidden flex items-center justify-center p-8 relative" style="background-color: #141414;">
-                            
-                            <div class="text-center tracking-widest text-[9px] text-stone-400 uppercase font-light">
-                                <div class="text-4xl font-serif font-light mb-4" style="color: #555;">2</div>
-                                <div class="border-t border-b py-2 border-white/5">[ EDITORIAL SHOT // 02 ]</div>
-                            </div>
-                            
-                        </div>
-                    </div>
-                </div>
-                <div class="flex flex-col md:flex-row gap-20 items-center ">
-                    <div class="flex-1 space-y-8">
-                        <span class="text-[10px] sans-font tracking-[0.3em] text-stone-400 uppercase block">PRIVATE TRANSFER</span>
-                        <h2 class="text-3xl md:text-5xl font-light text-white leading-tight">ヘリコプターでのシームレスな送迎</h2>
-                        <p class="text-base leading-relaxed font-light text-justify-custom">東京のヘリポートから無人島まで直行。移動時間すらも極上のエンターテインメントへと昇華させます。</p>
-                    </div>
-                    <div class="flex-1 w-full aspect-[4/5] overflow-hidden bg-stone-100 border border-white/5 p-1.5 rounded-sm">
-                        <div class="w-full h-full rounded-sm bg-stone-200 overflow-hidden flex items-center justify-center p-8 relative" style="background-color: #141414;">
-                            
-                            <div class="text-center tracking-widest text-[9px] text-stone-400 uppercase font-light">
-                                <div class="text-4xl font-serif font-light mb-4" style="color: #555;">3</div>
-                                <div class="border-t border-b py-2 border-white/5">[ EDITORIAL SHOT // 03 ]</div>
-                            </div>
-                            
-                        </div>
-                    </div>
-                </div>
-                <div class="flex flex-col md:flex-row gap-20 items-center md:flex-row-reverse">
-                    <div class="flex-1 space-y-8">
-                        <span class="text-[10px] sans-font tracking-[0.3em] text-stone-400 uppercase block">LOCAL GASTRONOMY</span>
-                        <h2 class="text-3xl md:text-5xl font-light text-white leading-tight">地元の一流シェフによる出張料理</h2>
-                        <p class="text-base leading-relaxed font-light text-justify-custom">その土地でその日に採れた最高の海鮮や食材を、専属のシェフがヴィラのキッチンで調理。究極の地産地消を提供します。</p>
-                    </div>
-                    <div class="flex-1 w-full aspect-[4/5] overflow-hidden bg-stone-100 border border-white/5 p-1.5 rounded-sm">
-                        <div class="w-full h-full rounded-sm bg-stone-200 overflow-hidden flex items-center justify-center p-8 relative" style="background-color: #141414;">
-                            
-                            <div class="text-center tracking-widest text-[9px] text-stone-400 uppercase font-light">
-                                <div class="text-4xl font-serif font-light mb-4" style="color: #555;">4</div>
-                                <div class="border-t border-b py-2 border-white/5">[ EDITORIAL SHOT // 04 ]</div>
-                            </div>
-                            
-                        </div>
-                    </div>
-                </div>
-                <div class="flex flex-col md:flex-row gap-20 items-center ">
-                    <div class="flex-1 space-y-8">
-                        <span class="text-[10px] sans-font tracking-[0.3em] text-stone-400 uppercase block">CLIENT SUCCESS</span>
-                        <h2 class="text-3xl md:text-5xl font-light text-white leading-tight">Case Study | 瀬戸内海の無人島</h2>
-                        <p class="text-base leading-relaxed font-light text-justify-custom">1泊100万円という価格設定にも関わらず、国内外のエグゼクティブから予約が殺到。地域には環境保全の資金が還元される仕組みを構築しました。</p>
-                    </div>
-                    <div class="flex-1 w-full aspect-[4/5] overflow-hidden bg-stone-100 border border-white/5 p-1.5 rounded-sm">
-                        <div class="w-full h-full rounded-sm bg-stone-200 overflow-hidden flex items-center justify-center p-8 relative" style="background-color: #141414;">
-                            
-                            <div class="text-center tracking-widest text-[9px] text-stone-400 uppercase font-light">
-                                <div class="text-4xl font-serif font-light mb-4" style="color: #555;">5</div>
-                                <div class="border-t border-b py-2 border-white/5">[ EDITORIAL SHOT // 05 ]</div>
-                            </div>
-                            
-                        </div>
-                    </div>
-                </div>
-                <div class="flex flex-col md:flex-row gap-20 items-center md:flex-row-reverse">
-                    <div class="flex-1 space-y-8">
-                        <span class="text-[10px] sans-font tracking-[0.3em] text-stone-400 uppercase block">OUR VISION</span>
-                        <h2 class="text-3xl md:text-5xl font-light text-white leading-tight">地球の美しさを、独り占めする</h2>
-                        <p class="text-base leading-relaxed font-light text-justify-custom">私たちは自然を消費するのではなく、自然の価値を再定義し、最も持続可能で美しい形で人々に提供します。</p>
-                    </div>
-                    <div class="flex-1 w-full aspect-[4/5] overflow-hidden bg-stone-100 border border-white/5 p-1.5 rounded-sm">
-                        <div class="w-full h-full rounded-sm bg-stone-200 overflow-hidden flex items-center justify-center p-8 relative" style="background-color: #141414;">
-                            
-                            <div class="text-center tracking-widest text-[9px] text-stone-400 uppercase font-light">
-                                <div class="text-4xl font-serif font-light mb-4" style="color: #555;">6</div>
-                                <div class="border-t border-b py-2 border-white/5">[ EDITORIAL SHOT // 06 ]</div>
-                            </div>
-                            
-                        </div>
-                    </div>
-                </div></div>
-        <div class="px-6 md:px-16 max-w-7xl mx-auto">
-            <div class="border border-white/5 rounded-sm p-16 md:p-32 relative overflow-hidden text-center">
-                <div class="max-w-2xl mx-auto space-y-8">
-                    <h2 class="text-3xl md:text-5xl font-light text-white">誰にも邪魔されない、圧倒的な静寂。</h2>
-                    <p class="text-base font-light leading-relaxed max-w-xl mx-auto">既存の高級ホテルでは味わえない、自然と完全に一体化する体験を。</p>
-                    <div class="pt-6">
-                        <a href="#" class="bg-white text-black hover:bg-stone-200 px-10 py-4 text-[10px] sans-font tracking-[0.25em] uppercase transition inline-block">
-                            START LUXURY
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </main>
+        </section>
 
-    <!-- Footer -->
-    <footer class="py-16 text-center text-[9px] sans-font tracking-[0.3em] text-stone-400 border-t border-white/5 bg-[#0c0c0c]">
+    </div>
+
+    <!-- Mobile Footer -->
+    <footer class="py-12 text-center text-[8px] tracking-[0.3em] text-stone-400 border-t border-stone-200/60 bg-[#fbfaf8] relative z-20">
         <p>&copy; 2026 LUXURY &mdash; ARCHIVE &amp; Curation.</p>
     </footer>
 
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Horizontal Scroll for Desktop (width > 768px)
+        const container = document.querySelector(".scroll-container");
+        const panels = gsap.utils.toArray(".panel");
+
+        if (window.innerWidth > 768) {
+            gsap.to(panels, {
+                xPercent: -100 * (panels.length - 1),
+                ease: "none",
+                scrollTrigger: {
+                    trigger: ".scroll-container",
+                    pin: true,
+                    scrub: 1.2, // Smooth luxury momentum feel
+                    snap: 1 / (panels.length - 1),
+                    end: () => "+=" + container.offsetWidth
+                }
+            });
+        }
+
+        // Particle Dust
+        class GoldDust {
+            constructor(canvasId) {
+                this.canvas = document.getElementById(canvasId);
+                this.ctx = this.canvas.getContext('2d');
+                this.particles = [];
+                this.resize();
+                window.addEventListener('resize', () => this.resize());
+                this.initParticles();
+                this.animate();
+            }
+            resize() {
+                this.canvas.width = window.innerWidth;
+                this.canvas.height = window.innerHeight;
+            }
+            initParticles() {
+                for(let i = 0; i < 40; i++) {
+                    this.particles.push({
+                        x: Math.random() * this.canvas.width,
+                        y: Math.random() * this.canvas.height,
+                        size: Math.random() * 2 + 0.3,
+                        speedX: (Math.random() - 0.5) * 0.15,
+                        speedY: (Math.random() - 0.5) * 0.15,
+                        opacity: Math.random() * 0.4 + 0.1
+                    });
+                }
+            }
+            animate() {
+                this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+                this.particles.forEach(p => {
+                    p.x += p.speedX;
+                    p.y += p.speedY;
+                    if (p.x < 0) p.x = this.canvas.width;
+                    if (p.x > this.canvas.width) p.x = 0;
+                    if (p.y < 0) p.y = this.canvas.height;
+                    if (p.y > this.canvas.height) p.y = 0;
+                    this.ctx.fillStyle = 'rgba(' + (isDark ? '212, 175, 55' : '100, 95, 80') + ', ' + p.opacity + ')';
+                    this.ctx.beginPath();
+                    this.ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+                    this.ctx.fill();
+                });
+                requestAnimationFrame(() => this.animate());
+            }
+        }
+        window.addEventListener('load', () => {
+            new GoldDust('gold-dust-canvas');
+        });
+    </script>
 </body>
 </html>

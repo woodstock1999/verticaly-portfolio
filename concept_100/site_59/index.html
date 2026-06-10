@@ -5,187 +5,210 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>太陽のリズムを、あなたの寝室にインストールする。 | SMART HOME</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;700&family=Noto+Sans+JP:wght@400;700;900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=Zen+Old+Mincho:wght@400;500;700&display=swap');
         body {
-            font-family: 'Space Grotesk', 'Noto Sans JP', sans-serif;
-            background-color: #030307;
+            font-family: 'Cormorant Garamond', 'Zen Old Mincho', serif;
+            background-color: #fbfaf8;
         }
-        .code-font {
-            font-family: 'JetBrains Mono', monospace;
+        .vertical-text {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
         }
-        .glass-panel {
-            background: rgba(13, 17, 27, 0.7);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.05);
+        .scroll-container {
+            display: flex;
+            flex-wrap: nowrap;
+            width: 300vw;
+            height: 100vh;
         }
-        .glow-cyan {
-            box-shadow: 0 0 40px rgba(6, 182, 212, 0.15);
+        .panel {
+            width: 100vw;
+            height: 100vh;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 8%;
+            position: relative;
+        }
+        .tategaki-content {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+            display: inline-block;
+        }
+        .text-justify-custom {
+            text-align: justify;
+            text-justify: inter-character;
+        }
+        @media (max-width: 768px) {
+            .scroll-container {
+                display: block;
+                width: 100vw;
+                height: auto;
+            }
+            .panel {
+                width: 100vw;
+                height: auto;
+                min-height: 80vh;
+                padding: 80px 24px;
+            }
         }
     </style>
 </head>
-<body class="text-[#8f96a3] min-h-screen antialiased overflow-x-hidden selection:bg-blue-500/30">
+<body class="text-stone-600 antialiased selection:bg-stone-500/10 overflow-x-hidden">
 
-    <!-- Glowing Cyber Grid Background -->
-    <div class="fixed inset-0 pointer-events-none z-0 opacity-[0.03]" style="background-image: radial-gradient(rgba(255,255,255,0.15) 1px, transparent 0); background-size: 24px 24px;"></div>
-    <div class="fixed top-0 left-1/4 w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-[150px] pointer-events-none z-0"></div>
-    <div class="fixed bottom-0 right-1/4 w-[500px] h-[500px] bg-purple-600/10 rounded-full blur-[150px] pointer-events-none z-0"></div>
+    <!-- Ambient Canvas Particle Dust -->
+    <canvas id="gold-dust-canvas" class="fixed inset-0 w-full h-full pointer-events-none z-0 opacity-[0.35]"></canvas>
 
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 glass-panel border-b border-white/5 px-6 md:px-12 py-5 flex justify-between items-center">
-        <div class="font-bold text-xl tracking-tight text-white flex items-center gap-3">
-            <div class="w-3.5 h-3.5 rounded bg-blue-500 shadow-[0_0_15px_rgba(6,182,212,0.6)]"></div>
-            <span class="tracking-widest uppercase text-sm font-black text-white/90">SMART HOME</span>
+    <nav class="fixed top-0 left-0 w-full z-50 bg-[#fbfaf8]/90 border-b border-stone-200/60 px-8 md:px-16 py-6 flex justify-between items-center backdrop-blur-md">
+        <div class="text-base tracking-[0.25em] font-light text-stone-900 uppercase">
+            SMART HOME
         </div>
-        <div class="hidden md:flex gap-8 text-xs font-bold text-white/50 tracking-widest uppercase">
-            <a href="#" class="hover:text-white transition">Features</a>
-            <a href="#" class="hover:text-white transition">Network</a>
-            <a href="#" class="hover:text-white transition">Tokenomics</a>
+        <div class="hidden md:flex gap-10 text-[9px] font-bold tracking-[0.3em] uppercase text-stone-400">
+            <a href="#intro" class="hover:text-stone-900 transition">序 // INTRO</a>
+            <a href="#philosophy" class="hover:text-stone-900 transition">理 // VISION</a>
+            <a href="#works" class="hover:text-stone-900 transition">作 // SPEC</a>
         </div>
-        <div class="flex items-center gap-4">
-            <a href="../index.html" class="text-[10px] font-bold text-white/40 hover:text-white transition uppercase tracking-widest">HUB</a>
-            <a href="#" class="bg-blue-600 hover:bg-blue-500 text-white px-5 py-2 rounded font-bold text-xs tracking-wider uppercase transition shadow-lg shadow-blue-500/20">START SMART HOME</a>
+        <div class="flex items-center gap-6">
+            <a href="../index.html" class="text-[9px] tracking-widest text-stone-400 hover:text-stone-900 transition uppercase">HUB</a>
+            <a href="#" class="bg-stone-900 text-white hover:bg-stone-800 px-6 py-2.5 text-[9px] tracking-[0.25em] uppercase transition rounded-sm">START SMART HOME</a>
         </div>
     </nav>
 
-    <main class="pt-[140px] pb-24 relative z-10">
-        <div class="px-6 md:px-12 max-w-7xl mx-auto">
-            <div class="text-center max-w-4xl mx-auto mb-20">
-                <span class="bg-white/5 border border-white/10 text-blue-400 px-5 py-1.5 text-[10px] font-bold tracking-widest uppercase rounded mb-6 inline-block">SMART HOME / SLEEP TECH</span>
-                <h1 class="text-4xl md:text-6xl font-extrabold mb-8 leading-[1.15] tracking-tight text-white">太陽のリズムを、<br>あなたの寝室にインストールする。</h1>
-                <p class="text-lg md:text-xl text-[#8f96a3] max-w-3xl mx-auto leading-relaxed">現代人が眠れないのは、夜も明るすぎるからです。GENTLE-LAMPは、概日リズム（サーカディアンリズム）と睡眠医学に基づき、時間帯に合わせて光の「色温度」と「波長」を全自動でコントロールする究極のスリープテック照明。</p>
+    <!-- Horizontal Scroll Wrapper -->
+    <div class="scroll-container z-10 relative">
+
+        <!-- Panel 1: Intro (Split Hero) -->
+        <section class="panel border-r border-stone-200/60" id="intro">
+            <div class="flex flex-col md:flex-row items-center gap-16 w-full pt-[60px]">
+                <div class="flex-1 space-y-6">
+                    <span class="text-[9px] tracking-[0.3em] text-stone-400 uppercase block">SMART HOME</span>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-light text-stone-900 leading-[1.2]">太陽のリズムを、<br>あなたの寝室にインストールする。</h1>
+                    <p class="text-base font-light leading-relaxed max-w-lg text-justify-custom">現代人が眠れないのは、夜も明るすぎるからです。GENTLE-LAMPは、概日リズム（サーカディアンリズム）と睡眠医学に基づき、時間帯に合わせて光の「色温度」と「波長」を全自動でコントロールする究極のスリープテック照明。</p>
+                </div>
+                <div class="flex-grow w-full md:w-[45%]">
+                    <div class="aspect-[4/3] rounded-sm overflow-hidden p-1 bg-stone-100 border border-stone-200/60">
+                        <img src="img/ui.png" class="w-full h-full object-cover rounded-xl border border-white/10 shadow-2xl">
+                    </div>
+                </div>
             </div>
-            
-            <div class="relative w-full aspect-[21/10] md:aspect-video rounded-2xl overflow-hidden glass-panel p-2 shadow-2xl glow-blue border border-white/10 group mb-32">
-                <div class="w-full h-full rounded-xl overflow-hidden">
+        </section>
+
+        <!-- Panel 2: Philosophy (Tategaki Japanese Text) -->
+        <section class="panel border-r border-stone-200/60 bg-[#111111]/[0.02]" id="philosophy">
+            <div class="flex flex-col md:flex-row items-center justify-between w-full">
+                <div class="tategaki-content py-12">
+                    <h2 class="text-3xl md:text-4xl lg:text-5xl font-light leading-loose text-stone-900">
+                        極上の余白と伝統の融合。
+                    </h2>
+                    <p class="text-sm md:text-base leading-loose mt-8 font-light text-stone-400">
+                        沈黙の中に宿る美学を、コードで記述する。
+                    </p>
+                </div>
+                <div class="hidden md:block w-72 h-[60vh] bg-stone-100 border border-stone-200/60 rounded-sm overflow-hidden relative p-1">
+                    <div class="w-full h-full bg-cover bg-center rounded-sm" style="background-image: url('img/hero.png'); background-color: #eee;"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Panel 3: Works & CTA -->
+        <section class="panel" id="works">
+            <div class="flex flex-col justify-between w-full h-full py-24">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
                     
-            <div class="relative w-full h-full bg-zinc-900 overflow-hidden">
-                <img src="img/ui.png" class="w-full h-full object-cover transition-transform duration-[5s] group-hover:scale-[1.03]">
-                <div class="absolute inset-0 bg-gradient-to-t from-[#050509] via-transparent to-transparent pointer-events-none"></div>
-            </div>
                 </div>
-            </div>
-        </div><div class="px-6 md:px-12 max-w-7xl mx-auto flex flex-col gap-32 mb-32">
-                <div class="flex flex-col md:flex-row items-center gap-16 ">
-                    <div class="flex-1 space-y-6">
-                        <span class="text-blue-400 font-bold tracking-widest text-xs uppercase block">THE LIGHT POLLUTION</span>
-                        <h2 class="text-3xl md:text-4xl font-extrabold text-white leading-tight">ブルーライトという「人工の太陽」</h2>
-                        <div class="w-12 h-0.5 bg-blue-500"></div>
-                        <p class="text-base leading-relaxed text-[#8f96a3] font-light">夜になっても煌々と照らされる白いLED照明やスマートフォンの光。これらに含まれる強烈なブルーライトは、脳に「今は昼間だ」と錯覚させ、睡眠ホルモン（メラトニン）の分泌を極端に阻害します。不眠症の最大の原因は、実はあなたの部屋の天井にあるのです。</p>
+                
+                <div class="border-t border-stone-200/60 pt-12 flex flex-col md:flex-row justify-between items-center gap-8">
+                    <div class="text-left">
+                        <h4 class="text-2xl font-light text-stone-900 mb-2">光で眠り、光で目覚める。</h4>
+                        <p class="text-xs font-light text-stone-400 max-w-md">睡眠薬に頼る前に、部屋の光を変えてください。極上の「入眠」と、奇跡のような「目覚め」を。</p>
                     </div>
-                    <div class="flex-1 w-full aspect-video rounded-xl overflow-hidden glass-panel p-2 border border-white/10 group">
-                        <div class="w-full h-full rounded-lg bg-[#0e111a] overflow-hidden flex items-center justify-center p-6 border border-white/5 relative">
-                            <img src="img/ui.png" class="w-full h-full object-cover transition-transform duration-[5s] group-hover:scale-[1.03]">
-                        </div>
-                    </div>
-                </div>
-                <div class="relative">
-                    <div class="text-center mb-16 max-w-2xl mx-auto">
-                        <span class="text-blue-400 font-bold tracking-widest text-xs uppercase">BIOMETRIC LIGHTING</span>
-                        <h2 class="text-3xl md:text-4xl font-extrabold mt-4 text-white">脳を騙し、自然な眠りへ誘うアルゴリズム</h2>
-                    </div>
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        
-                        <div class="glass-panel p-8 rounded-xl hover:border-blue-500/30 transition duration-300 group">
-                            <div class="w-12 h-12 rounded flex items-center justify-center mb-6 bg-blue-500/10 text-blue-400 border border-blue-500/20 group-hover:bg-blue-500/20 transition-all">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                            </div>
-                            <h4 class="text-lg font-bold mb-3 text-white">メラトニン・プロテクト発光</h4>
-                            <p class="text-sm leading-relaxed text-[#8f96a3]">日没時刻を過ぎると、GENTLE-LAMPは自動的にブルーライトの波長を完全にカット。焚き火のような深い琥珀色（アンバー）へと変化し、脳の入眠準備を強力にサポートします。</p>
-                        </div>
-                        
-
-                        <div class="glass-panel p-8 rounded-xl hover:border-blue-500/30 transition duration-300 group">
-                            <div class="w-12 h-12 rounded flex items-center justify-center mb-6 bg-blue-500/10 text-blue-400 border border-blue-500/20 group-hover:bg-blue-500/20 transition-all">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                            </div>
-                            <h4 class="text-lg font-bold mb-3 text-white">フェードアウト入眠ガイド</h4>
-                            <p class="text-sm leading-relaxed text-[#8f96a3]">ベッドに入ってから30分かけて、光が呼吸するようにゆっくりと暗くなっていきます。この「擬似的な日没」が副交感神経を優位にし、スムーズな眠りに導きます。</p>
-                        </div>
-                        
-
-                        <div class="glass-panel p-8 rounded-xl hover:border-blue-500/30 transition duration-300 group">
-                            <div class="w-12 h-12 rounded flex items-center justify-center mb-6 bg-blue-500/10 text-blue-400 border border-blue-500/20 group-hover:bg-blue-500/20 transition-all">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                            </div>
-                            <h4 class="text-lg font-bold mb-3 text-white">サンライズ・ウェイクアップ</h4>
-                            <p class="text-sm leading-relaxed text-[#8f96a3]">けたたましいアラーム音で強制的に起こされるストレスは最悪です。起床時間の30分前から、朝日のような青白い光が徐々に部屋を照らし、自然でスッキリとした目覚めを実現します。</p>
-                        </div>
-                        
-                    </div>
-                </div>
-                <div class="flex flex-col md:flex-row items-center gap-16 ">
-                    <div class="flex-1 space-y-6">
-                        <span class="text-blue-400 font-bold tracking-widest text-xs uppercase block">IoT INTEGRATION</span>
-                        <h2 class="text-3xl md:text-4xl font-extrabold text-white leading-tight">スマートウォッチの睡眠データと完全同期</h2>
-                        <div class="w-12 h-0.5 bg-blue-500"></div>
-                        <p class="text-base leading-relaxed text-[#8f96a3] font-light">Apple WatchやOura Ringのデータと連動。「昨晩は深い睡眠（ノンレム睡眠）が少なかった」とAIが判定した場合、その日の夜は自動的に「よりリラックス効果の高い暖色系の光」の時間を長めに設定するダイナミック・アジャストメント機能を搭載。</p>
-                    </div>
-                    <div class="flex-1 w-full aspect-video rounded-xl overflow-hidden glass-panel p-2 border border-white/10 group">
-                        <div class="w-full h-full rounded-lg bg-[#0e111a] overflow-hidden flex items-center justify-center p-6 border border-white/5 relative">
-                            <img src="img/ui.png" class="w-full h-full object-cover transition-transform duration-[5s] group-hover:scale-[1.03]">
-                        </div>
-                    </div>
-                </div>
-                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
-                    <div class="flex-1 space-y-6">
-                        <span class="text-blue-400 font-bold tracking-widest text-xs uppercase block">FOCUS OPTIMIZATION</span>
-                        <h2 class="text-3xl md:text-4xl font-extrabold text-white leading-tight">読書やデスクワークに最適化された「集中モード」</h2>
-                        <div class="w-12 h-0.5 bg-blue-500"></div>
-                        <p class="text-base leading-relaxed text-[#8f96a3] font-light">睡眠時だけではありません。日中のテレワーク時には、脳を覚醒させ集中力を高める「6000ケルビン」の昼光色を照射。体内時計をリセットし、昼夜のメリハリを空間全体でデザインします。</p>
-                    </div>
-                    <div class="flex-1 w-full aspect-video rounded-xl overflow-hidden glass-panel p-2 border border-white/10 group">
-                        <div class="w-full h-full rounded-lg bg-[#0e111a] overflow-hidden flex items-center justify-center p-6 border border-white/5 relative">
-                            <img src="img/ui.png" class="w-full h-full object-cover transition-transform duration-[5s] group-hover:scale-[1.03]">
-                        </div>
-                    </div>
-                </div>
-                <div class="flex flex-col md:flex-row items-center gap-16 ">
-                    <div class="flex-1 space-y-6">
-                        <span class="text-blue-400 font-bold tracking-widest text-xs uppercase block">LIFE CHANGED</span>
-                        <h2 class="text-3xl md:text-4xl font-extrabold text-white leading-tight">Case Study | 慢性的な不眠に悩むビジネスマン</h2>
-                        <div class="w-12 h-0.5 bg-blue-500"></div>
-                        <p class="text-base leading-relaxed text-[#8f96a3] font-light">睡眠導入剤を手放せなかった40代男性。寝室とリビングの照明をすべてGENTLE-LAMPに変更したところ、導入からわずか1週間で入眠までの時間が1時間以上短縮。朝もアラームが鳴る前に自然と目が覚めるようになり、「日中の頭のキレが20代の頃に戻った」と語ります。</p>
-                    </div>
-                    <div class="flex-1 w-full aspect-video rounded-xl overflow-hidden glass-panel p-2 border border-white/10 group">
-                        <div class="w-full h-full rounded-lg bg-[#0e111a] overflow-hidden flex items-center justify-center p-6 border border-white/5 relative">
-                            <img src="img/ui.png" class="w-full h-full object-cover transition-transform duration-[5s] group-hover:scale-[1.03]">
-                        </div>
-                    </div>
-                </div>
-                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
-                    <div class="flex-1 space-y-6">
-                        <span class="text-blue-400 font-bold tracking-widest text-xs uppercase block">OUR VISION</span>
-                        <h2 class="text-3xl md:text-4xl font-extrabold text-white leading-tight">「暗闇の価値」を取り戻す</h2>
-                        <div class="w-12 h-0.5 bg-blue-500"></div>
-                        <p class="text-base leading-relaxed text-[#8f96a3] font-light">人類は電気を発明して夜を征服しましたが、同時に「質の高い睡眠」を失いました。私たちは最先端の光学テクノロジーを用いて、現代の寝室に「最も自然で美しい夜」を取り戻します。</p>
-                    </div>
-                    <div class="flex-1 w-full aspect-video rounded-xl overflow-hidden glass-panel p-2 border border-white/10 group">
-                        <div class="w-full h-full rounded-lg bg-[#0e111a] overflow-hidden flex items-center justify-center p-6 border border-white/5 relative">
-                            <img src="img/ui.png" class="w-full h-full object-cover transition-transform duration-[5s] group-hover:scale-[1.03]">
-                        </div>
-                    </div>
-                </div></div>
-        <div class="px-6 md:px-12 max-w-7xl mx-auto">
-            <div class="glass-panel rounded-2xl p-12 md:p-24 relative overflow-hidden group shadow-2xl border border-white/10">
-                <div class="absolute -top-32 -right-32 w-96 h-96 bg-blue-600/10 rounded-full blur-[100px]"></div>
-                <div class="relative z-10 text-center max-w-3xl mx-auto">
-                    <h2 class="text-3xl md:text-5xl font-extrabold mb-6 text-white">光で眠り、光で目覚める。</h2>
-                    <p class="text-base text-[#8f96a3] mb-10 leading-relaxed max-w-xl mx-auto">睡眠薬に頼る前に、部屋の光を変えてください。極上の「入眠」と、奇跡のような「目覚め」を。</p>
-                    <a href="#" class="bg-blue-600 hover:bg-blue-500 text-white px-10 py-4 rounded font-bold text-sm tracking-wider uppercase inline-flex items-center gap-3 transition shadow-lg shadow-blue-500/20">
+                    <a href="#" class="bg-stone-900 text-white hover:bg-stone-800 px-8 py-3.5 text-[9px] tracking-[0.2em] uppercase transition rounded-sm">
                         START SMART HOME
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                     </a>
                 </div>
             </div>
-        </div>
-    </main>
+        </section>
 
-    <!-- Footer -->
-    <footer class="py-12 text-center text-xs font-mono tracking-widest text-white/30 border-t border-white/5 bg-[#030307]">
-        <p>&copy; 2026 SMART HOME // ALL DECENTRALIZED RIGHTS RESERVED.</p>
+    </div>
+
+    <!-- Mobile Footer -->
+    <footer class="py-12 text-center text-[8px] tracking-[0.3em] text-stone-400 border-t border-stone-200/60 bg-[#fbfaf8] relative z-20">
+        <p>&copy; 2026 SMART HOME &mdash; ARCHIVE &amp; Curation.</p>
     </footer>
 
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Horizontal Scroll for Desktop (width > 768px)
+        const container = document.querySelector(".scroll-container");
+        const panels = gsap.utils.toArray(".panel");
+
+        if (window.innerWidth > 768) {
+            gsap.to(panels, {
+                xPercent: -100 * (panels.length - 1),
+                ease: "none",
+                scrollTrigger: {
+                    trigger: ".scroll-container",
+                    pin: true,
+                    scrub: 1.2, // Smooth luxury momentum feel
+                    snap: 1 / (panels.length - 1),
+                    end: () => "+=" + container.offsetWidth
+                }
+            });
+        }
+
+        // Particle Dust
+        class GoldDust {
+            constructor(canvasId) {
+                this.canvas = document.getElementById(canvasId);
+                this.ctx = this.canvas.getContext('2d');
+                this.particles = [];
+                this.resize();
+                window.addEventListener('resize', () => this.resize());
+                this.initParticles();
+                this.animate();
+            }
+            resize() {
+                this.canvas.width = window.innerWidth;
+                this.canvas.height = window.innerHeight;
+            }
+            initParticles() {
+                for(let i = 0; i < 40; i++) {
+                    this.particles.push({
+                        x: Math.random() * this.canvas.width,
+                        y: Math.random() * this.canvas.height,
+                        size: Math.random() * 2 + 0.3,
+                        speedX: (Math.random() - 0.5) * 0.15,
+                        speedY: (Math.random() - 0.5) * 0.15,
+                        opacity: Math.random() * 0.4 + 0.1
+                    });
+                }
+            }
+            animate() {
+                this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+                this.particles.forEach(p => {
+                    p.x += p.speedX;
+                    p.y += p.speedY;
+                    if (p.x < 0) p.x = this.canvas.width;
+                    if (p.x > this.canvas.width) p.x = 0;
+                    if (p.y < 0) p.y = this.canvas.height;
+                    if (p.y > this.canvas.height) p.y = 0;
+                    this.ctx.fillStyle = 'rgba(' + (isDark ? '212, 175, 55' : '100, 95, 80') + ', ' + p.opacity + ')';
+                    this.ctx.beginPath();
+                    this.ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+                    this.ctx.fill();
+                });
+                requestAnimationFrame(() => this.animate());
+            }
+        }
+        window.addEventListener('load', () => {
+            new GoldDust('gold-dust-canvas');
+        });
+    </script>
 </body>
 </html>

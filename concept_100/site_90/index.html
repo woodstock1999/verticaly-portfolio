@@ -5,171 +5,210 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ガイドブックには載らない、最高峰の日本美を。 | ULTRA-LUXURY TOURISM</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=Zen+Old+Mincho:wght@400;500;700&display=swap');
         body {
             font-family: 'Cormorant Garamond', 'Zen Old Mincho', serif;
-            background-color: #0c0c0c;
+            background-color: #0b0b0b;
         }
-        .sans-font {
-            font-family: 'Inter', sans-serif;
+        .vertical-text {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
         }
-        .serif-font {
-            font-family: 'Cormorant Garamond', serif;
+        .scroll-container {
+            display: flex;
+            flex-wrap: nowrap;
+            width: 300vw;
+            height: 100vh;
+        }
+        .panel {
+            width: 100vw;
+            height: 100vh;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 8%;
+            position: relative;
+        }
+        .tategaki-content {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+            display: inline-block;
         }
         .text-justify-custom {
             text-align: justify;
             text-justify: inter-character;
         }
+        @media (max-width: 768px) {
+            .scroll-container {
+                display: block;
+                width: 100vw;
+                height: auto;
+            }
+            .panel {
+                width: 100vw;
+                height: auto;
+                min-height: 80vh;
+                padding: 80px 24px;
+            }
+        }
     </style>
 </head>
-<body class="text-stone-400 min-h-screen antialiased overflow-x-hidden selection:bg-stone-500/10">
+<body class="text-stone-400 antialiased selection:bg-stone-500/10 overflow-x-hidden">
+
+    <!-- Ambient Canvas Particle Dust -->
+    <canvas id="gold-dust-canvas" class="fixed inset-0 w-full h-full pointer-events-none z-0 opacity-[0.35]"></canvas>
 
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 bg-[#0c0c0c]/80 backdrop-blur-md border-b border-white/5 px-8 md:px-16 py-6 flex justify-between items-center">
-        <div class="text-lg tracking-[0.25em] font-light text-white uppercase">
+    <nav class="fixed top-0 left-0 w-full z-50 bg-[#0b0b0b]/90 border-b border-white/5 px-8 md:px-16 py-6 flex justify-between items-center backdrop-blur-md">
+        <div class="text-base tracking-[0.25em] font-light text-white uppercase">
             ULTRA-LUXURY TOURISM
         </div>
-        <div class="hidden md:flex gap-12 text-[10px] font-bold tracking-[0.3em] uppercase text-stone-400">
-            <a href="#" class="hover:text-stone-900 transition">Collection</a>
-            <a href="#" class="hover:text-stone-900 transition">Editorial</a>
-            <a href="#" class="hover:text-stone-900 transition">About</a>
+        <div class="hidden md:flex gap-10 text-[9px] font-bold tracking-[0.3em] uppercase text-stone-400">
+            <a href="#intro" class="hover:text-stone-900 transition">序 // INTRO</a>
+            <a href="#philosophy" class="hover:text-stone-900 transition">理 // VISION</a>
+            <a href="#works" class="hover:text-stone-900 transition">作 // SPEC</a>
         </div>
         <div class="flex items-center gap-6">
-            <a href="../index.html" class="text-[9px] sans-font tracking-widest text-stone-400 hover:text-stone-900 transition uppercase">HUB</a>
-            <a href="#" class="bg-white text-black hover:bg-stone-200 px-6 py-2 text-[10px] sans-font tracking-[0.2em] uppercase transition rounded">ご導入について</a>
+            <a href="../index.html" class="text-[9px] tracking-widest text-stone-400 hover:text-stone-900 transition uppercase">HUB</a>
+            <a href="#" class="bg-white text-black hover:bg-stone-200 px-6 py-2.5 text-[9px] tracking-[0.25em] uppercase transition rounded-sm">ご導入について</a>
         </div>
     </nav>
 
-    <main class="pt-[160px] pb-32 relative z-10">
-        <div class="px-6 md:px-16 max-w-7xl mx-auto">
-            <div class="flex flex-col lg:flex-row items-center gap-16 mb-32">
-                <div class="flex-1 space-y-8">
-                    <span class="text-[10px] sans-font tracking-[0.3em] text-stone-400 uppercase block">ULTRA-LUXURY TOURISM / INBOUND</span>
-                    <h1 class="text-4xl md:text-6xl font-light text-white leading-[1.2]">ガイドブックには載らない、<br>最高峰の日本美を。</h1>
-                    <p class="text-lg font-light leading-relaxed max-w-xl text-justify-custom">一見さんお断りの歴史的建造物、非公開の禅寺、そして数百年受け継がれる伝統芸能。超富裕層向けに厳選された、究極のシークレット・エクスペリエンスを提供するB2Bインバウンド・プラットフォーム。</p>
+    <!-- Horizontal Scroll Wrapper -->
+    <div class="scroll-container z-10 relative">
+
+        <!-- Panel 1: Intro (Split Hero) -->
+        <section class="panel border-r border-white/5" id="intro">
+            <div class="flex flex-col md:flex-row items-center gap-16 w-full pt-[60px]">
+                <div class="flex-1 space-y-6">
+                    <span class="text-[9px] tracking-[0.3em] text-stone-400 uppercase block">ULTRA-LUXURY TOURISM / INBOUND</span>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-light text-white leading-[1.2]">ガイドブックには載らない、<br>最高峰の日本美を。</h1>
+                    <p class="text-base font-light leading-relaxed max-w-lg text-justify-custom">一見さんお断りの歴史的建造物、非公開の禅寺、そして数百年受け継がれる伝統芸能。超富裕層向けに厳選された、究極のシークレット・エクスペリエンスを提供するB2Bインバウンド・プラットフォーム。</p>
                 </div>
-                <div class="flex-1 w-full relative">
-                    <div class="aspect-[4/3] rounded-sm overflow-hidden shadow-sm border border-white/5 p-1.5">
-                        <div class="w-full h-full rounded-sm overflow-hidden">
-                            
-            <div class="relative w-full h-full overflow-hidden bg-stone-100">
-                <img src="img/ui.png" class="w-full h-full object-cover transition-transform duration-[5s] group-hover:scale-[1.03]">
-                <div class="absolute inset-0 bg-gradient-to-t from-[#0c0c0c] via-transparent to-transparent pointer-events-none"></div>
-            </div>
-                        </div>
+                <div class="flex-grow w-full md:w-[45%]">
+                    <div class="aspect-[4/3] rounded-sm overflow-hidden p-1 bg-stone-100 border border-white/5">
+                        <img src="img/ui.png" class="w-full h-full object-cover rounded-xl border border-white/10 shadow-2xl">
                     </div>
                 </div>
             </div>
-        </div><div class="px-6 md:px-16 max-w-7xl mx-auto flex flex-col gap-40 mb-32">
-                <div class="flex flex-col md:flex-row gap-20 items-center ">
-                    <div class="flex-1 space-y-8">
-                        <span class="text-[10px] sans-font tracking-[0.3em] text-stone-400 uppercase block">BEYOND SIGHTSEEING</span>
-                        <h2 class="text-3xl md:text-5xl font-light text-white leading-tight">消費される観光から、魂を震わせる体験へ</h2>
-                        <p class="text-base leading-relaxed font-light text-justify-custom">浅草寺の喧騒や、京都の混雑した道。これらはもはや「真の日本」とは呼べません。世界のエグゼクティブが求めているのは、SNSで消費される景色ではなく、精神的な変容をもたらす深い静寂と、本物の文化的洗礼です。</p>
-                    </div>
-                    <div class="flex-1 w-full aspect-[4/5] overflow-hidden bg-stone-100 border border-white/5 p-1.5 rounded-sm">
-                        <div class="w-full h-full rounded-sm bg-stone-200 overflow-hidden flex items-center justify-center p-8 relative" style="background-color: #141414;">
-                            <img src="img/ui.png" class="w-full h-full object-cover transition-transform duration-[5s] group-hover:scale-[1.03]">
-                        </div>
-                    </div>
-                </div>
-                <div class="relative">
-                    <div class="mb-20 text-center">
-                        <span class="text-[10px] sans-font tracking-[0.3em] text-stone-400 uppercase block mb-4">EXCLUSIVE ACCESS</span>
-                        <h2 class="text-3xl md:text-4xl font-light text-white italic">非公開・招待制の圧倒的なアセット</h2>
-                    </div>
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-                        
-                        <div class="border-t border-white/5 pt-8 space-y-4">
-                            <span class="text-[10px] sans-font text-stone-400 font-mono tracking-widest block">02</span>
-                            <h4 class="text-xl font-medium text-white">国宝・重文のプライベート利用</h4>
-                            <p class="text-sm leading-relaxed font-light text-justify-custom">通常は立ち入り禁止の歴史的建造物や夜間拝観を、数名限定の完全プライベート空間として提供。</p>
-                        </div>
-                        
+        </section>
 
-                        <div class="border-t border-white/5 pt-8 space-y-4">
-                            <span class="text-[10px] sans-font text-stone-400 font-mono tracking-widest block">02</span>
-                            <h4 class="text-xl font-medium text-white">人間国宝との一対一の対話</h4>
-                            <p class="text-sm leading-relaxed font-light text-justify-custom">陶芸家、能楽師、茶道の家元。各界の頂点に立つ文化人との密室での交流を通して、日本の精神性に触れる。</p>
-                        </div>
-                        
-
-                        <div class="border-t border-white/5 pt-8 space-y-4">
-                            <span class="text-[10px] sans-font text-stone-400 font-mono tracking-widest block">02</span>
-                            <h4 class="text-xl font-medium text-white">ヘリコプターを用いた点と点の移動</h4>
-                            <p class="text-sm leading-relaxed font-light text-justify-custom">移動中の摩擦を限りなくゼロに。主要都市から秘境の温泉宿まで、シームレスでプライベートな空路を手配。</p>
-                        </div>
-                        
-                    </div>
+        <!-- Panel 2: Philosophy (Tategaki Japanese Text) -->
+        <section class="panel border-r border-white/5 bg-[#111111]/[0.02]" id="philosophy">
+            <div class="flex flex-col md:flex-row items-center justify-between w-full">
+                <div class="tategaki-content py-12">
+                    <h2 class="text-3xl md:text-4xl lg:text-5xl font-light leading-loose text-white">
+                        極上の余白と伝統の融合。
+                    </h2>
+                    <p class="text-sm md:text-base leading-loose mt-8 font-light text-stone-400">
+                        沈黙の中に宿る美学を、コードで記述する。
+                    </p>
                 </div>
-                <div class="flex flex-col md:flex-row gap-20 items-center ">
-                    <div class="flex-1 space-y-8">
-                        <span class="text-[10px] sans-font tracking-[0.3em] text-stone-400 uppercase block">AI CONCIERGE</span>
-                        <h2 class="text-3xl md:text-5xl font-light text-white leading-tight">コンシェルジュAIによる究極のパーソナライズ</h2>
-                        <p class="text-base leading-relaxed font-light text-justify-custom">クライアントの食の好み、過去の旅行先のリズム、美術品への造詣。あらゆるデータに基づき、分刻みで最適化される旅程。しかしAIが表に出ることはありません。すべては専属の熟練バトラーの「気配り」として具現化されます。</p>
-                    </div>
-                    <div class="flex-1 w-full aspect-[4/5] overflow-hidden bg-stone-100 border border-white/5 p-1.5 rounded-sm">
-                        <div class="w-full h-full rounded-sm bg-stone-200 overflow-hidden flex items-center justify-center p-8 relative" style="background-color: #141414;">
-                            <img src="img/ui.png" class="w-full h-full object-cover transition-transform duration-[5s] group-hover:scale-[1.03]">
-                        </div>
-                    </div>
-                </div>
-                <div class="flex flex-col md:flex-row gap-20 items-center md:flex-row-reverse">
-                    <div class="flex-1 space-y-8">
-                        <span class="text-[10px] sans-font tracking-[0.3em] text-stone-400 uppercase block">PARTNER PLATFORM</span>
-                        <h2 class="text-3xl md:text-5xl font-light text-white leading-tight">B2Bパートナーへの強力なエコシステム</h2>
-                        <p class="text-base leading-relaxed font-light text-justify-custom">海外の高級コンシェルジュサービス、プライベートバンク、ファミリーオフィス向けにAPIを提供。エンドクライアントの厳しい要望に対して、日本のローカルネットワークを持たずとも、最高の提案と予約実行を可能にします。</p>
-                    </div>
-                    <div class="flex-1 w-full aspect-[4/5] overflow-hidden bg-stone-100 border border-white/5 p-1.5 rounded-sm">
-                        <div class="w-full h-full rounded-sm bg-stone-200 overflow-hidden flex items-center justify-center p-8 relative" style="background-color: #141414;">
-                            <img src="img/ui.png" class="w-full h-full object-cover transition-transform duration-[5s] group-hover:scale-[1.03]">
-                        </div>
-                    </div>
-                </div>
-                <div class="flex flex-col md:flex-row gap-20 items-center ">
-                    <div class="flex-1 space-y-8">
-                        <span class="text-[10px] sans-font tracking-[0.3em] text-stone-400 uppercase block">MOMENT OF TRUTH</span>
-                        <h2 class="text-3xl md:text-5xl font-light text-white leading-tight">The Experience | 禅宗寺院での夜明け</h2>
-                        <p class="text-base leading-relaxed font-light text-justify-custom">一切の明かりが消された静寂の仏堂での夜間座禅。夜明けとともに提供される、住職による非公開の茶室での一服。わずか数時間のために数百万円が支払われるこの体験は、彼らの人生観を根本から覆します。</p>
-                    </div>
-                    <div class="flex-1 w-full aspect-[4/5] overflow-hidden bg-stone-100 border border-white/5 p-1.5 rounded-sm">
-                        <div class="w-full h-full rounded-sm bg-stone-200 overflow-hidden flex items-center justify-center p-8 relative" style="background-color: #141414;">
-                            <img src="img/ui.png" class="w-full h-full object-cover transition-transform duration-[5s] group-hover:scale-[1.03]">
-                        </div>
-                    </div>
-                </div>
-                <div class="flex flex-col md:flex-row gap-20 items-center md:flex-row-reverse">
-                    <div class="flex-1 space-y-8">
-                        <span class="text-[10px] sans-font tracking-[0.3em] text-stone-400 uppercase block">TRUE SUSTAINABILITY</span>
-                        <h2 class="text-3xl md:text-5xl font-light text-white leading-tight">日本の文化遺産を、経済の力で守り抜く</h2>
-                        <p class="text-base leading-relaxed font-light text-justify-custom">私たちが提供する高単価な体験は、老朽化が進む歴史的建造物の修繕費や、後継者不足に悩む伝統工芸のパトロンとしての役割を果たします。真のエクスクルーシブは、文化の存続に直結するエコシステムなのです。</p>
-                    </div>
-                    <div class="flex-1 w-full aspect-[4/5] overflow-hidden bg-stone-100 border border-white/5 p-1.5 rounded-sm">
-                        <div class="w-full h-full rounded-sm bg-stone-200 overflow-hidden flex items-center justify-center p-8 relative" style="background-color: #141414;">
-                            <img src="img/ui.png" class="w-full h-full object-cover transition-transform duration-[5s] group-hover:scale-[1.03]">
-                        </div>
-                    </div>
-                </div></div>
-        <div class="px-6 md:px-16 max-w-7xl mx-auto">
-            <div class="border border-white/5 rounded-sm p-16 md:p-32 relative overflow-hidden text-center">
-                <div class="max-w-2xl mx-auto space-y-8">
-                    <h2 class="text-3xl md:text-5xl font-light text-white">世界基準のゲストに、未知の日本を。</h2>
-                    <p class="text-base font-light leading-relaxed max-w-xl mx-auto">審査性のパートナーシップ・プログラムへの申請はこちら。限られたエージェントのみが、この扉を開くことができます。</p>
-                    <div class="pt-6">
-                        <a href="#" class="bg-white text-black hover:bg-stone-200 px-10 py-4 text-[10px] sans-font tracking-[0.25em] uppercase transition inline-block">
-                            ご導入について
-                        </a>
-                    </div>
+                <div class="hidden md:block w-72 h-[60vh] bg-stone-100 border border-white/5 rounded-sm overflow-hidden relative p-1">
+                    <div class="w-full h-full bg-cover bg-center rounded-sm" style="background-image: url('img/hero.png'); background-color: #222;"></div>
                 </div>
             </div>
-        </div>
-    </main>
+        </section>
 
-    <!-- Footer -->
-    <footer class="py-16 text-center text-[9px] sans-font tracking-[0.3em] text-stone-400 border-t border-white/5 bg-[#0c0c0c]">
+        <!-- Panel 3: Works & CTA -->
+        <section class="panel" id="works">
+            <div class="flex flex-col justify-between w-full h-full py-24">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+                    
+                </div>
+                
+                <div class="border-t border-white/5 pt-12 flex flex-col md:flex-row justify-between items-center gap-8">
+                    <div class="text-left">
+                        <h4 class="text-2xl font-light text-white mb-2">世界基準のゲストに、未知の日本を。</h4>
+                        <p class="text-xs font-light text-stone-400 max-w-md">審査性のパートナーシップ・プログラムへの申請はこちら。限られたエージェントのみが、この扉を開くことができます。</p>
+                    </div>
+                    <a href="#" class="bg-white text-black hover:bg-stone-200 px-8 py-3.5 text-[9px] tracking-[0.2em] uppercase transition rounded-sm">
+                        ご導入について
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Mobile Footer -->
+    <footer class="py-12 text-center text-[8px] tracking-[0.3em] text-stone-400 border-t border-white/5 bg-[#0b0b0b] relative z-20">
         <p>&copy; 2026 ULTRA-LUXURY TOURISM &mdash; ARCHIVE &amp; Curation.</p>
     </footer>
 
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Horizontal Scroll for Desktop (width > 768px)
+        const container = document.querySelector(".scroll-container");
+        const panels = gsap.utils.toArray(".panel");
+
+        if (window.innerWidth > 768) {
+            gsap.to(panels, {
+                xPercent: -100 * (panels.length - 1),
+                ease: "none",
+                scrollTrigger: {
+                    trigger: ".scroll-container",
+                    pin: true,
+                    scrub: 1.2, // Smooth luxury momentum feel
+                    snap: 1 / (panels.length - 1),
+                    end: () => "+=" + container.offsetWidth
+                }
+            });
+        }
+
+        // Particle Dust
+        class GoldDust {
+            constructor(canvasId) {
+                this.canvas = document.getElementById(canvasId);
+                this.ctx = this.canvas.getContext('2d');
+                this.particles = [];
+                this.resize();
+                window.addEventListener('resize', () => this.resize());
+                this.initParticles();
+                this.animate();
+            }
+            resize() {
+                this.canvas.width = window.innerWidth;
+                this.canvas.height = window.innerHeight;
+            }
+            initParticles() {
+                for(let i = 0; i < 40; i++) {
+                    this.particles.push({
+                        x: Math.random() * this.canvas.width,
+                        y: Math.random() * this.canvas.height,
+                        size: Math.random() * 2 + 0.3,
+                        speedX: (Math.random() - 0.5) * 0.15,
+                        speedY: (Math.random() - 0.5) * 0.15,
+                        opacity: Math.random() * 0.4 + 0.1
+                    });
+                }
+            }
+            animate() {
+                this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+                this.particles.forEach(p => {
+                    p.x += p.speedX;
+                    p.y += p.speedY;
+                    if (p.x < 0) p.x = this.canvas.width;
+                    if (p.x > this.canvas.width) p.x = 0;
+                    if (p.y < 0) p.y = this.canvas.height;
+                    if (p.y > this.canvas.height) p.y = 0;
+                    this.ctx.fillStyle = 'rgba(' + (isDark ? '212, 175, 55' : '100, 95, 80') + ', ' + p.opacity + ')';
+                    this.ctx.beginPath();
+                    this.ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+                    this.ctx.fill();
+                });
+                requestAnimationFrame(() => this.animate());
+            }
+        }
+        window.addEventListener('load', () => {
+            new GoldDust('gold-dust-canvas');
+        });
+    </script>
 </body>
 </html>

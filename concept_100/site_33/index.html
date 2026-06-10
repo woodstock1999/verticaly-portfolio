@@ -3,165 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>「空き家」という負債を、地域の資産へと変える。 | REAL ESTATE</title>
+    <title>「空き家」という負債を、地域の資産へと変える。 | SITE-33</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Outfit:wght@400;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Outfit:wght@400;700;900&display=swap');
         body {
-            font-family: 'Noto Sans JP', 'Outfit', sans-serif;
-            background-color: #fcfcfc;
+            font-family: 'Outfit', 'Dela Gothic One', sans-serif;
+            background-color: #050505;
         }
-        .main-gradient {
-            background: linear-gradient(135deg, #10b981 0%, #10b981dd 100%);
+        .brutal-card {
+            border: 3px solid #000000;
+            box-shadow: 6px 6px 0px 0px #000000;
+            background-color: #0d0d0d;
         }
-        .shadow-trust {
-            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.05);
+        .brutal-card-color {
+            border: 3px solid #000000;
+            box-shadow: 6px 6px 0px 0px #000000;
+            background-color: #ffde00;
         }
+        .brutal-button {
+            border: 2px solid #000000;
+            box-shadow: 3px 3px 0px 0px #000000;
+        }
+        .brutal-button:hover {
+            transform: translate(-1px, -1px);
+            box-shadow: 4px 4px 0px 0px #000000;
+        }
+        .marquee-wrapper {
+            overflow: hidden;
+            white-space: nowrap;
+            display: flex;
+            background-color: #ffde00;
+            border-top: 3px solid #000;
+            border-bottom: 3px solid #000;
+        }
+        .marquee-content {
+            display: inline-block;
+            animation: marquee 20s linear infinite;
+            padding: 10px 0;
+            font-weight: 900;
+            color: #000;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+        @keyframes marquee {
+            0% { transform: translate3d(0, 0, 0); }
+            100% { transform: translate3d(-50%, 0, 0); }
+        }
+        .reveal-item { opacity: 0; transform: scale(0.95) translateY(20px); }
     </style>
 </head>
-<body class="text-slate-600 min-h-screen antialiased overflow-x-hidden selection:bg-emerald-500/20">
+<body class="text-zinc-400 min-h-screen antialiased overflow-x-hidden selection:bg-yellow-500 selection:text-black">
+
+    <!-- Grid background -->
+    <div class="fixed inset-0 pointer-events-none z-0 opacity-[0.08]" style="background-image: radial-gradient(rgba(255,255,255,0.1) 1px, transparent 0); background-size: 20px 20px;"></div>
 
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-md border-b border-slate-100 px-6 md:px-12 py-5 flex justify-between items-center shadow-sm">
-        <div class="font-extrabold text-lg md:text-xl text-slate-800 flex items-center gap-2">
-            <span class="w-2.5 h-6 rounded bg-emerald-500 block"></span>
-            <span>REAL ESTATE</span>
+    <nav class="fixed w-full z-50 bg-black border-b-3 border-black px-6 md:px-12 py-5 flex justify-between items-center shadow-[0_4px_0_#000]">
+        <div class="font-extrabold text-xl tracking-tight text-white flex items-center gap-2">
+            <span class="w-4 h-4 bg-yellow-500 rounded-full border border-black shadow-[0_0_10px_#ffde00] animate-pulse"></span>
+            <span class="tracking-wide uppercase text-sm font-black text-white">SITE-33</span>
         </div>
-        <div class="hidden md:flex gap-8 text-xs font-bold text-slate-600 tracking-wider">
-            <a href="#" class="hover:text-emerald-600 transition">特長・強み</a>
-            <a href="#" class="hover:text-emerald-600 transition">料金案内</a>
-            <a href="#" class="hover:text-emerald-600 transition">スタッフ紹介</a>
+        <div class="hidden md:flex gap-8 text-[10px] font-black tracking-widest uppercase text-white/40">
+            <a href="#" class="hover:text-white transition">Prototype</a>
+            <a href="#" class="hover:text-white transition">Lab_Mode</a>
         </div>
         <div class="flex items-center gap-4">
-            <a href="../index.html" class="text-[10px] font-bold text-slate-400 hover:text-slate-800 transition uppercase tracking-widest">HUB</a>
-            <a href="#" class="bg-emerald-500 hover:bg-emerald-600 text-white px-5 py-2.5 rounded-lg font-bold text-xs tracking-wider transition shadow-md shadow-emerald-500/20">START REAL ESTATE</a>
+            <a href="../index.html" class="text-[9px] font-black text-white/30 hover:text-white transition uppercase tracking-widest">HUB</a>
+            <a href="#" class="bg-yellow-500 hover:bg-yellow-400 text-black border-2 border-black px-5 py-2 rounded font-black text-xs tracking-wide uppercase transition brutal-button">START REAL ESTATE</a>
         </div>
     </nav>
 
+    <!-- Main -->
     <main class="pt-[140px] pb-24 relative z-10">
         <div class="px-6 md:px-12 max-w-7xl mx-auto">
-            <div class="flex flex-col lg:flex-row items-center gap-16 mb-24">
-                <div class="flex-1 space-y-6">
-                    <span class="text-emerald-600 font-extrabold tracking-widest text-xs uppercase bg-emerald-50 px-3.5 py-1.5 rounded-full inline-block border border-emerald-100">REAL ESTATE / MATCHING</span>
-                    <h1 class="text-4xl md:text-5xl font-black mb-8 leading-[1.25] text-slate-800">「空き家」という負債を、<br>地域の資産へと変える。</h1>
-                    <p class="text-base md:text-lg text-slate-500 font-medium leading-relaxed">AKIYA RESCUEは、全国の放置された空き家と、DIYやリノベーションを前提に安く住みたい若者をマッチングするプラットフォームです。</p>
-                </div>
-                <div class="flex-1 w-full relative">
-                    <div class="aspect-[4/3] rounded-2xl overflow-hidden shadow-trust border border-slate-100 p-2 bg-white">
-                        <div class="w-full h-full rounded-xl overflow-hidden">
-                            
-            <div class="relative w-full h-full bg-slate-50 overflow-hidden">
-                <img src="img/ui.png" class="w-full h-full object-cover transition-transform duration-[5s] group-hover:scale-[1.03]">
-                <div class="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent pointer-events-none"></div>
+            <!-- Hero -->
+            <div class="text-center max-w-4xl mx-auto mb-20">
+                <span class="bg-yellow-500 text-black border-2 border-black px-5 py-1.5 text-[9px] font-black tracking-widest uppercase rounded-full inline-block shadow-[2px_2px_0px_#000] mb-8"></span>
+                <h1 class="text-4xl md:text-7xl font-black mb-8 leading-[1.15] text-white uppercase italic tracking-tight reveal-item" style="transform: none; opacity: 1;">「空き家」という負債を、<br>地域の資産へと変える。</h1>
+                <p class="text-base md:text-lg text-zinc-400 font-medium leading-relaxed max-w-3xl mx-auto reveal-item" style="transform: none; opacity: 1;">AKIYA RESCUEは、全国の放置された空き家と、DIYやリノベーションを前提に安く住みたい若者をマッチングするプラットフォームです。</p>
             </div>
-                        </div>
-                    </div>
+            
+            <!-- Hero UI/Mockup -->
+            <div class="relative w-full aspect-[21/10] md:aspect-video rounded-lg overflow-hidden border-4 border-black shadow-[8px_8px_0px_0px_#ffde00] bg-zinc-950 group mb-32 reveal-item">
+                <div class="w-full h-full">
+                    <img src="img/ui.png" class="w-full h-full object-cover rounded-xl border border-white/10 shadow-2xl">
                 </div>
             </div>
-        </div><div class="px-6 md:px-12 max-w-7xl mx-auto flex flex-col gap-28 mb-32">
-                <div class="flex flex-col md:flex-row items-center gap-16 ">
-                    <div class="flex-1 space-y-5">
-                        <span class="text-emerald-500 font-extrabold tracking-widest text-xs uppercase block">THE ABANDONED HOUSE</span>
-                        <h2 class="text-2xl md:text-3xl font-black text-slate-800 leading-tight">増え続ける日本の「空き家問題」</h2>
-                        <p class="text-base leading-relaxed text-slate-500 font-light">相続したものの住む予定がなく、固定資産税だけを払い続ける。この問題が日本中で起きています。</p>
-                    </div>
-                    <div class="flex-1 w-full aspect-video rounded-2xl overflow-hidden shadow-trust bg-white p-2 border border-slate-100 group">
-                        <div class="w-full h-full rounded-xl bg-slate-50 overflow-hidden flex items-center justify-center p-6 border border-slate-100/50 relative">
-                            <img src="img/ui.png" class="w-full h-full object-cover transition-transform duration-[5s] group-hover:scale-[1.03]">
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-white border border-slate-100 rounded-3xl p-8 md:p-12 shadow-trust relative">
-                    <div class="text-center mb-12 max-w-2xl mx-auto">
-                        <span class="text-emerald-500 font-bold tracking-widest text-xs uppercase">AS-IS MATCHING</span>
-                        <h2 class="text-2xl md:text-3xl font-black mt-3 text-slate-800">「そのまま」で貸せる・売れる</h2>
-                    </div>
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        
-                        <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100/50 hover:border-emerald-500/20 transition-all duration-300">
-                            <div class="w-10 h-10 rounded-lg flex items-center justify-center mb-5 bg-emerald-500 text-white shadow-sm shadow-emerald-500/30">
-                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                            </div>
-                            <h4 class="text-base font-bold mb-2 text-slate-800">リフォーム不要</h4>
-                            <p class="text-xs leading-relaxed text-slate-500">オーナーは修繕費をかけずに現状のまま物件を登録できます。</p>
-                        </div>
-                        
+        </div>
 
-                        <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100/50 hover:border-emerald-500/20 transition-all duration-300">
-                            <div class="w-10 h-10 rounded-lg flex items-center justify-center mb-5 bg-emerald-500 text-white shadow-sm shadow-emerald-500/30">
-                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                            </div>
-                            <h4 class="text-base font-bold mb-2 text-slate-800">DIY型賃貸</h4>
-                            <p class="text-xs leading-relaxed text-slate-500">入居者は自分の好きなように家を改修でき、退去時の原状回復義務もありません。</p>
-                        </div>
-                        
+        <!-- Marquee Banner -->
+        <div class="marquee-wrapper mb-32">
+            <div class="marquee-content">
+                &nbsp;&nbsp;●&nbsp;&nbsp;SITE-33&nbsp;&nbsp;●&nbsp;&nbsp;KINETIC_FLOW_ESTABLISHED&nbsp;&nbsp;●&nbsp;&nbsp;SYSTEM_ONLINE&nbsp;&nbsp;●&nbsp;&nbsp;PROTOTYPE_STABLE&nbsp;&nbsp;●&nbsp;&nbsp;SITE-33&nbsp;&nbsp;●&nbsp;&nbsp;KINETIC_FLOW_ESTABLISHED&nbsp;&nbsp;●&nbsp;&nbsp;SYSTEM_ONLINE&nbsp;&nbsp;●&nbsp;&nbsp;PROTOTYPE_STABLE
+            </div>
+            <div class="marquee-content">
+                &nbsp;&nbsp;●&nbsp;&nbsp;SITE-33&nbsp;&nbsp;●&nbsp;&nbsp;KINETIC_FLOW_ESTABLISHED&nbsp;&nbsp;●&nbsp;&nbsp;SYSTEM_ONLINE&nbsp;&nbsp;●&nbsp;&nbsp;PROTOTYPE_STABLE&nbsp;&nbsp;●&nbsp;&nbsp;SITE-33&nbsp;&nbsp;●&nbsp;&nbsp;KINETIC_FLOW_ESTABLISHED&nbsp;&nbsp;●&nbsp;&nbsp;SYSTEM_ONLINE&nbsp;&nbsp;●&nbsp;&nbsp;PROTOTYPE_STABLE
+            </div>
+        </div>
 
-                        <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100/50 hover:border-emerald-500/20 transition-all duration-300">
-                            <div class="w-10 h-10 rounded-lg flex items-center justify-center mb-5 bg-emerald-500 text-white shadow-sm shadow-emerald-500/30">
-                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                            </div>
-                            <h4 class="text-base font-bold mb-2 text-slate-800">法務サポート</h4>
-                            <p class="text-xs leading-relaxed text-slate-500">複雑な契約手続きや補助金の申請をプラットフォームが代行します。</p>
-                        </div>
-                        
-                    </div>
-                </div>
-                <div class="flex flex-col md:flex-row items-center gap-16 ">
-                    <div class="flex-1 space-y-5">
-                        <span class="text-emerald-500 font-extrabold tracking-widest text-xs uppercase block">COMMUNITY REVIVAL</span>
-                        <h2 class="text-2xl md:text-3xl font-black text-slate-800 leading-tight">地域の活性化に直結</h2>
-                        <p class="text-base leading-relaxed text-slate-500 font-light">若い世代が移住し家を直すことで、周辺地域全体の活気と価値が向上します。</p>
-                    </div>
-                    <div class="flex-1 w-full aspect-video rounded-2xl overflow-hidden shadow-trust bg-white p-2 border border-slate-100 group">
-                        <div class="w-full h-full rounded-xl bg-slate-50 overflow-hidden flex items-center justify-center p-6 border border-slate-100/50 relative">
-                            <img src="img/ui.png" class="w-full h-full object-cover transition-transform duration-[5s] group-hover:scale-[1.03]">
-                        </div>
-                    </div>
-                </div>
-                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
-                    <div class="flex-1 space-y-5">
-                        <span class="text-emerald-500 font-extrabold tracking-widest text-xs uppercase block">VIRTUAL TOUR</span>
-                        <h2 class="text-2xl md:text-3xl font-black text-slate-800 leading-tight">空き家の「現状」を3Dで可視化</h2>
-                        <p class="text-base leading-relaxed text-slate-500 font-light">事前に物件の傷み具合や間取りをオンラインの3Dツアーで正確に確認できます。</p>
-                    </div>
-                    <div class="flex-1 w-full aspect-video rounded-2xl overflow-hidden shadow-trust bg-white p-2 border border-slate-100 group">
-                        <div class="w-full h-full rounded-xl bg-slate-50 overflow-hidden flex items-center justify-center p-6 border border-slate-100/50 relative">
-                            <img src="img/ui.png" class="w-full h-full object-cover transition-transform duration-[5s] group-hover:scale-[1.03]">
-                        </div>
-                    </div>
-                </div>
-                <div class="flex flex-col md:flex-row items-center gap-16 ">
-                    <div class="flex-1 space-y-5">
-                        <span class="text-emerald-500 font-extrabold tracking-widest text-xs uppercase block">CLIENT SUCCESS</span>
-                        <h2 class="text-2xl md:text-3xl font-black text-slate-800 leading-tight">Case Study | 築50年の古民家</h2>
-                        <p class="text-base leading-relaxed text-slate-500 font-light">10年間放置されていた古民家が、カフェを開きたい若者の手に渡り、地域の人気スポットに生まれ変わりました。</p>
-                    </div>
-                    <div class="flex-1 w-full aspect-video rounded-2xl overflow-hidden shadow-trust bg-white p-2 border border-slate-100 group">
-                        <div class="w-full h-full rounded-xl bg-slate-50 overflow-hidden flex items-center justify-center p-6 border border-slate-100/50 relative">
-                            <img src="img/ui.png" class="w-full h-full object-cover transition-transform duration-[5s] group-hover:scale-[1.03]">
-                        </div>
-                    </div>
-                </div>
-                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
-                    <div class="flex-1 space-y-5">
-                        <span class="text-emerald-500 font-extrabold tracking-widest text-xs uppercase block">OUR VISION</span>
-                        <h2 class="text-2xl md:text-3xl font-black text-slate-800 leading-tight">日本の風景を守り、繋ぐ</h2>
-                        <p class="text-base leading-relaxed text-slate-500 font-light">空き家を「負動産」から「資源」へと再定義し、持続可能な地域社会のループを作ります。</p>
-                    </div>
-                    <div class="flex-1 w-full aspect-video rounded-2xl overflow-hidden shadow-trust bg-white p-2 border border-slate-100 group">
-                        <div class="w-full h-full rounded-xl bg-slate-50 overflow-hidden flex items-center justify-center p-6 border border-slate-100/50 relative">
-                            <img src="img/ui.png" class="w-full h-full object-cover transition-transform duration-[5s] group-hover:scale-[1.03]">
-                        </div>
-                    </div>
-                </div></div>
-        <div class="px-6 md:px-12 max-w-7xl mx-auto">
-            <div class="bg-white border border-slate-100 rounded-3xl p-12 md:p-20 shadow-trust relative overflow-hidden">
-                <div class="absolute -top-32 -right-32 w-80 h-80 bg-emerald-500/5 rounded-full blur-[80px]"></div>
-                <div class="relative z-10 text-center max-w-2xl mx-auto space-y-6">
-                    <h2 class="text-2xl md:text-4xl font-black text-slate-800">古い家には、新しい価値がある。</h2>
-                    <p class="text-sm text-slate-500 leading-relaxed max-w-lg mx-auto">「誰も住まない家」が、誰かの「夢のマイホーム」に生まれ変わる瞬間。</p>
-                    <div class="pt-4">
-                        <a href="#" class="bg-emerald-500 hover:bg-emerald-600 text-white px-10 py-3.5 rounded-lg font-bold text-sm tracking-wider transition shadow-md shadow-emerald-500/25 inline-block">
+        <div class="px-6 md:px-12 max-w-7xl mx-auto flex flex-col gap-32 mb-32">
+            
+        </div>
+
+        <!-- CTA -->
+        <div class="px-6 md:px-12 max-w-7xl mx-auto reveal-item">
+            <div class="brutal-card-color rounded-lg p-12 md:p-24 relative overflow-hidden border-4 border-black text-black">
+                <div class="relative z-10 text-center max-w-3xl mx-auto space-y-8">
+                    <h2 class="text-3xl md:text-5xl font-black uppercase italic tracking-tight">古い家には、新しい価値がある。</h2>
+                    <p class="text-sm text-black/70 font-bold leading-relaxed max-w-xl mx-auto">「誰も住まない家」が、誰かの「夢のマイホーム」に生まれ変わる瞬間。</p>
+                    <div>
+                        <a href="#" class="bg-black hover:bg-zinc-900 text-yellow-500 px-10 py-4 rounded font-black text-xs tracking-wider uppercase inline-flex items-center gap-3 transition brutal-button">
                             START REAL ESTATE
                         </a>
                     </div>
@@ -171,9 +126,35 @@
     </main>
 
     <!-- Footer -->
-    <footer class="py-12 text-center text-xs tracking-wider text-slate-400 border-t border-slate-100 bg-white shadow-inner">
-        <p>&copy; 2026 REAL ESTATE. ALL RIGHTS RESERVED.</p>
+    <footer class="py-12 text-center text-[10px] font-black tracking-widest text-zinc-600 border-t-3 border-black bg-black">
+        <p>&copy; 2026 SITE-33 &mdash; PROTOCOL // 0x2A9C.</p>
     </footer>
 
+    <script>
+        // Lenis Smooth Scroll
+        const lenis = new Lenis();
+        function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+        requestAnimationFrame(raf);
+
+        // GSAP ScrollTrigger Scale/Fade-ins
+        gsap.registerPlugin(ScrollTrigger);
+        gsap.utils.toArray('.reveal-item').forEach(item => {
+            gsap.to(item, {
+                opacity: 1,
+                scale: 1,
+                y: 0,
+                duration: 0.8,
+                ease: 'back.out(1.4)',
+                scrollTrigger: {
+                    trigger: item,
+                    start: 'top 85%',
+                    toggleActions: 'play none none none'
+                }
+            });
+        });
+    </script>
 </body>
 </html>

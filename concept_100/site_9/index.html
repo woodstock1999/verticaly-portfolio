@@ -5,148 +5,140 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>人類のすべてのデータを、「スプーン1杯のDNA」に保存する。 | DEEP TECH</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=JetBrains+Mono:wght@400;700&family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;700&family=Noto+Sans+JP:wght@400;700;900&display=swap');
         body {
             font-family: 'Space Grotesk', 'Noto Sans JP', sans-serif;
             background-color: #030307;
+            color: #8f96a3;
         }
-        .code-font {
-            font-family: 'JetBrains Mono', monospace;
-        }
+        .code-font { font-family: 'JetBrains Mono', monospace; }
         .glass-panel {
-            background: rgba(13, 17, 27, 0.7);
+            background: rgba(10, 12, 22, 0.7);
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.04);
         }
-        .glow-cyan {
-            box-shadow: 0 0 40px rgba(6, 182, 212, 0.15);
+        .glow-line {
+            box-shadow: 0 0 25px #3b82f640;
         }
+        .reveal-item { opacity: 0; transform: translateY(30px); }
+        .hud-border { border: 1px solid #3b82f620; }
+        .text-neon { color: #3b82f6; text-shadow: 0 0 10px #3b82f650; }
     </style>
 </head>
-<body class="text-[#8f96a3] min-h-screen antialiased overflow-x-hidden selection:bg-green-500/30">
+<body class="antialiased overflow-x-hidden selection:bg-blue-500/30">
 
-    <!-- Glowing Cyber Grid Background -->
+    <!-- Cyberpunk grid lines -->
     <div class="fixed inset-0 pointer-events-none z-0 opacity-[0.03]" style="background-image: radial-gradient(rgba(255,255,255,0.15) 1px, transparent 0); background-size: 24px 24px;"></div>
-    <div class="fixed top-0 left-1/4 w-[500px] h-[500px] bg-green-600/10 rounded-full blur-[150px] pointer-events-none z-0"></div>
-    <div class="fixed bottom-0 right-1/4 w-[500px] h-[500px] bg-purple-600/10 rounded-full blur-[150px] pointer-events-none z-0"></div>
+    <div class="fixed top-0 left-1/4 w-[600px] h-[600px] bg-blue-600/10 rounded-full blur-[140px] pointer-events-none z-0"></div>
 
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 glass-panel border-b border-white/5 px-6 md:px-12 py-5 flex justify-between items-center">
+    <nav class="fixed w-full z-50 glass-panel border-b border-white/5 px-6 md:px-12 py-5 flex justify-between items-center transition-all">
         <div class="font-bold text-xl tracking-tight text-white flex items-center gap-3">
-            <div class="w-3.5 h-3.5 rounded bg-green-500 shadow-[0_0_15px_rgba(6,182,212,0.6)]"></div>
+            <div class="w-3.5 h-3.5 rounded bg-blue-500 shadow-[0_0_15px_#3b82f6] animate-pulse"></div>
             <span class="tracking-widest uppercase text-sm font-black text-white/90">DEEP TECH</span>
         </div>
-        <div class="hidden md:flex gap-8 text-xs font-bold text-white/50 tracking-widest uppercase">
-            <a href="#" class="hover:text-white transition">Features</a>
+        <div class="hidden md:flex gap-8 text-[10px] tracking-[0.2em] font-bold text-white/40 uppercase">
             <a href="#" class="hover:text-white transition">Network</a>
-            <a href="#" class="hover:text-white transition">Tokenomics</a>
+            <a href="#" class="hover:text-white transition">Security</a>
+            <a href="#" class="hover:text-white transition">API Docs</a>
         </div>
         <div class="flex items-center gap-4">
-            <a href="../index.html" class="text-[10px] font-bold text-white/40 hover:text-white transition uppercase tracking-widest">HUB</a>
-            <a href="#" class="bg-green-600 hover:bg-green-500 text-white px-5 py-2 rounded font-bold text-xs tracking-wider uppercase transition shadow-lg shadow-green-500/20">START DEEP TECH</a>
+            <a href="../index.html" class="text-[10px] font-bold text-white/30 hover:text-white transition uppercase tracking-widest">HUB</a>
+            <a href="#" class="bg-blue-600 hover:bg-blue-500 text-white px-5 py-2.5 rounded font-bold text-xs tracking-wider uppercase transition shadow-lg shadow-blue-500/20">START DEEP TECH</a>
         </div>
     </nav>
 
-    <main class="pt-[140px] pb-24 relative z-10">
+    <!-- Main -->
+    <main class="pt-[160px] pb-24 relative z-10">
         <div class="px-6 md:px-12 max-w-7xl mx-auto">
-            <div class="text-center max-w-4xl mx-auto mb-20">
-                <span class="bg-white/5 border border-white/10 text-green-400 px-5 py-1.5 text-[10px] font-bold tracking-widest uppercase rounded mb-6 inline-block">DEEP TECH / DATA STORAGE</span>
-                <h1 class="text-4xl md:text-6xl font-extrabold mb-8 leading-[1.15] tracking-tight text-white">人類のすべてのデータを、<br>「スプーン1杯のDNA」に保存する。</h1>
-                <p class="text-lg md:text-xl text-[#8f96a3] max-w-3xl mx-auto leading-relaxed">ハードディスクは数年で壊れ、巨大なデータセンターは地球の電力を食い尽くす。IMMORTAL-DATAは、生命の設計図である「DNA配列」をデータストレージとして利用し、情報を数千年間にわたって常温で保存する究極のアーカイビング・テクノロジーです。</p>
+            <!-- Hero -->
+            <div class="text-center max-w-4xl mx-auto mb-20 relative">
+                <span class="bg-white/5 border border-white/10 text-blue-400 px-5 py-1.5 text-[10px] font-bold tracking-widest uppercase rounded mb-6 inline-block">DEEP TECH</span>
+                <h1 class="text-4xl md:text-6xl font-extrabold mb-8 leading-[1.15] tracking-tight text-white reveal-item" style="transform: translateY(0); opacity: 1;">人類のすべてのデータを、<br>「スプーン1杯のDNA」に保存する。</h1>
+                <p class="text-lg md:text-xl text-[#8f96a3] max-w-3xl mx-auto leading-relaxed reveal-item" style="transform: translateY(0); opacity: 1;">ハードディスクは数年で壊れ、巨大なデータセンターは地球の電力を食い尽くす。IMMORTAL-DATAは、生命の設計図である「DNA配列」をデータストレージとして利用し、情報を数千年間にわたって常温で保存する究極のアーカイビング・テクノロジーです。</p>
             </div>
             
-            <div class="relative w-full aspect-[21/10] md:aspect-video rounded-2xl overflow-hidden glass-panel p-2 shadow-2xl glow-green border border-white/10 group mb-32">
-                <div class="w-full h-full rounded-xl overflow-hidden">
+            <!-- Hero UI/Mockup -->
+            <div class="relative w-full aspect-[21/10] md:aspect-video rounded-2xl overflow-hidden glass-panel p-2 shadow-2xl glow-line border border-white/10 group mb-32 reveal-item">
+                <div class="w-full h-full rounded-xl overflow-hidden bg-[#07070a]">
                     
-            <div class="w-full h-full bg-[#090b11] border border-white/5 p-4 md:p-6 font-mono text-[10px] text-gray-500 flex flex-col gap-4 overflow-hidden relative">
-                <!-- Glowing Background Orbs -->
-                <div class="absolute top-1/4 right-1/4 w-72 h-72 bg-green-500/10 rounded-full blur-[80px] pointer-events-none"></div>
-                <div class="absolute bottom-1/4 left-1/4 w-72 h-72 bg-purple-500/10 rounded-full blur-[80px] pointer-events-none"></div>
+            <div class="w-full h-full bg-[#080a10] border border-cyan-500/20 rounded-xl p-4 md:p-6 font-mono text-[10px] text-gray-500 flex flex-col gap-4 overflow-hidden relative shadow-[0_0_50px_rgba(6,182,212,0.1)]">
+                <div class="absolute top-1/4 right-1/4 w-64 h-64 bg-cyan-500/10 rounded-full blur-[80px] pointer-events-none"></div>
+                <div class="absolute bottom-1/4 left-1/4 w-64 h-64 bg-purple-500/10 rounded-full blur-[80px] pointer-events-none"></div>
                 
-                <!-- Dashboard Header -->
-                <div class="flex justify-between items-center border-b border-white/10 pb-3">
+                <div class="flex justify-between items-center border-b border-white/10 pb-3 z-10">
                     <div class="flex items-center gap-2">
-                        <span class="w-3 h-3 rounded-full bg-red-500/80"></span>
-                        <span class="w-3 h-3 rounded-full bg-yellow-500/80"></span>
-                        <span class="w-3 h-3 rounded-full bg-green-500/80"></span>
-                        <span class="ml-2 text-white/40 tracking-wider text-[9px] font-bold">SYSTEM // DEEP TECH_CORE_v1.0.8</span>
+                        <span class="w-2.5 h-2.5 rounded-full bg-red-500/80"></span>
+                        <span class="w-2.5 h-2.5 rounded-full bg-yellow-500/80"></span>
+                        <span class="w-2.5 h-2.5 rounded-full bg-green-500/80"></span>
+                        <span class="ml-2 text-white/40 tracking-wider text-[8px] font-bold uppercase">SECURE // DEEP_TECH_NODE_V3</span>
                     </div>
                     <div class="flex items-center gap-4 text-white/60">
-                        <span class="bg-green-500/10 text-green-400 px-2 py-0.5 rounded border border-green-500/20 animate-pulse">● LIVE REPORT</span>
-                        <span class="hidden sm:inline">PING: 14ms</span>
+                        <span class="bg-blue-500/10 text-blue-400 px-2 py-0.5 rounded border border-blue-500/20 animate-pulse font-bold">● ONLINE</span>
+                        <span class="hidden sm:inline">RTT: 18ms</span>
                     </div>
                 </div>
 
-                <!-- Grid Layout -->
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 flex-1">
-                    <!-- Column 1: Analytics -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 flex-1 z-10">
                     <div class="bg-white/[0.01] border border-white/5 rounded-xl p-4 flex flex-col justify-between">
                         <div>
-                            <div class="text-white/30 font-bold mb-1">METRICS OVERVIEW</div>
-                            <div class="text-2xl font-bold text-white tracking-tight font-sans">$2,481,094.20</div>
-                            <div class="text-green-400 text-[9px] mt-1 font-bold">+28.4% FROM LAST MONTH</div>
+                            <div class="text-white/30 font-bold mb-1 tracking-wider">AGGREGATE VOLUME</div>
+                            <div class="text-2xl font-bold text-white tracking-tight font-sans">$4,821,094.50</div>
+                            <div class="text-cyan-400 text-[9px] mt-1 font-bold">+14.2% FROM PREV_CYCLE</div>
                         </div>
-                        <!-- Line Chart (SVG) -->
-                        <div class="w-full h-24 mt-4 relative">
+                        <div class="w-full h-20 mt-4 relative">
                             <svg class="w-full h-full" viewBox="0 0 100 40" preserveAspectRatio="none">
                                 <defs>
                                     <linearGradient id="grad-9" x1="0" y1="0" x2="0" y2="1">
-                                        <stop offset="0%" stop-color="#10b981" stop-opacity="0.3"/>
-                                        <stop offset="100%" stop-color="#10b981" stop-opacity="0.0"/>
+                                        <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.35"/>
+                                        <stop offset="100%" stop-color="#3b82f6" stop-opacity="0.0"/>
                                     </linearGradient>
                                 </defs>
-                                <path d="M0,35 Q15,20 30,30 T60,15 T90,5 L100,5 L100,40 L0,40 Z" fill="url(#grad-9)"/>
-                                <path d="M0,35 Q15,20 30,30 T60,15 T90,5 L100,5" fill="none" stroke="#10b981" stroke-width="1.5" stroke-linecap="round"/>
-                                <circle cx="30" cy="30" r="2" fill="#10b981" />
-                                <circle cx="60" cy="15" r="2" fill="#10b981" />
+                                <path d="M0,35 Q15,15 30,28 T60,10 T90,5 L100,5 L100,40 L0,40 Z" fill="url(#grad-9)"/>
+                                <path d="M0,35 Q15,15 30,28 T60,10 T90,5 L100,5" fill="none" stroke="#3b82f6" stroke-width="2" class="chart-path"/>
                                 <circle cx="90" cy="5" r="2" fill="#fff" class="animate-ping" />
                             </svg>
                         </div>
                     </div>
 
-                    <!-- Column 2: Activity Log -->
-                    <div class="bg-white/[0.01] border border-white/5 rounded-xl p-4 flex flex-col gap-2">
-                        <div class="text-white/30 font-bold mb-1">TRANSACTION FEED</div>
-                        <div class="flex justify-between border-b border-white/[0.03] py-1">
-                            <span class="text-white/80">#23984_DEPLOYED</span>
+                    <div class="bg-white/[0.01] border border-white/5 rounded-xl p-4 flex flex-col gap-2 font-mono">
+                        <div class="text-white/30 font-bold mb-1">TRANSACTION LOG</div>
+                        <div class="flex justify-between border-b border-white/[0.03] py-1 text-white/75">
+                            <span>#8291_CONTRACT_DEPLOY</span>
                             <span class="text-green-400">SUCCESS</span>
                         </div>
-                        <div class="flex justify-between border-b border-white/[0.03] py-1">
-                            <span class="text-white/80">NODE_VERIFIED_SG</span>
-                            <span class="text-green-400">100% OK</span>
+                        <div class="flex justify-between border-b border-white/[0.03] py-1 text-white/75">
+                            <span>AWS_EAST_GATEWAY</span>
+                            <span class="text-cyan-400">SYNC_OK</span>
                         </div>
-                        <div class="flex justify-between border-b border-white/[0.03] py-1">
-                            <span class="text-white/80">IPFS_REPLICA_SYNC</span>
-                            <span class="text-white/40">COMPLETED</span>
-                        </div>
-                        <div class="flex justify-between py-1">
-                            <span class="text-white/80">DATABASE_OPTIMIZE</span>
-                            <span class="text-green-400">DONE</span>
+                        <div class="flex justify-between py-1 text-white/75">
+                            <span>OPTIMIZE_COMPUTE_GRID</span>
+                            <span class="text-white/30">PENDING</span>
                         </div>
                     </div>
 
-                    <!-- Column 3: Global Status -->
                     <div class="bg-white/[0.01] border border-white/5 rounded-xl p-4 flex flex-col justify-between">
                         <div>
-                            <div class="text-white/30 font-bold mb-2">NETWORK LATENCY</div>
-                            <div class="flex gap-1 items-end h-12">
-                                <div class="w-1.5 h-6 bg-green-500/30 rounded-t"></div>
-                                <div class="w-1.5 h-8 bg-green-500/40 rounded-t"></div>
-                                <div class="w-1.5 h-4 bg-green-500/20 rounded-t"></div>
-                                <div class="w-1.5 h-10 bg-green-500/60 rounded-t"></div>
-                                <div class="w-1.5 h-12 bg-green-500 rounded-t shadow-[0_0_10px_rgba(6,182,212,0.5)]"></div>
+                            <div class="text-white/30 font-bold mb-2">SYSTEM EFFICIENCY</div>
+                            <div class="flex gap-1 items-end h-10">
+                                <div class="w-1.5 h-4 bg-cyan-500/30 rounded-t"></div>
+                                <div class="w-1.5 h-6 bg-cyan-500/40 rounded-t"></div>
+                                <div class="w-1.5 h-10 bg-cyan-500/80 rounded-t"></div>
+                                <div class="w-1.5 h-12 bg-cyan-500 rounded-t shadow-[0_0_15px_rgba(6,182,212,0.6)]"></div>
                             </div>
                         </div>
-                        <div class="flex items-center gap-3 border-t border-white/10 pt-3">
-                            <div class="relative w-8 h-8 rounded-full border-2 border-green-500/30 flex items-center justify-center">
-                                <span class="absolute inset-1 rounded-full bg-green-500/10"></span>
-                                <span class="w-2 h-2 rounded-full bg-green-500 animate-ping"></span>
+                        <div class="flex items-center gap-3 border-t border-white/5 pt-3">
+                            <div class="relative w-7 h-7 rounded-full border border-cyan-500/30 flex items-center justify-center">
+                                <span class="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-ping"></span>
                             </div>
                             <div>
-                                <div class="text-white font-sans font-bold">SECURE PIPELINE</div>
-                                <div class="text-[8px] text-white/40">TLS 1.3 / E2EE / CLOUD-SHIELD</div>
+                                <div class="text-white font-sans font-bold">NODE SECURITY</div>
+                                <div class="text-[8px] text-white/30 uppercase tracking-widest">TLS 1.3 / E2EE</div>
                             </div>
                         </div>
                     </div>
@@ -154,149 +146,20 @@
             </div>
                 </div>
             </div>
-        </div><div class="px-6 md:px-12 max-w-7xl mx-auto flex flex-col gap-32 mb-32">
-                <div class="flex flex-col md:flex-row items-center gap-16 ">
-                    <div class="flex-1 space-y-6">
-                        <span class="text-green-400 font-bold tracking-widest text-xs uppercase block">THE STORAGE APOCALYPSE</span>
-                        <h2 class="text-3xl md:text-4xl font-extrabold text-white leading-tight">「データ爆発」とストレージの物理的限界</h2>
-                        <div class="w-12 h-0.5 bg-green-500"></div>
-                        <p class="text-base leading-relaxed text-[#8f96a3] font-light">世界中で生成されるデータ量は爆発的に増加していますが、それを保存するHDDの容量向上は限界に達しつつあります。このままでは、「データを保存する場所がなくなり捨てるしかない」未来が訪れます。</p>
-                    </div>
-                    <div class="flex-1 w-full aspect-video rounded-xl overflow-hidden glass-panel p-2 border border-white/10 group">
-                        <div class="w-full h-full rounded-lg bg-[#0e111a] overflow-hidden flex items-center justify-center p-6 border border-white/5 relative">
-                            
-                            <div class="absolute inset-0 bg-gradient-to-br from-green-500/5 to-transparent pointer-events-none"></div>
-                            <div class="text-center font-mono text-[9px] text-white/20">
-                                <div class="text-[32px] text-green-400/20 font-sans font-black mb-2">1</div>
-                                <div class="uppercase tracking-widest font-bold text-white/30">[ MODULE_1_ACTIVE ]</div>
-                                <div class="mt-2 text-white/10">STABLE NODE // PACKETS_TRANSMITTED</div>
-                            </div>
-                            
-                        </div>
-                    </div>
-                </div>
-                <div class="relative">
-                    <div class="text-center mb-16 max-w-2xl mx-auto">
-                        <span class="text-green-400 font-bold tracking-widest text-xs uppercase">MOLECULAR ARCHIVE</span>
-                        <h2 class="text-3xl md:text-4xl font-extrabold mt-4 text-white">1グラムで10億テラバイトの超高密度</h2>
-                    </div>
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        
-                        <div class="glass-panel p-8 rounded-xl hover:border-green-500/30 transition duration-300 group">
-                            <div class="w-12 h-12 rounded flex items-center justify-center mb-6 bg-green-500/10 text-green-400 border border-green-500/20 group-hover:bg-green-500/20 transition-all">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                            </div>
-                            <h4 class="text-lg font-bold mb-3 text-white">${f.t}</h4>
-                            <p class="text-sm leading-relaxed text-[#8f96a3]">${f.d}</p>
-                        </div>
-                        
+        </div>
 
-                        <div class="glass-panel p-8 rounded-xl hover:border-green-500/30 transition duration-300 group">
-                            <div class="w-12 h-12 rounded flex items-center justify-center mb-6 bg-green-500/10 text-green-400 border border-green-500/20 group-hover:bg-green-500/20 transition-all">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                            </div>
-                            <h4 class="text-lg font-bold mb-3 text-white">${f.t}</h4>
-                            <p class="text-sm leading-relaxed text-[#8f96a3]">${f.d}</p>
-                        </div>
-                        
+        <div class="px-6 md:px-12 max-w-7xl mx-auto flex flex-col gap-32 mb-32">
+            
+        </div>
 
-                        <div class="glass-panel p-8 rounded-xl hover:border-green-500/30 transition duration-300 group">
-                            <div class="w-12 h-12 rounded flex items-center justify-center mb-6 bg-green-500/10 text-green-400 border border-green-500/20 group-hover:bg-green-500/20 transition-all">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                            </div>
-                            <h4 class="text-lg font-bold mb-3 text-white">${f.t}</h4>
-                            <p class="text-sm leading-relaxed text-[#8f96a3]">${f.d}</p>
-                        </div>
-                        
-                    </div>
-                </div>
-                <div class="flex flex-col md:flex-row items-center gap-16 ">
-                    <div class="flex-1 space-y-6">
-                        <span class="text-green-400 font-bold tracking-widest text-xs uppercase block">ETERNAL LIFESPAN</span>
-                        <h2 class="text-3xl md:text-4xl font-extrabold text-white leading-tight">「電気代ゼロ」で数千年保存できる耐久性</h2>
-                        <div class="w-12 h-0.5 bg-green-500"></div>
-                        <p class="text-base leading-relaxed text-[#8f96a3] font-light">データセンターのサーバーを冷やす莫大な電力は不要。DNAストレージは一度カプセルに封入すれば電気も空調も一切不要。常温のまま数千年以上データが劣化せずに生き残り続けます。</p>
-                    </div>
-                    <div class="flex-1 w-full aspect-video rounded-xl overflow-hidden glass-panel p-2 border border-white/10 group">
-                        <div class="w-full h-full rounded-lg bg-[#0e111a] overflow-hidden flex items-center justify-center p-6 border border-white/5 relative">
-                            
-                            <div class="absolute inset-0 bg-gradient-to-br from-green-500/5 to-transparent pointer-events-none"></div>
-                            <div class="text-center font-mono text-[9px] text-white/20">
-                                <div class="text-[32px] text-green-400/20 font-sans font-black mb-2">3</div>
-                                <div class="uppercase tracking-widest font-bold text-white/30">[ MODULE_3_ACTIVE ]</div>
-                                <div class="mt-2 text-white/10">STABLE NODE // PACKETS_TRANSMITTED</div>
-                            </div>
-                            
-                        </div>
-                    </div>
-                </div>
-                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
-                    <div class="flex-1 space-y-6">
-                        <span class="text-green-400 font-bold tracking-widest text-xs uppercase block">FUTURE PROOF</span>
-                        <h2 class="text-3xl md:text-4xl font-extrabold text-white leading-tight">フォーマットの陳腐化が起きない</h2>
-                        <div class="w-12 h-0.5 bg-green-500"></div>
-                        <p class="text-base leading-relaxed text-[#8f96a3] font-light">フロッピーディスクのように「読み込む機械が世界から消滅している」という規格の陳腐化がありません。人類が生物学を研究し続ける限り、DNAを読み取る機械は数百年後も確実に存在し続けます。</p>
-                    </div>
-                    <div class="flex-1 w-full aspect-video rounded-xl overflow-hidden glass-panel p-2 border border-white/10 group">
-                        <div class="w-full h-full rounded-lg bg-[#0e111a] overflow-hidden flex items-center justify-center p-6 border border-white/5 relative">
-                            
-                            <div class="absolute inset-0 bg-gradient-to-br from-green-500/5 to-transparent pointer-events-none"></div>
-                            <div class="text-center font-mono text-[9px] text-white/20">
-                                <div class="text-[32px] text-green-400/20 font-sans font-black mb-2">4</div>
-                                <div class="uppercase tracking-widest font-bold text-white/30">[ MODULE_4_ACTIVE ]</div>
-                                <div class="mt-2 text-white/10">STABLE NODE // PACKETS_TRANSMITTED</div>
-                            </div>
-                            
-                        </div>
-                    </div>
-                </div>
-                <div class="flex flex-col md:flex-row items-center gap-16 ">
-                    <div class="flex-1 space-y-6">
-                        <span class="text-green-400 font-bold tracking-widest text-xs uppercase block">HERITAGE PRESERVATION</span>
-                        <h2 class="text-3xl md:text-4xl font-extrabold text-white leading-tight">Case Study | 国立公文書館のコールドアーカイブ</h2>
-                        <div class="w-12 h-0.5 bg-green-500"></div>
-                        <p class="text-base leading-relaxed text-[#8f96a3] font-light">絶対に失われてはならない文化遺産のデータ。これまでは新しいHDDへデータ移行する莫大なコストがかかっていました。当社の技術により、これらの全データを小瓶一つに収め、永遠に安全保管する体制が整いました。</p>
-                    </div>
-                    <div class="flex-1 w-full aspect-video rounded-xl overflow-hidden glass-panel p-2 border border-white/10 group">
-                        <div class="w-full h-full rounded-lg bg-[#0e111a] overflow-hidden flex items-center justify-center p-6 border border-white/5 relative">
-                            
-                            <div class="absolute inset-0 bg-gradient-to-br from-green-500/5 to-transparent pointer-events-none"></div>
-                            <div class="text-center font-mono text-[9px] text-white/20">
-                                <div class="text-[32px] text-green-400/20 font-sans font-black mb-2">5</div>
-                                <div class="uppercase tracking-widest font-bold text-white/30">[ MODULE_5_ACTIVE ]</div>
-                                <div class="mt-2 text-white/10">STABLE NODE // PACKETS_TRANSMITTED</div>
-                            </div>
-                            
-                        </div>
-                    </div>
-                </div>
-                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
-                    <div class="flex-1 space-y-6">
-                        <span class="text-green-400 font-bold tracking-widest text-xs uppercase block">OUR VISION</span>
-                        <h2 class="text-3xl md:text-4xl font-extrabold text-white leading-tight">情報の「不老不死」を実現する</h2>
-                        <div class="w-12 h-0.5 bg-green-500"></div>
-                        <p class="text-base leading-relaxed text-[#8f96a3] font-light">私たちが残した知識や芸術。人類の営みの証であるデータを、地球が滅びるその日まで確実に残し、未来の世代へバトンを繋ぎます。</p>
-                    </div>
-                    <div class="flex-1 w-full aspect-video rounded-xl overflow-hidden glass-panel p-2 border border-white/10 group">
-                        <div class="w-full h-full rounded-lg bg-[#0e111a] overflow-hidden flex items-center justify-center p-6 border border-white/5 relative">
-                            
-                            <div class="absolute inset-0 bg-gradient-to-br from-green-500/5 to-transparent pointer-events-none"></div>
-                            <div class="text-center font-mono text-[9px] text-white/20">
-                                <div class="text-[32px] text-green-400/20 font-sans font-black mb-2">6</div>
-                                <div class="uppercase tracking-widest font-bold text-white/30">[ MODULE_6_ACTIVE ]</div>
-                                <div class="mt-2 text-white/10">STABLE NODE // PACKETS_TRANSMITTED</div>
-                            </div>
-                            
-                        </div>
-                    </div>
-                </div></div>
-        <div class="px-6 md:px-12 max-w-7xl mx-auto">
+        <!-- CTA -->
+        <div class="px-6 md:px-12 max-w-7xl mx-auto reveal-item">
             <div class="glass-panel rounded-2xl p-12 md:p-24 relative overflow-hidden group shadow-2xl border border-white/10">
-                <div class="absolute -top-32 -right-32 w-96 h-96 bg-green-600/10 rounded-full blur-[100px]"></div>
+                <div class="absolute -top-32 -right-32 w-96 h-96 bg-blue-600/10 rounded-full blur-[100px]"></div>
                 <div class="relative z-10 text-center max-w-3xl mx-auto">
                     <h2 class="text-3xl md:text-5xl font-extrabold mb-6 text-white">記憶を、永遠のものへ。</h2>
                     <p class="text-base text-[#8f96a3] mb-10 leading-relaxed max-w-xl mx-auto">電子の波ではなく、生命の分子へ。地球上で最も古く、最も高密度な情報メディアが、データ爆発の危機を救います。</p>
-                    <a href="#" class="bg-green-600 hover:bg-green-500 text-white px-10 py-4 rounded font-bold text-sm tracking-wider uppercase inline-flex items-center gap-3 transition shadow-lg shadow-green-500/20">
+                    <a href="#" class="bg-blue-600 hover:bg-blue-500 text-white px-10 py-4 rounded font-bold text-sm tracking-wider uppercase inline-flex items-center gap-3 transition shadow-lg shadow-blue-500/20">
                         START DEEP TECH
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                     </a>
@@ -305,10 +168,34 @@
         </div>
     </main>
 
-    <!-- Footer -->
     <footer class="py-12 text-center text-xs font-mono tracking-widest text-white/30 border-t border-white/5 bg-[#030307]">
-        <p>&copy; 2026 DEEP TECH // ALL DECENTRALIZED RIGHTS RESERVED.</p>
+        <p>&copy; 2026 DEEP TECH // ALL CRYPTOGRAPHIC RIGHTS RESERVED.</p>
     </footer>
 
+    <script>
+        // Lenis Smooth Scroll
+        const lenis = new Lenis();
+        function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+        requestAnimationFrame(raf);
+
+        // GSAP ScrollTrigger Fade-ins
+        gsap.registerPlugin(ScrollTrigger);
+        gsap.utils.toArray('.reveal-item').forEach(item => {
+            gsap.to(item, {
+                opacity: 1,
+                y: 0,
+                duration: 1.0,
+                ease: 'power3.out',
+                scrollTrigger: {
+                    trigger: item,
+                    start: 'top 85%',
+                    toggleActions: 'play none none none'
+                }
+            });
+        });
+    </script>
 </body>
 </html>

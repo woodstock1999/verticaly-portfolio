@@ -16,6 +16,32 @@
             box-shadow: 0 10px 30px -10px rgba(255, 255, 255, 0.1);
         }
     </style>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
+
+    <style>
+        .grid a img {
+            filter: grayscale(100%) contrast(1.15) brightness(0.65);
+            transition: filter 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .grid a:hover img {
+            filter: grayscale(0%) contrast(1.0) brightness(0.9);
+        }
+        .grid a {
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            transition: border-color 0.4s ease, box-shadow 0.4s ease;
+        }
+        .grid a:hover {
+            border-color: rgba(255, 255, 255, 0.15);
+            box-shadow: 0 10px 30px -10px rgba(255, 255, 255, 0.1);
+        }
+        .reveal-card {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+    </style>
 </head>
 <body class="bg-[#050505] text-white min-h-screen">
     <nav class="fixed top-0 w-full z-50 bg-[#050505]/90 backdrop-blur-xl border-b border-white/5 px-8 py-5 flex justify-between items-center text-[11px] font-bold tracking-widest uppercase">
@@ -28,7 +54,7 @@
             <p class="text-xl text-white/50 font-light leading-relaxed">A massive prototype exhibition of 100 distinct future UI/UX models.</p>
         </header>
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 xl:grid-cols-5 gap-6">
-        <a href="site_1/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1">
+        <a href="site_1/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1 reveal-card">
             <img src="site_1/img/hero.png" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-[2s]" loading="lazy" onerror="this.onerror=null; this.src='https://picsum.photos/seed/aethel1/1600/900';">
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10"></div>
             <div class="absolute inset-0 p-5 flex flex-col justify-between z-20">
@@ -43,7 +69,7 @@
             </div>
         </a>
     
-        <a href="site_2/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1">
+        <a href="site_2/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1 reveal-card">
             <img src="site_2/img/hero.png" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-[2s]" loading="lazy" onerror="this.onerror=null; this.src='https://picsum.photos/seed/aethel2/1600/900';">
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10"></div>
             <div class="absolute inset-0 p-5 flex flex-col justify-between z-20">
@@ -58,7 +84,7 @@
             </div>
         </a>
     
-        <a href="site_3/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1">
+        <a href="site_3/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1 reveal-card">
             <img src="site_3/img/hero.png" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-[2s]" loading="lazy" onerror="this.onerror=null; this.src='https://picsum.photos/seed/aethel3/1600/900';">
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10"></div>
             <div class="absolute inset-0 p-5 flex flex-col justify-between z-20">
@@ -73,7 +99,7 @@
             </div>
         </a>
     
-        <a href="site_4/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1">
+        <a href="site_4/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1 reveal-card">
             <img src="site_4/img/hero.png" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-[2s]" loading="lazy" onerror="this.onerror=null; this.src='https://picsum.photos/seed/aethel4/1600/900';">
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10"></div>
             <div class="absolute inset-0 p-5 flex flex-col justify-between z-20">
@@ -88,7 +114,7 @@
             </div>
         </a>
     
-        <a href="site_5/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1">
+        <a href="site_5/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1 reveal-card">
             <img src="site_5/img/hero.png" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-[2s]" loading="lazy" onerror="this.onerror=null; this.src='https://picsum.photos/seed/aethel5/1600/900';">
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10"></div>
             <div class="absolute inset-0 p-5 flex flex-col justify-between z-20">
@@ -103,7 +129,7 @@
             </div>
         </a>
     
-        <a href="site_6/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1">
+        <a href="site_6/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1 reveal-card">
             <img src="site_6/img/hero.png" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-[2s]" loading="lazy" onerror="this.onerror=null; this.src='https://picsum.photos/seed/aethel6/1600/900';">
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10"></div>
             <div class="absolute inset-0 p-5 flex flex-col justify-between z-20">
@@ -118,7 +144,7 @@
             </div>
         </a>
     
-        <a href="site_7/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1">
+        <a href="site_7/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1 reveal-card">
             <img src="site_7/img/hero.png" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-[2s]" loading="lazy" onerror="this.onerror=null; this.src='https://picsum.photos/seed/aethel7/1600/900';">
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10"></div>
             <div class="absolute inset-0 p-5 flex flex-col justify-between z-20">
@@ -133,7 +159,7 @@
             </div>
         </a>
     
-        <a href="site_8/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1">
+        <a href="site_8/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1 reveal-card">
             <img src="site_8/img/hero.png" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-[2s]" loading="lazy" onerror="this.onerror=null; this.src='https://picsum.photos/seed/aethel8/1600/900';">
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10"></div>
             <div class="absolute inset-0 p-5 flex flex-col justify-between z-20">
@@ -148,7 +174,7 @@
             </div>
         </a>
     
-        <a href="site_9/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1">
+        <a href="site_9/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1 reveal-card">
             <img src="site_9/img/hero.png" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-[2s]" loading="lazy" onerror="this.onerror=null; this.src='https://picsum.photos/seed/aethel9/1600/900';">
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10"></div>
             <div class="absolute inset-0 p-5 flex flex-col justify-between z-20">
@@ -163,7 +189,7 @@
             </div>
         </a>
     
-        <a href="site_10/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1">
+        <a href="site_10/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1 reveal-card">
             <img src="site_10/img/hero.png" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-[2s]" loading="lazy" onerror="this.onerror=null; this.src='https://picsum.photos/seed/aethel10/1600/900';">
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10"></div>
             <div class="absolute inset-0 p-5 flex flex-col justify-between z-20">
@@ -178,7 +204,7 @@
             </div>
         </a>
     
-        <a href="site_11/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1">
+        <a href="site_11/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1 reveal-card">
             <img src="site_11/img/hero.png" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-[2s]" loading="lazy" onerror="this.onerror=null; this.src='https://picsum.photos/seed/aethel11/1600/900';">
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10"></div>
             <div class="absolute inset-0 p-5 flex flex-col justify-between z-20">
@@ -193,7 +219,7 @@
             </div>
         </a>
     
-        <a href="site_12/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1">
+        <a href="site_12/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1 reveal-card">
             <img src="site_12/img/hero.png" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-[2s]" loading="lazy" onerror="this.onerror=null; this.src='https://picsum.photos/seed/aethel12/1600/900';">
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10"></div>
             <div class="absolute inset-0 p-5 flex flex-col justify-between z-20">
@@ -208,7 +234,7 @@
             </div>
         </a>
     
-        <a href="site_13/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1">
+        <a href="site_13/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1 reveal-card">
             <img src="site_13/img/hero.png" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-[2s]" loading="lazy" onerror="this.onerror=null; this.src='https://picsum.photos/seed/aethel13/1600/900';">
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10"></div>
             <div class="absolute inset-0 p-5 flex flex-col justify-between z-20">
@@ -223,7 +249,7 @@
             </div>
         </a>
     
-        <a href="site_14/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1">
+        <a href="site_14/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1 reveal-card">
             <img src="site_14/img/hero.png" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-[2s]" loading="lazy" onerror="this.onerror=null; this.src='https://picsum.photos/seed/aethel14/1600/900';">
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10"></div>
             <div class="absolute inset-0 p-5 flex flex-col justify-between z-20">
@@ -238,7 +264,7 @@
             </div>
         </a>
     
-        <a href="site_15/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1">
+        <a href="site_15/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1 reveal-card">
             <img src="site_15/img/hero.png" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-[2s]" loading="lazy" onerror="this.onerror=null; this.src='https://picsum.photos/seed/aethel15/1600/900';">
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10"></div>
             <div class="absolute inset-0 p-5 flex flex-col justify-between z-20">
@@ -253,7 +279,7 @@
             </div>
         </a>
     
-        <a href="site_16/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1">
+        <a href="site_16/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1 reveal-card">
             <img src="site_16/img/hero.png" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-[2s]" loading="lazy" onerror="this.onerror=null; this.src='https://picsum.photos/seed/aethel16/1600/900';">
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10"></div>
             <div class="absolute inset-0 p-5 flex flex-col justify-between z-20">
@@ -268,7 +294,7 @@
             </div>
         </a>
     
-        <a href="site_17/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1">
+        <a href="site_17/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1 reveal-card">
             <img src="site_17/img/hero.png" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-[2s]" loading="lazy" onerror="this.onerror=null; this.src='https://picsum.photos/seed/aethel17/1600/900';">
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10"></div>
             <div class="absolute inset-0 p-5 flex flex-col justify-between z-20">
@@ -283,7 +309,7 @@
             </div>
         </a>
     
-        <a href="site_18/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1">
+        <a href="site_18/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1 reveal-card">
             <img src="site_18/img/hero.png" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-[2s]" loading="lazy" onerror="this.onerror=null; this.src='https://picsum.photos/seed/aethel18/1600/900';">
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10"></div>
             <div class="absolute inset-0 p-5 flex flex-col justify-between z-20">
@@ -298,7 +324,7 @@
             </div>
         </a>
     
-        <a href="site_19/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1">
+        <a href="site_19/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1 reveal-card">
             <img src="site_19/img/hero.png" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-[2s]" loading="lazy" onerror="this.onerror=null; this.src='https://picsum.photos/seed/aethel19/1600/900';">
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10"></div>
             <div class="absolute inset-0 p-5 flex flex-col justify-between z-20">
@@ -313,7 +339,7 @@
             </div>
         </a>
     
-        <a href="site_20/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1">
+        <a href="site_20/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1 reveal-card">
             <img src="site_20/img/hero.png" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-[2s]" loading="lazy" onerror="this.onerror=null; this.src='https://picsum.photos/seed/aethel20/1600/900';">
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10"></div>
             <div class="absolute inset-0 p-5 flex flex-col justify-between z-20">
@@ -328,7 +354,7 @@
             </div>
         </a>
     
-        <a href="site_21/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1">
+        <a href="site_21/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1 reveal-card">
             <img src="site_21/img/hero.png" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-[2s]" loading="lazy" onerror="this.onerror=null; this.src='https://picsum.photos/seed/aethel21/1600/900';">
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10"></div>
             <div class="absolute inset-0 p-5 flex flex-col justify-between z-20">
@@ -343,7 +369,7 @@
             </div>
         </a>
     
-        <a href="site_22/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1">
+        <a href="site_22/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1 reveal-card">
             <img src="site_22/img/hero.png" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-[2s]" loading="lazy" onerror="this.onerror=null; this.src='https://picsum.photos/seed/aethel22/1600/900';">
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10"></div>
             <div class="absolute inset-0 p-5 flex flex-col justify-between z-20">
@@ -358,7 +384,7 @@
             </div>
         </a>
     
-        <a href="site_23/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1">
+        <a href="site_23/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1 reveal-card">
             <img src="site_23/img/hero.png" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-[2s]" loading="lazy" onerror="this.onerror=null; this.src='https://picsum.photos/seed/aethel23/1600/900';">
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10"></div>
             <div class="absolute inset-0 p-5 flex flex-col justify-between z-20">
@@ -373,7 +399,7 @@
             </div>
         </a>
     
-        <a href="site_24/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1">
+        <a href="site_24/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1 reveal-card">
             <img src="site_24/img/hero.png" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-[2s]" loading="lazy" onerror="this.onerror=null; this.src='https://picsum.photos/seed/aethel24/1600/900';">
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10"></div>
             <div class="absolute inset-0 p-5 flex flex-col justify-between z-20">
@@ -388,7 +414,7 @@
             </div>
         </a>
     
-        <a href="site_25/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1">
+        <a href="site_25/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1 reveal-card">
             <img src="site_25/img/hero.png" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-[2s]" loading="lazy" onerror="this.onerror=null; this.src='https://picsum.photos/seed/aethel25/1600/900';">
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10"></div>
             <div class="absolute inset-0 p-5 flex flex-col justify-between z-20">
@@ -403,7 +429,7 @@
             </div>
         </a>
     
-        <a href="site_26/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1">
+        <a href="site_26/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1 reveal-card">
             <img src="site_26/img/hero.png" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-[2s]" loading="lazy" onerror="this.onerror=null; this.src='https://picsum.photos/seed/aethel26/1600/900';">
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10"></div>
             <div class="absolute inset-0 p-5 flex flex-col justify-between z-20">
@@ -418,7 +444,7 @@
             </div>
         </a>
     
-        <a href="site_27/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1">
+        <a href="site_27/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1 reveal-card">
             <img src="site_27/img/hero.png" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-[2s]" loading="lazy" onerror="this.onerror=null; this.src='https://picsum.photos/seed/aethel27/1600/900';">
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10"></div>
             <div class="absolute inset-0 p-5 flex flex-col justify-between z-20">
@@ -433,7 +459,7 @@
             </div>
         </a>
     
-        <a href="site_28/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1">
+        <a href="site_28/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1 reveal-card">
             <img src="site_28/img/hero.png" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-[2s]" loading="lazy" onerror="this.onerror=null; this.src='https://picsum.photos/seed/aethel28/1600/900';">
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10"></div>
             <div class="absolute inset-0 p-5 flex flex-col justify-between z-20">
@@ -448,7 +474,7 @@
             </div>
         </a>
     
-        <a href="site_29/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1">
+        <a href="site_29/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1 reveal-card">
             <img src="site_29/img/hero.png" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-[2s]" loading="lazy" onerror="this.onerror=null; this.src='https://picsum.photos/seed/aethel29/1600/900';">
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10"></div>
             <div class="absolute inset-0 p-5 flex flex-col justify-between z-20">
@@ -463,7 +489,7 @@
             </div>
         </a>
     
-        <a href="site_30/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1">
+        <a href="site_30/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1 reveal-card">
             <img src="site_30/img/hero.png" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-[2s]" loading="lazy" onerror="this.onerror=null; this.src='https://picsum.photos/seed/aethel30/1600/900';">
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10"></div>
             <div class="absolute inset-0 p-5 flex flex-col justify-between z-20">
@@ -478,7 +504,7 @@
             </div>
         </a>
     
-        <a href="site_31/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1">
+        <a href="site_31/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1 reveal-card">
             <img src="site_31/img/hero.png" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-[2s]" loading="lazy" onerror="this.onerror=null; this.src='https://picsum.photos/seed/aethel31/1600/900';">
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10"></div>
             <div class="absolute inset-0 p-5 flex flex-col justify-between z-20">
@@ -493,7 +519,7 @@
             </div>
         </a>
     
-        <a href="site_32/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1">
+        <a href="site_32/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1 reveal-card">
             <img src="site_32/img/hero.png" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-[2s]" loading="lazy" onerror="this.onerror=null; this.src='https://picsum.photos/seed/aethel32/1600/900';">
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10"></div>
             <div class="absolute inset-0 p-5 flex flex-col justify-between z-20">
@@ -508,7 +534,7 @@
             </div>
         </a>
     
-        <a href="site_33/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1">
+        <a href="site_33/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1 reveal-card">
             <img src="site_33/img/hero.png" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-[2s]" loading="lazy" onerror="this.onerror=null; this.src='https://picsum.photos/seed/aethel33/1600/900';">
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10"></div>
             <div class="absolute inset-0 p-5 flex flex-col justify-between z-20">
@@ -523,7 +549,7 @@
             </div>
         </a>
     
-        <a href="site_34/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1">
+        <a href="site_34/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1 reveal-card">
             <img src="site_34/img/hero.png" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-[2s]" loading="lazy" onerror="this.onerror=null; this.src='https://picsum.photos/seed/aethel34/1600/900';">
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10"></div>
             <div class="absolute inset-0 p-5 flex flex-col justify-between z-20">
@@ -538,7 +564,7 @@
             </div>
         </a>
     
-        <a href="site_35/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1">
+        <a href="site_35/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1 reveal-card">
             <img src="site_35/img/hero.png" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-[2s]" loading="lazy" onerror="this.onerror=null; this.src='https://picsum.photos/seed/aethel35/1600/900';">
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10"></div>
             <div class="absolute inset-0 p-5 flex flex-col justify-between z-20">
@@ -553,7 +579,7 @@
             </div>
         </a>
     
-        <a href="site_36/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1">
+        <a href="site_36/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1 reveal-card">
             <img src="site_36/img/hero.png" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-[2s]" loading="lazy" onerror="this.onerror=null; this.src='https://picsum.photos/seed/aethel36/1600/900';">
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10"></div>
             <div class="absolute inset-0 p-5 flex flex-col justify-between z-20">
@@ -568,7 +594,7 @@
             </div>
         </a>
     
-        <a href="site_37/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1">
+        <a href="site_37/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1 reveal-card">
             <img src="site_37/img/hero.png" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-[2s]" loading="lazy" onerror="this.onerror=null; this.src='https://picsum.photos/seed/aethel37/1600/900';">
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10"></div>
             <div class="absolute inset-0 p-5 flex flex-col justify-between z-20">
@@ -583,7 +609,7 @@
             </div>
         </a>
     
-        <a href="site_38/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1">
+        <a href="site_38/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1 reveal-card">
             <img src="site_38/img/hero.png" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-[2s]" loading="lazy" onerror="this.onerror=null; this.src='https://picsum.photos/seed/aethel38/1600/900';">
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10"></div>
             <div class="absolute inset-0 p-5 flex flex-col justify-between z-20">
@@ -598,7 +624,7 @@
             </div>
         </a>
     
-        <a href="site_39/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1">
+        <a href="site_39/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1 reveal-card">
             <img src="site_39/img/hero.png" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-[2s]" loading="lazy" onerror="this.onerror=null; this.src='https://picsum.photos/seed/aethel39/1600/900';">
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10"></div>
             <div class="absolute inset-0 p-5 flex flex-col justify-between z-20">
@@ -613,7 +639,7 @@
             </div>
         </a>
     
-        <a href="site_40/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1">
+        <a href="site_40/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1 reveal-card">
             <img src="site_40/img/hero.png" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-[2s]" loading="lazy" onerror="this.onerror=null; this.src='https://picsum.photos/seed/aethel40/1600/900';">
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10"></div>
             <div class="absolute inset-0 p-5 flex flex-col justify-between z-20">
@@ -628,7 +654,7 @@
             </div>
         </a>
     
-        <a href="site_41/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1">
+        <a href="site_41/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1 reveal-card">
             <img src="site_41/img/hero.png" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-[2s]" loading="lazy" onerror="this.onerror=null; this.src='https://picsum.photos/seed/aethel41/1600/900';">
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10"></div>
             <div class="absolute inset-0 p-5 flex flex-col justify-between z-20">
@@ -643,7 +669,7 @@
             </div>
         </a>
     
-        <a href="site_42/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1">
+        <a href="site_42/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1 reveal-card">
             <img src="site_42/img/hero.png" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-[2s]" loading="lazy" onerror="this.onerror=null; this.src='https://picsum.photos/seed/aethel42/1600/900';">
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10"></div>
             <div class="absolute inset-0 p-5 flex flex-col justify-between z-20">
@@ -658,7 +684,7 @@
             </div>
         </a>
     
-        <a href="site_43/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1">
+        <a href="site_43/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1 reveal-card">
             <img src="site_43/img/hero.png" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-[2s]" loading="lazy" onerror="this.onerror=null; this.src='https://picsum.photos/seed/aethel43/1600/900';">
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10"></div>
             <div class="absolute inset-0 p-5 flex flex-col justify-between z-20">
@@ -673,7 +699,7 @@
             </div>
         </a>
     
-        <a href="site_44/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1">
+        <a href="site_44/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1 reveal-card">
             <img src="site_44/img/hero.png" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-[2s]" loading="lazy" onerror="this.onerror=null; this.src='https://picsum.photos/seed/aethel44/1600/900';">
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10"></div>
             <div class="absolute inset-0 p-5 flex flex-col justify-between z-20">
@@ -688,7 +714,7 @@
             </div>
         </a>
     
-        <a href="site_45/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1">
+        <a href="site_45/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1 reveal-card">
             <img src="site_45/img/hero.png" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-[2s]" loading="lazy" onerror="this.onerror=null; this.src='https://picsum.photos/seed/aethel45/1600/900';">
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10"></div>
             <div class="absolute inset-0 p-5 flex flex-col justify-between z-20">
@@ -703,7 +729,7 @@
             </div>
         </a>
     
-        <a href="site_46/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1">
+        <a href="site_46/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1 reveal-card">
             <img src="site_46/img/hero.png" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-[2s]" loading="lazy" onerror="this.onerror=null; this.src='https://picsum.photos/seed/aethel46/1600/900';">
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10"></div>
             <div class="absolute inset-0 p-5 flex flex-col justify-between z-20">
@@ -718,7 +744,7 @@
             </div>
         </a>
     
-        <a href="site_47/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1">
+        <a href="site_47/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1 reveal-card">
             <img src="site_47/img/hero.png" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-[2s]" loading="lazy" onerror="this.onerror=null; this.src='https://picsum.photos/seed/aethel47/1600/900';">
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10"></div>
             <div class="absolute inset-0 p-5 flex flex-col justify-between z-20">
@@ -733,7 +759,7 @@
             </div>
         </a>
     
-        <a href="site_48/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1">
+        <a href="site_48/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1 reveal-card">
             <img src="site_48/img/hero.png" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-[2s]" loading="lazy" onerror="this.onerror=null; this.src='https://picsum.photos/seed/aethel48/1600/900';">
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10"></div>
             <div class="absolute inset-0 p-5 flex flex-col justify-between z-20">
@@ -748,7 +774,7 @@
             </div>
         </a>
     
-        <a href="site_49/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1">
+        <a href="site_49/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1 reveal-card">
             <img src="site_49/img/hero.png" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-[2s]" loading="lazy" onerror="this.onerror=null; this.src='https://picsum.photos/seed/aethel49/1600/900';">
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10"></div>
             <div class="absolute inset-0 p-5 flex flex-col justify-between z-20">
@@ -763,7 +789,7 @@
             </div>
         </a>
     
-        <a href="site_50/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1">
+        <a href="site_50/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1 reveal-card">
             <img src="site_50/img/hero.png" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-[2s]" loading="lazy" onerror="this.onerror=null; this.src='https://picsum.photos/seed/aethel50/1600/900';">
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10"></div>
             <div class="absolute inset-0 p-5 flex flex-col justify-between z-20">
@@ -778,7 +804,7 @@
             </div>
         </a>
     
-        <a href="site_51/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1">
+        <a href="site_51/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1 reveal-card">
             <img src="site_51/img/hero.png" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-[2s]" loading="lazy" onerror="this.onerror=null; this.src='https://picsum.photos/seed/aethel51/1600/900';">
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10"></div>
             <div class="absolute inset-0 p-5 flex flex-col justify-between z-20">
@@ -793,7 +819,7 @@
             </div>
         </a>
     
-        <a href="site_52/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1">
+        <a href="site_52/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1 reveal-card">
             <img src="site_52/img/hero.png" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-[2s]" loading="lazy" onerror="this.onerror=null; this.src='https://picsum.photos/seed/aethel52/1600/900';">
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10"></div>
             <div class="absolute inset-0 p-5 flex flex-col justify-between z-20">
@@ -808,7 +834,7 @@
             </div>
         </a>
     
-        <a href="site_53/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1">
+        <a href="site_53/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1 reveal-card">
             <img src="site_53/img/hero.png" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-[2s]" loading="lazy" onerror="this.onerror=null; this.src='https://picsum.photos/seed/aethel53/1600/900';">
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10"></div>
             <div class="absolute inset-0 p-5 flex flex-col justify-between z-20">
@@ -823,7 +849,7 @@
             </div>
         </a>
     
-        <a href="site_54/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1">
+        <a href="site_54/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1 reveal-card">
             <img src="site_54/img/hero.png" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-[2s]" loading="lazy" onerror="this.onerror=null; this.src='https://picsum.photos/seed/aethel54/1600/900';">
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10"></div>
             <div class="absolute inset-0 p-5 flex flex-col justify-between z-20">
@@ -838,7 +864,7 @@
             </div>
         </a>
     
-        <a href="site_55/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1">
+        <a href="site_55/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1 reveal-card">
             <img src="site_55/img/hero.png" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-[2s]" loading="lazy" onerror="this.onerror=null; this.src='https://picsum.photos/seed/aethel55/1600/900';">
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10"></div>
             <div class="absolute inset-0 p-5 flex flex-col justify-between z-20">
@@ -853,7 +879,7 @@
             </div>
         </a>
     
-        <a href="site_56/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1">
+        <a href="site_56/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1 reveal-card">
             <img src="site_56/img/hero.png" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-[2s]" loading="lazy" onerror="this.onerror=null; this.src='https://picsum.photos/seed/aethel56/1600/900';">
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10"></div>
             <div class="absolute inset-0 p-5 flex flex-col justify-between z-20">
@@ -868,7 +894,7 @@
             </div>
         </a>
     
-        <a href="site_57/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1">
+        <a href="site_57/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1 reveal-card">
             <img src="site_57/img/hero.png" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-[2s]" loading="lazy" onerror="this.onerror=null; this.src='https://picsum.photos/seed/aethel57/1600/900';">
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10"></div>
             <div class="absolute inset-0 p-5 flex flex-col justify-between z-20">
@@ -883,7 +909,7 @@
             </div>
         </a>
     
-        <a href="site_58/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1">
+        <a href="site_58/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1 reveal-card">
             <img src="site_58/img/hero.png" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-[2s]" loading="lazy" onerror="this.onerror=null; this.src='https://picsum.photos/seed/aethel58/1600/900';">
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10"></div>
             <div class="absolute inset-0 p-5 flex flex-col justify-between z-20">
@@ -898,7 +924,7 @@
             </div>
         </a>
     
-        <a href="site_59/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1">
+        <a href="site_59/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1 reveal-card">
             <img src="site_59/img/hero.png" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-[2s]" loading="lazy" onerror="this.onerror=null; this.src='https://picsum.photos/seed/aethel59/1600/900';">
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10"></div>
             <div class="absolute inset-0 p-5 flex flex-col justify-between z-20">
@@ -913,7 +939,7 @@
             </div>
         </a>
     
-        <a href="site_60/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1">
+        <a href="site_60/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1 reveal-card">
             <img src="site_60/img/hero.png" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-[2s]" loading="lazy" onerror="this.onerror=null; this.src='https://picsum.photos/seed/aethel60/1600/900';">
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10"></div>
             <div class="absolute inset-0 p-5 flex flex-col justify-between z-20">
@@ -928,7 +954,7 @@
             </div>
         </a>
     
-        <a href="site_61/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1">
+        <a href="site_61/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1 reveal-card">
             <img src="site_61/img/hero.png" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-[2s]" loading="lazy" onerror="this.onerror=null; this.src='https://picsum.photos/seed/aethel61/1600/900';">
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10"></div>
             <div class="absolute inset-0 p-5 flex flex-col justify-between z-20">
@@ -943,7 +969,7 @@
             </div>
         </a>
     
-        <a href="site_62/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1">
+        <a href="site_62/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1 reveal-card">
             <img src="site_62/img/hero.png" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-[2s]" loading="lazy" onerror="this.onerror=null; this.src='https://picsum.photos/seed/aethel62/1600/900';">
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10"></div>
             <div class="absolute inset-0 p-5 flex flex-col justify-between z-20">
@@ -958,7 +984,7 @@
             </div>
         </a>
     
-        <a href="site_63/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1">
+        <a href="site_63/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1 reveal-card">
             <img src="site_63/img/hero.png" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-[2s]" loading="lazy" onerror="this.onerror=null; this.src='https://picsum.photos/seed/aethel63/1600/900';">
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10"></div>
             <div class="absolute inset-0 p-5 flex flex-col justify-between z-20">
@@ -973,7 +999,7 @@
             </div>
         </a>
     
-        <a href="site_64/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1">
+        <a href="site_64/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1 reveal-card">
             <img src="site_64/img/hero.png" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-[2s]" loading="lazy" onerror="this.onerror=null; this.src='https://picsum.photos/seed/aethel64/1600/900';">
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10"></div>
             <div class="absolute inset-0 p-5 flex flex-col justify-between z-20">
@@ -988,7 +1014,7 @@
             </div>
         </a>
     
-        <a href="site_65/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1">
+        <a href="site_65/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1 reveal-card">
             <img src="site_65/img/hero.png" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-[2s]" loading="lazy" onerror="this.onerror=null; this.src='https://picsum.photos/seed/aethel65/1600/900';">
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10"></div>
             <div class="absolute inset-0 p-5 flex flex-col justify-between z-20">
@@ -1003,7 +1029,7 @@
             </div>
         </a>
     
-        <a href="site_66/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1">
+        <a href="site_66/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1 reveal-card">
             <img src="site_66/img/hero.png" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-[2s]" loading="lazy" onerror="this.onerror=null; this.src='https://picsum.photos/seed/aethel66/1600/900';">
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10"></div>
             <div class="absolute inset-0 p-5 flex flex-col justify-between z-20">
@@ -1018,7 +1044,7 @@
             </div>
         </a>
     
-        <a href="site_67/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1">
+        <a href="site_67/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1 reveal-card">
             <img src="site_67/img/hero.png" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-[2s]" loading="lazy" onerror="this.onerror=null; this.src='https://picsum.photos/seed/aethel67/1600/900';">
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10"></div>
             <div class="absolute inset-0 p-5 flex flex-col justify-between z-20">
@@ -1033,7 +1059,7 @@
             </div>
         </a>
     
-        <a href="site_68/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1">
+        <a href="site_68/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1 reveal-card">
             <img src="site_68/img/hero.png" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-[2s]" loading="lazy" onerror="this.onerror=null; this.src='https://picsum.photos/seed/aethel68/1600/900';">
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10"></div>
             <div class="absolute inset-0 p-5 flex flex-col justify-between z-20">
@@ -1048,7 +1074,7 @@
             </div>
         </a>
     
-        <a href="site_69/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1">
+        <a href="site_69/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1 reveal-card">
             <img src="site_69/img/hero.png" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-[2s]" loading="lazy" onerror="this.onerror=null; this.src='https://picsum.photos/seed/aethel69/1600/900';">
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10"></div>
             <div class="absolute inset-0 p-5 flex flex-col justify-between z-20">
@@ -1063,7 +1089,7 @@
             </div>
         </a>
     
-        <a href="site_70/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1">
+        <a href="site_70/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1 reveal-card">
             <img src="site_70/img/hero.png" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-[2s]" loading="lazy" onerror="this.onerror=null; this.src='https://picsum.photos/seed/aethel70/1600/900';">
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10"></div>
             <div class="absolute inset-0 p-5 flex flex-col justify-between z-20">
@@ -1078,7 +1104,7 @@
             </div>
         </a>
     
-        <a href="site_71/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1">
+        <a href="site_71/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1 reveal-card">
             <img src="site_71/img/hero.png" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-[2s]" loading="lazy" onerror="this.onerror=null; this.src='https://picsum.photos/seed/aethel71/1600/900';">
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10"></div>
             <div class="absolute inset-0 p-5 flex flex-col justify-between z-20">
@@ -1093,7 +1119,7 @@
             </div>
         </a>
     
-        <a href="site_72/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1">
+        <a href="site_72/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1 reveal-card">
             <img src="site_72/img/hero.png" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-[2s]" loading="lazy" onerror="this.onerror=null; this.src='https://picsum.photos/seed/aethel72/1600/900';">
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10"></div>
             <div class="absolute inset-0 p-5 flex flex-col justify-between z-20">
@@ -1108,7 +1134,7 @@
             </div>
         </a>
     
-        <a href="site_73/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1">
+        <a href="site_73/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1 reveal-card">
             <img src="site_73/img/hero.png" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-[2s]" loading="lazy" onerror="this.onerror=null; this.src='https://picsum.photos/seed/aethel73/1600/900';">
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10"></div>
             <div class="absolute inset-0 p-5 flex flex-col justify-between z-20">
@@ -1123,7 +1149,7 @@
             </div>
         </a>
     
-        <a href="site_74/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1">
+        <a href="site_74/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1 reveal-card">
             <img src="site_74/img/hero.png" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-[2s]" loading="lazy" onerror="this.onerror=null; this.src='https://picsum.photos/seed/aethel74/1600/900';">
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10"></div>
             <div class="absolute inset-0 p-5 flex flex-col justify-between z-20">
@@ -1138,7 +1164,7 @@
             </div>
         </a>
     
-        <a href="site_75/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1">
+        <a href="site_75/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1 reveal-card">
             <img src="site_75/img/hero.png" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-[2s]" loading="lazy" onerror="this.onerror=null; this.src='https://picsum.photos/seed/aethel75/1600/900';">
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10"></div>
             <div class="absolute inset-0 p-5 flex flex-col justify-between z-20">
@@ -1153,7 +1179,7 @@
             </div>
         </a>
     
-        <a href="site_76/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1">
+        <a href="site_76/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1 reveal-card">
             <img src="site_76/img/hero.png" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-[2s]" loading="lazy" onerror="this.onerror=null; this.src='https://picsum.photos/seed/aethel76/1600/900';">
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10"></div>
             <div class="absolute inset-0 p-5 flex flex-col justify-between z-20">
@@ -1168,7 +1194,7 @@
             </div>
         </a>
     
-        <a href="site_77/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1">
+        <a href="site_77/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1 reveal-card">
             <img src="site_77/img/hero.png" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-[2s]" loading="lazy" onerror="this.onerror=null; this.src='https://picsum.photos/seed/aethel77/1600/900';">
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10"></div>
             <div class="absolute inset-0 p-5 flex flex-col justify-between z-20">
@@ -1183,7 +1209,7 @@
             </div>
         </a>
     
-        <a href="site_78/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1">
+        <a href="site_78/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1 reveal-card">
             <img src="site_78/img/hero.png" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-[2s]" loading="lazy" onerror="this.onerror=null; this.src='https://picsum.photos/seed/aethel78/1600/900';">
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10"></div>
             <div class="absolute inset-0 p-5 flex flex-col justify-between z-20">
@@ -1198,7 +1224,7 @@
             </div>
         </a>
     
-        <a href="site_79/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1">
+        <a href="site_79/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1 reveal-card">
             <img src="site_79/img/hero.png" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-[2s]" loading="lazy" onerror="this.onerror=null; this.src='https://picsum.photos/seed/aethel79/1600/900';">
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10"></div>
             <div class="absolute inset-0 p-5 flex flex-col justify-between z-20">
@@ -1213,7 +1239,7 @@
             </div>
         </a>
     
-        <a href="site_80/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1">
+        <a href="site_80/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1 reveal-card">
             <img src="site_80/img/hero.png" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-[2s]" loading="lazy" onerror="this.onerror=null; this.src='https://picsum.photos/seed/aethel80/1600/900';">
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10"></div>
             <div class="absolute inset-0 p-5 flex flex-col justify-between z-20">
@@ -1228,7 +1254,7 @@
             </div>
         </a>
     
-        <a href="site_81/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1">
+        <a href="site_81/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1 reveal-card">
             <img src="site_81/img/hero.png" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-[2s]" loading="lazy" onerror="this.onerror=null; this.src='https://picsum.photos/seed/aethel81/1600/900';">
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10"></div>
             <div class="absolute inset-0 p-5 flex flex-col justify-between z-20">
@@ -1243,7 +1269,7 @@
             </div>
         </a>
     
-        <a href="site_82/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1">
+        <a href="site_82/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1 reveal-card">
             <img src="site_82/img/hero.png" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-[2s]" loading="lazy" onerror="this.onerror=null; this.src='https://picsum.photos/seed/aethel82/1600/900';">
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10"></div>
             <div class="absolute inset-0 p-5 flex flex-col justify-between z-20">
@@ -1258,7 +1284,7 @@
             </div>
         </a>
     
-        <a href="site_83/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1">
+        <a href="site_83/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1 reveal-card">
             <img src="site_83/img/hero.png" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-[2s]" loading="lazy" onerror="this.onerror=null; this.src='https://picsum.photos/seed/aethel83/1600/900';">
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10"></div>
             <div class="absolute inset-0 p-5 flex flex-col justify-between z-20">
@@ -1273,7 +1299,7 @@
             </div>
         </a>
     
-        <a href="site_84/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1">
+        <a href="site_84/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1 reveal-card">
             <img src="site_84/img/hero.png" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-[2s]" loading="lazy" onerror="this.onerror=null; this.src='https://picsum.photos/seed/aethel84/1600/900';">
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10"></div>
             <div class="absolute inset-0 p-5 flex flex-col justify-between z-20">
@@ -1288,7 +1314,7 @@
             </div>
         </a>
     
-        <a href="site_85/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1">
+        <a href="site_85/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1 reveal-card">
             <img src="site_85/img/hero.png" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-[2s]" loading="lazy" onerror="this.onerror=null; this.src='https://picsum.photos/seed/aethel85/1600/900';">
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10"></div>
             <div class="absolute inset-0 p-5 flex flex-col justify-between z-20">
@@ -1303,7 +1329,7 @@
             </div>
         </a>
     
-        <a href="site_86/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1">
+        <a href="site_86/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1 reveal-card">
             <img src="site_86/img/hero.png" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-[2s]" loading="lazy" onerror="this.onerror=null; this.src='https://picsum.photos/seed/aethel86/1600/900';">
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10"></div>
             <div class="absolute inset-0 p-5 flex flex-col justify-between z-20">
@@ -1318,7 +1344,7 @@
             </div>
         </a>
     
-        <a href="site_87/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1">
+        <a href="site_87/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1 reveal-card">
             <img src="site_87/img/hero.png" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-[2s]" loading="lazy" onerror="this.onerror=null; this.src='https://picsum.photos/seed/aethel87/1600/900';">
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10"></div>
             <div class="absolute inset-0 p-5 flex flex-col justify-between z-20">
@@ -1333,7 +1359,7 @@
             </div>
         </a>
     
-        <a href="site_88/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1">
+        <a href="site_88/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1 reveal-card">
             <img src="site_88/img/hero.png" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-[2s]" loading="lazy" onerror="this.onerror=null; this.src='https://picsum.photos/seed/aethel88/1600/900';">
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10"></div>
             <div class="absolute inset-0 p-5 flex flex-col justify-between z-20">
@@ -1348,7 +1374,7 @@
             </div>
         </a>
     
-        <a href="site_89/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1">
+        <a href="site_89/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1 reveal-card">
             <img src="site_89/img/hero.png" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-[2s]" loading="lazy" onerror="this.onerror=null; this.src='https://picsum.photos/seed/aethel89/1600/900';">
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10"></div>
             <div class="absolute inset-0 p-5 flex flex-col justify-between z-20">
@@ -1363,7 +1389,7 @@
             </div>
         </a>
     
-        <a href="site_90/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1">
+        <a href="site_90/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1 reveal-card">
             <img src="site_90/img/hero.png" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-[2s]" loading="lazy" onerror="this.onerror=null; this.src='https://picsum.photos/seed/aethel90/1600/900';">
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10"></div>
             <div class="absolute inset-0 p-5 flex flex-col justify-between z-20">
@@ -1378,7 +1404,7 @@
             </div>
         </a>
     
-        <a href="site_91/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1">
+        <a href="site_91/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1 reveal-card">
             <img src="site_91/img/hero.png" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-[2s]" loading="lazy" onerror="this.onerror=null; this.src='https://picsum.photos/seed/aethel91/1600/900';">
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10"></div>
             <div class="absolute inset-0 p-5 flex flex-col justify-between z-20">
@@ -1393,7 +1419,7 @@
             </div>
         </a>
     
-        <a href="site_92/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1">
+        <a href="site_92/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1 reveal-card">
             <img src="site_92/img/hero.png" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-[2s]" loading="lazy" onerror="this.onerror=null; this.src='https://picsum.photos/seed/aethel92/1600/900';">
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10"></div>
             <div class="absolute inset-0 p-5 flex flex-col justify-between z-20">
@@ -1408,7 +1434,7 @@
             </div>
         </a>
     
-        <a href="site_93/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1">
+        <a href="site_93/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1 reveal-card">
             <img src="site_93/img/hero.png" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-[2s]" loading="lazy" onerror="this.onerror=null; this.src='https://picsum.photos/seed/aethel93/1600/900';">
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10"></div>
             <div class="absolute inset-0 p-5 flex flex-col justify-between z-20">
@@ -1423,7 +1449,7 @@
             </div>
         </a>
     
-        <a href="site_94/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1">
+        <a href="site_94/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1 reveal-card">
             <img src="site_94/img/hero.png" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-[2s]" loading="lazy" onerror="this.onerror=null; this.src='https://picsum.photos/seed/aethel94/1600/900';">
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10"></div>
             <div class="absolute inset-0 p-5 flex flex-col justify-between z-20">
@@ -1438,7 +1464,7 @@
             </div>
         </a>
     
-        <a href="site_95/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1">
+        <a href="site_95/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1 reveal-card">
             <img src="site_95/img/hero.png" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-[2s]" loading="lazy" onerror="this.onerror=null; this.src='https://picsum.photos/seed/aethel95/1600/900';">
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10"></div>
             <div class="absolute inset-0 p-5 flex flex-col justify-between z-20">
@@ -1453,7 +1479,7 @@
             </div>
         </a>
     
-        <a href="site_96/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1">
+        <a href="site_96/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1 reveal-card">
             <img src="site_96/img/hero.png" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-[2s]" loading="lazy" onerror="this.onerror=null; this.src='https://picsum.photos/seed/aethel96/1600/900';">
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10"></div>
             <div class="absolute inset-0 p-5 flex flex-col justify-between z-20">
@@ -1468,7 +1494,7 @@
             </div>
         </a>
     
-        <a href="site_97/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1">
+        <a href="site_97/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1 reveal-card">
             <img src="site_97/img/hero.png" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-[2s]" loading="lazy" onerror="this.onerror=null; this.src='https://picsum.photos/seed/aethel97/1600/900';">
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10"></div>
             <div class="absolute inset-0 p-5 flex flex-col justify-between z-20">
@@ -1483,7 +1509,7 @@
             </div>
         </a>
     
-        <a href="site_98/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1">
+        <a href="site_98/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1 reveal-card">
             <img src="site_98/img/hero.png" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-[2s]" loading="lazy" onerror="this.onerror=null; this.src='https://picsum.photos/seed/aethel98/1600/900';">
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10"></div>
             <div class="absolute inset-0 p-5 flex flex-col justify-between z-20">
@@ -1498,7 +1524,7 @@
             </div>
         </a>
     
-        <a href="site_99/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1">
+        <a href="site_99/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1 reveal-card">
             <img src="site_99/img/hero.png" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-[2s]" loading="lazy" onerror="this.onerror=null; this.src='https://picsum.photos/seed/aethel99/1600/900';">
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10"></div>
             <div class="absolute inset-0 p-5 flex flex-col justify-between z-20">
@@ -1513,7 +1539,7 @@
             </div>
         </a>
     
-        <a href="site_100/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1">
+        <a href="site_100/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1 reveal-card">
             <img src="site_100/img/hero.png" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-[2s]" loading="lazy" onerror="this.onerror=null; this.src='https://picsum.photos/seed/aethel100/1600/900';">
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10"></div>
             <div class="absolute inset-0 p-5 flex flex-col justify-between z-20">
@@ -1528,7 +1554,22 @@
             </div>
         </a>
     
-        <a href="site_101/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] md:aspect-auto md:h-[400px] xl:h-[480px] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1 col-span-1 sm:col-span-2 md:col-span-4 xl:col-span-5">
+        <a href="site_101/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] md:aspect-auto md:h-[400px] xl:h-[480px] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1 col-span-1 sm:col-span-2 md:col-span-4 xl:col-span-5 reveal-card">
+            <img src="site_101/img/hero.png" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-[2s]" loading="lazy" onerror="this.onerror=null; this.src='https://picsum.photos/seed/aethel101/1600/900';">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/45 to-transparent z-10"></div>
+            <div class="absolute inset-0 p-8 flex flex-col justify-between z-20">
+                <div class="flex justify-between items-start">
+                    <span class="bg-cyan-500/20 text-cyan-400 border border-cyan-500/30 text-[10px] uppercase font-bold tracking-widest px-3 py-1 rounded">Autonomous Agent</span>
+                    <span class="text-white/40 text-[10px] font-mono tracking-widest">#101</span>
+                </div>
+                <div class="translate-y-2 group-hover:translate-y-0 transition duration-500 max-w-2xl text-left">
+                    <h3 class="text-2xl md:text-3xl font-black text-white mb-3 tracking-wide">TAKUMI-CORE (自律型AIデザインエージェント)</h3>
+                    <p class="text-xs text-white/70 leading-relaxed opacity-0 group-hover:opacity-100 transition duration-700">この100のプロトタイプを自律的に高速生成した基幹AIエージェント。ビジネス要件の解釈から、UX設計、コード実装までを光の速さで完遂する意思決定エンジン。</p>
+                </div>
+            </div>
+        </a>
+    
+        <a href="site_101/index.html" class="block group relative rounded-xl overflow-hidden bg-[#111] aspect-[4/5] md:aspect-auto md:h-[400px] xl:h-[480px] hover:border-white/20 transition-all shadow-lg hover:scroll-m-1 col-span-1 sm:col-span-2 md:col-span-4 xl:col-span-5 reveal-card">
             <img src="site_101/img/hero.png" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-[2s]" loading="lazy" onerror="this.onerror=null; this.src='https://picsum.photos/seed/aethel101/1600/900';">
             <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/45 to-transparent z-10"></div>
             <div class="absolute inset-0 p-8 flex flex-col justify-between z-20">
@@ -1544,4 +1585,30 @@
         </a>
     </div>
     </main>
+
+    <script>
+        // Lenis Smooth Scroll
+        const lenis = new Lenis();
+        function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+        requestAnimationFrame(raf);
+
+        // GSAP Staggered ScrollTrigger Fade-ins
+        gsap.registerPlugin(ScrollTrigger);
+        gsap.utils.toArray('.reveal-card').forEach(card => {
+            gsap.to(card, {
+                opacity: 1,
+                y: 0,
+                duration: 0.8,
+                ease: 'power2.out',
+                scrollTrigger: {
+                    trigger: card,
+                    start: 'top 90%',
+                    toggleActions: 'play none none none'
+                }
+            });
+        });
+    </script>
 </body></html>

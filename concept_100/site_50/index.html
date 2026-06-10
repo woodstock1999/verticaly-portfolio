@@ -5,169 +5,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>「近くの〇〇」という検索を、すべてあなたの店に。 | MARKETING TECH</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=JetBrains+Mono:wght@400;700&family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;700&family=Noto+Sans+JP:wght@400;700;900&display=swap');
         body {
             font-family: 'Space Grotesk', 'Noto Sans JP', sans-serif;
             background-color: #030307;
+            color: #8f96a3;
         }
-        .code-font {
-            font-family: 'JetBrains Mono', monospace;
-        }
+        .code-font { font-family: 'JetBrains Mono', monospace; }
         .glass-panel {
-            background: rgba(13, 17, 27, 0.7);
+            background: rgba(10, 12, 22, 0.7);
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.04);
         }
-        .glow-cyan {
-            box-shadow: 0 0 40px rgba(6, 182, 212, 0.15);
+        .glow-line {
+            box-shadow: 0 0 25px #3b82f640;
         }
+        .reveal-item { opacity: 0; transform: translateY(30px); }
+        .hud-border { border: 1px solid #3b82f620; }
+        .text-neon { color: #3b82f6; text-shadow: 0 0 10px #3b82f650; }
     </style>
 </head>
-<body class="text-[#8f96a3] min-h-screen antialiased overflow-x-hidden selection:bg-blue-500/30">
+<body class="antialiased overflow-x-hidden selection:bg-blue-500/30">
 
-    <!-- Glowing Cyber Grid Background -->
+    <!-- Cyberpunk grid lines -->
     <div class="fixed inset-0 pointer-events-none z-0 opacity-[0.03]" style="background-image: radial-gradient(rgba(255,255,255,0.15) 1px, transparent 0); background-size: 24px 24px;"></div>
-    <div class="fixed top-0 left-1/4 w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-[150px] pointer-events-none z-0"></div>
-    <div class="fixed bottom-0 right-1/4 w-[500px] h-[500px] bg-purple-600/10 rounded-full blur-[150px] pointer-events-none z-0"></div>
+    <div class="fixed top-0 left-1/4 w-[600px] h-[600px] bg-blue-600/10 rounded-full blur-[140px] pointer-events-none z-0"></div>
 
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 glass-panel border-b border-white/5 px-6 md:px-12 py-5 flex justify-between items-center">
+    <nav class="fixed w-full z-50 glass-panel border-b border-white/5 px-6 md:px-12 py-5 flex justify-between items-center transition-all">
         <div class="font-bold text-xl tracking-tight text-white flex items-center gap-3">
-            <div class="w-3.5 h-3.5 rounded bg-blue-500 shadow-[0_0_15px_rgba(6,182,212,0.6)]"></div>
+            <div class="w-3.5 h-3.5 rounded bg-blue-500 shadow-[0_0_15px_#3b82f6] animate-pulse"></div>
             <span class="tracking-widest uppercase text-sm font-black text-white/90">MARKETING TECH</span>
         </div>
-        <div class="hidden md:flex gap-8 text-xs font-bold text-white/50 tracking-widest uppercase">
-            <a href="#" class="hover:text-white transition">Features</a>
+        <div class="hidden md:flex gap-8 text-[10px] tracking-[0.2em] font-bold text-white/40 uppercase">
             <a href="#" class="hover:text-white transition">Network</a>
-            <a href="#" class="hover:text-white transition">Tokenomics</a>
+            <a href="#" class="hover:text-white transition">Security</a>
+            <a href="#" class="hover:text-white transition">API Docs</a>
         </div>
         <div class="flex items-center gap-4">
-            <a href="../index.html" class="text-[10px] font-bold text-white/40 hover:text-white transition uppercase tracking-widest">HUB</a>
-            <a href="#" class="bg-blue-600 hover:bg-blue-500 text-white px-5 py-2 rounded font-bold text-xs tracking-wider uppercase transition shadow-lg shadow-blue-500/20">導入事例と料金表を見る</a>
+            <a href="../index.html" class="text-[10px] font-bold text-white/30 hover:text-white transition uppercase tracking-widest">HUB</a>
+            <a href="#" class="bg-blue-600 hover:bg-blue-500 text-white px-5 py-2.5 rounded font-bold text-xs tracking-wider uppercase transition shadow-lg shadow-blue-500/20">導入事例と料金表を見る</a>
         </div>
     </nav>
 
-    <main class="pt-[140px] pb-24 relative z-10">
+    <!-- Main -->
+    <main class="pt-[160px] pb-24 relative z-10">
         <div class="px-6 md:px-12 max-w-7xl mx-auto">
-            <div class="text-center max-w-4xl mx-auto mb-20">
-                <span class="bg-white/5 border border-white/10 text-blue-400 px-5 py-1.5 text-[10px] font-bold tracking-widest uppercase rounded mb-6 inline-block">MARKETING TECH / LOCAL SEO</span>
-                <h1 class="text-4xl md:text-6xl font-extrabold mb-8 leading-[1.15] tracking-tight text-white">「近くの〇〇」という検索を、<br>すべてあなたの店に。</h1>
-                <p class="text-lg md:text-xl text-[#8f96a3] max-w-3xl mx-auto leading-relaxed">現代の集客はGoogleマップを制する者が勝ちます。LOCAL MEOは、複数店舗のMEO（マップ検索エンジン最適化）対策、クチコミ管理、データ分析を全自動で行う、ローカルビジネス向け最強のマーケティングSaaS。</p>
+            <!-- Hero -->
+            <div class="text-center max-w-4xl mx-auto mb-20 relative">
+                <span class="bg-white/5 border border-white/10 text-blue-400 px-5 py-1.5 text-[10px] font-bold tracking-widest uppercase rounded mb-6 inline-block">MARKETING TECH</span>
+                <h1 class="text-4xl md:text-6xl font-extrabold mb-8 leading-[1.15] tracking-tight text-white reveal-item" style="transform: translateY(0); opacity: 1;">「近くの〇〇」という検索を、<br>すべてあなたの店に。</h1>
+                <p class="text-lg md:text-xl text-[#8f96a3] max-w-3xl mx-auto leading-relaxed reveal-item" style="transform: translateY(0); opacity: 1;">現代の集客はGoogleマップを制する者が勝ちます。LOCAL MEOは、複数店舗のMEO（マップ検索エンジン最適化）対策、クチコミ管理、データ分析を全自動で行う、ローカルビジネス向け最強のマーケティングSaaS。</p>
             </div>
             
-            <div class="relative w-full aspect-[21/10] md:aspect-video rounded-2xl overflow-hidden glass-panel p-2 shadow-2xl glow-blue border border-white/10 group mb-32">
-                <div class="w-full h-full rounded-xl overflow-hidden">
-                    
-            <div class="relative w-full h-full bg-zinc-900 overflow-hidden">
-                <img src="img/ui.png" class="w-full h-full object-cover transition-transform duration-[5s] group-hover:scale-[1.03]">
-                <div class="absolute inset-0 bg-gradient-to-t from-[#050509] via-transparent to-transparent pointer-events-none"></div>
-            </div>
+            <!-- Hero UI/Mockup -->
+            <div class="relative w-full aspect-[21/10] md:aspect-video rounded-2xl overflow-hidden glass-panel p-2 shadow-2xl glow-line border border-white/10 group mb-32 reveal-item">
+                <div class="w-full h-full rounded-xl overflow-hidden bg-[#07070a]">
+                    <img src="img/ui.png" class="w-full h-full object-cover rounded-xl border border-white/10 shadow-2xl">
                 </div>
             </div>
-        </div><div class="px-6 md:px-12 max-w-7xl mx-auto flex flex-col gap-32 mb-32">
-                <div class="flex flex-col md:flex-row items-center gap-16 ">
-                    <div class="flex-1 space-y-6">
-                        <span class="text-blue-400 font-bold tracking-widest text-xs uppercase block">THE LOCAL SEARCH WAR</span>
-                        <h2 class="text-3xl md:text-4xl font-extrabold text-white leading-tight">「検索されない」という最大の機会損失</h2>
-                        <div class="w-12 h-0.5 bg-blue-500"></div>
-                        <p class="text-base leading-relaxed text-[#8f96a3] font-light">「近くの美味しいカフェ」「今すぐ入れる歯医者」。消費者の行動は、今や100%Googleマップによって決定されています。ここで検索結果のトップ3に入らなければ、あなたの店舗はネット上に存在しないのと同じです。</p>
-                    </div>
-                    <div class="flex-1 w-full aspect-video rounded-xl overflow-hidden glass-panel p-2 border border-white/10 group">
-                        <div class="w-full h-full rounded-lg bg-[#0e111a] overflow-hidden flex items-center justify-center p-6 border border-white/5 relative">
-                            <img src="img/ui.png" class="w-full h-full object-cover transition-transform duration-[5s] group-hover:scale-[1.03]">
-                        </div>
-                    </div>
-                </div>
-                <div class="relative">
-                    <div class="text-center mb-16 max-w-2xl mx-auto">
-                        <span class="text-blue-400 font-bold tracking-widest text-xs uppercase">CENTRALIZED COMMAND</span>
-                        <h2 class="text-3xl md:text-4xl font-extrabold mt-4 text-white">全店舗のマップ情報を、一つの画面で制圧する</h2>
-                    </div>
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        
-                        <div class="glass-panel p-8 rounded-xl hover:border-blue-500/30 transition duration-300 group">
-                            <div class="w-12 h-12 rounded flex items-center justify-center mb-6 bg-blue-500/10 text-blue-400 border border-blue-500/20 group-hover:bg-blue-500/20 transition-all">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                            </div>
-                            <h4 class="text-lg font-bold mb-3 text-white">一括情報アップデート</h4>
-                            <p class="text-sm leading-relaxed text-[#8f96a3]">営業時間の変更や新しいメニューの追加を、1つのダッシュボードから全店舗のGoogleビジネスプロフィールへ一瞬で同期。修正漏れを防ぎます。</p>
-                        </div>
-                        
+        </div>
 
-                        <div class="glass-panel p-8 rounded-xl hover:border-blue-500/30 transition duration-300 group">
-                            <div class="w-12 h-12 rounded flex items-center justify-center mb-6 bg-blue-500/10 text-blue-400 border border-blue-500/20 group-hover:bg-blue-500/20 transition-all">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                            </div>
-                            <h4 class="text-lg font-bold mb-3 text-white">AIクチコミ自動返信アシスタント</h4>
-                            <p class="text-sm leading-relaxed text-[#8f96a3]">日々寄せられるレビューに対し、AIが「店舗のトーン＆マナー」に合わせた丁寧な返信文を自動生成。炎上リスクを回避しつつ、エンゲージメントを高めます。</p>
-                        </div>
-                        
+        <div class="px-6 md:px-12 max-w-7xl mx-auto flex flex-col gap-32 mb-32">
+            
+        </div>
 
-                        <div class="glass-panel p-8 rounded-xl hover:border-blue-500/30 transition duration-300 group">
-                            <div class="w-12 h-12 rounded flex items-center justify-center mb-6 bg-blue-500/10 text-blue-400 border border-blue-500/20 group-hover:bg-blue-500/20 transition-all">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                            </div>
-                            <h4 class="text-lg font-bold mb-3 text-white">ローカル競合トラッキング</h4>
-                            <p class="text-sm leading-relaxed text-[#8f96a3]">半径5km以内のライバル店舗の検索順位やプロモーション状況を常に監視し、「今、どんな施策を打つべきか」をアラート通知します。</p>
-                        </div>
-                        
-                    </div>
-                </div>
-                <div class="flex flex-col md:flex-row items-center gap-16 ">
-                    <div class="flex-1 space-y-6">
-                        <span class="text-blue-400 font-bold tracking-widest text-xs uppercase block">GEOSPATIAL ANALYTICS</span>
-                        <h2 class="text-3xl md:text-4xl font-extrabold text-white leading-tight">「どこから検索されたか」を可視化するヒートマップ</h2>
-                        <div class="w-12 h-0.5 bg-blue-500"></div>
-                        <p class="text-base leading-relaxed text-[#8f96a3] font-light">単なる検索回数ではありません。「どの交差点から」「どの駅の出口から」検索された時に、あなたの店が上位表示されたのかを地図上で色分け（ヒートマップ化）。効果的なチラシ配りや看板設置のデータとしても活用できます。</p>
-                    </div>
-                    <div class="flex-1 w-full aspect-video rounded-xl overflow-hidden glass-panel p-2 border border-white/10 group">
-                        <div class="w-full h-full rounded-lg bg-[#0e111a] overflow-hidden flex items-center justify-center p-6 border border-white/5 relative">
-                            <img src="img/ui.png" class="w-full h-full object-cover transition-transform duration-[5s] group-hover:scale-[1.03]">
-                        </div>
-                    </div>
-                </div>
-                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
-                    <div class="flex-1 space-y-6">
-                        <span class="text-blue-400 font-bold tracking-widest text-xs uppercase block">REPUTATION SHIELD</span>
-                        <h2 class="text-3xl md:text-4xl font-extrabold text-white leading-tight">不正なネガティブレビューからの防衛</h2>
-                        <div class="w-12 h-0.5 bg-blue-500"></div>
-                        <p class="text-base leading-relaxed text-[#8f96a3] font-light">競合他社からの嫌がらせや、Botによる大量の低評価を検知。Googleのポリシー違反に該当する悪質なクチコミを自動でフラグ付けし、プラットフォームへの削除申請プロセスをワンクリックでサポートします。</p>
-                    </div>
-                    <div class="flex-1 w-full aspect-video rounded-xl overflow-hidden glass-panel p-2 border border-white/10 group">
-                        <div class="w-full h-full rounded-lg bg-[#0e111a] overflow-hidden flex items-center justify-center p-6 border border-white/5 relative">
-                            <img src="img/ui.png" class="w-full h-full object-cover transition-transform duration-[5s] group-hover:scale-[1.03]">
-                        </div>
-                    </div>
-                </div>
-                <div class="flex flex-col md:flex-row items-center gap-16 ">
-                    <div class="flex-1 space-y-6">
-                        <span class="text-blue-400 font-bold tracking-widest text-xs uppercase block">CLIENT SUCCESS</span>
-                        <h2 class="text-3xl md:text-4xl font-extrabold text-white leading-tight">Case Study | 全国50店舗の飲食チェーン</h2>
-                        <div class="w-12 h-0.5 bg-blue-500"></div>
-                        <p class="text-base leading-relaxed text-[#8f96a3] font-light">全店舗のMEO管理を店長任せにしていた結果、情報のサイロ化とクチコミの放置が起きていた企業。LOCAL MEO導入後、本部で一括管理しAI返信を活用。わずか3ヶ月でマップ経由の経路検索数が全店平均で180%増加し、来店者数の明確な底上げに成功しました。</p>
-                    </div>
-                    <div class="flex-1 w-full aspect-video rounded-xl overflow-hidden glass-panel p-2 border border-white/10 group">
-                        <div class="w-full h-full rounded-lg bg-[#0e111a] overflow-hidden flex items-center justify-center p-6 border border-white/5 relative">
-                            <img src="img/ui.png" class="w-full h-full object-cover transition-transform duration-[5s] group-hover:scale-[1.03]">
-                        </div>
-                    </div>
-                </div>
-                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
-                    <div class="flex-1 space-y-6">
-                        <span class="text-blue-400 font-bold tracking-widest text-xs uppercase block">OUR VISION</span>
-                        <h2 class="text-3xl md:text-4xl font-extrabold text-white leading-tight">ローカルビジネスに、デジタルの牙を</h2>
-                        <div class="w-12 h-0.5 bg-blue-500"></div>
-                        <p class="text-base leading-relaxed text-[#8f96a3] font-light">美味しい料理や素晴らしいサービスを提供しているのに、知られていない。私たちは、地域に根ざしたビジネスが正当な評価と集客を得られるよう、最強の武器を提供します。</p>
-                    </div>
-                    <div class="flex-1 w-full aspect-video rounded-xl overflow-hidden glass-panel p-2 border border-white/10 group">
-                        <div class="w-full h-full rounded-lg bg-[#0e111a] overflow-hidden flex items-center justify-center p-6 border border-white/5 relative">
-                            <img src="img/ui.png" class="w-full h-full object-cover transition-transform duration-[5s] group-hover:scale-[1.03]">
-                        </div>
-                    </div>
-                </div></div>
-        <div class="px-6 md:px-12 max-w-7xl mx-auto">
+        <!-- CTA -->
+        <div class="px-6 md:px-12 max-w-7xl mx-auto reveal-item">
             <div class="glass-panel rounded-2xl p-12 md:p-24 relative overflow-hidden group shadow-2xl border border-white/10">
                 <div class="absolute -top-32 -right-32 w-96 h-96 bg-blue-600/10 rounded-full blur-[100px]"></div>
                 <div class="relative z-10 text-center max-w-3xl mx-auto">
@@ -182,10 +91,34 @@
         </div>
     </main>
 
-    <!-- Footer -->
     <footer class="py-12 text-center text-xs font-mono tracking-widest text-white/30 border-t border-white/5 bg-[#030307]">
-        <p>&copy; 2026 MARKETING TECH // ALL DECENTRALIZED RIGHTS RESERVED.</p>
+        <p>&copy; 2026 MARKETING TECH // ALL CRYPTOGRAPHIC RIGHTS RESERVED.</p>
     </footer>
 
+    <script>
+        // Lenis Smooth Scroll
+        const lenis = new Lenis();
+        function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+        requestAnimationFrame(raf);
+
+        // GSAP ScrollTrigger Fade-ins
+        gsap.registerPlugin(ScrollTrigger);
+        gsap.utils.toArray('.reveal-item').forEach(item => {
+            gsap.to(item, {
+                opacity: 1,
+                y: 0,
+                duration: 1.0,
+                ease: 'power3.out',
+                scrollTrigger: {
+                    trigger: item,
+                    start: 'top 85%',
+                    toggleActions: 'play none none none'
+                }
+            });
+        });
+    </script>
 </body>
 </html>

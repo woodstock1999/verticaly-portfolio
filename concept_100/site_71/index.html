@@ -3,18 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>充電インフラの空白地帯を、ソフトウェアで埋める。 | ENERGY</title>
+    <title>充電インフラの空白地帯を、ソフトウェアで埋める。 | SITE-71</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Outfit:wght@400;700;900&display=swap');
         body {
             font-family: 'Outfit', 'Dela Gothic One', sans-serif;
-            background-color: #000;
+            background-color: #050505;
         }
         .brutal-card {
             border: 3px solid #000000;
             box-shadow: 6px 6px 0px 0px #000000;
-            background-color: #0c0c0c;
+            background-color: #0d0d0d;
         }
         .brutal-card-color {
             border: 3px solid #000000;
@@ -29,149 +32,85 @@
             transform: translate(-1px, -1px);
             box-shadow: 4px 4px 0px 0px #000000;
         }
-        .acid-glow {
-            text-shadow: 0 0 15px #ffde0070;
+        .marquee-wrapper {
+            overflow: hidden;
+            white-space: nowrap;
+            display: flex;
+            background-color: #ffde00;
+            border-top: 3px solid #000;
+            border-bottom: 3px solid #000;
         }
+        .marquee-content {
+            display: inline-block;
+            animation: marquee 20s linear infinite;
+            padding: 10px 0;
+            font-weight: 900;
+            color: #000;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+        @keyframes marquee {
+            0% { transform: translate3d(0, 0, 0); }
+            100% { transform: translate3d(-50%, 0, 0); }
+        }
+        .reveal-item { opacity: 0; transform: scale(0.95) translateY(20px); }
     </style>
 </head>
 <body class="text-zinc-400 min-h-screen antialiased overflow-x-hidden selection:bg-yellow-500 selection:text-black">
 
+    <!-- Grid background -->
+    <div class="fixed inset-0 pointer-events-none z-0 opacity-[0.08]" style="background-image: radial-gradient(rgba(255,255,255,0.1) 1px, transparent 0); background-size: 20px 20px;"></div>
+
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 bg-black border-b-2 border-black px-6 md:px-12 py-5 flex justify-between items-center">
+    <nav class="fixed w-full z-50 bg-black border-b-3 border-black px-6 md:px-12 py-5 flex justify-between items-center shadow-[0_4px_0_#000]">
         <div class="font-extrabold text-xl tracking-tight text-white flex items-center gap-2">
-            <span class="w-4 h-4 bg-yellow-500 rounded-full border border-black shadow-[0_0_10px_#ffde00]"></span>
-            <span class="tracking-wide uppercase text-sm font-black text-white">ENERGY</span>
+            <span class="w-4 h-4 bg-yellow-500 rounded-full border border-black shadow-[0_0_10px_#ffde00] animate-pulse"></span>
+            <span class="tracking-wide uppercase text-sm font-black text-white">SITE-71</span>
         </div>
-        <div class="hidden md:flex gap-8 text-[10px] font-black tracking-widest uppercase text-white/50">
-            <a href="#" class="hover:text-white transition">Concept</a>
+        <div class="hidden md:flex gap-8 text-[10px] font-black tracking-widest uppercase text-white/40">
             <a href="#" class="hover:text-white transition">Prototype</a>
-            <a href="#" class="hover:text-white transition">Terminal</a>
+            <a href="#" class="hover:text-white transition">Lab_Mode</a>
         </div>
         <div class="flex items-center gap-4">
-            <a href="../index.html" class="text-[9px] font-black text-white/40 hover:text-white transition uppercase tracking-widest">HUB</a>
+            <a href="../index.html" class="text-[9px] font-black text-white/30 hover:text-white transition uppercase tracking-widest">HUB</a>
             <a href="#" class="bg-yellow-500 hover:bg-yellow-400 text-black border-2 border-black px-5 py-2 rounded font-black text-xs tracking-wide uppercase transition brutal-button">導入シミュレーション</a>
         </div>
     </nav>
 
+    <!-- Main -->
     <main class="pt-[140px] pb-24 relative z-10">
         <div class="px-6 md:px-12 max-w-7xl mx-auto">
+            <!-- Hero -->
             <div class="text-center max-w-4xl mx-auto mb-20">
-                <span class="bg-yellow-500 text-black border-2 border-black px-5 py-1.5 text-[9px] font-black tracking-widest uppercase rounded-full inline-block shadow-[2px_2px_0px_#000] mb-8">ENERGY / EV INFRASTRUCTURE</span>
-                <h1 class="text-4xl md:text-7xl font-black mb-8 leading-[1.1] text-white uppercase italic tracking-tight acid-glow">充電インフラの空白地帯を、<br>ソフトウェアで埋める。</h1>
-                <p class="text-base md:text-lg text-zinc-400 font-medium leading-relaxed max-w-3xl mx-auto">集合住宅や月極駐車場に、後付けでスマートEV充電ネットワークを構築する「V-CHARGE」。高額な設備投資なしに、既存のコンセントをIoT化し、課金と電力制御を完全自動化します。</p>
+                <span class="bg-yellow-500 text-black border-2 border-black px-5 py-1.5 text-[9px] font-black tracking-widest uppercase rounded-full inline-block shadow-[2px_2px_0px_#000] mb-8"></span>
+                <h1 class="text-4xl md:text-7xl font-black mb-8 leading-[1.15] text-white uppercase italic tracking-tight reveal-item" style="transform: none; opacity: 1;">充電インフラの空白地帯を、<br>ソフトウェアで埋める。</h1>
+                <p class="text-base md:text-lg text-zinc-400 font-medium leading-relaxed max-w-3xl mx-auto reveal-item" style="transform: none; opacity: 1;">集合住宅や月極駐車場に、後付けでスマートEV充電ネットワークを構築する「V-CHARGE」。高額な設備投資なしに、既存のコンセントをIoT化し、課金と電力制御を完全自動化します。</p>
             </div>
             
-            <div class="relative w-full aspect-[21/10] md:aspect-video rounded-lg overflow-hidden border-4 border-black shadow-[10px_10px_0px_0px_#ffde00] bg-zinc-900 group mb-32">
+            <!-- Hero UI/Mockup -->
+            <div class="relative w-full aspect-[21/10] md:aspect-video rounded-lg overflow-hidden border-4 border-black shadow-[8px_8px_0px_0px_#ffde00] bg-zinc-950 group mb-32 reveal-item">
                 <div class="w-full h-full">
-                    
-            <div class="relative w-full h-full bg-black overflow-hidden border-2 border-black">
-                <img src="img/ui.png" class="w-full h-full object-cover transition-transform duration-[5s] group-hover:scale-[1.03]">
-                <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent pointer-events-none"></div>
-            </div>
+                    <img src="img/ui.png" class="w-full h-full object-cover rounded-xl border border-white/10 shadow-2xl">
                 </div>
             </div>
-        </div><div class="px-6 md:px-12 max-w-7xl mx-auto flex flex-col gap-32 mb-32">
-                <div class="flex flex-col md:flex-row items-center gap-16 ">
-                    <div class="flex-1 space-y-6">
-                        <span class="text-yellow-400 font-black tracking-widest text-xs uppercase block">THE CHARGING GAP</span>
-                        <h2 class="text-3xl md:text-4xl font-black text-white leading-tight uppercase italic">「マンションだからEVが買えない」というジレンマ</h2>
-                        <div class="w-16 h-1 bg-yellow-500 border-2 border-black"></div>
-                        <p class="text-sm leading-relaxed text-zinc-400 font-light">EV（電気自動車）の購入を検討する人の7割が、自宅マンションに充電設備がないことを理由に購入を見送っています。急速充電器を増やすこと以上に、一晩かけてゆっくり充電する「基礎充電」のインフラ不足が、社会的なボトルネックとなっています。</p>
-                    </div>
-                    <div class="flex-1 w-full aspect-video rounded-lg overflow-hidden border-3 border-black shadow-[6px_6px_0px_#000] bg-zinc-900 p-1">
-                        <div class="w-full h-full rounded-sm bg-zinc-950 overflow-hidden flex items-center justify-center p-6 relative">
-                            <img src="img/ui.png" class="w-full h-full object-cover transition-transform duration-[5s] group-hover:scale-[1.03]">
-                        </div>
-                    </div>
-                </div>
-                <div class="relative">
-                    <div class="text-center mb-16 max-w-2xl mx-auto">
-                        <span class="text-yellow-400 font-black tracking-widest text-xs uppercase block">SMART RETROFIT</span>
-                        <h2 class="text-3xl md:text-5xl font-black mt-4 text-white uppercase italic">既存コンセントをIoT化するスマートハブ</h2>
-                    </div>
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        
-                        <div class="brutal-card p-8 rounded-lg hover:translate-y-[-4px] transition duration-200">
-                            <div class="w-12 h-12 rounded-full flex items-center justify-center mb-6 bg-yellow-500 text-black border-2 border-black">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-                            </div>
-                            <h4 class="text-lg font-black mb-3 text-white uppercase">QRコード決済モジュール</h4>
-                            <p class="text-xs leading-relaxed text-zinc-500">既存の200Vコンセントに被せるように設置するだけで完了。利用者はスマホでQRコードを読み取るだけで充電と決済がスタートします。</p>
-                        </div>
-                        
+        </div>
 
-                        <div class="brutal-card p-8 rounded-lg hover:translate-y-[-4px] transition duration-200">
-                            <div class="w-12 h-12 rounded-full flex items-center justify-center mb-6 bg-yellow-500 text-black border-2 border-black">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-                            </div>
-                            <h4 class="text-lg font-black mb-3 text-white uppercase">ダイナミック・ロードバランシング</h4>
-                            <p class="text-xs leading-relaxed text-zinc-500">マンション全体の契約アンペア数を超えないよう、複数のEVが同時に充電した際はAIが自動で電力を分散制御し、ブレーカー落ちを防ぎます。</p>
-                        </div>
-                        
+        <!-- Marquee Banner -->
+        <div class="marquee-wrapper mb-32">
+            <div class="marquee-content">
+                &nbsp;&nbsp;●&nbsp;&nbsp;SITE-71&nbsp;&nbsp;●&nbsp;&nbsp;KINETIC_FLOW_ESTABLISHED&nbsp;&nbsp;●&nbsp;&nbsp;SYSTEM_ONLINE&nbsp;&nbsp;●&nbsp;&nbsp;PROTOTYPE_STABLE&nbsp;&nbsp;●&nbsp;&nbsp;SITE-71&nbsp;&nbsp;●&nbsp;&nbsp;KINETIC_FLOW_ESTABLISHED&nbsp;&nbsp;●&nbsp;&nbsp;SYSTEM_ONLINE&nbsp;&nbsp;●&nbsp;&nbsp;PROTOTYPE_STABLE
+            </div>
+            <div class="marquee-content">
+                &nbsp;&nbsp;●&nbsp;&nbsp;SITE-71&nbsp;&nbsp;●&nbsp;&nbsp;KINETIC_FLOW_ESTABLISHED&nbsp;&nbsp;●&nbsp;&nbsp;SYSTEM_ONLINE&nbsp;&nbsp;●&nbsp;&nbsp;PROTOTYPE_STABLE&nbsp;&nbsp;●&nbsp;&nbsp;SITE-71&nbsp;&nbsp;●&nbsp;&nbsp;KINETIC_FLOW_ESTABLISHED&nbsp;&nbsp;●&nbsp;&nbsp;SYSTEM_ONLINE&nbsp;&nbsp;●&nbsp;&nbsp;PROTOTYPE_STABLE
+            </div>
+        </div>
 
-                        <div class="brutal-card p-8 rounded-lg hover:translate-y-[-4px] transition duration-200">
-                            <div class="w-12 h-12 rounded-full flex items-center justify-center mb-6 bg-yellow-500 text-black border-2 border-black">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-                            </div>
-                            <h4 class="text-lg font-black mb-3 text-white uppercase">オーナー向けの全自動運用</h4>
-                            <p class="text-xs leading-relaxed text-zinc-500">電気代の計算、利用者からの徴収、トラブルサポートまで、管理組合や駐車場オーナーは何もしる必要がありません。</p>
-                        </div>
-                        
-                    </div>
-                </div>
-                <div class="flex flex-col md:flex-row items-center gap-16 ">
-                    <div class="flex-1 space-y-6">
-                        <span class="text-yellow-400 font-black tracking-widest text-xs uppercase block">GRID OPTIMIZATION</span>
-                        <h2 class="text-3xl md:text-4xl font-black text-white leading-tight uppercase italic">夜間の余剰電力を、価値に変える</h2>
-                        <div class="w-16 h-1 bg-yellow-500 border-2 border-black"></div>
-                        <p class="text-sm leading-relaxed text-zinc-400 font-light">V-CHARGEは単なる充電器ではありません。地域全体の電力需要が下がる深夜帯にのみ一斉充電を開始するスマートシフト機能を搭載。電力網への負荷を平準化し、SDGsに直結する次世代のエネルギーマネジメントを実現します。</p>
-                    </div>
-                    <div class="flex-1 w-full aspect-video rounded-lg overflow-hidden border-3 border-black shadow-[6px_6px_0px_#000] bg-zinc-900 p-1">
-                        <div class="w-full h-full rounded-sm bg-zinc-950 overflow-hidden flex items-center justify-center p-6 relative">
-                            <img src="img/ui.png" class="w-full h-full object-cover transition-transform duration-[5s] group-hover:scale-[1.03]">
-                        </div>
-                    </div>
-                </div>
-                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
-                    <div class="flex-1 space-y-6">
-                        <span class="text-yellow-400 font-black tracking-widest text-xs uppercase block">COMMUNITY CHARGE</span>
-                        <h2 class="text-3xl md:text-4xl font-black text-white leading-tight uppercase italic">P2P（個人間）充電シェアリング</h2>
-                        <div class="w-16 h-1 bg-yellow-500 border-2 border-black"></div>
-                        <p class="text-sm leading-relaxed text-zinc-400 font-light">自宅の充電スペースを使わない日中、外部のEVユーザーに貸し出して収益を得るシェアリング機能をアプリに内蔵。街の至る所に「隠れた充電スポット」を創出します。</p>
-                    </div>
-                    <div class="flex-1 w-full aspect-video rounded-lg overflow-hidden border-3 border-black shadow-[6px_6px_0px_#000] bg-zinc-900 p-1">
-                        <div class="w-full h-full rounded-sm bg-zinc-950 overflow-hidden flex items-center justify-center p-6 relative">
-                            <img src="img/ui.png" class="w-full h-full object-cover transition-transform duration-[5s] group-hover:scale-[1.03]">
-                        </div>
-                    </div>
-                </div>
-                <div class="flex flex-col md:flex-row items-center gap-16 ">
-                    <div class="flex-1 space-y-6">
-                        <span class="text-yellow-400 font-black tracking-widest text-xs uppercase block">SUCCESS STORY</span>
-                        <h2 class="text-3xl md:text-4xl font-black text-white leading-tight uppercase italic">Case Study | 築20年の大規模分譲マンション</h2>
-                        <div class="w-16 h-1 bg-yellow-500 border-2 border-black"></div>
-                        <p class="text-sm leading-relaxed text-zinc-400 font-light">住民からの「充電器を設置してほしい」という要望に対し、管理組合は多額の初期費用に難色を示していました。しかしV-CHARGEの「初期費用ゼロ・収益還元型モデル」を導入したことで、合意形成がスムーズに完了。現在ではマンションの資産価値向上に寄与しています。</p>
-                    </div>
-                    <div class="flex-1 w-full aspect-video rounded-lg overflow-hidden border-3 border-black shadow-[6px_6px_0px_#000] bg-zinc-900 p-1">
-                        <div class="w-full h-full rounded-sm bg-zinc-950 overflow-hidden flex items-center justify-center p-6 relative">
-                            <img src="img/ui.png" class="w-full h-full object-cover transition-transform duration-[5s] group-hover:scale-[1.03]">
-                        </div>
-                    </div>
-                </div>
-                <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
-                    <div class="flex-1 space-y-6">
-                        <span class="text-yellow-400 font-black tracking-widest text-xs uppercase block">OUR VISION</span>
-                        <h2 class="text-3xl md:text-4xl font-black text-white leading-tight uppercase italic">プラグを挿せば、すべてが終わる世界</h2>
-                        <div class="w-16 h-1 bg-yellow-500 border-2 border-black"></div>
-                        <p class="text-sm leading-relaxed text-zinc-400 font-light">私たちは、わざわざ「充電しに行く」という行為自体をなくします。帰宅してプラグを挿すだけ。裏側の複雑な電力取引や課金は、すべてV-CHARGEのアルゴリズムが処理します。</p>
-                    </div>
-                    <div class="flex-1 w-full aspect-video rounded-lg overflow-hidden border-3 border-black shadow-[6px_6px_0px_#000] bg-zinc-900 p-1">
-                        <div class="w-full h-full rounded-sm bg-zinc-950 overflow-hidden flex items-center justify-center p-6 relative">
-                            <img src="img/ui.png" class="w-full h-full object-cover transition-transform duration-[5s] group-hover:scale-[1.03]">
-                        </div>
-                    </div>
-                </div></div>
-        <div class="px-6 md:px-12 max-w-7xl mx-auto">
+        <div class="px-6 md:px-12 max-w-7xl mx-auto flex flex-col gap-32 mb-32">
+            
+        </div>
+
+        <!-- CTA -->
+        <div class="px-6 md:px-12 max-w-7xl mx-auto reveal-item">
             <div class="brutal-card-color rounded-lg p-12 md:p-24 relative overflow-hidden border-4 border-black text-black">
                 <div class="relative z-10 text-center max-w-3xl mx-auto space-y-8">
                     <h2 class="text-3xl md:text-5xl font-black uppercase italic tracking-tight">すべての駐車スペースを、給油所に。</h2>
@@ -187,9 +126,35 @@
     </main>
 
     <!-- Footer -->
-    <footer class="py-12 text-center text-[10px] font-black tracking-widest text-zinc-500 border-t-2 border-black bg-black">
-        <p>&copy; 2026 ENERGY &mdash; PROTOCOL // 0x29C5A.</p>
+    <footer class="py-12 text-center text-[10px] font-black tracking-widest text-zinc-600 border-t-3 border-black bg-black">
+        <p>&copy; 2026 SITE-71 &mdash; PROTOCOL // 0x2A9C.</p>
     </footer>
 
+    <script>
+        // Lenis Smooth Scroll
+        const lenis = new Lenis();
+        function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+        requestAnimationFrame(raf);
+
+        // GSAP ScrollTrigger Scale/Fade-ins
+        gsap.registerPlugin(ScrollTrigger);
+        gsap.utils.toArray('.reveal-item').forEach(item => {
+            gsap.to(item, {
+                opacity: 1,
+                scale: 1,
+                y: 0,
+                duration: 0.8,
+                ease: 'back.out(1.4)',
+                scrollTrigger: {
+                    trigger: item,
+                    start: 'top 85%',
+                    toggleActions: 'play none none none'
+                }
+            });
+        });
+    </script>
 </body>
 </html>
