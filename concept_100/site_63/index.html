@@ -3,164 +3,188 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EMPATHY HR | 離職防ぐSaaS</title>
+    <title>「共感力」という最強のスキルを可視化する。 | HR TECH</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', 'Noto Sans JP', sans-serif; }
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;700&family=Noto+Sans+JP:wght@400;700;900&display=swap');
+        body {
+            font-family: 'Space Grotesk', 'Noto Sans JP', sans-serif;
+            background-color: #030307;
+        }
+        .code-font {
+            font-family: 'JetBrains Mono', monospace;
+        }
+        .glass-panel {
+            background: rgba(13, 17, 27, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .glow-cyan {
+            box-shadow: 0 0 40px rgba(6, 182, 212, 0.15);
+        }
     </style>
 </head>
-<body class="bg-gray-50 text-stone-800 min-h-screen font-sans antialiased overflow-x-hidden">
+<body class="text-[#8f96a3] min-h-screen antialiased overflow-x-hidden selection:bg-indigo-500/30">
+
+    <!-- Glowing Cyber Grid Background -->
+    <div class="fixed inset-0 pointer-events-none z-0 opacity-[0.03]" style="background-image: radial-gradient(rgba(255,255,255,0.15) 1px, transparent 0); background-size: 24px 24px;"></div>
+    <div class="fixed top-0 left-1/4 w-[500px] h-[500px] bg-indigo-600/10 rounded-full blur-[150px] pointer-events-none z-0"></div>
+    <div class="fixed bottom-0 right-1/4 w-[500px] h-[500px] bg-purple-600/10 rounded-full blur-[150px] pointer-events-none z-0"></div>
 
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 backdrop-blur-md bg-opacity-90 bg-white/90 border-b border-gray-200 px-8 py-4 flex justify-between items-center transition-all shadow-sm">
-        <div class="font-black text-2xl tracking-tighter text-yellow-400">EMPATHY HR</div>
-        <div class="hidden md:flex gap-8 text-sm font-bold text-gray-300">
-            <a href="#" class="hover:text-yellow-400 transition">特徴</a>
-            <a href="#" class="hover:text-yellow-400 transition">機能</a>
-            <a href="#" class="hover:text-yellow-400 transition">料金</a>
+    <nav class="fixed w-full z-50 glass-panel border-b border-white/5 px-6 md:px-12 py-5 flex justify-between items-center">
+        <div class="font-bold text-xl tracking-tight text-white flex items-center gap-3">
+            <div class="w-3.5 h-3.5 rounded bg-indigo-500 shadow-[0_0_15px_rgba(6,182,212,0.6)]"></div>
+            <span class="tracking-widest uppercase text-sm font-black text-white/90">HR TECH</span>
         </div>
-        <a href="#" class="bg-yellow-500 hover:bg-yellow-400 text-black px-6 py-2 rounded-full font-bold text-sm transition transform hover:scale-105">組織診断デモを予約する</a>
+        <div class="hidden md:flex gap-8 text-xs font-bold text-white/50 tracking-widest uppercase">
+            <a href="#" class="hover:text-white transition">Features</a>
+            <a href="#" class="hover:text-white transition">Network</a>
+            <a href="#" class="hover:text-white transition">Tokenomics</a>
+        </div>
+        <div class="flex items-center gap-4">
+            <a href="../index.html" class="text-[10px] font-bold text-white/40 hover:text-white transition uppercase tracking-widest">HUB</a>
+            <a href="#" class="bg-indigo-600 hover:bg-indigo-500 text-white px-5 py-2 rounded font-bold text-xs tracking-wider uppercase transition shadow-lg shadow-indigo-500/20">START HR TECH</a>
+        </div>
     </nav>
 
-    <!-- Hero Section -->
-    
-    <main class="pt-[140px] pb-24 px-6 md:px-12 max-w-7xl mx-auto">
-        <div class="text-center max-w-4xl mx-auto mb-20 relative">
-            <span class="bg-gray-100 text-indigo-600 border border-gray-200 px-5 py-2 text-xs font-black rounded-full tracking-widest mb-8 inline-block shadow-sm uppercase">HR TECH / EMOTIONAL AI</span>
-            <h1 class="text-4xl md:text-[54px] font-black mb-8 leading-[1.2] tracking-tight text-gray-900">「共感力」という<br>最強のスキルを可視化する。</h1>
-            <p class="text-lg md:text-xl text-gray-600 font-medium leading-relaxed max-w-3xl mx-auto">論理的思考力だけでは、現代の複雑なチームは率えません。EMPATHY HRは、面接時の微細な表情変化、声のトーン、言葉の選び方をAIが解析し、履歴書には書かれないEQ（心の知能指数）と共感力を客観的にスコアリングする次世代採用ツールです。</p>
-        </div>
-
-        <div class="relative w-full aspect-[21/9] md:aspect-video rounded-[32px] overflow-hidden shadow-2xl mb-32 border border-gray-200/50 group bg-zinc-900">
-            <img src="img/ui.png" alt="UI Dashboard" class="w-full h-full object-cover transition-transform duration-[3s] group-hover:scale-[1.02]">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none blend-overlay"></div>
-        </div>
-
-        <div class="flex flex-col gap-32 mb-32">
-        
+    <main class="pt-[140px] pb-24 relative z-10">
+        <div class="px-6 md:px-12 max-w-7xl mx-auto">
+            <div class="text-center max-w-4xl mx-auto mb-20">
+                <span class="bg-white/5 border border-white/10 text-indigo-400 px-5 py-1.5 text-[10px] font-bold tracking-widest uppercase rounded mb-6 inline-block">HR TECH / EMOTIONAL AI</span>
+                <h1 class="text-4xl md:text-6xl font-extrabold mb-8 leading-[1.15] tracking-tight text-white">「共感力」という<br>最強のスキルを可視化する。</h1>
+                <p class="text-lg md:text-xl text-[#8f96a3] max-w-3xl mx-auto leading-relaxed">論理的思考力だけでは、現代の複雑なチームは率えません。EMPATHY HRは、面接時の微細な表情変化、声のトーン、言葉の選び方をAIが解析し、履歴書には書かれないEQ（心の知能指数）と共感力を客観的にスコアリングする次世代採用ツールです。</p>
+            </div>
+            
+            <div class="relative w-full aspect-[21/10] md:aspect-video rounded-2xl overflow-hidden glass-panel p-2 shadow-2xl glow-indigo border border-white/10 group mb-32">
+                <div class="w-full h-full rounded-xl overflow-hidden">
+                    
+            <div class="relative w-full h-full bg-zinc-900 overflow-hidden">
+                <img src="img/ui.png" class="w-full h-full object-cover transition-transform duration-[5s] group-hover:scale-[1.03]">
+                <div class="absolute inset-0 bg-gradient-to-t from-[#050509] via-transparent to-transparent pointer-events-none"></div>
+            </div>
+                </div>
+            </div>
+        </div><div class="px-6 md:px-12 max-w-7xl mx-auto flex flex-col gap-32 mb-32">
                 <div class="flex flex-col md:flex-row items-center gap-16 ">
                     <div class="flex-1 space-y-6">
-                        <span class="text-indigo-600 font-bold tracking-widest text-sm uppercase">THE TOXIC HIGH-PERFORMER</span>
-                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">「頭の回転が速い」だけの人材が引き起こす悲劇</h2>
-                        <div class="w-12 h-1 bg-indigo-500 rounded"></div>
-                        <p class="text-lg text-gray-600 leading-relaxed font-light">素晴らしい経歴と論理的なプレゼン能力。面接では完璧に見えた人材が、入社後にチームの士気を下げ、優秀なメンバーの離職を引き起こす「トキシック（有害）な人材」だった。この採用の失敗は、従来のアセスメントテストや面接官の直感では防ぐことができません。</p>
+                        <span class="text-indigo-400 font-bold tracking-widest text-xs uppercase block">THE TOXIC HIGH-PERFORMER</span>
+                        <h2 class="text-3xl md:text-4xl font-extrabold text-white leading-tight">「頭の回転が速い」だけの人材が引き起こす悲劇</h2>
+                        <div class="w-12 h-0.5 bg-indigo-500"></div>
+                        <p class="text-base leading-relaxed text-[#8f96a3] font-light">素晴らしい経歴と論理的なプレゼン能力。面接では完璧に見えた人材が、入社後にチームの士気を下げ、優秀なメンバーの離職を引き起こす「トキシック（有害）な人材」だった。この採用の失敗は、従来のアセスメントテストや面接官の直感では防ぐことができません。</p>
                     </div>
-                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
-                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;">
-                        <div class="absolute inset-0 bg-gradient-to-tr from-indigo-900/20 to-transparent"></div>
+                    <div class="flex-1 w-full aspect-video rounded-xl overflow-hidden glass-panel p-2 border border-white/10 group">
+                        <div class="w-full h-full rounded-lg bg-[#0e111a] overflow-hidden flex items-center justify-center p-6 border border-white/5 relative">
+                            <img src="img/ui.png" class="w-full h-full object-cover transition-transform duration-[5s] group-hover:scale-[1.03]">
+                        </div>
                     </div>
                 </div>
-                
-                <div class="mt-10">
-                    <div class="text-center mb-16">
-                        <span class="text-indigo-600 font-bold tracking-widest text-sm uppercase">NON-VERBAL ANALYTICS</span>
-                        <h2 class="text-3xl md:text-4xl font-black mt-4 text-gray-900">非言語コミュニケーションのディープラーニング</h2>
+                <div class="relative">
+                    <div class="text-center mb-16 max-w-2xl mx-auto">
+                        <span class="text-indigo-400 font-bold tracking-widest text-xs uppercase">NON-VERBAL ANALYTICS</span>
+                        <h2 class="text-3xl md:text-4xl font-extrabold mt-4 text-white">非言語コミュニケーションのディープラーニング</h2>
                     </div>
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                         
-<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
-    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-indigo-50 text-indigo-600 border border-indigo-200">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-    </div>
-    <h4 class="text-xl font-bold mb-3 text-gray-900">マイクロ・エクスプレッション解析</h4>
-    <p class="text-gray-600 text-sm leading-relaxed">オンライン面接中の動画から、肉眼では捉えきれない1/10秒単位の微表情（怒り、軽蔑、共感）を読み取り、ストレス耐性や他者への配慮をスコア化します。</p>
-</div>
+                        <div class="glass-panel p-8 rounded-xl hover:border-indigo-500/30 transition duration-300 group">
+                            <div class="w-12 h-12 rounded flex items-center justify-center mb-6 bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 group-hover:bg-indigo-500/20 transition-all">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            </div>
+                            <h4 class="text-lg font-bold mb-3 text-white">マイクロ・エクスプレッション解析</h4>
+                            <p class="text-sm leading-relaxed text-[#8f96a3]">オンライン面接中の動画から、肉眼では捉えきれない1/10秒単位の微表情（怒り、軽蔑、共感）を読み取り、ストレス耐性や他者への配慮をスコア化します。</p>
+                        </div>
+                        
 
+                        <div class="glass-panel p-8 rounded-xl hover:border-indigo-500/30 transition duration-300 group">
+                            <div class="w-12 h-12 rounded flex items-center justify-center mb-6 bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 group-hover:bg-indigo-500/20 transition-all">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            </div>
+                            <h4 class="text-lg font-bold mb-3 text-white">声の「波形」に隠された真意</h4>
+                            <p class="text-sm leading-relaxed text-[#8f96a3]">発話の速度、ピッチの揺らぎ、間（ポーズ）の取り方を音声解析AIが分析。自信の裏にある不安や、相手の話を聞き入れる受容性の高さを評価します。</p>
+                        </div>
+                        
 
-<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
-    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-indigo-50 text-indigo-600 border border-indigo-200">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-    </div>
-    <h4 class="text-xl font-bold mb-3 text-gray-900">声の「波形」に隠された真意</h4>
-    <p class="text-gray-600 text-sm leading-relaxed">発話の速度、ピッチの揺らぎ、間（ポーズ）の取り方を音声解析AIが分析。自信の裏にある不安や、相手の話を聞き入れる受容性の高さを評価します。</p>
-</div>
-
-
-<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
-    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-indigo-50 text-indigo-600 border border-indigo-200">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-    </div>
-    <h4 class="text-xl font-bold mb-3 text-gray-900">セマンティック（意味論）解析</h4>
-    <p class="text-gray-600 text-sm leading-relaxed">「I（私）」と「We（私たち）」の出現頻度、失敗を語る際の他責思考の有無など、使用する単語の文脈から深層心理にある価値観をあぶり出します。</p>
-</div>
-
+                        <div class="glass-panel p-8 rounded-xl hover:border-indigo-500/30 transition duration-300 group">
+                            <div class="w-12 h-12 rounded flex items-center justify-center mb-6 bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 group-hover:bg-indigo-500/20 transition-all">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            </div>
+                            <h4 class="text-lg font-bold mb-3 text-white">セマンティック（意味論）解析</h4>
+                            <p class="text-sm leading-relaxed text-[#8f96a3]">「I（私）」と「We（私たち）」の出現頻度、失敗を語る際の他責思考の有無など、使用する単語の文脈から深層心理にある価値観をあぶり出します。</p>
+                        </div>
+                        
                     </div>
                 </div>
-                
                 <div class="flex flex-col md:flex-row items-center gap-16 ">
                     <div class="flex-1 space-y-6">
-                        <span class="text-indigo-600 font-bold tracking-widest text-sm uppercase">BIAS-FREE ASSESSMENT</span>
-                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">バイアスのない、絶対的なフェアマッチング</h2>
-                        <div class="w-12 h-1 bg-indigo-500 rounded"></div>
-                        <p class="text-lg text-gray-600 leading-relaxed font-light">面接官も人間です。「自分と似た雰囲気」や「学歴」に無意識の好意（ハロー効果）を抱いてしまいます。EMPATHY HRのAIは、性別、人種、年齢といった属性データを完全に無視し、純粋な「対人関係構築力」のみをフラットに評価します。</p>
+                        <span class="text-indigo-400 font-bold tracking-widest text-xs uppercase block">BIAS-FREE ASSESSMENT</span>
+                        <h2 class="text-3xl md:text-4xl font-extrabold text-white leading-tight">バイアスのない、絶対的なフェアマッチング</h2>
+                        <div class="w-12 h-0.5 bg-indigo-500"></div>
+                        <p class="text-base leading-relaxed text-[#8f96a3] font-light">面接官も人間です。「自分と似た雰囲気」や「学歴」に無意識の好意（ハロー効果）を抱いてしまいます。EMPATHY HRのAIは、性別、人種、年齢といった属性データを完全に無視し、純粋な「対人関係構築力」のみをフラットに評価します。</p>
                     </div>
-                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
-                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;">
-                        <div class="absolute inset-0 bg-gradient-to-tr from-indigo-900/20 to-transparent"></div>
+                    <div class="flex-1 w-full aspect-video rounded-xl overflow-hidden glass-panel p-2 border border-white/10 group">
+                        <div class="w-full h-full rounded-lg bg-[#0e111a] overflow-hidden flex items-center justify-center p-6 border border-white/5 relative">
+                            <img src="img/ui.png" class="w-full h-full object-cover transition-transform duration-[5s] group-hover:scale-[1.03]">
+                        </div>
                     </div>
                 </div>
-                
                 <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
                     <div class="flex-1 space-y-6">
-                        <span class="text-indigo-600 font-bold tracking-widest text-sm uppercase">TEAM DYNAMICS</span>
-                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">入社後の「心理的安全性」を予測する</h2>
-                        <div class="w-12 h-1 bg-indigo-500 rounded"></div>
-                        <p class="text-lg text-gray-600 leading-relaxed font-light">単に個人のEQを測るだけでなく、既存チームのメンバーのEQデータと掛け合わせることで、「この候補者が入社した場合、チームの心理的安全性がどう変化するか」をシミュレーション。最強のシナジーを生むカルチャーフィットを予測します。</p>
+                        <span class="text-indigo-400 font-bold tracking-widest text-xs uppercase block">TEAM DYNAMICS</span>
+                        <h2 class="text-3xl md:text-4xl font-extrabold text-white leading-tight">入社後の「心理的安全性」を予測する</h2>
+                        <div class="w-12 h-0.5 bg-indigo-500"></div>
+                        <p class="text-base leading-relaxed text-[#8f96a3] font-light">単に個人のEQを測るだけでなく、既存チームのメンバーのEQデータと掛け合わせることで、「この候補者が入社した場合、チームの心理的安全性がどう変化するか」をシミュレーション。最強のシナジーを生むカルチャーフィットを予測します。</p>
                     </div>
-                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
-                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: bottom right;">
-                        <div class="absolute inset-0 bg-gradient-to-tr from-indigo-900/20 to-transparent"></div>
+                    <div class="flex-1 w-full aspect-video rounded-xl overflow-hidden glass-panel p-2 border border-white/10 group">
+                        <div class="w-full h-full rounded-lg bg-[#0e111a] overflow-hidden flex items-center justify-center p-6 border border-white/5 relative">
+                            <img src="img/ui.png" class="w-full h-full object-cover transition-transform duration-[5s] group-hover:scale-[1.03]">
+                        </div>
                     </div>
                 </div>
-                
                 <div class="flex flex-col md:flex-row items-center gap-16 ">
                     <div class="flex-1 space-y-6">
-                        <span class="text-indigo-600 font-bold tracking-widest text-sm uppercase">CLIENT SUCCESS</span>
-                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">Case Study | 急成長中のSaaSスタートアップ</h2>
-                        <div class="w-12 h-1 bg-indigo-500 rounded"></div>
-                        <p class="text-lg text-gray-600 leading-relaxed font-light">組織の急拡大に伴い、マネージャー層の離職とチームの崩壊が相次いでいた企業。EMPATHY HRを採用プロセスに導入し、スキル以上に「エンパシー（共感）スコア」を重視してリーダーを採用するように変更。結果として、1年後の離職率が40%から5%に劇的に改善し、チーム全体の生産性も向上しました。</p>
+                        <span class="text-indigo-400 font-bold tracking-widest text-xs uppercase block">CLIENT SUCCESS</span>
+                        <h2 class="text-3xl md:text-4xl font-extrabold text-white leading-tight">Case Study | 急成長中のSaaSスタートアップ</h2>
+                        <div class="w-12 h-0.5 bg-indigo-500"></div>
+                        <p class="text-base leading-relaxed text-[#8f96a3] font-light">組織の急拡大に伴い、マネージャー層の離職とチームの崩壊が相次いでいた企業。EMPATHY HRを採用プロセスに導入し、スキル以上に「エンパシー（共感）スコア」を重視してリーダーを採用するように変更。結果として、1年後の離職率が40%から5%に劇的に改善し、チーム全体の生産性も向上しました。</p>
                     </div>
-                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
-                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;">
-                        <div class="absolute inset-0 bg-gradient-to-tr from-indigo-900/20 to-transparent"></div>
+                    <div class="flex-1 w-full aspect-video rounded-xl overflow-hidden glass-panel p-2 border border-white/10 group">
+                        <div class="w-full h-full rounded-lg bg-[#0e111a] overflow-hidden flex items-center justify-center p-6 border border-white/5 relative">
+                            <img src="img/ui.png" class="w-full h-full object-cover transition-transform duration-[5s] group-hover:scale-[1.03]">
+                        </div>
                     </div>
                 </div>
-                
                 <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
                     <div class="flex-1 space-y-6">
-                        <span class="text-indigo-600 font-bold tracking-widest text-sm uppercase">OUR VISION</span>
-                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">「優しい」が、最も「強い」時代へ</h2>
-                        <div class="w-12 h-1 bg-indigo-500 rounded"></div>
-                        <p class="text-lg text-gray-600 leading-relaxed font-light">正解のない予測不可能な時代において、組織のレジリエンス（回復力）を決めるのは、メンバー同士の深い共感と信頼です。私たちはテクノロジーを用いて、人間の「思いやり」をビジネスの最重要KPIへと押し上げます。</p>
+                        <span class="text-indigo-400 font-bold tracking-widest text-xs uppercase block">OUR VISION</span>
+                        <h2 class="text-3xl md:text-4xl font-extrabold text-white leading-tight">「優しい」が、最も「強い」時代へ</h2>
+                        <div class="w-12 h-0.5 bg-indigo-500"></div>
+                        <p class="text-base leading-relaxed text-[#8f96a3] font-light">正解のない予測不可能な時代において、組織のレジリエンス（回復力）を決めるのは、メンバー同士の深い共感と信頼です。私たちはテクノロジーを用いて、人間の「思いやり」をビジネスの最重要KPIへと押し上げます。</p>
                     </div>
-                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
-                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: bottom right;">
-                        <div class="absolute inset-0 bg-gradient-to-tr from-indigo-900/20 to-transparent"></div>
+                    <div class="flex-1 w-full aspect-video rounded-xl overflow-hidden glass-panel p-2 border border-white/10 group">
+                        <div class="w-full h-full rounded-lg bg-[#0e111a] overflow-hidden flex items-center justify-center p-6 border border-white/5 relative">
+                            <img src="img/ui.png" class="w-full h-full object-cover transition-transform duration-[5s] group-hover:scale-[1.03]">
+                        </div>
                     </div>
+                </div></div>
+        <div class="px-6 md:px-12 max-w-7xl mx-auto">
+            <div class="glass-panel rounded-2xl p-12 md:p-24 relative overflow-hidden group shadow-2xl border border-white/10">
+                <div class="absolute -top-32 -right-32 w-96 h-96 bg-indigo-600/10 rounded-full blur-[100px]"></div>
+                <div class="relative z-10 text-center max-w-3xl mx-auto">
+                    <h2 class="text-3xl md:text-5xl font-extrabold mb-6 text-white">優秀な「クラッシャー」を採用しないために。</h2>
+                    <p class="text-base text-[#8f96a3] mb-10 leading-relaxed max-w-xl mx-auto">どんなに高い専門スキルを持っていても、チームを崩壊させる人材は組織の負債です。真のリーダーシップを見極めましょう。</p>
+                    <a href="#" class="bg-indigo-600 hover:bg-indigo-500 text-white px-10 py-4 rounded font-bold text-sm tracking-wider uppercase inline-flex items-center gap-3 transition shadow-lg shadow-indigo-500/20">
+                        START HR TECH
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                    </a>
                 </div>
-                
-        </div>
-
-        <div class="text-center bg-gray-900 border border-gray-800 rounded-[3rem] p-16 md:p-32 relative overflow-hidden group shadow-2xl">
-            <div class="absolute inset-0 bg-gradient-to-br from-indigo-900/40 to-transparent"></div>
-            <div class="relative z-10">
-                <h2 class="text-4xl md:text-5xl font-black mb-8 text-white">優秀な「クラッシャー」を採用しないために。</h2>
-                <p class="text-gray-300 mb-12 max-w-xl mx-auto text-lg leading-relaxed">どんなに高い専門スキルを持っていても、チームを崩壊させる人材は組織の負債です。真のリーダーシップを見極めましょう。</p>
-                <a href="#" class="bg-indigo-500 hover:bg-indigo-400 text-white px-12 py-5 rounded-full font-bold text-lg inline-flex items-center gap-3 transition transform hover:-translate-y-1 shadow-lg shadow-indigo-500/30">
-                    EQ解析のデモを見る
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                </a>
             </div>
         </div>
     </main>
-        
 
     <!-- Footer -->
-    <footer class="py-8 text-center text-sm font-medium text-zinc-600 border-t border-white/10">
-        <p>&copy; 2026 EMPATHY HR. TAKUMI DESIGN AGENT.</p>
+    <footer class="py-12 text-center text-xs font-mono tracking-widest text-white/30 border-t border-white/5 bg-[#030307]">
+        <p>&copy; 2026 HR TECH // ALL DECENTRALIZED RIGHTS RESERVED.</p>
     </footer>
 
 </body>

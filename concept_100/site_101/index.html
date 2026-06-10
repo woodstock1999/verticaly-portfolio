@@ -3,169 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TAKUMI-CORE | 自律型AIデザインエージェント</title>
+    <title>「アイデア」から「実装」まで、光の速さで到達する。 | AI</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', 'Noto Sans JP', sans-serif; }
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;700&family=Noto+Sans+JP:wght@400;700;900&display=swap');
+        body {
+            font-family: 'Space Grotesk', 'Noto Sans JP', sans-serif;
+            background-color: #030307;
+        }
+        .code-font {
+            font-family: 'JetBrains Mono', monospace;
+        }
+        .glass-panel {
+            background: rgba(13, 17, 27, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .glow-cyan {
+            box-shadow: 0 0 40px rgba(6, 182, 212, 0.15);
+        }
     </style>
 </head>
-<body class="bg-black text-gray-400 min-h-screen">
+<body class="text-[#8f96a3] min-h-screen antialiased overflow-x-hidden selection:bg-blue-500/30">
+
+    <!-- Glowing Cyber Grid Background -->
+    <div class="fixed inset-0 pointer-events-none z-0 opacity-[0.03]" style="background-image: radial-gradient(rgba(255,255,255,0.15) 1px, transparent 0); background-size: 24px 24px;"></div>
+    <div class="fixed top-0 left-1/4 w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-[150px] pointer-events-none z-0"></div>
+    <div class="fixed bottom-0 right-1/4 w-[500px] h-[500px] bg-purple-600/10 rounded-full blur-[150px] pointer-events-none z-0"></div>
 
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 backdrop-blur-lg bg-opacity-80 bg-black/50 border-b border-white/5 px-8 mb-4 py-5 flex justify-between items-center transition-all">
-        <div class="font-black text-2xl tracking-tighter text-white">TAKUMI-CORE</div>
-        <div class="hidden md:flex gap-10 text-sm font-bold text-gray-400">
-            <a href="#" class="hover:text-white transition">機能・メリット</a>
-            <a href="#" class="hover:text-white transition">活用事例</a>
-            <a href="#" class="hover:text-white transition">ご導入について</a>
+    <nav class="fixed w-full z-50 glass-panel border-b border-white/5 px-6 md:px-12 py-5 flex justify-between items-center">
+        <div class="font-bold text-xl tracking-tight text-white flex items-center gap-3">
+            <div class="w-3.5 h-3.5 rounded bg-blue-500 shadow-[0_0_15px_rgba(6,182,212,0.6)]"></div>
+            <span class="tracking-widest uppercase text-sm font-black text-white/90">AI</span>
         </div>
-        <a href="#" class="bg-white hover:bg-gray-200 text-black border border-transparent shadow-[0_0_30px_rgba(255,255,255,0.3)] px-6 py-2.5 rounded-full font-bold text-sm transition transform hover:scale-105">コンタクトはこちら</a>
+        <div class="hidden md:flex gap-8 text-xs font-bold text-white/50 tracking-widest uppercase">
+            <a href="#" class="hover:text-white transition">Features</a>
+            <a href="#" class="hover:text-white transition">Network</a>
+            <a href="#" class="hover:text-white transition">Tokenomics</a>
+        </div>
+        <div class="flex items-center gap-4">
+            <a href="../index.html" class="text-[10px] font-bold text-white/40 hover:text-white transition uppercase tracking-widest">HUB</a>
+            <a href="#" class="bg-blue-600 hover:bg-blue-500 text-white px-5 py-2 rounded font-bold text-xs tracking-wider uppercase transition shadow-lg shadow-blue-500/20">ご導入について</a>
+        </div>
     </nav>
 
-    <!-- Hero Section -->
-    
-<main class="pt-[140px] pb-24 px-6 md:px-12 max-w-7xl mx-auto">
-    <div class="text-center max-w-4xl mx-auto mb-20 relative">
-        <span class="bg-white/5 text-white border border-white/10 px-5 py-2 text-xs font-black rounded-full tracking-widest mb-8 inline-block shadow-sm uppercase">AI / DESIGN AGENT</span>
-        <h1 class="text-4xl md:text-[54px] font-black mb-8 leading-[1.2] tracking-tight text-white">「アイデア」から「実装」まで、<br>光の速さで到達する。</h1>
-        <p class="text-lg md:text-xl text-gray-400 font-medium leading-relaxed max-w-3xl mx-auto">デザイナーを探し、コーダーを雇い、数ヶ月待つ時代は終わりました。TAKUMI-COREは、あなたのビジネスプランを理解し、一瞬でプロフェッショナルなLPとシステムを構築する自律型AIデザインエージェントです。</p>
-    </div>
-
-    <div class="relative w-full aspect-[21/9] md:aspect-video rounded-[32px] overflow-hidden shadow-2xl mb-32 border border-white/10 group bg-zinc-900">
-        <div class="absolute inset-0 bg-gradient-to-br from-gray-900 to-black flex items-center justify-center p-8 border border-white/10 rounded-[32px] z-10 pointer-events-none">
-            <div class="text-center">
-               <div class="w-24 h-24 mx-auto border-4 border-gray-500/50 rounded-full border-t-white animate-spin mb-8"></div>
-               <h3 class="text-3xl font-black text-white tracking-widest uppercase mb-4 opacity-80">UI SYSTEM ONLINE</h3>
-               <p class="text-gray-400 font-mono text-sm">[ PROTOTYPE CONCEPT RENDER ]</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="flex flex-col gap-32 mb-32">
-    
-            <div class="flex flex-col md:flex-row items-center gap-16 ">
-                <div class="flex-1 space-y-6">
-                    <span class="text-white/50 font-bold tracking-widest text-sm uppercase">THE COMMUNICATION LAG</span>
-                    <h2 class="text-3xl md:text-4xl font-black text-white leading-tight">「外注」という名の、終わらない伝言ゲーム</h2>
-                    <div class="w-12 h-1 bg-white/30 rounded"></div>
-                    <p class="text-lg text-gray-400 leading-relaxed font-light">「少しイメージと違う」「ここを直すのにまた1週間かかる」。人間のクリエイターチームを束ねることは、膨大なコミュニケーションコストと妥協の連続です。ビジネスの検証スピードは、その遅さに耐えられません。</p>
-                </div>
-                <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-zinc-900 border border-white/10 group">
-                    <img src="img/ui.png" class="w-full h-full object-cover opacity-50 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
-                    <div class="absolute inset-0 bg-gradient-to-tr from-black/50 to-transparent"></div>
-                </div>
+    <main class="pt-[140px] pb-24 relative z-10">
+        <div class="px-6 md:px-12 max-w-7xl mx-auto">
+            <div class="text-center max-w-4xl mx-auto mb-20">
+                <span class="bg-white/5 border border-white/10 text-blue-400 px-5 py-1.5 text-[10px] font-bold tracking-widest uppercase rounded mb-6 inline-block">AI / DESIGN AGENT</span>
+                <h1 class="text-4xl md:text-6xl font-extrabold mb-8 leading-[1.15] tracking-tight text-white">「アイデア」から「実装」まで、<br>光の速さで到達する。</h1>
+                <p class="text-lg md:text-xl text-[#8f96a3] max-w-3xl mx-auto leading-relaxed">デザイナーを探し、コーダーを雇い、数ヶ月待つ時代は終わりました。TAKUMI-COREは、あなたのビジネスプランを理解し、一瞬でプロフェッショナルなLPとシステムを構築する自律型AIデザインエージェントです。</p>
             </div>
             
-            <div class="mt-10">
-                <div class="text-center mb-16">
-                    <span class="text-white/50 font-bold tracking-widest text-sm uppercase">AUTONOMOUS WORKFLOW</span>
-                    <h2 class="text-3xl md:text-4xl font-black mt-4 text-white">ペルソナ理解からコーディングまで全自動</h2>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="relative w-full aspect-[21/10] md:aspect-video rounded-2xl overflow-hidden glass-panel p-2 shadow-2xl glow-blue border border-white/10 group mb-32">
+                <div class="w-full h-full rounded-xl overflow-hidden">
                     
-<div class="bg-zinc-900 border md:border-transparent border-gray-800 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
-    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-white/10 text-white border border-white/20">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-    </div>
-    <h4 class="text-xl font-bold mb-3 text-white">コンテキストの深い理解</h4>
-    <p class="text-gray-400 text-sm leading-relaxed">ただ指示通りに作るだけではありません。「このB2B SaaSなら、決済者であるCFOに刺さるコピーが必要だ」とAIが自律的に判断し、最適な構成を逆提案します。</p>
-</div>
-
-
-<div class="bg-zinc-900 border md:border-transparent border-gray-800 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
-    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-white/10 text-white border border-white/20">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-    </div>
-    <h4 class="text-xl font-bold mb-3 text-white">ネオ・ジャポニズム・デザイン</h4>
-    <p class="text-gray-400 text-sm leading-relaxed">ダークモードを基調とし、高いコントラストと美しい余白を計算し尽くした、絶対に「安っぽくならない」プロフェッショナルなUIを瞬時に生成します。</p>
-</div>
-
-
-<div class="bg-zinc-900 border md:border-transparent border-gray-800 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
-    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-white/10 text-white border border-white/20">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-    </div>
-    <h4 class="text-xl font-bold mb-3 text-white">クリーンな本番用コード出力</h4>
-    <p class="text-gray-400 text-sm leading-relaxed">Tailwind CSS等のモダンなフレームワークを用い、そのままAWSやVercelにデプロイ可能な、バグのない美しいソースコードを吐き出します。</p>
-</div>
-
+            <div class="relative w-full h-full bg-zinc-900 overflow-hidden">
+                <img src="img/hero.png" class="w-full h-full object-cover transition-transform duration-[5s] group-hover:scale-[1.03]">
+                <div class="absolute inset-0 bg-gradient-to-t from-[#050509] via-transparent to-transparent pointer-events-none"></div>
+            </div>
                 </div>
             </div>
-            
-            <div class="flex flex-col md:flex-row items-center gap-16 ">
-                <div class="flex-1 space-y-6">
-                    <span class="text-white/50 font-bold tracking-widest text-sm uppercase">SPEED OF LIGHT</span>
-                    <h2 class="text-3xl md:text-4xl font-black text-white leading-tight">無限のABテストと高速ピボット</h2>
-                    <div class="w-12 h-1 bg-white/30 rounded"></div>
-                    <p class="text-lg text-gray-400 leading-relaxed font-light">「ターゲットを20代女性から40代男性に変えたい」。人間のデザイナーならため息をつくような根本的なやり直しも、AIなら文句一つ言わず、数秒でデザインとコピーを全て作り変えます。</p>
-                </div>
-                <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-zinc-900 border border-white/10 group">
-                    <img src="img/ui.png" class="w-full h-full object-cover opacity-50 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
-                    <div class="absolute inset-0 bg-gradient-to-tr from-black/50 to-transparent"></div>
-                </div>
-            </div>
-            
-            <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
-                <div class="flex-1 space-y-6">
-                    <span class="text-white/50 font-bold tracking-widest text-sm uppercase">UX ENGINEERING</span>
-                    <h2 class="text-3xl md:text-4xl font-black text-white leading-tight">UIだけではない「体験」の設計</h2>
-                    <div class="w-12 h-1 bg-white/30 rounded"></div>
-                    <p class="text-lg text-gray-400 leading-relaxed font-light">スクロール時の滑らかなアニメーション、ボタンにカーソルを合わせた時のマイクロインタラクション。静的な絵ではなく、ユーザーの感情を動かす「動的な体験」そのものをコードとして実装します。</p>
-                </div>
-                <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-zinc-900 border border-white/10 group">
-                    <img src="img/ui.png" class="w-full h-full object-cover opacity-50 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: bottom right;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
-                    <div class="absolute inset-0 bg-gradient-to-tr from-black/50 to-transparent"></div>
+        </div><div class="px-6 md:px-12 max-w-7xl mx-auto flex flex-col gap-32 mb-32"></div>
+        <div class="px-6 md:px-12 max-w-7xl mx-auto">
+            <div class="glass-panel rounded-2xl p-12 md:p-24 relative overflow-hidden group shadow-2xl border border-white/10">
+                <div class="absolute -top-32 -right-32 w-96 h-96 bg-blue-600/10 rounded-full blur-[100px]"></div>
+                <div class="relative z-10 text-center max-w-3xl mx-auto">
+                    <h2 class="text-3xl md:text-5xl font-extrabold mb-6 text-white">101のビジネスを、数時間で生み出す。</h2>
+                    <p class="text-base text-[#8f96a3] mb-10 leading-relaxed max-w-xl mx-auto">このポートフォリオHUB全体が、その圧倒的なスピードと品質の証明です。あなたの頭の中にある構想を、今すぐ現実のコードへと変換しましょう。</p>
+                    <a href="#" class="bg-blue-600 hover:bg-blue-500 text-white px-10 py-4 rounded font-bold text-sm tracking-wider uppercase inline-flex items-center gap-3 transition shadow-lg shadow-blue-500/20">
+                        ご導入について
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                    </a>
                 </div>
             </div>
-            
-            <div class="flex flex-col md:flex-row items-center gap-16 ">
-                <div class="flex-1 space-y-6">
-                    <span class="text-white/50 font-bold tracking-widest text-sm uppercase">PROJECT VERTICALY</span>
-                    <h2 class="text-3xl md:text-4xl font-black text-white leading-tight">Case Study | 100のビジネスアイデア検証</h2>
-                    <div class="w-12 h-1 bg-white/30 rounded"></div>
-                    <p class="text-lg text-gray-400 leading-relaxed font-light">ある起業家の「100個のバーティカルSaaSのアイデアを可視化したい」という途方もない依頼。人間のチームであれば数年と数千万円がかかるプロジェクトを、TAKUMI-COREは自律的に稼働し、統一された圧倒的なクオリティで数時間のうちに完遂しました。</p>
-                </div>
-                <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-zinc-900 border border-white/10 group">
-                    <img src="img/ui.png" class="w-full h-full object-cover opacity-50 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
-                    <div class="absolute inset-0 bg-gradient-to-tr from-black/50 to-transparent"></div>
-                </div>
-            </div>
-            
-            <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
-                <div class="flex-1 space-y-6">
-                    <span class="text-white/50 font-bold tracking-widest text-sm uppercase">OUR VISION</span>
-                    <h2 class="text-3xl md:text-4xl font-black text-white leading-tight">「創る」ことの民主化</h2>
-                    <div class="w-12 h-1 bg-white/30 rounded"></div>
-                    <p class="text-lg text-gray-400 leading-relaxed font-light">資本力や技術力がない起業家でも、素晴らしいアイデアさえあれば世界を変えられる。私たちは、人間の創造力を阻むすべての壁を打ち壊す、最強の武器を提供します。</p>
-                </div>
-                <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-zinc-900 border border-white/10 group">
-                    <img src="img/ui.png" class="w-full h-full object-cover opacity-50 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: bottom right;" onerror="this.src='https://picsum.photos/seed/placeholder/800/600'">
-                    <div class="absolute inset-0 bg-gradient-to-tr from-black/50 to-transparent"></div>
-                </div>
-            </div>
-            
-    </div>
-
-    <div class="text-center bg-[#050505] border border-white/5 rounded-[3rem] p-16 md:p-32 relative overflow-hidden group shadow-2xl">
-        <div class="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent"></div>
-        <div class="relative z-10">
-            <h2 class="text-4xl md:text-5xl font-black mb-8 text-white">101のビジネスを、数時間で生み出す。</h2>
-            <p class="text-gray-400 mb-12 max-w-xl mx-auto text-lg leading-relaxed">このポートフォリオHUB全体が、その圧倒的なスピードと品質の証明です。あなたの頭の中にある構想を、今すぐ現実のコードへと変換しましょう。</p>
-            <a href="../index.html" class="bg-white hover:bg-gray-200 text-black px-12 py-5 rounded-full font-bold text-lg inline-flex items-center gap-3 transition transform hover:-translate-y-1 shadow-[0_0_30px_rgba(255,255,255,0.3)]">
-                PORTFOLIOに戻る
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
-            </a>
         </div>
-    </div>
-</main>
-    
+    </main>
 
     <!-- Footer -->
-    <footer class="py-12 text-center text-sm font-medium text-gray-600 bg-black border-t border-white/5">
-        <p>&copy; 2026 TAKUMI-CORE. EXCLUSIVE CONCEPT DESIGN.</p>
+    <footer class="py-12 text-center text-xs font-mono tracking-widest text-white/30 border-t border-white/5 bg-[#030307]">
+        <p>&copy; 2026 AI // ALL DECENTRALIZED RIGHTS RESERVED.</p>
     </footer>
 
 </body>

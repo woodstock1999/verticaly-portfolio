@@ -3,164 +3,188 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ALPHABOT-PRO | アルゴリズムトレード</title>
+    <title>感情を排除した、氷のアービトラージAI。 | FINTECH</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', 'Noto Sans JP', sans-serif; }
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;700&family=Noto+Sans+JP:wght@400;700;900&display=swap');
+        body {
+            font-family: 'Space Grotesk', 'Noto Sans JP', sans-serif;
+            background-color: #030307;
+        }
+        .code-font {
+            font-family: 'JetBrains Mono', monospace;
+        }
+        .glass-panel {
+            background: rgba(13, 17, 27, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .glow-cyan {
+            box-shadow: 0 0 40px rgba(6, 182, 212, 0.15);
+        }
     </style>
 </head>
-<body class="bg-gray-50 text-stone-800 min-h-screen font-sans antialiased overflow-x-hidden">
+<body class="text-[#8f96a3] min-h-screen antialiased overflow-x-hidden selection:bg-indigo-500/30">
+
+    <!-- Glowing Cyber Grid Background -->
+    <div class="fixed inset-0 pointer-events-none z-0 opacity-[0.03]" style="background-image: radial-gradient(rgba(255,255,255,0.15) 1px, transparent 0); background-size: 24px 24px;"></div>
+    <div class="fixed top-0 left-1/4 w-[500px] h-[500px] bg-indigo-600/10 rounded-full blur-[150px] pointer-events-none z-0"></div>
+    <div class="fixed bottom-0 right-1/4 w-[500px] h-[500px] bg-purple-600/10 rounded-full blur-[150px] pointer-events-none z-0"></div>
 
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 backdrop-blur-md bg-opacity-90 bg-white/90 border-b border-gray-200 px-8 py-4 flex justify-between items-center transition-all shadow-sm">
-        <div class="font-black text-2xl tracking-tighter text-emerald-400">ALPHABOT-PRO</div>
-        <div class="hidden md:flex gap-10 text-sm font-bold text-gray-300">
-            <a href="#" class="hover:text-emerald-400 transition">機能</a>
-            <a href="#" class="hover:text-emerald-400 transition">ユースケース</a>
-            <a href="#" class="hover:text-emerald-400 transition">料金体系</a>
+    <nav class="fixed w-full z-50 glass-panel border-b border-white/5 px-6 md:px-12 py-5 flex justify-between items-center">
+        <div class="font-bold text-xl tracking-tight text-white flex items-center gap-3">
+            <div class="w-3.5 h-3.5 rounded bg-indigo-500 shadow-[0_0_15px_rgba(6,182,212,0.6)]"></div>
+            <span class="tracking-widest uppercase text-sm font-black text-white/90">FINTECH</span>
         </div>
-        <a href="#" class="bg-emerald-600 hover:bg-emerald-500 text-white px-6 py-2.5 rounded-full font-bold text-sm transition transform hover:scale-105">14日間のフリートライアル</a>
+        <div class="hidden md:flex gap-8 text-xs font-bold text-white/50 tracking-widest uppercase">
+            <a href="#" class="hover:text-white transition">Features</a>
+            <a href="#" class="hover:text-white transition">Network</a>
+            <a href="#" class="hover:text-white transition">Tokenomics</a>
+        </div>
+        <div class="flex items-center gap-4">
+            <a href="../index.html" class="text-[10px] font-bold text-white/40 hover:text-white transition uppercase tracking-widest">HUB</a>
+            <a href="#" class="bg-indigo-600 hover:bg-indigo-500 text-white px-5 py-2 rounded font-bold text-xs tracking-wider uppercase transition shadow-lg shadow-indigo-500/20">START FINTECH</a>
+        </div>
     </nav>
 
-    <!-- Hero Section -->
-    
-    <main class="pt-[140px] pb-24 px-6 md:px-12 max-w-7xl mx-auto">
-        <div class="text-center max-w-4xl mx-auto mb-20 relative">
-            <span class="bg-gray-100 text-indigo-600 border border-gray-200 px-5 py-2 text-xs font-black rounded-full tracking-widest mb-8 inline-block shadow-sm uppercase">FINTECH / ALGORITHMIC TRADING</span>
-            <h1 class="text-4xl md:text-[54px] font-black mb-8 leading-[1.2] tracking-tight text-gray-900">感情を排除した、<br>氷のアービトラージAI。</h1>
-            <p class="text-lg md:text-xl text-gray-600 font-medium leading-relaxed max-w-3xl mx-auto">仮想通貨市場特有の「取引所間の価格差」や「一瞬の非効率性」を、24時間365日ミリ秒単位で検知・搾取する機関投資家レベルの自動売買ツール「ALPHABOT-PRO」。</p>
-        </div>
-
-        <div class="relative w-full aspect-[21/9] md:aspect-video rounded-[32px] overflow-hidden shadow-2xl mb-32 border border-gray-200/50 group bg-zinc-900">
-            <img src="img/ui.png" alt="UI Dashboard" class="w-full h-full object-cover transition-transform duration-[3s] group-hover:scale-[1.02]">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none blend-overlay"></div>
-        </div>
-
-        <div class="flex flex-col gap-32 mb-32">
-        
+    <main class="pt-[140px] pb-24 relative z-10">
+        <div class="px-6 md:px-12 max-w-7xl mx-auto">
+            <div class="text-center max-w-4xl mx-auto mb-20">
+                <span class="bg-white/5 border border-white/10 text-indigo-400 px-5 py-1.5 text-[10px] font-bold tracking-widest uppercase rounded mb-6 inline-block">FINTECH / ALGORITHMIC TRADING</span>
+                <h1 class="text-4xl md:text-6xl font-extrabold mb-8 leading-[1.15] tracking-tight text-white">感情を排除した、<br>氷のアービトラージAI。</h1>
+                <p class="text-lg md:text-xl text-[#8f96a3] max-w-3xl mx-auto leading-relaxed">仮想通貨市場特有の「取引所間の価格差」や「一瞬の非効率性」を、24時間365日ミリ秒単位で検知・搾取する機関投資家レベルの自動売買ツール「ALPHABOT-PRO」。</p>
+            </div>
+            
+            <div class="relative w-full aspect-[21/10] md:aspect-video rounded-2xl overflow-hidden glass-panel p-2 shadow-2xl glow-indigo border border-white/10 group mb-32">
+                <div class="w-full h-full rounded-xl overflow-hidden">
+                    
+            <div class="relative w-full h-full bg-zinc-900 overflow-hidden">
+                <img src="img/ui.png" class="w-full h-full object-cover transition-transform duration-[5s] group-hover:scale-[1.03]">
+                <div class="absolute inset-0 bg-gradient-to-t from-[#050509] via-transparent to-transparent pointer-events-none"></div>
+            </div>
+                </div>
+            </div>
+        </div><div class="px-6 md:px-12 max-w-7xl mx-auto flex flex-col gap-32 mb-32">
                 <div class="flex flex-col md:flex-row items-center gap-16 ">
                     <div class="flex-1 space-y-6">
-                        <span class="text-indigo-600 font-bold tracking-widest text-sm uppercase">THE HUMAN FLAW</span>
-                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">人間の感情がもたらす致命的なエラー</h2>
-                        <div class="w-12 h-1 bg-indigo-500 rounded"></div>
-                        <p class="text-lg text-gray-600 leading-relaxed font-light">パニック売り、FOMO（取り残される恐怖）による高値掴み、損切りの遅れ。トレードにおいて人間の「感情」は最大の敵です。休むことなく変動し続ける暗号資産市場において、手動トレードで勝ち続けることは統計学的に不可能です。</p>
+                        <span class="text-indigo-400 font-bold tracking-widest text-xs uppercase block">THE HUMAN FLAW</span>
+                        <h2 class="text-3xl md:text-4xl font-extrabold text-white leading-tight">人間の感情がもたらす致命的なエラー</h2>
+                        <div class="w-12 h-0.5 bg-indigo-500"></div>
+                        <p class="text-base leading-relaxed text-[#8f96a3] font-light">パニック売り、FOMO（取り残される恐怖）による高値掴み、損切りの遅れ。トレードにおいて人間の「感情」は最大の敵です。休むことなく変動し続ける暗号資産市場において、手動トレードで勝ち続けることは統計学的に不可能です。</p>
                     </div>
-                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
-                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;">
-                        <div class="absolute inset-0 bg-gradient-to-tr from-indigo-900/20 to-transparent"></div>
+                    <div class="flex-1 w-full aspect-video rounded-xl overflow-hidden glass-panel p-2 border border-white/10 group">
+                        <div class="w-full h-full rounded-lg bg-[#0e111a] overflow-hidden flex items-center justify-center p-6 border border-white/5 relative">
+                            <img src="img/ui.png" class="w-full h-full object-cover transition-transform duration-[5s] group-hover:scale-[1.03]">
+                        </div>
                     </div>
                 </div>
-                
-                <div class="mt-10">
-                    <div class="text-center mb-16">
-                        <span class="text-indigo-600 font-bold tracking-widest text-sm uppercase">QUANTITATIVE ARSENAL</span>
-                        <h2 class="text-3xl md:text-4xl font-black mt-4 text-gray-900">機関投資家の武器を、個人の手に</h2>
+                <div class="relative">
+                    <div class="text-center mb-16 max-w-2xl mx-auto">
+                        <span class="text-indigo-400 font-bold tracking-widest text-xs uppercase">QUANTITATIVE ARSENAL</span>
+                        <h2 class="text-3xl md:text-4xl font-extrabold mt-4 text-white">機関投資家の武器を、個人の手に</h2>
                     </div>
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                         
-<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
-    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-indigo-50 text-indigo-600 border border-indigo-200">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-    </div>
-    <h4 class="text-xl font-bold mb-3 text-gray-900">三角アービトラージの自動検知</h4>
-    <p class="text-gray-600 text-sm leading-relaxed">A取引所のBTC、B取引所のETH、そしてUSDT。3つの通貨ペア間に一瞬生じる価格の歪み（無裁定機会）を検知し、リスクゼロでのサヤ抜きを実行。</p>
-</div>
+                        <div class="glass-panel p-8 rounded-xl hover:border-indigo-500/30 transition duration-300 group">
+                            <div class="w-12 h-12 rounded flex items-center justify-center mb-6 bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 group-hover:bg-indigo-500/20 transition-all">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            </div>
+                            <h4 class="text-lg font-bold mb-3 text-white">三角アービトラージの自動検知</h4>
+                            <p class="text-sm leading-relaxed text-[#8f96a3]">A取引所のBTC、B取引所のETH、そしてUSDT。3つの通貨ペア間に一瞬生じる価格の歪み（無裁定機会）を検知し、リスクゼロでのサヤ抜きを実行。</p>
+                        </div>
+                        
 
+                        <div class="glass-panel p-8 rounded-xl hover:border-indigo-500/30 transition duration-300 group">
+                            <div class="w-12 h-12 rounded flex items-center justify-center mb-6 bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 group-hover:bg-indigo-500/20 transition-all">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            </div>
+                            <h4 class="text-lg font-bold mb-3 text-white">ミリ秒のエグゼキューション</h4>
+                            <p class="text-sm leading-relaxed text-[#8f96a3]">取引所のAPIとサーバーを物理的に近接（コロケーション）させることで、通信遅延を極限まで排除。他者より早く注文を約定させます。</p>
+                        </div>
+                        
 
-<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
-    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-indigo-50 text-indigo-600 border border-indigo-200">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-    </div>
-    <h4 class="text-xl font-bold mb-3 text-gray-900">ミリ秒のエグゼキューション</h4>
-    <p class="text-gray-600 text-sm leading-relaxed">取引所のAPIとサーバーを物理的に近接（コロケーション）させることで、通信遅延を極限まで排除。他者より早く注文を約定させます。</p>
-</div>
-
-
-<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
-    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-indigo-50 text-indigo-600 border border-indigo-200">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-    </div>
-    <h4 class="text-xl font-bold mb-3 text-gray-900">AIによるセンチメント分析</h4>
-    <p class="text-gray-600 text-sm leading-relaxed">X(旧Twitter)やニュースサイトから数万件のテキストをリアルタイム解析。「恐怖」や「強気」の市場心理を数値化し、暴落の予兆をいち早くキャッチしてポジションを解消します。</p>
-</div>
-
+                        <div class="glass-panel p-8 rounded-xl hover:border-indigo-500/30 transition duration-300 group">
+                            <div class="w-12 h-12 rounded flex items-center justify-center mb-6 bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 group-hover:bg-indigo-500/20 transition-all">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            </div>
+                            <h4 class="text-lg font-bold mb-3 text-white">AIによるセンチメント分析</h4>
+                            <p class="text-sm leading-relaxed text-[#8f96a3]">X(旧Twitter)やニュースサイトから数万件のテキストをリアルタイム解析。「恐怖」や「強気」の市場心理を数値化し、暴落の予兆をいち早くキャッチしてポジションを解消します。</p>
+                        </div>
+                        
                     </div>
                 </div>
-                
                 <div class="flex flex-col md:flex-row items-center gap-16 ">
                     <div class="flex-1 space-y-6">
-                        <span class="text-indigo-600 font-bold tracking-widest text-sm uppercase">MATHEMATICAL PROOF</span>
-                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">バックテストから導かれる絶対的な証明</h2>
-                        <div class="w-12 h-1 bg-indigo-500 rounded"></div>
-                        <p class="text-lg text-gray-600 leading-relaxed font-light">「このロジックは本当に機能するのか？」ALPHABOT-PROは、過去5年間の全ティックデータをクラウド上で高速シミュレーションするバックテスト環境を標準搭載。カーブフィッティング（過剰最適化）を排除した、堅牢な戦略のみを稼働させることができます。</p>
+                        <span class="text-indigo-400 font-bold tracking-widest text-xs uppercase block">MATHEMATICAL PROOF</span>
+                        <h2 class="text-3xl md:text-4xl font-extrabold text-white leading-tight">バックテストから導かれる絶対的な証明</h2>
+                        <div class="w-12 h-0.5 bg-indigo-500"></div>
+                        <p class="text-base leading-relaxed text-[#8f96a3] font-light">「このロジックは本当に機能するのか？」ALPHABOT-PROは、過去5年間の全ティックデータをクラウド上で高速シミュレーションするバックテスト環境を標準搭載。カーブフィッティング（過剰最適化）を排除した、堅牢な戦略のみを稼働させることができます。</p>
                     </div>
-                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
-                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;">
-                        <div class="absolute inset-0 bg-gradient-to-tr from-indigo-900/20 to-transparent"></div>
+                    <div class="flex-1 w-full aspect-video rounded-xl overflow-hidden glass-panel p-2 border border-white/10 group">
+                        <div class="w-full h-full rounded-lg bg-[#0e111a] overflow-hidden flex items-center justify-center p-6 border border-white/5 relative">
+                            <img src="img/ui.png" class="w-full h-full object-cover transition-transform duration-[5s] group-hover:scale-[1.03]">
+                        </div>
                     </div>
                 </div>
-                
                 <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
                     <div class="flex-1 space-y-6">
-                        <span class="text-indigo-600 font-bold tracking-widest text-sm uppercase">NO-CODE STRATEGY</span>
-                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">ドラッグ＆ドロップの戦略ビルダー</h2>
-                        <div class="w-12 h-1 bg-indigo-500 rounded"></div>
-                        <p class="text-lg text-gray-600 leading-relaxed font-light">プログラミングの知識は一切不要です。「RSIが30以下」「MACDがクロス」「ボラティリティが急増」といったブロックを繋ぎ合わせるだけで、あなた独自の複雑なアルゴリズムを直感的に構築できます。</p>
+                        <span class="text-indigo-400 font-bold tracking-widest text-xs uppercase block">NO-CODE STRATEGY</span>
+                        <h2 class="text-3xl md:text-4xl font-extrabold text-white leading-tight">ドラッグ＆ドロップの戦略ビルダー</h2>
+                        <div class="w-12 h-0.5 bg-indigo-500"></div>
+                        <p class="text-base leading-relaxed text-[#8f96a3] font-light">プログラミングの知識は一切不要です。「RSIが30以下」「MACDがクロス」「ボラティリティが急増」といったブロックを繋ぎ合わせるだけで、あなた独自の複雑なアルゴリズムを直感的に構築できます。</p>
                     </div>
-                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
-                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: bottom right;">
-                        <div class="absolute inset-0 bg-gradient-to-tr from-indigo-900/20 to-transparent"></div>
+                    <div class="flex-1 w-full aspect-video rounded-xl overflow-hidden glass-panel p-2 border border-white/10 group">
+                        <div class="w-full h-full rounded-lg bg-[#0e111a] overflow-hidden flex items-center justify-center p-6 border border-white/5 relative">
+                            <img src="img/ui.png" class="w-full h-full object-cover transition-transform duration-[5s] group-hover:scale-[1.03]">
+                        </div>
                     </div>
                 </div>
-                
                 <div class="flex flex-col md:flex-row items-center gap-16 ">
                     <div class="flex-1 space-y-6">
-                        <span class="text-indigo-600 font-bold tracking-widest text-sm uppercase">USER SUCCESS</span>
-                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">Case Study | 副業トレーダーの完全自動化</h2>
-                        <div class="w-12 h-1 bg-indigo-500 rounded"></div>
-                        <p class="text-lg text-gray-600 leading-relaxed font-light">本業が忙しく、夜中に起きてチャートを見ては寝不足になっていたユーザー。ALPHABOT-PROの「フラッシュクラッシュ（瞬間的な暴落）時のリバウンド狙い」戦略をセットし放置。睡眠中に自動で利益を確定させ、感情のストレスから完全に解放されました。</p>
+                        <span class="text-indigo-400 font-bold tracking-widest text-xs uppercase block">USER SUCCESS</span>
+                        <h2 class="text-3xl md:text-4xl font-extrabold text-white leading-tight">Case Study | 副業トレーダーの完全自動化</h2>
+                        <div class="w-12 h-0.5 bg-indigo-500"></div>
+                        <p class="text-base leading-relaxed text-[#8f96a3] font-light">本業が忙しく、夜中に起きてチャートを見ては寝不足になっていたユーザー。ALPHABOT-PROの「フラッシュクラッシュ（瞬間的な暴落）時のリバウンド狙い」戦略をセットし放置。睡眠中に自動で利益を確定させ、感情のストレスから完全に解放されました。</p>
                     </div>
-                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
-                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;">
-                        <div class="absolute inset-0 bg-gradient-to-tr from-indigo-900/20 to-transparent"></div>
+                    <div class="flex-1 w-full aspect-video rounded-xl overflow-hidden glass-panel p-2 border border-white/10 group">
+                        <div class="w-full h-full rounded-lg bg-[#0e111a] overflow-hidden flex items-center justify-center p-6 border border-white/5 relative">
+                            <img src="img/ui.png" class="w-full h-full object-cover transition-transform duration-[5s] group-hover:scale-[1.03]">
+                        </div>
                     </div>
                 </div>
-                
                 <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
                     <div class="flex-1 space-y-6">
-                        <span class="text-indigo-600 font-bold tracking-widest text-sm uppercase">OUR VISION</span>
-                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">投機から、高度な統計ゲームへ</h2>
-                        <div class="w-12 h-1 bg-indigo-500 rounded"></div>
-                        <p class="text-lg text-gray-600 leading-relaxed font-light">私たちは魔法の錬金術を提供しているわけではありません。データサイエンスと圧倒的な演算能力を用いて、市場の非効率性を効率化する。それが結果としてあなたの利益に還元される、究極のクオンツ・プラットフォームです。</p>
+                        <span class="text-indigo-400 font-bold tracking-widest text-xs uppercase block">OUR VISION</span>
+                        <h2 class="text-3xl md:text-4xl font-extrabold text-white leading-tight">投機から、高度な統計ゲームへ</h2>
+                        <div class="w-12 h-0.5 bg-indigo-500"></div>
+                        <p class="text-base leading-relaxed text-[#8f96a3] font-light">私たちは魔法の錬金術を提供しているわけではありません。データサイエンスと圧倒的な演算能力を用いて、市場の非効率性を効率化する。それが結果としてあなたの利益に還元される、究極のクオンツ・プラットフォームです。</p>
                     </div>
-                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
-                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: bottom right;">
-                        <div class="absolute inset-0 bg-gradient-to-tr from-indigo-900/20 to-transparent"></div>
+                    <div class="flex-1 w-full aspect-video rounded-xl overflow-hidden glass-panel p-2 border border-white/10 group">
+                        <div class="w-full h-full rounded-lg bg-[#0e111a] overflow-hidden flex items-center justify-center p-6 border border-white/5 relative">
+                            <img src="img/ui.png" class="w-full h-full object-cover transition-transform duration-[5s] group-hover:scale-[1.03]">
+                        </div>
                     </div>
+                </div></div>
+        <div class="px-6 md:px-12 max-w-7xl mx-auto">
+            <div class="glass-panel rounded-2xl p-12 md:p-24 relative overflow-hidden group shadow-2xl border border-white/10">
+                <div class="absolute -top-32 -right-32 w-96 h-96 bg-indigo-600/10 rounded-full blur-[100px]"></div>
+                <div class="relative z-10 text-center max-w-3xl mx-auto">
+                    <h2 class="text-3xl md:text-5xl font-extrabold mb-6 text-white">チャートに張り付く日々を終わらせる。</h2>
+                    <p class="text-base text-[#8f96a3] mb-10 leading-relaxed max-w-xl mx-auto">相場の上下を予想するギャンブルはやめましょう。ALPHABOT-PROで、数学的に証明された「歪み」だけを狙い撃つ体験を。</p>
+                    <a href="#" class="bg-indigo-600 hover:bg-indigo-500 text-white px-10 py-4 rounded font-bold text-sm tracking-wider uppercase inline-flex items-center gap-3 transition shadow-lg shadow-indigo-500/20">
+                        START FINTECH
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                    </a>
                 </div>
-                
-        </div>
-
-        <div class="text-center bg-gray-900 border border-gray-800 rounded-[3rem] p-16 md:p-32 relative overflow-hidden group shadow-2xl">
-            <div class="absolute inset-0 bg-gradient-to-br from-indigo-900/40 to-transparent"></div>
-            <div class="relative z-10">
-                <h2 class="text-4xl md:text-5xl font-black mb-8 text-white">チャートに張り付く日々を終わらせる。</h2>
-                <p class="text-gray-300 mb-12 max-w-xl mx-auto text-lg leading-relaxed">相場の上下を予想するギャンブルはやめましょう。ALPHABOT-PROで、数学的に証明された「歪み」だけを狙い撃つ体験を。</p>
-                <a href="#" class="bg-indigo-500 hover:bg-indigo-400 text-white px-12 py-5 rounded-full font-bold text-lg inline-flex items-center gap-3 transition transform hover:-translate-y-1 shadow-lg shadow-indigo-500/30">
-                    AIを起動する
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                </a>
             </div>
         </div>
     </main>
-        
 
     <!-- Footer -->
-    <footer class="py-12 text-center text-sm font-medium text-gray-600 border-t border-white/10 bg-black/20">
-        <p>&copy; 2026 ALPHABOT-PRO. ALL RIGHTS RESERVED BY TAKUMI DESIGN AGENT.</p>
+    <footer class="py-12 text-center text-xs font-mono tracking-widest text-white/30 border-t border-white/5 bg-[#030307]">
+        <p>&copy; 2026 FINTECH // ALL DECENTRALIZED RIGHTS RESERVED.</p>
     </footer>
 
 </body>

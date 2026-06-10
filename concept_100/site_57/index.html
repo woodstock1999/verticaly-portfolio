@@ -3,164 +3,188 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AGRI-DIRECT | 農家×レストラン</title>
+    <title>農家とあなたの食卓を、最短距離で直結する。 | AGRI TECH</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', 'Noto Sans JP', sans-serif; }
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;700&family=Noto+Sans+JP:wght@400;700;900&display=swap');
+        body {
+            font-family: 'Space Grotesk', 'Noto Sans JP', sans-serif;
+            background-color: #030307;
+        }
+        .code-font {
+            font-family: 'JetBrains Mono', monospace;
+        }
+        .glass-panel {
+            background: rgba(13, 17, 27, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .glow-cyan {
+            box-shadow: 0 0 40px rgba(6, 182, 212, 0.15);
+        }
     </style>
 </head>
-<body class="bg-gray-50 text-stone-800 min-h-screen font-sans antialiased overflow-x-hidden">
+<body class="text-[#8f96a3] min-h-screen antialiased overflow-x-hidden selection:bg-green-500/30">
+
+    <!-- Glowing Cyber Grid Background -->
+    <div class="fixed inset-0 pointer-events-none z-0 opacity-[0.03]" style="background-image: radial-gradient(rgba(255,255,255,0.15) 1px, transparent 0); background-size: 24px 24px;"></div>
+    <div class="fixed top-0 left-1/4 w-[500px] h-[500px] bg-green-600/10 rounded-full blur-[150px] pointer-events-none z-0"></div>
+    <div class="fixed bottom-0 right-1/4 w-[500px] h-[500px] bg-purple-600/10 rounded-full blur-[150px] pointer-events-none z-0"></div>
 
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 backdrop-blur-md bg-opacity-90 bg-white/90 border-b border-gray-200 px-8 py-4 flex justify-between items-center transition-all shadow-sm">
-        <div class="font-black text-2xl tracking-tighter text-green-400">AGRI-DIRECT</div>
-        <div class="hidden md:flex gap-8 text-sm font-bold text-gray-300">
-            <a href="#" class="hover:text-green-400 transition">特徴</a>
-            <a href="#" class="hover:text-green-400 transition">機能</a>
-            <a href="#" class="hover:text-green-400 transition">料金</a>
+    <nav class="fixed w-full z-50 glass-panel border-b border-white/5 px-6 md:px-12 py-5 flex justify-between items-center">
+        <div class="font-bold text-xl tracking-tight text-white flex items-center gap-3">
+            <div class="w-3.5 h-3.5 rounded bg-green-500 shadow-[0_0_15px_rgba(6,182,212,0.6)]"></div>
+            <span class="tracking-widest uppercase text-sm font-black text-white/90">AGRI TECH</span>
         </div>
-        <a href="#" class="bg-green-600 hover:bg-green-500 text-white px-6 py-2 rounded-full font-bold text-sm transition transform hover:scale-105">生産者・レストラン登録</a>
+        <div class="hidden md:flex gap-8 text-xs font-bold text-white/50 tracking-widest uppercase">
+            <a href="#" class="hover:text-white transition">Features</a>
+            <a href="#" class="hover:text-white transition">Network</a>
+            <a href="#" class="hover:text-white transition">Tokenomics</a>
+        </div>
+        <div class="flex items-center gap-4">
+            <a href="../index.html" class="text-[10px] font-bold text-white/40 hover:text-white transition uppercase tracking-widest">HUB</a>
+            <a href="#" class="bg-green-600 hover:bg-green-500 text-white px-5 py-2 rounded font-bold text-xs tracking-wider uppercase transition shadow-lg shadow-green-500/20">START AGRI TECH</a>
+        </div>
     </nav>
 
-    <!-- Hero Section -->
-    
-    <main class="pt-[140px] pb-24 px-6 md:px-12 max-w-7xl mx-auto">
-        <div class="text-center max-w-4xl mx-auto mb-20 relative">
-            <span class="bg-gray-100 text-green-600 border border-gray-200 px-5 py-2 text-xs font-black rounded-full tracking-widest mb-8 inline-block shadow-sm uppercase">AGRI TECH / D2C</span>
-            <h1 class="text-4xl md:text-[54px] font-black mb-8 leading-[1.2] tracking-tight text-gray-900">農家とあなたの食卓を、<br>最短距離で直結する。</h1>
-            <p class="text-lg md:text-xl text-gray-600 font-medium leading-relaxed max-w-3xl mx-auto">「誰が作ったかわからない野菜」を買う時代は終わりました。AGRI-DIRECTは、全国のこだわりを持った生産者と消費者をアプリ一つでダイレクトに繋ぎ、朝採れ野菜を流通マージンゼロで届ける究極のファーマーズ・マーケットプレイス。</p>
-        </div>
-
-        <div class="relative w-full aspect-[21/9] md:aspect-video rounded-[32px] overflow-hidden shadow-2xl mb-32 border border-gray-200/50 group bg-zinc-900">
-            <img src="img/ui.png" alt="UI Dashboard" class="w-full h-full object-cover transition-transform duration-[3s] group-hover:scale-[1.02]">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none blend-overlay"></div>
-        </div>
-
-        <div class="flex flex-col gap-32 mb-32">
-        
+    <main class="pt-[140px] pb-24 relative z-10">
+        <div class="px-6 md:px-12 max-w-7xl mx-auto">
+            <div class="text-center max-w-4xl mx-auto mb-20">
+                <span class="bg-white/5 border border-white/10 text-green-400 px-5 py-1.5 text-[10px] font-bold tracking-widest uppercase rounded mb-6 inline-block">AGRI TECH / D2C</span>
+                <h1 class="text-4xl md:text-6xl font-extrabold mb-8 leading-[1.15] tracking-tight text-white">農家とあなたの食卓を、<br>最短距離で直結する。</h1>
+                <p class="text-lg md:text-xl text-[#8f96a3] max-w-3xl mx-auto leading-relaxed">「誰が作ったかわからない野菜」を買う時代は終わりました。AGRI-DIRECTは、全国のこだわりを持った生産者と消費者をアプリ一つでダイレクトに繋ぎ、朝採れ野菜を流通マージンゼロで届ける究極のファーマーズ・マーケットプレイス。</p>
+            </div>
+            
+            <div class="relative w-full aspect-[21/10] md:aspect-video rounded-2xl overflow-hidden glass-panel p-2 shadow-2xl glow-green border border-white/10 group mb-32">
+                <div class="w-full h-full rounded-xl overflow-hidden">
+                    
+            <div class="relative w-full h-full bg-zinc-900 overflow-hidden">
+                <img src="img/ui.png" class="w-full h-full object-cover transition-transform duration-[5s] group-hover:scale-[1.03]">
+                <div class="absolute inset-0 bg-gradient-to-t from-[#050509] via-transparent to-transparent pointer-events-none"></div>
+            </div>
+                </div>
+            </div>
+        </div><div class="px-6 md:px-12 max-w-7xl mx-auto flex flex-col gap-32 mb-32">
                 <div class="flex flex-col md:flex-row items-center gap-16 ">
                     <div class="flex-1 space-y-6">
-                        <span class="text-green-600 font-bold tracking-widest text-sm uppercase">THE BROKEN SYSTEM</span>
-                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">複雑なサプライチェーンが奪う「鮮度と利益」</h2>
-                        <div class="w-12 h-1 bg-green-500 rounded"></div>
-                        <p class="text-lg text-gray-600 leading-relaxed font-light">農家 → 農協 → 卸売市場 → 仲卸 → 小売店。この長すぎるサプライチェーンにより、消費者が手にする野菜は収穫から数日が経過し、農家の手元には販売価格のわずか2〜3割しか残らないという構造的な搾取が続いています。</p>
+                        <span class="text-green-400 font-bold tracking-widest text-xs uppercase block">THE BROKEN SYSTEM</span>
+                        <h2 class="text-3xl md:text-4xl font-extrabold text-white leading-tight">複雑なサプライチェーンが奪う「鮮度と利益」</h2>
+                        <div class="w-12 h-0.5 bg-green-500"></div>
+                        <p class="text-base leading-relaxed text-[#8f96a3] font-light">農家 → 農協 → 卸売市場 → 仲卸 → 小売店。この長すぎるサプライチェーンにより、消費者が手にする野菜は収穫から数日が経過し、農家の手元には販売価格のわずか2〜3割しか残らないという構造的な搾取が続いています。</p>
                     </div>
-                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
-                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;">
-                        <div class="absolute inset-0 bg-gradient-to-tr from-green-900/20 to-transparent"></div>
+                    <div class="flex-1 w-full aspect-video rounded-xl overflow-hidden glass-panel p-2 border border-white/10 group">
+                        <div class="w-full h-full rounded-lg bg-[#0e111a] overflow-hidden flex items-center justify-center p-6 border border-white/5 relative">
+                            <img src="img/ui.png" class="w-full h-full object-cover transition-transform duration-[5s] group-hover:scale-[1.03]">
+                        </div>
                     </div>
                 </div>
-                
-                <div class="mt-10">
-                    <div class="text-center mb-16">
-                        <span class="text-green-600 font-bold tracking-widest text-sm uppercase">FARMER EMPOWERMENT</span>
-                        <h2 class="text-3xl md:text-4xl font-black mt-4 text-gray-900">農家のスマホが「直売所」に変わる</h2>
+                <div class="relative">
+                    <div class="text-center mb-16 max-w-2xl mx-auto">
+                        <span class="text-green-400 font-bold tracking-widest text-xs uppercase">FARMER EMPOWERMENT</span>
+                        <h2 class="text-3xl md:text-4xl font-extrabold mt-4 text-white">農家のスマホが「直売所」に変わる</h2>
                     </div>
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                         
-<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
-    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-green-50 text-green-600 border border-green-200">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-    </div>
-    <h4 class="text-xl font-bold mb-3 text-gray-900">畑からのライブ出品</h4>
-    <p class="text-gray-600 text-sm leading-relaxed">農家が朝、畑で泥のついた大根の写真をスマホで撮ってアップするだけ。AIが「大きさ」「鮮度」から最適な価格帯を自動提案し、1分で出品完了。</p>
-</div>
+                        <div class="glass-panel p-8 rounded-xl hover:border-green-500/30 transition duration-300 group">
+                            <div class="w-12 h-12 rounded flex items-center justify-center mb-6 bg-green-500/10 text-green-400 border border-green-500/20 group-hover:bg-green-500/20 transition-all">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            </div>
+                            <h4 class="text-lg font-bold mb-3 text-white">畑からのライブ出品</h4>
+                            <p class="text-sm leading-relaxed text-[#8f96a3]">農家が朝、畑で泥のついた大根の写真をスマホで撮ってアップするだけ。AIが「大きさ」「鮮度」から最適な価格帯を自動提案し、1分で出品完了。</p>
+                        </div>
+                        
 
+                        <div class="glass-panel p-8 rounded-xl hover:border-green-500/30 transition duration-300 group">
+                            <div class="w-12 h-12 rounded flex items-center justify-center mb-6 bg-green-500/10 text-green-400 border border-green-500/20 group-hover:bg-green-500/20 transition-all">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            </div>
+                            <h4 class="text-lg font-bold mb-3 text-white">ダイナミック・ロジスティクス</h4>
+                            <p class="text-sm leading-relaxed text-[#8f96a3]">注文が入ると、ヤマト運輸などの提携配送網とシステムが自動連携。送り状の印刷から集荷手配までが完全に自動化され、農家は箱詰めするだけです。</p>
+                        </div>
+                        
 
-<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
-    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-green-50 text-green-600 border border-green-200">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-    </div>
-    <h4 class="text-xl font-bold mb-3 text-gray-900">ダイナミック・ロジスティクス</h4>
-    <p class="text-gray-600 text-sm leading-relaxed">注文が入ると、ヤマト運輸などの提携配送網とシステムが自動連携。送り状の印刷から集荷手配までが完全に自動化され、農家は箱詰めするだけです。</p>
-</div>
-
-
-<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
-    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-green-50 text-green-600 border border-green-200">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-    </div>
-    <h4 class="text-xl font-bold mb-3 text-gray-900">規格外野菜（B品）の価値化</h4>
-    <p class="text-gray-600 text-sm leading-relaxed">「形が悪くてスーパーでは売れないが味は絶品」な野菜を、安価にセット販売可能。フードロスを削減しつつ農家の利益率を最大化します。</p>
-</div>
-
+                        <div class="glass-panel p-8 rounded-xl hover:border-green-500/30 transition duration-300 group">
+                            <div class="w-12 h-12 rounded flex items-center justify-center mb-6 bg-green-500/10 text-green-400 border border-green-500/20 group-hover:bg-green-500/20 transition-all">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            </div>
+                            <h4 class="text-lg font-bold mb-3 text-white">規格外野菜（B品）の価値化</h4>
+                            <p class="text-sm leading-relaxed text-[#8f96a3]">「形が悪くてスーパーでは売れないが味は絶品」な野菜を、安価にセット販売可能。フードロスを削減しつつ農家の利益率を最大化します。</p>
+                        </div>
+                        
                     </div>
                 </div>
-                
                 <div class="flex flex-col md:flex-row items-center gap-16 ">
                     <div class="flex-1 space-y-6">
-                        <span class="text-green-600 font-bold tracking-widest text-sm uppercase">TRACEABILITY</span>
-                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">「作り手の顔」が見える圧倒的な安心感</h2>
-                        <div class="w-12 h-1 bg-green-500 rounded"></div>
-                        <p class="text-lg text-gray-600 leading-relaxed font-light">すべての商品ページには、生産者のプロフィール、栽培方針（無農薬・減農薬など）、そして日々の畑の様子を綴ったブログが掲載されています。「北海道の佐藤さんがこだわったアスパラ」を買うという、血の通った消費体験を提供します。</p>
+                        <span class="text-green-400 font-bold tracking-widest text-xs uppercase block">TRACEABILITY</span>
+                        <h2 class="text-3xl md:text-4xl font-extrabold text-white leading-tight">「作り手の顔」が見える圧倒的な安心感</h2>
+                        <div class="w-12 h-0.5 bg-green-500"></div>
+                        <p class="text-base leading-relaxed text-[#8f96a3] font-light">すべての商品ページには、生産者のプロフィール、栽培方針（無農薬・減農薬など）、そして日々の畑の様子を綴ったブログが掲載されています。「北海道の佐藤さんがこだわったアスパラ」を買うという、血の通った消費体験を提供します。</p>
                     </div>
-                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
-                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;">
-                        <div class="absolute inset-0 bg-gradient-to-tr from-green-900/20 to-transparent"></div>
+                    <div class="flex-1 w-full aspect-video rounded-xl overflow-hidden glass-panel p-2 border border-white/10 group">
+                        <div class="w-full h-full rounded-lg bg-[#0e111a] overflow-hidden flex items-center justify-center p-6 border border-white/5 relative">
+                            <img src="img/ui.png" class="w-full h-full object-cover transition-transform duration-[5s] group-hover:scale-[1.03]">
+                        </div>
                     </div>
                 </div>
-                
                 <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
                     <div class="flex-1 space-y-6">
-                        <span class="text-green-600 font-bold tracking-widest text-sm uppercase">COMMUNITY SUPPORTED</span>
-                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">食べることで農家を支援する「CSAモデル」</h2>
-                        <div class="w-12 h-1 bg-green-500 rounded"></div>
-                        <p class="text-lg text-gray-600 leading-relaxed font-light">単発の購入だけでなく、「月額5000円で、季節のおまかせ野菜セットを定期購読する」サブスクリプション機能を搭載。天候不順のリスクを消費者も共に背負い、農家の安定した経営基盤をダイレクトに支援します。</p>
+                        <span class="text-green-400 font-bold tracking-widest text-xs uppercase block">COMMUNITY SUPPORTED</span>
+                        <h2 class="text-3xl md:text-4xl font-extrabold text-white leading-tight">食べることで農家を支援する「CSAモデル」</h2>
+                        <div class="w-12 h-0.5 bg-green-500"></div>
+                        <p class="text-base leading-relaxed text-[#8f96a3] font-light">単発の購入だけでなく、「月額5000円で、季節のおまかせ野菜セットを定期購読する」サブスクリプション機能を搭載。天候不順のリスクを消費者も共に背負い、農家の安定した経営基盤をダイレクトに支援します。</p>
                     </div>
-                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
-                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: bottom right;">
-                        <div class="absolute inset-0 bg-gradient-to-tr from-green-900/20 to-transparent"></div>
+                    <div class="flex-1 w-full aspect-video rounded-xl overflow-hidden glass-panel p-2 border border-white/10 group">
+                        <div class="w-full h-full rounded-lg bg-[#0e111a] overflow-hidden flex items-center justify-center p-6 border border-white/5 relative">
+                            <img src="img/ui.png" class="w-full h-full object-cover transition-transform duration-[5s] group-hover:scale-[1.03]">
+                        </div>
                     </div>
                 </div>
-                
                 <div class="flex flex-col md:flex-row items-center gap-16 ">
                     <div class="flex-1 space-y-6">
-                        <span class="text-green-600 font-bold tracking-widest text-sm uppercase">FARMER SUCCESS</span>
-                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">Case Study | 長野県の有機トマト農家</h2>
-                        <div class="w-12 h-1 bg-green-500 rounded"></div>
-                        <p class="text-lg text-gray-600 leading-relaxed font-light">これまで農協に全量卸していたが、肥料代の高騰で赤字ギリギリだった農家。AGRI-DIRECTで直販を開始し、自慢の完熟トマトの「糖度の高さ」を直接アピール。ファンが付き定期購入者が100名を突破したことで、利益率が従来の3倍となり、新たなビニールハウスの建設を実現しました。</p>
+                        <span class="text-green-400 font-bold tracking-widest text-xs uppercase block">FARMER SUCCESS</span>
+                        <h2 class="text-3xl md:text-4xl font-extrabold text-white leading-tight">Case Study | 長野県の有機トマト農家</h2>
+                        <div class="w-12 h-0.5 bg-green-500"></div>
+                        <p class="text-base leading-relaxed text-[#8f96a3] font-light">これまで農協に全量卸していたが、肥料代の高騰で赤字ギリギリだった農家。AGRI-DIRECTで直販を開始し、自慢の完熟トマトの「糖度の高さ」を直接アピール。ファンが付き定期購入者が100名を突破したことで、利益率が従来の3倍となり、新たなビニールハウスの建設を実現しました。</p>
                     </div>
-                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
-                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;">
-                        <div class="absolute inset-0 bg-gradient-to-tr from-green-900/20 to-transparent"></div>
+                    <div class="flex-1 w-full aspect-video rounded-xl overflow-hidden glass-panel p-2 border border-white/10 group">
+                        <div class="w-full h-full rounded-lg bg-[#0e111a] overflow-hidden flex items-center justify-center p-6 border border-white/5 relative">
+                            <img src="img/ui.png" class="w-full h-full object-cover transition-transform duration-[5s] group-hover:scale-[1.03]">
+                        </div>
                     </div>
                 </div>
-                
                 <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
                     <div class="flex-1 space-y-6">
-                        <span class="text-green-600 font-bold tracking-widest text-sm uppercase">OUR VISION</span>
-                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">「食」の決定権を、私たちの手に</h2>
-                        <div class="w-12 h-1 bg-green-500 rounded"></div>
-                        <p class="text-lg text-gray-600 leading-relaxed font-light">美味しいものを正当な価格で売りたい人と、本当に安全で美味しいものを食べたい人。私たちはテクノロジーを中抜きのためではなく、両者を最も純粋な形で結びつけるために使用します。</p>
+                        <span class="text-green-400 font-bold tracking-widest text-xs uppercase block">OUR VISION</span>
+                        <h2 class="text-3xl md:text-4xl font-extrabold text-white leading-tight">「食」の決定権を、私たちの手に</h2>
+                        <div class="w-12 h-0.5 bg-green-500"></div>
+                        <p class="text-base leading-relaxed text-[#8f96a3] font-light">美味しいものを正当な価格で売りたい人と、本当に安全で美味しいものを食べたい人。私たちはテクノロジーを中抜きのためではなく、両者を最も純粋な形で結びつけるために使用します。</p>
                     </div>
-                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
-                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: bottom right;">
-                        <div class="absolute inset-0 bg-gradient-to-tr from-green-900/20 to-transparent"></div>
+                    <div class="flex-1 w-full aspect-video rounded-xl overflow-hidden glass-panel p-2 border border-white/10 group">
+                        <div class="w-full h-full rounded-lg bg-[#0e111a] overflow-hidden flex items-center justify-center p-6 border border-white/5 relative">
+                            <img src="img/ui.png" class="w-full h-full object-cover transition-transform duration-[5s] group-hover:scale-[1.03]">
+                        </div>
                     </div>
+                </div></div>
+        <div class="px-6 md:px-12 max-w-7xl mx-auto">
+            <div class="glass-panel rounded-2xl p-12 md:p-24 relative overflow-hidden group shadow-2xl border border-white/10">
+                <div class="absolute -top-32 -right-32 w-96 h-96 bg-green-600/10 rounded-full blur-[100px]"></div>
+                <div class="relative z-10 text-center max-w-3xl mx-auto">
+                    <h2 class="text-3xl md:text-5xl font-extrabold mb-6 text-white">泥のついた野菜は、最も美しい。</h2>
+                    <p class="text-base text-[#8f96a3] mb-10 leading-relaxed max-w-xl mx-auto">スーパーの棚に並ぶまでに数日かかる野菜。私たちは、畑の熱量をそのままあなたのキッチンへ運びます。</p>
+                    <a href="#" class="bg-green-600 hover:bg-green-500 text-white px-10 py-4 rounded font-bold text-sm tracking-wider uppercase inline-flex items-center gap-3 transition shadow-lg shadow-green-500/20">
+                        START AGRI TECH
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                    </a>
                 </div>
-                
-        </div>
-
-        <div class="text-center bg-gray-900 border border-gray-800 rounded-[3rem] p-16 md:p-32 relative overflow-hidden group shadow-2xl">
-            <div class="absolute inset-0 bg-gradient-to-br from-green-900/40 to-transparent"></div>
-            <div class="relative z-10">
-                <h2 class="text-4xl md:text-5xl font-black mb-8 text-white">泥のついた野菜は、最も美しい。</h2>
-                <p class="text-gray-300 mb-12 max-w-xl mx-auto text-lg leading-relaxed">スーパーの棚に並ぶまでに数日かかる野菜。私たちは、畑の熱量をそのままあなたのキッチンへ運びます。</p>
-                <a href="#" class="bg-green-500 hover:bg-green-400 text-white px-12 py-5 rounded-full font-bold text-lg inline-flex items-center gap-3 transition transform hover:-translate-y-1 shadow-lg shadow-green-500/30">
-                    今日の収穫を見る
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                </a>
             </div>
         </div>
     </main>
-        
 
     <!-- Footer -->
-    <footer class="py-8 text-center text-sm font-medium text-zinc-600 border-t border-white/10">
-        <p>&copy; 2026 AGRI-DIRECT. TAKUMI DESIGN AGENT.</p>
+    <footer class="py-12 text-center text-xs font-mono tracking-widest text-white/30 border-t border-white/5 bg-[#030307]">
+        <p>&copy; 2026 AGRI TECH // ALL DECENTRALIZED RIGHTS RESERVED.</p>
     </footer>
 
 </body>

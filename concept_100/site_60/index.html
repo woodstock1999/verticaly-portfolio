@@ -3,164 +3,176 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CANCEL-SHIELD | 炎上予測AI</title>
+    <title>「ドタキャン」という理不尽を、システムで防衛する。 | HOSPITALITY</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', 'Noto Sans JP', sans-serif; }
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Outfit:wght@400;600;700&display=swap');
+        body {
+            font-family: 'Noto Sans JP', 'Outfit', sans-serif;
+            background-color: #fcfcfc;
+        }
+        .main-gradient {
+            background: linear-gradient(135deg, #10b981 0%, #10b981dd 100%);
+        }
+        .shadow-trust {
+            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.05);
+        }
     </style>
 </head>
-<body class="bg-gray-50 text-stone-800 min-h-screen font-sans antialiased overflow-x-hidden">
+<body class="text-slate-600 min-h-screen antialiased overflow-x-hidden selection:bg-emerald-500/20">
 
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 backdrop-blur-md bg-opacity-90 bg-white/90 border-b border-gray-200 px-8 py-4 flex justify-between items-center transition-all shadow-sm">
-        <div class="font-black text-2xl tracking-tighter text-purple-400">CANCEL-SHIELD</div>
-        <div class="hidden md:flex gap-8 text-sm font-bold text-gray-300">
-            <a href="#" class="hover:text-purple-400 transition">特徴</a>
-            <a href="#" class="hover:text-purple-400 transition">機能</a>
-            <a href="#" class="hover:text-purple-400 transition">料金</a>
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-md border-b border-slate-100 px-6 md:px-12 py-5 flex justify-between items-center shadow-sm">
+        <div class="font-extrabold text-lg md:text-xl text-slate-800 flex items-center gap-2">
+            <span class="w-2.5 h-6 rounded bg-emerald-500 block"></span>
+            <span>HOSPITALITY</span>
         </div>
-        <a href="#" class="bg-purple-600 hover:bg-purple-500 text-white px-6 py-2 rounded-full font-bold text-sm transition transform hover:scale-105">リスク診断をテストする</a>
+        <div class="hidden md:flex gap-8 text-xs font-bold text-slate-600 tracking-wider">
+            <a href="#" class="hover:text-emerald-600 transition">特長・強み</a>
+            <a href="#" class="hover:text-emerald-600 transition">料金案内</a>
+            <a href="#" class="hover:text-emerald-600 transition">スタッフ紹介</a>
+        </div>
+        <div class="flex items-center gap-4">
+            <a href="../index.html" class="text-[10px] font-bold text-slate-400 hover:text-slate-800 transition uppercase tracking-widest">HUB</a>
+            <a href="#" class="bg-emerald-500 hover:bg-emerald-600 text-white px-5 py-2.5 rounded-lg font-bold text-xs tracking-wider transition shadow-md shadow-emerald-500/20">START HOSPITALITY</a>
+        </div>
     </nav>
 
-    <!-- Hero Section -->
-    
-    <main class="pt-[140px] pb-24 px-6 md:px-12 max-w-7xl mx-auto">
-        <div class="text-center max-w-4xl mx-auto mb-20 relative">
-            <span class="bg-gray-100 text-red-600 border border-gray-200 px-5 py-2 text-xs font-black rounded-full tracking-widest mb-8 inline-block shadow-sm uppercase">HOSPITALITY / RISK MANAGEMENT</span>
-            <h1 class="text-4xl md:text-[54px] font-black mb-8 leading-[1.2] tracking-tight text-gray-900">「ドタキャン」という<br>理不尽を、システムで防衛する。</h1>
-            <p class="text-lg md:text-xl text-gray-600 font-medium leading-relaxed max-w-3xl mx-auto">飲食店やホテルを悩ませるノーショー（無断キャンセル）。CANCEL-SHIELDは、予約経路と過去の信用スコアをAIが解析し、キャンセルリスクを事前に検知・ブロックする次世代の予約防衛SaaSです。</p>
-        </div>
-
-        <div class="relative w-full aspect-[21/9] md:aspect-video rounded-[32px] overflow-hidden shadow-2xl mb-32 border border-gray-200/50 group bg-zinc-900">
-            <img src="img/ui.png" alt="UI Dashboard" class="w-full h-full object-cover transition-transform duration-[3s] group-hover:scale-[1.02]">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none blend-overlay"></div>
-        </div>
-
-        <div class="flex flex-col gap-32 mb-32">
-        
-                <div class="flex flex-col md:flex-row items-center gap-16 ">
-                    <div class="flex-1 space-y-6">
-                        <span class="text-red-600 font-bold tracking-widest text-sm uppercase">THE INVISIBLE LOSS</span>
-                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">「仕方ない」で済まされてきた巨大な損失</h2>
-                        <div class="w-12 h-1 bg-red-500 rounded"></div>
-                        <p class="text-lg text-gray-600 leading-relaxed font-light">予約時間の15分前になっても来ない。電話も繋がらない。飲食店にとって、ノーショーは単なる機会損失ではなく、原価と人件費の直接的な「負債」です。これまで業界全体が泣き寝入りしてきたこの理不尽な構造を、CANCEL-SHIELDがテクノロジーで根本から破壊します。</p>
-                    </div>
-                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
-                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;">
-                        <div class="absolute inset-0 bg-gradient-to-tr from-red-900/20 to-transparent"></div>
+    <main class="pt-[140px] pb-24 relative z-10">
+        <div class="px-6 md:px-12 max-w-7xl mx-auto">
+            <div class="flex flex-col lg:flex-row items-center gap-16 mb-24">
+                <div class="flex-1 space-y-6">
+                    <span class="text-emerald-600 font-extrabold tracking-widest text-xs uppercase bg-emerald-50 px-3.5 py-1.5 rounded-full inline-block border border-emerald-100">HOSPITALITY / RISK MANAGEMENT</span>
+                    <h1 class="text-4xl md:text-5xl font-black mb-8 leading-[1.25] text-slate-800">「ドタキャン」という<br>理不尽を、システムで防衛する。</h1>
+                    <p class="text-base md:text-lg text-slate-500 font-medium leading-relaxed">飲食店やホテルを悩ませるノーショー（無断キャンセル）。CANCEL-SHIELDは、予約経路と過去の信用スコアをAIが解析し、キャンセルリスクを事前に検知・ブロックする次世代の予約防衛SaaSです。</p>
+                </div>
+                <div class="flex-1 w-full relative">
+                    <div class="aspect-[4/3] rounded-2xl overflow-hidden shadow-trust border border-slate-100 p-2 bg-white">
+                        <div class="w-full h-full rounded-xl overflow-hidden">
+                            
+            <div class="relative w-full h-full bg-slate-50 overflow-hidden">
+                <img src="img/ui.png" class="w-full h-full object-cover transition-transform duration-[5s] group-hover:scale-[1.03]">
+                <div class="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent pointer-events-none"></div>
+            </div>
+                        </div>
                     </div>
                 </div>
-                
-                <div class="mt-10">
-                    <div class="text-center mb-16">
-                        <span class="text-red-600 font-bold tracking-widest text-sm uppercase">PREDICTIVE SHIELD</span>
-                        <h2 class="text-3xl md:text-4xl font-black mt-4 text-gray-900">悪質な予約を見抜く、予測防衛アルゴリズム</h2>
+            </div>
+        </div><div class="px-6 md:px-12 max-w-7xl mx-auto flex flex-col gap-28 mb-32">
+                <div class="flex flex-col md:flex-row items-center gap-16 ">
+                    <div class="flex-1 space-y-5">
+                        <span class="text-emerald-500 font-extrabold tracking-widest text-xs uppercase block">THE INVISIBLE LOSS</span>
+                        <h2 class="text-2xl md:text-3xl font-black text-slate-800 leading-tight">「仕方ない」で済まされてきた巨大な損失</h2>
+                        <p class="text-base leading-relaxed text-slate-500 font-light">予約時間の15分前になっても来ない。電話も繋がらない。飲食店にとって、ノーショーは単なる機会損失ではなく、原価と人件費の直接的な「負債」です。これまで業界全体が泣き寝入りしてきたこの理不尽な構造を、CANCEL-SHIELDがテクノロジーで根本から破壊します。</p>
+                    </div>
+                    <div class="flex-1 w-full aspect-video rounded-2xl overflow-hidden shadow-trust bg-white p-2 border border-slate-100 group">
+                        <div class="w-full h-full rounded-xl bg-slate-50 overflow-hidden flex items-center justify-center p-6 border border-slate-100/50 relative">
+                            <img src="img/ui.png" class="w-full h-full object-cover transition-transform duration-[5s] group-hover:scale-[1.03]">
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white border border-slate-100 rounded-3xl p-8 md:p-12 shadow-trust relative">
+                    <div class="text-center mb-12 max-w-2xl mx-auto">
+                        <span class="text-emerald-500 font-bold tracking-widest text-xs uppercase">PREDICTIVE SHIELD</span>
+                        <h2 class="text-2xl md:text-3xl font-black mt-3 text-slate-800">悪質な予約を見抜く、予測防衛アルゴリズム</h2>
                     </div>
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                         
-<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
-    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-red-50 text-red-600 border border-red-200">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-    </div>
-    <h4 class="text-xl font-bold mb-3 text-gray-900">電話番号・IPブラックリスト共有</h4>
-    <p class="text-gray-600 text-sm leading-relaxed">全国数万店舗のデータベースから、過去に無断キャンセルを繰り返した電話番号やIPアドレスからのウェブ予約を瞬時に検知し、ブロックします。</p>
-</div>
+                        <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100/50 hover:border-emerald-500/20 transition-all duration-300">
+                            <div class="w-10 h-10 rounded-lg flex items-center justify-center mb-5 bg-emerald-500 text-white shadow-sm shadow-emerald-500/30">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            </div>
+                            <h4 class="text-base font-bold mb-2 text-slate-800">電話番号・IPブラックリスト共有</h4>
+                            <p class="text-xs leading-relaxed text-slate-500">全国数万店舗のデータベースから、過去に無断キャンセルを繰り返した電話番号やIPアドレスからのウェブ予約を瞬時に検知し、ブロックします。</p>
+                        </div>
+                        
 
+                        <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100/50 hover:border-emerald-500/20 transition-all duration-300">
+                            <div class="w-10 h-10 rounded-lg flex items-center justify-center mb-5 bg-emerald-500 text-white shadow-sm shadow-emerald-500/30">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            </div>
+                            <h4 class="text-base font-bold mb-2 text-slate-800">AIリスク・スコアリング</h4>
+                            <p class="text-xs leading-relaxed text-slate-500">「繁忙期の金曜夜に、一度も来店履歴のない新規客が、ネットから10名で予約」。このような高リスクなパターンをAIが検知し、自動で確認のアラートを発動します。</p>
+                        </div>
+                        
 
-<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
-    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-red-50 text-red-600 border border-red-200">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-    </div>
-    <h4 class="text-xl font-bold mb-3 text-gray-900">AIリスク・スコアリング</h4>
-    <p class="text-gray-600 text-sm leading-relaxed">「繁忙期の金曜夜に、一度も来店履歴のない新規客が、ネットから10名で予約」。このような高リスクなパターンをAIが検知し、自動で確認のアラートを発動します。</p>
-</div>
-
-
-<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
-    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-red-50 text-red-600 border border-red-200">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-    </div>
-    <h4 class="text-xl font-bold mb-3 text-gray-900">動的デポジット（事前決済）要求</h4>
-    <p class="text-gray-600 text-sm leading-relaxed">AIがキャンセルリスクが高いと判定した場合のみ、自動でSMSを送信し、予約確定のためのデポジット（一部事前決済）を要求するダイナミック・コントラクト機能。</p>
-</div>
-
+                        <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100/50 hover:border-emerald-500/20 transition-all duration-300">
+                            <div class="w-10 h-10 rounded-lg flex items-center justify-center mb-5 bg-emerald-500 text-white shadow-sm shadow-emerald-500/30">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            </div>
+                            <h4 class="text-base font-bold mb-2 text-slate-800">動的デポジット（事前決済）要求</h4>
+                            <p class="text-xs leading-relaxed text-slate-500">AIがキャンセルリスクが高いと判定した場合のみ、自動でSMSを送信し、予約確定のためのデポジット（一部事前決済）を要求するダイナミック・コントラクト機能。</p>
+                        </div>
+                        
                     </div>
                 </div>
-                
                 <div class="flex flex-col md:flex-row items-center gap-16 ">
-                    <div class="flex-1 space-y-6">
-                        <span class="text-red-600 font-bold tracking-widest text-sm uppercase">FRICTIONLESS UX</span>
-                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">善良な常連客には「一切の摩擦なし」</h2>
-                        <div class="w-12 h-1 bg-red-500 rounded"></div>
-                        <p class="text-lg text-gray-600 leading-relaxed font-light">すべてのお客様にクレジットカードの事前登録を求めれば、ノーショーは防げますが、同時に予約のハードルも上がり客離れを引き起こします。CANCEL-SHIELDは「リスクの高い予約」のみを精密にターゲティングするため、優良な常連客の予約体験を一切損ないません。</p>
+                    <div class="flex-1 space-y-5">
+                        <span class="text-emerald-500 font-extrabold tracking-widest text-xs uppercase block">FRICTIONLESS UX</span>
+                        <h2 class="text-2xl md:text-3xl font-black text-slate-800 leading-tight">善良な常連客には「一切の摩擦なし」</h2>
+                        <p class="text-base leading-relaxed text-slate-500 font-light">すべてのお客様にクレジットカードの事前登録を求めれば、ノーショーは防げますが、同時に予約のハードルも上がり客離れを引き起こします。CANCEL-SHIELDは「リスクの高い予約」のみを精密にターゲティングするため、優良な常連客の予約体験を一切損ないません。</p>
                     </div>
-                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
-                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;">
-                        <div class="absolute inset-0 bg-gradient-to-tr from-red-900/20 to-transparent"></div>
+                    <div class="flex-1 w-full aspect-video rounded-2xl overflow-hidden shadow-trust bg-white p-2 border border-slate-100 group">
+                        <div class="w-full h-full rounded-xl bg-slate-50 overflow-hidden flex items-center justify-center p-6 border border-slate-100/50 relative">
+                            <img src="img/ui.png" class="w-full h-full object-cover transition-transform duration-[5s] group-hover:scale-[1.03]">
+                        </div>
                     </div>
                 </div>
-                
                 <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
-                    <div class="flex-1 space-y-6">
-                        <span class="text-red-600 font-bold tracking-widest text-sm uppercase">RECOVERY SYSTEM</span>
-                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">万が一の時の「空席即時マッチング」</h2>
-                        <div class="w-12 h-1 bg-red-500 rounded"></div>
-                        <p class="text-lg text-gray-600 leading-relaxed font-light">それでも直前キャンセルが発生した場合。システムが即座に近隣の「キャンセル待ち」ユーザーや、提携するグルメアプリにプッシュ通知を送信し、割引価格で空席を瞬時に埋めるリカバリー機能が作動します。</p>
+                    <div class="flex-1 space-y-5">
+                        <span class="text-emerald-500 font-extrabold tracking-widest text-xs uppercase block">RECOVERY SYSTEM</span>
+                        <h2 class="text-2xl md:text-3xl font-black text-slate-800 leading-tight">万が一の時の「空席即時マッチング」</h2>
+                        <p class="text-base leading-relaxed text-slate-500 font-light">それでも直前キャンセルが発生した場合。システムが即座に近隣の「キャンセル待ち」ユーザーや、提携するグルメアプリにプッシュ通知を送信し、割引価格で空席を瞬時に埋めるリカバリー機能が作動します。</p>
                     </div>
-                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
-                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: bottom right;">
-                        <div class="absolute inset-0 bg-gradient-to-tr from-red-900/20 to-transparent"></div>
+                    <div class="flex-1 w-full aspect-video rounded-2xl overflow-hidden shadow-trust bg-white p-2 border border-slate-100 group">
+                        <div class="w-full h-full rounded-xl bg-slate-50 overflow-hidden flex items-center justify-center p-6 border border-slate-100/50 relative">
+                            <img src="img/ui.png" class="w-full h-full object-cover transition-transform duration-[5s] group-hover:scale-[1.03]">
+                        </div>
                     </div>
                 </div>
-                
                 <div class="flex flex-col md:flex-row items-center gap-16 ">
-                    <div class="flex-1 space-y-6">
-                        <span class="text-red-600 font-bold tracking-widest text-sm uppercase">CLIENT SUCCESS</span>
-                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">Case Study | 都内の高級鮨店</h2>
-                        <div class="w-12 h-1 bg-red-500 rounded"></div>
-                        <p class="text-lg text-gray-600 leading-relaxed font-light">客単価3万円、1日3組限定の鮨店。月に1回のノーショーが死活問題でした。CANCEL-SHIELD導入後、同業他社でキャンセル歴のあるユーザーからの予約をブロック。さらに直前キャンセル時には空席マッチングが機能し、導入後半年間でノーショーによる損害額を完全にゼロにしました。</p>
+                    <div class="flex-1 space-y-5">
+                        <span class="text-emerald-500 font-extrabold tracking-widest text-xs uppercase block">CLIENT SUCCESS</span>
+                        <h2 class="text-2xl md:text-3xl font-black text-slate-800 leading-tight">Case Study | 都内の高級鮨店</h2>
+                        <p class="text-base leading-relaxed text-slate-500 font-light">客単価3万円、1日3組限定の鮨店。月に1回のノーショーが死活問題でした。CANCEL-SHIELD導入後、同業他社でキャンセル歴のあるユーザーからの予約をブロック。さらに直前キャンセル時には空席マッチングが機能し、導入後半年間でノーショーによる損害額を完全にゼロにしました。</p>
                     </div>
-                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
-                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;">
-                        <div class="absolute inset-0 bg-gradient-to-tr from-red-900/20 to-transparent"></div>
+                    <div class="flex-1 w-full aspect-video rounded-2xl overflow-hidden shadow-trust bg-white p-2 border border-slate-100 group">
+                        <div class="w-full h-full rounded-xl bg-slate-50 overflow-hidden flex items-center justify-center p-6 border border-slate-100/50 relative">
+                            <img src="img/ui.png" class="w-full h-full object-cover transition-transform duration-[5s] group-hover:scale-[1.03]">
+                        </div>
                     </div>
                 </div>
-                
                 <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
-                    <div class="flex-1 space-y-6">
-                        <span class="text-red-600 font-bold tracking-widest text-sm uppercase">OUR VISION</span>
-                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">「信用」が可視化されるレストラン経済へ</h2>
-                        <div class="w-12 h-1 bg-red-500 rounded"></div>
-                        <p class="text-lg text-gray-600 leading-relaxed font-light">私たちが創るのは、単なるブロックツールではありません。お客様とお店の間に「透明な信用」を築き、ホスピタリティ産業が本来の「おもてなし」にだけ集中できる世界です。</p>
+                    <div class="flex-1 space-y-5">
+                        <span class="text-emerald-500 font-extrabold tracking-widest text-xs uppercase block">OUR VISION</span>
+                        <h2 class="text-2xl md:text-3xl font-black text-slate-800 leading-tight">「信用」が可視化されるレストラン経済へ</h2>
+                        <p class="text-base leading-relaxed text-slate-500 font-light">私たちが創るのは、単なるブロックツールではありません。お客様とお店の間に「透明な信用」を築き、ホスピタリティ産業が本来の「おもてなし」にだけ集中できる世界です。</p>
                     </div>
-                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
-                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: bottom right;">
-                        <div class="absolute inset-0 bg-gradient-to-tr from-red-900/20 to-transparent"></div>
+                    <div class="flex-1 w-full aspect-video rounded-2xl overflow-hidden shadow-trust bg-white p-2 border border-slate-100 group">
+                        <div class="w-full h-full rounded-xl bg-slate-50 overflow-hidden flex items-center justify-center p-6 border border-slate-100/50 relative">
+                            <img src="img/ui.png" class="w-full h-full object-cover transition-transform duration-[5s] group-hover:scale-[1.03]">
+                        </div>
+                    </div>
+                </div></div>
+        <div class="px-6 md:px-12 max-w-7xl mx-auto">
+            <div class="bg-white border border-slate-100 rounded-3xl p-12 md:p-20 shadow-trust relative overflow-hidden">
+                <div class="absolute -top-32 -right-32 w-80 h-80 bg-emerald-500/5 rounded-full blur-[80px]"></div>
+                <div class="relative z-10 text-center max-w-2xl mx-auto space-y-6">
+                    <h2 class="text-2xl md:text-4xl font-black text-slate-800">予約台帳を、確実な売上に。</h2>
+                    <p class="text-sm text-slate-500 leading-relaxed max-w-lg mx-auto">用意した食材も、確保したスタッフのシフトも、もう無駄にはさせません。ノーショーをシステムで根絶しましょう。</p>
+                    <div class="pt-4">
+                        <a href="#" class="bg-emerald-500 hover:bg-emerald-600 text-white px-10 py-3.5 rounded-lg font-bold text-sm tracking-wider transition shadow-md shadow-emerald-500/25 inline-block">
+                            START HOSPITALITY
+                        </a>
                     </div>
                 </div>
-                
-        </div>
-
-        <div class="text-center bg-gray-900 border border-gray-800 rounded-[3rem] p-16 md:p-32 relative overflow-hidden group shadow-2xl">
-            <div class="absolute inset-0 bg-gradient-to-br from-red-900/40 to-transparent"></div>
-            <div class="relative z-10">
-                <h2 class="text-4xl md:text-5xl font-black mb-8 text-white">予約台帳を、確実な売上に。</h2>
-                <p class="text-gray-300 mb-12 max-w-xl mx-auto text-lg leading-relaxed">用意した食材も、確保したスタッフのシフトも、もう無駄にはさせません。ノーショーをシステムで根絶しましょう。</p>
-                <a href="#" class="bg-red-500 hover:bg-red-400 text-white px-12 py-5 rounded-full font-bold text-lg inline-flex items-center gap-3 transition transform hover:-translate-y-1 shadow-lg shadow-red-500/30">
-                    リスク診断を試す
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                </a>
             </div>
         </div>
     </main>
-        
 
     <!-- Footer -->
-    <footer class="py-8 text-center text-sm font-medium text-zinc-600 border-t border-white/10">
-        <p>&copy; 2026 CANCEL-SHIELD. TAKUMI DESIGN AGENT.</p>
+    <footer class="py-12 text-center text-xs tracking-wider text-slate-400 border-t border-slate-100 bg-white shadow-inner">
+        <p>&copy; 2026 HOSPITALITY. ALL RIGHTS RESERVED.</p>
     </footer>
 
 </body>

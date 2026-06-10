@@ -3,164 +3,192 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SHRINE-STAY | 宿坊プラットフォーム</title>
+    <title>神々が宿る静寂の夜を、あなたのものに。 | INBOUND TOURISM</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', 'Noto Sans JP', sans-serif; }
+        @import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Outfit:wght@400;700;900&display=swap');
+        body {
+            font-family: 'Outfit', 'Dela Gothic One', sans-serif;
+            background-color: #000;
+        }
+        .brutal-card {
+            border: 3px solid #000000;
+            box-shadow: 6px 6px 0px 0px #000000;
+            background-color: #0c0c0c;
+        }
+        .brutal-card-color {
+            border: 3px solid #000000;
+            box-shadow: 6px 6px 0px 0px #000000;
+            background-color: #ffde00;
+        }
+        .brutal-button {
+            border: 2px solid #000000;
+            box-shadow: 3px 3px 0px 0px #000000;
+        }
+        .brutal-button:hover {
+            transform: translate(-1px, -1px);
+            box-shadow: 4px 4px 0px 0px #000000;
+        }
+        .acid-glow {
+            text-shadow: 0 0 15px #ffde0070;
+        }
     </style>
 </head>
-<body class="bg-gray-50 text-stone-800 min-h-screen font-sans antialiased overflow-x-hidden">
+<body class="text-zinc-400 min-h-screen antialiased overflow-x-hidden selection:bg-yellow-500 selection:text-black">
 
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 backdrop-blur-md bg-opacity-90 bg-white/90 border-b border-gray-200 px-8 py-4 flex justify-between items-center transition-all shadow-sm">
-        <div class="font-black text-2xl tracking-tighter text-amber-500">SHRINE-STAY</div>
-        <div class="hidden md:flex gap-10 text-sm font-bold text-gray-400">
-            <a href="#" class="hover:text-amber-500 transition">機能・メリット</a>
-            <a href="#" class="hover:text-amber-500 transition">活用事例</a>
-            <a href="#" class="hover:text-amber-500 transition">ご導入について</a>
+    <nav class="fixed w-full z-50 bg-black border-b-2 border-black px-6 md:px-12 py-5 flex justify-between items-center">
+        <div class="font-extrabold text-xl tracking-tight text-white flex items-center gap-2">
+            <span class="w-4 h-4 bg-yellow-500 rounded-full border border-black shadow-[0_0_10px_#ffde00]"></span>
+            <span class="tracking-wide uppercase text-sm font-black text-white">INBOUND TOURISM</span>
         </div>
-        <a href="#" class="bg-[#8b5a2b] hover:bg-[#a67c52] text-white px-6 py-2.5 rounded-full font-bold text-sm transition transform hover:scale-105">宿坊の掲載を相談する</a>
+        <div class="hidden md:flex gap-8 text-[10px] font-black tracking-widest uppercase text-white/50">
+            <a href="#" class="hover:text-white transition">Concept</a>
+            <a href="#" class="hover:text-white transition">Prototype</a>
+            <a href="#" class="hover:text-white transition">Terminal</a>
+        </div>
+        <div class="flex items-center gap-4">
+            <a href="../index.html" class="text-[9px] font-black text-white/40 hover:text-white transition uppercase tracking-widest">HUB</a>
+            <a href="#" class="bg-yellow-500 hover:bg-yellow-400 text-black border-2 border-black px-5 py-2 rounded font-black text-xs tracking-wide uppercase transition brutal-button">ご導入について</a>
+        </div>
     </nav>
 
-    <!-- Hero Section -->
-    
-    <main class="pt-[140px] pb-24 px-6 md:px-12 max-w-7xl mx-auto">
-        <div class="text-center max-w-4xl mx-auto mb-20 relative">
-            <span class="bg-gray-100 text-amber-600 border border-gray-200 px-5 py-2 text-xs font-black rounded-full tracking-widest mb-8 inline-block shadow-sm uppercase">INBOUND TOURISM / TRADITION</span>
-            <h1 class="text-4xl md:text-[54px] font-black mb-8 leading-[1.2] tracking-tight text-gray-900">神々が宿る静寂の夜を、<br>あなたのものに。</h1>
-            <p class="text-lg md:text-xl text-gray-600 font-medium leading-relaxed max-w-3xl mx-auto">日本全国の歴史ある神社仏閣に、一晩一組限定で宿泊できるエクスクルーシブなプラットフォーム。観光客が消えた夜の静寂と、荘厳な朝の祈りを体験する「SHRINE-STAY」。</p>
-        </div>
-
-        <div class="relative w-full aspect-[21/9] md:aspect-video rounded-[32px] overflow-hidden shadow-2xl mb-32 border border-gray-200/50 group bg-zinc-900">
-            <img src="img/ui.png" alt="UI Dashboard" class="w-full h-full object-cover transition-transform duration-[3s] group-hover:scale-[1.02]">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none blend-overlay"></div>
-        </div>
-
-        <div class="flex flex-col gap-32 mb-32">
-        
+    <main class="pt-[140px] pb-24 relative z-10">
+        <div class="px-6 md:px-12 max-w-7xl mx-auto">
+            <div class="text-center max-w-4xl mx-auto mb-20">
+                <span class="bg-yellow-500 text-black border-2 border-black px-5 py-1.5 text-[9px] font-black tracking-widest uppercase rounded-full inline-block shadow-[2px_2px_0px_#000] mb-8">INBOUND TOURISM / TRADITION</span>
+                <h1 class="text-4xl md:text-7xl font-black mb-8 leading-[1.1] text-white uppercase italic tracking-tight acid-glow">神々が宿る静寂の夜を、<br>あなたのものに。</h1>
+                <p class="text-base md:text-lg text-zinc-400 font-medium leading-relaxed max-w-3xl mx-auto">日本全国の歴史ある神社仏閣に、一晩一組限定で宿泊できるエクスクルーシブなプラットフォーム。観光客が消えた夜の静寂と、荘厳な朝の祈りを体験する「SHRINE-STAY」。</p>
+            </div>
+            
+            <div class="relative w-full aspect-[21/10] md:aspect-video rounded-lg overflow-hidden border-4 border-black shadow-[10px_10px_0px_0px_#ffde00] bg-zinc-900 group mb-32">
+                <div class="w-full h-full">
+                    
+            <div class="relative w-full h-full bg-black overflow-hidden border-2 border-black">
+                <img src="img/ui.png" class="w-full h-full object-cover transition-transform duration-[5s] group-hover:scale-[1.03]">
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent pointer-events-none"></div>
+            </div>
+                </div>
+            </div>
+        </div><div class="px-6 md:px-12 max-w-7xl mx-auto flex flex-col gap-32 mb-32">
                 <div class="flex flex-col md:flex-row items-center gap-16 ">
                     <div class="flex-1 space-y-6">
-                        <span class="text-amber-600 font-bold tracking-widest text-sm uppercase">SPIRITUAL RETREAT</span>
-                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">五感を研ぎ澄ます、圧倒的な「非日常」</h2>
-                        <div class="w-12 h-1 bg-amber-500 rounded"></div>
-                        <p class="text-lg text-gray-600 leading-relaxed font-light">日中は数千人の観光客でごった返す京都や鎌倉の有名寺社。しかし、閉門後の世界を知る人はほとんどいません。月明かりに照らされた枯山水、夜風に揺れる竹林の音。SHRINE-STAYは、その神聖な空間を独占する究極のラグジュアリーを提供します。</p>
+                        <span class="text-yellow-400 font-black tracking-widest text-xs uppercase block">SPIRITUAL RETREAT</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-white leading-tight uppercase italic">五感を研ぎ澄ます、圧倒的な「非日常」</h2>
+                        <div class="w-16 h-1 bg-yellow-500 border-2 border-black"></div>
+                        <p class="text-sm leading-relaxed text-zinc-400 font-light">日中は数千人の観光客でごった返す京都や鎌倉の有名寺社。しかし、閉門後の世界を知る人はほとんどいません。月明かりに照らされた枯山水、夜風に揺れる竹林の音。SHRINE-STAYは、その神聖な空間を独占する究極のラグジュアリーを提供します。</p>
                     </div>
-                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
-                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;">
-                        <div class="absolute inset-0 bg-gradient-to-tr from-amber-900/20 to-transparent"></div>
+                    <div class="flex-1 w-full aspect-video rounded-lg overflow-hidden border-3 border-black shadow-[6px_6px_0px_#000] bg-zinc-900 p-1">
+                        <div class="w-full h-full rounded-sm bg-zinc-950 overflow-hidden flex items-center justify-center p-6 relative">
+                            <img src="img/ui.png" class="w-full h-full object-cover transition-transform duration-[5s] group-hover:scale-[1.03]">
+                        </div>
                     </div>
                 </div>
-                
-                <div class="mt-10">
-                    <div class="text-center mb-16">
-                        <span class="text-amber-600 font-bold tracking-widest text-sm uppercase">TRADITION MEETS COMFORT</span>
-                        <h2 class="text-3xl md:text-4xl font-black mt-4 text-gray-900">宿坊の概念を覆す、モダンな快適性</h2>
+                <div class="relative">
+                    <div class="text-center mb-16 max-w-2xl mx-auto">
+                        <span class="text-yellow-400 font-black tracking-widest text-xs uppercase block">TRADITION MEETS COMFORT</span>
+                        <h2 class="text-3xl md:text-5xl font-black mt-4 text-white uppercase italic">宿坊の概念を覆す、モダンな快適性</h2>
                     </div>
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                         
-<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
-    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-amber-50 text-amber-600 border border-amber-200">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-    </div>
-    <h4 class="text-xl font-bold mb-3 text-gray-900">文化財に泊まる</h4>
-    <p class="text-gray-600 text-sm leading-relaxed">築数百年の国指定重要文化財や、通常非公開の離れを、建築の美しさを一切損なうことなく宿泊施設としてリノベーション。</p>
-</div>
+                        <div class="brutal-card p-8 rounded-lg hover:translate-y-[-4px] transition duration-200">
+                            <div class="w-12 h-12 rounded-full flex items-center justify-center mb-6 bg-yellow-500 text-black border-2 border-black">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                            </div>
+                            <h4 class="text-lg font-black mb-3 text-white uppercase">文化財に泊まる</h4>
+                            <p class="text-xs leading-relaxed text-zinc-500">築数百年の国指定重要文化財や、通常非公開の離れを、建築の美しさを一切損なうことなく宿泊施設としてリノベーション。</p>
+                        </div>
+                        
 
+                        <div class="brutal-card p-8 rounded-lg hover:translate-y-[-4px] transition duration-200">
+                            <div class="w-12 h-12 rounded-full flex items-center justify-center mb-6 bg-yellow-500 text-black border-2 border-black">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                            </div>
+                            <h4 class="text-lg font-black mb-3 text-white uppercase">最高級のホスピタリティ</h4>
+                            <p class="text-xs leading-relaxed text-zinc-500">「修行」ではありません。最高級の和布団、床暖房、ヒノキ風呂など、五つ星ホテルと同等以上の快適なアメニティを完備。</p>
+                        </div>
+                        
 
-<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
-    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-amber-50 text-amber-600 border border-amber-200">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-    </div>
-    <h4 class="text-xl font-bold mb-3 text-gray-900">最高級のホスピタリティ</h4>
-    <p class="text-gray-600 text-sm leading-relaxed">「修行」ではありません。最高級の和布団、床暖房、ヒノキ風呂など、五つ星ホテルと同等以上の快適なアメニティを完備。</p>
-</div>
-
-
-<div class="bg-white border md:border-transparent border-gray-100 shadow-xl p-8 rounded-3xl transition transform hover:-translate-y-2 duration-300">
-    <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-amber-50 text-amber-600 border border-amber-200">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-    </div>
-    <h4 class="text-xl font-bold mb-3 text-gray-900">専属コンシェルジュ</h4>
-    <p class="text-gray-600 text-sm leading-relaxed">滞在中は専属の英語対応バトラーが付き、食事の手配から歴史的背景の解説まで、あらゆる要望にパーソナルにお応えします。</p>
-</div>
-
+                        <div class="brutal-card p-8 rounded-lg hover:translate-y-[-4px] transition duration-200">
+                            <div class="w-12 h-12 rounded-full flex items-center justify-center mb-6 bg-yellow-500 text-black border-2 border-black">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                            </div>
+                            <h4 class="text-lg font-black mb-3 text-white uppercase">専属コンシェルジュ</h4>
+                            <p class="text-xs leading-relaxed text-zinc-500">滞在中は専属の英語対応バトラーが付き、食事の手配から歴史的背景の解説まで、あらゆる要望にパーソナルにお応えします。</p>
+                        </div>
+                        
                     </div>
                 </div>
-                
                 <div class="flex flex-col md:flex-row items-center gap-16 ">
                     <div class="flex-1 space-y-6">
-                        <span class="text-amber-600 font-bold tracking-widest text-sm uppercase">AUTHENTIC EXPERIENCES</span>
-                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">住職・神主が導く、プライベートな体験</h2>
-                        <div class="w-12 h-1 bg-amber-500 rounded"></div>
-                        <p class="text-lg text-gray-600 leading-relaxed font-light">ただ泊まるだけではありません。翌朝は日の出と共に、一般には公開されない本堂での朝の祈祷（読経・祝詞）に特別に参加。さらに、住職によるプライベートな座禅指導や、茶室での本格的なお点前など、魂を浄化する本物の体験が用意されています。</p>
+                        <span class="text-yellow-400 font-black tracking-widest text-xs uppercase block">AUTHENTIC EXPERIENCES</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-white leading-tight uppercase italic">住職・神主が導く、プライベートな体験</h2>
+                        <div class="w-16 h-1 bg-yellow-500 border-2 border-black"></div>
+                        <p class="text-sm leading-relaxed text-zinc-400 font-light">ただ泊まるだけではありません。翌朝は日の出と共に、一般には公開されない本堂での朝の祈祷（読経・祝詞）に特別に参加。さらに、住職によるプライベートな座禅指導や、茶室での本格的なお点前など、魂を浄化する本物の体験が用意されています。</p>
                     </div>
-                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
-                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;">
-                        <div class="absolute inset-0 bg-gradient-to-tr from-amber-900/20 to-transparent"></div>
+                    <div class="flex-1 w-full aspect-video rounded-lg overflow-hidden border-3 border-black shadow-[6px_6px_0px_#000] bg-zinc-900 p-1">
+                        <div class="w-full h-full rounded-sm bg-zinc-950 overflow-hidden flex items-center justify-center p-6 relative">
+                            <img src="img/ui.png" class="w-full h-full object-cover transition-transform duration-[5s] group-hover:scale-[1.03]">
+                        </div>
                     </div>
                 </div>
-                
                 <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
                     <div class="flex-1 space-y-6">
-                        <span class="text-amber-600 font-bold tracking-widest text-sm uppercase">PRESERVATION PRESERVATION</span>
-                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">地域の文化財を守る、持続可能なエコシステム</h2>
-                        <div class="w-12 h-1 bg-amber-500 rounded"></div>
-                        <p class="text-lg text-gray-600 leading-relaxed font-light">多くの由緒ある寺社が、檀家離れと老朽化による莫大な修繕費に苦しんでいます。SHRINE-STAYの高単価な宿泊費は、屋根の吹き替えや国宝の維持管理費として直接還元されます。あなたの滞在が、日本の歴史を次の100年へ繋ぐパトロン活動となります。</p>
+                        <span class="text-yellow-400 font-black tracking-widest text-xs uppercase block">PRESERVATION PRESERVATION</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-white leading-tight uppercase italic">地域の文化財を守る、持続可能なエコシステム</h2>
+                        <div class="w-16 h-1 bg-yellow-500 border-2 border-black"></div>
+                        <p class="text-sm leading-relaxed text-zinc-400 font-light">多くの由緒ある寺社が、檀家離れと老朽化による莫大な修繕費に苦しんでいます。SHRINE-STAYの高単価な宿泊費は、屋根の吹き替えや国宝の維持管理費として直接還元されます。あなたの滞在が、日本の歴史を次の100年へ繋ぐパトロン活動となります。</p>
                     </div>
-                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
-                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: bottom right;">
-                        <div class="absolute inset-0 bg-gradient-to-tr from-amber-900/20 to-transparent"></div>
+                    <div class="flex-1 w-full aspect-video rounded-lg overflow-hidden border-3 border-black shadow-[6px_6px_0px_#000] bg-zinc-900 p-1">
+                        <div class="w-full h-full rounded-sm bg-zinc-950 overflow-hidden flex items-center justify-center p-6 relative">
+                            <img src="img/ui.png" class="w-full h-full object-cover transition-transform duration-[5s] group-hover:scale-[1.03]">
+                        </div>
                     </div>
                 </div>
-                
                 <div class="flex flex-col md:flex-row items-center gap-16 ">
                     <div class="flex-1 space-y-6">
-                        <span class="text-amber-600 font-bold tracking-widest text-sm uppercase">MOMENT OF TRUTH</span>
-                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">The Experience | 奈良・山奥の古刹</h2>
-                        <div class="w-12 h-1 bg-amber-500 rounded"></div>
-                        <p class="text-lg text-gray-600 leading-relaxed font-light">街の光が一切届かない山深い寺院。精進料理のフルコースを堪能した後、虫の音だけが響く静寂の中で眠りにつく。翌朝、冷たい空気の中で行われる読経のバイブレーションが身体の芯に響き渡った時、多くのゲストが涙を流します。</p>
+                        <span class="text-yellow-400 font-black tracking-widest text-xs uppercase block">MOMENT OF TRUTH</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-white leading-tight uppercase italic">The Experience | 奈良・山奥の古刹</h2>
+                        <div class="w-16 h-1 bg-yellow-500 border-2 border-black"></div>
+                        <p class="text-sm leading-relaxed text-zinc-400 font-light">街の光が一切届かない山深い寺院。精進料理のフルコースを堪能した後、虫の音だけが響く静寂の中で眠りにつく。翌朝、冷たい空気の中で行われる読経のバイブレーションが身体の芯に響き渡った時、多くのゲストが涙を流します。</p>
                     </div>
-                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
-                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: top left;">
-                        <div class="absolute inset-0 bg-gradient-to-tr from-amber-900/20 to-transparent"></div>
+                    <div class="flex-1 w-full aspect-video rounded-lg overflow-hidden border-3 border-black shadow-[6px_6px_0px_#000] bg-zinc-900 p-1">
+                        <div class="w-full h-full rounded-sm bg-zinc-950 overflow-hidden flex items-center justify-center p-6 relative">
+                            <img src="img/ui.png" class="w-full h-full object-cover transition-transform duration-[5s] group-hover:scale-[1.03]">
+                        </div>
                     </div>
                 </div>
-                
                 <div class="flex flex-col md:flex-row items-center gap-16 md:flex-row-reverse">
                     <div class="flex-1 space-y-6">
-                        <span class="text-amber-600 font-bold tracking-widest text-sm uppercase">OUR VISION</span>
-                        <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">失われた「精神の静けさ」を取り戻す</h2>
-                        <div class="w-12 h-1 bg-amber-500 rounded"></div>
-                        <p class="text-lg text-gray-600 leading-relaxed font-light">情報が氾濫する現代社会において、世界のトップリーダーたちが最も求めているのは「完全な静寂」です。私たちは、日本の寺社が持つ精神的価値を再定義し、世界を癒やすためのインフラとして開放します。</p>
+                        <span class="text-yellow-400 font-black tracking-widest text-xs uppercase block">OUR VISION</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-white leading-tight uppercase italic">失われた「精神の静けさ」を取り戻す</h2>
+                        <div class="w-16 h-1 bg-yellow-500 border-2 border-black"></div>
+                        <p class="text-sm leading-relaxed text-zinc-400 font-light">情報が氾濫する現代社会において、世界のトップリーダーたちが最も求めているのは「完全な静寂」です。私たちは、日本の寺社が持つ精神的価値を再定義し、世界を癒やすためのインフラとして開放します。</p>
                     </div>
-                    <div class="flex-1 relative aspect-square md:aspect-[4/3] rounded-[32px] overflow-hidden bg-gray-100 border border-gray-200/50 group">
-                        <img src="img/ui.png" class="w-full h-full object-cover opacity-30 grayscale sepia blur-[2px] transition-all duration-700 group-hover:blur-none group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105" style="object-position: bottom right;">
-                        <div class="absolute inset-0 bg-gradient-to-tr from-amber-900/20 to-transparent"></div>
+                    <div class="flex-1 w-full aspect-video rounded-lg overflow-hidden border-3 border-black shadow-[6px_6px_0px_#000] bg-zinc-900 p-1">
+                        <div class="w-full h-full rounded-sm bg-zinc-950 overflow-hidden flex items-center justify-center p-6 relative">
+                            <img src="img/ui.png" class="w-full h-full object-cover transition-transform duration-[5s] group-hover:scale-[1.03]">
+                        </div>
+                    </div>
+                </div></div>
+        <div class="px-6 md:px-12 max-w-7xl mx-auto">
+            <div class="brutal-card-color rounded-lg p-12 md:p-24 relative overflow-hidden border-4 border-black text-black">
+                <div class="relative z-10 text-center max-w-3xl mx-auto space-y-8">
+                    <h2 class="text-3xl md:text-5xl font-black uppercase italic tracking-tight">1000年の歴史の中で眠る。</h2>
+                    <p class="text-sm text-black/70 font-bold leading-relaxed max-w-xl mx-auto">ホテルでは決して味わえない、精神的なデトックス。選ばれたゲストのためだけの特別な扉を開きましょう。</p>
+                    <div>
+                        <a href="#" class="bg-black hover:bg-zinc-900 text-yellow-500 px-10 py-4 rounded font-black text-xs tracking-wider uppercase inline-flex items-center gap-3 transition brutal-button">
+                            ご導入について
+                        </a>
                     </div>
                 </div>
-                
-        </div>
-
-        <div class="text-center bg-gray-900 border border-gray-800 rounded-[3rem] p-16 md:p-32 relative overflow-hidden group shadow-2xl">
-            <div class="absolute inset-0 bg-gradient-to-br from-amber-900/40 to-transparent"></div>
-            <div class="relative z-10">
-                <h2 class="text-4xl md:text-5xl font-black mb-8 text-white">1000年の歴史の中で眠る。</h2>
-                <p class="text-gray-300 mb-12 max-w-xl mx-auto text-lg leading-relaxed">ホテルでは決して味わえない、精神的なデトックス。選ばれたゲストのためだけの特別な扉を開きましょう。</p>
-                <a href="#" class="bg-amber-500 hover:bg-amber-400 text-white px-12 py-5 rounded-full font-bold text-lg inline-flex items-center gap-3 transition transform hover:-translate-y-1 shadow-lg shadow-amber-500/30">
-                    神社を探す
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                </a>
             </div>
         </div>
     </main>
-        
 
     <!-- Footer -->
-    <footer class="py-12 text-center text-sm font-medium text-gray-600 bg-black border-t border-white/5">
-        <p>&copy; 2026 SHRINE-STAY. EXCLUSIVE CONCEPT DESIGN.</p>
+    <footer class="py-12 text-center text-[10px] font-black tracking-widest text-zinc-500 border-t-2 border-black bg-black">
+        <p>&copy; 2026 INBOUND TOURISM &mdash; PROTOCOL // 0x29C5A.</p>
     </footer>
 
 </body>
